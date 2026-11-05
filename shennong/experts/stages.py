@@ -53,6 +53,13 @@ STAGE_OF_DOMAIN = {
     "operator": Stage.ASIAN_PHARMACY,
     "phytochemistry": Stage.FIRST_PRINCIPLES,   # class identity is a chemical fact
     "toxicology": Stage.FIRST_PRINCIPLES,       # toxicity is a biological fact
+    "mechanics": Stage.FIRST_PRINCIPLES,        # molecular mechanics
+    "quantum": Stage.FIRST_PRINCIPLES,          # electronic structure
+    "taxonomy": Stage.ANCIENT_RECORD,           # is the name a real taxon?
+    "chemotaxonomy": Stage.FIRST_PRINCIPLES,    # does the lineage produce this chemistry?
+    "extraction": Stage.ASIAN_PHARMACY,         # does the medium extract this class?
+    "adme": Stage.FIRST_PRINCIPLES,             # can it be absorbed?
+    "microbiome": Stage.FIRST_PRINCIPLES,       # is it a gut-activated prodrug?
 }
 STAGE_NAME = {
     Stage.ANCIENT_RECORD: "ancient record (corpus attestation)",

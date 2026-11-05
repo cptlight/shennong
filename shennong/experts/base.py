@@ -91,10 +91,11 @@ def fuse(claim: str, proposals: list[Proposal]) -> Consensus:
                 disagreements.append(
                     f"{p.domain} does not support (score {p.score:.2f}): {p.rationale}")
 
-    if agreement >= 5:
-        verdict = "five-domain interpolation — every expert agrees"
-    elif agreement == 4:
-        verdict = "four-domain interpolation — four independent domains agree"
+    n_domains = len(proposals)
+    if agreement == n_domains:
+        verdict = f"all {n_domains} domain experts agree — strongest cross-domain interpolation"
+    elif agreement >= n_domains - 1:
+        verdict = f"{agreement}/{n_domains} independent domains agree — a genuine interpolation"
     elif agreement == 3:
         verdict = "three-domain support — a genuine interpolation, worth an assay"
     elif agreement == 2:

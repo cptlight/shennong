@@ -1,0 +1,110 @@
+{
+  "water|6-31g*|RHF": {
+    "name": "water",
+    "smiles": "O",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -76.00599,
+    "homo_ev": -13.4438,
+    "lumo_ev": 5.66384,
+    "gap_ev": 19.10764,
+    "ip_koopmans_ev": 13.4438,
+    "seconds": 0.4
+  },
+  "benzene|6-31g*|RHF": {
+    "name": "benzene",
+    "smiles": "c1ccccc1",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -230.69951,
+    "homo_ev": -9.00098,
+    "lumo_ev": 4.06219,
+    "gap_ev": 13.06317,
+    "ip_koopmans_ev": 9.00098,
+    "seconds": 2.7
+  },
+  "formaldehyde|6-31g*|RHF": {
+    "name": "formaldehyde",
+    "smiles": "C=O",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -113.86035,
+    "homo_ev": -12.0029,
+    "lumo_ev": 3.61966,
+    "gap_ev": 15.62256,
+    "ip_koopmans_ev": 12.0029,
+    "seconds": 0.1
+  },
+  "methanol|6-31g*|RHF": {
+    "name": "methanol",
+    "smiles": "CO",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -115.02895,
+    "homo_ev": -11.94439,
+    "lumo_ev": 5.86252,
+    "gap_ev": 17.80692,
+    "ip_koopmans_ev": 11.94439,
+    "seconds": 0.2
+  },
+  "methylamine|6-31g*|RHF": {
+    "name": "methylamine",
+    "smiles": "CN",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -95.19923,
+    "homo_ev": -10.03935,
+    "lumo_ev": 6.07378,
+    "gap_ev": 16.11312,
+    "ip_koopmans_ev": 10.03935,
+    "seconds": 0.2
+  },
+  "acetic_acid|6-31g*|RHF": {
+    "name": "acetic_acid",
+    "smiles": "CC(=O)O",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -227.76787,
+    "homo_ev": -11.9326,
+    "lumo_ev": 3.98862,
+    "gap_ev": 15.92122,
+    "ip_koopmans_ev": 11.9326,
+    "seconds": 0.6
+  },
+  "methyl_acetate|6-31g*|RHF": {
+    "name": "methyl_acetate",
+    "smiles": "CC(=O)OC",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -266.80967,
+    "homo_ev": -11.91854,
+    "lumo_ev": 4.28992,
+    "gap_ev": 16.20846,
+    "ip_koopmans_ev": 11.91854,
+    "seconds": 1.6
+  },
+  "n_methylacetamide|6-31g*|RHF": {
+    "name": "n_methylacetamide",
+    "smiles": "CC(=O)NC",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -246.98612,
+    "homo_ev": -10.31958,
+    "lumo_ev": 5.02584,
+    "gap_ev": 15.34542,
+    "ip_koopmans_ev": 10.31958,
+    "seconds": 1.5
+  },
+  "dimethoxymethane|6-31g*|RHF": {
+    "name": "dimethoxymethane",
+    "smiles": "COCOC",
+    "basis": "6-31g*",
+    "method": "RHF",
+    "e_tot_hartree": -267.93766,
+    "homo_ev": -11.55403,
+    "lumo_ev": 6.1134,
+    "gap_ev": 17.66743,
+    "ip_koopmans_ev": 11.55403,
+    "seconds": 2.2
+  }
+}

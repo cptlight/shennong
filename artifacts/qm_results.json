@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-05T10:44:29-0800",
+  "validation": {
+    "basis": "6-31g*",
+    "method": "RHF (Koopmans)",
+    "mae_ev": 0.823,
+    "n": 4,
+    "rows": [
+      {
+        "molecule": "water",
+        "ip_computed_ev": 13.444,
+        "ip_experimental_ev": 12.62,
+        "error_ev": 0.824,
+        "gap_ev": 19.108
+      },
+      {
+        "molecule": "benzene",
+        "ip_computed_ev": 9.001,
+        "ip_experimental_ev": 9.24,
+        "error_ev": -0.239,
+        "gap_ev": 13.063
+      },
+      {
+        "molecule": "formaldehyde",
+        "ip_computed_ev": 12.003,
+        "ip_experimental_ev": 10.88,
+        "error_ev": 1.123,
+        "gap_ev": 15.623
+      },
+      {
+        "molecule": "methanol",
+        "ip_computed_ev": 11.944,
+        "ip_experimental_ev": 10.84,
+        "error_ev": 1.104,
+        "gap_ev": 17.807
+      }
+    ]
+  },
+  "hydrolysis": {
+    "energies": {
+      "ester_hydrolysis": {
+        "delta_e_kj_mol": 49.5,
+        "delta_e_kcal_mol": 11.8,
+        "n_products": 2
+      },
+      "amide_hydrolysis": {
+        "delta_e_kj_mol": 65.7,
+        "delta_e_kcal_mol": 15.7,
+        "n_products": 2
+      },
+      "acetal_hydrolysis": {
+        "delta_e_kj_mol": 66.7,
+        "delta_e_kcal_mol": 15.9,
+        "n_products": 3
+      }
+    },
+    "ordering_easiest_first": [
+      "ester_hydrolysis",
+      "amide_hydrolysis",
+      "acetal_hydrolysis"
+    ],
+    "note": "gas phase, no solvent model: absolute values are upper bounds on aqueous feasibility. The ORDERING is the usable output and can be compared with the activation-energy priors used in simulate.py."
+  }
+}

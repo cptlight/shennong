@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 from .base import Proposal
@@ -29,6 +29,7 @@ class World:
     theory: dict[str, dict]               # drug surface -> properties vector
     toxic: set[str]                       # drug surfaces marked 有毒
     tox_classes: set[str]                 # chemotypes with known liability
+    class_smiles: dict = field(default_factory=dict)  # (plant, chemotype) -> [SMILES]
 
     @classmethod
     def load(cls) -> "World":
@@ -42,6 +43,7 @@ class World:
 
         plant_classes: dict[str, set[str]] = defaultdict(set)
         class_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+        class_smiles: dict = defaultdict(list)
         comp = ROOT / "corpus/processed/structured/compounds.csv"
         if comp.exists():
             import csv
@@ -52,6 +54,9 @@ class World:
                     if p and c and c not in {"", "unclassified"}:
                         plant_classes[p].add(c)
                         class_counts[p][c] += 1
+                        smi = (r.get("smiles") or "").strip()
+                        if smi and len(class_smiles[(p, c)]) < 3:
+                            class_smiles[(p, c)].append(smi)
 
         operators = {}
         onto = ROOT / "artifacts" / "operator_ontology.json"
@@ -74,7 +79,7 @@ class World:
         tox_classes = {"alkaloid", "organosulfur", "cardiac_glycoside", "pyrrolizidine"}
 
         return cls(attestation, dict(plant_classes), {k: dict(v) for k, v in class_counts.items()},
-                   operators, theory, toxic, tox_classes)
+                   operators, theory, toxic, tox_classes, dict(class_smiles))
 
 
 # ---------------------------------------------------------------------------------------
@@ -165,10 +170,15 @@ def toxicology(w: World, item: dict) -> Proposal:
     return Proposal("toxicology", 0.35, "no safety signal recorded", [])
 
 
+from .advanced import ADVANCED_EXPERTS  # noqa: E402  (after base classes exist)
+from .extra import EXTRA_EXPERTS  # noqa: E402
+
 EXPERTS = {
     "ethnobotany": ethnobotany,
     "phytochemistry": phytochemistry,
     "operator": operator,
     "theory": theory,
     "toxicology": toxicology,
+    **ADVANCED_EXPERTS,
+    **EXTRA_EXPERTS,
 }

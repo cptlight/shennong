@@ -21,9 +21,20 @@ National and Kapodistrian University of Athens).
 
 ## 2. Track selection
 
-**Primary: Track 01 — Traditional Knowledge Mining (NLP + historical texts + ethnobotany).**
-The project is an NLP system over historical medical and scientific texts in four script families, whose
-output is grounded ethnobotanical knowledge. It is track 01 end to end.
+**Primary: Track 02 — Natural Products for Drug Discovery.**
+The project is a **pre-experimental screening pipeline** for plant-derived compounds: it lifts a processing
+instruction out of the classical record, compiles it into a chemical hypothesis, and uses validated physics
+to decide whether the hypothesis is physically possible before any wet-lab work. That is a screening and
+validation pipeline for natural products, which is what track 02 asks for.
+
+**Why track 02 rather than track 01:** the strongest, most judge-visible results are quantitative
+statements about compound viability — **78 of 203 candidates refuted by physics**, **6 of those despite
+unanimous 5/5 panel agreement** (菖蒲 + 蒸 → terpenoid: 98.5 % of a monoterpene stripped at 100 °C), and the
+stable funnel **203 → 151 → 28 → 10 → 18**. Those are drug-discovery statements, not text-mining
+statements.
+
+**Depth in track 01:** the corpus, entity resolution and classical-theory encoding remain the front half of
+the pipeline and are documented throughout.
 
 **Secondary depth:**
 

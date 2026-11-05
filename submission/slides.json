@@ -9,16 +9,16 @@
  "slides": [
   {
    "n": 1,
-   "title": "Two thousand years of pharmacology, written in a language we stopped reading",
+   "title": "2,000 years of processing instructions, filtered by physics before anyone buys a reagent",
    "bullets": [
-    "The Asian medical canon — 神農本草經, 本草綱目, Charaka, Suśruta, al-Qānūn — is not folklore. It is a **structured, self-consistent, predictive system** with its own theory of drug action.",
-    "It also contains **ancient science**: 天工開物 on materials, 齊民要術 on fermentation, 夢溪筆談 on natural observation. These carry the process chemistry that medicine actually used.",
-    "Almost all computational work reads **modern English summaries** — exactly the layer where the encoded knowledge has been laundered out.",
-    "**1972**: a team read one word in a fourth-century line — *cold* water, not hot — and found artemisinin. The detail was a preparation instruction. Nobody had translated it into chemistry.",
-    "**Our question:** if we read the originals, does the theory still predict? And what does it let us propose? same molecule rendered. Caption: *one line of text → one compound.* ---"
+    "**1972, one line, one Nobel.** 葛洪's 4th-century text said *soak in water and wring out the juice* — a **cold** maceration, not a decoction. Artemisinin is thermolabile. The decisive knowledge was a **processing instruction**, and nobody had translated it into chemistry.",
+    "**That is the pipeline.** ancient record → Asian theory → **validated physics** → MAY / MAY NOT, with arithmetic. It compiles a processing instruction into a chemical hypothesis and then tries to kill it.",
+    "**203 hypotheses → 151 excluded** (not attested in the record) **→ 28 pass both gates → 10 refuted by physics → 18 survive.**",
+    "**78 of 203 refuted by the physics alone**, and **6 of those had unanimous 5/5 panel agreement** — the arbiter overruled its own consensus. Example: *蒸 of 菖蒲 → terpenoid* scored 5/5; Clausius–Clapeyron at 100 °C steam strips **98.5 %** of a monoterpene. Physically backwards, decided in seconds.",
+    "**Why a drug-discovery judge should care:** that same answer costs months and reagents in a lab. arithmetic so it can be checked. ---"
    ],
-   "visual": "two columns — left, a page of 本草綱目 in 繁體 with a single line highlighted in cinnabar; right, the same molecule rendered. Caption: *one line of text → one compound.*",
-   "speaker_note": "The gap is not that we lack texts. It is that we read the wrong copies of them."
+   "visual": "the funnel 203 → 18 beside the 菖蒲 arithmetic — a claim and the number that kills it.",
+   "speaker_note": "We are not proposing compounds. We are removing the ones that cannot work, and showing the arithmetic so it can be checked."
   },
   {
    "n": 2,

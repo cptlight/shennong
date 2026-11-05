@@ -2,8 +2,7 @@
 
 ### Shennong tasted a hundred herbs. We are teaching a 400 MB model to do it again — and to tell us what he hid between the lines.
 
-**EthnoHack 2026** · Track **01 — Traditional Knowledge Mining** (primary) · with depth in **02 — Natural
-Products for Drug Discovery** and **04 — Digital Health & Phytotherapy**
+**EthnoHack 2026** · Track **02 — Natural Products for Drug Discovery** (primary) · with depth in **01 — Traditional Knowledge Mining** and **04 — Digital Health & Phytotherapy**
 
 > **A note on the name, said first.** There is a 2023 model called **ShenNong-TCM** (a Chinese TCM LLM with
 > an associated dataset). We are a **different project with a different goal**: they built a TCM assistant;

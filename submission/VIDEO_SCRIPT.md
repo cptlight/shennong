@@ -24,9 +24,33 @@ on camera. No shot shows a fixture panel without its `DEMO FIXTURE` badge visibl
 
 **Total 600 s.**
 
+
 ---
 
-## 1 · 00:00–00:38 — Cold open
+## Track-02 opening — use this in place of segments 1–2 (0:00–1:22)
+
+> **0:00–0:22 — Cold open.** *"In 1972 a team in Beijing read one line from a fourth-century text —
+> 'soak it in water and wring out the juice' — and realised every previous attempt had boiled it, which
+> destroys the compound. That is artemisinin. The information that won the Nobel Prize was a **processing
+> instruction**, not a plant name. Nobody had translated it into chemistry."*
+
+> **0:22–0:55 — The filter.** *"So we built the translation layer, and then we built the part that is
+> missing from every other pipeline: something to **kill** the hypotheses it produces. Two hundred and
+> three processing instructions become chemical predictions. One hundred and fifty-one are thrown out
+> because the classical record does not attest them. Twenty-eight survive both gates. Physics refutes ten
+> of those. Eighteen are left — and those are the ones worth an assay."*
+
+> **0:55–1:22 — The refutation.** *"Here is the one that matters. On screen: 'steaming 菖蒲 should enrich
+> its terpenoids.' Our five tradition experts scored it five out of five. Then the physics layer asked a
+> simple question — how volatile is a monoterpene at a hundred degrees in steam? Answer: ninety-eight
+> point five per cent of it is gone. The claim is backwards. The system overruled its own unanimous
+> consensus with arithmetic, and it did it before anyone bought a reagent."*
+
+**Visual:** the funnel 203 → 151 → 28 → 10 → 18, then the 菖蒲 card with the retention number.
+
+---
+
+## 1 · 00:00–00:38 — Cold open *(superseded by the Track-02 opening above)*
 
 **On screen:** A page of 本草綱目 in 繁體, slowly settling. One line highlights in cinnabar. Hard cut to
 `assets/og-image.svg` — the seal mark and the name, SHENNONG 神农.
@@ -43,7 +67,7 @@ on camera. No shot shows a fixture panel without its `DEMO FIXTURE` badge visibl
 
 ---
 
-## 2 · 00:38–01:22 — The gap
+## 2 · 00:38–01:22 — The gap *(superseded by the Track-02 opening above)*
 
 **On screen:** Split screen. Left: the Chinese originals — 神農本草經, 傷寒論, 雷公炮炙論 — as raw text scrolling.
 Right: modern papers citing only translated summaries. A third column appears: "theory — 四氣五味 · 歸經 · 七情 ·

@@ -604,7 +604,7 @@ restricted material **referenced only, never redistributed**. See
 
 **EthnoHack 2026** — *Data Hackathon on Ethnopharmacology & Health*, ETHCSTWIN (Horizon Europe),
 National and Kapodistrian University of Athens, 2–8 November 2026.
-Track **01 — Traditional Knowledge Mining**, with depth into track 02 (knowledge graphs for natural
+Track **02 — Natural Products for Drug Discovery**, with depth in track 01 (knowledge mining for
 product discovery) and track 04 (a phytotherapy decision-support Workbench).
 
 <div align="center">

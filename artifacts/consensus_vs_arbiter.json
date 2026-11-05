@@ -1,0 +1,18 @@
+{
+  "tradition_panel": [
+    "ethnobotany",
+    "theory",
+    "operator",
+    "taxonomy",
+    "extraction"
+  ],
+  "n_candidates": 203,
+  "physics_refutations": 78,
+  "agreement_distribution": {
+    "2": 21,
+    "3": 35,
+    "4": 16,
+    "5": 6
+  },
+  "refuted_despite_unanimous": 6
+}

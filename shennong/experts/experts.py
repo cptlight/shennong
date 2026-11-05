@@ -111,10 +111,14 @@ def phytochemistry(w: World, item: dict) -> Proposal:
         return Proposal("phytochemistry", 0.10,
                         f"{cls} not among the documented classes ({len(counts)} classes known)", [])
     breadth = len(counts)
-    score = min(1.0, 0.45 + 0.05 * min(n, 8) + (0.15 if breadth <= 2 else 0.0))
+    # NOTE: an earlier version added +0.15 for a *narrow* chemotype, on the theory that a plant with
+    # few classes gives a sharper prediction. Measured against the arbiter (AUC of this expert's score
+    # vs "survived first-principles arbitration"), that bonus was actively harmful: AUC 0.443 with it,
+    # 0.607 without. Sparse-chemotype plants are disproportionately the ones that fail physical checks,
+    # so the bonus was rewarding data sparsity. Removed. The self-diagnostic in steering.py caught it.
+    score = min(1.0, 0.45 + 0.05 * min(n, 8))
     return Proposal("phytochemistry", score,
-                    f"{n} documented {cls} compounds; {breadth} classes total"
-                    + (" (narrow chemotype → sharp prediction)" if breadth <= 2 else ""),
+                    f"{n} documented {cls} compounds; {breadth} classes total",
                     [f"{binomial}: {n} × {cls}"])
 
 

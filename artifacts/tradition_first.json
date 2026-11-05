@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T11:13:40-0800",
+  "generated_at": "2026-11-05T11:39:37-0800",
   "ordering": [
     "ancient record (GATE)",
     "Asian theory (GATE)",
@@ -27,8 +27,749 @@
   "n_strongest_class": 18,
   "results": [
     {
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+      "tradition_first_score": 0.922,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Glycyrrhiza uralensis has no family on record — resolution is unverified",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "炙 in aqueous_excipient: water (ε 80.1) suits polar solutes; flavonoid has logP~2.0",
+              "evidence": [
+                "ε(aqueous_excipient)=70.0"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "24 documented flavonoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 24 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 8.5 kcal, Rg 5.3 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 51.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "acetal_hydrolysis: computed hydrolysis ΔE 67 kJ/mol (gas phase); rank 3/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
+              ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 70 Å², logP 5.3 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.75,
+              "rationale": "flavonoid survives aqueous processing partly intact; gut-flora hydrolysis is the plausible activation step — measure the aglycone, not the glycoside",
+              "evidence": []
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "flavonoid is consistent with 炙 (~120 °C, with honey/vinegar/wine): glycosides hydrolyse; aglycones oxidise with heat.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+      "tradition_first_score": 0.9192,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.99,
+              "rationale": "53 independent sources, 3 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Croton tiglium has no family on record — resolution is unverified",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+              "evidence": [
+                "巴豆: 溫/脾/胃/大腸"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "煮 = boiling in water or an excipient liquor",
+              "evidence": [
+                "煮: hydrolysis, extraction, detoxification"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "煮 in water: water (ε 80.1) suits polar solutes; alkaloid has logP~2.5",
+              "evidence": [
+                "ε(water)=80.1"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
+              "evidence": [
+                "Croton tiglium: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "巴豆 有毒",
+                "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 14.8 kcal, Rg 3.6 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 3.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 161 Å², logP -3.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 煮 (~100 °C, water or excipient liquor): mostly thermostable; some esters hydrolyse.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+      "tradition_first_score": 0.9192,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.99,
+              "rationale": "53 independent sources, 3 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Croton tiglium has no family on record — resolution is unverified",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+              "evidence": [
+                "巴豆: 溫/脾/胃/大腸"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "研 = grinding/milling (研, 研細)",
+              "evidence": [
+                "研: particle-size reduction"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "研 in mechanical: water (ε 80.1) suits polar solutes; alkaloid has logP~2.5",
+              "evidence": [
+                "ε(mechanical)=0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
+              "evidence": [
+                "Croton tiglium: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "巴豆 有毒",
+                "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 14.8 kcal, Rg 3.6 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 3.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "研 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 161 Å², logP -3.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 研 (~25 °C, mechanical): mostly thermostable; some esters hydrolyse.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
+      "tradition_first_score": 0.914,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "59 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Aconitum carmichaelii has no family on record — resolution is unverified",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+              "evidence": [
+                "附子: 溫/肝/腎/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "17 documented terpenoid compounds; 2 classes total",
+              "evidence": [
+                "Aconitum carmichaelii: 17 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 附子 marked 有毒",
+              "evidence": [
+                "附子"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 95.4 kcal, Rg 4.0 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 188.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 112 Å², logP 4.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid content",
+      "tradition_first_score": 0.914,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Anemarrhena asphodeloides has no family on record — resolution is unverified",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 腎, 無毒",
+              "evidence": [
+                "知母: 寒/腎"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "20 documented terpenoid compounds; 4 classes total",
+              "evidence": [
+                "Anemarrhena asphodeloides: 20 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 知母 marked 有毒",
+              "evidence": [
+                "知母"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "moderately flexible; conformational spread 1.9 kcal, Rg 4.1 Å, 4 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking; rigid thermophile under dry heat",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 36.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 40 Å², logP 3.2 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its alkaloid content",
-      "tradition_first_score": 0.952,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
       "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
@@ -47,6 +788,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Acorus calamus has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -75,6 +822,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; alkaloid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -84,8 +839,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "11 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "11 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Acorus calamus: 11 × alkaloid"
               ]
@@ -118,471 +873,30 @@
               ]
             },
             {
-              "domain": "first_principles",
-              "score": 0.7,
-              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
-              "evidence": [
-                "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse."
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 5,
-          "name": "Western literature — recorded as observation, NOT consulted as judge",
-          "proposals": [
-            {
-              "domain": "western_literature",
-              "score": 0.0,
-              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
-              "evidence": [
-                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
-      "tradition_first_score": 0.952,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
-      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "59 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
-              "evidence": [
-                "附子: 溫/肝/腎/肺"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
-              "evidence": [
-                "炮: detoxification, reduction of irritant volatiles"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "39 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Aconitum carmichaelii: 39 × alkaloid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.85,
-              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
-              "evidence": [
-                "附子 有毒",
-                "alkaloid"
-              ]
-            },
-            {
-              "domain": "mechanics",
-              "score": 0.7,
-              "rationale": "flexible — large conformational spread; conformational spread 87.6 kcal, Rg 4.8 Å, 7 rotatable bonds. large conformational spread: thermally mobile, change is easy",
-              "evidence": [
-                "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 237.3 kcal/mol"
-              ]
-            },
-            {
-              "domain": "quantum",
-              "score": 0.55,
-              "rationale": "炮 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
-              "evidence": [
-                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
-                "amide_hydrolysis ΔE 66 kJ/mol"
-              ]
-            },
-            {
-              "domain": "first_principles",
-              "score": 0.7,
-              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
-              "evidence": [
-                "alkaloid is consistent with 炮 (~250 °C, hot ash/sand): mostly thermostable; some esters hydrolyse."
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 5,
-          "name": "Western literature — recorded as observation, NOT consulted as judge",
-          "proposals": [
-            {
-              "domain": "western_literature",
-              "score": 0.0,
-              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
-              "evidence": [
-                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
-      "tradition_first_score": 0.952,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
-      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "59 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
-              "evidence": [
-                "附子: 溫/肝/腎/肺"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "焙 = gentle drying over fire (焙)",
-              "evidence": [
-                "焙: dehydration, enzyme inactivation"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "39 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Aconitum carmichaelii: 39 × alkaloid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.85,
-              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
-              "evidence": [
-                "附子 有毒",
-                "alkaloid"
-              ]
-            },
-            {
-              "domain": "mechanics",
-              "score": 0.7,
-              "rationale": "flexible — large conformational spread; conformational spread 87.6 kcal, Rg 4.8 Å, 7 rotatable bonds. large conformational spread: thermally mobile, change is easy",
-              "evidence": [
-                "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 237.3 kcal/mol"
-              ]
-            },
-            {
-              "domain": "quantum",
-              "score": 0.5,
-              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
-              "evidence": [
-                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
-                "amide_hydrolysis ΔE 66 kJ/mol"
-              ]
-            },
-            {
-              "domain": "first_principles",
-              "score": 0.7,
-              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
-              "evidence": [
-                "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse."
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 5,
-          "name": "Western literature — recorded as observation, NOT consulted as judge",
-          "proposals": [
-            {
-              "domain": "western_literature",
-              "score": 0.0,
-              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
-              "evidence": [
-                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
-      "tradition_first_score": 0.952,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
-      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "59 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
-              "evidence": [
-                "附子: 溫/肝/腎/肺"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "焙 = gentle drying over fire (焙)",
-              "evidence": [
-                "焙: dehydration, enzyme inactivation"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "17 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Aconitum carmichaelii: 17 × terpenoid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 附子 marked 有毒",
-              "evidence": [
-                "附子"
-              ]
-            },
-            {
-              "domain": "mechanics",
-              "score": 0.7,
-              "rationale": "flexible — large conformational spread; conformational spread 95.4 kcal, Rg 4.0 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
-              "evidence": [
-                "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 188.0 kcal/mol"
-              ]
-            },
-            {
-              "domain": "quantum",
+              "domain": "chemotaxonomy",
               "score": 0.3,
-              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 20 Å², logP 3.3 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
               "evidence": []
             },
             {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them."
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 5,
-          "name": "Western literature — recorded as observation, NOT consulted as judge",
-          "proposals": [
-            {
-              "domain": "western_literature",
-              "score": 0.0,
-              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
-              "evidence": [
-                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
-      "tradition_first_score": 0.9492,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
-      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 0.99,
-              "rationale": "53 independent sources, 3 traditions",
-              "evidence": [
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu",
-                "source ws_zh_bencao_chongyuan"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
-              "evidence": [
-                "巴豆: 溫/脾/胃/大腸"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "研 = grinding/milling (研, 研細)",
-              "evidence": [
-                "研: particle-size reduction"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "21 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Croton tiglium: 21 × terpenoid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 巴豆 marked 有毒",
-              "evidence": [
-                "巴豆"
-              ]
-            },
-            {
-              "domain": "mechanics",
-              "score": 0.7,
-              "rationale": "flexible — large conformational spread; conformational spread 40.0 kcal, Rg 4.6 Å, 6 rotatable bonds. large conformational spread: thermally mobile, change is easy",
-              "evidence": [
-                "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 95.4 kcal/mol"
-              ]
-            },
-            {
-              "domain": "quantum",
-              "score": 0.3,
-              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
-              "evidence": []
-            },
-            {
-              "domain": "first_principles",
-              "score": 0.7,
-              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
-              "evidence": [
-                "terpenoid is consistent with 研 (~25 °C, mechanical): mono/sesquiterpenes volatile; heat degrades them."
+                "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -624,6 +938,12 @@
                 "source ws_zh_bencao_biandu",
                 "source ws_zh_bencao_chongyuan"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Actaea cimicifuga has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -652,6 +972,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; alkaloid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -661,8 +989,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Actaea cimicifuga: 1 × alkaloid"
               ]
@@ -695,11 +1023,330 @@
               ]
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 143 Å², logP 6.2 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse."
+                "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+      "tradition_first_score": 0.898,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "59 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Aconitum carmichaelii has no family on record — resolution is unverified",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+              "evidence": [
+                "附子: 溫/肝/腎/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "炮 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "39 documented alkaloid compounds; 2 classes total",
+              "evidence": [
+                "Aconitum carmichaelii: 39 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "附子 有毒",
+                "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 87.6 kcal, Rg 4.8 Å, 7 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 237.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.55,
+              "rationale": "炮 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 169 Å², logP 3.7 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 炮 (~250 °C, hot ash/sand): mostly thermostable; some esters hydrolyse.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+      "tradition_first_score": 0.898,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "59 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Aconitum carmichaelii has no family on record — resolution is unverified",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+              "evidence": [
+                "附子: 溫/肝/腎/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "39 documented alkaloid compounds; 2 classes total",
+              "evidence": [
+                "Aconitum carmichaelii: 39 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "附子 有毒",
+                "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 87.6 kcal, Rg 4.8 Å, 7 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 237.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 169 Å², logP 3.7 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -741,6 +1388,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Glycyrrhiza uralensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -768,6 +1421,14 @@
               "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
               "evidence": [
                 "炮: detoxification, reduction of irritant volatiles"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "炮 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
               ]
             }
           ]
@@ -811,11 +1472,30 @@
               ]
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 70 Å², logP 5.3 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.5,
+              "rationale": "flavonoid present; check whether the aglycone is the active form",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.775,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "flavonoid is thermally labile at ~250 °C (炮) — degradation products are expected and should be the measured endpoint, not the parent compound."
+                "flavonoid is thermally labile at ~250 °C (炮) — degradation products are expected and should be the measured endpoint, not the parent compound.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -857,6 +1537,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Glycyrrhiza uralensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -885,6 +1571,12 @@
               "evidence": [
                 "炮: detoxification, reduction of irritant volatiles"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "process or class unknown for a polarity argument",
+              "evidence": []
             }
           ]
         },
@@ -924,127 +1616,30 @@
               "evidence": []
             },
             {
-              "domain": "first_principles",
-              "score": 0.5,
-              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
-              "evidence": [
-                "no stability data for chemotype 'steroid'"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 5,
-          "name": "Western literature — recorded as observation, NOT consulted as judge",
-          "proposals": [
-            {
-              "domain": "western_literature",
-              "score": 0.0,
-              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
-              "evidence": [
-                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
-      "tradition_first_score": 0.898,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
-      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "57 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 心/脾, 無毒",
-              "evidence": [
-                "甘草: 平/心/脾"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
-              "evidence": [
-                "炙: modify drug property, reduce toxicity, target organ"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "24 documented flavonoid compounds; 4 classes total",
-              "evidence": [
-                "Glycyrrhiza uralensis: 24 × flavonoid"
-              ]
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 甘草 marked 有毒",
-              "evidence": [
-                "甘草"
-              ]
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 296 Å², logP 6.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
             },
             {
-              "domain": "mechanics",
-              "score": 0.7,
-              "rationale": "flexible — large conformational spread; conformational spread 8.5 kcal, Rg 5.3 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
-              "evidence": [
-                "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 51.1 kcal/mol"
-              ]
-            },
-            {
-              "domain": "quantum",
-              "score": 0.65,
-              "rationale": "acetal_hydrolysis: computed hydrolysis ΔE 67 kJ/mol (gas phase); rank 3/3 easiest-first",
-              "evidence": [
-                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
-                "acetal_hydrolysis ΔE 67 kJ/mol"
-              ]
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             },
             {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.8,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "flavonoid is consistent with 炙 (~120 °C, with honey/vinegar/wine): glycosides hydrolyse; aglycones oxidise with heat."
+                "no stability data for chemotype 'steroid'",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -1086,6 +1681,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Glycyrrhiza uralensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -1114,6 +1715,12 @@
               "evidence": [
                 "炙: modify drug property, reduce toxicity, target organ"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "process or class unknown for a polarity argument",
+              "evidence": []
             }
           ]
         },
@@ -1153,11 +1760,30 @@
               "evidence": []
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 296 Å², logP 6.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.5,
+              "score": 0.8,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "no stability data for chemotype 'steroid'"
+                "no stability data for chemotype 'steroid'",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -1199,6 +1825,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Glycyrrhiza uralensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -1226,6 +1858,14 @@
               "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; flavonoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
               ]
             }
           ]
@@ -1269,11 +1909,30 @@
               ]
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 70 Å², logP 5.3 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.75,
+              "rationale": "flavonoid survives aqueous processing partly intact; gut-flora hydrolysis is the plausible activation step — measure the aglycone, not the glycoside",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "flavonoid is consistent with 蒸 (~100 °C, steam): glycosides hydrolyse; aglycones oxidise with heat."
+                "flavonoid is consistent with 蒸 (~100 °C, steam): glycosides hydrolyse; aglycones oxidise with heat.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -1315,6 +1974,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Glycyrrhiza uralensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -1343,6 +2008,12 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "process or class unknown for a polarity argument",
+              "evidence": []
             }
           ]
         },
@@ -1382,11 +2053,30 @@
               "evidence": []
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 296 Å², logP 6.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.5,
+              "score": 0.8,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "no stability data for chemotype 'steroid'"
+                "no stability data for chemotype 'steroid'",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -1428,6 +2118,12 @@
                 "source ws_zh_bencao_biandu",
                 "source ws_zh_bencao_chongyuan"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Anemarrhena asphodeloides has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -1455,6 +2151,14 @@
               "rationale": "焙 = gentle drying over fire (焙)",
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
               ]
             }
           ]
@@ -1499,11 +2203,30 @@
               ]
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 79 Å², logP 0.9 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse."
+                "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -1545,6 +2268,12 @@
                 "source ws_zh_bencao_biandu",
                 "source ws_zh_bencao_chongyuan"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Anemarrhena asphodeloides has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -1573,6 +2302,12 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "process or class unknown for a polarity argument",
+              "evidence": []
             }
           ]
         },
@@ -1612,124 +2347,30 @@
               "evidence": []
             },
             {
-              "domain": "first_principles",
-              "score": 0.5,
-              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
-              "evidence": [
-                "no stability data for chemotype 'steroid'"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 5,
-          "name": "Western literature — recorded as observation, NOT consulted as judge",
-          "proposals": [
-            {
-              "domain": "western_literature",
-              "score": 0.0,
-              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
-              "evidence": [
-                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid content",
-      "tradition_first_score": 0.898,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
-      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "49 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu",
-                "source ws_zh_bencao_chongyuan"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 寒, channels 腎, 無毒",
-              "evidence": [
-                "知母: 寒/腎"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "焙 = gentle drying over fire (焙)",
-              "evidence": [
-                "焙: dehydration, enzyme inactivation"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "20 documented terpenoid compounds; 4 classes total",
-              "evidence": [
-                "Anemarrhena asphodeloides: 20 × terpenoid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 知母 marked 有毒",
-              "evidence": [
-                "知母"
-              ]
-            },
-            {
-              "domain": "mechanics",
-              "score": 0.7,
-              "rationale": "moderately flexible; conformational spread 1.9 kcal, Rg 4.1 Å, 4 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking; rigid thermophile under dry heat",
-              "evidence": [
-                "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 36.1 kcal/mol"
-              ]
-            },
-            {
-              "domain": "quantum",
+              "domain": "chemotaxonomy",
               "score": 0.3,
-              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 217 Å², logP 6.8 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
               "evidence": []
             },
             {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.8,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them."
+                "no stability data for chemotype 'steroid'",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -1751,7 +2392,7 @@
       ]
     },
     {
-      "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
       "tradition_first_score": 0.8952,
       "gates_passed": true,
       "failed_gate": null,
@@ -1771,123 +2412,12 @@
                 "source ws_zh_bencao_biandu",
                 "source ws_zh_bencao_chongyuan"
               ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
-              "evidence": [
-                "巴豆: 溫/脾/胃/大腸"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "煮 = boiling in water or an excipient liquor",
-              "evidence": [
-                "煮: hydrolysis, extraction, detoxification"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Croton tiglium: 1 × alkaloid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.85,
-              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
-              "evidence": [
-                "巴豆 有毒",
-                "alkaloid"
-              ]
-            },
-            {
-              "domain": "mechanics",
-              "score": 0.7,
-              "rationale": "flexible — large conformational spread; conformational spread 14.8 kcal, Rg 3.6 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
-              "evidence": [
-                "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 3.2 kcal/mol"
-              ]
-            },
-            {
-              "domain": "quantum",
-              "score": 0.65,
-              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
-              "evidence": [
-                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
-                "amide_hydrolysis ΔE 66 kJ/mol"
-              ]
-            },
-            {
-              "domain": "first_principles",
-              "score": 0.7,
-              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
-              "evidence": [
-                "alkaloid is consistent with 煮 (~100 °C, water or excipient liquor): mostly thermostable; some esters hydrolyse."
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 5,
-          "name": "Western literature — recorded as observation, NOT consulted as judge",
-          "proposals": [
-            {
-              "domain": "western_literature",
-              "score": 0.0,
-              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
-              "evidence": [
-                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
-      "tradition_first_score": 0.8952,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
-      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 0.99,
-              "rationale": "53 independent sources, 3 traditions",
-              "evidence": [
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu",
-                "source ws_zh_bencao_chongyuan"
-              ]
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Croton tiglium has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -1916,6 +2446,14 @@
               "evidence": [
                 "研: particle-size reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "研 in mechanical: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(mechanical)=0.0"
+              ]
             }
           ]
         },
@@ -1925,45 +2463,60 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "21 documented terpenoid compounds; 2 classes total",
               "evidence": [
-                "Croton tiglium: 1 × alkaloid"
+                "Croton tiglium: 21 × terpenoid"
               ]
             },
             {
               "domain": "toxicology",
-              "score": 0.85,
-              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "score": 0.6,
+              "rationale": "safety signal: 巴豆 marked 有毒",
               "evidence": [
-                "巴豆 有毒",
-                "alkaloid"
+                "巴豆"
               ]
             },
             {
               "domain": "mechanics",
               "score": 0.7,
-              "rationale": "flexible — large conformational spread; conformational spread 14.8 kcal, Rg 3.6 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "rationale": "flexible — large conformational spread; conformational spread 40.0 kcal, Rg 4.6 Å, 6 rotatable bonds. large conformational spread: thermally mobile, change is easy",
               "evidence": [
                 "RDKit ETKDG + MMFF94, deterministic seed",
-                "MMFF94 min 3.2 kcal/mol"
+                "MMFF94 min 95.4 kcal/mol"
               ]
             },
             {
               "domain": "quantum",
-              "score": 0.5,
-              "rationale": "研 does not demand hydrolysis; electronic-structure evidence is indirect",
-              "evidence": [
-                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
-                "amide_hydrolysis ΔE 66 kJ/mol"
-              ]
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 87 Å², logP 7.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             },
             {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "alkaloid is consistent with 研 (~25 °C, mechanical): mostly thermostable; some esters hydrolyse."
+                "terpenoid is consistent with 研 (~25 °C, mechanical): mono/sesquiterpenes volatile; heat degrades them.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -1986,7 +2539,7 @@
     },
     {
       "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its phenylpropanoid content",
-      "tradition_first_score": 0.844,
+      "tradition_first_score": 0.88,
       "gates_passed": true,
       "failed_gate": null,
       "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
@@ -2005,6 +2558,12 @@
                 "source ws_zh_bencao_biandu",
                 "source ws_zh_bencao_chongyuan"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Anemarrhena asphodeloides has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -2032,6 +2591,14 @@
               "rationale": "焙 = gentle drying over fire (焙)",
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
+              ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
               ]
             }
           ]
@@ -2075,11 +2642,30 @@
               ]
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 59 Å², logP 1.9 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.7,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "phenylpropanoid is consistent with 焙 (~70 °C, dry air): volatile; heat-sensitive."
+                "phenylpropanoid is consistent with 焙 (~70 °C, dry air): volatile; heat-sensitive.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -2121,6 +2707,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Moschus moschiferus has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -2147,6 +2739,14 @@
               "evidence": [
                 "研: particle-size reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "研 in mechanical: water (ε 80.1) suits polar solutes; alkaloid has logP~2.5",
+              "evidence": [
+                "ε(mechanical)=0.0"
+              ]
             }
           ]
         },
@@ -2156,8 +2756,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.7,
-              "rationale": "2 documented alkaloid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.55,
+              "rationale": "2 documented alkaloid compounds; 1 classes total",
               "evidence": [
                 "Moschus moschiferus: 2 × alkaloid"
               ]
@@ -2187,6 +2787,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 23 Å², logP 4.3 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2208,6 +2826,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Vincetoxicum atratum has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2237,6 +2861,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -2246,8 +2878,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "13 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "13 documented terpenoid compounds; 1 classes total",
               "evidence": [
                 "Vincetoxicum atratum: 13 × terpenoid"
               ]
@@ -2274,6 +2906,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 96 Å², logP 3.8 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2295,6 +2945,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Vincetoxicum glaucescens has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2324,6 +2980,14 @@
               "evidence": [
                 "伏: controlled oxidation/complexation, detonation-tendency reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "伏 in sealed: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(sealed)=0.0"
+              ]
             }
           ]
         },
@@ -2333,8 +2997,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "5 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.7,
+              "rationale": "5 documented terpenoid compounds; 1 classes total",
               "evidence": [
                 "Vincetoxicum glaucescens: 5 × terpenoid"
               ]
@@ -2361,6 +3025,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 20 Å², logP 2.7 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2382,6 +3064,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Vincetoxicum glaucescens has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2411,6 +3099,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -2420,8 +3116,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "5 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.7,
+              "rationale": "5 documented terpenoid compounds; 1 classes total",
               "evidence": [
                 "Vincetoxicum glaucescens: 5 × terpenoid"
               ]
@@ -2447,6 +3143,24 @@
               "domain": "quantum",
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 20 Å², logP 2.7 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
               "evidence": []
             }
           ]
@@ -2474,6 +3188,12 @@
                 "source ws_zh_bencao_biandu",
                 "source ws_zh_bencao_chongyuan"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Aconitum carmichaeli has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -2500,6 +3220,14 @@
               "evidence": [
                 "炮: detoxification, reduction of irritant volatiles"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "炮 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -2509,8 +3237,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "11 documented alkaloid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "11 documented alkaloid compounds; 1 classes total",
               "evidence": [
                 "Aconitum carmichaeli: 11 × alkaloid"
               ]
@@ -2540,6 +3268,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 92 Å², logP 5.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2561,6 +3307,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Diospyros eriantha has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2588,6 +3340,14 @@
               "evidence": [
                 "炙: modify drug property, reduce toxicity, target organ"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "炙 in aqueous_excipient: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(aqueous_excipient)=70.0"
+              ]
             }
           ]
         },
@@ -2597,8 +3357,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "11 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "11 documented terpenoid compounds; 1 classes total",
               "evidence": [
                 "Diospyros eriantha: 11 × terpenoid"
               ]
@@ -2623,6 +3383,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 96 Å², logP 3.8 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2644,6 +3422,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Diospyros eriantha has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2671,6 +3455,14 @@
               "evidence": [
                 "煮: hydrolysis, extraction, detoxification"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "煮 in water: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(water)=80.1"
+              ]
             }
           ]
         },
@@ -2680,8 +3472,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "11 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "11 documented terpenoid compounds; 1 classes total",
               "evidence": [
                 "Diospyros eriantha: 11 × terpenoid"
               ]
@@ -2706,6 +3498,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 96 Å², logP 3.8 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2727,6 +3537,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Diospyros eriantha has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2754,6 +3570,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -2763,8 +3587,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "11 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "11 documented terpenoid compounds; 1 classes total",
               "evidence": [
                 "Diospyros eriantha: 11 × terpenoid"
               ]
@@ -2789,6 +3613,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 96 Å², logP 3.8 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2810,6 +3652,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Polygonatum sibiricum has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2837,6 +3685,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; alkaloid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -2846,8 +3702,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Polygonatum sibiricum: 1 × alkaloid"
               ]
@@ -2877,6 +3733,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 109 Å², logP -4.0 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -2898,6 +3772,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Polygonatum sibiricum has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -2925,6 +3805,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -2934,8 +3822,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.95,
-              "rationale": "7 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.8,
+              "rationale": "7 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Polygonatum sibiricum: 7 × terpenoid"
               ]
@@ -2959,6 +3847,24 @@
               "domain": "quantum",
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 276 Å², logP 6.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
               "evidence": []
             }
           ]
@@ -2986,6 +3892,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Acorus calamus has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -3014,6 +3926,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -3023,8 +3943,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "138 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "138 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Acorus calamus: 138 × terpenoid"
               ]
@@ -3053,11 +3973,30 @@
               "evidence": []
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 0 Å², logP 5.5 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.25,
+              "score": 0.525,
               "rationale": "VIOLATES FIRST PRINCIPLES — the claimed mechanism is physically impossible as stated",
               "evidence": [
-                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing."
+                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -3080,6 +4019,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Asparagus cochinchinensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -3107,6 +4052,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; alkaloid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -3116,8 +4069,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Asparagus cochinchinensis: 1 × alkaloid"
               ]
@@ -3147,6 +4100,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 15 Å², logP 3.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -3168,6 +4139,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Asparagus cochinchinensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -3195,6 +4172,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -3204,8 +4189,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "18 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "18 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Asparagus cochinchinensis: 18 × terpenoid"
               ]
@@ -3230,6 +4215,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 40 Å², logP 3.2 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -3251,6 +4254,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Asparagus cochinchinensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -3278,6 +4287,14 @@
               "evidence": [
                 "伏: controlled oxidation/complexation, detonation-tendency reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "伏 in sealed: water (ε 80.1) suits polar solutes; alkaloid has logP~2.5",
+              "evidence": [
+                "ε(sealed)=0.0"
+              ]
             }
           ]
         },
@@ -3287,8 +4304,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Asparagus cochinchinensis: 1 × alkaloid"
               ]
@@ -3318,6 +4335,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 15 Å², logP 3.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -3339,6 +4374,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Asparagus cochinchinensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -3366,6 +4407,14 @@
               "evidence": [
                 "伏: controlled oxidation/complexation, detonation-tendency reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "伏 in sealed: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(sealed)=0.0"
+              ]
             }
           ]
         },
@@ -3375,8 +4424,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "18 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "18 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Asparagus cochinchinensis: 18 × terpenoid"
               ]
@@ -3401,6 +4450,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 40 Å², logP 3.2 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -3422,6 +4489,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Rehmannia glutinosa has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -3449,6 +4522,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; alkaloid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -3458,8 +4539,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.95,
-              "rationale": "7 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.8,
+              "rationale": "7 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Rehmannia glutinosa: 7 × alkaloid"
               ]
@@ -3489,6 +4570,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 70 Å², logP 2.8 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -3510,6 +4609,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Rehmannia glutinosa has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -3537,6 +4642,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -3546,8 +4659,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "83 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "83 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Rehmannia glutinosa: 83 × terpenoid"
               ]
@@ -3571,6 +4684,24 @@
               "domain": "quantum",
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 59 Å², logP 1.8 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
               "evidence": []
             }
           ]
@@ -3598,6 +4729,12 @@
                 "source ws_zh_bencao_biandu",
                 "source ws_zh_bencao_chongyuan"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Actaea cimicifuga has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -3626,6 +4763,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -3635,8 +4780,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "16 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "16 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Actaea cimicifuga: 16 × terpenoid"
               ]
@@ -3665,11 +4810,30 @@
               "evidence": []
             },
             {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 138 Å², logP 8.3 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
-              "score": 0.25,
+              "score": 0.525,
               "rationale": "VIOLATES FIRST PRINCIPLES — the claimed mechanism is physically impossible as stated",
               "evidence": [
-                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing."
+                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing.",
+                "claim is about change, not absolute enrichment — mass balance does not bite"
               ]
             }
           ]
@@ -3697,6 +4861,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Coptis chinensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -3723,6 +4893,14 @@
               "evidence": [
                 "伏: controlled oxidation/complexation, detonation-tendency reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "伏 in sealed: water (ε 80.1) suits polar solutes; alkaloid has logP~2.5",
+              "evidence": [
+                "ε(sealed)=0.0"
+              ]
             }
           ]
         },
@@ -3732,8 +4910,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "9 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "9 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Coptis chinensis: 9 × alkaloid"
               ]
@@ -3763,6 +4941,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 62 Å², logP 1.6 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -3789,6 +4985,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Coptis chinensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -3815,6 +5017,14 @@
               "evidence": [
                 "伏: controlled oxidation/complexation, detonation-tendency reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "伏 in sealed: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(sealed)=0.0"
+              ]
             }
           ]
         },
@@ -3824,8 +5034,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Coptis chinensis: 1 × terpenoid"
               ]
@@ -3849,6 +5059,24 @@
               "domain": "quantum",
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 40 Å², logP 3.6 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
               "evidence": []
             }
           ]
@@ -3876,6 +5104,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Coptis chinensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -3902,6 +5136,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -3911,8 +5153,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "9 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "9 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Coptis chinensis: 9 × alkaloid"
               ]
@@ -3942,6 +5184,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 62 Å², logP 1.6 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -3968,6 +5228,12 @@
                 "source ws_zh_bencao_beiyao",
                 "source ws_zh_bencao_biandu"
               ]
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Coptis chinensis has no family on record — resolution is unverified",
+              "evidence": []
             }
           ]
         },
@@ -3994,6 +5260,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -4003,8 +5277,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Coptis chinensis: 1 × terpenoid"
               ]
@@ -4029,6 +5303,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 40 Å², logP 3.6 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4050,6 +5342,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Rhaponticum uniflorum has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4077,6 +5375,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; flavonoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -4086,8 +5392,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented flavonoid compounds; 2 classes total",
               "evidence": [
                 "Rhaponticum uniflorum: 1 × flavonoid"
               ]
@@ -4115,6 +5421,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "acetal_hydrolysis ΔE 67 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 110 Å², logP -0.3 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.75,
+              "rationale": "flavonoid survives aqueous processing partly intact; gut-flora hydrolysis is the plausible activation step — measure the aglycone, not the glycoside",
+              "evidence": []
             }
           ]
         }
@@ -4136,6 +5460,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Rhaponticum uniflorum has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4163,6 +5493,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -4172,8 +5510,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "11 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "11 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Rhaponticum uniflorum: 11 × terpenoid"
               ]
@@ -4198,6 +5536,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 149 Å², logP 8.0 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4219,6 +5575,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Cupressus funebris has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4246,6 +5608,14 @@
               "evidence": [
                 "炙: modify drug property, reduce toxicity, target organ"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "炙 in aqueous_excipient: water (ε 80.1) suits polar solutes; flavonoid has logP~2.0",
+              "evidence": [
+                "ε(aqueous_excipient)=70.0"
+              ]
             }
           ]
         },
@@ -4255,8 +5625,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.75,
-              "rationale": "3 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.6,
+              "rationale": "3 documented flavonoid compounds; 2 classes total",
               "evidence": [
                 "Cupressus funebris: 3 × flavonoid"
               ]
@@ -4284,6 +5654,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "acetal_hydrolysis ΔE 67 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 158 Å², logP 0.8 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.75,
+              "rationale": "flavonoid survives aqueous processing partly intact; gut-flora hydrolysis is the plausible activation step — measure the aglycone, not the glycoside",
+              "evidence": []
             }
           ]
         }
@@ -4305,6 +5693,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Cupressus funebris has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4332,6 +5726,14 @@
               "evidence": [
                 "炙: modify drug property, reduce toxicity, target organ"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "炙 in aqueous_excipient: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(aqueous_excipient)=70.0"
+              ]
             }
           ]
         },
@@ -4341,8 +5743,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.7,
-              "rationale": "2 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.55,
+              "rationale": "2 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Cupressus funebris: 2 × terpenoid"
               ]
@@ -4367,6 +5769,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 0 Å², logP 6.0 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4388,6 +5808,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Eucommia ulmoides has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4415,6 +5841,14 @@
               "evidence": [
                 "炙: modify drug property, reduce toxicity, target organ"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "炙 in aqueous_excipient: water (ε 80.1) suits polar solutes; flavonoid has logP~2.0",
+              "evidence": [
+                "ε(aqueous_excipient)=70.0"
+              ]
             }
           ]
         },
@@ -4424,8 +5858,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.8,
-              "rationale": "4 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.65,
+              "rationale": "4 documented flavonoid compounds; 2 classes total",
               "evidence": [
                 "Eucommia ulmoides: 4 × flavonoid"
               ]
@@ -4453,6 +5887,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "acetal_hydrolysis ΔE 67 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 110 Å², logP -0.3 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.75,
+              "rationale": "flavonoid survives aqueous processing partly intact; gut-flora hydrolysis is the plausible activation step — measure the aglycone, not the glycoside",
+              "evidence": []
             }
           ]
         }
@@ -4474,6 +5926,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Eucommia ulmoides has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4501,6 +5959,14 @@
               "evidence": [
                 "炙: modify drug property, reduce toxicity, target organ"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "炙 in aqueous_excipient: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(aqueous_excipient)=70.0"
+              ]
             }
           ]
         },
@@ -4510,8 +5976,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "46 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "46 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Eucommia ulmoides: 46 × terpenoid"
               ]
@@ -4536,6 +6002,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 77 Å², logP 3.5 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4557,6 +6041,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Scrophularia ningpoensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4584,6 +6074,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; phenylpropanoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -4593,8 +6091,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "5 documented phenylpropanoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.7,
+              "rationale": "5 documented phenylpropanoid compounds; 2 classes total",
               "evidence": [
                 "Scrophularia ningpoensis: 5 × phenylpropanoid"
               ]
@@ -4622,6 +6120,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "ester_hydrolysis ΔE 50 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 29 Å², logP 1.3 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4643,6 +6159,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Scrophularia ningpoensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4670,6 +6192,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -4679,8 +6209,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "30 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "30 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Scrophularia ningpoensis: 30 × terpenoid"
               ]
@@ -4705,6 +6235,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 147 Å², logP 0.1 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4726,6 +6274,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Scrophularia ningpoensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4753,6 +6307,14 @@
               "evidence": [
                 "伏: controlled oxidation/complexation, detonation-tendency reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "伏 in sealed: water (ε 80.1) suits polar solutes; phenylpropanoid has logP~2.5",
+              "evidence": [
+                "ε(sealed)=0.0"
+              ]
             }
           ]
         },
@@ -4762,8 +6324,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "5 documented phenylpropanoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.7,
+              "rationale": "5 documented phenylpropanoid compounds; 2 classes total",
               "evidence": [
                 "Scrophularia ningpoensis: 5 × phenylpropanoid"
               ]
@@ -4791,6 +6353,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "ester_hydrolysis ΔE 50 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 29 Å², logP 1.3 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4812,6 +6392,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Scrophularia ningpoensis has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4839,6 +6425,14 @@
               "evidence": [
                 "伏: controlled oxidation/complexation, detonation-tendency reduction"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "伏 in sealed: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(sealed)=0.0"
+              ]
             }
           ]
         },
@@ -4848,8 +6442,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "30 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "30 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Scrophularia ningpoensis: 30 × terpenoid"
               ]
@@ -4874,6 +6468,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 147 Å², logP 0.1 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -4895,6 +6507,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Epimedium brevicornu has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -4922,6 +6540,14 @@
               "evidence": [
                 "炒: deactivation of enzymes, partial pyrolysis"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "炒 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -4931,8 +6557,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.7,
-              "rationale": "2 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.55,
+              "rationale": "2 documented flavonoid compounds; 2 classes total",
               "evidence": [
                 "Epimedium brevicornu: 2 × flavonoid"
               ]
@@ -4960,6 +6586,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "acetal_hydrolysis ΔE 67 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 79 Å², logP 0.5 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.5,
+              "rationale": "flavonoid present; check whether the aglycone is the active form",
+              "evidence": []
             }
           ]
         }
@@ -4981,6 +6625,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Epimedium brevicornu has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5008,6 +6658,14 @@
               "evidence": [
                 "炒: deactivation of enzymes, partial pyrolysis"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "炒 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -5017,8 +6675,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.9,
-              "rationale": "6 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.75,
+              "rationale": "6 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Epimedium brevicornu: 6 × terpenoid"
               ]
@@ -5043,6 +6701,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 285 Å², logP 1.9 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5064,6 +6740,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Arctium lappa has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5091,6 +6773,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.3,
+              "rationale": "蒸 in steam: steam carries volatiles; alkaloid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -5100,8 +6790,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Arctium lappa: 1 × alkaloid"
               ]
@@ -5131,6 +6821,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 16 Å², logP -0.2 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5152,6 +6860,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Arctium lappa has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5179,6 +6893,14 @@
               "evidence": [
                 "蒸: hydrolysis, decarboxylation, removal of irritants"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "蒸 in steam: steam carries volatiles; terpenoid is not steam-volatile",
+              "evidence": [
+                "ε(steam)=80.1"
+              ]
             }
           ]
         },
@@ -5188,8 +6910,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "60 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "60 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Arctium lappa: 60 × terpenoid"
               ]
@@ -5214,6 +6936,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 0 Å², logP 6.0 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5235,6 +6975,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Arctium lappa has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5262,6 +7008,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -5271,8 +7025,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Arctium lappa: 1 × alkaloid"
               ]
@@ -5302,6 +7056,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 16 Å², logP -0.2 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5323,6 +7095,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Arctium lappa has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5350,6 +7128,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -5359,8 +7145,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "60 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.85,
+              "rationale": "60 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Arctium lappa: 60 × terpenoid"
               ]
@@ -5385,6 +7171,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.3,
+              "rationale": "TPSA 0 Å², logP 6.0 — poor passive absorption; a systemic mechanism needs a transporter or local action",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5406,6 +7210,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Saccharina japonica has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5435,6 +7245,14 @@
               "evidence": [
                 "煮: hydrolysis, extraction, detoxification"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.85,
+              "rationale": "煮 in water: water (ε 80.1) suits polar solutes; alkaloid has logP~2.5",
+              "evidence": [
+                "ε(water)=80.1"
+              ]
             }
           ]
         },
@@ -5444,8 +7262,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Saccharina japonica: 1 × alkaloid"
               ]
@@ -5476,6 +7294,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 9 Å², logP 4.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5497,6 +7333,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Saccharina japonica has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5526,6 +7368,14 @@
               "evidence": [
                 "煮: hydrolysis, extraction, detoxification"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.4,
+              "rationale": "煮 in water: water (ε 80.1) suits polar solutes; terpenoid has logP~3.5",
+              "evidence": [
+                "ε(water)=80.1"
+              ]
             }
           ]
         },
@@ -5535,8 +7385,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Saccharina japonica: 1 × terpenoid"
               ]
@@ -5560,6 +7410,24 @@
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 109 Å², logP 0.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5581,6 +7449,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Saccharina japonica has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5610,6 +7484,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.35,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -5619,8 +7501,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 2 classes total",
               "evidence": [
                 "Saccharina japonica: 1 × alkaloid"
               ]
@@ -5651,6 +7533,24 @@
                 "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
                 "amide_hydrolysis ΔE 66 kJ/mol"
               ]
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 9 Å², logP 4.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
+              "evidence": []
             }
           ]
         }
@@ -5672,6 +7572,12 @@
               "domain": "ethnobotany",
               "score": 0.2,
               "rationale": "drug surface not in the attested set",
+              "evidence": []
+            },
+            {
+              "domain": "taxonomy",
+              "score": 0.45,
+              "rationale": "Saccharina japonica has no family on record — resolution is unverified",
               "evidence": []
             }
           ]
@@ -5701,6 +7607,14 @@
               "evidence": [
                 "焙: dehydration, enzyme inactivation"
               ]
+            },
+            {
+              "domain": "extraction",
+              "score": 0.8,
+              "rationale": "焙 in dry: dry thermal medium does not extract; it transforms",
+              "evidence": [
+                "ε(dry)=0.0"
+              ]
             }
           ]
         },
@@ -5710,8 +7624,8 @@
           "proposals": [
             {
               "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "score": 0.5,
+              "rationale": "1 documented terpenoid compounds; 2 classes total",
               "evidence": [
                 "Saccharina japonica: 1 × terpenoid"
               ]
@@ -5734,6 +7648,24 @@
               "domain": "quantum",
               "score": 0.3,
               "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
+              "domain": "chemotaxonomy",
+              "score": 0.3,
+              "rationale": "family or chemotype unknown",
+              "evidence": []
+            },
+            {
+              "domain": "adme",
+              "score": 0.8,
+              "rationale": "TPSA 109 Å², logP 0.0 — within the passive-absorption window",
+              "evidence": []
+            },
+            {
+              "domain": "microbiome",
+              "score": 0.3,
+              "rationale": "not a glycosidic class; prodrug activation not implicated",
               "evidence": []
             }
           ]

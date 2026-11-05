@@ -1,0 +1,40 @@
+{
+  "n_candidates": 203,
+  "claims_rejected_by_physics": 78,
+  "laws_that_fired": [
+    {
+      "check": "process_physics",
+      "evaluated": 203,
+      "violations": 78,
+      "examples": [
+        "\u767d\u8587+\u84b8\u2192terpenoid",
+        "\u767d\u524d+\u4f0f\u2192terpenoid",
+        "\u4e4c\u86c7+\u7099\u2192terpenoid",
+        "\u4e4c\u86c7+\u716e\u2192terpenoid"
+      ]
+    }
+  ],
+  "laws_that_did_not_fire": [
+    "mass_conservation"
+  ],
+  "table": [
+    {
+      "check": "mass_conservation",
+      "evaluated": 203,
+      "violations": 0,
+      "examples": []
+    },
+    {
+      "check": "process_physics",
+      "evaluated": 203,
+      "violations": 78,
+      "examples": [
+        "\u767d\u8587+\u84b8\u2192terpenoid",
+        "\u767d\u524d+\u4f0f\u2192terpenoid",
+        "\u4e4c\u86c7+\u7099\u2192terpenoid",
+        "\u4e4c\u86c7+\u716e\u2192terpenoid"
+      ]
+    }
+  ],
+  "note": "'violations' is the number of claims this check turned into a rejection. A check with zero violations is either correctly scoped and rarely triggered, or not yet operationalised \u2014 both are worth stating rather than hiding."
+}

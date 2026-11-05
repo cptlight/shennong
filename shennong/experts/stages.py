@@ -70,6 +70,15 @@ STAGE_NAME = {
 }
 GATE_THRESHOLD = 0.45
 
+# A gate is judged by its DESIGNATED expert, not by "any expert assigned to that stage".
+# Bug this fixes: adding `taxonomy` to the ancient-record stage let a merely *resolvable* plant name
+# satisfy the attestation gate, collapsing stage-1 failures from 151 to 0 and inflating the headline
+# funnel. The record gate must be about the record (ethnobotany); the theory gate about the theory.
+GATE_EXPERTS = {
+    int(1): "ethnobotany",
+    int(2): "theory",
+}
+
 
 @dataclass
 class StagedResult:
@@ -113,14 +122,20 @@ def stage_score(item: dict, world: World) -> StagedResult:
         res.stages.setdefault(int(STAGE_OF_DOMAIN[domain]), []).append(p)
 
     # ---- gates -------------------------------------------------------------------
-    s1 = res.stages.get(int(Stage.ANCIENT_RECORD), [])
-    s2 = res.stages.get(int(Stage.ASIAN_THEORY), [])
-    if not s1 or max(p.score for p in s1) < GATE_THRESHOLD:
+    def designated(stage: int) -> float:
+        """Score of the expert that owns this gate (0.0 if it did not fire)."""
+        name = GATE_EXPERTS[stage]
+        for p in res.stages.get(stage, []):
+            if p.domain == name:
+                return p.score
+        return 0.0
+
+    if designated(int(Stage.ANCIENT_RECORD)) < GATE_THRESHOLD:
         res.failed_gate = int(Stage.ANCIENT_RECORD)
         res.verdict = "OUT — not attested in the classical record (no Western evidence may rescue this)"
         res.score = 0.0
         return res
-    if not s2 or max(p.score for p in s2) < GATE_THRESHOLD:
+    if designated(int(Stage.ASIAN_THEORY)) < GATE_THRESHOLD:
         res.failed_gate = int(Stage.ASIAN_THEORY)
         res.verdict = "OUT — attested, but the tradition's own theory does not frame it"
         res.score = 0.0

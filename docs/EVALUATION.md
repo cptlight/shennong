@@ -72,6 +72,15 @@ produce it, and we will report both.
    permutation p < 0.05. Below that it is reported as *trend, not significant*, or *no predictive signal*.
    The Workbench renders exactly these three verdicts — no fourth, softer vocabulary.
 
+**Selection vs measurement error — the confound, answered in advance.** Drug-name→taxon resolution
+measures 14.1 % accuracy, which is the weakest link in the chain. It does **not** propagate as measurement
+error into the 歸經 test: that test runs only on (drug, use) pairs where **both** the property vector's drug
+and the recorded indication's drug resolved to a binomial. Unresolved names are dropped, not guessed. So the
+14.1 % shows up as a **selection** effect — the surviving n = 2,059 is a biased subset of the corpus,
+skewed toward the better-documented drugs — not as noise added to the hit rate. That makes the result a
+*lower bound on coverage*, not a contaminated measurement, and it is why the resolution F1 is reported
+**before** the theory result rather than after it.
+
 ### 2.3 Results
 
 > **Status at submission: the real-corpus analysis did not complete.** The pre-registered tests below

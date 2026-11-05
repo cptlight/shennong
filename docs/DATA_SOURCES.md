@@ -13,11 +13,13 @@
 > thermodynamics, reaction chemistry, permeability. These decide whether a claim is *physically
 > possible*. They are not a literature and cannot be wrong in the way a paper can.
 >
-> **4. Western medicine (observation only — NOT a judge).** PubChem, ChEMBL, Open Targets, Dr Duke's.
-> These are **recorded, never consulted as an arbiter.** If Western data agrees, that is a consistent
-> dataset. If it disagrees, that is **a problem to explain** — wrong species, wrong preparation, wrong
-> dose, wrong endpoint, or simply untested. It is never a verdict on the tradition, and it can neither
-> rescue nor condemn a claim that first principles have already judged.
+> **4. Western medicine (an observation, not an arbiter).** PubChem, ChEMBL, Open Targets, Dr Duke's.
+> Western data is **recorded and read**, and its disagreement is treated as a **puzzle worth explaining** —
+> wrong species, wrong preparation, wrong dose, wrong endpoint, or simply untested. What it cannot do is
+> *promote* a hypothesis the classical record does not attest, or *rescue* one that the physics has
+> refuted. It participates in interpretation; it does not hold the gavel. (The pipeline gives it no
+> decision weight for exactly that reason, which is a statement about the **order of evidence**, not a
+> claim that Western science is worthless — most of the chemistry used here is Western.)
 >
 > This ordering is enforced in code (`shennong/experts/stages.py`): a candidate failing the ancient-record
 > or Asian-theory gate is excluded **regardless of how strong the Western evidence is**.

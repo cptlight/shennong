@@ -1,0 +1,19 @@
+{
+  "n_questions": 12,
+  "mean_active": 6.17,
+  "fraction": 0.514,
+  "per_expert": {
+    "ethnobotany": 12,
+    "taxonomy": 12,
+    "chemotaxonomy": 12,
+    "phytochemistry": 12,
+    "operator": 2,
+    "extraction": 2,
+    "quantum": 4,
+    "mechanics": 4,
+    "microbiome": 3,
+    "toxicology": 3,
+    "adme": 5,
+    "theory": 3
+  }
+}

@@ -22,6 +22,9 @@ tokenizer:  ## train the multilingual (zh-Hant / sa / en) BPE
 train-mini:  ## train shennong-mini from scratch on CPU (real run, real logs)
 	$(PY) training/train_pretrain.py --config model/configs/shennong-mini-cpu.json
 
+novelty:  ## recompute structural novelty (must run after any `shi` regeneration)
+	$(PY) scripts/structural_novelty.py
+
 export:  ## export GGUF (< 1 GB) + sha256
 	$(PY) training/merge_quantize.py --export-gguf
 
@@ -48,4 +51,4 @@ all: corpus tokenizer train-mini export eval app-data  ## full pipeline
 clean:  ## remove caches (keeps corpus and checkpoints)
 	find . -name __pycache__ -type d -prune -exec rm -rf {} + ; rm -rf .pytest_cache
 
-.PHONY: help setup corpus tokenizer train-mini train-flagship export eval app-data workbench test all clean
+.PHONY: help setup corpus tokenizer train-mini train-flagship novelty export eval app-data workbench test all clean

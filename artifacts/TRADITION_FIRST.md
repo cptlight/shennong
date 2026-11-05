@@ -1,6 +1,6 @@
 # Tradition-first staging: ancient record → Asian medicine → Western medicine
 
-2026-11-05T11:13:40-0800
+2026-11-05T11:39:37-0800
 
 **The ordering is the argument.** The usual computational approach starts from a Western
 compound–target database, then looks for a plant, then cites a traditional use as colour.
@@ -34,24 +34,24 @@ data may strengthen a tradition-grounded hypothesis; it may never substitute for
 
 | Hypothesis | Score | Stage 1 | Stage 2 | Stage 3 | Stage 4 |
 |---|---|---|---|---|---|
-| 蒸 of 菖蒲 (Acorus calamus) should measurably change its alkaloid content | 0.952 | 1.00 | 1.00 | 0.70 | 1.00 |
-| 炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid conten | 0.952 | 1.00 | 1.00 | 0.70 | 1.00 |
-| 焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid conten | 0.952 | 1.00 | 1.00 | 0.70 | 1.00 |
-| 焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid conte | 0.952 | 1.00 | 1.00 | 0.70 | 1.00 |
-| 研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content | 0.949 | 0.99 | 1.00 | 0.70 | 1.00 |
+| 炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid conte | 0.922 | 1.00 | 1.00 | 0.85 | 0.85 |
+| 煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content | 0.919 | 0.99 | 1.00 | 0.85 | 0.85 |
+| 研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content | 0.919 | 0.99 | 1.00 | 0.85 | 0.85 |
+| 焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid conte | 0.914 | 1.00 | 1.00 | 0.80 | 0.85 |
+| 焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid c | 0.914 | 1.00 | 1.00 | 0.80 | 0.85 |
+| 蒸 of 菖蒲 (Acorus calamus) should measurably change its alkaloid content | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 蒸 of 升麻 (Actaea cimicifuga) should measurably change its alkaloid content | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
+| 炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid conten | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
+| 焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid conten | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid conte | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
-| 炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid conte | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid conte | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 焙 of 知母 (Anemarrhena asphodeloides) should measurably change its alkaloid co | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
 | 焙 of 知母 (Anemarrhena asphodeloides) should measurably change its steroid con | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
-| 焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid c | 0.898 | 1.00 | 1.00 | 0.70 | 0.85 |
-| 煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content | 0.895 | 0.99 | 1.00 | 0.70 | 0.85 |
-| 研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content | 0.895 | 0.99 | 1.00 | 0.70 | 0.85 |
-| 焙 of 知母 (Anemarrhena asphodeloides) should measurably change its phenylpropa | 0.844 | 1.00 | 1.00 | 0.70 | 0.70 |
+| 研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content | 0.895 | 0.99 | 1.00 | 0.70 | 0.85 |
+| 焙 of 知母 (Anemarrhena asphodeloides) should measurably change its phenylpropa | 0.880 | 1.00 | 1.00 | 0.70 | 0.80 |
 
 ## Tradition-grounded leads awaiting modern corroboration
 

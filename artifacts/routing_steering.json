@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T11:19:23-0800",
+  "generated_at": "2026-11-05T11:39:43-0800",
   "what": "self-steering: measure each expert's AUC against the arbiter's verdict, then reweight routing. Utility is defined against first principles, never against agreement \u2014 an expert that merely makes claims pass is worthless",
   "n_items": 60,
   "n_survived": 18,
@@ -9,6 +9,11 @@
       "auc": 0.8889,
       "n": 60,
       "informative": true
+    },
+    "taxonomy": {
+      "auc": 0.5,
+      "n": 60,
+      "informative": false
     },
     "theory": {
       "auc": 0.8929,
@@ -20,10 +25,15 @@
       "n": 60,
       "informative": false
     },
-    "phytochemistry": {
-      "auc": 0.4431,
+    "extraction": {
+      "auc": 0.3003,
       "n": 60,
       "informative": false
+    },
+    "phytochemistry": {
+      "auc": 0.6071,
+      "n": 60,
+      "informative": true
     },
     "toxicology": {
       "auc": 0.838,
@@ -39,6 +49,21 @@
       "auc": 0.578,
       "n": 60,
       "informative": true
+    },
+    "chemotaxonomy": {
+      "auc": 0.5,
+      "n": 60,
+      "informative": false
+    },
+    "adme": {
+      "auc": 0.2817,
+      "n": 60,
+      "informative": false
+    },
+    "microbiome": {
+      "auc": 0.5351,
+      "n": 60,
+      "informative": false
     },
     "first_principles": {
       "auc": null,
@@ -56,6 +81,10 @@
       "weight": 1.0,
       "reason": "AUC 0.8889 \u2014 informative"
     },
+    "taxonomy": {
+      "weight": 0.15,
+      "reason": "AUC 0.5 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+    },
     "theory": {
       "weight": 1.0,
       "reason": "AUC 0.8929 \u2014 informative"
@@ -64,9 +93,13 @@
       "weight": 0.15,
       "reason": "AUC 0.5 < 0.55 \u2014 deprioritised, kept at the exploration floor"
     },
-    "phytochemistry": {
+    "extraction": {
       "weight": 0.15,
-      "reason": "AUC 0.4431 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+      "reason": "AUC 0.3003 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+    },
+    "phytochemistry": {
+      "weight": 1.0,
+      "reason": "AUC 0.6071 \u2014 informative"
     },
     "toxicology": {
       "weight": 1.0,
@@ -80,6 +113,18 @@
       "weight": 1.0,
       "reason": "AUC 0.578 \u2014 informative"
     },
+    "chemotaxonomy": {
+      "weight": 0.15,
+      "reason": "AUC 0.5 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+    },
+    "adme": {
+      "weight": 0.15,
+      "reason": "AUC 0.2817 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+    },
+    "microbiome": {
+      "weight": 0.15,
+      "reason": "AUC 0.5351 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+    },
     "first_principles": {
       "weight": 1.0,
       "reason": "no measurable AUC; left at unit weight"
@@ -92,13 +137,18 @@
   "informative_experts": [
     "ethnobotany",
     "mechanics",
+    "phytochemistry",
     "quantum",
     "theory",
     "toxicology"
   ],
   "uninformative_experts": [
+    "adme",
+    "chemotaxonomy",
+    "extraction",
+    "microbiome",
     "operator",
-    "phytochemistry"
+    "taxonomy"
   ],
   "guardrails": {
     "all_pass": true,

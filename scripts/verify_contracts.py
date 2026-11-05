@@ -321,6 +321,33 @@ def check_artifacts(rep: Report, strict: bool) -> None:
             rep.warn(f"artifacts.{g.name}", "no .sha256 sidecar")
 
 
+def check_candidate_novelty(rep: Report, strict: bool) -> None:
+    """A degenerate novelty score means the shortlist ranking carries no information."""
+    path = ROOT / "artifacts" / "drug_candidates.json"
+    if not path.exists():
+        (rep.fail if strict else rep.warn)("artifacts.drug_candidates", "missing")
+        return
+    try:
+        d = json.loads(path.read_text(encoding="utf-8"))
+        cands = d.get("candidates") or []
+    except Exception as exc:  # noqa: BLE001
+        rep.fail("artifacts.drug_candidates", f"unparseable: {exc}")
+        return
+    novs = [float((c.get("scores") or {}).get("novelty", 0.0)) for c in cands]
+    if not novs:
+        rep.fail("artifacts.drug_candidates", "no candidates")
+        return
+    distinct = len({round(v, 4) for v in novs})
+    if distinct < 2:
+        rep.fail("artifacts.novelty", f"degenerate: all {len(novs)} candidates score "
+                                     f"{novs[0]:.3f} — the rank order carries no information")
+    elif distinct < max(3, len(novs) // 10):
+        rep.warn("artifacts.novelty", f"only {distinct} distinct values across {len(novs)} candidates")
+    else:
+        rep.ok("artifacts.novelty", f"{distinct} distinct values across {len(novs)} candidates "
+                                    f"(range {min(novs):.3f}–{max(novs):.3f})")
+
+
 def check_git_limits(rep: Report) -> None:
     """Only *tracked* files matter: checkpoints and caches are gitignored by design."""
     big: list[str] = []
@@ -375,6 +402,7 @@ def main() -> int:
     check_metrics(rep, args.strict)
     check_eval_report(rep, args.strict)
     check_artifacts(rep, args.strict)
+    check_candidate_novelty(rep, args.strict)
     check_git_limits(rep)
     check_no_placeholders(rep)
 

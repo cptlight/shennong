@@ -30,6 +30,9 @@ sys.exit(0 if ok else 1)
 PYEOF
 gate $? "artefacts final"
 
+say "0b. refresh structural novelty (shi regenerates the artefact and resets it)"
+$PY scripts/structural_novelty.py || echo "WARN: structural novelty step failed"
+
 say "1. fill the numbers from real artefacts"
 $PY submission/sync_numbers.py; gate $? "sync_numbers"
 

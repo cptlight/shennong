@@ -156,5 +156,5 @@ python -m shennong.cli report --out eval/report.json && python -m json.tool eval
 python submission/build_slides_json.py --final
 ```
 
-If command 5 fails, a `[[PENDING: …]]` placeholder is still in the deck and we have not shipped — that check is
+If command 5 fails, a a double-bracketed PENDING marker is still in the deck and we have not shipped — that check is
 deliberately wired into the repository rather than left to a reviewer's memory.

@@ -230,6 +230,18 @@ def resolve():
     if hyps:
         out["hypotheses.count"] = n(len(hyps["hypotheses"]))
 
+    # count the make stages, so "one command per stage" is a verifiable number
+    mk = os.path.join(ROOT, "Makefile")
+    if os.path.isfile(mk):
+        try:
+            with open(mk, "r", encoding="utf-8") as f:
+                targets = re.findall(r"^([a-zA-Z][a-zA-Z0-9_-]*):", f.read(), flags=re.MULTILINE)
+            stages = [t for t in targets if t not in ("all", "clean", "help", "install", "test", "dev")]
+            if stages:
+                out["corpus.n_stages_commands"] = n(len(stages))
+        except OSError:
+            pass
+
     # computed directly from the workbench assets
     static = os.path.join(ROOT, "app", "static")
     if os.path.isdir(static):

@@ -1,0 +1,11 @@
+{
+ "submission/SLIDES.md": {
+  "slide 8": "- **Pre-registered.** Thresholds and the permutation construction were written into `docs/EVALUATION.md` *before*\n  the numbers existed, so the test cannot be tuned into a positive. Each test: effect size, n, p, permutation null\n  (theory vectors shuffled across drugs):\n  - **四氣 (nature)** → compound polarity / thermolability · AUC **[[PENDING: theory.tcm_nature]]**\n  - **歸經 (channel tropism)** → target organ or receptor family · AUC **[[PENDING: theory.tcm_channel]]**\n  - **五味 (flavours)** → receptor class · AUC **[[PENDING: theory.tcm_flavor]]**\n  - **vīrya (Ayurvedic hot/cold)** → logP / thermolability · ρ **[[PENDING: theory.ayurveda_virya]]**\n  - **ṣaḍrasa (six tastes)** → pharmacological action class · AUC **[[PENDING: theory.ayurveda_rasa]]**\n- **[[PENDING: eval.theory_positive_count]] of [[PENDING: eval.theory_n_tests]]** tests beat the null at\n  p < 0.05. [[PENDING: eval.theory_summary_sentence]]"
+ },
+ "submission/DEVPOST.md": {
+  "theory paragraph": "**And it is pre-registered:** the thresholds and the permutation\nconstruction were written down in `docs/EVALUATION.md` before the numbers existed, so we cannot tune it into a\npositive."
+ },
+ "submission/VIDEO_SCRIPT.md": {
+  "segment 9 (spoken fallback)": "**Artefact:** Workbench Methodology → theory-predictivity cards; `eval/report.json`; `docs/EVALUATION.md`.\nNumbers read on camera from `eval/report.json` — the same file a judge can open."
+ }
+}

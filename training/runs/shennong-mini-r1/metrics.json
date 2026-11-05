@@ -40,7 +40,7 @@
   "final_train_loss": 6.366177558898926,
   "final_val_loss": 6.390119135379791,
   "best_val_loss": 6.390119135379791,
-  "val_ppl": 595.93,
+  "val_ppl": 605.31,
   "loss_curve": [
     {
       "step": 0,
@@ -124,5 +124,26 @@
     }
   ],
   "completed": true,
-  "checkpoint": "/Users/tom/Documents/ETHno/training/runs/shennong-mini-r1/ckpt.pt"
+  "checkpoint": "/Users/tom/Documents/ETHno/training/runs/shennong-mini-r1/ckpt.pt",
+  "bits_per_byte": 2.5264,
+  "val_bpb_by_language": {
+    "en": 2.5591,
+    "la": 4.5747,
+    "sa": 13.4563,
+    "zh-Hant": 3.3348
+  },
+  "val_ppl_by_language": {
+    "en": 825.9,
+    "la": 966.41,
+    "sa": 12209.34,
+    "zh-Hant": 1139.94
+  },
+  "inference_tokens_per_s": 13.1,
+  "memorisation_mean_verbatim_run_tokens": 1.4,
+  "gguf": {
+    "path": "artifacts/shennong-mini-f16.gguf",
+    "bytes": 18054560,
+    "sha256": "a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60"
+  },
+  "steps": 200
 }

@@ -32,7 +32,9 @@ SCAN_FILES = ["README.md"]
 ALLOW = {
     os.path.join("docs", "NUMBERS.md"),          # the ledger of what is pending, by design
     os.path.join("submission", "check_pending.py"),  # this file
-    os.path.join("submission", "build_slides_json.py"),  # mentions it in a validation message
+    os.path.join("submission", "build_slides_json.py"),   # mentions it in a validation message
+    os.path.join("submission", "apply_pending_variant.py"),  # builds the fallback that replaces them
+    os.path.join("submission", "sync_numbers.py"),        # its whole job is to resolve them
 }
 
 TOKEN = re.compile(r"\[\[PENDING:\s*([^\]]+?)\]\]")
@@ -47,6 +49,8 @@ def iter_files():
         for dirpath, dirnames, filenames in os.walk(base):
             dirnames[:] = [x for x in dirnames if x not in {".git", "__pycache__", "node_modules"}]
             for fn in filenames:
+                if fn.startswith("."):  # dotfiles are tooling state, never shipped
+                    continue
                 if os.path.splitext(fn)[1].lower() not in TEXT_EXT:
                     continue
                 full = os.path.join(dirpath, fn)

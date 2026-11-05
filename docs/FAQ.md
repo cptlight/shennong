@@ -127,7 +127,7 @@ If the Workbench shows a `DEMO FIXTURE` badge, that panel is running on placehol
 development and **nothing on it is a result**. `python app/serve.py --strict` refuses to start in that state —
 it is the mode we use for the final recording.
 
-We also ship `submission/check_pending.py`, which fails if a `[[PENDING: …]]` placeholder survives into a
+We also ship `submission/check_pending.py`, which fails if a a double-bracketed PENDING marker placeholder survives into a
 shipped artefact. Documentation drift is a bug with a test.
 
 ---

@@ -302,7 +302,7 @@ preparation or dosing guidance is ever emitted, and a distinction the output has
 ## Accomplishments
 
 - A **complete pipeline** from licence-audited Asian originals to ranked drug candidates, reproducible with one
-  command per stage, **[[PENDING: corpus.n_stages_commands]]** commands from a clean clone on CPU.
+  command per stage, **9** commands from a clean clone on CPU.
 - **60** drug candidates, each with a classical line, a theory justification, a
   mechanism, a development path and a falsification-adjacent assay, of which
   **60** have fully resolved structures and computed molecular descriptors.

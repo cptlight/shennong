@@ -61,7 +61,7 @@
   },
   {
    "n": 5,
-   "title": "[[PENDING: model.mini_params]] parameters, trained on this CPU, with the real loss curve",
+   "title": "8.72 M parameters, trained on this CPU, with the real loss curve",
    "bullets": [
     "`shennong-mini`: Llama-style transformer, **trained from scratch on an Intel i7-4790K with no GPU**, PyTorch",
     "Vocabulary is budgeted for **Classical Chinese (繁/简) and Sanskrit (Devanagari + IAST)** — because the point",
@@ -77,8 +77,8 @@
    "title": "Four classical operations of Chinese pharmacy, used as the engineering vocabulary",
    "bullets": [
     "**采 Cǎi — collect:** licence-audited acquisition, 繁/简 + IAST/Devanagari normalisation, 13-gram dedupe,",
-    "**制 Zhì — prepare:** 炮制 for text. Drug names resolved across eras and scripts to modern taxa with",
-    "**配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula composition with **君臣佐使** roles;",
+    "**制 Zhì — prepare:** drug names resolved across eras and scripts to modern taxa with confidence; process words",
+    "**配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula roles **君臣佐使**; and the **complete**",
     "**使 Shǐ — deploy:** ranking, falsification plans, uncertainty, **drug candidates**, and the",
     "**One command per stage.** `make setup · corpus · tokenizer · train-mini · eval · app-data · workbench` runs"
    ],

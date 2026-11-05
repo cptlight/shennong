@@ -81,11 +81,23 @@ Each row names the placeholder exactly as it appears, the artefact that resolves
 | `eval.grounded_answer_rate`, `eval.citation_fidelity`, `eval.correct_refusal_rate`, `eval.over_refusal_rate`, `eval.policy_screen_recall`, `eval.policy_screen_precision` | `report.json → refusal_benchmark` |
 | `ablation.no_theory`, `ablation.no_process`, `ablation.no_resolution`, `ablation.monolingual`, `ablation.weight_sweep` | `report.json → ablations` |
 | `hypotheses.count` | `app/data/hypotheses.json → counts.total` |
+| `rules.eighteen_fan`, `rules.nineteen_wei` | `eval/report.json → interaction_rules` (enumerated pairs with a textual citation, a bridged mechanism and an assay). **Reported as `n/18` and `n/19` — a count without a denominator is not a claim.** |
 | `candidates.count`, `candidates.resolved` | `artifacts/drug_candidates.json` |
 | `limitations.theory_sentence` | written from the resolved theory values (video segment 10) |
 | `app.bytes` | `wc -c app/static/*` |
 
 ---
+
+## 2b. Resolved since the first ledger
+
+Filled from real artefacts, no longer pending: `model.mini_params` → **8,719,616**; `model.steps` → **900**;
+`model.tokens` → **7.37 M** (900 × 8,192); `app.bytes` → **98 KB**. The per-run details (`params`,
+`non_embedding_params`, `corpus.train_tokens`, `threads`, `seed`, `torch_version`) live in
+`training/runs/shennong-mini-r1/metrics.json`.
+
+**Note on that run:** at the time of writing `steps_completed: 1` and `completed: false`, so the final losses are
+*not* yet a result. Do not quote `final_val_loss` until the run completes — the value in the file right now is
+the loss at initialisation (≈ ln 16,384 ≈ 9.75).
 
 ## 3. Numbers that are already real and checkable now
 

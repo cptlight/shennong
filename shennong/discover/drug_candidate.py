@@ -41,6 +41,7 @@ from shennong.discover.common import (
     evidence_from_edge,
     find_use_evidence,
     known_drug_overlap,
+    zh_synonyms,
     safety_for,
     taxon_classes,
     toxicity_of,
@@ -52,6 +53,7 @@ from shennong.discover.modern_knowledge import (
     literature_prior,
 )
 from shennong.kg.schema import Graph, node_id
+from shennong.normalize import normalise as _normalise
 from shennong.score import (
     evidence_factor,
     falsification_plan,
@@ -90,6 +92,28 @@ ASSAY_BY_TARGET: dict[str, dict[str, str]] = {
     "thiol groups": {"assay": "thiol-reactivity (DTNB) assay", "model": "cell-free"},
     "immune receptors (dectin-1, TLR)": {"assay": "reporter assay in TLR-transfected cells", "model": "recombinant cell line"},
 }
+
+
+#: English translations for classical lines we can translate with confidence.
+_TRANSLATIONS: dict[str, str] = {
+    "大黃，味苦寒": "Rhubarb (大黃): bitter, cold in nature.",
+    "陳皮，味辛苦，溫，無毒": "Tangerine peel (陳皮): pungent and bitter, warm, non-toxic.",
+    "桂枝，味辛甘，溫，無毒": "Cinnamon twig (桂枝): pungent and sweet, warm, non-toxic.",
+    "薄荷，味辛，涼，無毒": "Field mint (薄荷): pungent, cool, non-toxic.",
+    "生薑，味辛，微溫，無毒": "Fresh ginger (生薑): pungent, slightly warm, non-toxic.",
+    "當歸，味甘辛，溫，無毒": "Dong quai (當歸): sweet and pungent, warm, non-toxic.",
+    "黃連，味苦寒": "Coptis (黃連): bitter, cold.",
+    "甘草，味甘，氣平，無毒": "Licorice (甘草): sweet, neutral in qi, non-toxic.",
+}
+
+
+def _tcm_with_original_name(tcm, binomial: str, graph: Graph) -> dict:
+    """TCM property dict with the *traditional-character* drug name for provenance checks."""
+    data = tcm.to_dict()
+    names = zh_synonyms(graph, binomial)
+    if names:
+        data["drug_name"] = names[0]
+    return data
 
 
 def _now() -> str:
@@ -170,6 +194,18 @@ def _select_indication(graph: Graph, binomial: str, spans: SpanIndex):
             evidence = find_use_evidence(spans, graph, binomial, indication)
         if evidence is None:
             continue
+        # integrity gate: the span must name the drug and, where possible, the indication
+        from shennong.normalize import normalise as _normalise
+
+        spec = ontology.indication_spec(indication)
+        quote_norm = _normalise(evidence.quote)
+        drug_terms = [binomial, *zh_synonyms(graph, binomial)]
+        if not any(_normalise(term) and _normalise(term) in quote_norm for term in drug_terms):
+            continue
+        if spec is not None:
+            indication_terms = [*spec.zh, *spec.sa, *spec.en, *spec.ar, indication]
+            if not any(_normalise(term) in quote_norm for term in indication_terms if term):
+                continue
         score = (len(bridge), not bool(edge.props.get("modern")), float(evidence.confidence))
         if best is None or score > best[0]:
             best = (score, indication, bridge, evidence, edge)
@@ -283,8 +319,12 @@ def discover_candidates(graph: Graph, spans: SpanIndex, paths: CorpusPaths | Non
                     "indication": indication,
                     "asian_properties": (
                         {
-                            "tcm": features.tcm[binomial].to_dict() if features and binomial in features.tcm else None,
-                            "ayurveda": features.ayurveda[binomial].to_dict() if features and binomial in features.ayurveda else None,
+                            "tcm": _tcm_with_original_name(features.tcm[binomial], binomial, graph)
+                            if features and binomial in features.tcm
+                            else None,
+                            "ayurveda": features.ayurveda[binomial].to_dict()
+                            if features and binomial in features.ayurveda
+                            else None,
                         }
                         if features
                         else None
@@ -353,8 +393,10 @@ def discover_candidates(graph: Graph, spans: SpanIndex, paths: CorpusPaths | Non
             # ---- Workbench compatibility block (story-builder contract) -----------
             tcm = features.tcm.get(binomial) if features else None
             ayu = features.ayurveda.get(binomial) if features else None
+            traditional_names = zh_synonyms(graph, binomial)
+            name_cn = traditional_names[0] if traditional_names else (tcm.drug_name if tcm else taxon.label)
             candidate["name"] = compound["name"]
-            candidate["name_cn"] = tcm.drug_name if tcm else taxon.label
+            candidate["name_cn"] = name_cn
             candidate["discovery_class"] = "drug_candidate"
             candidate["classical_lead"] = {
                 "drug": taxon.label,
@@ -401,8 +443,10 @@ def discover_candidates(graph: Graph, spans: SpanIndex, paths: CorpusPaths | Non
                 "year": evidence.year,
                 "locator": f"{evidence.source_id}:{evidence.char_start}-{evidence.char_end}",
                 "text": evidence.quote,
-                "translation": "",
+                "translation": _TRANSLATIONS.get(evidence.quote.strip(), ""),
                 "span_kind": "verbatim",
+                "names_drug": name_cn,
+                "verified": _normalise(name_cn) in _normalise(evidence.quote),
             }
             candidates.append(candidate)
     candidates.sort(key=lambda c: c["scores"]["composite"], reverse=True)

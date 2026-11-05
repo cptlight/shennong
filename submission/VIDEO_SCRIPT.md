@@ -69,14 +69,16 @@ arrow labelled *prediction* to `MW · logP · target · thermolability`. Then a 
 *permutation null*, folding back on the first.
 
 **VO:**
-> So that's what SHENNONG is. We treat Asian pharmacological theory as a **predictive prior** — a feature
-> vector — and we put it on trial.
+> Everyone else built a chatbot over this material — there are TCM assistants, curated herb–compound databases,
+> virtual-screening pipelines. All good work. None of them asks the prior question.
 >
-> Two questions, both falsifiable. Does the theory predict modern chemistry better than chance?
-> And if it does — what drug candidates does that let us propose?
+> We treat Asian pharmacological theory as a **predictive prior** — a feature vector — and we put it on trial.
 >
-> That second question is the point. The deliverable isn't an answer in a chat window. It's a ranked
-> shortlist of **drug candidates**: a molecule, a mechanism, and the experiment that would kill it.
+> Two questions, both falsifiable. Does the theory predict modern chemistry better than chance? And if it does —
+> what drug candidates does that let us propose?
+>
+> The deliverable isn't an answer in a chat window. It's a ranked shortlist of **drug candidates**: a molecule,
+> a mechanism, and the experiment that would kill it.
 
 **Artefact:** theory chips in the Workbench Candidates view.
 
@@ -134,16 +136,18 @@ Cut to `corpus/registry/sources.yaml` in the editor; scroll to a `status: unveri
 panel with the loss curve animating in. Zoom the axes so the train and val lines are legible.
 
 **VO:**
-> The model is `shennong-mini`: [[PENDING: model.mini_params]] parameters, trained from scratch on this
-> machine. An Intel i7 — no GPU at all. [[PENDING: model.steps]] steps,
-> [[PENDING: model.tokens]] tokens.
+> The model is `shennong-mini`: 8.72 million parameters, trained from scratch on this machine. An Intel i7 —
+> no GPU at all. 900 steps, 7.37 million tokens, on a 16,384-token vocabulary built for Classical Chinese and
+> Sanskrit.
 >
 > The vocabulary is budgeted for Classical Chinese and Sanskrit, because the entire point is reading the
 > originals rather than English summaries. That's a design constraint that costs us parameters everywhere else.
 >
 > And this curve — this is the actual log. Train loss [[PENDING: model.final_train_loss]], validation
-> [[PENDING: model.final_val_loss]]. We could have shown you a nicer curve. It would have been fiction, and
-> then you'd have no reason to believe any other number in this video.
+> [[PENDING: model.final_val_loss]]. At about 0.85 tokens per parameter this round is deliberately
+> undertrained — a real run inside a hackathon, not a converged model, and the model card says so. We could
+> have shown you a nicer curve. It would have been fiction, and then you'd have no reason to believe any
+> other number in this video.
 
 **Artefact:** `training/runs/<id>/metrics.json`, Workbench Methodology → loss chart.
 
@@ -267,6 +271,9 @@ Numbers read on camera from `eval/report.json` — the same file a judge can ope
 >
 > **Attribution has limits.** These are living traditions. A catalogue entry is not a conversation, and we
 > know the difference.
+>
+> One rule we enforce in the product, not the prose: **every hypothesis carries its own kill-criteria, and a
+> hypothesis whose citation span fails to resolve is dropped, not softened.**
 
 **Artefact:** `docs/SAFETY_AND_ETHICS.md` limitations section.
 

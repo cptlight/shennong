@@ -1,0 +1,36 @@
+# SHENNONG — Ollama Modelfile
+#
+# Usage (from the repository root, after building artifacts/shennong-mini-f16.gguf):
+#   ollama create shennong-mini -f model/export/Modelfile
+#   ollama run  shennong-mini "甘草味甘，性平，歸"
+#
+# HONESTY NOTE: `shennong-mini` is an 8.7 M-parameter *base* language model trained from
+# scratch for ~3 hours on one CPU. It completes text; it does not reliably follow
+# instructions and it must not be used for medical advice, diagnosis or dosing.
+# The <|system|>/<|user|>/<|assistant|> chat tokens exist in the vocabulary and this
+# template matches the format used by training/sft_lora.py, but without a completed LoRA-SFT
+# stage the model has seen very few chat-formatted examples.
+
+FROM ./artifacts/shennong-mini-f16.gguf
+
+TEMPLATE """{{- if .System }}<|system|>
+{{ .System }}<|eos|>
+{{ end }}<|user|>
+{{ .Prompt }}<|eos|>
+<|assistant|>
+"""
+
+SYSTEM """You are SHENNONG-mini, a tiny research model for computational ethnopharmacology,
+trained on public-domain classical Asian medical texts (Classical Chinese, Sanskrit, Latin,
+English) plus foundational biology and chemistry. You are not a medical device. Never give
+dosing, diagnosis or treatment advice. State uncertainty and cite the tradition a claim
+comes from when you can."""
+
+PARAMETER temperature 0.8
+PARAMETER top_p 0.95
+PARAMETER top_k 50
+PARAMETER repeat_penalty 1.1
+PARAMETER num_predict 256
+PARAMETER stop "<|eos|>"
+PARAMETER stop "<|user|>"
+PARAMETER stop "<|system|>"

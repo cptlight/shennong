@@ -99,7 +99,7 @@ bottom.
 
 ## Slide 5 — The model: bilingual classical, under 1 GB, trained here
 
-**Title:** [[PENDING: model.mini_params]] parameters, trained on this CPU, with the real loss curve
+**Title:** 8.72 M parameters, trained on this CPU, with the real loss curve
 
 - `shennong-mini`: Llama-style transformer, **trained from scratch on an Intel i7-4790K with no GPU**, PyTorch
   2.2.2 CPU. Real logs, real seeds, real wall-clock.
@@ -127,11 +127,13 @@ bilingual vocabulary highlighted; right, the real loss curve, train and val, axe
 
 - **采 Cǎi — collect:** licence-audited acquisition, 繁/简 + IAST/Devanagari normalisation, 13-gram dedupe,
   entity extraction. → `corpus.jsonl`, `sources.yaml`
-- **制 Zhì — prepare:** 炮制 for text. Drug names resolved across eras and scripts to modern taxa with
-  confidence; process words (炮, 煅, 淬, 九蒸九曬) mapped onto modern extraction chemistry. →
-  `lexicon_drugs.json`, `properties.csv`
-- **配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula composition with **君臣佐使** roles;
-  **十八反 / 十九畏 / viruddha** incompatibility edges. → `kg.json`
+- **制 Zhì — prepare:** drug names resolved across eras and scripts to modern taxa with confidence; process words
+  compiled into a **chemistry operator** (炮/煅/淬/九蒸九曬 → hydrolysis, oxidation, volatilisation, complexation).
+  We print the split we are least sure of: which steps are **load-bearing** (附子 炮制: diester → monester
+  alkaloids) and which are **plausibly ritual**. → `lexicon_drugs.json`, `processing.csv`
+- **配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula roles **君臣佐使**; and the **complete**
+  interaction rule set — [[PENDING: rules.eighteen_fan]]/18 十八反 and [[PENDING: rules.nineteen_wei]]/19 十九畏
+  pairs enumerated, mechanistically bridged, assay-annotated. → `kg.json`
 - **使 Shǐ — deploy:** ranking, falsification plans, uncertainty, **drug candidates**, and the
   theory-predictivity experiment. → `drug_candidates.json`, `eval/report.json`
 - **One command per stage.** `make setup · corpus · tokenizer · train-mini · eval · app-data · workbench` runs

@@ -261,6 +261,43 @@ scores, which means the ranking is driven by evidence grade and plausibility pri
 learned graph structure. We report that as a limitation of the scorer, not as a success.
 
 
+## Two pipelines: hypothesis, then deterministic outcome
+
+```
+pipeline 1   ancient record → Asian theory → Asian pharmacy     ⇒  HYPOTHESIS
+pipeline 2   structure + T/medium/time → kinetics/thermodynamics ⇒  MAY / MAY NOT, with arithmetic
+```
+
+Pipeline 2 is not a second opinion — it is a **calculation**. Given a compound's structure and a
+preparation's actual temperature, medium and duration, it models three physical sinks (volatilisation
+via Clausius–Clapeyron, hydrolysis via Arrhenius with bond-class activation energies, thermal
+degradation above 0.85·Tb) and returns a **retention fraction with a sensitivity range**. Same inputs,
+same number, every time.
+
+**The estimator is validated before it is trusted:** Joback group-contribution boiling points against
+known physical constants — **mean relative error 4.5 %, 6/6 compounds within 10 %**.
+
+**Results over the hypotheses that had resolvable structures (n = 60):**
+
+| Retention class | n |
+|---|---|
+| RETAINED (≥90 %) | 28 |
+| PARTIALLY RETAINED (50–90 %) | 23 |
+| LARGELY LOST (10–50 %) | 7 |
+| EFFECTIVELY DESTROYED (<10 %) | **2** |
+
+**9 hypotheses are refuted by physics** — they passed the ancient-record gate, the Asian-theory gate and
+the five-expert panel, and the arithmetic shows the preparation cannot do what the hypothesis claims.
+Example: *蒸 of 菖蒲 → alkaloid* models at **28 % retention**; the claim of enrichment is physically
+backwards.
+
+**Western literature appears on every row as `references_western`,** marked *"this is what they think —
+recorded, not used in the computation"*. It cannot alter the verdict. If a paper disagrees with the
+physics, the paper is wrong, or it measured a derivative, or it used a different preparation — those are
+the three things to check, and none of them is "the tradition is false".
+
+[`artifacts/DETERMINISTIC_OUTCOMES.md`](artifacts/) · `shennong/physics/{estimators,simulate}.py`
+
 ## The order: ancient record → Asian medicine → Western medicine
 
 This is not a slogan; it is a set of gates, enforced in `shennong/experts/stages.py`:

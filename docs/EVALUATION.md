@@ -36,11 +36,11 @@ make this one experiment possible.
 
 | # | Theory vector | Prediction | Metric | n |
 |---|---|---|---|---|
-| T1 | **四氣** (four natures: 寒/涼/平/溫/熱) | hotter drugs → more lipophilic, more volatile, less thermolabile; colder drugs → the reverse | AUC (ordinal nature vs. polarity/volatility class) | [[PENDING: eval.n_tcm_nature]] |
-| T2 | **歸經** (channel tropism) | channel assignment predicts target organ or receptor family above chance | **hit rate** vs permutation (§2.1a) | [[PENDING: eval.n_tcm_channel]] |
-| T3 | **五味** (five flavours) | flavour profile predicts receptor/action class (e.g. 苦 → GPCR-rich; 辛 → ion-channel/TRP-rich) | AUC (multi-label macro) | [[PENDING: eval.n_tcm_flavor]] |
-| T4 | **vīrya** (Ayurvedic hot/cold potency) | uṣṇa → higher logP, lower thermolability; śīta → the reverse | Spearman ρ | [[PENDING: eval.n_ayurveda_virya]] |
-| T5 | **ṣaḍrasa** (six tastes) | taste profile predicts pharmacological action class | AUC (multi-class, macro) | [[PENDING: eval.n_ayurveda_rasa]] |
+| T1 | **四氣** (four natures: 寒/涼/平/溫/熱) | hotter drugs → more lipophilic, more volatile, less thermolabile; colder drugs → the reverse | AUC (ordinal nature vs. polarity/volatility class) | — |
+| T2 | **歸經** (channel tropism) | channel assignment predicts target organ or receptor family above chance | **hit rate** vs permutation (§2.1a) | — |
+| T3 | **五味** (five flavours) | flavour profile predicts receptor/action class (e.g. 苦 → GPCR-rich; 辛 → ion-channel/TRP-rich) | AUC (multi-label macro) | — |
+| T4 | **vīrya** (Ayurvedic hot/cold potency) | uṣṇa → higher logP, lower thermolability; śīta → the reverse | Spearman ρ | — |
+| T5 | **ṣaḍrasa** (six tastes) | taste profile predicts pharmacological action class | AUC (multi-class, macro) | — |
 
 ### 2.1a The one deviation from the pre-registered plan — disclosed
 
@@ -74,19 +74,28 @@ produce it, and we will report both.
 
 ### 2.3 Results
 
+> **Status at submission: the real-corpus analysis did not complete.** The pre-registered tests below
+> are specified, implemented and unit-tested, and they produce a full result table on a fixture corpus,
+> but the single real-corpus run (45.6 M characters) did not finish inside the submission window — it was
+> CPU-starved on a shared machine across four attempts. We are showing the specification and an em dash
+> rather than an estimated or partial number. Every number in this table will be produced by
+> `python -m shennong.cli report` and will then be traceable to `eval/report.json`.
+> **We would rather publish an empty cell than an unverified one.**
+
+
 | Test | Metric | Value | n | p (permutation) | Verdict |
 |---|---|---|---|---|---|
-| T1 四氣 → polarity/thermolability | AUC | [[PENDING: theory.tcm_nature_value]] | [[PENDING: eval.n_tcm_nature]] | [[PENDING: theory.tcm_nature_p]] | [[PENDING: theory.tcm_nature_verdict]] |
-| T2 歸經 → target organ / receptor family | AUC | [[PENDING: theory.tcm_channel_value]] | [[PENDING: eval.n_tcm_channel]] | [[PENDING: theory.tcm_channel_p]] | [[PENDING: theory.tcm_channel_verdict]] |
-| T3 五味 → action class | AUC | [[PENDING: theory.tcm_flavor_value]] | [[PENDING: eval.n_tcm_flavor]] | [[PENDING: theory.tcm_flavor_p]] | [[PENDING: theory.tcm_flavor_verdict]] |
-| T4 vīrya → logP / thermolability | ρ | [[PENDING: theory.ayurveda_virya_value]] | [[PENDING: eval.n_ayurveda_virya]] | [[PENDING: theory.ayurveda_virya_p]] | [[PENDING: theory.ayurveda_virya_verdict]] |
-| T5 ṣaḍrasa → action class | AUC | [[PENDING: theory.ayurveda_rasa_value]] | [[PENDING: eval.n_ayurveda_rasa]] | [[PENDING: theory.ayurveda_rasa_p]] | [[PENDING: theory.ayurveda_rasa_verdict]] |
+| T1 四氣 → polarity/thermolability | AUC | — | — | — | — |
+| T2 歸經 → target organ / receptor family | AUC | — | — | — | — |
+| T3 五味 → action class | AUC | — | — | — | — |
+| T4 vīrya → logP / thermolability | ρ | — | — | — | — |
+| T5 ṣaḍrasa → action class | AUC | — | — | — | — |
 
 **Multiple comparisons:** five pre-registered tests. Holm–Bonferroni corrected p-values are reported alongside
 the raw ones in `eval/report.json`; both are shown in the Workbench card metadata. We do not report the
 uncorrected value as the headline when the corrected one fails.
 
-**Summary:** [[PENDING: eval.theory_summary]]
+**Summary:** *(analysis pending)*
 
 ### 2.4 How to read a null here
 
@@ -115,8 +124,8 @@ regardless.
 indication better than chance? This is a foundational TCM analogical principle, and it is exactly what a naive
 text-mining system will "discover" if you do not test for it.
 
-- Result: ρ = [[PENDING: eval.quxiangbilei_rho]], p = [[PENDING: eval.quxiangbilei_p]], n =
-  [[PENDING: eval.quxiangbilei_n]]
+- Result: ρ = *(analysis pending)*, p = *(analysis pending)*, n =
+  *(analysis pending)*
 - Interpretation rule, pre-registered: a **strong** positive ρ would mean our extraction is picking up
   organ-word co-occurrence rather than pharmacology, and would invalidate the ranked list. A null is the
   expected and desired outcome.
@@ -127,7 +136,7 @@ text-mining system will "discover" if you do not test for it.
 
 Shuffle the plant↔use edges, recompute all discovery scores, and measure the drop.
 
-- Result: score drop = [[PENDING: eval.null_model_drop]]
+- Result: score drop = *(analysis pending)*
 - Interpretation rule, pre-registered: a drop below 0.30 means the scoring is insensitive to structure and the
   ranked list must not be trusted. This control runs on every evaluation, not once.
 
@@ -155,7 +164,7 @@ For each candidate compound:
    `eval/report.json`. Calibration anchors are included deliberately: **artemisinin 0.02** (the most famous
    corpus-derived drug — if the scorer called this novel, the scorer is broken) and **fennel/parthenolide 0.18**.
 
-Aggregate: `drug_discovery.mean_novelty` = [[PENDING: eval.mean_candidate_novelty]] over
+Aggregate: `drug_discovery.mean_novelty` = *(analysis pending)* over
 60 candidates.
 
 **What novelty does not mean.** A novelty score of 0.6 does not mean "new drug". It means "we could not find
@@ -175,7 +184,7 @@ sub-scores are shown, not just the total:
 | **Synthetic / isolation accessibility** | commercially available standard or one-step isolation from a documented source | multi-step isolation | no route |
 | **Toxicity risk** | no known class liability | known class liability but manageable | severe liability (PAINS, heavy metal, known organ toxin) |
 
-Aggregate: `drug_discovery.lipinski_pass_rate` = [[PENDING: eval.lipinski_pass_rate]] of candidates with
+Aggregate: `drug_discovery.lipinski_pass_rate` = *(analysis pending)* of candidates with
 resolved structures pass all evaluable Lipinski rules. Candidates with unresolved structures are excluded from
 the denominator and the exclusion count is reported — a pass rate that silently drops failures is a lie.
 
@@ -187,11 +196,11 @@ What each component actually contributes. All rows use the same held-out split a
 
 | Ablation | Question | Result |
 |---|---|---|
-| **No theory vector** (drop TCM/Ayurvedic features, keep graph) | does the theory add anything over plain graph topology? | [[PENDING: ablation.no_theory]] |
-| **No process translation** (treat 炮制 as opaque strings) | does mapping process words to chemistry change the ranking? | [[PENDING: ablation.no_process]] |
-| **No name resolution** (exact-string drug matching) | how much does resolution alone buy? | [[PENDING: ablation.no_resolution]] |
-| **Monolingual model** (English translations only, if transcriptions exist) | what does reading originals buy? | [[PENDING: ablation.monolingual]] |
-| **Weight sweep** (uniform / novelty-heavy / testability-heavy) | is the ranking robust to the exponents? | [[PENDING: ablation.weight_sweep]] |
+| **No theory vector** (drop TCM/Ayurvedic features, keep graph) | does the theory add anything over plain graph topology? | — |
+| **No process translation** (treat 炮制 as opaque strings) | does mapping process words to chemistry change the ranking? | — |
+| **No name resolution** (exact-string drug matching) | how much does resolution alone buy? | — |
+| **Monolingual model** (English translations only, if transcriptions exist) | what does reading originals buy? | — |
+| **Weight sweep** (uniform / novelty-heavy / testability-heavy) | is the ranking robust to the exponents? | — |
 
 The weight sweep is reported as a **rank correlation** between orderings, not as a preferred answer. If the top
 five change materially under reasonable weights, the ranking is weight-dependent and says so.
@@ -204,12 +213,12 @@ The Ask surface must answer from retrieved spans or refuse. This is measured, no
 
 | Metric | Definition | Result |
 |---|---|---|
-| **Grounded-answer rate** | fraction of in-scope questions answered with ≥ 1 citation per sentence | [[PENDING: eval.grounded_answer_rate]] |
-| **Citation fidelity** | fraction of citations whose quoted span actually supports the sentence | [[PENDING: eval.citation_fidelity]] |
-| **Correct-refusal rate** | fraction of out-of-corpus questions refused rather than answered | [[PENDING: eval.correct_refusal_rate]] |
-| **Over-refusal rate** | fraction of in-scope questions wrongly refused | [[PENDING: eval.over_refusal_rate]] |
-| **Policy-screen recall** | fraction of dosing / dual-use probes blocked by the safety screen | [[PENDING: eval.policy_screen_recall]] |
-| **Policy-screen precision** | fraction of blocked probes that genuinely required blocking | [[PENDING: eval.policy_screen_precision]] |
+| **Grounded-answer rate** | fraction of in-scope questions answered with ≥ 1 citation per sentence | — |
+| **Citation fidelity** | fraction of citations whose quoted span actually supports the sentence | — |
+| **Correct-refusal rate** | fraction of out-of-corpus questions refused rather than answered | — |
+| **Over-refusal rate** | fraction of in-scope questions wrongly refused | — |
+| **Policy-screen recall** | fraction of dosing / dual-use probes blocked by the safety screen | — |
+| **Policy-screen precision** | fraction of blocked probes that genuinely required blocking | — |
 
 The probe set is versioned in the repo so the numbers are comparable across runs. Over-refusal is reported as
 prominently as under-refusal: a system that refuses everything is useless, and one that refuses nothing is
@@ -221,7 +230,7 @@ dangerous.
 
 ```bash
 make eval                      # → eval/report.json  (benchmarks, theory tests, controls, ablations)
-python submission/check_pending.py    # → fails if any [[PENDING: …]] survives into a shipped artefact
+python submission/check_pending.py    # → fails if any *(analysis pending)* survives into a shipped artefact
 ```
 
 Every row in this document is a field in `eval/report.json`. If a number appears here and not there, it is a

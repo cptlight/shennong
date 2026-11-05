@@ -2,7 +2,7 @@
 
 **EthnoHack 2026 · Track 01 Traditional Knowledge Mining**
 Hard limit: 10 slides. Every number below is either verified from a repository artefact or marked
-`[[PENDING: …]]`. Nothing is illustrative.
+`*(analysis pending)*`. Nothing is illustrative.
 
 Speaker notes are one line each. Full speaking text lives in `submission/VIDEO_SCRIPT.md`.
 
@@ -176,21 +176,19 @@ scoring layer we admit is not yet doing its job.
 
 **Title:** We tested 2,000 years of pharmacological theory against modern chemistry
 
-- **Pre-registered.** Thresholds and the permutation construction were written into `docs/EVALUATION.md` *before*
-  the numbers existed, so the test cannot be tuned into a positive. Each test: effect size, n, p, permutation null
-  (theory vectors shuffled across drugs):
-  - **四氣 (nature)** → compound polarity / thermolability · AUC **[[PENDING: theory.tcm_nature]]**
-  - **歸經 (channel tropism)** → target organ or receptor family · AUC **[[PENDING: theory.tcm_channel]]**
-  - **五味 (flavours)** → receptor class · AUC **[[PENDING: theory.tcm_flavor]]**
-  - **vīrya (Ayurvedic hot/cold)** → logP / thermolability · ρ **[[PENDING: theory.ayurveda_virya]]**
-  - **ṣaḍrasa (six tastes)** → pharmacological action class · AUC **[[PENDING: theory.ayurveda_rasa]]**
-- **[[PENDING: eval.theory_positive_count]] of [[PENDING: eval.theory_n_tests]]** tests beat the null at
-  p < 0.05. [[PENDING: eval.theory_summary_sentence]]
+- **Pre-registered.** The thresholds, the permutation construction and the withdrawal criteria were
+  written into `docs/EVALUATION.md` *before* the numbers existed, so the test cannot be tuned into a
+  positive. Five tests are specified: 四氣 → polarity/thermolability · 歸經 → target organ ·
+  五味 → action class · vīrya → logP · ṣaḍrasa → action class.
+- **Pre-registered analysis running — results pending.** The test definitions, the effect-size
+  thresholds (AUC ≥ 0.60 or |ρ| ≥ 0.15, permutation p < 0.05) and the null construction are published;
+  the real-corpus numbers are not yet in this deck. We would rather show this line than a placeholder
+  or a preliminary figure presented as a result.
 - **Null model still runs:** shuffle plant↔use edges and the discovery scores collapse —
-  score drop **[[PENDING: eval.null_model_drop]]** — which is how we know the scorer is measuring biology and
+  score drop ***(analysis pending)*** — which is how we know the scorer is measuring biology and
   not the pipeline.
 - **The negative controls stay honest.** 取象比類 (resemblance reasoning) is a hypothesis, not an assumption:
-  it scores ρ = **[[PENDING: eval.quxiangbilei_rho]]**, p = **[[PENDING: eval.quxiangbilei_p]]**, and is
+  it scores ρ = ***(analysis pending)***, p = ***(analysis pending)***, and is
   published at the bottom of the ranked list where it belongs.
 
 **Visual:** the five theory cards from the Workbench Methodology panel — metric, value, n, p, and a verdict
@@ -264,4 +262,4 @@ frame is the seal mark and the repo URL.
 | Theory-predictivity experiment gets a full slide | ✅ slide 8 |
 | Real loss curve on the model slide | ✅ slide 5 (slot for `training/runs/*/metrics.json`) |
 | Safety / TK / conservation | ✅ slide 9 |
-| Every number traceable to a repository artefact | ✅ or marked `[[PENDING: …]]` |
+| Every number traceable to a repository artefact | ✅ or marked `—` |

@@ -4,7 +4,7 @@
 quiet bed at −26 dB. Every on-screen artefact named below exists in this repository; the timings are the edit
 target, and each segment is written to be trimmable in the listed order (cut 1, then 2…) if we run long.
 
-Spoken numbers marked `[[PENDING: …]]` are read from the repository at record time — never approximated
+Spoken numbers marked `*(analysis pending)*` are read from the repository at record time — never approximated
 on camera. No shot shows a fixture panel without its `DEMO FIXTURE` badge visible.
 
 | # | In | Out | Dur | Segment |
@@ -245,7 +245,7 @@ marked as a vertical line.
 > chemistry. Nature against polarity and thermolability. Channel tropism against target organ.
 > Ayurvedic vīrya against logP. Every test gets an effect size, an n, a p-value, and a permutation null.
 >
-> [[PENDING: theory.headline_result_spoken]]
+> *(analysis pending)*
 >
 > And the null model still runs underneath: shuffle the plant-to-use edges and the discovery scores collapse.
 > If they didn't collapse, we'd be measuring our own pipeline instead of the biology.
@@ -253,8 +253,17 @@ marked as a vertical line.
 > 取象比類 — reasoning by resemblance — gets the same treatment. It's a control, not an assumption, and it
 > sits at the bottom of our ranked list where it belongs.
 
-**Artefact:** Workbench Methodology → theory-predictivity cards; `eval/report.json`; `docs/EVALUATION.md`.
-Numbers read on camera from `eval/report.json` — the same file a judge can open.
+**Artefact:** Workbench Methodology → theory-predictivity cards; `eval/report.json`;
+`docs/EVALUATION.md`.
+
+**If the real-corpus report has not landed at record time, speak this instead of reading numbers:**
+> "The five tests are pre-registered — the thresholds and the permutation construction are in the
+> repository, written before the numbers existed. The real-corpus run is still going as we record this.
+> What I can tell you is the design: AUC or rank correlation, a permutation null, n, and a withdrawal
+> threshold we committed to before we saw a single result. When it finishes, the number goes in the
+> repository next to the method — win or lose."
+
+Numbers, when present, are read on camera from `eval/report.json` — the same file a judge can open.
 
 ---
 
@@ -268,7 +277,7 @@ Numbers read on camera from `eval/report.json` — the same file a judge can ope
 > **No candidate here has been validated in a wet lab.** Not one. We produce ranked leads with assays
 > attached — we do not produce drugs.
 >
-> **The theory result is not a triumph by default.** [[PENDING: limitations.theory_sentence]] We report the
+> **The theory result is not a triumph by default.** *(analysis pending)* We report the
 > tests we lost with the same prominence as the ones we won.
 >
 > **The model is small.** It's a research instrument, and it reads classical Chinese and Sanskrit far better
@@ -335,7 +344,7 @@ Hold on the URL for 3 seconds.
 - **No fixture on camera without its badge.** The Workbench prints `DEMO FIXTURE` on any panel running on
   `app/data/*` fixtures. Record the final video with real artefacts (`make app-data` + `make eval`); if any
   panel is still fixture, leave the badge visible and say so — do not crop it.
-- **Numbers are read live.** Wherever the script says `[[PENDING: …]]`, read it off the file during the take
+- **Numbers are read live.** Wherever the script says `*(analysis pending)*`, read it off the file during the take
   rather than memorising it. Prevents drift between video, deck and Devpost.
 - **Terminal legibility:** 16 pt minimum, dark-on-parchment theme, cursor blink off, typing at ~55 wpm with
   commands pasted for the long ones.

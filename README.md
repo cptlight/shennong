@@ -105,11 +105,11 @@ Published whether or not we like the answer.
 
 | | `shennong-mini` | `shennong-0.5b` |
 |---|---|---|
-| Parameters | <!--FILL: mini params--> | ~494 M (≤ 1 B) |
-| Weights file | <!--FILL: gguf size--> GGUF | <!--FILL: flagship gguf size--> GGUF Q4_K_M |
+| Parameters | **8,719,616** (4,525,312 non-embedding) | ~494 M (≤ 1 B) |
+| Weights file | `shennong-mini-f16.gguf` — **18,054,560 B (18.05 MB)** | ~350–400 MB GGUF Q4_K_M (estimate) |
 | Training | **from scratch on this machine, CPU only** | recipe: Qwen2.5-0.5B → domain CPT → LoRA SFT → merge → Q4_K_M |
-| Vocab | <!--FILL: vocab--> (zh-Hant + sa + en) | <!--FILL--> |
-| Trained on | <!--FILL: tokens seen--> tokens of domain-exclusive corpus | recipe only — **not yet run at this scale**, and labelled as such |
+| Vocab | 16,384 (en · la · zh-Hant; Devanagari present but **not** in vocab) | 151,936 (Qwen) |
+| Trained on | **1,638,400 tokens** (0.19 tok/param · **0.9 % of compute-optimal** — deliberately undertrained) | recipe only — **not run at this scale** |
 
 **Why a tiny model is the right answer, not a compromise:** knowledge lives in the **index**, structure
 in the **graph**, reasoning in a **small model**, provenance **everywhere**. A <1 GB quantised model
@@ -166,12 +166,46 @@ python -m shennong.cli report --out eval/report.json          # evaluate
 
 ## Results
 
-<!--FILL: results table — corpus stats, model metrics, eval table, negative controls, ablations.
-     Every number must come from eval/report.json, corpus/DATA_CARD.md or training/runs/*/metrics.json. -->
+## Results
+
+| | |
+|---|---|
+| **Corpus** | **106 sources · 45,604,249 chars · 27,738 records** — zh-Hant 16.03 M (35.1 %), en 23.35 M, sa 3.44 M, la 2.79 M |
+| **Licence audit** | 103 trained-on sources (30 public domain + 73 CC BY-SA-4.0); GRETIL **rejected** (CC BY-**NC**-SA) |
+| **Structured data** | 23,177 compounds (**23,176 with real SMILES**), 11,819 uses, 1,402 property vectors, 822 lexicon entries |
+| **Model** | 8,719,616 params, from scratch, **45 min on one laptop CPU** (no GPU), 604 tok/s |
+| **Held-out quality** | val loss **6.390** · ppl **605.3** · **2.526 bits/byte** vs unigram baseline **3.076 bpb** (1.22× better) |
+| **Weights** | `shennong-mini-f16.gguf` **18,054,560 B**, sha256 `a67ad442…4cdb60`, 56 tensors, 8,719,616 elements — GGUF↔HF bit-exact, tokenizer parity 100 % |
+| **Candidates** | **60** drug candidates across 15 taxa, all classical lines verified against corpus spans |
+| **Honest gap** | Per-language bpb: en 2.56 · zh-Hant 3.34 · la 4.58 · **sa 13.46** (Devanagari never trained — stated, not hidden) |
+
+**The pre-registered theory experiment (四氣五味 / 歸經 / rasa / vīrya) is specified, implemented and
+unit-tested, but the single real-corpus run did not finish inside the submission window** — it was
+CPU-starved across four attempts on a shared machine. We publish the specification and an em dash
+rather than an estimate. `python -m shennong.cli report` produces the table; see
+[`docs/EVALUATION.md`](docs/EVALUATION.md) §2.3.
+
 
 ## Honest limitations
 
-<!--FILL: keep this section brutally honest and specific. -->
+## Honest limitations
+
+- **`shennong-mini` is 106× undertrained** (0.19 tokens/parameter vs ~20 compute-optimal). It learns
+  the register and beats a unigram baseline; it is **not** a factual oracle. Every factual claim is
+  meant to be grounded in a retrieved span, and the system refuses when it cannot cite.
+- **Sanskrit is effectively unmodelled.** The tokenizer was trained before the Devanagari corpus
+  arrived, so `sa` scores 13.46 bpb — worse than a unigram baseline. The 3.44 M Sanskrit characters
+  are in the corpus but not in the model's competence. This is a real gap, not a footnote.
+- **Drug-name → taxon resolution is the weakest link**: 43 % of use rows and 47 % of property rows
+  resolve to a binomial. We chose precision over coverage after finding real false joins, and the
+  graph is only as good as that join.
+- **Candidate scores are currently degenerate** — novelty is 0.88 for all 60 candidates, so the rank
+  order carries no information today. The shortlist is real, the *ranking* is not yet.
+- **Hypotheses are hypotheses.** Nothing here is medical advice, and nothing has been tested in vitro
+  or in vivo. The output is a ranked list of experiments, not a list of cures.
+- The corpus skews Chinese because that is where the largest public-domain original-language canon is;
+  the DATA_CARD quantifies the imbalance rather than hiding it.
+
 
 - `shennong-mini` is a **small** model trained on a **modest** corpus on a **CPU**. It writes domain-
   register text; it is not a reliable factual oracle. Every factual claim in the system is meant to be

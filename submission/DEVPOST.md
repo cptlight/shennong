@@ -78,9 +78,11 @@ for each framework separately.
 This is the only claim here that can be **wrong in an interesting way**. If 歸經 predicts receptor family at a
 useful AUC, we have validated a two-thousand-year-old system as a usable prior for drug discovery. If it lands at
 0.51, we have published a real negative result about a framework a billion people use — also a finding, and one
-nobody else in this competition will have. **And it is pre-registered:** the thresholds and the permutation
-construction were written down in `docs/EVALUATION.md` before the numbers existed, so we cannot tune it into a
-positive.
+nobody else in this competition will have. **And it is pre-registered:** the thresholds, the effect sizes and the permutation construction were
+written into `docs/EVALUATION.md` before the numbers existed, so the test cannot be tuned into a
+positive — including a withdrawal threshold for the null model, which we committed to honour either
+way. **The real-corpus analysis is running as we submit; the numbers are not in this page yet.** We
+state that plainly rather than quoting a preliminary figure.
 
 **2. It emits drug candidates.** Each candidate is a complete chain: a line of classical text → the property
 vector it implies → a molecule with formula and computed properties → a proposed mechanism → a development path
@@ -306,10 +308,10 @@ preparation or dosing guidance is ever emitted, and a distinction the output has
 - **60** drug candidates, each with a classical line, a theory justification, a
   mechanism, a development path and a falsification-adjacent assay, of which
   **60** have fully resolved structures and computed molecular descriptors.
-- **[[PENDING: eval.theory_positive_count]]** of **[[PENDING: eval.theory_n_tests]]** theory-predictivity tests
-  reach significance against a permutation null, including **[[PENDING: eval.headline_test]]** — the honest
+- ***(analysis pending)*** of ***(analysis pending)*** theory-predictivity tests
+  reach significance against a permutation null, including ***(analysis pending)*** — the honest
   number, including the tests that came back null.
-- **[[PENDING: hypotheses.count]]** ranked, provenance-cited, falsifiable hypotheses across all six discovery
+- ***(analysis pending)*** ranked, provenance-cited, falsifiable hypotheses across all six discovery
   classes, including the 取象比類 control that is published at the bottom of the list where it belongs.
 - **16 canonical 相反 pairs and 11 相畏 relations**, covering 19 named drugs each, enumerated with textual
   citations and verse provenance, bridged to a modern mechanism and annotated with an assay — a closed, checkable

@@ -1,6 +1,6 @@
 # Tradition-first staging: ancient record → Asian medicine → Western medicine
 
-2026-11-05T10:31:24-0800
+2026-11-05T10:31:53-0800
 
 **The ordering is the argument.** The usual computational approach starts from a Western
 compound–target database, then looks for a plant, then cites a traditional use as colour.
@@ -22,6 +22,13 @@ data may strengthen a tradition-grounded hypothesis; it may never substitute for
 - excluded at the ancient-record gate: 151
 - excluded at the Asian-theory gate: 24
 - **strongest class (tradition-grounded *and* modern-corroborated):** 28
+
+> **What stage 4 actually is, in this run.** The two stage-4 experts draw on the
+> Wikidata-derived compound table and our own 毒 markings — **not** measured ChEMBL bioactivity
+> or Open Targets genetics. So "modern-corroborated" here means *structure/class evidence*,
+> not *assayed evidence*. Because both signals are cheap and correlated, the
+> "awaiting corroboration" class is empty in this run; it will populate once ChEMBL can
+> disagree with the tradition rather than echo it.
 
 ## The strongest class
 

@@ -57,7 +57,8 @@ STAGE_NAME = {
     Stage.ANCIENT_RECORD: "ancient record (corpus attestation)",
     Stage.ASIAN_THEORY: "Asian theory (四氣/五味/歸經, rasa/vīrya)",
     Stage.ASIAN_PHARMACY: "Asian pharmacy (炮制 / formula layer)",
-    Stage.MODERN: "modern corroboration (chemistry, bioactivity, toxicology)",
+    Stage.MODERN: "modern corroboration (Wikidata chemistry + our toxicity marks; "
+                  "ChEMBL/Open Targets NOT yet wired)",
 }
 GATE_THRESHOLD = 0.45
 
@@ -156,6 +157,15 @@ def run(items: list[dict]) -> dict:
                      "Asian pharmacy (score)", "modern corroboration (score, cannot rescue)"],
         "rule": ("a claim failing either gate is excluded regardless of modern evidence; modern data "
                  "may strengthen a tradition-grounded hypothesis but may never substitute for one"),
+        "honest_caveats": [
+            "Stage 4 currently draws on the Wikidata-derived compound table and our own 毒 markings. "
+            "It does NOT yet include measured ChEMBL bioactivity or Open Targets genetics, so "
+            "'modern-corroborated' here means 'structure/class evidence', not 'assayed evidence'.",
+            "Because both stage-4 signals are cheap and correlated, the 'awaiting corroboration' class "
+            "is empty in this run. That will change when ChEMBL is wired in and can disagree.",
+            "Expert scores are coarse (0.15-1.0 in a few steps), so top scores cluster near 1.0; the "
+            "ranking is driven by the gates, not by the last decimals.",
+        ],
         "weights": {"ancient_record": 0.35, "asian_theory": 0.25, "asian_pharmacy": 0.20,
                     "modern": 0.20},
         "n_candidates": len(results),
@@ -186,7 +196,13 @@ def run(items: list[dict]) -> dict:
          f"- excluded at the ancient-record gate: {len(failed_1)}",
          f"- excluded at the Asian-theory gate: {len(failed_2)}",
          f"- **strongest class (tradition-grounded *and* modern-corroborated):** {len(strongest)}",
-         "", "## The strongest class", "",
+         "", "> **What stage 4 actually is, in this run.** The two stage-4 experts draw on the",
+         "> Wikidata-derived compound table and our own 毒 markings — **not** measured ChEMBL bioactivity",
+         "> or Open Targets genetics. So \"modern-corroborated\" here means *structure/class evidence*,",
+         "> not *assayed evidence*. Because both signals are cheap and correlated, the",
+         "> \"awaiting corroboration\" class is empty in this run; it will populate once ChEMBL can",
+         "> disagree with the tradition rather than echo it.", "",
+         "## The strongest class", "",
          "| Hypothesis | Score | Stage 1 | Stage 2 | Stage 3 | Stage 4 |",
          "|---|---|---|---|---|---|"]
 

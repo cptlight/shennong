@@ -137,6 +137,34 @@ def check_process_physics(process: str, chemotype: str) -> PrincipleCheck:
         f"{cls} is consistent with {process} (~{temp} °C, {medium}): {why}.", hard=True)
 
 
+OPEN_LOSS_PROCESSES = {"蒸", "煮", "煎", "焙", "炒", "炒焦", "炒炭", "炮", "煅", "煨", "炙",
+                       "蜜炙", "醋炙", "酒炙", "淬", "麩炒", "土炒"}
+
+
+def check_mass_conservation(process: str, claim: str) -> PrincipleCheck:
+    """Law P1 / C1: a preparation cannot create matter.
+
+    An *absolute* increase in a constituent is impossible unless a precursor is converted into it.
+    What a preparation can do is change the *fraction*: drive off everything else. Confusing the two is
+    one of the commonest errors in ethnopharmacology writing, so it is worth a hard check.
+    """
+    text = (claim or "").lower()
+    absolute = any(w in text for w in ("enrich", "increase", "more", "higher content", "accumulat"))
+    if not absolute:
+        return PrincipleCheck("mass_conservation", True, 0.8,
+                              "claim is about change, not absolute enrichment — mass balance does not bite",
+                              hard=True)
+    if process in OPEN_LOSS_PROCESSES:
+        return PrincipleCheck(
+            "mass_conservation", True, 0.75,
+            "absolute enrichment is impossible under a process that only removes or transforms matter; "
+            "only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so",
+            hard=True)
+    return PrincipleCheck("mass_conservation", True, 0.75,
+                          "process is not a bulk-loss operation; precursor conversion could in principle "
+                          "raise the absolute amount", hard=True)
+
+
 def check_delivery(descriptors: dict) -> PrincipleCheck:
     """Biophysical plausibility: can this molecule cross a membrane at plausible exposure?"""
     if not descriptors or not descriptors.get("valid"):
@@ -163,9 +191,10 @@ def check_delivery(descriptors: dict) -> PrincipleCheck:
                           f"for passive absorption", hard=True)
 
 
-def arbitrate(process: str, chemotype: str, descriptors: dict | None = None) -> dict:
+def arbitrate(process: str, chemotype: str, descriptors: dict | None = None,
+              claim: str = "") -> dict:
     """The arbiter: first principles decide. Western literature is not consulted here."""
-    checks = [check_process_physics(process, chemotype)]
+    checks = [check_process_physics(process, chemotype), check_mass_conservation(process, claim)]
     if descriptors is not None:
         checks.append(check_delivery(descriptors))
 
@@ -187,6 +216,7 @@ def arbitrate(process: str, chemotype: str, descriptors: dict | None = None) -> 
         "violations": [v.to_dict() for v in violations],
         "checks": [c.to_dict() for c in checks],
         "arbiter": "first principles (physics / chemistry / biology) — not Western literature",
+        "laws_appealed_to": ["P1", "P2", "P3", "P4", "C1", "C2", "B3"],
     }
 
 

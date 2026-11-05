@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T10:36:08-0800",
+  "generated_at": "2026-11-05T11:13:40-0800",
   "ordering": [
     "ancient record (GATE)",
     "Asian theory (GATE)",
@@ -97,6 +97,24 @@
               "evidence": [
                 "菖蒲 有毒",
                 "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 5.9 kcal, Rg 2.9 Å, 1 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 29.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
               ]
             },
             {
@@ -199,6 +217,24 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 87.6 kcal, Rg 4.8 Å, 7 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 237.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.55,
+              "rationale": "炮 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
+            },
+            {
               "domain": "first_principles",
               "score": 0.7,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -295,6 +331,24 @@
               "evidence": [
                 "附子 有毒",
                 "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 87.6 kcal, Rg 4.8 Å, 7 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 237.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
               ]
             },
             {
@@ -396,6 +450,21 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 95.4 kcal, Rg 4.0 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 188.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
               "score": 0.7,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -492,6 +561,21 @@
               "evidence": [
                 "巴豆"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 40.0 kcal, Rg 4.6 Å, 6 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 95.4 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             },
             {
               "domain": "first_principles",
@@ -593,6 +677,24 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 47.1 kcal, Rg 6.2 Å, 4 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 251.4 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
+            },
+            {
               "domain": "first_principles",
               "score": 0.7,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -688,6 +790,24 @@
               "rationale": "safety signal: 甘草 marked 有毒",
               "evidence": [
                 "甘草"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 8.5 kcal, Rg 5.3 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 51.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.55,
+              "rationale": "炮 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
               ]
             },
             {
@@ -789,6 +909,21 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.8,
+              "rationale": "flexible — large conformational spread; conformational spread 33.6 kcal, Rg 7.0 Å, 9 rotatable bonds. large conformational spread: thermally mobile, change is easy; many rotatable bonds",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 419.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
               "score": 0.5,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -884,6 +1019,24 @@
               "rationale": "safety signal: 甘草 marked 有毒",
               "evidence": [
                 "甘草"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 8.5 kcal, Rg 5.3 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 51.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "acetal_hydrolysis: computed hydrolysis ΔE 67 kJ/mol (gas phase); rank 3/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
               ]
             },
             {
@@ -985,6 +1138,21 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.8,
+              "rationale": "flexible — large conformational spread; conformational spread 33.6 kcal, Rg 7.0 Å, 9 rotatable bonds. large conformational spread: thermally mobile, change is easy; many rotatable bonds",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 419.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
               "score": 0.5,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -1080,6 +1248,24 @@
               "rationale": "safety signal: 甘草 marked 有毒",
               "evidence": [
                 "甘草"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 8.5 kcal, Rg 5.3 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 51.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "acetal_hydrolysis: computed hydrolysis ΔE 67 kJ/mol (gas phase); rank 3/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
               ]
             },
             {
@@ -1181,6 +1367,21 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.8,
+              "rationale": "flexible — large conformational spread; conformational spread 33.6 kcal, Rg 7.0 Å, 9 rotatable bonds. large conformational spread: thermally mobile, change is easy; many rotatable bonds",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 419.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
               "score": 0.5,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -1277,6 +1478,24 @@
               "evidence": [
                 "知母 有毒",
                 "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 17.2 kcal, Rg 4.1 Å, 1 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 27.5 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
               ]
             },
             {
@@ -1378,6 +1597,21 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 37.7 kcal, Rg 6.7 Å, 6 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 309.8 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
               "score": 0.5,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -1476,6 +1710,21 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "moderately flexible; conformational spread 1.9 kcal, Rg 4.1 Å, 4 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking; rigid thermophile under dry heat",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 36.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
               "score": 0.7,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -1572,6 +1821,24 @@
               "evidence": [
                 "巴豆 有毒",
                 "alkaloid"
+              ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 14.8 kcal, Rg 3.6 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 3.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
               ]
             },
             {
@@ -1674,6 +1941,24 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 14.8 kcal, Rg 3.6 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 3.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "研 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
+            },
+            {
               "domain": "first_principles",
               "score": 0.7,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -1772,6 +2057,24 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "rigid — few conformers, low spread; conformational spread 1.2 kcal, Rg 4.0 Å, 2 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking; rigid thermophile under dry heat",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 30.7 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "ester_hydrolysis ΔE 50 kJ/mol"
+              ]
+            },
+            {
               "domain": "first_principles",
               "score": 0.7,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
@@ -1866,6 +2169,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 12.4 kcal, Rg 3.3 Å, 0 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 48.4 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "研 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -1938,6 +2259,21 @@
               "evidence": [
                 "白薇"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.8,
+              "rationale": "flexible — large conformational spread; conformational spread 9.3 kcal, Rg 4.6 Å, 9 rotatable bonds. large conformational spread: thermally mobile, change is easy; many rotatable bonds",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 113.4 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             }
           ]
         }
@@ -2010,6 +2346,21 @@
               "evidence": [
                 "白前"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 6.7 kcal, Rg 2.7 Å, 4 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 11.8 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             }
           ]
         }
@@ -2082,6 +2433,21 @@
               "evidence": [
                 "白前"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 6.7 kcal, Rg 2.7 Å, 4 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 11.8 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             }
           ]
         }
@@ -2156,6 +2522,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 62.9 kcal, Rg 4.0 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 148.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.55,
+              "rationale": "炮 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -2223,6 +2607,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 2.1 kcal, Rg 5.0 Å, 6 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 100.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -2292,6 +2691,21 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 2.1 kcal, Rg 5.0 Å, 6 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 100.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             }
           ]
         }
@@ -2359,6 +2773,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 2.1 kcal, Rg 5.0 Å, 6 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 100.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -2430,6 +2859,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 12.0 kcal, Rg 3.6 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 75.5 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -2497,6 +2944,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.8,
+              "rationale": "flexible — large conformational spread; conformational spread 55.2 kcal, Rg 8.0 Å, 9 rotatable bonds. large conformational spread: thermally mobile, change is easy; many rotatable bonds",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 384.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -2576,6 +3038,21 @@
               ]
             },
             {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 3.1 kcal, Rg 3.7 Å, 4 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 35.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
+            },
+            {
               "domain": "first_principles",
               "score": 0.25,
               "rationale": "VIOLATES FIRST PRINCIPLES — the claimed mechanism is physically impossible as stated",
@@ -2652,6 +3129,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.6,
+              "rationale": "rigid — few conformers, low spread; conformational spread 0.0 kcal, Rg 3.6 Å, 0 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 57.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -2719,6 +3214,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.6,
+              "rationale": "moderately flexible; conformational spread 1.9 kcal, Rg 4.1 Å, 4 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 36.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -2790,6 +3300,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.6,
+              "rationale": "rigid — few conformers, low spread; conformational spread 0.0 kcal, Rg 3.6 Å, 0 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 57.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.55,
+              "rationale": "伏 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -2857,6 +3385,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.6,
+              "rationale": "moderately flexible; conformational spread 1.9 kcal, Rg 4.1 Å, 4 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 36.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -2928,6 +3471,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 17.3 kcal, Rg 3.5 Å, 3 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 39.7 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -2995,6 +3556,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 26.8 kcal, Rg 2.6 Å, 0 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 63.7 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -3072,6 +3648,21 @@
               "evidence": [
                 "升麻"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 55.9 kcal, Rg 5.9 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 305.8 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             },
             {
               "domain": "first_principles",
@@ -3154,6 +3745,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 9.9 kcal, Rg 4.2 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 114.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.55,
+              "rationale": "伏 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -3225,6 +3834,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.6,
+              "rationale": "rigid — few conformers, low spread; conformational spread 2.0 kcal, Rg 4.7 Å, 3 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 115.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -3300,6 +3924,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 9.9 kcal, Rg 4.2 Å, 2 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 114.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -3372,6 +4014,21 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "rigid — few conformers, low spread; conformational spread 2.0 kcal, Rg 4.7 Å, 3 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking; rigid thermophile under dry heat",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 115.2 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             }
           ]
         }
@@ -3440,6 +4097,24 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 5.4 kcal, Rg 3.9 Å, 1 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 41.6 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "acetal_hydrolysis: computed hydrolysis ΔE 67 kJ/mol (gas phase); rank 3/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
+              ]
             }
           ]
         }
@@ -3507,6 +4182,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 30.5 kcal, Rg 5.3 Å, 3 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 250.8 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -3576,6 +4266,24 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 29.3 kcal, Rg 4.9 Å, 3 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 64.0 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "acetal_hydrolysis: computed hydrolysis ΔE 67 kJ/mol (gas phase); rank 3/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
+              ]
             }
           ]
         }
@@ -3643,6 +4351,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 16.2 kcal, Rg 3.0 Å, 0 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 64.4 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -3712,6 +4435,24 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 5.4 kcal, Rg 3.9 Å, 1 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 41.6 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "acetal_hydrolysis: computed hydrolysis ΔE 67 kJ/mol (gas phase); rank 3/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
+              ]
             }
           ]
         }
@@ -3779,6 +4520,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 18.7 kcal, Rg 4.7 Å, 4 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 61.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -3848,6 +4604,24 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 6.9 kcal, Rg 3.0 Å, 2 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min -11.6 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.85,
+              "rationale": "ester_hydrolysis: computed hydrolysis ΔE 50 kJ/mol (gas phase); rank 1/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "ester_hydrolysis ΔE 50 kJ/mol"
+              ]
             }
           ]
         }
@@ -3915,6 +4689,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 67.6 kcal, Rg 4.2 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 126.7 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -3984,6 +4773,24 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.5,
+              "rationale": "moderately flexible; conformational spread 6.9 kcal, Rg 3.0 Å, 2 rotatable bonds. moderate flexibility",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min -11.6 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.55,
+              "rationale": "伏 is oxidative/thermal; hydrolysis ΔE is not the controlling number for this class",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "ester_hydrolysis ΔE 50 kJ/mol"
+              ]
             }
           ]
         }
@@ -4051,6 +4858,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 67.6 kcal, Rg 4.2 Å, 5 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 126.7 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -4120,6 +4942,24 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 12.2 kcal, Rg 4.0 Å, 1 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 20.6 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "炒 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "acetal_hydrolysis ΔE 67 kJ/mol"
+              ]
             }
           ]
         }
@@ -4187,6 +5027,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.8,
+              "rationale": "flexible — large conformational spread; conformational spread 25.0 kcal, Rg 6.3 Å, 11 rotatable bonds. large conformational spread: thermally mobile, change is easy; many rotatable bonds",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 359.3 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -4258,6 +5113,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.6,
+              "rationale": "rigid — few conformers, low spread; conformational spread 0.0 kcal, Rg 2.6 Å, 1 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 55.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -4325,6 +5198,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 110.4 kcal, Rg 3.0 Å, 0 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 61.9 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -4396,6 +5284,24 @@
               "evidence": [
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "rigid — few conformers, low spread; conformational spread 0.0 kcal, Rg 2.6 Å, 1 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking; rigid thermophile under dry heat",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 55.1 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -4463,6 +5369,21 @@
               "domain": "toxicology",
               "score": 0.35,
               "rationale": "no safety signal recorded",
+              "evidence": []
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "flexible — large conformational spread; conformational spread 110.4 kcal, Rg 3.0 Å, 0 rotatable bonds. large conformational spread: thermally mobile, change is easy",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 61.9 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
               "evidence": []
             }
           ]
@@ -4537,6 +5458,24 @@
                 "昆布 有毒",
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.6,
+              "rationale": "rigid — few conformers, low spread; conformational spread 1.9 kcal, Rg 2.7 Å, 1 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 41.4 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.65,
+              "rationale": "amide_hydrolysis: computed hydrolysis ΔE 66 kJ/mol (gas phase); rank 2/3 easiest-first",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -4609,6 +5548,18 @@
               "evidence": [
                 "昆布"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.3,
+              "rationale": "mechanics calculation failed",
+              "evidence": []
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             }
           ]
         }
@@ -4682,6 +5633,24 @@
                 "昆布 有毒",
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.7,
+              "rationale": "rigid — few conformers, low spread; conformational spread 1.9 kcal, Rg 2.7 Å, 1 rotatable bonds. steep energy landscape: rigid scaffold, change requires bond breaking; rigid thermophile under dry heat",
+              "evidence": [
+                "RDKit ETKDG + MMFF94, deterministic seed",
+                "MMFF94 min 41.4 kcal/mol"
+              ]
+            },
+            {
+              "domain": "quantum",
+              "score": 0.5,
+              "rationale": "焙 does not demand hydrolysis; electronic-structure evidence is indirect",
+              "evidence": [
+                "RHF/6-31g* Koopmans IP MAE 0.823 eV vs experiment",
+                "amide_hydrolysis ΔE 66 kJ/mol"
+              ]
             }
           ]
         }
@@ -4754,6 +5723,18 @@
               "evidence": [
                 "昆布"
               ]
+            },
+            {
+              "domain": "mechanics",
+              "score": 0.3,
+              "rationale": "mechanics calculation failed",
+              "evidence": []
+            },
+            {
+              "domain": "quantum",
+              "score": 0.3,
+              "rationale": "no hydrolysable bond class for this chemotype (or QM results not computed)",
+              "evidence": []
             }
           ]
         }

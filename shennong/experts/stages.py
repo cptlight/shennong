@@ -130,7 +130,7 @@ def stage_score(item: dict, world: World) -> StagedResult:
 
     # ---- STAGE 4: first principles arbitrate (not Western literature) --------------
     from shennong.experts.first_principles import arbitrate, PrincipleCheck
-    fp = arbitrate(item.get("process") or "", item.get("chemotype") or "", None)
+    fp = arbitrate(item.get("process") or "", item.get("chemotype") or "", None, claim)
     fp_score = fp["score"]
     res.stages.setdefault(int(Stage.FIRST_PRINCIPLES), []).append(
         Proposal("first_principles", fp_score, fp["verdict"], [

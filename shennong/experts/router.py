@@ -130,6 +130,72 @@ def mixed_stream(limit: int = 300) -> list[dict]:
     return out
 
 
+# ---------------------------------------------------------------------------------------
+# Conversation-level routing: activate experts for a QUESTION, not just a record
+# ---------------------------------------------------------------------------------------
+QUERY_CUES = {
+    "process": ("炮", "蒸", "煮", "炒", "炙", "煅", "煨", "淬", "飞", "伏", "浸", "渍", "煎",
+                "processing", "process", "prepare", "preparation", "decoct", "fry", "roast"),
+    "theory": ("性", "味", "歸經", "归经", "寒", "熱", "热", "溫", "温", "涼", "凉", "rasa", "virya",
+               "vīrya", "guna", "guṇa", "channel", "nature", "flavour", "flavor"),
+    "toxicity": ("毒", "tox", "poison", "safe", "safety", "danger", "side effect", "adverse"),
+    "dose": ("dose", "dosage", "dosing", "how much", "mg", "g ", "錢", "两", "兩", "分"),
+    "mechanism": ("why", "how does", "mechanism", "target", "receptor", "pathway", "enzyme",
+                  "為甚麼", "为什么", "機理", "机理"),
+    "structure": ("smiles", "structure", "molecule", "compound", "chemical", "分子", "化合物"),
+    "rule": ("十八反", "十九畏", "incompatib", "viruddha", "contraindicat", "禁忌"),
+    "tradition": ("tcm", "ayurveda", "unani", "kampo", "tibetan", "tcm", "中醫", "中医", "阿育吠陀"),
+}
+
+
+def route_query(question: str) -> dict:
+    """Pick the experts a natural-language question actually needs."""
+    q = (question or "").lower()
+    active: list[str] = list(ALWAYS)
+    reasons: dict[str, str] = {"ethnobotany": "every question is first a question about the record"}
+
+    latin = __import__("re").findall(r"\b[A-Z][a-z]+\s+[a-z]{3,}\b", question or "")
+    cjk_drug = __import__("re").findall(r"[\u4e00-\u9fff]{2,4}", question or "")
+    if latin or len(cjk_drug) >= 1:
+        for e, why in (("taxonomy", "a plant name was detected"),
+                       ("chemotaxonomy", "a plant name was detected"),
+                       ("phytochemistry", "a plant name was detected")):
+            if e not in active:
+                active.append(e); reasons[e] = why
+
+    triggered = {}
+    for feature, cues in QUERY_CUES.items():
+        if any(c in q for c in cues):
+            triggered[feature] = True
+    if triggered.get("process"):
+        for e in ("operator", "extraction"):
+            if e not in active:
+                active.append(e); reasons[e] = "the question concerns a preparation"
+    if triggered.get("theory"):
+        if "theory" not in active:
+            active.append("theory"); reasons["theory"] = "the question invokes classical properties"
+    if triggered.get("toxicity"):
+        if "toxicology" not in active:
+            active.append("toxicology"); reasons["toxicology"] = "safety language detected"
+    if triggered.get("dose") or triggered.get("toxicity"):
+        if "adme" not in active:
+            active.append("adme"); reasons["adme"] = "dose/safety implies exposure reasoning"
+    if triggered.get("mechanism"):
+        for e in ("quantum", "mechanics", "microbiome"):
+            if e not in active:
+                active.append(e); reasons[e] = "a mechanism question needs physical reasoning"
+    if triggered.get("structure"):
+        for e in ("mechanics", "quantum", "adme"):
+            if e not in active:
+                active.append(e); reasons[e] = "a structural question"
+    if triggered.get("rule"):
+        if "toxicology" not in active:
+            active.append("toxicology"); reasons["toxicology"] = "an incompatibility rule was named"
+
+    return {"question": question, "n_active": len(active), "experts": active,
+            "why": reasons, "features": sorted(triggered)}
+
+
 if __name__ == "__main__":
     cs = json.loads((ROOT / "artifacts/cross_sections.json").read_text(encoding="utf-8"))
     items = cs.get("all") or cs.get("top") or []
@@ -153,6 +219,17 @@ if __name__ == "__main__":
           f"distinct routes {rm['distinct_routes']}")
     for k, v in list(rm["top_routes"].items())[:4]:
         print(f"  {v:>4}  {k}")
+    demo = ["Why is 附子 processed before use?",
+            "Does 甘草 taste sweet and enter the heart channel?",
+            "Is the 十八反 rule about 烏頭 and 半夏 real?",
+            "What dose of 麻黃 is safe?",
+            "How does berberine reach its target?"]
+    print()
+    print("CONVERSATION ROUTING")
+    for qq in demo:
+        rq = route_query(qq)
+        print(f"  {rq['n_active']:>2} experts | {qq[:52]:<52} -> {', '.join(rq['experts'][:5])}")
+
     out = ROOT / "artifacts/expert_routing.json"
     out.write_text(json.dumps({"flat_panel": r, "mixed_stream": rm}, indent=2), encoding="utf-8")
     print(f"wrote {out}")

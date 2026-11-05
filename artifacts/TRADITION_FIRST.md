@@ -1,6 +1,6 @@
 # Tradition-first staging: ancient record → Asian medicine → Western medicine
 
-2026-11-05T10:36:08-0800
+2026-11-05T11:13:40-0800
 
 **The ordering is the argument.** The usual computational approach starts from a Western
 compound–target database, then looks for a plant, then cites a traditional use as colour.

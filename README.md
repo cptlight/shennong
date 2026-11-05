@@ -340,6 +340,100 @@ The 28 that survive are split into **tradition-grounded + modern-corroborated** 
 **tradition-grounded, awaiting corroboration** (the pre-clinical class a pharmacognosist would want
 before any assay). [`artifacts/TRADITION_FIRST.md`](artifacts/) · [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md)
 
+## Modular MoE — the architecture, and how to extend it
+
+Three layers that change at different speeds:
+
+```
+  DATA PIPELINE   ancient records · Asian DBs · chemistry/biology   ← additive, updatable
+        ↓
+  EXPERTS         12 domain modules, routed per item and per question ← add / upgrade / remove freely
+        ↓
+  FIRST-PRINCIPLES CORE  15 laws across physics, chemistry, biology   ← FIXED. Not negotiable.
+```
+
+### The invariant: the first-principles core
+
+`shennong/physics/laws.py` holds the laws every claim must satisfy — **5 physics, 5 chemistry, 5 biology**.
+Eight are **hard** (violation is fatal), seven are **soft** (violation raises the evidential burden).
+Keeping them as data means a new expert declares which laws it appeals to, and a reviewer can see exactly
+what the system is committed to.
+
+| Domain | Hard laws | Examples |
+|---|---|---|
+| physics | P1 mass conservation · P2 energy source · P3 phase partitioning · P4 permeation window | a process cannot create matter |
+| chemistry | C1 atom/charge balance · C2 Arrhenius kinetics · C4 solvent polarity | a bond class cannot survive conditions that hydrolyse it |
+| biology | B3 enzymes cannot make the impossible possible | catalysis accelerates, it does not permit |
+
+**The core can say no, never yes.** It falsifies; it does not prove. That asymmetry is the design.
+
+### How to add an expert (the whole process)
+
+An expert is a pure function with this signature — nothing else is required:
+
+```python
+from shennong.experts.base import Proposal
+
+def my_expert(world, item: dict) -> Proposal:
+    # world: read-only view of every table (attestation, chemistry, operators, theory, …)
+    # item:  {drug_surface, binomial, process, chemotype, ...}
+    if not item.get("binomial"):
+        return Proposal("my_expert", 0.20, "not applicable", [])
+    score, note = ...          # your reasoning, 0..1, with the evidence
+    return Proposal("my_expert", score, note, ["evidence reference", ...])
+```
+
+Then three registrations:
+
+1. `shennong/experts/extra.py` → `EXTRA_EXPERTS = {"my_expert": my_expert, ...}`
+2. `shennong/experts/stages.py` → `STAGE_OF_DOMAIN["my_expert"] = Stage.<stage>`
+3. `shennong/experts/router.py` → add a feature rule saying **when** it should fire
+
+That is it. The fusion layer, the Workbench, pipeline 2 and the research loop pick it up automatically,
+because they all consume the expert dict rather than named experts.
+
+**Rules an expert must follow:** return a `Proposal` (never raise), declare its evidence, never lower a
+threshold, and never claim more than its data supports. An expert that cannot evaluate an item should
+say so with a low score and a reason, not guess.
+
+### Activation: per item and per question
+
+- **Per item** (pipeline): `route(item)` fires experts by content features — a binomial activates taxonomy,
+  chemotaxonomy and phytochemistry; a structure activates mechanics, quantum and ADME; a 炮制 term
+  activates operator and extraction. Measured on a mixed 389-item stream: **2.25 experts per item = 18.7 %
+  of the panel**; plain text items activate one.
+- **Per question** (conversation): `route_query(question)` does the same for natural language, so
+  *"What dose of 麻黃 is safe?"* activates 6 experts and *"How does berberine reach its target?"* activates
+  7 — different sets, because they are different questions.
+
+```bash
+python -m shennong.experts.router      # activation statistics + conversation routing demo
+```
+
+### Updating the data pipeline
+
+The experts read `world`, a read-only view rebuilt from disk on every run. So learning more is a data
+operation, not a code change:
+
+```bash
+python scripts/ingest.py --input new_texts.jsonl --source-id X --licence "Public Domain" \
+    --licence-evidence URL          # licence gate is non-overridable
+python -m shennong.cli cai && zhi && pei && shi
+python scripts/extract_discoveries.py && python scripts/extrapolate.py && python scripts/run_pipeline2.py
+```
+
+Every expert automatically sees the new evidence on the next run. Nothing is retrained, nothing is
+forgotten, and provenance is preserved because the registry and corpus version are written by `ingest`.
+
+### What you may change, and what you may not
+
+| | |
+|---|---|
+| ✅ add, upgrade, remove experts | ❌ change a law to make a hypothesis pass |
+| ✅ ingest new corpora | ❌ lower a gate threshold |
+| ✅ retrain the MoE model | ❌ let Western literature vote |
+| ✅ add tables the experts read | ❌ present a fixture as live data |
+
 ## Multi-domain experts, and a system that adjusts itself
 
 **A hypothesis is an interpolation only if independent domains agree.** Five experts, each grounded in

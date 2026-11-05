@@ -9,18 +9,18 @@
       "ethnobotany": 203,
       "operator": 203,
       "extraction": 203,
-      "mechanics": 203,
-      "quantum": 203,
-      "adme": 203,
       "taxonomy": 203,
       "chemotaxonomy": 203,
       "phytochemistry": 203,
+      "mechanics": 203,
+      "quantum": 203,
+      "adme": 203,
       "microbiome": 30
     },
     "distinct_routes": 2,
     "top_routes": {
-      "ethnobotany+operator+extraction+mechanics+quantum+adme+taxonomy+chemotaxonomy+phytochemistry": 173,
-      "ethnobotany+operator+extraction+mechanics+quantum+adme+microbiome+taxonomy+chemotaxonomy+phytochemistry": 30
+      "ethnobotany+operator+extraction+taxonomy+chemotaxonomy+phytochemistry+mechanics+quantum+adme": 173,
+      "ethnobotany+operator+extraction+taxonomy+chemotaxonomy+phytochemistry+microbiome+mechanics+quantum+adme": 30
     }
   },
   "mixed_stream": {
@@ -33,19 +33,19 @@
       "ethnobotany": 389,
       "operator": 60,
       "extraction": 60,
-      "mechanics": 60,
-      "quantum": 60,
-      "adme": 60,
       "taxonomy": 60,
       "chemotaxonomy": 60,
       "phytochemistry": 60,
+      "mechanics": 60,
+      "quantum": 60,
+      "adme": 60,
       "microbiome": 5
     },
     "distinct_routes": 3,
     "top_routes": {
       "ethnobotany": 329,
-      "ethnobotany+operator+extraction+mechanics+quantum+adme+taxonomy+chemotaxonomy+phytochemistry": 55,
-      "ethnobotany+operator+extraction+mechanics+quantum+adme+microbiome+taxonomy+chemotaxonomy+phytochemistry": 5
+      "ethnobotany+operator+extraction+taxonomy+chemotaxonomy+phytochemistry+mechanics+quantum+adme": 55,
+      "ethnobotany+operator+extraction+taxonomy+chemotaxonomy+phytochemistry+microbiome+mechanics+quantum+adme": 5
     }
   }
 }

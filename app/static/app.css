@@ -518,6 +518,110 @@ table.data .num { font-family: var(--mono); text-align: right; font-variant-nume
 .foot-left .mono { color: var(--ink-2); }
 .foot-right { display: flex; gap: .4rem; flex-wrap: wrap; }
 
+
+/* ------------------------------------------------------------------ candidates table */
+.cand-head, .cand > summary {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(9rem, 1.25fr) minmax(9rem, 1.1fr) minmax(8rem, .95fr)
+                         minmax(11rem, 1.5fr) minmax(6rem, .6fr) 5.2rem 6.2rem;
+  gap: .6rem; align-items: center;
+}
+.cand-head {
+  padding: .3rem .95rem; font-family: var(--mono); font-size: .58rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); border-bottom: 1.5px solid var(--rule-2);
+}
+.cand-list { display: flex; flex-direction: column; gap: .5rem; margin: .5rem 0 1rem; }
+.cand {
+  border: 1px solid var(--rule); background: var(--paper-2); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden;
+}
+.cand > summary {
+  cursor: pointer; list-style: none; padding: .55rem .95rem; font-size: .82rem;
+}
+.cand > summary::-webkit-details-marker { display: none; }
+.cand > summary:hover { background: rgba(168, 54, 42, .04); }
+.cand[open] > summary { border-bottom: 1px solid var(--rule); background: rgba(168, 54, 42, .035); }
+.cand .c-rank { font-family: var(--mono); font-size: .72rem; color: var(--cinnabar-d); font-weight: 700; }
+.cand .c-name { font-family: var(--serif); font-size: .95rem; font-weight: 600; line-height: 1.25; }
+.cand .c-name em { display: block; font-style: normal; font-family: var(--serif); font-size: .82rem; color: var(--cinnabar-d); }
+.cand .c-lead { font-size: .78rem; }
+.cand .c-lead b { font-family: var(--serif); font-size: .9rem; font-weight: 600; }
+.cand .c-lead span { display: block; font-family: var(--mono); font-size: .58rem; color: var(--muted); letter-spacing: .04em; }
+.cand .c-mech { font-size: .76rem; color: var(--ink-2); line-height: 1.35; }
+.cand .c-mw { font-family: var(--mono); font-size: .72rem; }
+.cand .c-mw small { display: block; color: var(--muted); font-size: .62rem; }
+.cand .c-nov { display: flex; align-items: center; gap: .35rem; }
+.cand .c-nov .bar { flex: 1; margin: 0; }
+.cand .c-nov b { font-family: var(--mono); font-size: .68rem; }
+
+.tv { display: flex; gap: .22rem; flex-wrap: wrap; }
+.tv span {
+  font-family: var(--serif); font-size: .72rem; padding: .02rem .34rem; border-radius: 2px;
+  border: 1px solid var(--rule-2); background: var(--paper-3); white-space: nowrap;
+}
+.tv .tv-nature { border-color: var(--cinnabar); color: var(--cinnabar-d); background: var(--cinnabar-l); }
+.tv .tv-flavor { border-color: var(--brass); color: var(--brass); background: var(--brass-l); }
+.tv .tv-channel { border-color: var(--indigo); color: var(--indigo); background: var(--indigo-l); }
+.tv .tv-grade { border-color: var(--verdigris); color: var(--verdigris); background: var(--verdigris-l); }
+
+.cand-body { display: grid; gap: .9rem; padding: .85rem .95rem 1rem; }
+.smiles {
+  font-family: var(--mono); font-size: .74rem; background: var(--ink); color: #EDE6D6;
+  padding: .45rem .6rem; border-radius: 2px; overflow-x: auto; white-space: nowrap;
+}
+.smiles.none { background: transparent; color: var(--muted); border: 1px dashed var(--rule-2); white-space: normal; }
+.chips { display: flex; gap: .3rem; flex-wrap: wrap; }
+
+.empty-row { padding: .8rem; }
+
+@media (max-width: 1080px) {
+  .cand-head { display: none; }
+  .cand > summary { grid-template-columns: 1fr; gap: .3rem; }
+  .cand > summary > span::before {
+    content: attr(data-k); display: block; font-family: var(--mono); font-size: .56rem;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  }
+}
+
+/* theory-predictivity experiment cards */
+.theory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .7rem; }
+.theory {
+  border: 1px solid var(--rule); border-radius: 2px; background: var(--paper);
+  padding: .7rem .8rem; border-left: 4px solid var(--indigo);
+}
+.theory.is-strong { border-left-color: var(--verdigris); }
+.theory.is-null { border-left-color: var(--brass); }
+.theory h4 { font-family: var(--serif); font-size: .95rem; margin: .1rem 0 .2rem; }
+.theory .tv-big { font-family: var(--mono); font-size: 1.35rem; font-weight: 700; line-height: 1.1; }
+.theory .tv-hyp { font-size: .76rem; color: var(--ink-2); margin-top: .3rem; line-height: 1.45; }
+.theory .tv-meta { font-family: var(--mono); font-size: .62rem; color: var(--muted); margin-top: .3rem; }
+.theory .verdict { font-family: var(--mono); font-size: .62rem; letter-spacing: .07em; text-transform: uppercase; }
+
+
+/* the classical line that a candidate descends from — the first thing in an expanded dossier */
+.classical {
+  margin: 0; border-left: 4px solid var(--cinnabar); background: var(--paper);
+  padding: .75rem .95rem; border-radius: 2px;
+}
+.classical blockquote {
+  margin: 0; font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", var(--serif);
+  font-size: 1.12rem; line-height: 1.85; color: var(--ink); letter-spacing: .02em;
+}
+.classical figcaption { margin-top: .5rem; display: flex; gap: .4rem; flex-wrap: wrap; align-items: baseline; }
+.classical .cl-src {
+  font-family: var(--serif); font-style: italic; font-size: .84rem; color: var(--ink-2);
+}
+.classical .cl-tr { flex-basis: 100%; font-size: .84rem; color: var(--muted); margin: .35rem 0 0; line-height: 1.5; }
+
+
+.classical-bad { border-left-color: var(--brass); background: repeating-linear-gradient(
+    135deg, var(--paper), var(--paper) 10px, rgba(138,100,32,.05) 10px, rgba(138,100,32,.05) 20px); }
+.prov-warn {
+  border-left: 3px solid var(--cinnabar); background: var(--cinnabar-l); color: var(--cinnabar-d);
+  padding: .4rem .55rem; margin-bottom: .5rem; font-size: .78rem; line-height: 1.45; border-radius: 2px;
+}
+.classical-bad blockquote { opacity: .72; text-decoration: line-through; text-decoration-color: rgba(168,54,42,.45); }
+
 /* ------------------------------------------------------------------ motion */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }

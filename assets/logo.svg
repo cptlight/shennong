@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180" width="620" height="180"
+     role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">SHENNONG 神农</title>
+  <desc id="logo-desc">A ritual bronze cauldron (鼎) holding a benzene ring, with a grain/leaf shoot rising
+    from it, enclosed in a cinnabar seal. Wordmark: SHENNONG 神农.</desc>
+
+  <defs>
+    <style>
+      .serif { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC",
+               "Noto Serif CJK SC", "Source Han Serif SC", serif; }
+      .cjk   { font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Hiragino Mincho ProN",
+               "Iowan Old Style", Palatino, serif; }
+      .mono  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- ============ the seal mark (this is also the 32 px favicon shape) ============ -->
+  <g transform="translate(10 10)">
+    <circle cx="80" cy="80" r="74" fill="#FCF8F0" stroke="#A8362A" stroke-width="6"/>
+    <circle cx="80" cy="80" r="66" fill="none" stroke="#1B1815" stroke-width="1.6" opacity="0.22"/>
+
+    <!-- 鼎: rim, body, three legs — ink -->
+    <path d="M48 62 H112" stroke="#1B1815" stroke-width="9.5" stroke-linecap="round"/>
+    <path d="M53 62 C53 96 63 112 80 112 C97 112 107 96 107 62"
+          fill="none" stroke="#1B1815" stroke-width="9.5" stroke-linecap="round"/>
+    <path d="M62 111 L62 133 M98 111 L98 133 M80 112 L80 137"
+          stroke="#1B1815" stroke-width="7.5" stroke-linecap="round"/>
+
+    <!-- the molecule in the vessel -->
+    <path d="M80 71 L91.3 77.5 L91.3 90.5 L80 97 L68.7 90.5 L68.7 77.5 Z"
+          fill="none" stroke="#A8362A" stroke-width="3.4" stroke-linejoin="round"/>
+
+    <!-- 禾: grain shoot rising out of the vessel — cinnabar -->
+    <path d="M80 56 L80 24" stroke="#A8362A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M80 40 C69 38 60.5 31 56.5 20" fill="none" stroke="#A8362A"
+          stroke-width="5.4" stroke-linecap="round"/>
+    <path d="M80 40 C91 38 99.5 31 103.5 20" fill="none" stroke="#A8362A"
+          stroke-width="5.4" stroke-linecap="round"/>
+    <circle cx="80" cy="24" r="4.6" fill="#A8362A"/>
+  </g>
+
+  <!-- ============ wordmark ============ -->
+  <text class="serif" x="196" y="82" font-size="44" letter-spacing="7" fill="#1B1815"
+        font-weight="600">SHENNONG</text>
+  <text class="cjk" x="199" y="122" font-size="27" letter-spacing="10" fill="#A8362A">神农</text>
+
+  <line x1="196" y1="138" x2="596" y2="138" stroke="#D8CCB4" stroke-width="1.5"/>
+  <text class="serif" x="196" y="160" font-size="15.5" fill="#6B6153" font-style="italic">
+    Old records. New molecules. A furnace for Asian pharmacology.
+  </text>
+</svg>

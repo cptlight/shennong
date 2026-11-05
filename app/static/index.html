@@ -39,6 +39,7 @@
 </header>
 
 <nav class="tabs" role="tablist" aria-label="Workbench sections">
+  <button role="tab" id="tab-candidates" aria-controls="panel-candidates" aria-selected="false" tabindex="-1" data-panel="candidates">Candidates</button>
   <button role="tab" id="tab-hypotheses" aria-controls="panel-hypotheses" aria-selected="true" tabindex="0" data-panel="hypotheses">Hypotheses</button>
   <button role="tab" id="tab-graph" aria-controls="panel-graph" aria-selected="false" tabindex="-1" data-panel="graph">Knowledge graph</button>
   <button role="tab" id="tab-ask" aria-controls="panel-ask" aria-selected="false" tabindex="-1" data-panel="ask">Ask</button>
@@ -48,13 +49,59 @@
 
 <main id="main">
 
+
+  <!-- ===================================================== CANDIDATES (the headline artefact) -->
+  <section class="panel" id="panel-candidates" role="tabpanel" aria-labelledby="tab-candidates" tabindex="0" hidden>
+    <div class="panel-head">
+      <div>
+        <h1>Drug candidates <span class="cn-inline">藥</span></h1>
+        <p class="lede">The terminal artefact. Each row is a classical lead turned into a candidate molecule:
+          an Asian property vector, a proposed mechanism, a computed molecular weight, a novelty claim against
+          the modern literature, and the assay that would advance or kill it.</p>
+      </div>
+      <div id="cand-badge" class="data-badge"></div>
+    </div>
+    <div id="cand-summary"></div>
+    <div class="toolbar">
+      <div class="field">
+        <label for="cand-sort">Sort by</label>
+        <select id="cand-sort">
+          <option value="novelty">novelty</option>
+          <option value="mw">molecular weight</option>
+          <option value="rank">pipeline rank</option>
+          <option value="name">name</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="cand-status">Status</label>
+        <select id="cand-status"><option value="">all</option></select>
+      </div>
+      <div class="field grow">
+        <label for="cand-search">Search candidate, lead drug, mechanism</label>
+        <input id="cand-search" type="search" placeholder="e.g. 附子, Nrf2, 使, alkaloid" autocomplete="off">
+      </div>
+    </div>
+    <div class="cand-head" aria-hidden="true">
+      <span>#</span><span>candidate</span><span>classical lead</span><span>theory vector</span>
+      <span>proposed mechanism</span><span>MW / formula</span><span>novelty</span><span>status</span>
+    </div>
+    <div id="cand-list" class="cand-list" aria-live="polite"></div>
+    <p class="muted" style="font-size:.78rem;max-width:80ch">
+      Molecular weight is computed from the molecular formula by arithmetic, not estimated. Where a structure
+      has not been resolved it is shown as <em>pending</em> and left null rather than invented. Novelty is a
+      scored comparison against the modern literature; the method is published in
+      <code>docs/EVALUATION.md</code>.
+    </p>
+  </section>
+
   <!-- ===================================================== HYPOTHESES -->
   <section class="panel is-active" id="panel-hypotheses" role="tabpanel" aria-labelledby="tab-hypotheses" tabindex="0">
     <div class="panel-head">
       <div>
         <h1>Ranked hypotheses <span class="cn-inline">使 Shǐ</span></h1>
-        <p class="lede">Every hypothesis carries its provenance chain, a score breakdown, the experiment that
-          could kill it, and an honest statement of what we are least sure about.</p>
+        <p class="lede">Hypotheses are the working layer beneath the candidates: each carries its provenance chain,
+          a score breakdown, the experiment that could kill it, and an honest statement of what we are least
+          sure about.</p>
       </div>
       <div id="hyp-badge" class="data-badge"></div>
     </div>

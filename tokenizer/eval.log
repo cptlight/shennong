@@ -1,0 +1,16 @@
+held-out sample: en=200, la=161, zh-Hant=200
+en       chars/token=3.571  bytes/token=3.59  tokens/doc=414  vs utf8-bytes=3.59x
+la       chars/token=2.191  bytes/token=2.21  tokens/doc=706  vs utf8-bytes=2.21x
+zh-Hant  chars/token=1.307  bytes/token=3.81  tokens/doc=1297  vs utf8-bytes=3.80x
+
+theory-vocabulary coverage (single-token rate):
+  tcm_nature        5/ 5 = 1.00
+  tcm_flavour       7/ 7 = 1.00
+  tcm_channel      11/11 = 1.00
+  paozhi           10/11 = 0.91   not single-token: ['煅']
+  seven_relations   1/ 6 = 0.17   not single-token: ['相須', '相使', '相畏', '相殺', '相惡']
+  grades            3/ 3 = 1.00
+  ayurveda_iast     0/ 9 = 0.00   not single-token: ['rasa', 'guṇa', 'guṇa', 'vīrya', 'vipāka', 'doṣa', 'vāta', 'pitta', 'kapha']
+  ayurveda_dev      0/ 8 = 0.00   not single-token: ['रस', 'गुण', 'वीर्य', 'विपाक', 'दोष', 'वात', 'पित्त', 'कफ']
+
+wrote tokenizer/eval_results.json

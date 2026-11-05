@@ -1,0 +1,122 @@
+{
+  "vocab_size": 16384,
+  "target_vocab": 16384,
+  "special_tokens": [
+    "<|pad|>",
+    "<|bos|>",
+    "<|eos|>",
+    "<|system|>",
+    "<|user|>",
+    "<|assistant|>"
+  ],
+  "pre_tokenizer": "Split(\\p{Han}, isolated) + ByteLevel",
+  "train_chunks": 24134,
+  "train_chars": 38242644,
+  "fertility": {
+    "en": {
+      "chars": 449065,
+      "tokens": 124037,
+      "chars_per_token": 3.62,
+      "docs": 300
+    },
+    "la": {
+      "chars": 469647,
+      "tokens": 214737,
+      "chars_per_token": 2.187,
+      "docs": 300
+    },
+    "zh-Hant": {
+      "chars": 530553,
+      "tokens": 407668,
+      "chars_per_token": 1.301,
+      "docs": 300
+    }
+  },
+  "vocab_coverage": {
+    "tcm_nature": {
+      "n": 5,
+      "single_token": [
+        "寒",
+        "熱",
+        "溫",
+        "涼",
+        "平"
+      ],
+      "rate": 1.0
+    },
+    "tcm_flavour": {
+      "n": 7,
+      "single_token": [
+        "辛",
+        "甘",
+        "酸",
+        "苦",
+        "鹹",
+        "淡",
+        "澀"
+      ],
+      "rate": 1.0
+    },
+    "tcm_channel": {
+      "n": 11,
+      "single_token": [
+        "肝",
+        "心",
+        "脾",
+        "肺",
+        "腎",
+        "膽",
+        "胃",
+        "大腸",
+        "小腸",
+        "膀胱",
+        "三焦"
+      ],
+      "rate": 1.0
+    },
+    "paozhi": {
+      "n": 11,
+      "single_token": [
+        "炮",
+        "煨",
+        "淬",
+        "蒸",
+        "煮",
+        "炒",
+        "炙",
+        "飛",
+        "伏",
+        "製"
+      ],
+      "rate": 0.909
+    },
+    "seven_relations": {
+      "n": 7,
+      "single_token": [
+        "相反"
+      ],
+      "rate": 0.143
+    },
+    "grades": {
+      "n": 3,
+      "single_token": [
+        "上品",
+        "中品",
+        "下品"
+      ],
+      "rate": 1.0
+    },
+    "ayurveda_iast": {
+      "n": 8,
+      "single_token": [],
+      "rate": 0.0
+    },
+    "ayurveda_dev": {
+      "n": 6,
+      "single_token": [],
+      "rate": 0.0
+    }
+  },
+  "corpus": "corpus/processed/corpus.jsonl",
+  "roundtrip_ok": 50
+}

@@ -1815,6 +1815,44 @@
    "confidence": 0.88,
    "method": "manual",
    "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "烏頭",
+   "lang": "zh-Hant",
+   "readings": [
+    "aconite",
+    "wu tou"
+   ],
+   "modern": "Aconitum carmichaelii",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "wutou"
+  },
+  {
+   "name": "烏頭",
+   "lang": "zh-Hant",
+   "readings": [
+    "aconite"
+   ],
+   "modern": "Aconitum carmichaelii",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "wutou"
+  },
+  {
+   "name": "黑豆",
+   "lang": "zh-Hant",
+   "readings": [
+    "black soybean",
+    "hei dou"
+   ],
+   "modern": "Glycine max",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "heidou"
   }
  ]
 }

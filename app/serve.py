@@ -309,6 +309,27 @@ def load_corpus():
     return _summarise_corpus([], "(missing)", True)
 
 
+ERA_BUCKETS = [
+    ("pre-500 CE", -5000, 500),
+    ("500–1000", 500, 1000),
+    ("1000–1500", 1000, 1500),
+    ("1500–1700", 1500, 1700),
+    ("1700–1900", 1700, 1900),
+    ("1900–present", 1900, 3000),
+]
+
+
+def _eras(years):
+    """Count sources per era bucket. Derived from the registry's `year`, never hand-written."""
+    out = {label: 0 for label, _, _ in ERA_BUCKETS}
+    for y in years:
+        for label, lo, hi in ERA_BUCKETS:
+            if lo <= y < hi:
+                out[label] += 1
+                break
+    return out
+
+
 def _summarise_corpus(rows, source, fixture, built=None, stages=None):
     tiers: dict = {}
     langs: dict = {}
@@ -335,7 +356,228 @@ def _summarise_corpus(rows, source, fixture, built=None, stages=None):
                 stages=stages or [],
                 stats=dict(fetched=len(rows), kept=kept, excluded=excluded, chars=chars or None,
                            tiers=tiers, langs=langs, traditions=traditions, licences=licences,
+                           eras=_eras(years),
                            year_min=min(years) if years else None, year_max=max(years) if years else None))
+
+
+# ---------------------------------------------------------------------------------------------
+# Partial Traditional -> Simplified fold, used ONLY for provenance-integrity comparison.
+#
+# Why this exists: the drug lexicon normalises to Simplified (大黄) while the classical corpus is
+# Traditional (大黃). A naive `drug in quote` test therefore reports a false provenance failure for
+# every candidate whose name contains a variant character — and a false alarm is as damaging as a
+# missed one, because it teaches reviewers to ignore the warning. The table is deliberately partial
+# and documented as such; a miss here yields "unmatched", i.e. it errs toward caution, never toward
+# falsely certifying an attribution.
+# ---------------------------------------------------------------------------------------------
+HAN_FOLD = str.maketrans({
+    "黃": "黄", "蔘": "参", "參": "参", "藥": "药", "當": "当", "歸": "归", "烏": "乌", "龍": "龙",
+    "馬": "马", "門": "门", "貝": "贝", "葉": "叶", "蘇": "苏", "藍": "蓝", "蘆": "芦", "薟": "莶",
+    "蓋": "盖", "蔞": "蒌", "蘞": "蔹", "朮": "术", "腎": "肾", "膽": "胆", "腸": "肠", "絡": "络",
+    "經": "经", "脈": "脉", "梔": "栀", "翹": "翘", "銀": "银", "連": "连", "陳": "陈", "薑": "姜",
+    "荊": "荆", "風": "风", "濕": "湿", "熱": "热", "溫": "温", "涼": "凉", "鹹": "咸", "澀": "涩",
+    "耆": "芪", "黨": "党", "頭": "头", "豬": "猪", "朮": "术", "蘗": "蘖", "蘚": "藓", "薑": "姜",
+    "龜": "龟", "鼈": "鳖", "鱉": "鳖", "魚": "鱼", "鳥": "鸟", "鳳": "凤", "鶴": "鹤", "雞": "鸡",
+    "麥": "麦", "黍": "黍", "鹽": "盐", "鐵": "铁", "銅": "铜", "錫": "锡", "鉛": "铅", "鋅": "锌",
+    "礦": "矿", "礦": "矿", "礞": "礞", "鹼": "碱", "鹻": "碱", "釀": "酿", "醱": "酦", "麴": "曲",
+    "幾": "几", "後": "后", "發": "发", "為": "为", "與": "与", "無": "无", "醫": "医", "癥": "症",
+    "瘕": "瘕", "積": "积", "聚": "聚", "飲": "饮", "蕩": "荡", "滌": "涤", "穀": "谷", "調": "调",
+    "氣": "气", "臟": "脏", "腑": "腑", "竅": "窍", "癰": "痈", "腫": "肿", "瘍": "疡", "瘡": "疮",
+})
+
+
+def han_fold(text: str) -> str:
+    """Fold Traditional Han to Simplified for comparison only; never for display."""
+    return str(text or "").translate(HAN_FOLD)
+
+
+def provenance_integrity(drug_cjk: str, text: str):
+    """Does the quoted span actually mention the drug it is attributed to? Script-variant tolerant."""
+    if not text:
+        return "absent", "no classical line attached"
+    if not drug_cjk:
+        return "unknown", "lead drug name not resolvable in script form"
+    if drug_cjk in text:
+        return "ok", ""
+    if han_fold(drug_cjk) in han_fold(text):
+        return "ok", f"matched after Traditional/Simplified folding ({drug_cjk})"
+    return "unmatched", (f"the quoted span does not mention {drug_cjk}. The attribution is unverified and "
+                         "is shown as a warning, not as evidence.")
+
+
+def load_candidates():
+    """artifacts/drug_candidates.json is the real artefact (brief §11.4); the fixture twin lives in app/data.
+
+    Two schemas are accepted: the rich producer schema (`lead`, `candidate_molecule`, `descriptors`,
+    `evidence`, `falsification`, `uncertainty`) and the flattened schema documented in the request. Every
+    field is read defensively, because this file is produced by another module and may evolve.
+
+    One non-negotiable check happens here: **provenance integrity**. If a classical line is attached to a
+    candidate but that line does not mention the drug it is attributed to, we mark it `unmatched` and the UI
+    renders a visible warning instead of presenting a misattributed quotation as evidence.
+    """
+    real = os.path.join(ROOT, "artifacts", "drug_candidates.json")
+    d = _read_json(real)
+    source, fixture = "artifacts/drug_candidates.json", False
+    if not (isinstance(d, dict) and isinstance(d.get("candidates"), list) and d["candidates"]):
+        d = _read_json(os.path.join(DATA_DIR, "drug_candidates.json"))
+        source, fixture = "app/data/drug_candidates.json", True
+    if not (isinstance(d, dict) and isinstance(d.get("candidates"), list)):
+        return dict(candidates=[], fixture=True, source="(missing)", counts={})
+
+    cands = []
+    for i, c in enumerate(d["candidates"]):
+        if not isinstance(c, dict):
+            continue
+        lead = c.get("classical_lead") or {}
+        rich_lead = c.get("lead") or {}
+        tcm = ((rich_lead.get("asian_properties") or {}).get("tcm") or {})
+        desc = c.get("descriptors") or {}
+        nov = c.get("novelty") or {}
+        unc = c.get("uncertainty") or {}
+        fal = c.get("falsification") or {}
+
+        drug_cjk = tcm.get("drug_name") or ""
+        drug_display = drug_cjk or lead.get("drug") or rich_lead.get("drug") or "—"
+        formula = c.get("formula") or desc.get("formula")
+        mw = c.get("mw") if isinstance(c.get("mw"), (int, float)) else desc.get("mw")
+        smiles = c.get("smiles") or desc.get("smiles") or None
+
+        # --- provenance integrity -----------------------------------------------------------
+        line = c.get("classical_line") or {}
+        text = (line.get("text") or "").strip()
+        integrity, integrity_note = provenance_integrity(drug_cjk, text)
+
+        # --- descriptors / drug-likeness ----------------------------------------------------
+        ro5 = dict(
+            mw=dict(value=mw, threshold=500, pass_=(mw < 500) if isinstance(mw, (int, float)) else None),
+            logp=dict(value=desc.get("logp_estimate"), threshold=5, pass_=None),
+            hbd=dict(value=desc.get("hbd"), threshold=5, pass_=None),
+            hba=dict(value=desc.get("hba"), threshold=10, pass_=None),
+        )
+        for k, v in (("logp", desc.get("logp_estimate")), ("hbd", desc.get("hbd")), ("hba", desc.get("hba"))):
+            if isinstance(v, (int, float)):
+                ro5[k]["pass_"] = v <= ro5[k]["threshold"]
+        evaluated = sum(1 for v in ro5.values() if v["pass_"] is not None)
+        lipinski = dict(rule_of_five=ro5, evaluated=evaluated, total=4,
+                        overall=desc.get("lipinski_pass"), violations=desc.get("lipinski_violations"),
+                        veber=desc.get("veber_pass"), tpsa=desc.get("tpsa"),
+                        rings=desc.get("rings"), rotatable=desc.get("rotatable_bonds"),
+                        sa_score=desc.get("sa_score_heuristic"), flags=desc.get("flags") or {},
+                        note=("Descriptors computed by shennong.chem from the resolved structure."
+                              if desc else "No structure resolved: molecular weight only, where a formula exists."))
+
+        # --- evidence -> provenance list ----------------------------------------------------
+        prov = c.get("provenance") or []
+        if not prov:
+            for e in (c.get("evidence") or []):
+                if not isinstance(e, dict):
+                    continue
+                prov.append(dict(source_id=e.get("source_id"), title=e.get("title"),
+                                 title_en=e.get("title_en") or e.get("title"), author=e.get("author") or "",
+                                 year=e.get("year"), tier=e.get("tier"), licence=e.get("licence") or "",
+                                 span=e.get("quote") or e.get("span") or "",
+                                 span_kind=e.get("span_kind") or "quote",
+                                 locator=e.get("locator") or "",
+                                 confidence=e.get("confidence")))
+
+        dev = []
+        for x in (c.get("development_path") or []):
+            if isinstance(x, str):
+                dev.append(dict(step=x, kind=""))
+            elif isinstance(x, dict):
+                dev.append(dict(step=x.get("kind") or x.get("step") or "", kind=x.get("step") if x.get("kind") else ""))
+
+        falsification = c.get("falsification_plan") or ""
+        if not falsification and fal:
+            bits = []
+            if fal.get("experiment"):
+                bits.append(str(fal["experiment"]))
+            if fal.get("kill_criteria"):
+                bits.append(f"Kill criteria: {fal['kill_criteria']}")
+            if fal.get("expected_if_true"):
+                bits.append(f"If true: {fal['expected_if_true']}")
+            falsification = " ".join(bits)
+
+        uncertainty = c.get("uncertainty")
+        if not isinstance(uncertainty, str):
+            parts = []
+            ci = unc.get("composite_ci")
+            if isinstance(ci, list) and len(ci) == 2:
+                parts.append(f"95% CI on the composite: [{ci[0]:.3f}, {ci[1]:.3f}].")
+            for drv in (unc.get("drivers") or [])[:3]:
+                parts.append(str(drv).rstrip(".") + ".")
+            uncertainty = " ".join(parts)
+
+        cands.append(dict(
+            id=c.get("id") or f"C-{i + 1:04d}",
+            rank=c.get("rank") or i + 1,
+            name=c.get("name") or (c.get("candidate_molecule") or {}).get("name") or "(unnamed)",
+            name_cn=c.get("name_cn") or "",
+            discovery_class=c.get("discovery_class") or c.get("class") or "unclassified",
+            classical_lead=dict(
+                drug=drug_display,
+                drug_modern=lead.get("drug") or rich_lead.get("drug_modern") or "",
+                drug_en=lead.get("drug_en") or rich_lead.get("drug_modern") or "",
+                part=lead.get("part") or rich_lead.get("part") or "",
+                processing=lead.get("processing") or rich_lead.get("process") or "",
+                formula_role=lead.get("formula_role") or rich_lead.get("formula_role") or "",
+                indication=rich_lead.get("indication") or "",
+                source=lead.get("source") or "",
+            ),
+            formula=formula, mw=mw, smiles=smiles,
+            structure_status=c.get("structure_status") or (c.get("candidate_molecule") or {}).get("structure_status")
+                             or ("resolved" if smiles else "pending"),
+            structure_note=c.get("structure_note") or (c.get("candidate_molecule") or {}).get("resolution_method") or "",
+            theory=dict(nature=theory_get(c, "nature"), flavors=theory_get(c, "flavors") or [],
+                        channels=theory_get(c, "channels") or [], direction=theory_get(c, "direction") or "",
+                        grade=theory_get(c, "grade") or "", rasa=theory_get(c, "rasa") or [],
+                        virya=theory_get(c, "virya") or ""),
+            mechanism=c.get("mechanism") or {},
+            novelty=dict(score=float(nov.get("score") or (c.get("scores") or {}).get("novelty") or 0.0),
+                         basis=nov.get("method") or nov.get("basis") or "",
+                         prior_art=nov.get("prior_art") or ""),
+            scores=c.get("scores") or {},
+            theory_justification=c.get("theory_justification") or c.get("asian_theory_justification") or "",
+            development_path=dev,
+            residual_risk=c.get("residual_risk") or [],
+            safety=c.get("safety") or {"flags": [], "severity": "none"},
+            status=c.get("status") or "lead",
+            classical_line=dict(
+                source=line.get("source") or "", year=line.get("year"),
+                locator=line.get("locator") or "", text=text,
+                translation=line.get("translation") or "",
+                span_kind=line.get("span_kind") or "",
+                integrity=integrity, integrity_note=integrity_note),
+            druglikeness=lipinski,
+            provenance=prov,
+            falsification_plan=falsification,
+            uncertainty=uncertainty or "",
+            raw_class=c.get("class") or "",
+        ))
+
+    cands.sort(key=lambda x: (-x["novelty"]["score"], x["rank"]))
+    by_status: dict = {}
+    for c in cands:
+        by_status[c["status"]] = by_status.get(c["status"], 0) + 1
+    unmatched = sum(1 for c in cands if c["classical_line"]["integrity"] == "unmatched")
+    return dict(candidates=cands, fixture=bool(d.get("fixture")) if fixture else False,
+                source=source, generated_at=d.get("generated_at"), note=d.get("note"),
+                method=d.get("method"), diagnostics=d.get("diagnostics"),
+                counts=dict(total=len(cands),
+                            resolved=sum(1 for c in cands if c["smiles"]),
+                            by_status=by_status,
+                            unmatched_lines=unmatched,
+                            mean_novelty=round(sum(c["novelty"]["score"] for c in cands) / max(len(cands), 1), 3)))
+
+
+def theory_get(c, key):
+    """Theory vector may be at `theory` (flat) or `lead.asian_properties.tcm` (rich producer schema)."""
+    t = c.get("theory") or {}
+    if t.get(key) not in (None, "", []):
+        return t.get(key)
+    tcm = (((c.get("lead") or {}).get("asian_properties") or {}).get("tcm") or {})
+    return tcm.get(key) if tcm.get(key) not in (None, "", []) else t.get(key)
 
 
 def load_eval():
@@ -344,10 +586,14 @@ def load_eval():
     if isinstance(d, dict) and d.get("benchmarks") is not None:
         return dict(report=d, fixture=False, source="eval/report.json",
                     generated_at=d.get("generated_at"))
-    # No measured evaluation yet. Show the panel's structure with an explicit empty state rather
-    # than inventing benchmark numbers — the negative controls are the whole point of that panel.
-    return dict(report=None, fixture=True, source="(no eval/report.json)",
-                awaiting="python -m shennong.cli report --out eval/report.json")
+    # No measured evaluation yet. Use the clearly-labelled fixture twin so the panel's structure is
+    # visible — every value in it is chipped DEMO FIXTURE in the UI, and the banner says so too.
+    fx = _read_json(os.path.join(DATA_DIR, "eval_fixture.json"))
+    if isinstance(fx, dict) and fx.get("fixture"):
+        return dict(report=fx, fixture=True, source="app/data/eval_fixture.json",
+                    generated_at=fx.get("generated_at"),
+                    awaiting="python -m shennong.cli report --out eval/report.json")
+    return dict(report=None, fixture=True, source="(no eval/report.json)", awaiting=None)
 
 
 def load_metrics():
@@ -705,11 +951,16 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json(load_hypotheses())
             if path == "/api/kg":
                 return self._json(load_kg())
+            if path == "/api/candidates":
+                return self._json(load_candidates())
             if path == "/api/corpus":
                 return self._json(load_corpus())
             if path == "/api/methodology":
+                cand = load_candidates()
                 return self._json(dict(eval=load_eval(), metrics=load_metrics(),
-                                       pipeline=self._pipeline(), hypotheses=load_hypotheses()["counts"]))
+                                       pipeline=self._pipeline(),
+                                       hypotheses=load_hypotheses()["counts"],
+                                       candidates=cand["counts"]))
             if path == "/api/ask":
                 return self._json(ask((q.get("q") or [""])[0]))
             return self._err(404, f"no route {path}")
@@ -772,9 +1023,14 @@ class Handler(BaseHTTPRequestHandler):
         m = load_metrics()
         k = load_kg()
         p = load_passages()
+        cand = load_candidates()
         status = [
             dict(key="hypotheses", label="Hypotheses (使 Shǐ)", fixture=h["fixture"], source=h["source"],
                  detail=f"{h['counts'].get('total', 0)} ranked · {h['counts'].get('classes', 0)} classes"),
+            dict(key="candidates", label="Drug candidates (使 Shǐ)", fixture=cand["fixture"],
+                 source=cand["source"],
+                 detail=f"{cand['counts'].get('total', 0)} candidates · "
+                        f"{cand['counts'].get('resolved', 0)} with resolved structures"),
             dict(key="kg", label="Knowledge graph (配 Pèi)", fixture=k["fixture"], source=k["source"],
                  detail=f"{len(k['nodes'])} nodes · {len(k['edges'])} edges"),
             dict(key="passages", label="Passage index (采 Cǎi)", fixture=p["fixture"], source=p["source"],
@@ -782,7 +1038,8 @@ class Handler(BaseHTTPRequestHandler):
             dict(key="corpus", label="Corpus ledger", fixture=c["fixture"], source=c["source"],
                  detail=f"{c['stats']['kept']} sources kept · {c['stats']['excluded']} excluded"),
             dict(key="eval", label="Evaluation (使 Shǐ)", fixture=e["fixture"], source=e["source"],
-                 detail="negative controls + benchmarks" if not e["fixture"] else "awaiting eval/report.json"),
+                 detail=("negative controls + benchmarks" if not e["fixture"]
+                         else "DEMO FIXTURE twin — awaiting eval/report.json")),
             dict(key="metrics", label="Training run", fixture=m["fixture"], source=m["source"],
                  detail="loss curve available" if not m["fixture"] else "awaiting training runs"),
         ]
@@ -817,13 +1074,18 @@ def build_report():
     m = load_metrics()
     k = load_kg()
     p = load_passages()
+    cand = load_candidates()
     rows = [
+        ("candidates", cand["source"], cand["fixture"],
+         f"{cand['counts'].get('total', 0)} candidates"),
         ("hypotheses", h["source"], h["fixture"], f"{h['counts'].get('total', 0)} ranked"),
         ("kg", k["source"], k["fixture"], f"{len(k['nodes'])} nodes / {len(k['edges'])} edges"),
         ("passages", p["source"], p["fixture"], f"{len(p['passages'])} passages"),
         ("corpus", c["source"], c["fixture"], f"{c['stats']['kept']} kept / {c['stats']['excluded']} excluded"),
-        ("eval", e["source"], e["fixture"], "loaded" if not e["fixture"] else "absent — panel shows empty state"),
-        ("metrics", m["source"], m["fixture"], "loaded" if not m["fixture"] else "absent — no fabricated curve"),
+        ("eval", e["source"], e["fixture"],
+         "loaded" if not e["fixture"] else "DEMO FIXTURE twin"),
+        ("metrics", m["source"], m["fixture"],
+         "loaded" if not m["fixture"] else "absent — no fabricated curve"),
     ]
     return rows
 

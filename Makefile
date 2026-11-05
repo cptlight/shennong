@@ -20,7 +20,7 @@ tokenizer:  ## train the multilingual (zh-Hant / sa / en) BPE
 	$(PY) tokenizer/train_tokenizer.py --corpus corpus/processed/corpus.jsonl --vocab 24000
 
 train-mini:  ## train shennong-mini from scratch on CPU (real run, real logs)
-	$(PY) training/train_pretrain.py --config model/configs/mini.json
+	$(PY) training/train_pretrain.py --config model/configs/shennong-mini-cpu.json
 
 export:  ## export GGUF (< 1 GB) + sha256
 	$(PY) training/merge_quantize.py --export-gguf
@@ -36,6 +36,10 @@ app-data:  ## materialise the Workbench data files from the pipeline
 workbench:  ## serve the local Workbench (stdlib only)
 	$(PY) app/serve.py
 
+train-flagship:  ## FREE GPU (Colab/Kaggle): domain CPT + SFT of Qwen2.5-0.5B -> <1 GB GGUF
+	$(PY) training/flagship/train_flagship.py --stage both
+	bash training/flagship/export_gguf.sh
+
 test:  ## unit + behavioural tests
 	$(PY) -m pytest
 
@@ -44,4 +48,4 @@ all: corpus tokenizer train-mini export eval app-data  ## full pipeline
 clean:  ## remove caches (keeps corpus and checkpoints)
 	find . -name __pycache__ -type d -prune -exec rm -rf {} + ; rm -rf .pytest_cache
 
-.PHONY: help setup corpus tokenizer train-mini export eval app-data workbench test all clean
+.PHONY: help setup corpus tokenizer train-mini train-flagship export eval app-data workbench test all clean

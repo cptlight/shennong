@@ -30,7 +30,7 @@ function badge(el, fixture, label, source) {
 }
 
 /* ---------------------------------------------------------------- tabs */
-const TABS = ['hypotheses', 'graph', 'ask', 'corpus', 'method'];
+const TABS = ['candidates', 'hypotheses', 'graph', 'ask', 'corpus', 'method'];
 
 function selectTab(name, focus = false) {
   TABS.forEach((t) => {
@@ -105,6 +105,208 @@ async function loadMeta() {
       `<code>make eval</code>) then reload to see measured output.`;
     $('#main').prepend(banner);
   }
+}
+
+
+/* ================================================================= CANDIDATES */
+function theoryChips(t) {
+  const out = [];
+  if (t.nature) out.push(`<span class="tv-nature">${esc(t.nature)}</span>`);
+  (t.flavors || []).forEach((f) => out.push(`<span class="tv-flavor">${esc(f)}</span>`));
+  if ((t.channels || []).length) out.push(`<span class="tv-channel">歸${esc(t.channels.join('·'))}</span>`);
+  if (t.direction) out.push(`<span>${esc(t.direction)}</span>`);
+  if (t.grade) out.push(`<span class="tv-grade">${esc(t.grade)}</span>`);
+  if (t.rasa) out.push(`<span class="tv-flavor">rasa ${esc(t.rasa)}</span>`);
+  if (t.virya) out.push(`<span class="tv-flavor">vīrya ${esc(t.virya)}</span>`);
+  return out.length ? `<div class="tv">${out.join('')}</div>` : '<span class="muted">—</span>';
+}
+
+function candCard(c) {
+  const sev = (c.safety && c.safety.severity) || 'none';
+  const lead = c.classical_lead || {};
+  const mech = c.mechanism || {};
+  const d = c.development_path || [];
+  const risk = c.residual_risk || [];
+  const smi = c.smiles;
+  const cl = c.classical_line || {};
+  const dl = c.druglikeness || {};
+  const ro5 = dl.rule_of_five || {};
+  const ruleRow = (k, label, threshold, unit) => {
+    const r = ro5[k] || {};
+    const v = r.value;
+    const pass = r.pass_;
+    return `<tr><td>${esc(label)}</td>
+      <td class="num">${v === null || v === undefined ? '—' : Number(v).toFixed(2)}</td>
+      <td class="num am">${esc(threshold)}${unit || ''}</td>
+      <td>${pass === true ? '<span class="badge badge-sev-none">pass</span>'
+            : pass === false ? '<span class="badge badge-sev-high">fail</span>'
+            : '<span class="badge">pending structure</span>'}</td></tr>`;
+  };
+  const extraRows = [
+    ['TPSA', dl.tpsa, 140, ' Å²'], ['rings', dl.rings, null, ''],
+    ['rotatable bonds', dl.rotatable, 10, ''],
+  ].filter(([, v]) => v !== null && v !== undefined).map(([label, v, th, u]) => `
+    <tr><td>${esc(label)}</td><td class="num">${Number(v).toFixed(2)}</td>
+      <td class="num am">${th === null ? '' : esc(th) + esc(u)}</td>
+      <td>${th === null ? '' : (v <= th ? '<span class="badge badge-sev-none">within Veber</span>'
+                                  : '<span class="badge badge-sev-caution">above Veber</span>')}</td></tr>`).join('');
+  const overall = dl.overall;
+  const evaluated = dl.evaluated ?? 0;
+  return `<details class="cand" data-id="${esc(c.id)}" data-status="${esc(c.status)}">
+    <summary>
+      <span class="c-rank" data-k="rank">${c.rank}</span>
+      <span class="c-name" data-k="candidate"${langAttr(c.name_cn)}>${esc(c.name)}
+        ${c.name_cn ? `<em>${esc(c.name_cn)}</em>` : ''}</span>
+      <span class="c-lead" data-k="classical lead"${langAttr(lead.drug)}>
+        <b>${esc(lead.drug || '—')}</b>
+        <span>${esc(lead.drug_en || '')}</span>
+        <span>${esc(lead.formula_role || '')}</span></span>
+      <span data-k="theory vector">${theoryChips(c.theory)}</span>
+      <span class="c-mech" data-k="mechanism">${esc(mech.target_class || '—')}</span>
+      <span class="c-mw" data-k="MW / formula">${c.mw ? c.mw.toFixed(1) : '—'}<small>${esc(c.formula || '—')}</small></span>
+      <span class="c-nov" data-k="novelty">
+        <span class="bar bar-novelty" role="img" aria-label="novelty ${c.novelty.score.toFixed(2)}">
+          <i style="width:${Math.max(2, Math.round(c.novelty.score * 100))}%"></i></span>
+        <b>${c.novelty.score.toFixed(2)}</b></span>
+      <span data-k="status"><span class="badge badge-sev-${esc(sev)}">${esc(c.status)}</span></span>
+    </summary>
+    <div class="cand-body">
+      ${cl && cl.text ? `<figure class="classical ${cl.integrity === 'unmatched' ? 'classical-bad' : ''}">
+        ${cl.integrity === 'unmatched'
+          ? `<div class="prov-warn"><strong>Provenance check failed.</strong> ${esc(cl.integrity_note)}
+               The span below is <em>not</em> evidence for this candidate and must not be cited as such.</div>`
+          : ''}
+        <blockquote lang="zh-Hant">${esc(cl.text)}</blockquote>
+        <figcaption>
+          <span class="cl-src">${esc(cl.source || '')}${cl.locator ? ' · ' + esc(cl.locator) : ''}</span>
+          ${cl.year ? `<span class="badge">${esc(cl.year)} CE</span>` : ''}
+          ${cl.span_kind ? `<span class="badge">${esc(cl.span_kind)}</span>` : ''}
+          <span class="badge ${cl.integrity === 'ok' ? 'badge-sev-none' : cl.integrity === 'unmatched' ? 'badge-sev-high' : ''}">
+            provenance: ${esc(cl.integrity || 'unknown')}</span>
+          ${cl.translation ? `<p class="cl-tr">${esc(cl.translation)}</p>` : ''}
+        </figcaption>
+      </figure>` : ''}
+      <div class="split">
+        <div class="block"><h4>Why the theory predicts this</h4>
+          <p style="margin:0">${esc(c.theory_justification || '—')}</p></div>
+        <div class="block"><h4>Proposed mechanism</h4>
+          <p style="margin:0 0 .35rem"><strong>${esc(mech.target_class || '—')}</strong></p>
+          <p class="muted" style="margin:0;font-size:.82rem">${esc(mech.pathway || '')}</p>
+          ${mech.evidence_level ? `<p style="margin:.4rem 0 0"><span class="badge">evidence: ${esc(mech.evidence_level)}</span></p>` : ''}
+        </div>
+      </div>
+      <div class="block"><h4>Molecule &amp; computed drug-likeness</h4>
+        ${smi
+          ? `<div class="smiles">${esc(smi)}</div>`
+          : `<div class="smiles none">${esc(c.structure_note || 'structure not resolved — left null rather than invented')}</div>`}
+        <p class="muted" style="margin:.4rem 0 .5rem;font-size:.76rem">
+          <span class="badge">${esc(c.structure_status)}</span>
+          ${c.formula ? `<span class="badge">${esc(c.formula)}</span>` : ''}
+          ${c.mw ? `<span class="badge">MW ${c.mw.toFixed(2)} — computed from formula</span>` : ''}
+        </p>
+        <p class="muted" style="margin:.1rem 0 .45rem;font-size:.78rem">
+          <span class="badge ${evaluated === 4 ? (overall === false ? 'badge-sev-high' : 'badge-sev-none') : 'badge-sev-caution'}">
+            ${evaluated} of 4 Lipinski rules evaluated</span>
+          ${overall === true ? '<span class="badge badge-sev-none">passes rule of five</span>' : ''}
+          ${overall === false ? `<span class="badge badge-sev-high">fails ${esc(dl.violations ?? '')} rule(s)</span>` : ''}
+          ${dl.veber === true ? '<span class="badge badge-sev-none">Veber pass</span>' : ''}
+          ${dl.sa_score !== null && dl.sa_score !== undefined ? `<span class="badge">SA heuristic ${esc(dl.sa_score)}</span>` : ''}
+        </p>
+        <div class="wrap-scroll"><table class="data">
+          <thead><tr><th>Lipinski rule of five</th><th class="num">value</th><th class="num">threshold</th><th>verdict</th></tr></thead>
+          <tbody>
+            ${ruleRow('mw', 'molecular weight', 500, ' Da')}
+            ${ruleRow('logp', 'logP', 5, '')}
+            ${ruleRow('hbd', 'H-bond donors', 5, '')}
+            ${ruleRow('hba', 'H-bond acceptors', 10, '')}
+            ${extraRows}
+          </tbody></table></div>
+        <p class="muted" style="font-size:.74rem;margin:.4rem 0 0">${esc(dl.note || '')}</p></div>
+      <div class="split">
+        <div class="block"><h4>Development path</h4>
+          ${d.length ? `<ol class="steps">${d.map((x) => `<li>${esc(typeof x === 'string' ? x : x.step)}
+            ${x && x.kind ? `<span class="badge">${esc(x.kind)}</span>` : ''}</li>`).join('')}</ol>`
+            : '<p class="muted">none recorded</p>'}</div>
+        <div class="block"><h4>Residual risk</h4>
+          ${risk.length ? `<ul class="bullets">${risk.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`
+            : '<p class="muted">none recorded</p>'}</div>
+      </div>
+      ${Array.isArray(c.safety.flags) && c.safety.flags.length
+        ? `<div class="block block-safety"><h4>Safety annotations (severity: ${esc(sev)})</h4>
+             <ul>${c.safety.flags.map((f) => `<li>${esc(f)}</li>`).join('')}</ul></div>` : ''}
+      ${c.falsification_plan ? `<div class="block block-falsify"><h4>Falsification plan — the assay that would kill it</h4>
+        <p style="margin:0">${esc(c.falsification_plan)}</p></div>` : ''}
+      ${c.uncertainty ? `<div class="block block-uncertainty"><h4>Uncertainty</h4>
+        <p style="margin:0">${esc(c.uncertainty)}</p></div>` : ''}
+      ${(c.provenance && c.provenance.length) ? `<div class="block"><h4>Evidence spans</h4>
+        ${provenanceHTML(c.provenance)}</div>` : ''}
+      <div class="block"><h4>Novelty claim</h4>
+        <p style="margin:0">${esc(c.novelty.basis || '—')}</p>
+        ${c.novelty.prior_art ? `<p class="muted" style="margin:.3rem 0 0;font-size:.78rem">prior art: ${esc(c.novelty.prior_art)}</p>` : ''}
+      </div>
+    </div>
+  </details>`;
+}
+
+function applyCandFilters() {
+  if (!STATE.cands) return;
+  const sortBy = $('#cand-sort').value;
+  const status = $('#cand-status').value;
+  const q = $('#cand-search').value.trim().toLowerCase();
+  const list = [...STATE.cands.candidates].sort((a, b) => {
+    if (sortBy === 'mw') return (b.mw || 0) - (a.mw || 0);
+    if (sortBy === 'name') return a.name.localeCompare(b.name);
+    if (sortBy === 'rank') return a.rank - b.rank;
+    return b.novelty.score - a.novelty.score;
+  });
+  const shown = list.filter((c) => {
+    if (status && c.status !== status) return false;
+    if (!q) return true;
+    const lead = c.classical_lead || {};
+    const hay = [c.name, c.name_cn, c.formula, c.theory_justification, (c.mechanism || {}).target_class,
+                 lead.drug, lead.drug_en, lead.formula_role, (c.theory.flavors || []).join('')].join(' ').toLowerCase();
+    return hay.includes(q);
+  });
+  const warn = (STATE.cands.counts && STATE.cands.counts.unmatched_lines)
+    ? `<div class="banner banner-warn" role="note">
+         <strong>${STATE.cands.counts.unmatched_lines} of ${STATE.cands.counts.total} candidates fail the
+         provenance check.</strong>
+         The classical line attached to each of those candidates does not contain the drug name it is attributed
+         to, so it is shown as <em>unverified</em> rather than as evidence. This is an extraction bug in the
+         span locator, surfaced on purpose: an attribution you cannot check is worse than no attribution.
+       </div>` : '';
+  $('#cand-list').innerHTML = warn + (shown.length ? shown.map(candCard).join('')
+    : `<div class="empty"><strong>No candidate matches.</strong> Widen the search or clear the status filter.</div>`);
+}
+
+async function loadCandidates() {
+  const d = await api('/api/candidates');
+  STATE.cands = d;
+  badge($('#cand-badge'), d.fixture, d.source, d.source);
+  const c = d.counts || {};
+  $('#cand-summary').innerHTML = `<div class="stat-grid">
+    <div class="stat"><div class="stat-v">${fmt(c.total)}</div><div class="stat-k">candidates</div>
+      <div class="stat-sub">lead → molecule → development path</div></div>
+    <div class="stat"><div class="stat-v">${fmt(c.resolved)}</div><div class="stat-k">structures resolved</div>
+      <div class="stat-sub">null where unresolved, never invented</div></div>
+    <div class="stat"><div class="stat-v">${(c.mean_novelty ?? 0).toFixed(2)}</div><div class="stat-k">mean novelty</div>
+      <div class="stat-sub">vs modern literature</div></div>
+    <div class="stat" style="border-top-color:${(c.unmatched_lines || 0) ? 'var(--cinnabar)' : 'var(--verdigris)'}">
+      <div class="stat-v" style="color:${(c.unmatched_lines || 0) ? 'var(--cinnabar-d)' : 'inherit'}">${fmt(c.unmatched_lines || 0)}</div>
+      <div class="stat-k">provenance failures</div>
+      <div class="stat-sub">quoted lines that do not name their drug</div></div>
+    <div class="stat"><div class="stat-v">${Object.keys(c.by_status || {}).length}</div><div class="stat-k">status classes</div>
+      <div class="stat-sub">${esc(Object.entries(c.by_status || {}).map(([k, v]) => `${k} ${v}`).join(' · '))}</div></div>
+  </div>`;
+  const sel = $('#cand-status');
+  sel.innerHTML = '<option value="">all</option>' + Object.entries(c.by_status || {})
+    .map(([k, n]) => `<option value="${esc(k)}">${esc(k)} (${n})</option>`).join('');
+  applyCandFilters();
+}
+
+function initCandidateControls() {
+  ['cand-sort', 'cand-status', 'cand-search'].forEach((id) =>
+    $('#' + id).addEventListener('input', applyCandFilters));
 }
 
 /* ================================================================= HYPOTHESES */
@@ -690,6 +892,12 @@ function renderCorpus(d) {
         <div class="tier-v">${n}</div>
         <div class="tier-d">${esc(TIER_NAMES[t] || '')}</div></div>`).join('')}</div></div>`;
 
+  const eras = Object.entries(s.eras || {});
+  const eraBlock = eras.length ? `<div class="card"><h3>Sources by era</h3>
+    <p class="sub">Computed from the registry's <code>year</code> field — the span of the record the model reads,
+      not an estimate.</p>
+    ${hbars(eras, s.kept)}</div>` : '';
+
   const licenceBlock = `<div class="card"><h3>Licence posture</h3>
     <p class="sub">Anything whose licence is not verifiable is marked <span class="lic lic-unv">UNVERIFIED</span>,
     excluded from training and cited only. Nothing restricted is redistributed.</p>
@@ -718,7 +926,7 @@ function renderCorpus(d) {
     </tr>`;
   }).join('');
 
-  $('#corpus-body').innerHTML = stats + tierBlock + tradBlock + licenceBlock + `
+  $('#corpus-body').innerHTML = stats + tierBlock + eraBlock + tradBlock + licenceBlock + `
     ${stagesHTML(d.stages)}
     <div class="card"><h3>Source ledger</h3>
       <p class="sub">${d.sources.length} entries. Every row is one registry record with provenance, licence and tier.</p>
@@ -803,7 +1011,55 @@ function evalBlock(ev, hypCounts) {
       <p>${esc(blurb)}</p></div>`;
   };
 
-  return `
+
+  const dd = r.drug_discovery || {};
+  const tp = dd.theory_predictivity || {};
+  const theoryCards = Object.entries(tp).map(([key, v]) => {
+    const metric = (v.metric || '').toLowerCase();
+    const val = typeof v.value === 'number' ? v.value : null;
+    const p = typeof v.p === 'number' ? v.p : null;
+    const above = val !== null && (metric === 'auc' ? val > 0.55 : Math.abs(val) > 0.1);
+    const sig = p !== null && p < 0.05;
+    const strong = above && sig;
+    const cls = strong ? 'is-strong' : 'is-null';
+    const verdict = strong ? 'predicts above chance' : (above ? 'trend, not significant' : 'no predictive signal');
+    return `<div class="theory ${cls}">
+      <div class="k" style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">
+        ${esc(key)}${v.fixture ? ' · <span style="color:var(--cinnabar-d);font-weight:700">DEMO FIXTURE</span>' : ''}</div>
+      <div class="tv-big">${val === null ? '—' : val.toFixed(3)}
+        <span style="font-size:.62rem;font-weight:400;color:var(--muted)">${esc(metric)}</span></div>
+      <div class="verdict" style="color:${strong ? 'var(--verdigris)' : 'var(--brass)'}">${verdict}</div>
+      <div class="tv-hyp">${esc(v.hypothesis || '')}</div>
+      <div class="tv-meta">n = ${esc(v.n ?? '—')} · p = ${p === null ? '—' : p.toFixed(3)} · vs permutation null</div>
+    </div>`;
+  }).join('');
+
+  const ddCard = dd && Object.keys(dd).length && !dd.theory_predictivity ? '' : '';
+  void ddCard;
+
+  const discoveryCard = `<div class="card"><h3>Drug discovery output</h3>
+    <p class="sub">The terminal artefact of the pipeline (brief §11.4–11.5): candidates, not answers.</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-v">${fmt(dd.candidates ?? '—')}</div><div class="stat-k">candidates</div>
+        <div class="stat-sub">ranked leads with development paths</div></div>
+      <div class="stat"><div class="stat-v">${typeof dd.mean_novelty === 'number' ? dd.mean_novelty.toFixed(2) : '—'}</div>
+        <div class="stat-k">mean novelty</div><div class="stat-sub">against modern chemistry</div></div>
+      <div class="stat"><div class="stat-v">${typeof dd.lipinski_pass_rate === 'number' ? pct(dd.lipinski_pass_rate) : '—'}</div>
+        <div class="stat-k">Lipinski pass rate</div><div class="stat-sub">computed descriptors where structures resolve</div></div>
+    </div>
+    ${dd.note ? `<p class="muted" style="font-size:.78rem;margin:.6rem 0 0">${esc(dd.note)}</p>` : ''}
+  </div>`;
+
+  const theoryCard = theoryCards ? `<div class="card"><h3>The central experiment — does Asian theory predict chemistry?</h3>
+    <p class="sub">Asian property vectors (四氣五味, 歸經, rasa/guṇa/vīrya/vipāka) are used as a feature vector and
+      tested against measured molecular and target properties, with a permutation null. A positive result is the
+      headline finding. A null is an honest, publishable negative — either way it is reported with numbers.</p>
+    <div class="theory-grid">${theoryCards}</div>
+    <p class="muted" style="font-size:.78rem;margin:.7rem 0 0">Method, thresholds and the permutation procedure are
+      published in <code>docs/EVALUATION.md</code>; the null distribution is recomputed on every run.</p>
+  </div>` : '';
+
+  return `${theoryCard}${discoveryCard}
     <div class="card"><h3>Benchmarks</h3>
       <p class="sub">Generated ${esc(r.generated_at || 'unknown')} · source <code>${esc(ev.source)}</code></p>
       ${benches.length ? `<div class="wrap-scroll"><table class="data">
@@ -902,11 +1158,13 @@ async function loadMethod() {
 /* ================================================================= boot */
 (async function boot() {
   initTabs();
+  initCandidateControls();
   initHypothesisControls();
   initNodeSearch();
   initAsk();
 
   try { await loadMeta(); } catch (e) { console.error(e); }
+  try { await loadCandidates(); } catch (e) { console.error(e); }
   try { await loadKG(); } catch (e) { console.error(e); }
   try { await loadHypotheses(); } catch (e) { console.error(e); }
   try { await loadCorpus(); } catch (e) { console.error(e); }

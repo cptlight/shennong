@@ -1,0 +1,11 @@
+{
+  "train_tokens": 16687735,
+  "val_tokens": 339639,
+  "train_docs": 23652,
+  "val_docs": 482,
+  "corpus_chars": 38242644,
+  "tokenizer": "/Users/tom/Documents/ETHno/tokenizer/shennong-bpe/tokenizer.json",
+  "corpus": "/Users/tom/Documents/ETHno/corpus/processed/corpus.jsonl",
+  "eos_id": 2,
+  "build_seconds": 21.7
+}

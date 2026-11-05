@@ -148,6 +148,37 @@ SOURCES = [
     dict(id="fx_gbif", title="GBIF taxonomy backbone", title_en="GBIF", author="GBIF Secretariat",
          year=2024, tradition="foundational", lang="en", tier=5, licence="CC-BY-4.0",
          url="https://www.gbif.org/", chars=402_000, status="ok"),
+    # --- §11.2 ancient *science*, technology, agriculture, botany and dietetics ---
+    dict(id="fx_tiangong_kaiwu", title="天工開物", title_en="Tiangong Kaiwu (Exploitation of the Works of Nature)",
+         author="宋應星 Song Yingxing", year=1637, tradition="tcm", lang="zh-Hant", tier=3,
+         licence="Public Domain", url="https://zh.wikisource.org/wiki/天工開物", chars=124_000, status="ok"),
+    dict(id="fx_qimin_yaoshu", title="齊民要術", title_en="Qimin Yaoshu (Essential Techniques for the Peasantry)",
+         author="賈思勰 Jia Sixie", year=544, tradition="tcm", lang="zh-Hant", tier=2,
+         licence="Public Domain", url="https://zh.wikisource.org/wiki/齊民要術", chars=186_000, status="ok"),
+    dict(id="fx_mengxi_bitan", title="夢溪筆談", title_en="Mengxi Bitan (Brush Talks from Dream Brook)",
+         author="沈括 Shen Kuo", year=1088, tradition="tcm", lang="zh-Hant", tier=3,
+         licence="Public Domain", url="https://zh.wikisource.org/wiki/夢溪筆談", chars=142_000, status="ok"),
+    dict(id="fx_jiuhuang_bencao", title="救荒本草", title_en="Jiuhuang Bencao (Famine Relief Materia Medica)",
+         author="朱橚 Zhu Su", year=1406, tradition="tcm", lang="zh-Hant", tier=2,
+         licence="Public Domain", url="https://zh.wikisource.org/wiki/救荒本草", chars=98_000, status="ok"),
+    dict(id="fx_zhiwu_tukao", title="植物名實圖考", title_en="Zhiwu Ming Shi Tukao (Illustrated Study of Plants)",
+         author="吳其濬 Wu Qijun", year=1848, tradition="tcm", lang="zh-Hant", tier=2,
+         licence="Public Domain", url="https://zh.wikisource.org/wiki/植物名實圖考", chars=340_000, status="ok"),
+    dict(id="fx_yinshan_zhengyao", title="飲膳正要", title_en="Yinshan Zhengyao (Principles of Correct Diet)",
+         author="忽思慧 Hu Sihui", year=1330, tradition="tcm", lang="zh-Hant", tier=2,
+         licence="Public Domain", url="https://zh.wikisource.org/wiki/飲膳正要", chars=72_000, status="ok"),
+    dict(id="fx_haiyao_bencao", title="海藥本草", title_en="Haiyao Bencao (Materia Medica of the Seas)",
+         author="李珣 Li Xun", year=900, tradition="tcm", lang="zh-Hant", tier=2,
+         licence="Public Domain", url="https://zh.wikisource.org/wiki/海藥本草", chars=24_000, status="ok"),
+    dict(id="fx_vrksayurveda", title="Vṛkṣāyurveda", title_en="Vṛkṣāyurveda (Ayurvedic plant science)",
+         author="Surapāla", year=1000, tradition="ayurveda", lang="sa", tier=2,
+         licence="Public Domain", url="https://sanskritdocuments.org/", chars=58_000, status="ok"),
+    dict(id="fx_kitab_al_nabat", title="كتاب النبات", title_en="Kitāb al-Nabāt (Book of Plants)",
+         author="al-Dīnawarī", year=870, tradition="unani", lang="ar", tier=2,
+         licence="Public Domain", url="https://archive.org/details/kitabalnabat", chars=210_000, status="ok"),
+    dict(id="fx_arthashastra", title="Arthaśāstra", title_en="Arthaśāstra (materials and poisons chapters)",
+         author="Kauṭilya", year=-300, tradition="ayurveda", lang="sa", tier=3,
+         licence="Public Domain", url="https://sanskritdocuments.org/", chars=96_000, status="ok"),
     dict(id="fx_culpeper_control", title="The Complete Herbal", title_en="Culpeper's Complete Herbal",
          author="Nicholas Culpeper", year=1653, tradition="comparative-control", lang="en", tier=2,
          licence="Public Domain", url="https://www.gutenberg.org/ebooks/49537", chars=1_187_600, status="ok"),
@@ -328,6 +359,43 @@ PASSAGES = [
     ps("fx-powo-002", "fx_powo",
        "Panax notoginseng (Burkill) F.H.Chen — accepted; family Araliaceae. Gynura pseudochina (L.) DC. — accepted; "
        "family Asteraceae; pyrrolizidine alkaloid occurrence recorded.", "verbatim", "taxonomy lookup"),
+    ps("fx-tgkw-001", "fx_tiangong_kaiwu",
+       "凡曲：麥曲、米曲，其法各異。凡釀酒必資曲糵，曲者，酒之骨也。造曲之家，以時日為候，視其色與氣而知其成。",
+       "paraphrase", "卷下·曲糵"),
+    ps("fx-tgkw-002", "fx_tiangong_kaiwu",
+       "凡五金之器，必先範土為模，而後鎔金注之。凡鎔金，先以坩堝盛之，火候既足，金乃流動。",
+       "paraphrase", "卷中·冶鑄"),
+    ps("fx-qmys-001", "fx_qimin_yaoshu",
+       "凡造酒，先治曲，曲成而後用。凡酒之成，視曲之力與水之多寡為節，不可過與不及也。", "paraphrase", "卷七·造神麴"),
+    ps("fx-qmys-002", "fx_qimin_yaoshu",
+       "凡藏果，或蜜漬之，或鹽醃之，或曝而乾之，皆欲去其水而存其性。", "paraphrase", "卷四·藏果"),
+    ps("fx-mxbt-001", "fx_mengxi_bitan",
+       "鄜延境內有石油，舊說高奴縣出脂水，即此也。生於水際，沙石與泉水相雜，惘惘而出，土人以雉尾裛之。",
+       "verbatim", "卷二十四·雜志一"),
+    ps("fx-mxbt-002", "fx_mengxi_bitan",
+       "凡鹽之成，或煮海，或曬鹵，或鑿井而汲其鹵。其色有青、有白、有赤，而味以淡者為上。", "paraphrase", "卷三·辨證"),
+    ps("fx-jhbc-001", "fx_jiuhuang_bencao",
+       "救荒本草所載，皆草野之可食者。凡採之，須識其真；形似而毒者，誤食殺人。故列圖於前，而次以性味。",
+       "paraphrase", "序"),
+    ps("fx-zwtk-001", "fx_zhiwu_tukao",
+       "植物之名，古今異稱，南北異呼。同名而異物者，比比皆是。故以圖寫其形，以實考其名。", "paraphrase", "序"),
+    ps("fx-yszy-001", "fx_yinshan_zhengyao",
+       "凡飲食之味，酸者收，苦者堅，甘者緩，辛者散，鹹者軟。五味各有所入，調之得宜則養人，失宜則傷人。",
+       "paraphrase", "卷二·五味偏走"),
+    ps("fx-hybc-001", "fx_haiyao_bencao",
+       "胡椒，出西戎摩伽陀國，其形似鼠李，味辛大溫。今廣州、舶上皆有之。凡海藥多自外至，其性與中土所產者不同。",
+       "paraphrase", "草部·胡椒"),
+    ps("fx-vrk-001", "fx_vrksayurveda",
+       "Vṛkṣāyurveda: a plant's remedy is determined by its desa (habitat), its season, and the rasa of "
+       "its parts; the same species grown in different soil carries different potency. (paraphrase)",
+       "paraphrase", "Vṛkṣāyurveda"),
+    ps("fx-knb-001", "fx_kitab_al_nabat",
+       "al-Dīnawarī on plants: the botanist distinguishes species by leaf, stem and habitat before the "
+       "physician may use them, because names travel and shapes do not. (paraphrase)", "paraphrase", "Kitāb al-Nabāt"),
+    ps("fx-arth-001", "fx_arthashastra",
+       "Arthaśāstra lists the materials a state must control and the adulterations a market inspector must "
+       "detect — including substitutions among drugs of similar appearance. (paraphrase)", "paraphrase",
+       "Book II, chapter on commodities"),
     ps("fx-gbif-001", "fx_gbif",
        "Manis pentadactyla is listed in CITES Appendix I; Rhinoceros genera are listed in CITES Appendix I with a "
        "near-total trade ban.", "paraphrase", "taxon record"),
@@ -1088,6 +1156,16 @@ def layout(nodes, edges, w=1240.0, hgt=840.0, iters=540, seed=11):
                   round(min(max(pos[nid][1], 40), hgt - 40), 1)] for nid in ids}
 
 
+
+def _count(rows, key):
+    """Counts by a registry field. Derived, never hand-maintained."""
+    out: dict = {}
+    for r in rows:
+        if r.get("status") == "ok":
+            out[r[key]] = out.get(r[key], 0) + 1
+    return dict(sorted(out.items(), key=lambda kv: -kv[1]))
+
+
 def write(name, obj):
     path = os.path.join(HERE, name)
     with open(path, "w", encoding="utf-8") as f:
@@ -1112,9 +1190,7 @@ def main():
         pipeline="采 Cǎi → 制 Zhì → 配 Pèi → 使 Shǐ",
         corpus=dict(sources=sum(1 for s in SOURCES if s["status"] == "ok"),
                     chars=sum(s["chars"] for s in SOURCES), tokens=0,
-                    languages={"zh-Hant": 17, "sa": 5, "ar": 2, "sa-Latn": 1, "ko": 1, "en": 5, "bo": 1},
-                    traditions={"tcm": 12, "alchemy": 4, "acupuncture": 3, "ayurveda": 6, "unani": 2,
-                                "korean": 2, "tibetan": 1, "foundational": 4, "comparative-control": 1}),
+                    languages=_count(SOURCES, "lang"), traditions=_count(SOURCES, "tradition")),
         by_class=by_class, hypotheses=ranked))
 
     write("passages.json", dict(

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 700" width="1120" height="700"
+     role="img" aria-labelledby="ct-title ct-desc">
+  <title id="ct-title">Corpus tiers: what the model reads</title>
+  <desc id="ct-desc">Six tiers from ontology and foundational biology through Asian materia medica, Asian
+    alchemy, acupuncture, and structured open data used as biological ground truth. Live counts are shown
+    in the Workbench corpus panel, not baked into this figure.</desc>
+
+  <defs>
+    <style>
+      .h  { font-family: "Iowan Old Style", Palatino, Georgia, "Songti SC", serif; }
+      .s  { font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", sans-serif; }
+      .m  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .cjk{ font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif; }
+    </style>
+  </defs>
+
+  <rect width="1120" height="700" fill="#F6F0E3"/>
+  <text class="h" x="48" y="54" font-size="26" font-weight="600" fill="#1B1815">What the model reads</text>
+  <text class="s" x="48" y="80" font-size="14" fill="#6B6153">
+    Tiers are derived from the axioms, not collected by taste. The Western herbal tradition appears only as a
+    labelled comparative control (≤ 3% of tokens).
+  </text>
+
+  <!-- tier rows -->
+  <g>
+    <!-- T0 -->
+    <rect x="48" y="104" width="1024" height="74" rx="3" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="48" y="104" width="6" height="74" fill="#1B1815"/>
+    <text class="m" x="76" y="132" font-size="11" letter-spacing="1.8" fill="#6B6153">TIER 0</text>
+    <text class="h" x="76" y="158" font-size="17" font-weight="600" fill="#1B1815">Ontology — the structure of the domain</text>
+    <text class="s" x="470" y="158" font-size="12.5" fill="#6B6153">
+      Taxon · DrugName(form×script) · Preparation · Process · Compound · Target · Formula · Role(君臣佐使) ·
+      Incompatibility · Tradition · EvidenceGrade
+    </text>
+
+    <!-- T1 -->
+    <rect x="48" y="188" width="1024" height="74" rx="3" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="48" y="188" width="6" height="74" fill="#8A6420"/>
+    <text class="m" x="76" y="216" font-size="11" letter-spacing="1.8" fill="#6B6153">TIER 1</text>
+    <text class="h" x="76" y="242" font-size="17" font-weight="600" fill="#1B1815">Foundational biology &amp; chemistry — the substrate</text>
+    <text class="s" x="470" y="242" font-size="12.5" fill="#6B6153">
+      Anatomy · physiology · biochemistry · pharmacology &amp; ADME · toxicology · phytochemistry ·
+      natural-product chemistry · botany · analytical methods
+    </text>
+
+    <!-- T2 -->
+    <rect x="48" y="272" width="1024" height="96" rx="3" fill="#FCF8F0" stroke="#A8362A" stroke-width="1.6"/>
+    <rect x="48" y="272" width="6" height="96" fill="#A8362A"/>
+    <text class="m" x="76" y="300" font-size="11" letter-spacing="1.8" fill="#A8362A" font-weight="700">TIER 2</text>
+    <text class="h" x="76" y="326" font-size="17" font-weight="600" fill="#1B1815">Asian materia medica — the core</text>
+    <text class="cjk" x="76" y="348" font-size="12.5" fill="#3A342C">
+      神農本草經 · 本草綱目 · 傷寒論 · 金匱要略 · 千金要方 · 太平惠民和劑局方 · 雷公炮炙論 · 海藥本草
+    </text>
+    <text class="s" x="470" y="326" font-size="12.5" fill="#6B6153">
+      Charaka · Suśruta · Bhāvaprakāśa · al-Qānūn · al-Ḥāwī · Dongui Bogam
+    </text>
+    <text class="s" x="470" y="348" font-size="12.5" fill="#6B6153">
+      Asian alchemy &amp; esoteric pharmacy: 抱朴子 · 周易參同契 · rasaśāstra (bhasma, kharpara)
+    </text>
+
+    <!-- T2b science -->
+    <rect x="48" y="378" width="1024" height="74" rx="3" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="48" y="378" width="6" height="74" fill="#2C6B5C"/>
+    <text class="m" x="76" y="406" font-size="11" letter-spacing="1.8" fill="#6B6153">TIER 2 · SCIENCE</text>
+    <text class="h" x="76" y="432" font-size="17" font-weight="600" fill="#1B1815">Ancient science, agriculture, botany, dietetics</text>
+    <text class="s" x="470" y="432" font-size="12.5" fill="#6B6153">
+      天工開物 · 齊民要術 · 夢溪筆談 · 救荒本草 · 植物名實圖考 · 飲膳正要 · Vṛkṣāyurveda · Kitāb al-Nabāt
+    </text>
+
+    <!-- T4 -->
+    <rect x="48" y="462" width="1024" height="74" rx="3" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="48" y="462" width="6" height="74" fill="#2B4A6F"/>
+    <text class="m" x="76" y="490" font-size="11" letter-spacing="1.8" fill="#6B6153">TIER 4</text>
+    <text class="h" x="76" y="516" font-size="17" font-weight="600" fill="#1B1815">Acupuncture &amp; the channel systems</text>
+    <text class="s" x="470" y="516" font-size="12.5" fill="#6B6153">
+      黃帝內經 (素問/靈樞) · 難經 · 針灸甲乙經 · 針灸大成 · 銅人腧穴針灸圖經 · open-access acupuncture RCTs
+    </text>
+
+    <!-- T5 -->
+    <rect x="48" y="546" width="1024" height="74" rx="3" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="48" y="546" width="6" height="74" fill="#2C6B5C"/>
+    <text class="m" x="76" y="574" font-size="11" letter-spacing="1.8" fill="#6B6153">TIER 5</text>
+    <text class="h" x="76" y="600" font-size="17" font-weight="600" fill="#1B1815">Structured open data — ground truth against hallucination</text>
+    <text class="s" x="470" y="600" font-size="12.5" fill="#6B6153">
+      Dr Duke's · PubChem · ChEMBL · KEGG · STRING · Gene Ontology · MeSH · POWO/WCVP · GBIF · NCBI Taxonomy
+    </text>
+  </g>
+
+  <!-- control strip -->
+  <rect x="48" y="634" width="1024" height="34" rx="3" fill="#F3E7CB" stroke="#8A6420" stroke-dasharray="5 3"/>
+  <text class="s" x="66" y="656" font-size="12.5" fill="#8A6420">
+    <tspan font-weight="700">COMPARATIVE CONTROL (≤3% of tokens, labelled in the registry):</tspan>
+    <tspan> the Western herbal tradition — used only to test whether a finding is an artefact of any large botanical corpus.</tspan>
+  </text>
+
+  <text class="s" x="48" y="692" font-size="11.5" fill="#6B6153">
+    Live counts per tier, licence and language: Workbench → Corpus panel (generated from the registry at runtime, never baked into figures).
+  </text>
+</svg>

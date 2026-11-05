@@ -1,0 +1,75 @@
+{
+  "torch_config": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 201703\n  - clang 13.1.6\n  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220801 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.3.2 (Git Hash 2dc95a2ad0841e29db8b22fbccaf3e5da7992b01)\n  - OpenMP 201811\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=/Applications/Xcode_13.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=pedantic -Wno-error=old-style-cast -Wno-error=inconsistent-missing-override -Wno-error=inconsistent-missing-destructor-override -Wconstant-conversion -Wno-invalid-partial-specialization -Wno-missing-braces -Qunused-arguments -fcolor-diagnostics -faligned-new -Wno-unused-but-set-variable -fno-math-errno -fno-trapping-math -Werror=format -DUSE_MPS -Wno-unused-private-field -Wno-missing-braces, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.2.2, USE_CUDA=OFF, USE_CUDNN=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, \n",
+  "env": {
+    "platform": "macOS-15.5-x86_64-i386-64bit",
+    "machine": "x86_64",
+    "cpu_count_logical": 8,
+    "torch": "2.2.2",
+    "torch_threads": 4,
+    "python": "3.12.15",
+    "cpu_only": true
+  },
+  "matmul_gflops": {
+    "1024": 132.4,
+    "2048": 137.5,
+    "4096": 162.0
+  },
+  "thread_sweep": [
+    {
+      "config": {
+        "vocab_size": 16384,
+        "d_model": 384,
+        "n_layer": 8,
+        "n_head": 6,
+        "n_kv_head": 2,
+        "d_ff": 1024,
+        "seq_len": 512,
+        "rope_theta": 10000.0,
+        "norm_eps": 1e-05,
+        "tie_word_embeddings": true,
+        "init_std": 0.02,
+        "attention_bias": false
+      },
+      "params": 18880896,
+      "params_non_embedding": 12589440,
+      "batch": 8,
+      "seq_len": 512,
+      "dtype": "fp32",
+      "optimizer": true,
+      "ms_per_step": 16915.1,
+      "tokens_per_s": 242.2,
+      "achieved_model_gflops": 27.4,
+      "projected_tokens_in_3h": 2615221,
+      "tokens_per_step": 4096,
+      "torch_threads": 1
+    },
+    {
+      "config": {
+        "vocab_size": 16384,
+        "d_model": 384,
+        "n_layer": 8,
+        "n_head": 6,
+        "n_kv_head": 2,
+        "d_ff": 1024,
+        "seq_len": 512,
+        "rope_theta": 10000.0,
+        "norm_eps": 1e-05,
+        "tie_word_embeddings": true,
+        "init_std": 0.02,
+        "attention_bias": false
+      },
+      "params": 18880896,
+      "params_non_embedding": 12589440,
+      "batch": 8,
+      "seq_len": 512,
+      "dtype": "fp32",
+      "optimizer": true,
+      "ms_per_step": 17013.2,
+      "tokens_per_s": 240.8,
+      "achieved_model_gflops": 27.3,
+      "projected_tokens_in_3h": 2600140,
+      "tokens_per_step": 4096,
+      "torch_threads": 4
+    }
+  ]
+}

@@ -1,0 +1,592 @@
+{
+ "generated_by": "data/build_lexicon.py",
+ "note": "Classical Chinese drug name -> modern binomial. method=manual is a pharmacopoeial/standard identification; method=wikidata is resolved via Wikidata P225 (taxon name), citable by Q-id. confidence is a heuristic, not a calibrated probability.",
+ "count": 51,
+ "historical": [
+  {
+   "name": "甘草",
+   "lang": "zh-Hant",
+   "readings": [
+    "Glycyrrhiza uralensis"
+   ],
+   "modern": "Glycyrrhiza uralensis",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "大棗",
+   "lang": "zh-Hant",
+   "readings": [
+    "Ziziphus jujuba"
+   ],
+   "modern": "Ziziphus jujuba",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "桂枝",
+   "lang": "zh-Hant",
+   "readings": [
+    "Cinnamomum cassia"
+   ],
+   "modern": "Cinnamomum cassia",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "生薑",
+   "lang": "zh-Hant",
+   "readings": [
+    "Zingiber officinale"
+   ],
+   "modern": "Zingiber officinale",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "芍藥",
+   "lang": "zh-Hant",
+   "readings": [
+    "Paeonia lactiflora"
+   ],
+   "modern": "Paeonia lactiflora",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "附子",
+   "lang": "zh-Hant",
+   "readings": [
+    "Aconitum carmichaelii"
+   ],
+   "modern": "Aconitum carmichaelii",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "人參",
+   "lang": "zh-Hant",
+   "readings": [
+    "Panax ginseng"
+   ],
+   "modern": "Panax ginseng",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "乾薑",
+   "lang": "zh-Hant",
+   "readings": [
+    "Zingiber officinale"
+   ],
+   "modern": "Zingiber officinale",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "半夏",
+   "lang": "zh-Hant",
+   "readings": [
+    "Pinellia ternata"
+   ],
+   "modern": "Pinellia ternata",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "大黃",
+   "lang": "zh-Hant",
+   "readings": [
+    "Rheum palmatum"
+   ],
+   "modern": "Rheum palmatum",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "麻黃",
+   "lang": "zh-Hant",
+   "readings": [
+    "Ephedra sinica"
+   ],
+   "modern": "Ephedra sinica",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "黃芩",
+   "lang": "zh-Hant",
+   "readings": [
+    "Scutellaria baicalensis"
+   ],
+   "modern": "Scutellaria baicalensis",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "白朮",
+   "lang": "zh-Hant",
+   "readings": [
+    "Atractylodes macrocephala"
+   ],
+   "modern": "Atractylodes macrocephala",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "茯苓",
+   "lang": "zh-Hant",
+   "readings": [
+    "Wolfiporia cocos"
+   ],
+   "modern": "Wolfiporia cocos",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "杏仁",
+   "lang": "zh-Hant",
+   "readings": [
+    "Armeniaca vulgaris"
+   ],
+   "modern": "Armeniaca vulgaris",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q24853184"
+  },
+  {
+   "name": "石膏",
+   "lang": "zh-Hant",
+   "readings": [
+    "Gypsum"
+   ],
+   "modern": "Gypsum",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "厚朴",
+   "lang": "zh-Hant",
+   "readings": [
+    "Houpoea officinalis"
+   ],
+   "modern": "Houpoea officinalis",
+   "method": "wikidata",
+   "confidence": 0.9,
+   "source_id": "wikidata",
+   "wikidata": "Q92823857"
+  },
+  {
+   "name": "黃連",
+   "lang": "zh-Hant",
+   "readings": [
+    "Coptis chinensis"
+   ],
+   "modern": "Coptis chinensis",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "枳實",
+   "lang": "zh-Hant",
+   "readings": [
+    "Citrus aurantium"
+   ],
+   "modern": "Citrus aurantium",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "柴胡",
+   "lang": "zh-Hant",
+   "readings": [
+    "Bupleurum chinense"
+   ],
+   "modern": "Bupleurum chinense",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "葛根",
+   "lang": "zh-Hant",
+   "readings": [
+    "Pueraria montana var. lobata"
+   ],
+   "modern": "Pueraria montana var. lobata",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q15198502"
+  },
+  {
+   "name": "五味子",
+   "lang": "zh-Hant",
+   "readings": [
+    "Schisandra chinensis"
+   ],
+   "modern": "Schisandra chinensis",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "粳米",
+   "lang": "zh-Hant",
+   "readings": [
+    "Oryza sativa"
+   ],
+   "modern": "Oryza sativa",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q161426"
+  },
+  {
+   "name": "芒硝",
+   "lang": "zh-Hant",
+   "readings": [
+    "Sodium sulfate"
+   ],
+   "modern": "Sodium sulfate",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "桔梗",
+   "lang": "zh-Hant",
+   "readings": [
+    "Platycodon grandiflorus"
+   ],
+   "modern": "Platycodon grandiflorus",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "知母",
+   "lang": "zh-Hant",
+   "readings": [
+    "Anemarrhena asphodeloides"
+   ],
+   "modern": "Anemarrhena asphodeloides",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "細辛",
+   "lang": "zh-Hant",
+   "readings": [
+    "Asarum sieboldii"
+   ],
+   "modern": "Asarum sieboldii",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q5367391"
+  },
+  {
+   "name": "钟乳",
+   "lang": "zh-Hant",
+   "readings": [
+    "Cladococcus stalactites"
+   ],
+   "modern": "Cladococcus stalactites",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q15227248"
+  },
+  {
+   "name": "牡蛎",
+   "lang": "zh-Hant",
+   "readings": [
+    "Pteriomorphia"
+   ],
+   "modern": "Pteriomorphia",
+   "method": "wikidata-genus",
+   "confidence": 0.55,
+   "source_id": "wikidata",
+   "wikidata": "Q107411"
+  },
+  {
+   "name": "巴豆",
+   "lang": "zh-Hant",
+   "readings": [
+    "Croton tiglium"
+   ],
+   "modern": "Croton tiglium",
+   "method": "wikidata",
+   "confidence": 0.9,
+   "source_id": "wikidata",
+   "wikidata": "Q2089847"
+  },
+  {
+   "name": "通草",
+   "lang": "zh-Hant",
+   "readings": [
+    "Akebia quinata"
+   ],
+   "modern": "Akebia quinata",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q1482093"
+  },
+  {
+   "name": "滑石",
+   "lang": "zh-Hant",
+   "readings": [
+    "Talc"
+   ],
+   "modern": "Talc",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "天麻",
+   "lang": "zh-Hant",
+   "readings": [
+    "Gastrodia elata"
+   ],
+   "modern": "Gastrodia elata",
+   "method": "wikidata",
+   "confidence": 0.9,
+   "source_id": "wikidata",
+   "wikidata": "Q650760"
+  },
+  {
+   "name": "楮实",
+   "lang": "zh-Hant",
+   "readings": [
+    "Broussonetia papyrifera"
+   ],
+   "modern": "Broussonetia papyrifera",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q389185"
+  },
+  {
+   "name": "蕤仁",
+   "lang": "zh-Hant",
+   "readings": [
+    "Prinsepia uniflora"
+   ],
+   "modern": "Prinsepia uniflora",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q645645"
+  },
+  {
+   "name": "朱砂",
+   "lang": "zh-Hant",
+   "readings": [
+    "Cinnabar"
+   ],
+   "modern": "Cinnabar",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "雄黄",
+   "lang": "zh-Hant",
+   "readings": [
+    "Chelidonium majus"
+   ],
+   "modern": "Chelidonium majus",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q156807"
+  },
+  {
+   "name": "石决明",
+   "lang": "zh-Hant",
+   "readings": [
+    "Diplopterygium giganteum"
+   ],
+   "modern": "Diplopterygium giganteum",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q17041891"
+  },
+  {
+   "name": "诃黎勒",
+   "lang": "zh-Hant",
+   "readings": [
+    "Terminalia chebula var. chebula"
+   ],
+   "modern": "Terminalia chebula var. chebula",
+   "method": "wikidata",
+   "confidence": 0.9,
+   "source_id": "wikidata",
+   "wikidata": "Q25118218"
+  },
+  {
+   "name": "辛夷",
+   "lang": "zh-Hant",
+   "readings": [
+    "Yulania denudata"
+   ],
+   "modern": "Yulania denudata",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q24852896"
+  },
+  {
+   "name": "木瓜",
+   "lang": "zh-Hant",
+   "readings": [
+    "Chaenomeles sinensis"
+   ],
+   "modern": "Chaenomeles sinensis",
+   "method": "wikidata",
+   "confidence": 0.9,
+   "source_id": "wikidata",
+   "wikidata": "Q15535512"
+  },
+  {
+   "name": "鹿茸",
+   "lang": "zh-Hant",
+   "readings": [
+    "Cervus nippon"
+   ],
+   "modern": "Cervus nippon",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "防己",
+   "lang": "zh-Hant",
+   "readings": [
+    "Stephania tetrandra"
+   ],
+   "modern": "Stephania tetrandra",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q1023664"
+  },
+  {
+   "name": "升麻",
+   "lang": "zh-Hant",
+   "readings": [
+    "Actaea cimicifuga"
+   ],
+   "modern": "Actaea cimicifuga",
+   "method": "wikidata",
+   "confidence": 0.9,
+   "source_id": "wikidata",
+   "wikidata": "Q4224089"
+  },
+  {
+   "name": "白前",
+   "lang": "zh-Hant",
+   "readings": [
+    "Vincetoxicum glaucescens"
+   ],
+   "modern": "Vincetoxicum glaucescens",
+   "method": "wikidata",
+   "confidence": 0.9,
+   "source_id": "wikidata",
+   "wikidata": "Q18082539"
+  },
+  {
+   "name": "昆布",
+   "lang": "zh-Hant",
+   "readings": [
+    "Saccharina japonica"
+   ],
+   "modern": "Saccharina japonica",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q11260230"
+  },
+  {
+   "name": "磁石",
+   "lang": "zh-Hant",
+   "readings": [
+    "Magnetite"
+   ],
+   "modern": "Magnetite",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "王不留行",
+   "lang": "zh-Hant",
+   "readings": [
+    "Gypsophila vaccaria"
+   ],
+   "modern": "Gypsophila vaccaria",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q113252109"
+  },
+  {
+   "name": "真珠",
+   "lang": "zh-Hant",
+   "readings": [
+    "Ferocactus latispinus"
+   ],
+   "modern": "Ferocactus latispinus",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q147501"
+  },
+  {
+   "name": "阿膠",
+   "lang": "zh-Hant",
+   "readings": [
+    "Equus asinus"
+   ],
+   "modern": "Equus asinus",
+   "method": "manual",
+   "confidence": 0.95,
+   "source_id": "manual_override"
+  },
+  {
+   "name": "伏翼",
+   "lang": "zh-Hant",
+   "readings": [
+    "Pipistrellus bat coronavirus HKU5"
+   ],
+   "modern": "Pipistrellus bat coronavirus HKU5",
+   "method": "wikidata",
+   "confidence": 0.7,
+   "source_id": "wikidata",
+   "wikidata": "Q16988144"
+  }
+ ]
+}

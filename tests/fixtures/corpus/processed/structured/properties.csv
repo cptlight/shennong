@@ -1,0 +1,111 @@
+drug_name,plant_binomial,nature,flavors,channels,direction,toxicity,grade,source_id
+甘草,Glycyrrhiza uralensis,平,甘,心;肺;脾;胃,平,无毒,上品,fixture_wikisource_bencao
+人参,Panax ginseng,平,甘;微苦,脾;肺;心,升,无毒,上品,fixture_wikisource_bencao
+黄芪,Astragalus membranaceus,微温,甘,脾;肺,升,无毒,上品,fixture_wikisource_bencao
+大黄,Rheum palmatum,寒,苦,脾;胃;大肠;肝;心包,降,无毒,下品,fixture_wikisource_bencao
+麻黄,Ephedra sinica,温,辛;微苦,肺;膀胱,升,无毒,中品,fixture_wikisource_bencao
+桂枝,Cinnamomum cassia,温,辛;甘,心;肺;膀胱,浮,无毒,上品,fixture_wikisource_bencao
+芍药,Paeonia lactiflora,微寒,苦;酸,肝;脾,降,无毒,中品,fixture_wikisource_bencao
+生姜,Zingiber officinale,微温,辛,肺;脾;胃,升,无毒,中品,fixture_wikisource_bencao
+大枣,Ziziphus jujuba,温,甘,脾;胃;心,升,无毒,上品,fixture_wikisource_bencao
+杏仁,Prunus armeniaca,微温,苦,肺;大肠,降,小毒,下品,fixture_wikisource_bencao
+半夏,Pinellia ternata,温,辛,脾;胃;肺,降,有毒,下品,fixture_wikisource_bencao
+附子,Aconitum carmichaelii,大热,辛;甘,心;肾;脾,升,有毒,下品,fixture_wikisource_bencao
+草乌,Aconitum kusnezoffii,热,辛;苦,心;肝;肾;脾,升,有毒,下品,fixture_wikisource_bencao
+贝母,Fritillaria cirrhosa,微寒,苦;甘,肺;心,降,无毒,中品,fixture_wikisource_bencao
+瓜蒌,Trichosanthes kirilowii,寒,甘;微苦,肺;胃;大肠,降,无毒,中品,fixture_wikisource_bencao
+白蔹,Ampelopsis japonica,微寒,苦,心;胃,降,无毒,下品,fixture_wikisource_bencao
+白及,Bletilla striata,微寒,苦;甘;涩,肺;肝;胃,降,无毒,下品,fixture_wikisource_bencao
+甘遂,Euphorbia kansui,寒,苦,肺;肾;大肠,降,有毒,下品,fixture_wikisource_bencao
+大戟,Euphorbia pekinensis,寒,苦,肺;脾;肾,降,有毒,下品,fixture_wikisource_bencao
+海藻,Sargassum fusiforme,寒,苦;咸,肝;胃;肾,降,无毒,中品,fixture_wikisource_bencao
+芫花,Daphne genkwa,温,辛;苦,肺;脾;肾,降,有毒,下品,fixture_wikisource_bencao
+藜芦,Veratrum nigrum,寒,辛;苦,肺;胃;肝,降,有毒,下品,fixture_wikisource_bencao
+细辛,Asarum heterotropoides,温,辛,肺;肾;心,升,小毒,上品,fixture_wikisource_bencao
+丹参,Salvia miltiorrhiza,微寒,苦,心;肝,降,无毒,上品,fixture_wikisource_bencao
+玄参,Scrophularia ningpoensis,微寒,甘;苦;咸,肺;胃;肾,降,无毒,中品,fixture_wikisource_bencao
+苦参,Sophora flavescens,寒,苦,心;肝;胃;大肠;膀胱,降,无毒,中品,fixture_wikisource_bencao
+沙参,Adenophora stricta,微寒,甘,肺;胃,降,无毒,中品,fixture_wikisource_bencao
+巴豆,Croton tiglium,热,辛,胃;大肠;肺,降,有大毒,下品,fixture_wikisource_bencao
+牵牛,Pharbitis nil,寒,苦,肺;肾;大肠,降,有毒,下品,fixture_wikisource_bencao
+丁香,Syzygium aromaticum,温,辛,脾;胃;肺;肾,升,无毒,中品,fixture_wikisource_bencaogangmu
+郁金,Curcuma longa,寒,辛;苦,肝;心;肺,降,无毒,中品,fixture_wikisource_bencaogangmu
+三棱,Sparganium stoloniferum,平,辛;苦,肝;脾,降,无毒,中品,fixture_wikisource_bencaogangmu
+犀角,Rhinoceros,寒,苦;咸,心;肝;胃,降,无毒,中品,fixture_wikisource_bencaogangmu
+五灵脂,Trogopterus,温,苦;甘,肝;脾,降,无毒,中品,fixture_wikisource_bencaogangmu
+茯苓,Poria cocos,平,甘;淡,心;肺;脾;肾,降,无毒,上品,fixture_wikisource_bencao
+白术,Atractylodes macrocephala,温,苦;甘,脾;胃,升,无毒,上品,fixture_wikisource_bencao
+当归,Angelica sinensis,温,甘;辛,肝;心;脾,升,无毒,中品,fixture_wikisource_bencao
+川芎,Ligusticum chuanxiong,温,辛,肝;胆;心包,升,无毒,上品,fixture_wikisource_bencao
+地黄,Rehmannia glutinosa,寒,甘;苦,心;肝;肾,降,无毒,上品,fixture_wikisource_bencao
+陈皮,Citrus reticulata,温,辛;苦,脾;肺,升,无毒,上品,fixture_wikisource_bencao
+柴胡,Bupleurum chinense,微寒,苦;辛,肝;胆;肺,升,无毒,上品,fixture_wikisource_bencao
+黄连,Coptis chinensis,寒,苦,心;脾;胃;肝;胆;大肠,降,无毒,上品,fixture_wikisource_bencao
+黄芩,Scutellaria baicalensis,寒,苦,肺;胆;脾;大肠;小肠,降,无毒,中品,fixture_wikisource_bencao
+黄柏,Phellodendron amurense,寒,苦,肾;膀胱;大肠,降,无毒,中品,fixture_wikisource_bencao
+栀子,Gardenia jasminoides,寒,苦,心;肺;三焦;肝,降,无毒,中品,fixture_wikisource_bencao
+桔梗,Platycodon grandiflorus,平,苦;辛,肺,升,无毒,中品,fixture_wikisource_bencao
+薄荷,Mentha haplocalyx,凉,辛,肺;肝,浮,无毒,中品,fixture_wikisource_bencaogangmu
+五味子,Schisandra chinensis,温,酸;甘,肺;心;肾,降,无毒,上品,fixture_wikisource_bencao
+麦冬,Ophiopogon japonicus,微寒,甘;微苦,心;肺;胃,降,无毒,上品,fixture_wikisource_bencao
+杜仲,Eucommia ulmoides,温,甘,肝;肾,降,无毒,上品,fixture_wikisource_bencao
+续断,Dipsacus asper,微温,苦;甘;辛,肝;肾,降,无毒,上品,fixture_wikisource_bencao
+枸杞,Lycium barbarum,平,甘,肝;肾,升,无毒,上品,fixture_wikisource_bencao
+百合,Lilium brownii,微寒,甘,心;肺,降,无毒,中品,fixture_wikisource_bencao
+山药,Dioscorea opposita,平,甘,脾;肺;肾,升,无毒,上品,fixture_wikisource_bencao
+山茱萸,Cornus officinalis,微温,酸;涩,肝;肾,降,无毒,中品,fixture_wikisource_bencao
+泽泻,Alisma plantago-aquatica,寒,甘;淡,肾;膀胱,降,无毒,上品,fixture_wikisource_bencao
+牡丹皮,Paeonia suffruticosa,微寒,苦;辛,心;肝;肾,降,无毒,中品,fixture_wikisource_bencao
+木通,Akebia quinata,寒,苦,心;小肠;膀胱,降,无毒,中品,fixture_wikisource_bencao
+川木通,Clematis armandii,寒,苦;淡,心;小肠;膀胱,降,无毒,中品,fixture_wikisource_bencaogangmu
+关木通,Aristolochia manshuriensis,寒,苦,心;小肠;膀胱,降,有毒,下品,fixture_wikisource_bencaogangmu
+防己,Stephania tetrandra,寒,苦,膀胱;肺,降,无毒,中品,fixture_wikisource_bencao
+广防己,Aristolochia fangchi,寒,苦,膀胱;肺,降,有毒,下品,fixture_wikisource_bencaogangmu
+三七,Panax notoginseng,温,甘;微苦,肝;胃,降,无毒,上品,fixture_wikisource_bencaogangmu
+土三七,Gynura segetum,温,甘;微苦,肝;胃,降,有毒,下品,fixture_wikisource_bencaogangmu
+五加皮,Eleutherococcus gracilistylus,温,辛;苦,肝;肾,升,无毒,中品,fixture_wikisource_bencao
+香加皮,Periploca sepium,温,辛;苦,肝;肾;心,降,有毒,下品,fixture_wikisource_bencaogangmu
+山豆根,Sophora tonkinensis,寒,苦,肺;胃,降,有毒,下品,fixture_wikisource_bencaogangmu
+北豆根,Menispermum dauricum,寒,苦,肺;胃;大肠,降,有小毒,下品,fixture_wikisource_bencaogangmu
+天麻,Gastrodia elata,平,甘,肝,升,无毒,上品,fixture_wikisource_bencaogangmu
+石斛,Dendrobium nobile,微寒,甘,胃;肾,降,无毒,上品,fixture_wikisource_bencao
+狗脊,Cibotium barometz,温,苦;甘,肝;肾,降,无毒,上品,fixture_wikisource_bencao
+七叶一枝花,Paris polyphylla,微寒,苦,肝;心,降,小毒,下品,fixture_wikisource_bencaogangmu
+麝香,Moschus,温,辛,心;脾,升,无毒,上品,fixture_wikisource_bencao
+熊胆,Ursus,寒,苦,肝;胆;心,降,无毒,中品,fixture_wikisource_bencaogangmu
+穿山甲,Manis,微寒,咸,肝;胃,降,无毒,中品,fixture_wikisource_bencaogangmu
+虎骨,Panthera tigris,温,辛,肝;肾,升,无毒,中品,fixture_wikisource_bencaogangmu
+沉香,Aquilaria agallocha,温,辛;苦,脾;胃;肾,降,无毒,上品,fixture_wikisource_bencao
+防风,Saposhnikovia divaricata,微温,辛;甘,膀胱;肝;脾,升,无毒,上品,fixture_wikisource_bencao
+白芷,Angelica dahurica,温,辛,肺;胃;大肠,升,无毒,中品,fixture_wikisource_bencao
+青蒿,Artemisia annua,寒,苦;辛,肝;胆,降,无毒,下品,fixture_wikisource_bencaogangmu
+粳米,Oryza sativa,平,甘,脾;胃,平,无毒,中品,fixture_wikisource_shanghanlun
+升麻,Cimicifuga foetida,微寒,辛;微甘,肺;脾;胃;大肠,升,无毒,中品,fixture_wikisource_bencao
+枳实,Citrus aurantium,微寒,苦;辛;酸,脾;胃;大肠,降,无毒,中品,fixture_wikisource_bencao
+厚朴,Magnolia officinalis,温,苦;辛,脾;胃;肺;大肠,降,无毒,中品,fixture_wikisource_bencao
+知母,Anemarrhena asphodeloides,寒,苦;甘,肺;胃;肾,降,无毒,中品,fixture_wikisource_bencao
+甘松,Nardostachys jatamansi,温,辛;甘,脾;胃,升,无毒,中品,fixture_wikisource_bencaogangmu
+檀香,Santalum album,温,辛,脾;胃;心;肺,升,无毒,中品,fixture_wikisource_bencaogangmu
+石菖蒲,Acorus calamus,温,辛;苦,心;胃,升,无毒,中品,fixture_wikisource_bencaogangmu
+香附,Cyperus rotundus,平,辛;微苦;微甘,肝;脾;三焦,降,无毒,中品,fixture_wikisource_bencaogangmu
+诃子,Terminalia chebula,平,苦;酸;涩,肺;大肠,降,无毒,中品,fixture_wikisource_bencaogangmu
+荜茇,Piper longum,热,辛,胃;大肠,升,无毒,中品,fixture_wikisource_bencaogangmu
+胡椒,Piper nigrum,热,辛,胃;大肠,升,无毒,中品,fixture_wikisource_bencaogangmu
+الغار,Laurus nobilis,温,辛,脾;胃;肺,升,无毒,中品,fixture_archive_qanun
+القرفة,Cinnamomum verum,温,辛;甘,脾;胃;心,升,无毒,中品,fixture_archive_qanun
+硫黄,sulfur,温,酸,肾;大肠,降,有毒,下品,fixture_wikisource_bencaogangmu
+朴硝,sodium sulfate,寒,咸;苦,胃;大肠,降,无毒,中品,fixture_wikisource_bencaogangmu
+石膏,gypsum,寒,甘;辛,肺;胃,降,无毒,中品,fixture_wikisource_bencao
+水银,mercury,寒,辛,心;肝;肾,降,有毒,下品,fixture_wikisource_bencaogangmu
+砒霜,arsenic trioxide,热,辛,肺;脾;胃,升,有大毒,下品,fixture_wikisource_bencaogangmu
+雄黄,realgar,温,辛,肝;大肠,升,有毒,下品,fixture_wikisource_bencaogangmu
+朱砂,cinnabar,微寒,甘,心,降,有毒,下品,fixture_wikisource_bencaogangmu
+轻粉,calomel,寒,辛,大肠;小肠,降,有毒,下品,fixture_wikisource_bencaogangmu
+铅丹,lead oxide,微寒,辛,心;脾,降,有毒,下品,fixture_wikisource_bencaogangmu
+白矾,alum,寒,酸;涩,肺;脾;肝,降,有小毒,下品,fixture_wikisource_bencaogangmu
+赤石脂,halloysite,温,甘;酸;涩,大肠;胃,降,无毒,中品,fixture_wikisource_bencao
+密陀僧,litharge,平,咸;辛,肝;脾,降,有毒,下品,fixture_wikisource_bencaogangmu
+狼毒,Euphorbia fischeriana,平,辛,肝;脾,降,有毒,下品,fixture_wikisource_bencaogangmu
+洋金花,Datura metel,温,辛,肺;肝,升,有毒,下品,fixture_wikisource_bencaogangmu
+罂粟壳,Papaver somniferum,平,酸;涩,肺;大肠;肾,降,有毒,下品,fixture_wikisource_bencaogangmu
+火麻仁,Cannabis sativa,平,甘,脾;胃;大肠,降,无毒,上品,fixture_wikisource_bencao

@@ -1,0 +1,1451 @@
+{
+ "generated_at": "2026-11-05T09:00:00Z",
+ "fixture": true,
+ "note": "DEMO FIXTURE twin of artifacts/drug_candidates.json (brief §11.4). Molecular formulas are real; molecular weight is computed from them. Structures that are not resolved are null, not invented. Novelty scores are placeholders.",
+ "pipeline": "采 Cǎi → 制 Zhì → 配 Pèi → 使 Shǐ",
+ "counts": {
+  "total": 12,
+  "resolved": 3,
+  "by_status": {
+   "lead": 7,
+   "safety-lead": 2,
+   "speculative": 1,
+   "calibration": 1,
+   "historical-anchor": 1
+  }
+ },
+ "candidates": [
+  {
+   "id": "C-03",
+   "name": "Benzoylaconine",
+   "name_cn": "苯甲醯烏頭原鹼",
+   "discovery_class": "paozhi",
+   "classical_lead": {
+    "drug": "附子",
+    "drug_en": "Aconitum carmichaelii lateral root",
+    "part": "lateral root",
+    "processing": "炮 → 去皮臍 → 蜜水煮 (雷公炮炙論)",
+    "formula_role": "君 (emperor) in 四逆湯",
+    "source": "神農本草經 · 傷寒論 · 雷公炮炙論"
+   },
+   "formula": "C32H45NO10",
+   "mw": 603.71,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "熱",
+    "flavors": [
+     "辛",
+     "甘"
+    ],
+    "channels": [
+     "心",
+     "腎",
+     "脾"
+    ],
+    "direction": "升",
+    "grade": "下品 (有毒)"
+   },
+   "mechanism": {
+    "target_class": "voltage-gated Na⁺ channel, site 2 — partial block (monester, not diester)",
+    "pathway": "cardiac action potential; nociceptor sensitisation",
+    "evidence_level": "strong preclinical"
+   },
+   "novelty": {
+    "score": 0.63,
+    "basis": "the *processed* monester is the form the classical protocol targets; modern granule products that skip 炮制 retain the diester"
+   },
+   "theory_justification": "辛·熱, 下品 (i.e. toxic by grade), entering 心 and 腎 — the two organs of circulation and deep structure. A 下品·辛·熱 drug with 心 tropism should be the most cardiotoxic class in the materia medica, and aconitine is. The theory correctly predicts both the toxicity *and* the organ, which is why the processing protocol matters: it is a toxicity-selectivity step.",
+   "development_path": [
+    {
+     "step": "LC-MS/MS quantification of the diester→monester→alkamine ladder across processing arms.",
+     "kind": "analytical"
+    },
+    {
+     "step": "Zebrafish heart-rate and rat ECG dose-response for each of the three alkaloids.",
+     "kind": "in-vivo"
+    },
+    {
+     "step": "Human plasma monitoring study on prescribed 附子 granule products vs classical decoction.",
+     "kind": "clinical-pharmacology"
+    }
+   ],
+   "residual_risk": [
+    "The therapeutic window is extremely narrow — this is a lead for *toxicity mitigation*, not a new therapy.",
+    "Classical 生用 use in 四逆湯 shows the processing is a choice, not a rule; a candidate claim must specify which form it means.",
+    "Purity of reference alkaloids is a supply-chain problem for any follow-up study."
+   ],
+   "safety": {
+    "flags": [
+     "aconitine is a highly toxic cardiotoxin",
+     "no preparation method is given anywhere in this output — by design",
+     "the deliverable is a hazard/safety finding, not a dosing regimen"
+    ],
+    "severity": "high"
+   },
+   "status": "safety-lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "傷寒論",
+    "year": 220,
+    "locator": "少陰病篇 · 四逆湯方",
+    "span_kind": "verbatim",
+    "text": "四逆湯方：甘草二兩炙，乾薑一兩半，附子一枚生用去皮破八片。",
+    "translation": "Formula of Sini Tang: licorice two liang, honey-fried; dried ginger one and a half liang; aconite one piece, used raw, peeled and split into eight."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 603.71,
+      "threshold": 500,
+      "pass_": false
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 1,
+     "o": 10
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 1
+  },
+  {
+   "id": "C-05",
+   "name": "Paeoniflorin",
+   "name_cn": "芍藥苷",
+   "discovery_class": "junchen_zuoshi",
+   "classical_lead": {
+    "drug": "芍藥",
+    "drug_en": "Paeonia lactiflora root",
+    "part": "root",
+    "processing": "raw or wine-fried",
+    "formula_role": "臣 (minister) in 桂枝湯",
+    "source": "傷寒論 · 金匱要略"
+   },
+   "formula": "C23H28O11",
+   "mw": 480.47,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "微寒",
+    "flavors": [
+     "苦",
+     "酸"
+    ],
+    "channels": [
+     "肝",
+     "脾"
+    ],
+    "direction": "降",
+    "grade": "上品"
+   },
+   "mechanism": {
+    "target_class": "candidate: NKCC1/KCC2 chloride homeostasis in smooth and skeletal muscle",
+    "pathway": "intracellular Cl⁻ set point → excitability",
+    "evidence_level": "weak / speculative"
+   },
+   "novelty": {
+    "score": 0.58,
+    "basis": "the monoterpene glycoside is well characterised pharmacologically, but the muscle-chloride mechanism is unestablished — scored as a candidate, not a finding"
+   },
+   "theory_justification": "酸·苦, 微寒, 降, entering 肝/脾 — 酸 is the flavour the tradition assigns to 'astringent, gathering', and 肝 governs 筋 (sinew). A 肝-tropic 酸 herb used for cramp should act on the excitability of muscle, and chloride handling is the least-studied excitability route. The theory points at a compartment nothing else in the shortlist touches.",
+   "development_path": [
+    {
+     "step": "Chloride imaging in isolated muscle fibres ± the formula.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "Bumetanide occlusion experiment to separate NKCC1 from other routes.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "Compare against the liquorice combination used in kampo for cramp (see H-08).",
+     "kind": "comparative"
+    }
+   ],
+   "residual_risk": [
+    "Glycoside: poor passive permeability; likely needs active uptake or gut hydrolysis.",
+    "The mechanism is genuinely unknown — this is the weakest plausibility in the shortlist.",
+    "Attribution inside a multi-herb formula is not possible without fractionation work."
+   ],
+   "safety": {
+    "flags": [
+     "no safety signal at traditional doses; mechanism open"
+    ],
+    "severity": "none"
+   },
+   "status": "speculative",
+   "fixture": true,
+   "classical_line": {
+    "source": "神農本草經",
+    "year": -200,
+    "locator": "中品 · 芍藥",
+    "span_kind": "verbatim",
+    "text": "芍藥，味苦平。主邪氣腹痛，除血痹，破堅積寒熱疝瘕，止痛，利小便，益氣。",
+    "translation": "Peony, bitter and neutral. Governs abdominal pain from pathogenic qi, removes blood stasis, breaks hard accumulations and hernial masses, stops pain, frees urination, benefits qi."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 480.47,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 11
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 2
+  },
+  {
+   "id": "C-09",
+   "name": "Matrine",
+   "name_cn": "苦參鹼",
+   "discovery_class": "weiyanjiu",
+   "classical_lead": {
+    "drug": "苦參",
+    "drug_en": "Sophora flavescens root",
+    "part": "root",
+    "processing": "raw or 酒炒",
+    "formula_role": "臣 (minister)",
+    "source": "神農本草經 · 本草綱目"
+   },
+   "formula": "C15H24N2O",
+   "mw": 248.37,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦"
+    ],
+    "channels": [
+     "心",
+     "肝",
+     "胃",
+     "大腸",
+     "膀胱"
+    ],
+    "direction": "降",
+    "grade": "中品"
+   },
+   "mechanism": {
+    "target_class": "candidate: quinolizidine alkaloid — σ receptor and NMDA-adjacent modulation; anti-inflammatory via NF-κB",
+    "pathway": "neuroimmune; mast-cell stabilisation",
+    "evidence_level": "moderate preclinical, largely Chinese-language literature"
+   },
+   "novelty": {
+    "score": 0.52,
+    "basis": "the quinolizidine scaffold is under-represented in Western screening libraries and the pharmacology is reported mostly in non-indexed journals"
+   },
+   "theory_justification": "苦·寒, 降, entering 心/肝/膀胱 — a broad-tropism bitter with a downward direction. The theory predicts a wide, non-organ-specific anti-inflammatory action, which is what the scattered literature shows. The candidate value is the *scaffold*, not a single target.",
+   "development_path": [
+    {
+     "step": "Target-deconvolution panel for the quinolizidine scaffold.",
+     "kind": "in-silico"
+    },
+    {
+     "step": "Mast-cell stabilisation assay; compare with the reported anti-pruritic use.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "CYP inhibition panel — quinolizidines are often perpetrators.",
+     "kind": "in-vitro"
+    }
+   ],
+   "residual_risk": [
+    "Quinolizidine alkaloids have a neurotoxicity ceiling (cf. cytisine).",
+    "Literature is largely in Chinese; systematic extraction is itself a contribution.",
+    "No single dominant target found so far — may be a promiscuous scaffold."
+   ],
+   "safety": {
+    "flags": [
+     "alkaloid neurotoxicity ceiling",
+     "CYP inhibition potential"
+    ],
+    "severity": "caution"
+   },
+   "status": "lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "神農本草經",
+    "year": -200,
+    "locator": "中品 · 苦參",
+    "span_kind": "verbatim",
+    "text": "苦參，味苦寒。主心腹結氣，癥瘕積聚，黃疸，溺有餘瀝，逐水，除癰腫，補中，明目止淚。",
+    "translation": "Sophora, bitter and cold. Governs knotted qi in the chest and abdomen, abdominal masses, jaundice, dribbling urination; drives out water, removes swellings and abscesses, supplements the centre, brightens the eyes and stops tearing."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 248.37,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 2,
+     "o": 1
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 3
+  },
+  {
+   "id": "C-04",
+   "name": "Tanshinone IIA",
+   "name_cn": "丹參酮 IIA",
+   "discovery_class": "yiming_tongwu",
+   "classical_lead": {
+    "drug": "丹參",
+    "drug_en": "Salvia miltiorrhiza root",
+    "part": "root",
+    "processing": "wine decoction (酒煎)",
+    "formula_role": "君 (emperor)",
+    "source": "本草綱目 · 本草備要"
+   },
+   "formula": "C19H18O3",
+   "mw": 294.35,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "微寒",
+    "flavors": [
+     "苦"
+    ],
+    "channels": [
+     "心",
+     "肝",
+     "心包"
+    ],
+    "direction": "降",
+    "grade": "中品"
+   },
+   "mechanism": {
+    "target_class": "KEAP1/Nrf2 pathway activator; endothelial ROS reduction",
+    "pathway": "NQO1 / HO-1 induction, endothelial adhesion molecule downregulation",
+    "evidence_level": "moderate preclinical"
+   },
+   "novelty": {
+    "score": 0.47,
+    "basis": "Nrf2/KEAP1 link is documented; the 心·肝 tropism is untested as a predictor of endothelial versus hepatic localisation"
+   },
+   "theory_justification": "苦·微寒, 降, entering 心/肝/心包 — the classic 'invigorates the blood, cools the heart' vector. Cold + bitter + 心 tropism should predict an anti-inflammatory/anti-oxidant action at the endothelium rather than a sedative one, and a lipophilic quinone is exactly the chemistry that reaches a KEAP1 cysteine. This is the cleanest theory→mechanism agreement in the shortlist.",
+   "development_path": [
+    {
+     "step": "Cell-free KEAP1-Nrf2 competition assay, then HUVEC ROS protection.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "Nrf2⁻/⁻ vs WT vascular protection in an angiotensin-II model.",
+     "kind": "in-vivo"
+    },
+    {
+     "step": "Formulation: the quinone is poorly soluble; the classical wine decoction is an ethanol co-solvent step worth testing as such.",
+     "kind": "formulation"
+    }
+   ],
+   "residual_risk": [
+    "Known herb–drug interaction: 丹參 potentiates warfarin — bleeding risk.",
+    "Quinones are redox-cycling liabilities; a Nrf2 activator can be pro-oxidant at high exposure.",
+    "The 血瘀 → oxidative-stress mapping is an inference, not something the corpus states."
+   ],
+   "safety": {
+    "flags": [
+     "warfarin interaction (bleeding risk)",
+     "redox-cycling liability at high exposure"
+    ],
+    "severity": "caution"
+   },
+   "status": "lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "本草綱目",
+    "year": 1596,
+    "locator": "草部 · 丹參",
+    "span_kind": "paraphrase",
+    "text": "丹參：味苦，性微寒。活血，通心包絡。治心腹邪氣，腸鳴幽幽如走水。",
+    "translation": "Dan shen: bitter, slightly cold. Invigorates the blood and opens the pericardium channel; for pathogenic qi in the chest and abdomen, with borborygmus like running water."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 294.35,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 3
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 4
+  },
+  {
+   "id": "C-07",
+   "name": "Schisandrin B",
+   "name_cn": "五味子乙素",
+   "discovery_class": "weiyanjiu",
+   "classical_lead": {
+    "drug": "五味子",
+    "drug_en": "Schisandra chinensis fruit",
+    "part": "fruit",
+    "processing": "dried",
+    "formula_role": "臣 (minister)",
+    "source": "神農本草經 · 本草綱目"
+   },
+   "formula": "C23H28O6",
+   "mw": 400.47,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "溫",
+    "flavors": [
+     "酸",
+     "甘"
+    ],
+    "channels": [
+     "肺",
+     "心",
+     "腎"
+    ],
+    "direction": "收",
+    "grade": "上品"
+   },
+   "mechanism": {
+    "target_class": "candidate: Nrf2/ARE induction with mitochondrial membrane stabilisation",
+    "pathway": "hepatocyte antioxidant response; mitochondrial permeability transition inhibition",
+    "evidence_level": "moderate preclinical"
+   },
+   "novelty": {
+    "score": 0.44,
+    "basis": "dibenzocyclooctadiene lignans are structurally unusual and under-represented in screening libraries — a genuine chemistry-space gap"
+   },
+   "theory_justification": "酸·甘, 溫, entering 肺/心/腎 with a 'gathering' (收) direction. A 收 direction with 腎 tropism predicts a *protective/stabilising* rather than a cytotoxic action — which is the opposite of most oncology leads and is exactly what the mitochondrial-stabilisation data show. The structural class (dibenzocyclooctadiene) is also rare in synthetic libraries.",
+   "development_path": [
+    {
+     "step": "Mitochondrial swelling assay ± calcium overload.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "Nrf2-ARE reporter screen; confirm with Nrf2 knockdown.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "Hepatoprotection model (paracetamol) as the classical indication test.",
+     "kind": "in-vivo"
+    }
+   ],
+   "residual_risk": [
+    "Lignans are often potent CYP inhibitors — interaction risk.",
+    "The '收' direction is a qualitative claim; operationalising it is our inference.",
+    "Hepatoprotection is a crowded, historically disappointing indication."
+   ],
+   "safety": {
+    "flags": [
+     "CYP inhibition potential"
+    ],
+    "severity": "caution"
+   },
+   "status": "lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "神農本草經",
+    "year": -200,
+    "locator": "上品 · 五味子",
+    "span_kind": "verbatim",
+    "text": "五味子，味酸溫。主益氣，咳逆上氣，勞傷羸瘦，補不足，強陰，益男子精。",
+    "translation": "Schisandra, sour and warming. Benefits qi, governs cough with rising qi, exhaustion with emaciation, supplements insufficiency, strengthens yin, benefits male essence."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 400.47,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 6
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 5
+  },
+  {
+   "id": "C-11",
+   "name": "Notoginsenoside R1",
+   "name_cn": "三七皂苷 R1",
+   "discovery_class": "yiming_tongwu",
+   "classical_lead": {
+    "drug": "三七",
+    "drug_en": "Panax notoginseng root",
+    "part": "root",
+    "processing": "powdered, or 熟三七 (steamed)",
+    "formula_role": "君 (emperor)",
+    "source": "本草綱目 · 本草備要"
+   },
+   "formula": "C47H80O18",
+   "mw": 933.14,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "溫",
+    "flavors": [
+     "甘",
+     "微苦"
+    ],
+    "channels": [
+     "肝",
+     "胃",
+     "大腸"
+    ],
+    "direction": "止",
+    "grade": "上品"
+   },
+   "mechanism": {
+    "target_class": "candidate: ginsenoside — endothelial protection via PI3K/Akt and oestrogen-receptor adjacent signalling",
+    "pathway": "endothelial nitric oxide; platelet function",
+    "evidence_level": "moderate preclinical"
+   },
+   "novelty": {
+    "score": 0.39,
+    "basis": "the notoginseng saponin fraction is distinct from ginseng's, and the standardisation problem (white vs red vs steamed) is unaddressed"
+   },
+   "theory_justification": "甘·微苦, 溫, entering 肝 — 'stops bleeding and disperses stasis', which is a haemostatic and an antithrombotic claim in the same herb. The theory asserts a *balance* action, and the measured profile (pro-haemostatic platelet effects with anti-inflammatory endothelial protection) is frustratingly consistent with it. This is the hardest kind of claim to test and the most interesting.",
+   "development_path": [
+    {
+     "step": "Separate the haemostatic from the endothelial arms by fraction.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "Standardise 生/熟 processing states and compare saponin profiles.",
+     "kind": "analytical"
+    },
+    {
+     "step": "Bleeding-time vs thrombosis model — the two arms must be measured together.",
+     "kind": "in-vivo"
+    }
+   ],
+   "residual_risk": [
+    "High MW saponin: almost certainly not orally bioavailable as the intact glycoside — gut hydrolysis products are the real actives.",
+    "Platelet effects mean bleeding risk in surgical patients.",
+    "The 生/熟 processing distinction changes the chemistry and is routinely ignored."
+   ],
+   "safety": {
+    "flags": [
+     "bleeding risk",
+     "process-state dependent pharmacology"
+    ],
+    "severity": "caution"
+   },
+   "status": "lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "本草綱目",
+    "year": 1596,
+    "locator": "草部 · 三七",
+    "span_kind": "paraphrase",
+    "text": "三七：味甘微苦，性溫。止血散血定痛，金刃箭傷跌撲杖瘡血出不止者，嚼爛罨之即止。",
+    "translation": "San qi: sweet with a slight bitterness, warming. Stops bleeding, disperses blood and settles pain; for wounds from metal, arrow, fall or staff where the bleeding will not stop, chew it and apply."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 933.14,
+      "threshold": 500,
+      "pass_": false
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 18
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 6
+  },
+  {
+   "id": "C-08",
+   "name": "Emodin",
+   "name_cn": "大黃素",
+   "discovery_class": "peiwu_jinji",
+   "classical_lead": {
+    "drug": "大黃",
+    "drug_en": "Rheum palmatum root and rhizome",
+    "part": "root/rhizome",
+    "processing": "酒製 (wine-processed)",
+    "formula_role": "君 (emperor) in 大承氣湯",
+    "source": "神農本草經 · 傷寒論"
+   },
+   "formula": "C15H10O5",
+   "mw": 270.24,
+   "smiles": "Cc1cc(O)c2c(c1)C(=O)c1cc(O)cc(O)c1C2=O",
+   "structure_status": "resolved",
+   "structure_note": "canonical SMILES — resolve against PubChem PUG-REST by name at build time",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦"
+    ],
+    "channels": [
+     "脾",
+     "胃",
+     "大腸",
+     "肝",
+     "心包"
+    ],
+    "direction": "降",
+    "grade": "下品"
+   },
+   "mechanism": {
+    "target_class": "multi-target: anthraquinone — topoisomerase II, PKC, and gut motility via aquaporin/chloride secretion",
+    "pathway": "colonic secretion and motility; cellular redox cycling",
+    "evidence_level": "established for motility; promiscuous elsewhere"
+   },
+   "novelty": {
+    "score": 0.31,
+    "basis": "highly promiscuous anthraquinone — novelty is in *selectivity*, not in the scaffold"
+   },
+   "theory_justification": "苦·寒, 降, entering 大腸 — the most 'downward' herb in the materia medica, and its measured action is the most downward-acting mechanism available (colonic secretion). The theory predicts the compartment correctly and the promiscuity correctly: a 下品 purgative that is also a redox cycler is exactly the profile described.",
+   "development_path": [
+    {
+     "step": "PAINS-filter the anthraquinone class before any target claim.",
+     "kind": "in-silico"
+    },
+    {
+     "step": "Selectivity panel: separate motility from topoisomerase activity.",
+     "kind": "in-vitro"
+    },
+    {
+     "step": "Formulate as a gut-restricted prodrug if systemic exposure is the liability.",
+     "kind": "formulation"
+    }
+   ],
+   "residual_risk": [
+    "Classic PAINS: redox-cycling, metal-chelating, promiscuous — any single-target claim is suspect.",
+    "Anthraquinone laxatives carry a dependency/tolerance concern.",
+    "Genotoxicity signal in some assays; needs careful toxicology."
+   ],
+   "safety": {
+    "flags": [
+     "PAINS liability",
+     "anthraquinone genotoxicity signal",
+     "laxative dependency"
+    ],
+    "severity": "caution"
+   },
+   "status": "lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "神農本草經",
+    "year": -200,
+    "locator": "下品 · 大黃",
+    "span_kind": "verbatim",
+    "text": "大黃，味苦寒。主下瘀血，血閉寒熱，破癥瘕積聚，留飲宿食，蕩滌腸胃，推陳致新。",
+    "translation": "Rhubarb, bitter and cold. Drives out stagnant blood and closed menses with chills and fever; breaks abdominal masses, retained fluids and old food; scours the stomach and bowels, expelling the old and bringing in the new."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 270.24,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 5
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 7
+  },
+  {
+   "id": "C-12",
+   "name": "Triptolide",
+   "name_cn": "雷公藤甲素",
+   "discovery_class": "weiyanjiu",
+   "classical_lead": {
+    "drug": "雷公藤",
+    "drug_en": "Tripterygium wilfordii root",
+    "part": "root",
+    "processing": "去皮 (de-barked) — the classical toxicity-reduction step",
+    "formula_role": "君 (emperor)",
+    "source": "本草綱目拾遺 · 現代中藥學"
+   },
+   "formula": "C20H24O6",
+   "mw": 360.41,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦",
+     "辛"
+    ],
+    "channels": [
+     "肝",
+     "腎"
+    ],
+    "direction": "降",
+    "grade": "下品 (大毒)"
+   },
+   "mechanism": {
+    "target_class": "XPB (TFIIH) inhibitor — RNA polymerase II transcription shut-off",
+    "pathway": "global transcription inhibition; NF-κB and HSP70 downregulation",
+    "evidence_level": "established mechanism, severe toxicity"
+   },
+   "novelty": {
+    "score": 0.27,
+    "basis": "mechanism is known and remarkable (covalent XPB inhibition); the blocker is toxicity and water solubility, not novelty"
+   },
+   "theory_justification": "大毒·下品, 苦·辛, 寒, entering 肝/腎 — the theory's strongest toxicity warning, and the measured profile (hepatotoxicity, nephrotoxicity, gonadal toxicity) matches organ for organ. Included to show that the pipeline can rank a molecule by *how* it will fail.",
+   "development_path": [
+    {
+     "step": "Prodrug / targeted-delivery strategy is the only viable route.",
+     "kind": "medicinal-chemistry"
+    },
+    {
+     "step": "Species-specific toxicity comparison to size the therapeutic window.",
+     "kind": "toxicology"
+    },
+    {
+     "step": "Do NOT advance as a systemic agent without a delivery solution.",
+     "kind": "governance"
+    }
+   ],
+   "residual_risk": [
+    "Severely toxic: hepatotoxic, nephrotoxic, gonadotoxic, teratogenic.",
+    "Poor aqueous solubility and low oral bioavailability.",
+    "The classical 去皮 step is a real toxicity-reduction procedure that modern products sometimes skip."
+   ],
+   "safety": {
+    "flags": [
+     "highly toxic — hepatotoxic, nephrotoxic, gonadotoxic, teratogenic",
+     "no preparation or dosing information appears in this output",
+     "listed here as a ranked *risk* profile and as a delivery-science problem, not a therapy"
+    ],
+    "severity": "high"
+   },
+   "status": "safety-lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "本草綱目拾遺",
+    "year": 1765,
+    "locator": "卷六 · 雷公藤",
+    "span_kind": "paraphrase",
+    "text": "雷公藤：味苦辛，性寒，有大毒。能殺蟲攻毒，然服之令人吐瀉，不可輕用。",
+    "translation": "Thunder god vine: bitter and pungent, cold, and greatly toxic. It kills parasites and attacks toxicity, but taken internally it causes vomiting and diarrhoea — it must not be used lightly."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 360.41,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 6
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 8
+  },
+  {
+   "id": "C-01",
+   "name": "18β-glycyrrhetinic acid",
+   "name_cn": "甘草次酸",
+   "discovery_class": "paozhi",
+   "classical_lead": {
+    "drug": "甘草",
+    "drug_en": "Glycyrrhiza uralensis root",
+    "part": "root",
+    "processing": "蜜炙 (honey-fried) — 雷公炮炙論",
+    "formula_role": "使 (courier)",
+    "source": "神農本草經 · 傷寒論 · 雷公炮炙論"
+   },
+   "formula": "C30H46O4",
+   "mw": 470.69,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "平",
+    "flavors": [
+     "甘"
+    ],
+    "channels": [
+     "心",
+     "肺",
+     "脾",
+     "胃"
+    ],
+    "direction": "升",
+    "grade": "上品"
+   },
+   "mechanism": {
+    "target_class": "11β-hydroxysteroid dehydrogenase type 2 (11β-HSD2) inhibitor",
+    "pathway": "cortisol → cortisone inactivation in the distal nephron; MR occupancy",
+    "evidence_level": "established"
+   },
+   "novelty": {
+    "score": 0.21,
+    "basis": "the 11β-HSD2 liability is textbook; the discovery is that the corpus encodes it as a contraindication, not a mechanism",
+    "prior_art": "Conn 1968; Stewart 1987; EMA monograph"
+   },
+   "theory_justification": "甘 = 緩 and 補, classified 平, entering 脾/胃 (the transformation axis). A 平·甘 root that is used *everywhere* as a harmoniser should be the formula component with the broadest off-target activity — and 使 role predicts PK exposure effects. The theory predicts 'broad, dose-dependent, non-specific'; the measured liability (MR-mediated hypertension, hypokalaemia) is exactly that class.",
+   "development_path": [
+    {
+     "step": "Structure is known; no structural work needed.",
+     "kind": "in-silico"
+    },
+    {
+     "step": "Urinary cortisol/cortisone ratio in a 4-week controlled feeding study (n=24).",
+     "kind": "clinical-metabolism"
+    },
+    {
+     "step": "Retrospective: glycyrrhizin exposure vs blood pressure in existing cohort data.",
+     "kind": "epidemiology"
+    }
+   ],
+   "residual_risk": [
+    "logP ≈ 5.9 sits above the Lipinski ceiling — poor oral bioavailability unless formulated as the glycoside.",
+    "Any 11β-HSD2 inhibitor is a hypertension risk by design; that is why the output is a hepatology and inflammation lead, never a cardiorespiratory one.",
+    "Commercial root quality varies by an order of magnitude in glycyrrhizin content."
+   ],
+   "safety": {
+    "flags": [
+     "contraindicated in hypertension, hypokalaemia, pregnancy",
+     "interacts with diuretics and digoxin via potassium"
+    ],
+    "severity": "high"
+   },
+   "status": "lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "神農本草經",
+    "year": -200,
+    "locator": "上品 · 甘草",
+    "span_kind": "verbatim",
+    "text": "甘草，味甘平。主五臟六腑寒熱邪氣，堅筋骨，長肌肉，倍力，金瘡腫，解毒。",
+    "translation": "Licorice, sweet and neutral. Governs hot and cold pathogenic qi of the five viscera and six bowels; strengthens sinew and bone, grows flesh and strength, heals swelling wounds, resolves toxicity."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 470.69,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 4
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 9
+  },
+  {
+   "id": "C-02",
+   "name": "Piperine",
+   "name_cn": "胡椒鹼",
+   "discovery_class": "junchen_zuoshi",
+   "classical_lead": {
+    "drug": "胡椒",
+    "drug_en": "Piper longum fruit",
+    "part": "fruit",
+    "processing": "dried, ground",
+    "formula_role": "使 (courier)",
+    "source": "本草綱目 · 太平惠民和劑局方"
+   },
+   "formula": "C17H19NO3",
+   "mw": 285.34,
+   "smiles": "O=C(/C=C/C=C/c1ccc2OCOc2c1)N1CCCC1",
+   "structure_status": "resolved",
+   "structure_note": "canonical SMILES — resolve against PubChem PUG-REST by name at build time",
+   "theory": {
+    "nature": "熱",
+    "flavors": [
+     "辛"
+    ],
+    "channels": [
+     "胃",
+     "大腸"
+    ],
+    "direction": "升",
+    "grade": "中品"
+   },
+   "mechanism": {
+    "target_class": "CYP3A4 inhibitor; P-glycoprotein modulator (bioavailability enhancer)",
+    "pathway": "intestinal first-pass metabolism and efflux",
+    "evidence_level": "established"
+   },
+   "novelty": {
+    "score": 0.18,
+    "basis": "piperine is the reference bioavailability enhancer; its value here is as the calibration molecule for the 使-role hypothesis"
+   },
+   "theory_justification": "辛·熱 and 升, entering 胃/大腸 — the flavour that 'moves and disperses' is assigned to the upper gastrointestinal tract. A 辛·熱 aromatic that acts where absorption happens is precisely a PK modulator, and the corpus gives it the 使 role that predicts exactly that. The theory vector and the measured property agree, which is why it is the calibration point.",
+   "development_path": [
+    {
+     "step": "Already characterised — use as the positive control for the 使 enrichment test.",
+     "kind": "in-silico"
+    },
+    {
+     "step": "Pick an untested 使-role aromatic and run the same CYP3A4/P-gp panel.",
+     "kind": "in-vitro"
+    }
+   ],
+   "residual_risk": [
+    "Potent CYP3A4 inhibition is a herb–drug interaction hazard in its own right.",
+    "High volatility and poor aqueous solubility complicate formulation.",
+    "The interesting output is the courier it predicts — not piperine, which everyone knows."
+   ],
+   "safety": {
+    "flags": [
+     "clinically relevant CYP3A4 inhibition — interacts with many drugs"
+    ],
+    "severity": "caution"
+   },
+   "status": "lead",
+   "fixture": true,
+   "classical_line": {
+    "source": "海藥本草",
+    "year": 900,
+    "locator": "草部 · 胡椒",
+    "span_kind": "paraphrase",
+    "text": "胡椒，出西戎摩伽陀國，其形似鼠李，味辛大溫。今廣州、舶上皆有之。",
+    "translation": "Pepper comes from Magadha in the western regions; its fruit resembles buckthorn, its flavour pungent and strongly warming. It now arrives by ship at Guangzhou."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 285.34,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 1,
+     "o": 3
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 10
+  },
+  {
+   "id": "C-06",
+   "name": "Berberine",
+   "name_cn": "小檗鹼",
+   "discovery_class": "peiwu_jinji",
+   "classical_lead": {
+    "drug": "黃連",
+    "drug_en": "Coptis chinensis rhizome",
+    "part": "rhizome",
+    "processing": "raw, or 酒炒 (wine-fried)",
+    "formula_role": "君 (emperor)",
+    "source": "神農本草經 · 本草綱目"
+   },
+   "formula": "C20H18NO4+",
+   "mw": 336.37,
+   "smiles": null,
+   "structure_status": "pending",
+   "structure_note": "no structure recorded; leave null rather than invent one (brief §11.3)",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦"
+    ],
+    "channels": [
+     "心",
+     "胃",
+     "大腸",
+     "肝"
+    ],
+    "direction": "降",
+    "grade": "上品"
+   },
+   "mechanism": {
+    "target_class": "AMPK activator (indirect); gut-microbiota modulation; FXR signalling",
+    "pathway": "bile-acid metabolism → FXR → hepatic gluconeogenesis",
+    "evidence_level": "established (large literature)"
+   },
+   "novelty": {
+    "score": 0.14,
+    "basis": "extremely well studied; included as a low-novelty calibration point"
+   },
+   "theory_justification": "大苦·大寒, 降, entering 胃/大腸 first — the theory predicts a gut-first mechanism, not a systemic one. The modern finding (microbiota-mediated, bile-acid-dependent) is a gut-first mechanism. This is the strongest single instance of 歸經 predicting the compartment of action.",
+   "development_path": [
+    {
+     "step": "Already established — use as the positive control for the channel-tropism test.",
+     "kind": "in-silico"
+    },
+    {
+     "step": "Test whether 胃/大腸-tropic herbs as a class are enriched for gut-restricted mechanisms.",
+     "kind": "statistical"
+    }
+   ],
+   "residual_risk": [
+    "Quaternary ammonium cation: very poor oral absorption (~5%); the systemic effects are partly indirect.",
+    "CYP3A4 interaction liability; pregnancy contraindication.",
+    "Already the subject of a large supplement industry — novelty near zero."
+   ],
+   "safety": {
+    "flags": [
+     "CYP3A4 interaction",
+     "contraindicated in pregnancy"
+    ],
+    "severity": "caution"
+   },
+   "status": "calibration",
+   "fixture": true,
+   "classical_line": {
+    "source": "神農本草經",
+    "year": -200,
+    "locator": "上品 · 黃連",
+    "span_kind": "verbatim",
+    "text": "黃連，味苦寒。主熱氣，目痛眥傷泣出，明目，腸澼腹痛下痢，婦人陰中腫痛。",
+    "translation": "Coptis, bitter and cold. Governs heat qi, sore eyes with discharging canthi, brightens the eyes, dysenteric disorders with abdominal pain, and swelling pain of the female genitalia."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 336.37,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 1,
+     "o": 4
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 11
+  },
+  {
+   "id": "C-10",
+   "name": "Artemisinin",
+   "name_cn": "青蒿素",
+   "discovery_class": "weiyanjiu",
+   "classical_lead": {
+    "drug": "青蒿",
+    "drug_en": "Artemisia annua aerial parts",
+    "part": "aerial parts",
+    "processing": "cold extraction with water (冷浸) — the classical instruction",
+    "formula_role": "君 (emperor)",
+    "source": "本草綱目 · 肘後備急方"
+   },
+   "formula": "C15H22O5",
+   "mw": 282.34,
+   "smiles": "CC1CCC2C(C)C(=O)OC3OC4(C)CCC1C23OO4",
+   "structure_status": "resolved",
+   "structure_note": "canonical SMILES — resolve against PubChem PUG-REST by name at build time",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦",
+     "辛"
+    ],
+    "channels": [
+     "肝",
+     "膽"
+    ],
+    "direction": "降",
+    "grade": "中品"
+   },
+   "mechanism": {
+    "target_class": "endoperoxide — heme-mediated radical activation; PfATP6 and multiple parasite targets",
+    "pathway": "parasite oxidative stress; artemisinin resistance via Kelch13",
+    "evidence_level": "established (Nobel 2015)"
+   },
+   "novelty": {
+    "score": 0.02,
+    "basis": "the single most famous instance of the corpus producing a drug — included as the historical anchor, with near-zero novelty"
+   },
+   "theory_justification": "苦·寒, entering 肝/膽 — a liver-and-gallbladder tropism for a febrile disease that the tradition called 瘧. The endoperoxide is activated by haem iron, and haem catabolism happens in the liver and in the parasite's digestive vacuole. This is the case study that proves the whole thesis is possible; it is also the reason nobody should be impressed by novelty alone.",
+   "development_path": [
+    {
+     "step": "None needed — this is the anchor example.",
+     "kind": "historical"
+    }
+   ],
+   "residual_risk": [
+    "Resistance (Kelch13) is now widespread; monotherapy is contraindicated.",
+    "The classical preparation (cold water extract) differs from the modern purified compound — the corpus's own instruction is a solubility insight."
+   ],
+   "safety": {
+    "flags": [
+     "never use as monotherapy",
+     "resistance is established"
+    ],
+    "severity": "caution"
+   },
+   "status": "historical-anchor",
+   "fixture": true,
+   "classical_line": {
+    "source": "肘後備急方",
+    "year": 340,
+    "locator": "治瘧病方",
+    "span_kind": "verbatim",
+    "text": "青蒿一握，以水二升漬，絞取汁，盡服之。",
+    "translation": "One handful of sweet wormwood, steeped in two sheng of water, wrung out and the juice drunk entire. — the line that led to artemisinin."
+   },
+   "druglikeness": {
+    "rule_of_five": {
+     "mw": {
+      "value": 282.34,
+      "threshold": 500,
+      "pass_": true
+     },
+     "logp": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hbd": {
+      "value": null,
+      "threshold": 5,
+      "pass_": null
+     },
+     "hba": {
+      "value": null,
+      "threshold": 10,
+      "pass_": null
+     }
+    },
+    "veber": {
+     "rotatable": {
+      "value": null,
+      "threshold": 10
+     },
+     "tpsa": {
+      "value": null,
+      "threshold": 140
+     }
+    },
+    "evaluated": 1,
+    "total": 4,
+    "heteroatoms": {
+     "n": 0,
+     "o": 5
+    },
+    "note": "Molecular weight is computed from the molecular formula. logP, HBD/HBA and TPSA need a resolved structure; they are left null rather than estimated."
+   },
+   "rank": 12
+  }
+ ]
+}

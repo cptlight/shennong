@@ -1,0 +1,111 @@
+{
+ "generated_at": "2026-11-05T09:00:00Z",
+ "fixture": true,
+ "note": "DEMO FIXTURE twin of eval/report.json. Every number here is invented for layout testing. The Workbench chips each value as DEMO FIXTURE. Replace with `python -m shennong.cli report --out eval/report.json`.",
+ "corpus": {
+  "sources": 30,
+  "chars": 18400000,
+  "languages": {
+   "zh-Hant": 17,
+   "sa": 5,
+   "ar": 2,
+   "en": 5
+  },
+  "traditions": {
+   "tcm": 12,
+   "alchemy": 4,
+   "acupuncture": 3,
+   "ayurveda": 6,
+   "unani": 2
+  }
+ },
+ "benchmarks": {
+  "drug_name_resolution_f1": {
+   "score": 0.0,
+   "n": 0
+  },
+  "theory_vector_extraction_f1": {
+   "score": 0.0,
+   "n": 0
+  },
+  "grounded_answer_rate": {
+   "score": 0.0,
+   "n": 0
+  }
+ },
+ "hypotheses": {
+  "n": 13,
+  "by_class": {
+   "paozhi": 2,
+   "yiming_tongwu": 2,
+   "junchen_zuoshi": 2,
+   "peiwu_jinji": 2,
+   "weiyanjiu": 2,
+   "binwei_daiyong": 2
+  },
+  "mean_novelty": 0.0
+ },
+ "drug_discovery": {
+  "candidates": 12,
+  "mean_novelty": null,
+  "theory_predictivity": {
+   "tcm_nature": {
+    "metric": "auc",
+    "value": 0.63,
+    "n": 412,
+    "p": 0.004,
+    "fixture": true,
+    "hypothesis": "四氣 (cold/hot nature) predicts compound polarity and thermolability",
+    "note": "FIXTURE VALUE — replace from eval/report.json"
+   },
+   "tcm_channel": {
+    "metric": "auc",
+    "value": 0.58,
+    "n": 388,
+    "p": 0.062,
+    "fixture": true,
+    "hypothesis": "歸經 (channel tropism) predicts target organ / receptor family",
+    "note": "FIXTURE VALUE — replace from eval/report.json"
+   },
+   "tcm_flavor": {
+    "metric": "auc",
+    "value": 0.55,
+    "n": 402,
+    "p": 0.118,
+    "fixture": true,
+    "hypothesis": "五味 (five flavours) predict receptor class",
+    "note": "FIXTURE VALUE — replace from eval/report.json"
+   },
+   "ayurveda_virya": {
+    "metric": "rho",
+    "value": 0.21,
+    "n": 196,
+    "p": 0.031,
+    "fixture": true,
+    "hypothesis": "vīrya (hot/cold potency) predicts logP and thermolability",
+    "note": "FIXTURE VALUE — replace from eval/report.json"
+   },
+   "ayurveda_rasa": {
+    "metric": "auc",
+    "value": 0.52,
+    "n": 188,
+    "p": 0.284,
+    "fixture": true,
+    "hypothesis": "ṣaḍrasa (six tastes) predict pharmacological action class",
+    "note": "FIXTURE VALUE — replace from eval/report.json"
+   }
+  },
+  "lipinski_pass_rate": null,
+  "fixture": true,
+  "note": "FIXTURE — candidate counts and predictivity values are placeholders."
+ },
+ "negative_controls": {
+  "quxiangbilei": {
+   "rho": 0.04,
+   "p": 0.61
+  },
+  "null_model": {
+   "score_drop": 0.0
+  }
+ }
+}

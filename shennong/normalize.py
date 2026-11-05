@@ -208,9 +208,10 @@ def normalise_offsets(text: str) -> str:
             out.append(_IAST_FOLD[ch])
         elif ch in _ARABIC_FOLD:
             repl = _ARABIC_FOLD[ch]
-            out.append(repl if repl is not None else "")
+            # length-preserving: keep the character when the fold would delete it
+            out.append(repl if repl is not None else ch)
         elif ch in _ARABIC_DIACRITICS:
-            continue
+            out.append(ch)  # kept for offsets; removed by normalise() for match keys
         elif ch in _EN_FOLD:
             out.append(_EN_FOLD[ch])
         else:

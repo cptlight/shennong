@@ -171,27 +171,49 @@ def clean_wikisource(text: str, lang: str = "zh-Hant") -> str:
 
 
 _CJK_PUNCT_END = "。！？；：」』）】…"
+_FIELD_MARK = re.compile(r"^【[^】]{1,8}】")
+# A line that is a drug/entry name: short, and carries no sentence punctuation at all.
+_CJK_NAME_MAX = 18
+
+
+def _is_cjk_heading(s: str) -> bool:
+    """True for a classical entry-name line ("甘草") or a field marker ("【氣味】…")."""
+    if _FIELD_MARK.match(s):
+        return True
+    if len(s) > _CJK_NAME_MAX:
+        return False
+    if re.search(r"[。！？；：，、]", s):
+        return False
+    return True
 
 
 def _reflow_cjk(lines: list[str]) -> str:
-    """Re-join hard-wrapped CJK lines inside a paragraph.
+    """Re-join hard-wrapped CJK prose while preserving entry structure.
 
     CJK text has no inter-word spaces, so a newline in the middle of a sentence is an
-    artefact of the source transcription (or of printed column width), not a boundary.
-    Blank lines and heading lines remain paragraph breaks.
+    artefact of the source transcription, not a boundary. But 本草 "entries" *are* delimited
+    by a standalone drug-name line followed by 【釋名】【氣味】【主治】 field markers, and that
+    structure is exactly what the property parser needs. So: re-join prose lines, keep
+    heading and field lines as their own paragraphs.
     """
     paras: list[str] = []
     buf: list[str] = []
+
+    def flush():
+        if buf:
+            paras.append("".join(buf))
+            buf.clear()
+
     for ln in lines:
         if not ln:
-            if buf:
-                paras.append("".join(buf))
-                buf = []
+            flush()
             continue
-        # a heading-ish short line with no sentence punctuation ends the paragraph
+        if _is_cjk_heading(ln):
+            flush()
+            paras.append(ln)
+            continue
         buf.append(ln)
-    if buf:
-        paras.append("".join(buf))
+    flush()
     return "\n\n".join(p for p in paras if p.strip()).strip()
 
 

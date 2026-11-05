@@ -177,6 +177,66 @@
    "weight": 0.45
   },
   {
+   "id": "source:fx_tiangong_kaiwu",
+   "label": "天工開物",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_qimin_yaoshu",
+   "label": "齊民要術",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_mengxi_bitan",
+   "label": "夢溪筆談",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_jiuhuang_bencao",
+   "label": "救荒本草",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_zhiwu_tukao",
+   "label": "植物名實圖考",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_yinshan_zhengyao",
+   "label": "飲膳正要",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_haiyao_bencao",
+   "label": "海藥本草",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_vrksayurveda",
+   "label": "Vṛkṣāyurveda",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_kitab_al_nabat",
+   "label": "كتاب النبات",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
+   "id": "source:fx_arthashastra",
+   "label": "Arthaśāstra",
+   "type": "source",
+   "weight": 0.45
+  },
+  {
    "id": "source:fx_culpeper_control",
    "label": "The Complete Herbal",
    "type": "source",
@@ -1223,7 +1283,7 @@
    40
   ],
   "source:fx_bencao_gangmu": [
-   654.6,
+   815.0,
    800.0
   ],
   "source:fx_bencao_jing_jizhu": [
@@ -1240,22 +1300,22 @@
   ],
   "source:fx_jingui_yaolue": [
    1200.0,
-   800.0
+   40
   ],
   "source:fx_qianjin_yaofang": [
    1200.0,
-   800.0
+   429.3
   ],
   "source:fx_taiping_huimin": [
-   592.7,
+   1200.0,
    40
   ],
   "source:fx_leigong_paozhi": [
-   40,
-   705.4
+   51.8,
+   642.2
   ],
   "source:fx_ru-men-shi-qin": [
-   248.7,
+   141.9,
    40
   ],
   "source:fx_baopuzi": [
@@ -1268,7 +1328,7 @@
   ],
   "source:fx_huangdi_neijing": [
    1200.0,
-   649.5
+   800.0
   ],
   "source:fx_nanjing": [
    1200.0,
@@ -1288,7 +1348,7 @@
   ],
   "source:fx_charaka": [
    1200.0,
-   80.7
+   800.0
   ],
   "source:fx_susruta": [
    1200.0,
@@ -1299,7 +1359,7 @@
    800.0
   ],
   "source:fx_rasa_ratna": [
-   859.3,
+   1096.5,
    800.0
   ],
   "source:fx_astangahridaya": [
@@ -1307,23 +1367,23 @@
    800.0
   ],
   "source:fx_kanun": [
-   781.8,
+   1200.0,
    800.0
   ],
   "source:fx_hawi": [
-   40,
+   1200.0,
    800.0
   ],
   "source:fx_gretil": [
-   40,
+   1200.0,
    800.0
   ],
   "source:fx_duke": [
-   40,
+   1200.0,
    800.0
   ],
   "source:fx_chembl": [
-   974.1,
+   900.5,
    40
   ],
   "source:fx_powo": [
@@ -1331,67 +1391,107 @@
    800.0
   ],
   "source:fx_gbif": [
-   1098.0,
+   1200.0,
+   800.0
+  ],
+  "source:fx_tiangong_kaiwu": [
+   726.4,
+   800.0
+  ],
+  "source:fx_qimin_yaoshu": [
+   40,
+   800.0
+  ],
+  "source:fx_mengxi_bitan": [
+   40,
+   800.0
+  ],
+  "source:fx_jiuhuang_bencao": [
+   40,
+   800.0
+  ],
+  "source:fx_zhiwu_tukao": [
+   40,
+   800.0
+  ],
+  "source:fx_yinshan_zhengyao": [
+   40,
+   800.0
+  ],
+  "source:fx_haiyao_bencao": [
+   40,
+   800.0
+  ],
+  "source:fx_vrksayurveda": [
+   40,
+   800.0
+  ],
+  "source:fx_kitab_al_nabat": [
+   40,
+   800.0
+  ],
+  "source:fx_arthashastra": [
+   40,
    800.0
   ],
   "source:fx_culpeper_control": [
    40,
-   800.0
+   604.1
   ],
   "drug:木通": [
-   482.4,
+   685.3,
    800.0
   ],
   "taxon:Akebia quinata": [
-   453.3,
+   680.9,
    800.0
   ],
   "taxon:Aristolochia manshuriensis": [
-   322.9,
+   555.3,
    800.0
   ],
   "compound:Aristolochic acid I": [
-   213.2,
+   470.2,
    800.0
   ],
   "target:OAT1/OAT3": [
-   135.5,
+   411.0,
    800.0
   ],
   "indication:Urothelial carcinoma": [
-   81.6,
+   369.6,
    800.0
   ],
   "compound:Akeboside": [
-   441.2,
+   687.2,
    800.0
   ],
   "drug:三七": [
-   813.6,
+   923.0,
    800.0
   ],
   "taxon:Panax notoginseng": [
-   988.9,
+   1084.5,
    800.0
   ],
   "taxon:Gynura pseudochina": [
-   873.5,
-   800.0
+   937.7,
+   625.8
   ],
   "compound:Pyrrolizidine alkaloids": [
-   907.8,
-   555.1
+   928.9,
+   338.2
   ],
   "target:CYP3A4": [
-   909.8,
-   252.7
+   888.2,
+   53.1
   ],
   "indication:Hepatic sinusoidal obstruction": [
-   1047.5,
-   264.8
+   1021.0,
+   40
   ],
   "compound:Notoginsenoside R1": [
-   1125.8,
+   1200.0,
    800.0
   ],
   "taxon:Aconitum carmichaelii": [
@@ -1404,42 +1504,42 @@
   ],
   "process:炮": [
    40,
-   386.6
+   360.8
   ],
   "process:蜜水煮": [
    40,
-   402.7
+   404.9
   ],
   "compound:Aconine": [
    40,
-   334.1
+   363.3
   ],
   "compound:Aconitine": [
    40,
-   139.1
+   163.7
   ],
   "target:NaV channel": [
    40,
-   204.4
+   245.6
   ],
   "compound:Benzoylaconine": [
    40,
-   240.4
+   274.9
   ],
   "taxon:Polygonum multiflorum": [
-   258.6,
+   416.6,
    800.0
   ],
   "drug:何首烏": [
-   359.0,
+   503.4,
    800.0
   ],
   "process:九蒸九曬": [
-   102.0,
+   222.9,
    800.0
   ],
   "compound:TSG": [
-   40,
+   61.0,
    800.0
   ],
   "target:Hepatocyte mitochondrion": [
@@ -1451,19 +1551,19 @@
    800.0
   ],
   "drug:甘草": [
-   206.3,
+   120.4,
    40
   ],
   "drug:甘遂": [
-   392.7,
+   273.7,
    40
   ],
   "drug:半夏": [
    40,
-   68.5
+   78.4
   ],
   "drug:海藻": [
-   103.4,
+   40,
    40
   ],
   "drug:水銀": [
@@ -1483,35 +1583,35 @@
    40
   ],
   "taxon:Glycyrrhiza uralensis": [
-   168.2,
+   64.6,
    40
   ],
   "compound:Glycyrrhizin": [
-   443.5,
+   331.8,
    40
   ],
   "compound:Glycyrrhetinic acid": [
-   667.1,
+   534.2,
    40
   ],
   "target:11b-HSD2": [
-   805.9,
+   638.0,
    40
   ],
   "target:P-gp": [
-   680.6,
+   582.0,
    40
   ],
   "taxon:Euphorbia kansui": [
-   438.7,
+   291.8,
    40
   ],
   "compound:Kansuinin A": [
-   567.1,
+   450.6,
    40
   ],
   "indication:Hypertension": [
-   904.8,
+   711.5,
    40
   ],
   "formula:四逆湯": [
@@ -1539,43 +1639,43 @@
    40
   ],
   "formula:參蘇飲": [
-   694.4,
+   1200.0,
    40
   ],
   "drug:人參": [
-   716.8,
+   1200.0,
    40
   ],
   "drug:紫蘇": [
-   807.0,
+   1200.0,
    40
   ],
   "drug:胡椒": [
-   723.5,
+   640.7,
    40
   ],
   "role:使": [
-   501.1,
+   414.1,
    40
   ],
   "taxon:Piper longum": [
-   869.1,
+   769.0,
    40
   ],
   "compound:Piperine": [
-   825.1,
+   760.9,
    40
   ],
   "taxon:Ranunculus ternatus": [
-   1200.0,
+   151.8,
    40
   ],
   "drug:貓爪草": [
-   1200.0,
+   234.4,
    40
   ],
   "indication:瘰癧 scrofula": [
-   1200.0,
+   314.5,
    40
   ],
   "taxon:Scutellaria barbata": [
@@ -1595,15 +1695,15 @@
    40
   ],
   "drug:犀角": [
-   916.2,
+   1076.2,
    800.0
   ],
   "drug:水牛角": [
-   1118.1,
+   1200.0,
    800.0
   ],
   "taxon:Rhinoceros": [
-   1039.0,
+   1200.0,
    800.0
   ],
   "taxon:Bubalus bubalis": [
@@ -1611,44 +1711,44 @@
    800.0
   ],
   "drug:穿山甲": [
-   779.6,
+   972.2,
    800.0
   ],
   "drug:豬蹄甲": [
-   733.1,
+   946.4,
    800.0
   ],
   "taxon:Manis pentadactyla": [
-   954.1,
+   1149.4,
    800.0
   ],
   "process:煅": [
-   822.8,
+   1042.2,
    800.0
   ],
   "cite:CITES Appendix I": [
-   1050.3,
+   1200.0,
    800.0
   ],
   "taxon:Juglans regia": [
    1200.0,
-   378.0
+   800.0
   ],
   "drug:核桃仁": [
    1200.0,
-   426.0
+   800.0
   ],
   "indication:Memory (by resemblance)": [
    1200.0,
-   302.0
+   800.0
   ],
   "concept:ṣaḍrasa": [
    1200.0,
-   186.1
+   800.0
   ],
   "concept:取象比類": [
    1200.0,
-   550.3
+   800.0
   ]
  }
 }

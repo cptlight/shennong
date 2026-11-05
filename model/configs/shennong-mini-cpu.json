@@ -1,0 +1,16 @@
+{
+  "name": "shennong-mini",
+  "architecture": "shennong_mini.ShennongMini",
+  "vocab_size": 16384,
+  "d_model": 256,
+  "n_layer": 6,
+  "n_head": 4,
+  "n_kv_head": 1,
+  "d_ff": 768,
+  "seq_len": 512,
+  "rope_theta": 10000.0,
+  "norm_eps": 1e-5,
+  "tie_word_embeddings": true,
+  "init_std": 0.02,
+  "attention_bias": false
+}

@@ -758,6 +758,7 @@ PROCESS_SYNONYMS: Mapping[str, str] = {
     "先煎": "xianjian", "湯洗": "washed", "汤洗": "washed", "去節": "remove_nodes", "去节": "remove_nodes",
     "去蘆頭": "remove_nodes", "去芦头": "remove_nodes", "去皮臍": "remove_nodes", "去皮脐": "remove_nodes",
     "切焙": "chao", "曬乾": "chao", "晒干": "chao",
+    "燒": "duan", "烧": "duan", "鍊": "duan", "炼": "duan", "煆": "duan",
     "roast": "pao", "steam": "zheng", "boil": "zhu", "decoct": "zhu", "fry": "chao",
     "calcine": "duan", "calcination": "duan", "quench": "cui", "sublime": "sublimation",
     "ferment": "fermentation", "wash": "washed",

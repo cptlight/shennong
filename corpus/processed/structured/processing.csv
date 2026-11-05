@@ -1,0 +1,318 @@
+drug_name,process_term,process_modern,effect,source_id
+朱砂,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+朱砂,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+朱砂,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+云母,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+钟乳,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+钟乳,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+钟乳,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+钟乳,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+白矾,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+白矾,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+白矾,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+硝石,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+硝石,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+芒硝,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+滑石,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+滑石,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+滑石,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+曾青,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+曾青,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+太一禹余粮,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+太一禹余粮,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+黄石脂,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+黄精,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+菖蒲,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+天门冬,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+天门冬,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+甘草,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+甘草,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+甘草,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+干地黄,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+牛膝,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+葳蕤,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+葳蕤,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+防葵,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+升麻,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+薯蓣,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+薏苡仁,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+石斛,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+石斛,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+巴戟天,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+黄连,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+黄连,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+络石,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+蒺藜子,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+黄,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+肉苁蓉,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+肉苁蓉,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+蒲黄,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+蒲黄,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+续断,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+续断,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+漏芦,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+营实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+五味子,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+五味子,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+蛇床子,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+蛇床子,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+徐长卿,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+徐长卿,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+云实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+王不留行,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+王不留行,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+鬼督邮,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+鬼督邮,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+紫桂,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+槐实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+枸杞根,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+柏子仁,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+侧柏叶,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+琥珀,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+酸枣仁,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+酸枣仁,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+柏木,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+楮实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+楮实,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+楮实,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+蔓荆实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+蔓荆实,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+辛夷,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+辛夷,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+杜仲,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+蕤仁,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+蕤仁,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+蕤仁,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+发,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+龙骨,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+麝香,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+牛黄,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+鹿角胶,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+鹿角胶,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+阿胶,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+牡蛎,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+牡蛎,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+牡蛎,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+牡蛎,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+真珠,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+真珠,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+石决明,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+石决明,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+石决明,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+海蛤,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+草豆蔻,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+覆盆子,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+巨胜,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+巨胜,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+雄黄,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+雄黄,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+雄黄,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+硫黄,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+硫黄,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+硫黄,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+雌黄,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+雌黄,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+雌黄,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+水银,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+水银,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+石膏,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+磁石,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+磁石,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+凝水石,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+凝水石,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+密陀僧,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+密陀僧,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+密陀僧,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+耳实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+苦参,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+芍药,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+瞿麦,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+玄参,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+玄参,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+知母,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+贝母,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+贝母,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+白芷,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+白芷,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+淫羊藿,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+狗脊,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+紫菀,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+紫草,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+败酱,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+败酱,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+白薇,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+女萎,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+恶实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+恶实,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+海藻,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+海藻,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+昆布,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+昆布,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+防己,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+天麻,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+天麻,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+天麻,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+御风草,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+御风草,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+御风草,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+阿魏,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+百部,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+牡丹,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+荜茇,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+酱,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+豆蔻,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+补骨脂,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+白前,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+白前,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+毕澄茄,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+桑根白皮,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+茱萸,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+茱萸,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+栀子,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+栀子,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+骐竭,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+枳壳,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+厚朴,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+猪苓,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+鬼箭,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+密蒙花,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+白马茎,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+鹿茸,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+鹿茸,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+羚羊角,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+犀角,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+虎睛,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+雀苏,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+雀苏,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+伏翼,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+伏翼,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+革蜂窠,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+鳖甲,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+鳖甲,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+蝉花,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+蝉花,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+蛴螬,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+乌贼鱼骨,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+乌贼鱼骨,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+白僵蚕,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+木瓜,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+木瓜,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+枇杷叶,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+金锁夭,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+曲,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+白荷,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+醍醐菜,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+伏龙肝,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+伏龙肝,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+石灰,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+砒霜,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+代赭,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+代赭,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+代赭,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+白垩,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+石髓铅,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+石髓铅,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+附子,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+附子,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+乌头,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+天雄,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+大黄,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+大黄,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+葶苈子,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+桔梗,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+莨菪子,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+旋复花,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+藜芦,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+钩吻,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+射干,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+蜀漆,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+大戟,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+章陆,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+草金零,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+蓖麻子,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+蓖麻子,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+仙茅,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+刘寄奴,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+骨碎补,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+骨碎补,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+赤地利,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+赤地利,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+赤车使者,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+巴豆,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+巴豆,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+蜀椒,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+皂荚,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+皂荚子,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+诃黎勒,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+诃黎勒,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+诃黎勒,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+楝实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+楝实,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+楝实,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+椿木根,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+郁李仁,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+毒木叶,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+墨石子,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+墨石子,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+雷丸,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+白杨树皮,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+苏方木,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+榉树皮,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+榉树皮,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+橡实,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+卖子木,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+腽肭脐,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+虾蟆,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+黑虎,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+蛇皮,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+蜘蛛,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+蚯蚓,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+蜈蚣,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+蛤蚧,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+蛤蚧,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+贝齿,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+贝齿,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+乌蛇,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+乌蛇,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+乌蛇,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+马陆,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+马陆,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+芫蜻,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+斑蝥,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+亭长,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+赤头,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+珂,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+甲香,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+桃仁,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+桃仁,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+鬼髑髅,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+鬼髑髅,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+杏仁,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+胡葱,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+胡葱,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+胡葱,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+*,炮,"high-temperature dry roasting (often in ash/sand), 160–250 °C","detoxification, reduction of irritant volatiles",ws_zh_leigong_paozhi
+*,炙,"frying with an excipient (honey, vinegar, wine, ginger juice, salt water)","modify drug property, reduce toxicity, target organ",ws_zh_leigong_paozhi
+*,煅,calcination of minerals/shells at 500–900 °C in a closed vessel,"decomposition of carbonates/sulfides, oxide formation",ws_zh_leigong_paozhi
+*,煨,"slow roasting wrapped in dough/paper, ~120–200 °C","remove volatile irritants, moderate action",ws_zh_leigong_paozhi
+*,淬,quenching a hot calcined mineral in vinegar/water (repeated),"hydration, salt formation, crystal fracture",ws_zh_leigong_paozhi
+*,蒸,"steaming (often repeated, 九蒸九曬)","hydrolysis, decarboxylation, removal of irritants",ws_zh_leigong_paozhi
+*,煮,boiling in water or an excipient liquor,"hydrolysis, extraction, detoxification",ws_zh_leigong_paozhi
+*,炒,dry stir-frying,"deactivation of enzymes, partial pyrolysis",ws_zh_leigong_paozhi
+*,炒焦,stir-frying to charred (焦),"pyrolysis, char adsorption, reduction of activity",ws_zh_leigong_paozhi
+*,炒炭,stir-frying to charcoal (炭),"carbonisation, haemostatic char formation",ws_zh_leigong_paozhi
+*,蜜炙,honey-fried,"sugar–glycoside interaction, moistening, lung targeting",ws_zh_leigong_paozhi
+*,醋炙,vinegar-fried,"salt formation with alkaloids, enhanced analgesia",ws_zh_leigong_paozhi
+*,酒炙,wine-fried,"increased lipophilicity, enhanced upward circulation",ws_zh_leigong_paozhi
+*,鹽炙,salt-water-fried,"salt formation, kidney targeting",ws_zh_leigong_paozhi
+*,薑汁炙,ginger-juice-fried,"reduction of toxicity, anti-emetic synergy",ws_zh_leigong_paozhi
+*,煅淬,calcination followed by quenching,oxide formation + hydration,ws_zh_leigong_paozhi
+*,昇,sublimation (昇華),"separation of sublimable solids (e.g. cinnabar, realgar)",ws_zh_leigong_paozhi
+*,飛,levigation/flotation (水飛),"particle-size reduction, water-soluble impurity removal",ws_zh_leigong_paozhi
+*,伏,suppression/fixation (伏火),"controlled oxidation/complexation, detonation-tendency reduction",ws_zh_leigong_paozhi
+*,製,general processing (製) — the umbrella term,any of the above operations,ws_zh_leigong_paozhi
+*,發酵,"fermentation (麴, 神麴)","microbial transformation, hydrolysis",ws_zh_leigong_paozhi
+*,焙,gentle drying over fire (焙),"dehydration, enzyme inactivation",ws_zh_leigong_paozhi
+*,研,"grinding/milling (研, 研細)",particle-size reduction,ws_zh_leigong_paozhi
+*,水飛,water levigation (水飛),size classification and soluble-impurity removal,ws_zh_leigong_paozhi
+*,日曬,sun-drying (曬),dehydration; in some processes UV-driven transformation,ws_zh_leigong_paozhi

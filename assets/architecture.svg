@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 880" width="1320" height="880"
+     role="img" aria-labelledby="ar-title ar-desc">
+  <title id="ar-title">SHENNONG repository architecture</title>
+  <desc id="ar-desc">Four planes: data (corpus, data, tokenizer), model (model, training, artifacts), knowledge
+    and discovery (the shennong package), and interface plus verification (app, eval, tests). Arrows are the
+    inter-stage data contracts.</desc>
+
+  <defs>
+    <style>
+      .h  { font-family: "Iowan Old Style", Palatino, Georgia, serif; }
+      .s  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .m  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .cjk{ font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif; }
+      .box { fill: #FCF8F0; stroke: #D8CCB4; stroke-width: 1.2; }
+      .plane-label { font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; letter-spacing: 2px; fill: #6B6153; }
+      .box-title { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; font-weight: 700; fill: #1B1815; }
+      .box-body  { font-family: system-ui, sans-serif; font-size: 11.3px; fill: #3A342C; }
+      .contract  { font-family: ui-monospace, Menlo, monospace; font-size: 10px; fill: #A8362A; }
+    </style>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#A8362A"/>
+    </marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2C6B5C"/>
+    </marker>
+  </defs>
+
+  <rect width="1320" height="880" fill="#F6F0E3"/>
+  <text class="h" x="48" y="54" font-size="27" font-weight="600" fill="#1B1815">SHENNONG — repository architecture</text>
+  <text class="s" x="48" y="80" font-size="13.5" fill="#6B6153">
+    Write scopes are disjoint per contributor; arrows are the only interfaces, and every one is a file contract.
+  </text>
+
+  <!-- ============================ PLANE 1: DATA ============================ -->
+  <text class="plane-label" x="48" y="122">PLANE 1 · DATA — 采 CǍI and 制 ZHÌ</text>
+  <g>
+    <rect class="box" x="48" y="136" width="292" height="118" rx="4"/>
+    <rect x="48" y="136" width="292" height="4" rx="2" fill="#A8362A"/>
+    <text class="box-title" x="68" y="162">corpus/</text>
+    <text class="box-body" x="68" y="184">registry/sources.yaml · raw/ · processed/</text>
+    <text class="box-body" x="68" y="203">corpus.jsonl · lexicon_drugs.json</text>
+    <text class="box-body" x="68" y="222">DATA_CARD.md · per-source licence ledger</text>
+    <text class="contract" x="68" y="243">owner: data-curator</text>
+
+    <rect class="box" x="386" y="136" width="292" height="118" rx="4"/>
+    <rect x="386" y="136" width="292" height="4" rx="2" fill="#8A6420"/>
+    <text class="box-title" x="406" y="162">data/</text>
+    <text class="box-body" x="406" y="184">fetchers · cleaners · dedupe (13-gram)</text>
+    <text class="box-body" x="406" y="203">drug-name lexicons · structured builders</text>
+    <text class="box-body" x="406" y="222">properties.csv · ayurveda_properties.csv</text>
+    <text class="contract" x="406" y="243">owner: data-curator</text>
+
+    <rect class="box" x="724" y="136" width="292" height="118" rx="4"/>
+    <rect x="724" y="136" width="292" height="4" rx="2" fill="#8A6420"/>
+    <text class="box-title" x="744" y="162">tokenizer/</text>
+    <text class="box-body" x="744" y="184">domain BPE — zh-classical / sa / en</text>
+    <text class="box-body" x="744" y="203">vocab sized for DJK + Devanagari</text>
+    <text class="box-body" x="744" y="222">train_tokenizer.py · tokenizer.json</text>
+    <text class="contract" x="744" y="243">owner: model-forge</text>
+  </g>
+  <g stroke="#A8362A" stroke-width="1.8" marker-end="url(#a1)">
+    <line x1="342" y1="195" x2="380" y2="195"/>
+    <line x1="680" y1="195" x2="718" y2="195"/>
+  </g>
+
+  <!-- ============================ PLANE 2: MODEL ============================ -->
+  <text class="plane-label" x="48" y="300">PLANE 2 · MODEL — a 400 MB research instrument, trained on CPU</text>
+  <g>
+    <rect class="box" x="48" y="314" width="292" height="118" rx="4"/>
+    <rect x="48" y="314" width="292" height="4" rx="2" fill="#2B4A6F"/>
+    <text class="box-title" x="68" y="340">model/</text>
+    <text class="box-body" x="68" y="362">shennong_mini.py (Llama-style)</text>
+    <text class="box-body" x="68" y="381">configs/ · MODEL_CARD.md</text>
+    <text class="box-body" x="68" y="400">export/gguf.py + quantisation path</text>
+    <text class="contract" x="68" y="421">owner: model-forge</text>
+
+    <rect class="box" x="386" y="314" width="292" height="118" rx="4"/>
+    <rect x="386" y="314" width="292" height="4" rx="2" fill="#2B4A6F"/>
+    <text class="box-title" x="406" y="340">training/</text>
+    <text class="box-body" x="406" y="362">pretrain (from scratch) · CPT · LoRA SFT</text>
+    <text class="box-body" x="406" y="381">runs/&lt;id&gt;/metrics.json + loss_curve</text>
+    <text class="box-body" x="406" y="400">real logs, real seeds, wall-clock</text>
+    <text class="contract" x="406" y="421">owner: model-forge</text>
+
+    <rect class="box" x="724" y="314" width="292" height="118" rx="4"/>
+    <rect x="724" y="314" width="292" height="4" rx="2" fill="#2C6B5C"/>
+    <text class="box-title" x="744" y="340">artifacts/</text>
+    <text class="box-body" x="744" y="362">GGUF weights (&lt; 1 GB) + sha256</text>
+    <text class="box-body" x="744" y="381">training logs · loss curve export</text>
+    <text class="box-body" x="744" y="400">drug_candidates.json + .md</text>
+    <text class="contract" x="744" y="421">public, Apache-2.0, no gate</text>
+  </g>
+  <g stroke="#A8362A" stroke-width="1.8" marker-end="url(#a1)">
+    <line x1="342" y1="373" x2="380" y2="373"/>
+    <line x1="680" y1="373" x2="718" y2="373"/>
+  </g>
+  <path d="M870 258 L870 292" stroke="#A8362A" stroke-width="1.8" marker-end="url(#a1)" fill="none"/>
+  <text class="contract" x="880" y="282">corpus.jsonl → tokens</text>
+
+  <!-- ============================ PLANE 3: KNOWLEDGE & DISCOVERY ============================ -->
+  <text class="plane-label" x="48" y="478">PLANE 3 · KNOWLEDGE &amp; DISCOVERY — 配 PÈI and 使 SHǏ</text>
+  <rect class="box" x="48" y="492" width="968" height="132" rx="4"/>
+  <rect x="48" y="492" width="968" height="4" rx="2" fill="#2C6B5C"/>
+  <text class="box-title" x="68" y="520">shennong/</text>
+  <text class="contract" x="884" y="520">owner: discovery-engine</text>
+  <g>
+    <rect x="68" y="536" width="176" height="66" rx="3" fill="#F6F0E3" stroke="#D8CCB4"/>
+    <text class="box-title" x="80" y="558" font-size="11.5">kg/</text>
+    <text class="box-body" x="80" y="576">graph builder</text>
+    <text class="box-body" x="80" y="592">incompatibility edges</text>
+
+    <rect x="258" y="536" width="176" height="66" rx="3" fill="#F6F0E3" stroke="#D8CCB4"/>
+    <text class="box-title" x="270" y="558" font-size="11.5">extract/ decode/</text>
+    <text class="box-body" x="270" y="576">entities · theory vectors</text>
+    <text class="box-body" x="270" y="592">process → chemistry</text>
+
+    <rect x="448" y="536" width="176" height="66" rx="3" fill="#F6F0E3" stroke="#D8CCB4"/>
+    <text class="box-title" x="460" y="558" font-size="11.5">discover/</text>
+    <text class="box-body" x="460" y="576">6 classes + candidates</text>
+    <text class="box-body" x="460" y="592">falsification plans</text>
+
+    <rect x="638" y="536" width="176" height="66" rx="3" fill="#F6F0E3" stroke="#D8CCB4"/>
+    <text class="box-title" x="650" y="558" font-size="11.5">rag/ safety/</text>
+    <text class="box-body" x="650" y="576">grounded answers</text>
+    <text class="box-body" x="650" y="592">refusal · dual-use</text>
+
+    <rect x="828" y="536" width="160" height="66" rx="3" fill="#F6F0E3" stroke="#D8CCB4"/>
+    <text class="box-title" x="840" y="558" font-size="11.5">learn/ eval/</text>
+    <text class="box-body" x="840" y="576">gated self-improvement</text>
+    <text class="box-body" x="840" y="592">benchmarks · nulls</text>
+  </g>
+  <path d="M870 432 L870 476" stroke="#2C6B5C" stroke-width="1.8" marker-end="url(#a2)" fill="none"/>
+  <text class="contract" x="880" y="462" fill="#2C6B5C">weights + KG</text>
+
+  <!-- ============================ PLANE 4: INTERFACE & VERIFICATION ============================ -->
+  <text class="plane-label" x="48" y="672">PLANE 4 · INTERFACE &amp; VERIFICATION</text>
+  <g>
+    <rect class="box" x="48" y="686" width="292" height="112" rx="4"/>
+    <rect x="48" y="686" width="292" height="4" rx="2" fill="#A8362A"/>
+    <text class="box-title" x="68" y="712">app/</text>
+    <text class="box-body" x="68" y="733">serve.py — stdlib HTTP, no build step</text>
+    <text class="box-body" x="68" y="752">Workbench: candidates · hypotheses ·</text>
+    <text class="box-body" x="68" y="769">graph · ask · corpus · methodology</text>
+    <text class="contract" x="68" y="789">owner: story-builder</text>
+
+    <rect class="box" x="386" y="686" width="292" height="112" rx="4"/>
+    <rect x="386" y="686" width="292" height="4" rx="2" fill="#2C6B5C"/>
+    <text class="box-title" x="406" y="712">eval/ + tests/</text>
+    <text class="box-body" x="406" y="733">report.json · theory_predictivity</text>
+    <text class="box-body" x="406" y="752">permutation nulls · ablation table</text>
+    <text class="box-body" x="406" y="769">pytest suite</text>
+    <text class="contract" x="406" y="789">owner: discovery-engine</text>
+
+    <rect class="box" x="724" y="686" width="292" height="112" rx="4"/>
+    <rect x="724" y="686" width="292" height="4" rx="2" fill="#8A6420"/>
+    <text class="box-title" x="744" y="712">submission/ + docs/ + assets/</text>
+    <text class="box-body" x="744" y="733">DEVPOST.md · SLIDES.md (10) ·</text>
+    <text class="box-body" x="744" y="752">VIDEO_SCRIPT.md (10:00)</text>
+    <text class="box-body" x="744" y="769">METHODOLOGY · EVALUATION · SAFETY</text>
+    <text class="contract" x="744" y="789">owner: story-builder</text>
+  </g>
+  <g stroke="#A8362A" stroke-width="1.8" marker-end="url(#a1)">
+    <line x1="870" y1="628" x2="870" y2="680"/>
+    <line x1="680" y1="742" x2="718" y2="742"/>
+  </g>
+  <text class="contract" x="880" y="660">kg.json · hypotheses.json · passages.json</text>
+
+  <!-- ============================ CONTRACTS ============================ -->
+  <rect x="48" y="824" width="968" height="34" rx="3" fill="#F3E7CB" stroke="#8A6420" stroke-dasharray="5 3"/>
+  <text class="s" x="66" y="846" font-size="11.8" fill="#8A6420">
+    <tspan font-weight="700">One command per stage.</tspan>
+    <tspan> make setup · corpus · tokenizer · train-mini · eval · app-data · workbench — reproducible from a clean clone on CPU.</tspan>
+  </text>
+
+  <!-- legend to the right of the title -->
+  <g>
+    <rect x="1044" y="120" width="228" height="180" rx="3" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <text class="m" x="1062" y="144" font-size="10" letter-spacing="1.6" fill="#6B6153">WRITE SCOPES</text>
+    <text class="box-body" x="1062" y="168"><tspan font-weight="700">lead</tspan> — brief, README, git</text>
+    <text class="box-body" x="1062" y="188"><tspan font-weight="700">data-curator</tspan> — corpus/, data/</text>
+    <text class="box-body" x="1062" y="208"><tspan font-weight="700">model-forge</tspan> — tokenizer/, model/,</text>
+    <text class="box-body" x="1078" y="224">training/, artifacts/</text>
+    <text class="box-body" x="1062" y="244"><tspan font-weight="700">discovery-engine</tspan> — shennong/,</text>
+    <text class="box-body" x="1078" y="260">tests/</text>
+    <text class="box-body" x="1062" y="280"><tspan font-weight="700">story-builder</tspan> — app/, docs/,</text>
+    <text class="box-body" x="1078" y="296">submission/, assets/</text>
+  </g>
+</svg>

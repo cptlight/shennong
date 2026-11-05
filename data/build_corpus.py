@@ -82,12 +82,13 @@ def chunk_text(text: str, lang: str, target: int = TARGET_CHARS,
         flat.extend(_splitlong(p, limit, cjk))
     chunks, buf = [], ""
     for p in flat:
-        joined_len = len(buf) + len(p) + (1 if not cjk else 0)
+        joined_len = len(buf) + len(p) + 1
         if buf and joined_len > target:
             chunks.append(buf)
             buf = p
         else:
-            buf = (buf + p) if cjk else (buf + "\n" + p if buf else p)
+            # keep the classical entry/paragraph boundary visible to the model
+            buf = (buf + "\n" + p) if buf else p
     if buf:
         chunks.append(buf)
     return [c for c in chunks if c.strip()]

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 470" width="1280" height="470"
+     role="img" aria-labelledby="pl-title pl-desc">
+  <title id="pl-title">The SHENNONG pipeline: 采 Cǎi → 制 Zhì → 配 Pèi → 使 Shǐ</title>
+  <desc id="pl-desc">Four stages named after the classical operations of Chinese pharmacy: collect, prepare,
+    combine, deploy. Each stage shows what the code does and which artefact it emits.</desc>
+
+  <defs>
+    <style>
+      .h  { font-family: "Iowan Old Style", Palatino, Georgia, "Songti SC", serif; }
+      .s  { font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", sans-serif; }
+      .m  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .cjk{ font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif; }
+    </style>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#A8362A"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="470" fill="#F6F0E3"/>
+
+  <text class="h" x="56" y="58" font-size="27" font-weight="600" fill="#1B1815">
+    The four classical operations of Chinese pharmacy
+  </text>
+  <text class="s" x="56" y="86" font-size="14.5" fill="#6B6153">
+    Used as the pipeline vocabulary everywhere — code, CLI, documentation and interface.
+  </text>
+
+  <!-- stage cards -->
+  <g>
+    <!-- 采 -->
+    <rect x="56" y="118" width="272" height="286" rx="4" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="56" y="118" width="272" height="5" rx="2" fill="#A8362A"/>
+    <text class="cjk" x="82" y="196" font-size="52" fill="#A8362A">采</text>
+    <text class="m" x="152" y="164" font-size="12" letter-spacing="2.4" fill="#6B6153">CǍI · COLLECT</text>
+    <text class="s" x="82" y="230" font-size="13.5" fill="#3A342C">Ingest and clean the public-domain</text>
+    <text class="s" x="82" y="250" font-size="13.5" fill="#3A342C">Asian record: Classical Chinese, Sanskrit,</text>
+    <text class="s" x="82" y="270" font-size="13.5" fill="#3A342C">Arabic, Tibetan, Japanese, Korean.</text>
+    <text class="m" x="82" y="356" font-size="11" fill="#6B6153">→ corpus.jsonl</text>
+    <text class="m" x="82" y="374" font-size="11" fill="#6B6153">→ registry/sources.yaml</text>
+
+    <!-- 制 -->
+    <rect x="356" y="118" width="272" height="286" rx="4" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="356" y="118" width="272" height="5" rx="2" fill="#8A6420"/>
+    <text class="cjk" x="382" y="196" font-size="52" fill="#8A6420">制</text>
+    <text class="m" x="452" y="164" font-size="12" letter-spacing="2.4" fill="#6B6153">ZHÌ · PREPARE</text>
+    <text class="s" x="382" y="230" font-size="13.5" fill="#3A342C">炮制 for text: normalise script and</text>
+    <text class="s" x="382" y="250" font-size="13.5" fill="#3A342C">orthography, resolve drug names across</text>
+    <text class="s" x="382" y="270" font-size="13.5" fill="#3A342C">eras to modern taxa, map process words</text>
+    <text class="s" x="382" y="290" font-size="13.5" fill="#3A342C">onto modern extraction chemistry.</text>
+    <text class="m" x="382" y="356" font-size="11" fill="#6B6153">→ lexicon_drugs.json</text>
+    <text class="m" x="382" y="374" font-size="11" fill="#6B6153">→ tokenizer/</text>
+
+    <!-- 配 -->
+    <rect x="656" y="118" width="272" height="286" rx="4" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="656" y="118" width="272" height="5" rx="2" fill="#2C6B5C"/>
+    <text class="cjk" x="682" y="196" font-size="52" fill="#2C6B5C">配</text>
+    <text class="m" x="752" y="164" font-size="12" letter-spacing="2.4" fill="#6B6153">PÈI · COMBINE</text>
+    <text class="s" x="682" y="230" font-size="13.5" fill="#3A342C">Build the graph: taxon ↔ compound ↔</text>
+    <text class="s" x="682" y="250" font-size="13.5" fill="#3A342C">target ↔ indication; formula roles</text>
+    <text class="s" x="682" y="270" font-size="13.5" fill="#3A342C">君臣佐使; 十八反 / 十九畏 / viruddha</text>
+    <text class="s" x="682" y="290" font-size="13.5" fill="#3A342C">incompatibility edges.</text>
+    <text class="m" x="682" y="356" font-size="11" fill="#6B6153">→ kg.json</text>
+    <text class="m" x="682" y="374" font-size="11" fill="#6B6153">→ properties.csv (性味歸經)</text>
+
+    <!-- 使 -->
+    <rect x="956" y="118" width="268" height="286" rx="4" fill="#FCF8F0" stroke="#D8CCB4"/>
+    <rect x="956" y="118" width="268" height="5" rx="2" fill="#2B4A6F"/>
+    <text class="cjk" x="982" y="196" font-size="52" fill="#2B4A6F">使</text>
+    <text class="m" x="1052" y="164" font-size="12" letter-spacing="2.4" fill="#6B6153">SHǏ · DEPLOY</text>
+    <text class="s" x="982" y="230" font-size="13.5" fill="#3A342C">Rank candidates, attach a falsification</text>
+    <text class="s" x="982" y="250" font-size="13.5" fill="#3A342C">plan and uncertainty to each, test the</text>
+    <text class="s" x="982" y="270" font-size="13.5" fill="#3A342C">Asian property vectors against modern</text>
+    <text class="s" x="982" y="290" font-size="13.5" fill="#3A342C">chemistry, publish the nulls.</text>
+    <text class="m" x="982" y="356" font-size="11" fill="#6B6153">→ drug_candidates.json</text>
+    <text class="m" x="982" y="374" font-size="11" fill="#6B6153">→ eval/report.json</text>
+  </g>
+
+  <!-- flow arrows -->
+  <g stroke="#A8362A" stroke-width="2.2" marker-end="url(#arw)">
+    <line x1="332" y1="262" x2="350" y2="262"/>
+    <line x1="632" y1="262" x2="650" y2="262"/>
+    <line x1="932" y1="262" x2="950" y2="262"/>
+  </g>
+
+  <text class="s" x="56" y="440" font-size="12.5" fill="#6B6153">
+    Every stage is one command, hashed artefacts, and a provenance record per source — the registry is a proof
+    obligation, not a wish list.
+  </text>
+</svg>

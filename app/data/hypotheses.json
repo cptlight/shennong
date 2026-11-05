@@ -4,27 +4,24 @@
  "note": "DEMO FIXTURE — invented scores and fixture corpus counts, for UI development only. Replaced by `python -m shennong.cli shi --out app/data/hypotheses.json`.",
  "pipeline": "采 Cǎi → 制 Zhì → 配 Pèi → 使 Shǐ",
  "corpus": {
-  "sources": 30,
-  "chars": 26333700,
+  "sources": 40,
+  "chars": 27683700,
   "tokens": 0,
   "languages": {
-   "zh-Hant": 17,
-   "sa": 5,
-   "ar": 2,
-   "sa-Latn": 1,
-   "ko": 1,
+   "zh-Hant": 24,
+   "sa": 7,
    "en": 5,
-   "bo": 1
+   "ar": 3,
+   "sa-Latn": 1
   },
   "traditions": {
-   "tcm": 12,
+   "tcm": 17,
+   "ayurveda": 7,
    "alchemy": 4,
-   "acupuncture": 3,
-   "ayurveda": 6,
-   "unani": 2,
-   "korean": 2,
-   "tibetan": 1,
    "foundational": 4,
+   "acupuncture": 3,
+   "unani": 3,
+   "korean": 1,
    "comparative-control": 1
   }
  },

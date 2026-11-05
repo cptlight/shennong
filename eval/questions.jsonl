@@ -1,0 +1,22 @@
+{"id":"Q-001","question":"What does the Shennong Bencao Jing say about licorice?","answerable":true,"gold_terms":["甘草"],"expected_terms":["甘草"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-002","question":"According to the Bencao Jing, what does ginseng brighten?","answerable":true,"gold_terms":["人參"],"expected_terms":["目"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-003","question":"What does the Bencao say about 大黃 and the bowels?","answerable":true,"gold_terms":["大黃"],"expected_terms":["腸胃"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-004","question":"What does the Bencao Jing say 麻黃 is used for in cold damage?","answerable":true,"gold_terms":["麻黃"],"expected_terms":["汗"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-005","question":"Which herb does the Bencao Jing say treats 喉咽腫痛?","answerable":true,"gold_terms":["半夏"],"expected_terms":["喉咽"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-006","question":"What does the Bencao Gangmu say about 附子 and its toxicity?","answerable":true,"gold_terms":["附子"],"expected_terms":["毒"],"kind":"processing","origin":"curated"}
+{"id":"Q-007","question":"How does the Leigong processing text say 半夏 should be prepared?","answerable":true,"gold_terms":["半夏"],"expected_terms":["湯洗"],"kind":"processing","origin":"curated"}
+{"id":"Q-008","question":"Which drug does the Leigong text honey-fry?","answerable":true,"gold_terms":["甘草"],"expected_terms":["蜜炙"],"kind":"processing","origin":"curated"}
+{"id":"Q-009","question":"According to the Treatise on Cold Damage, which herbs are in Guizhi Tang?","answerable":true,"gold_terms":["桂枝"],"expected_terms":["芍藥"],"kind":"formula","origin":"curated"}
+{"id":"Q-010","question":"Which drug does the Dongui Bogam use for headache together with 川芎?","answerable":true,"gold_terms":["川芎"],"expected_terms":["白芷"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-011","question":"What does the Baopuzi say cinnabar becomes when it is burned?","answerable":true,"gold_terms":["丹砂"],"expected_terms":["水銀"],"kind":"alchemy","origin":"curated"}
+{"id":"Q-012","question":"What does the Suwen say the south produces?","answerable":true,"gold_terms":["南方"],"expected_terms":["熱"],"kind":"theory","origin":"curated"}
+{"id":"Q-013","question":"In the Suwen, which organ is linked to the north?","answerable":true,"gold_terms":["北方"],"expected_terms":["腎"],"kind":"theory","origin":"curated"}
+{"id":"Q-014","question":"In the Caraka Samhita, which taste destroys kapha and pitta?","answerable":true,"gold_terms":["tikt"],"expected_terms":["tikta"],"kind":"rasa","origin":"curated"}
+{"id":"Q-015","question":"What does the Caraka Samhita say ghee prepared with bitter drugs is good for?","answerable":true,"gold_terms":["ghṛtaṃ"],"expected_terms":["jvar"],"kind":"rasa","origin":"curated"}
+{"id":"Q-016","question":"What does the Qanun say liquorice is useful for?","answerable":true,"gold_terms":["السوس"],"expected_terms":["السعال"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-017","question":"What does the Qanun say ginger does to food?","answerable":true,"gold_terms":["الزنجبيل"],"expected_terms":["يهضم"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-018","question":"What incompatibility does the Sushruta Samhita state for milk and fish?","answerable":true,"gold_terms":["kṣīraṃ"],"expected_terms":["matsyaṃ"],"kind":"incompatibility","origin":"curated"}
+{"id":"Q-019","question":"What does the Rasa Ratna Samuccaya say purification does to faults?","answerable":true,"gold_terms":["śodhanaṃ"],"expected_terms":["doṣa"],"kind":"alchemy","origin":"curated"}
+{"id":"Q-020","question":"Which drug does the Bencao Gangmu say is antagonistic to 甘草?","answerable":true,"gold_terms":["甘草","反"],"expected_terms":["甘遂"],"kind":"incompatibility","origin":"curated"}
+{"id":"Q-021","question":"What does the Shennong Bencao Jing say about 貝母 and the throat?","answerable":true,"gold_terms":["貝母"],"expected_terms":["喉痺"],"kind":"plant_use","origin":"curated"}
+{"id":"Q-022","question":"Which wind-dispelling herb does the Dongui Bogam use in a decoction for locked jaw?","answerable":true,"gold_terms":["防風"],"expected_terms":["防風"],"kind":"plant_use","origin":"curated"}

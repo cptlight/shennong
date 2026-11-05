@@ -1,29 +1,30 @@
 {
- "generated_at": "2026-11-05T10:31:46+00:00",
- "sources_total": 38,
- "records": 18382,
- "duplicate_chunks_dropped": 46,
- "chars_total": 29305995,
- "chars_cjk": 3168359,
+ "generated_at": "2026-11-05T10:37:00+00:00",
+ "sources_total": 73,
+ "records": 24134,
+ "duplicate_chunks_dropped": 89,
+ "chars_total": 38242644,
+ "chars_cjk": 12105008,
  "chars_non_cjk": 26137636,
- "tokens_estimate": 9141438,
+ "tokens_estimate": 15524759,
  "chars_by_tier": {
   "1": 16322419,
-  "2": 12904421,
-  "3": 25317,
+  "2": 21775680,
+  "3": 90707,
   "4": 53838
  },
  "chars_by_tradition": {
   "foundational": 16322419,
+  "tcm": 13288730,
   "ayurveda": 5274048,
-  "tcm": 4445135,
   "unani": 3185238,
+  "alchemy": 90707,
   "acupuncture": 53838,
-  "alchemy": 25317
+  "korean": 27664
  },
  "chars_by_lang": {
   "en": 23349823,
-  "zh-Hant": 3168359,
+  "zh-Hant": 12105008,
   "la": 2787813
  },
  "per_source": {
@@ -244,33 +245,201 @@
    "lang": "zh-Hant",
    "tier": 2
   },
+  "ws_zh_bencao_biandu": {
+   "chunks": 47,
+   "chars": 80401,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_chongyuan": {
+   "chunks": 55,
+   "chars": 94294,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
   "ws_zh_bencao_congxin": {
    "chunks": 107,
-   "chars": 171954,
+   "chars": 172566,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_fenjing": {
+   "chunks": 35,
+   "chars": 61045,
    "tradition": "tcm",
    "lang": "zh-Hant",
    "tier": 2
   },
   "ws_zh_bencao_gangmu": {
-   "chunks": 621,
-   "chars": 1763519,
+   "chunks": 1109,
+   "chars": 1791869,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_gangmu_shiyi": {
+   "chunks": 159,
+   "chars": 262341,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_haili": {
+   "chunks": 36,
+   "chars": 61646,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_jingjie": {
+   "chunks": 43,
+   "chars": 71835,
    "tradition": "tcm",
    "lang": "zh-Hant",
    "tier": 2
   },
   "ws_zh_bencao_jingjizhu": {
    "chunks": 43,
-   "chars": 107730,
+   "chars": 107810,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_qiuzhen": {
+   "chunks": 167,
+   "chars": 267494,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_sibian": {
+   "chunks": 66,
+   "chars": 101533,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_xinbian": {
+   "chunks": 120,
+   "chars": 200409,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_benjing_fengyuan": {
+   "chunks": 111,
+   "chars": 179093,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_benjing_shuzheng": {
+   "chunks": 16,
+   "chars": 23161,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_changsha_yaojie": {
+   "chunks": 57,
+   "chars": 89162,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_danxi_xinfa": {
+   "chunks": 89,
+   "chars": 144592,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_depi_bencao": {
+   "chunks": 62,
+   "chars": 105085,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_dongui_bogam": {
+   "chunks": 17,
+   "chars": 27664,
+   "tradition": "korean",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_haiyao_bencao": {
+   "chunks": 9,
+   "chars": 14250,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_jingui_yaolue": {
+   "chunks": 20,
+   "chars": 29291,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_jingyue_quanshu": {
+   "chunks": 3,
+   "chars": 4211,
    "tradition": "tcm",
    "lang": "zh-Hant",
    "tier": 2
   },
   "ws_zh_leigong_paozhi": {
    "chunks": 15,
-   "chars": 25317,
+   "chars": 25573,
    "tradition": "alchemy",
    "lang": "zh-Hant",
    "tier": 3
+  },
+  "ws_zh_leigong_paozhi_yaoxing": {
+   "chunks": 39,
+   "chars": 65134,
+   "tradition": "alchemy",
+   "lang": "zh-Hant",
+   "tier": 3
+  },
+  "ws_zh_maijing": {
+   "chunks": 56,
+   "chars": 82905,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_pujifang": {
+   "chunks": 2830,
+   "chars": 4866187,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_qianjin_yifang": {
+   "chunks": 239,
+   "chars": 404236,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_shanghanlun": {
+   "chunks": 26,
+   "chars": 41636,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_shennong_bencao_baihzong": {
+   "chunks": 14,
+   "chars": 22489,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
   },
   "ws_zh_shennong_bencaojing": {
    "chunks": 6,
@@ -279,9 +448,72 @@
    "lang": "zh-Hant",
    "tier": 2
   },
+  "ws_zh_shiliao_bencao": {
+   "chunks": 23,
+   "chars": 38266,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_taiping_huimin_ju": {
+   "chunks": 104,
+   "chars": 170884,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_tangye_bencao": {
+   "chunks": 36,
+   "chars": 56875,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_waitai_miyao": {
+   "chunks": 43,
+   "chars": 67930,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_wenbing_tiaobian": {
+   "chunks": 75,
+   "chars": 117193,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
   "ws_zh_xinxiu_bencao": {
    "chunks": 97,
-   "chars": 164134,
+   "chars": 165003,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_yaoxing_fu": {
+   "chunks": 19,
+   "chars": 33233,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_yaoyao_fenji": {
+   "chunks": 49,
+   "chars": 85712,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_yifang_jijie": {
+   "chunks": 105,
+   "chars": 174106,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_yixue_zhongzhong_canxi": {
+   "chunks": 353,
+   "chars": 545497,
    "tradition": "tcm",
    "lang": "zh-Hant",
    "tier": 2
@@ -292,10 +524,24 @@
    "tradition": "tcm",
    "lang": "zh-Hant",
    "tier": 2
+  },
+  "ws_zh_zhouhou_beiji": {
+   "chunks": 68,
+   "chars": 101903,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_zhu_bing_yuanhou": {
+   "chunks": 73,
+   "chars": 214789,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
   }
  },
- "corpus_sha256": "2c4941d2c4f095396f77437d659ac5e95ca5d7eb77230947035e02089ba644c1",
- "corpus_bytes": 41374648,
+ "corpus_sha256": "95ebb843c2934faee7461805418ec4d39ff26c1d6c39280d7005a17f9411467f",
+ "corpus_bytes": 68950918,
  "params": {
   "target_chars": 1800,
   "hard_max_chars": 3000,

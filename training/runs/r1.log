@@ -1,0 +1,4 @@
+tokenised in 21.7s: train=16,687,735 val=339,639
+
+shennong-mini-r1: 8.72M params | 900 steps x 8,192 tok = 7.37M tokens | corpus 16,687,735 tokens
+step     0 | loss 9.7541 | val 9.7401 | lr 1.00e-05 | 598.3 tok/s | eta 480m

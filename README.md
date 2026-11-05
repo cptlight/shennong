@@ -52,6 +52,39 @@ SHENNONG builds the translation layer at scale.
    real span in a real text, a novelty estimate against the modern literature, an explicit
    uncertainty, and **the experiment that would kill it**.
 
+## What is actually new here (the honest version)
+
+We are **not** claiming a TCM knowledge graph, a TCM chatbot, another entity-extraction paper, or
+Lipinski filtering — those are commodities, and TCMSP/SymMap/ETCM already curate better graphs than we
+could build in a week. ([`docs/NOVELTY.md`](docs/NOVELTY.md) does the full subtractive analysis, and
+we are explicit that a 2023 project named *ShenNong-TCM* exists — a TCM assistant; different goal,
+not affiliated.)
+
+Four things are ours:
+
+1. **We test the classical theory as a predictive framework.** Everyone *uses* 四氣五味 · 歸經 ·
+   rasa/guṇa/vīrya as features. We ask the prior question and report the answer with a permutation
+   null: **does the classical property system predict measured molecular chemistry and target biology
+   above chance?** Pre-registered thresholds, published either way. This is the only claim here that
+   can be wrong in an interesting way — and it is the number that matters.
+2. **Process language compiled into a chemistry operator.** 炮 · 煅 · 煨 · 淬 · 醋炙 · 水飛 · 發酵 ·
+   *śodhana* · *bhasma* are an instruction set for physical chemistry that modern NLP discards. We
+   compile each term to what it does to a molecule (hydrolysis, decarboxylation, volatilisation,
+   esterification, complexation) and use it **generatively**: which constituents does a preparation
+   destroy or enrich, and is the traditional step *load-bearing* or *plausibly ritual*?
+3. **Rules as a finite, bridged, testable set.** All 18 十八反 + 19 十九畏 pairs (+ *viruddha*),
+   enumerated with citations, each bridged to a modern mechanism (CYP450, P-gp, chelation,
+   precipitation, shared toxic constituents) and given the assay that would kill it. Completeness is
+   the contribution.
+4. **Auditable by construction.** < 1 GB open weights that run on a CPU; every claim resolves to a
+   span in a real text; a hypothesis whose citation fails to resolve is **dropped, not softened**; and
+   the licence audit includes the sources we *rejected* (GRETIL, because CC BY-**NC**-SA cannot ship
+   in a public repo).
+
+> **The one sentence:** everyone else built a chatbot over ancient Asian medicine. We built the
+> missing translation layer — and tested whether the classical theory actually predicts chemistry,
+> because that is what turns 2,000 years of text into drug candidates.
+
 ## The six discovery classes
 
 | # | Class | The hidden thing | Why it matters |

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640"
+     role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">SHENNONG 神农 — drug candidates from 2,000 years of Asian medicine</title>
+  <desc id="og-desc">Devpost social card: the seal mark, the project name, the tagline, and three claims —
+    bilingual classical source reading, Asian theory tested as a predictive prior, and a ranked drug-candidate
+    shortlist with molecular properties and assays.</desc>
+
+  <defs>
+    <style>
+      .h  { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC", serif; }
+      .s  { font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", sans-serif; }
+      .m  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .cjk{ font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Hiragino Mincho ProN", serif; }
+    </style>
+    <radialGradient id="glow" cx="18%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#3A2A22"/>
+      <stop offset="100%" stop-color="#17140F"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#glow)"/>
+  <!-- faint parchment-burn vignette -->
+  <circle cx="1080" cy="120" r="240" fill="#A8362A" opacity="0.06"/>
+  <circle cx="120" cy="560" r="220" fill="#2C6B5C" opacity="0.07"/>
+
+  <!-- seal mark -->
+  <g transform="translate(72 82) scale(1.02)">
+    <circle cx="80" cy="80" r="74" fill="none" stroke="#C4523F" stroke-width="5"/>
+    <circle cx="80" cy="80" r="66" fill="none" stroke="#F6F0E3" stroke-width="1.4" opacity="0.18"/>
+    <path d="M48 62 H112" stroke="#F6F0E3" stroke-width="9" stroke-linecap="round"/>
+    <path d="M53 62 C53 96 63 112 80 112 C97 112 107 96 107 62" fill="none" stroke="#F6F0E3"
+          stroke-width="9" stroke-linecap="round"/>
+    <path d="M62 111 L62 133 M98 111 L98 133 M80 112 L80 137" stroke="#F6F0E3" stroke-width="7"
+          stroke-linecap="round"/>
+    <path d="M80 71 L91.3 77.5 L91.3 90.5 L80 97 L68.7 90.5 L68.7 77.5 Z" fill="none"
+          stroke="#E8B44A" stroke-width="3.2" stroke-linejoin="round"/>
+    <path d="M80 56 L80 24" stroke="#C4523F" stroke-width="5.6" stroke-linecap="round"/>
+    <path d="M80 40 C69 38 60.5 31 56.5 20" fill="none" stroke="#C4523F" stroke-width="5" stroke-linecap="round"/>
+    <path d="M80 40 C91 38 99.5 31 103.5 20" fill="none" stroke="#C4523F" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="80" cy="24" r="4.2" fill="#C4523F"/>
+  </g>
+
+  <!-- wordmark -->
+  <text class="h" x="268" y="150" font-size="58" letter-spacing="8" fill="#F6F0E3" font-weight="600">SHENNONG</text>
+  <text class="cjk" x="272" y="200" font-size="34" letter-spacing="14" fill="#C4523F">神农</text>
+
+  <!-- tagline -->
+  <text class="h" x="72" y="300" font-size="27" fill="#EFE6D2" font-style="italic">
+    Shennong tasted a hundred herbs.
+  </text>
+  <text class="h" x="72" y="340" font-size="27" fill="#EFE6D2" font-style="italic">
+    We are teaching a model to do it again — and to read what he hid between the lines.
+  </text>
+
+  <!-- three claims -->
+  <g>
+    <rect x="72" y="392" width="352" height="150" rx="4" fill="#F6F0E3" opacity="0.055"
+          stroke="#F6F0E3" stroke-opacity="0.16"/>
+    <text class="m" x="94" y="424" font-size="11" letter-spacing="2" fill="#E8B44A">01 · READ</text>
+    <text class="s" x="94" y="452" font-size="14.5" fill="#EFE6D2">Classical Chinese, Sanskrit and</text>
+    <text class="s" x="94" y="474" font-size="14.5" fill="#EFE6D2">Arabic originals — not English</text>
+    <text class="s" x="94" y="496" font-size="14.5" fill="#EFE6D2">summaries. A bilingual classical</text>
+    <text class="s" x="94" y="518" font-size="14.5" fill="#EFE6D2">model under 1 GB.</text>
+
+    <rect x="456" y="392" width="352" height="150" rx="4" fill="#F6F0E3" opacity="0.055"
+          stroke="#F6F0E3" stroke-opacity="0.16"/>
+    <text class="m" x="478" y="424" font-size="11" letter-spacing="2" fill="#7FD1C1">02 · TEST</text>
+    <text class="s" x="478" y="452" font-size="14.5" fill="#EFE6D2">Asian theory used as a feature</text>
+    <text class="s" x="478" y="474" font-size="14.5" fill="#EFE6D2">vector — 四氣五味, 歸經,</text>
+    <text class="s" x="478" y="496" font-size="14.5" fill="#EFE6D2">rasa/guṇa/vīrya — and tested</text>
+    <text class="s" x="478" y="518" font-size="14.5" fill="#EFE6D2">against modern chemistry.</text>
+
+    <rect x="840" y="392" width="368" height="150" rx="4" fill="#F6F0E3" opacity="0.055"
+          stroke="#F6F0E3" stroke-opacity="0.16"/>
+    <text class="m" x="862" y="424" font-size="11" letter-spacing="2" fill="#C4523F">03 · PROPOSE</text>
+    <text class="s" x="862" y="452" font-size="14.5" fill="#EFE6D2">A ranked shortlist of drug</text>
+    <text class="s" x="862" y="474" font-size="14.5" fill="#EFE6D2">candidates: structure, computed</text>
+    <text class="s" x="862" y="496" font-size="14.5" fill="#EFE6D2">drug-likeness, mechanism, and</text>
+    <text class="s" x="862" y="518" font-size="14.5" fill="#EFE6D2">the assay that would kill it.</text>
+  </g>
+
+  <!-- footer -->
+  <line x1="72" y1="578" x2="1208" y2="578" stroke="#F6F0E3" stroke-opacity="0.16"/>
+  <text class="m" x="72" y="606" font-size="12" letter-spacing="1.4" fill="#9AA0A6">
+    EthnoHack 2026 · Track 01 Traditional Knowledge Mining · research use only, not medical advice
+  </text>
+</svg>

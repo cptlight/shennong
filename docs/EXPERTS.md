@@ -74,21 +74,32 @@ gate including first-principles arbitration"*. Physics defines what "useful" mea
 
 ### Measured on 60 staged claims (18 survived = 30 % base rate)
 
-| Expert | AUC vs surviving the arbiter | Informative? |
+| Expert | AUC (after fix) | Reading |
 |---|---|---|
-| theory | 0.893 | ✅ |
-| ethnobotany | 0.889 | ✅ |
-| toxicology | 0.838 | ✅ |
-| mechanics | 0.707 | ✅ |
-| quantum | 0.578 | ✅ (weak) |
-| operator | 0.500 | ❌ no information |
-| **phytochemistry** | **0.443** | ❌ **anti-predictive** |
+| theory | 0.893 | informative |
+| ethnobotany | 0.889 | informative |
+| toxicology | 0.838 | informative |
+| mechanics | 0.707 | informative |
+| **phytochemistry** | **0.607** | **informative — after the harmful prior was removed** |
+| quantum | 0.578 | informative, weak |
+| microbiome | 0.535 | no information |
+| taxonomy · operator · chemotaxonomy | 0.500 | no information (constant scores on this subset) |
+| extraction | 0.300 | **anti-predictive — not yet re-coded** |
+| adme | 0.282 | **anti-predictive — not yet re-coded** |
 | first_principles, western_literature | — | not evaluable (structural / observation-only) |
 
-The phytochemistry expert scoring *below chance* is a real diagnostic: its score rewards plants with a
-**narrow** chemotype, and sparse-chemotype plants are disproportionately the ones that fail physical
-checks. Its confidence is tracking data sparsity, not physical validity. That is worth knowing, and it
-was invisible before this measurement.
+### The diagnostic caught a real bug
+
+The first run put `phytochemistry` at **0.443 — below chance**, and the tempting story was "it measures
+data sparsity, not validity". That story was half right and half a coding artefact: the expert added
+**+0.15 for a narrow chemotype**, and sparse-chemotype plants are exactly the ones that fail physical
+checks, so the bonus rewarded the plants most likely to be refuted. Removing the prior moved the AUC from
+**0.443 → 0.607**.
+
+The finding was therefore **retracted and the code fixed**. The *diagnostic* is the asset — a single line
+of hand-written prior was costing 0.16 AUC and nothing else in the system would have surfaced it.
+`extraction` and `adme` are below chance and are candidates for the identical treatment; they are
+**reported as suspect, not fixed**, and sit at the router's exploration floor.
 
 ### Guardrails (asserted in `verify()`, not just documented)
 
@@ -99,7 +110,7 @@ was invisible before this measurement.
 
 ### Honest limitations
 
-n = 62 with a 30 % base rate, so the AUCs carry wide error bars; and the high AUC of `theory` and
+n = 60 with a 30 % base rate, so the AUCs carry wide error bars; and the high AUC of `theory` and
 `ethnobotany` may reflect **data completeness** (items with full property vectors also tend to be
 complete everywhere) rather than causal informativeness. This is a **global prior, not a per-context
 policy** — per-context routing needs far more items and 3-fold cross-fitting before it can be trusted.

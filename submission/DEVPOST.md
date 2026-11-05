@@ -208,6 +208,22 @@ Chinese originals, Sanskrit Documents and GRETIL for Sanskrit, and archive.org f
 
 ---
 
+## The system found a bug in itself
+
+Each expert's score is tested against the **arbiter's** verdict — AUC of the expert's confidence against
+whether a claim actually survives first-principles physics. Utility is defined by physics, not by
+agreement, because an expert that merely makes claims pass is worthless.
+
+The first run put our phytochemistry expert at **AUC 0.443 — below chance**. The obvious story ("its
+confidence tracks data sparsity, not validity") was half right: the real cause was a hand-written **+0.15
+bonus for plants with a narrow chemotype**, and sparse-chemotype plants are precisely the ones that fail
+physical checks. The bonus was rewarding the plants most likely to be refuted. Removing it moved the AUC
+to **0.607**.
+
+We retracted the finding and fixed the code. The diagnostic is the asset: one line of prior was silently
+costing 0.16 AUC, and nothing else in the system would have revealed it. Two further experts
+(`extraction` 0.300, `adme` 0.282) are below chance and are reported as **suspect, not fixed**.
+
 ## What we learned
 
 **The negative result is the product.** We expected the nature/flavour vectors to be weakly predictive at best.

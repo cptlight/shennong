@@ -261,6 +261,43 @@ scores, which means the ranking is driven by evidence grade and plausibility pri
 learned graph structure. We report that as a limitation of the scorer, not as a success.
 
 
+## Multi-domain experts, and a system that adjusts itself
+
+**A hypothesis is an interpolation only if independent domains agree.** Five experts, each grounded in
+a *different* table, score the same claim without seeing each other's evidence:
+
+| Expert | Grounded in | Question |
+|---|---|---|
+| `ethnobotany` | corpus attestation | is the use independently attested, across how many sources/traditions? |
+| `phytochemistry` | 23,172 structures | does the plant actually contain the chemotype, and how narrowly? |
+| `operator` | 炮制 ontology | does the preparation physically act on that chemotype? |
+| `theory` | 四氣/五味/歸經 | does the classical property vector point the same way? |
+| `toxicology` | 毒 marking + alerts | is there a safety signal that makes this worth (or risky to) test? |
+
+Fusion counts **distinct supporting domains** and reports disagreement instead of averaging it away.
+Of 203 cross-sections: **28 at 5/5**, 59 at 4/5, 41 at 3/5, 75 at 2/5. A 2/5 claim is an assertion; a
+5/5 claim is a cross-domain interpolation worth an assay. ([`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md),
+[`docs/EXPERTS.md`](docs/EXPERTS.md))
+
+### The system adjusts itself by acquiring evidence — never by moving the threshold
+
+```bash
+python -m shennong.research.loop      # diagnose → acquire → re-run → accept/reject → record
+```
+
+When a claim is unsupported, the loop identifies **which domain is blocking** it and runs the action
+that acquires the missing evidence for *that* domain — expand attestation by scanning the corpus,
+resolve a drug surface to a binomial, recover a 炮制 operator. Then it re-runs the panel.
+
+| Round | Mean agreement | Effective actions | Hypotheses upgraded | Accepted |
+|---|---|---|---|---|
+| 1 | 3.197 → **3.695** | 30 | **108** | yes |
+| 2 | 3.695 → 3.695 | 0 | 0 | **no** — nothing left to acquire |
+
+The invariant is in the code and in the report: **the loop may acquire evidence; it may not lower a
+threshold.** Round 2 is recorded as a rejection, because a loop that only ever accepts its own ideas is
+a random walk with good PR. ([`artifacts/RESEARCH_LOG.md`](artifacts/))
+
 ## The loop: ingest → derive → extrapolate
 
 The corpus is not a fixed dump. It grows, and every growth re-derives the graph and the discoveries.

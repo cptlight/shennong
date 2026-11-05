@@ -171,6 +171,7 @@ def main() -> int:
                    "operator_terms": len(onto), "corpus_sources": n_sources},
         "n_cross_sections": len(xs),
         "top": xs[: args.top],
+        "all": xs,
     }
     (ROOT / args.out_json).write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 

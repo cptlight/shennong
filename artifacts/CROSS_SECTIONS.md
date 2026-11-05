@@ -1,6 +1,6 @@
 # Cross-sections the corpus implies but never states
 
-2026-11-05T10:19:06-0800
+2026-11-05T10:27:28-0800
 
 **The move.** Three tables that were never joined: attested 炮制 practice (drug × process,
 from the corpus), documented chemistry (plant × compound class, from 23 k structures), and the

@@ -1,0 +1,2058 @@
+{
+  "generated_at": "2026-11-05T10:28:17-0800",
+  "what": "multi-domain expert panel: five experts, each grounded in a different table, scoring the same claim; the fusion counts INDEPENDENT supporting domains",
+  "n_candidates": 203,
+  "agreement_distribution": {
+    "5": 28,
+    "4": 59,
+    "3": 41,
+    "2": 75
+  },
+  "top": [
+    {
+      "item": {
+        "drug_surface": "菖蒲",
+        "binomial": "Acorus calamus",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 52 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its alkaloid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "52 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "11 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Acorus calamus: 11 × alkaloid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 心/脾/膀胱, 無毒",
+            "evidence": [
+              "菖蒲: 溫/心/脾/膀胱"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "菖蒲 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "菖蒲",
+        "binomial": "Acorus calamus",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 52 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "52 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "138 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Acorus calamus: 138 × terpenoid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 心/脾/膀胱, 無毒",
+            "evidence": [
+              "菖蒲: 溫/心/脾/膀胱"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 菖蒲 marked 有毒",
+            "evidence": [
+              "菖蒲"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "升麻",
+        "binomial": "Actaea cimicifuga",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": "4 traditions / 49 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its alkaloid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "49 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 大腸/脾/胃/肺, 無毒",
+            "evidence": [
+              "升麻: 平/大腸/脾/胃/肺"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "升麻 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.65,
+            "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Actaea cimicifuga: 1 × alkaloid"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "升麻",
+        "binomial": "Actaea cimicifuga",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "4 traditions / 49 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "49 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "16 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Actaea cimicifuga: 16 × terpenoid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 大腸/脾/胃/肺, 無毒",
+            "evidence": [
+              "升麻: 平/大腸/脾/胃/肺"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 升麻 marked 有毒",
+            "evidence": [
+              "升麻"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "附子",
+        "binomial": "Aconitum carmichaelii",
+        "process": "炮",
+        "modern_operation": [
+          "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+        ],
+        "documented_effect": "detoxification, reduction of irritant volatiles",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 59 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "59 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "39 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Aconitum carmichaelii: 39 × alkaloid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+            "evidence": [
+              "附子: 溫/肝/腎/肺"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "附子 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+            "evidence": [
+              "炮: detoxification, reduction of irritant volatiles"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "附子",
+        "binomial": "Aconitum carmichaelii",
+        "process": "炮",
+        "modern_operation": [
+          "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+        ],
+        "documented_effect": "detoxification, reduction of irritant volatiles",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 59 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "59 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "17 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Aconitum carmichaelii: 17 × terpenoid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+            "evidence": [
+              "附子: 溫/肝/腎/肺"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+            "evidence": [
+              "炮: detoxification, reduction of irritant volatiles"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 附子 marked 有毒",
+            "evidence": [
+              "附子"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "附子",
+        "binomial": "Aconitum carmichaelii",
+        "process": "焙",
+        "modern_operation": [
+          "gentle drying over fire (焙)"
+        ],
+        "documented_effect": "dehydration, enzyme inactivation",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 59 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "59 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "39 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Aconitum carmichaelii: 39 × alkaloid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+            "evidence": [
+              "附子: 溫/肝/腎/肺"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "附子 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "焙 = gentle drying over fire (焙)",
+            "evidence": [
+              "焙: dehydration, enzyme inactivation"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "附子",
+        "binomial": "Aconitum carmichaelii",
+        "process": "焙",
+        "modern_operation": [
+          "gentle drying over fire (焙)"
+        ],
+        "documented_effect": "dehydration, enzyme inactivation",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 59 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "59 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "17 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Aconitum carmichaelii: 17 × terpenoid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+            "evidence": [
+              "附子: 溫/肝/腎/肺"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "焙 = gentle drying over fire (焙)",
+            "evidence": [
+              "焙: dehydration, enzyme inactivation"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 附子 marked 有毒",
+            "evidence": [
+              "附子"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "巴豆",
+        "binomial": "Croton tiglium",
+        "process": "煮",
+        "modern_operation": [
+          "boiling in water or an excipient liquor"
+        ],
+        "documented_effect": "hydrolysis, extraction, detoxification",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 53 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+            "evidence": [
+              "巴豆: 溫/脾/胃/大腸"
+            ]
+          },
+          {
+            "domain": "ethnobotany",
+            "score": 0.99,
+            "rationale": "53 independent sources, 3 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "巴豆 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "煮 = boiling in water or an excipient liquor",
+            "evidence": [
+              "煮: hydrolysis, extraction, detoxification"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.65,
+            "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Croton tiglium: 1 × alkaloid"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "巴豆",
+        "binomial": "Croton tiglium",
+        "process": "煮",
+        "modern_operation": [
+          "boiling in water or an excipient liquor"
+        ],
+        "documented_effect": "hydrolysis, extraction, detoxification",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 53 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "21 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Croton tiglium: 21 × terpenoid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+            "evidence": [
+              "巴豆: 溫/脾/胃/大腸"
+            ]
+          },
+          {
+            "domain": "ethnobotany",
+            "score": 0.99,
+            "rationale": "53 independent sources, 3 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "煮 = boiling in water or an excipient liquor",
+            "evidence": [
+              "煮: hydrolysis, extraction, detoxification"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 巴豆 marked 有毒",
+            "evidence": [
+              "巴豆"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "巴豆",
+        "binomial": "Croton tiglium",
+        "process": "研",
+        "modern_operation": [
+          "grinding/milling (研, 研細)"
+        ],
+        "documented_effect": "particle-size reduction",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 53 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+            "evidence": [
+              "巴豆: 溫/脾/胃/大腸"
+            ]
+          },
+          {
+            "domain": "ethnobotany",
+            "score": 0.99,
+            "rationale": "53 independent sources, 3 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "巴豆 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "研 = grinding/milling (研, 研細)",
+            "evidence": [
+              "研: particle-size reduction"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.65,
+            "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Croton tiglium: 1 × alkaloid"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "巴豆",
+        "binomial": "Croton tiglium",
+        "process": "研",
+        "modern_operation": [
+          "grinding/milling (研, 研細)"
+        ],
+        "documented_effect": "particle-size reduction",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 53 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "21 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Croton tiglium: 21 × terpenoid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+            "evidence": [
+              "巴豆: 溫/脾/胃/大腸"
+            ]
+          },
+          {
+            "domain": "ethnobotany",
+            "score": 0.99,
+            "rationale": "53 independent sources, 3 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "研 = grinding/milling (研, 研細)",
+            "evidence": [
+              "研: particle-size reduction"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 巴豆 marked 有毒",
+            "evidence": [
+              "巴豆"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炮",
+        "modern_operation": [
+          "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+        ],
+        "documented_effect": "detoxification, reduction of irritant volatiles",
+        "chemotype": "flavonoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "24 documented flavonoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 24 × flavonoid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+            "evidence": [
+              "炮: detoxification, reduction of irritant volatiles"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炮",
+        "modern_operation": [
+          "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+        ],
+        "documented_effect": "detoxification, reduction of irritant volatiles",
+        "chemotype": "steroid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "13 documented steroid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 13 × steroid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+            "evidence": [
+              "炮: detoxification, reduction of irritant volatiles"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炮",
+        "modern_operation": [
+          "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+        ],
+        "documented_effect": "detoxification, reduction of irritant volatiles",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "88 documented terpenoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 88 × terpenoid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+            "evidence": [
+              "炮: detoxification, reduction of irritant volatiles"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炙",
+        "modern_operation": [
+          "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)"
+        ],
+        "documented_effect": "modify drug property, reduce toxicity, target organ",
+        "chemotype": "flavonoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "24 documented flavonoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 24 × flavonoid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+            "evidence": [
+              "炙: modify drug property, reduce toxicity, target organ"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炙",
+        "modern_operation": [
+          "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)"
+        ],
+        "documented_effect": "modify drug property, reduce toxicity, target organ",
+        "chemotype": "steroid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "13 documented steroid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 13 × steroid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+            "evidence": [
+              "炙: modify drug property, reduce toxicity, target organ"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炙",
+        "modern_operation": [
+          "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)"
+        ],
+        "documented_effect": "modify drug property, reduce toxicity, target organ",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "88 documented terpenoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 88 × terpenoid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+            "evidence": [
+              "炙: modify drug property, reduce toxicity, target organ"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "flavonoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "24 documented flavonoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 24 × flavonoid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "steroid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "13 documented steroid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 13 × steroid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "88 documented terpenoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 88 × terpenoid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "知母",
+        "binomial": "Anemarrhena asphodeloides",
+        "process": "焙",
+        "modern_operation": [
+          "gentle drying over fire (焙)"
+        ],
+        "documented_effect": "dehydration, enzyme inactivation",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": "4 traditions / 49 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its alkaloid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "49 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 寒, channels 腎, 無毒",
+            "evidence": [
+              "知母: 寒/腎"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "知母 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "焙 = gentle drying over fire (焙)",
+            "evidence": [
+              "焙: dehydration, enzyme inactivation"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.5,
+            "rationale": "1 documented alkaloid compounds; 4 classes total",
+            "evidence": [
+              "Anemarrhena asphodeloides: 1 × alkaloid"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "知母",
+        "binomial": "Anemarrhena asphodeloides",
+        "process": "焙",
+        "modern_operation": [
+          "gentle drying over fire (焙)"
+        ],
+        "documented_effect": "dehydration, enzyme inactivation",
+        "chemotype": "steroid",
+        "practice_sources": 1,
+        "drug_support": "4 traditions / 49 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its steroid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "49 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 寒, channels 腎, 無毒",
+            "evidence": [
+              "知母: 寒/腎"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "14 documented steroid compounds; 4 classes total",
+            "evidence": [
+              "Anemarrhena asphodeloides: 14 × steroid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "焙 = gentle drying over fire (焙)",
+            "evidence": [
+              "焙: dehydration, enzyme inactivation"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 知母 marked 有毒",
+            "evidence": [
+              "知母"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "知母",
+        "binomial": "Anemarrhena asphodeloides",
+        "process": "焙",
+        "modern_operation": [
+          "gentle drying over fire (焙)"
+        ],
+        "documented_effect": "dehydration, enzyme inactivation",
+        "chemotype": "terpenoid",
+        "practice_sources": 1,
+        "drug_support": "4 traditions / 49 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid content",
+        "agreement": 5,
+        "consensus_score": 1.0,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "49 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 寒, channels 腎, 無毒",
+            "evidence": [
+              "知母: 寒/腎"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.85,
+            "rationale": "20 documented terpenoid compounds; 4 classes total",
+            "evidence": [
+              "Anemarrhena asphodeloides: 20 × terpenoid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "焙 = gentle drying over fire (焙)",
+            "evidence": [
+              "焙: dehydration, enzyme inactivation"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 知母 marked 有毒",
+            "evidence": [
+              "知母"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炮",
+        "modern_operation": [
+          "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+        ],
+        "documented_effect": "detoxification, reduction of irritant volatiles",
+        "chemotype": "phenylpropanoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
+        "agreement": 5,
+        "consensus_score": 0.9796,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+            "evidence": [
+              "炮: detoxification, reduction of irritant volatiles"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.65,
+            "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 4 × phenylpropanoid"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "炙",
+        "modern_operation": [
+          "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)"
+        ],
+        "documented_effect": "modify drug property, reduce toxicity, target organ",
+        "chemotype": "phenylpropanoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
+        "agreement": 5,
+        "consensus_score": 0.9796,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+            "evidence": [
+              "炙: modify drug property, reduce toxicity, target organ"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.65,
+            "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 4 × phenylpropanoid"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "甘草",
+        "binomial": "Glycyrrhiza uralensis",
+        "process": "蒸",
+        "modern_operation": [
+          "steaming (often repeated, 九蒸九曬)"
+        ],
+        "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+        "chemotype": "phenylpropanoid",
+        "practice_sources": 1,
+        "drug_support": "corroborated in 57 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
+        "agreement": 5,
+        "consensus_score": 0.9796,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "57 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_baopuzi",
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 平, channels 心/脾, 無毒",
+            "evidence": [
+              "甘草: 平/心/脾"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+            "evidence": [
+              "蒸: hydrolysis, decarboxylation, removal of irritants"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.65,
+            "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
+            "evidence": [
+              "Glycyrrhiza uralensis: 4 × phenylpropanoid"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 甘草 marked 有毒",
+            "evidence": [
+              "甘草"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "知母",
+        "binomial": "Anemarrhena asphodeloides",
+        "process": "焙",
+        "modern_operation": [
+          "gentle drying over fire (焙)"
+        ],
+        "documented_effect": "dehydration, enzyme inactivation",
+        "chemotype": "phenylpropanoid",
+        "practice_sources": 1,
+        "drug_support": "4 traditions / 49 sources",
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 4,
+        "sharpness": 0.25
+      },
+      "consensus": {
+        "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its phenylpropanoid content",
+        "agreement": 5,
+        "consensus_score": 0.9424,
+        "verdict": "five-domain interpolation — every expert agrees",
+        "domains": [
+          {
+            "domain": "ethnobotany",
+            "score": 1.0,
+            "rationale": "49 independent sources, 4 traditions",
+            "evidence": [
+              "source ws_zh_bencao_beiyao",
+              "source ws_zh_bencao_biandu",
+              "source ws_zh_bencao_chongyuan"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 寒, channels 腎, 無毒",
+            "evidence": [
+              "知母: 寒/腎"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "焙 = gentle drying over fire (焙)",
+            "evidence": [
+              "焙: dehydration, enzyme inactivation"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.6,
+            "rationale": "safety signal: 知母 marked 有毒",
+            "evidence": [
+              "知母"
+            ]
+          },
+          {
+            "domain": "phytochemistry",
+            "score": 0.5,
+            "rationale": "1 documented phenylpropanoid compounds; 4 classes total",
+            "evidence": [
+              "Anemarrhena asphodeloides: 1 × phenylpropanoid"
+            ]
+          }
+        ],
+        "disagreements": []
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "百部",
+        "binomial": "Stemona japonica",
+        "process": "焙",
+        "modern_operation": [
+          "gentle drying over fire (焙)"
+        ],
+        "documented_effect": "dehydration, enzyme inactivation",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": null,
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "焙 of 百部 (Stemona japonica) should measurably change its alkaloid content",
+        "agreement": 4,
+        "consensus_score": 0.885,
+        "verdict": "four-domain interpolation — four independent domains agree",
+        "domains": [
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "28 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Stemona japonica: 28 × alkaloid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 肺, 無毒",
+            "evidence": [
+              "百部: 溫/肺"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "百部 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "焙 = gentle drying over fire (焙)",
+            "evidence": [
+              "焙: dehydration, enzyme inactivation"
+            ]
+          },
+          {
+            "domain": "ethnobotany",
+            "score": 0.2,
+            "rationale": "drug surface not in the attested set",
+            "evidence": []
+          }
+        ],
+        "disagreements": [
+          "ethnobotany does not support (score 0.20): drug surface not in the attested set"
+        ]
+      }
+    },
+    {
+      "item": {
+        "drug_surface": "蜈蚣",
+        "binomial": "Scolopendra subspinipes",
+        "process": "炒",
+        "modern_operation": [
+          "dry stir-frying"
+        ],
+        "documented_effect": "deactivation of enzymes, partial pyrolysis",
+        "chemotype": "alkaloid",
+        "practice_sources": 1,
+        "drug_support": null,
+        "citation": "ws_zh_leigong_paozhi",
+        "chemotype_breadth": 2,
+        "sharpness": 0.5
+      },
+      "consensus": {
+        "claim": "炒 of 蜈蚣 (Scolopendra subspinipes) should measurably change its alkaloid content",
+        "agreement": 4,
+        "consensus_score": 0.885,
+        "verdict": "four-domain interpolation — four independent domains agree",
+        "domains": [
+          {
+            "domain": "phytochemistry",
+            "score": 1.0,
+            "rationale": "11 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+            "evidence": [
+              "Scolopendra subspinipes: 11 × alkaloid"
+            ]
+          },
+          {
+            "domain": "theory",
+            "score": 1.0,
+            "rationale": "nature 溫, channels 肝, 有毒",
+            "evidence": [
+              "蜈蚣: 溫/肝"
+            ]
+          },
+          {
+            "domain": "toxicology",
+            "score": 0.85,
+            "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+            "evidence": [
+              "蜈蚣 有毒",
+              "alkaloid"
+            ]
+          },
+          {
+            "domain": "operator",
+            "score": 0.7,
+            "rationale": "炒 = dry stir-frying",
+            "evidence": [
+              "炒: deactivation of enzymes, partial pyrolysis"
+            ]
+          },
+          {
+            "domain": "ethnobotany",
+            "score": 0.2,
+            "rationale": "drug surface not in the attested set",
+            "evidence": []
+          }
+        ],
+        "disagreements": [
+          "ethnobotany does not support (score 0.20): drug surface not in the attested set"
+        ]
+      }
+    }
+  ]
+}

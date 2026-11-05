@@ -1,0 +1,434 @@
+{
+  "generated_at": "2026-11-05T10:29:02-0800",
+  "what": "self-adjusting research loop: diagnose the blocking domain for each unsupported claim, acquire the missing evidence for that domain, re-run the panel, accept only if independent-domain agreement rises",
+  "invariant": "the loop may acquire evidence; it may NOT lower a threshold. A hypothesis is never made to pass by changing the bar.",
+  "rounds": [
+    {
+      "round": 1,
+      "before": 3.197,
+      "after": 3.6946,
+      "accepted": true,
+      "reason": "mean independent-domain agreement rose",
+      "n_actions": 75,
+      "n_changed": 30,
+      "upgraded": [
+        {
+          "candidate": "乌蛇+炙",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "乌蛇+煮",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "乌蛇+焙",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "黄精+蒸",
+          "agreement_before": 2,
+          "agreement_after": 4,
+          "verdict_after": "four-domain interpolation — four independent domains agree"
+        },
+        {
+          "candidate": "黄精+蒸",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "天门冬+蒸",
+          "agreement_before": 2,
+          "agreement_after": 4,
+          "verdict_after": "four-domain interpolation — four independent domains agree"
+        },
+        {
+          "candidate": "天门冬+蒸",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "天门冬+伏",
+          "agreement_before": 2,
+          "agreement_after": 4,
+          "verdict_after": "four-domain interpolation — four independent domains agree"
+        },
+        {
+          "candidate": "天门冬+伏",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "干地黄+蒸",
+          "agreement_before": 2,
+          "agreement_after": 4,
+          "verdict_after": "four-domain interpolation — four independent domains agree"
+        },
+        {
+          "candidate": "干地黄+蒸",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "黄连+伏",
+          "agreement_before": 3,
+          "agreement_after": 4,
+          "verdict_after": "four-domain interpolation — four independent domains agree"
+        },
+        {
+          "candidate": "黄连+焙",
+          "agreement_before": 3,
+          "agreement_after": 4,
+          "verdict_after": "four-domain interpolation — four independent domains agree"
+        },
+        {
+          "candidate": "漏芦+蒸",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "漏芦+蒸",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "柏木+炙",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "柏木+炙",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "杜仲+炙",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "杜仲+炙",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        },
+        {
+          "candidate": "玄参+蒸",
+          "agreement_before": 2,
+          "agreement_after": 3,
+          "verdict_after": "three-domain support — a genuine interpolation, worth an assay"
+        }
+      ],
+      "n_upgraded": 108,
+      "actions": [
+        {
+          "candidate": "乌蛇+炙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "乌蛇+煮",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "乌蛇+焙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "黄精+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "天门冬+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "天门冬+伏",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "干地黄+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "漏芦+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "漏芦+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "柏木+炙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "柏木+炙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "杜仲+炙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "杜仲+炙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "玄参+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "玄参+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "玄参+伏",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "玄参+伏",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "淫羊藿+炒",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "淫羊藿+炒",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "恶实+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "恶实+焙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "天麻+炒",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "天麻+伏",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "天麻+焙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "补骨脂+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "补骨脂+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "藜芦+煮",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "钩吻+研",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "刘寄奴+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "刘寄奴+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "骨碎补+炮",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "骨碎补+炮",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "骨碎补+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "骨碎补+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "皂荚+炙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "皂荚+炙",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "苏方木+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 2 traditions"
+        },
+        {
+          "candidate": "苏方木+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        },
+        {
+          "candidate": "石斛+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": true,
+          "note": "attested in 12 sources / 1 traditions"
+        },
+        {
+          "candidate": "石斛+蒸",
+          "blocking_domain": "ethnobotany",
+          "action": "expand_attestation",
+          "changed": false,
+          "note": "surface already attested"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "before": 3.6946,
+      "after": 3.6946,
+      "accepted": false,
+      "reason": "no effective action available - nothing new to acquire",
+      "n_actions": 0,
+      "n_changed": 0,
+      "upgraded": [],
+      "n_upgraded": 0,
+      "actions": []
+    }
+  ],
+  "total_upgraded": 108
+}

@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-11-05T11:19:23-0800",
+  "what": "self-steering: measure each expert's AUC against the arbiter's verdict, then reweight routing. Utility is defined against first principles, never against agreement \u2014 an expert that merely makes claims pass is worthless",
+  "n_items": 60,
+  "n_survived": 18,
+  "exploration_epsilon": 0.15,
+  "expert_informativeness": {
+    "ethnobotany": {
+      "auc": 0.8889,
+      "n": 60,
+      "informative": true
+    },
+    "theory": {
+      "auc": 0.8929,
+      "n": 60,
+      "informative": true
+    },
+    "operator": {
+      "auc": 0.5,
+      "n": 60,
+      "informative": false
+    },
+    "phytochemistry": {
+      "auc": 0.4431,
+      "n": 60,
+      "informative": false
+    },
+    "toxicology": {
+      "auc": 0.838,
+      "n": 60,
+      "informative": true
+    },
+    "mechanics": {
+      "auc": 0.707,
+      "n": 60,
+      "informative": true
+    },
+    "quantum": {
+      "auc": 0.578,
+      "n": 60,
+      "informative": true
+    },
+    "first_principles": {
+      "auc": null,
+      "n": 20,
+      "note": "did not fire on every item; AUC not comparable"
+    },
+    "western_literature": {
+      "auc": null,
+      "n": 18,
+      "note": "did not fire on every item; AUC not comparable"
+    }
+  },
+  "routing_prior": {
+    "ethnobotany": {
+      "weight": 1.0,
+      "reason": "AUC 0.8889 \u2014 informative"
+    },
+    "theory": {
+      "weight": 1.0,
+      "reason": "AUC 0.8929 \u2014 informative"
+    },
+    "operator": {
+      "weight": 0.15,
+      "reason": "AUC 0.5 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+    },
+    "phytochemistry": {
+      "weight": 0.15,
+      "reason": "AUC 0.4431 < 0.55 \u2014 deprioritised, kept at the exploration floor"
+    },
+    "toxicology": {
+      "weight": 1.0,
+      "reason": "AUC 0.838 \u2014 informative"
+    },
+    "mechanics": {
+      "weight": 1.0,
+      "reason": "AUC 0.707 \u2014 informative"
+    },
+    "quantum": {
+      "weight": 1.0,
+      "reason": "AUC 0.578 \u2014 informative"
+    },
+    "first_principles": {
+      "weight": 1.0,
+      "reason": "no measurable AUC; left at unit weight"
+    },
+    "western_literature": {
+      "weight": 1.0,
+      "reason": "no measurable AUC; left at unit weight"
+    }
+  },
+  "informative_experts": [
+    "ethnobotany",
+    "mechanics",
+    "quantum",
+    "theory",
+    "toxicology"
+  ],
+  "uninformative_experts": [
+    "operator",
+    "phytochemistry"
+  ],
+  "guardrails": {
+    "all_pass": true,
+    "checks": [
+      {
+        "rule": "law core never routable",
+        "pass": true,
+        "detail": "first_principles / stages gates are structural; this module cannot disable them"
+      },
+      {
+        "rule": "steering cannot exclude a gate",
+        "pass": true,
+        "detail": "adapt() only produces weights for non-gate experts"
+      },
+      {
+        "rule": "exploration floor > 0",
+        "pass": true,
+        "detail": "epsilon = 0.15"
+      }
+    ],
+    "not_evaluable": [
+      "first_principles",
+      "western_literature"
+    ],
+    "evaluability_note": "2 expert(s) could not be scored against the outcome because they do not fire on every item (structural stages such as first_principles, and the observation-only western_literature). This is NOT a guardrail violation; they keep unit weight."
+  },
+  "honest_note": "With ~200 items and a heavily imbalanced outcome (few survivors), a per-context learned router would be fitting noise. This is a GLOBAL prior, not a context-specialised policy, and it should be read as a diagnostic of which experts currently carry routing information."
+}

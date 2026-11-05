@@ -55,3 +55,51 @@ nine. That is the nimbleness property: cost tracks what the item can actually be
   overestimate, disclosed rather than hidden). Hydrolysis ΔE ordering ester 49.5 < amide 65.7 <
   acetal 66.7 kJ/mol **independently reproduces the activation-energy priors** used by the kinetic
   model in `physics/simulate.py`.
+
+## Self-steering (adaptive routing)
+
+`python -m shennong.experts.steering`
+
+**The question.** Can the router specialise — promote the experts that are informative in a context and
+stop paying for the ones that are noise?
+
+**The trap.** The tempting objective is "an expert is favourable when it makes more hypotheses pass".
+That learns to flatter: it rewards agreement, prefers contexts where evidence is plentiful, and drifts
+toward a panel that tells the corpus what it wants to hear. It is the same pathology as lowering a
+threshold, spread over many decisions.
+
+**The correct objective.** An expert is useful to the extent that its score predicts the **arbiter's**
+verdict. Utility is measured as the AUC of the expert's score against the binary outcome *"survived every
+gate including first-principles arbitration"*. Physics defines what "useful" means, not consensus.
+
+### Measured on 60 staged claims (18 survived = 30 % base rate)
+
+| Expert | AUC vs surviving the arbiter | Informative? |
+|---|---|---|
+| theory | 0.893 | ✅ |
+| ethnobotany | 0.889 | ✅ |
+| toxicology | 0.838 | ✅ |
+| mechanics | 0.707 | ✅ |
+| quantum | 0.578 | ✅ (weak) |
+| operator | 0.500 | ❌ no information |
+| **phytochemistry** | **0.443** | ❌ **anti-predictive** |
+| first_principles, western_literature | — | not evaluable (structural / observation-only) |
+
+The phytochemistry expert scoring *below chance* is a real diagnostic: its score rewards plants with a
+**narrow** chemotype, and sparse-chemotype plants are disproportionately the ones that fail physical
+checks. Its confidence is tracking data sparsity, not physical validity. That is worth knowing, and it
+was invisible before this measurement.
+
+### Guardrails (asserted in `verify()`, not just documented)
+
+1. **The law core is never routable** — physics runs on every claim, always.
+2. **Steering may reorder, never exclude** — gates are structural, weights only affect non-gate experts.
+3. **Exploration floor ε = 0.15** — routes cannot collapse onto one configuration.
+4. **Not-evaluable experts keep unit weight** — inability to score is not evidence of uselessness.
+
+### Honest limitations
+
+n = 62 with a 30 % base rate, so the AUCs carry wide error bars; and the high AUC of `theory` and
+`ethnobotany` may reflect **data completeness** (items with full property vectors also tend to be
+complete everywhere) rather than causal informativeness. This is a **global prior, not a per-context
+policy** — per-context routing needs far more items and 3-fold cross-fitting before it can be trusted.

@@ -16,6 +16,29 @@
 
 ---
 
+## Headline result
+
+**We pre-registered five classical property axes against measured chemistry and target biology. One
+survived — the most mechanistic one.**
+
+| Axis | Statistic | Result | n | p | Verdict |
+|---|---|---|---|---|---|
+| **歸經** channel tropism → target organ | hit rate vs permutation | **7.48 % vs 3.80 % (≈2×)** | **2,059** pairs | **0.008** | **predicts** |
+| 四氣 four natures → polarity/volatility | AUC | 0.456 | 193 | 0.261 | null |
+| 五味 five flavours → compound class | AUC | 0.529 | 201 | 0.779 | null |
+| Ayurvedic vīrya → logP | ρ | — | 0 | — | not linkable |
+| Ayurvedic ṣaḍrasa → action class | AUC | — | 0 | — | not linkable |
+
+And three numbers that limit what it means — published here rather than below the fold:
+
+- **Drug-name → taxon resolution is 14.1 % accurate (n = 368).** Every downstream layer inherits that
+  error. It is the weakest link in the chain and the first thing we would fix.
+- **Our own composite failed its topology check.** Shuffling plant↔use edges changes the mean score by
+  **−0.026** [−0.042, −0.014]: the ranking is driven by evidence and plausibility priors, not by graph
+  structure. Reported as a limitation of the scorer.
+- **5 of 18 十八反 rows have a mechanism bridge**, and the Ayurvedic tests could not run because there is
+  no Sanskrit→binomial lexicon yet.
+
 ## The problem
 
 Classical Asian medical texts — 本草綱目, 神農本草經, Charaka Saṃhitā, Suśruta Saṃhitā, al-Qānūn,

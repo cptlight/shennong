@@ -1,0 +1,607 @@
+{
+  "generated_at": "2026-11-05T09:11:32-0800",
+  "n_cards": 10,
+  "note": "One card per candidate: the claim, the classical span it rests on, the prediction, and the experiment that would kill it. Every card names its own kill criteria; a hypothesis without one is not emitted.",
+  "cards": [
+    {
+      "card_id": "FC-01",
+      "candidate_id": "C-2026-0054",
+      "claim": "(11R,11aS)-3'-Methoxy-4',9-dimethyl-5,6,7,8-tetrahydrospiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-3,5',10(2H)-trione from Stemona japonica (百部) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Stemona japonica",
+        "line": "暴咳嗽︰張文仲方︰用百部根漬酒",
+        "source": "本草綱目",
+        "locator": "ws_zh_bencao_gangmu:622-637",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "溫",
+          "flavors": [
+            "甘"
+          ],
+          "channels": [
+            "肺"
+          ],
+          "direction": "",
+          "grade": "中品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "(11R,11aS)-3'-Methoxy-4',9-dimethyl-5,6,7,8-tetrahydrospiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-3,5',10(2H)-trione",
+        "smiles": "O=C1OC2(C(=O)C(=C3CCCCN4C(=O)CCC342)C)C(OC)=C1C",
+        "mw": 331.37,
+        "novelty_structural": 0.75
+      },
+      "prediction": {
+        "target_class": "opioid receptor",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for opioid receptor with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "GTPγS binding at μ-opioid receptor"
+        },
+        {
+          "step": "model system",
+          "kind": "membrane preparation"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-02",
+      "candidate_id": "C-2026-0005",
+      "claim": "(1R,2R,3S,6S,7R,9S,10S,11S,13R,14R)-11-isopropyl-3,7,10-trimethyl-15-oxapentacyclo[7.5.1.0¹,⁶.0⁷,¹³.0¹⁰,¹⁴]pentadecane-2,6,9,11,13,14-hexol from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Cinnamomum cassia",
+        "line": "用桂枝汤而但身体疼痛者亦有之",
+        "source": "本草思辨錄",
+        "locator": "ws_zh_bencao_sibian:675-689",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "溫",
+          "flavors": [
+            "辛"
+          ],
+          "channels": [],
+          "direction": "",
+          "grade": "上品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "(1R,2R,3S,6S,7R,9S,10S,11S,13R,14R)-11-isopropyl-3,7,10-trimethyl-15-oxapentacyclo[7.5.1.0¹,⁶.0⁷,¹³.0¹⁰,¹⁴]pentadecane-2,6,9,11,13,14-hexol",
+        "smiles": "OC1C(C)CCC2(O)C3(C)CC4(O)OC12C5(O)C3(O)CC(O)(C(C)C)C45C",
+        "mw": 384.47,
+        "novelty_structural": 0.7344
+      },
+      "prediction": {
+        "target_class": "NF-kB",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for NF-kB with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "THP-1 NF-κB luciferase reporter + IL-6/TNF-α ELISA"
+        },
+        {
+          "step": "model system",
+          "kind": "human monocytic cell line"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-03",
+      "candidate_id": "C-2026-0053",
+      "claim": "(11R,11aR)-2,3,5,6,7,8-Hexahydro-3'-methoxy-4',9-dimethylspiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-5',10-dione from Stemona japonica (百部) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Stemona japonica",
+        "line": "暴咳嗽︰張文仲方︰用百部根漬酒",
+        "source": "本草綱目",
+        "locator": "ws_zh_bencao_gangmu:622-637",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "溫",
+          "flavors": [
+            "甘"
+          ],
+          "channels": [
+            "肺"
+          ],
+          "direction": "",
+          "grade": "中品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "(11R,11aR)-2,3,5,6,7,8-Hexahydro-3'-methoxy-4',9-dimethylspiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-5',10-dione",
+        "smiles": "O=C1OC2(C(=O)C(=C3CCCCN4CCCC342)C)C(OC)=C1C",
+        "mw": 317.38,
+        "novelty_structural": 0.7391
+      },
+      "prediction": {
+        "target_class": "opioid receptor",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for opioid receptor with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "GTPγS binding at μ-opioid receptor"
+        },
+        {
+          "step": "model system",
+          "kind": "membrane preparation"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-04",
+      "candidate_id": "C-2026-0055",
+      "claim": "(1R)-2beta,3beta-Epoxy-2-methyl-3-acetyl-1,2,3,4-tetrahydronaphthalene-1beta,4beta,5-triol from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Rumex japonicus",
+        "line": "羊蹄以根名，牛舌以叶名，秃菜以治秃疮名也",
+        "source": "本草崇原",
+        "locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "平",
+          "flavors": [
+            "苦/澀"
+          ],
+          "channels": [],
+          "direction": "",
+          "grade": "下品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "(1R)-2beta,3beta-Epoxy-2-methyl-3-acetyl-1,2,3,4-tetrahydronaphthalene-1beta,4beta,5-triol",
+        "smiles": "O=C(C)C12OC2(C)C(O)C=3C=CC=C(O)C3C1O",
+        "mw": 250.25,
+        "novelty_structural": 0.68
+      },
+      "prediction": {
+        "target_class": "NF-kB",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for NF-kB with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "THP-1 NF-κB luciferase reporter + IL-6/TNF-α ELISA"
+        },
+        {
+          "step": "model system",
+          "kind": "human monocytic cell line"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-05",
+      "candidate_id": "C-2026-0048",
+      "claim": "(1S,8R,9S,12S,14R,15S)-8,14,15-trihydroxy-1,12-dimethyl-6-propan-2-yl-5,10-dioxatetracyclo[7.6.1.02,7.012,16]hexadeca-2,6-diene-4,11-dione from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Trichosanthes cucumeroides",
+        "line": "发明王瓜产南方者，禀湿熱之氣最盛，患瘡肿痈毒者食之，爲患转甚",
+        "source": "本經逢原",
+        "locator": "ws_zh_benjing_fengyuan:998-1028",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "平",
+          "flavors": [
+            "酸/苦"
+          ],
+          "channels": [],
+          "direction": "",
+          "grade": "中品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "(1S,8R,9S,12S,14R,15S)-8,14,15-trihydroxy-1,12-dimethyl-6-propan-2-yl-5,10-dioxatetracyclo[7.6.1.02,7.012,16]hexadeca-2,6-diene-4,11-dione",
+        "smiles": "O=C1OC(=C2C(=C1)C3(C)C(O)C(O)CC4(C(=O)OC(C2O)C43)C)C(C)C",
+        "mw": 364.39,
+        "novelty_structural": 0.6543
+      },
+      "prediction": {
+        "target_class": "NF-kB",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for NF-kB with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "THP-1 NF-κB luciferase reporter + IL-6/TNF-α ELISA"
+        },
+        {
+          "step": "model system",
+          "kind": "human monocytic cell line"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-06",
+      "candidate_id": "C-2026-0017",
+      "claim": "jineol from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Scolopendra subspinipes",
+        "line": "治血氣刺痛甚腹諸痛，疝痛，血痢腸風腹痛，身體血痺刺痛，肝瘧發寒熱，反胃消渴，及痰涎挾血成窠，血貫瞳子，血凝齒痛，重舌，小兒驚風，五癇癲疾，殺蟲，解藥毒，及蛇、蠍、蜈蚣傷（時珍）",
+        "source": "本草綱目",
+        "locator": "ws_zh_bencao_gangmu:66-154",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "溫",
+          "flavors": [
+            "辛"
+          ],
+          "channels": [
+            "肝"
+          ],
+          "direction": "",
+          "grade": "下品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "jineol",
+        "smiles": "C1=CC2=CC(=CN=C2C(=C1)O)O",
+        "mw": 161.16,
+        "novelty_structural": 0.6316
+      },
+      "prediction": {
+        "target_class": "opioid receptor",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for opioid receptor with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "GTPγS binding at μ-opioid receptor"
+        },
+        {
+          "step": "model system",
+          "kind": "membrane preparation"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-07",
+      "candidate_id": "C-2026-0016",
+      "claim": "Scolopendrine from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Scolopendra subspinipes",
+        "line": "治血氣刺痛甚腹諸痛，疝痛，血痢腸風腹痛，身體血痺刺痛，肝瘧發寒熱，反胃消渴，及痰涎挾血成窠，血貫瞳子，血凝齒痛，重舌，小兒驚風，五癇癲疾，殺蟲，解藥毒，及蛇、蠍、蜈蚣傷（時珍）",
+        "source": "本草綱目",
+        "locator": "ws_zh_bencao_gangmu:66-154",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "溫",
+          "flavors": [
+            "辛"
+          ],
+          "channels": [
+            "肝"
+          ],
+          "direction": "",
+          "grade": "下品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "Scolopendrine",
+        "smiles": "O=S(=O)(O)OC=1C2=NC(O)=C(OC)C=C2C=CC1CC3=CC=C(O)C(OC)=C3",
+        "mw": 407.39,
+        "novelty_structural": 0.6154
+      },
+      "prediction": {
+        "target_class": "opioid receptor",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for opioid receptor with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "GTPγS binding at μ-opioid receptor"
+        },
+        {
+          "step": "model system",
+          "kind": "membrane preparation"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-08",
+      "candidate_id": "C-2026-0030",
+      "claim": "Peucedanocoumarin I from Kitagawia praeruptora (前胡) is proposed to act on TRPA1 for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Kitagawia praeruptora",
+        "line": "前胡汤治肺热咳嗽",
+        "source": "普濟方",
+        "locator": "ws_zh_pujifang:1190-1198",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "寒",
+          "flavors": [
+            "苦"
+          ],
+          "channels": [
+            "肺/肝/脾/膀胱"
+          ],
+          "direction": "",
+          "grade": "中品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "Peucedanocoumarin I",
+        "smiles": "O=C1OC2=C(C=C1)C=CC=3OC(C)(C)C(OC(=O)C(C)CC)C(OC(=O)C)C32",
+        "mw": 388.42,
+        "novelty_structural": 0.6029
+      },
+      "prediction": {
+        "target_class": "TRPA1",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for TRPA1 with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "Ca2+ flux (FLIPR) on TRPA1-expressing cells"
+        },
+        {
+          "step": "model system",
+          "kind": "recombinant cell line"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-09",
+      "candidate_id": "C-2026-0058",
+      "claim": "Rumejaposide A from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Rumex japonicus",
+        "line": "羊蹄以根名，牛舌以叶名，秃菜以治秃疮名也",
+        "source": "本草崇原",
+        "locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "平",
+          "flavors": [
+            "苦/澀"
+          ],
+          "channels": [],
+          "direction": "",
+          "grade": "下品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "Rumejaposide A",
+        "smiles": "O=C(O)C=1C(O)=C2C(=O)C=3C(O)=CC=CC3C(O)(C2=CC1C)C4OC(CO)C(O)C(O)C4O",
+        "mw": 462.41,
+        "novelty_structural": 0.5632
+      },
+      "prediction": {
+        "target_class": "NF-kB",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for NF-kB with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "THP-1 NF-κB luciferase reporter + IL-6/TNF-α ELISA"
+        },
+        {
+          "step": "model system",
+          "kind": "human monocytic cell line"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    },
+    {
+      "card_id": "FC-10",
+      "candidate_id": "C-2026-0059",
+      "claim": "Rumejaposide C from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "classical_basis": {
+        "drug": "Rumex japonicus",
+        "line": "羊蹄以根名，牛舌以叶名，秃菜以治秃疮名也",
+        "source": "本草崇原",
+        "locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "span_verified": true,
+        "theory_vector": {
+          "nature": "平",
+          "flavors": [
+            "苦/澀"
+          ],
+          "channels": [],
+          "direction": "",
+          "grade": "下品",
+          "rasa": [],
+          "virya": null
+        }
+      },
+      "molecule": {
+        "name": "Rumejaposide C",
+        "smiles": "O=C(O)C=1C(O)=C2C(=O)C=3C(O)=CC(O)=CC3C(O)(C2=CC1C)C4OC(CO)C(O)C(O)C4O",
+        "mw": 478.41,
+        "novelty_structural": 0.5488
+      },
+      "prediction": {
+        "target_class": "NF-kB",
+        "expected_direction": "concentration-dependent target engagement; effect abolished by the reference antagonist"
+      },
+      "falsification": {
+        "experiment": "Enzyme- or cell-based dose–response for NF-kB with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+        "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+        "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+      },
+      "development_path": [
+        {
+          "step": "assay",
+          "kind": "THP-1 NF-κB luciferase reporter + IL-6/TNF-α ELISA"
+        },
+        {
+          "step": "model system",
+          "kind": "human monocytic cell line"
+        },
+        {
+          "step": "go/no-go",
+          "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+        }
+      ],
+      "status": "proposed — not tested",
+      "does_not_claim": [
+        "not a cure",
+        "not a dose",
+        "not tested in vitro or in vivo",
+        "the molecule may be known; the *association* is the novelty claim"
+      ]
+    }
+  ]
+}

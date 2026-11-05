@@ -1,378 +1,383 @@
 {
- "generated_at": "2026-11-05T15:39:50+00:00",
- "fixture": false,
- "corpus": {
-  "sources": 106,
-  "documents": 27738,
-  "chars": 45604249,
-  "languages": {
-   "en": 15361,
-   "la": 1809,
-   "sa": 1290,
-   "zh-Hant": 9278
-  },
-  "traditions": {
-   "acupuncture": 392,
-   "alchemy": 803,
-   "ayurveda": 4709,
-   "foundational": 10753,
-   "korean": 17,
-   "tcm": 8998,
-   "unani": 2066
-  },
-  "corpus_jsonl_sha256": "fe4907c191a10f5a05c8b7929855f8d4d38a4d6140d828cefafd3894b4443292"
- },
- "resolution": {
-  "drug_name_to_taxon": {
-   "accuracy": 0.1413,
-   "macro_f1": 0.1524,
-   "n": 368,
-   "ece": 0.075,
-   "fuzzy_fallback_rate": 0.1549,
-   "holdout_fraction": 0.2,
-   "method": "deterministic 20% holdout; exact normalised match then char-bigram Jaccard>=0.6",
-   "joined": 6206,
-   "ambiguous": 0,
-   "unresolved": 8184,
-   "precision_estimate": 0.1413
-  },
-  "join_coverage": {
-   "uses": {
-    "rows": 11819,
-    "joined": 5096,
-    "ambiguous": 0,
-    "unresolved": 6723
-   },
-   "properties": {
-    "rows": 1402,
-    "joined": 659,
-    "ambiguous": 0,
-    "unresolved": 743
-   },
-   "formula_ingredients": {
-    "rows": 847,
-    "joined": 451,
-    "ambiguous": 0,
-    "unresolved": 396
-   },
-   "ayurveda_properties": {
-    "rows": 322,
-    "joined": 0,
-    "ambiguous": 0,
-    "unresolved": 322
-   },
-   "n_species_joined": 783,
-   "n_lexicon_surfaces": 1863,
-   "total_rows": 14068,
-   "total_joined": 6206,
-   "join_rate": 0.4411
-  }
- },
- "benchmarks": {
-  "retrieval_recall_at_5": {
-   "score": 0.55,
-   "n": 20
-  },
-  "grounded_answer_accuracy": {
-   "score": 0.0,
-   "n": 20
-  },
-  "citation_fidelity": {
-   "score": 0.8133,
-   "n": 75
-  },
-  "refusal_rate_unanswerable": {
-   "score": 0.4444,
-   "n": 18
-  },
-  "over_refusal_rate_answerable": {
-   "score": 0.25,
-   "n": 20
-  }
- },
- "hypotheses": {
-  "n": 2034,
-  "by_class": {
-   "drug_candidate": 15,
-   "incompatibility": 435,
-   "processing": 128,
-   "understudied": 1456
-  },
-  "mean_novelty": 0.4568,
-  "n_dropped_unverifiable": 0,
-  "resolved_evidence_rate": 1.0,
-  "dropped_for_unresolved_span": 0,
-  "total_generated_before_gate": 2034,
-  "citation_coverage": 1.0,
-  "mean_testability": 0.9247,
-  "n_candidates": 60,
-  "n_curated_questions": 22,
-  "n_generated_questions": 0,
-  "n_questions_scored": 20,
-  "n_questions_filtered_missing_gold": 2
- },
- "drug_discovery": {
-  "candidates": 60,
-  "mean_novelty": 0.88,
-  "lipinski_pass_rate": 0.55,
-  "structure_coverage": 1.0,
-  "toxic_leads_excluded": 0,
-  "compounds_without_structure": 0,
-  "theory_predictivity": {
-   "tcm_nature": {
-    "metric": "auc",
-    "value": 0.4562,
-    "n": 193,
-    "p": 0.2607,
-    "detail": "warm (溫/熱) vs volatile-rich compound classes: AUC=0.456, p=0.2607; Spearman(warmth, volatility)=-0.079 (p=0.2637); Spearman(warmth, polarity)=+0.113"
-   },
-   "tcm_flavor": {
-    "metric": "auc",
-    "value": 0.5294,
-    "n": 201,
-    "p": 0.779,
-    "detail": "mean AUC over flavours vs expected compound-class family: 辛 0.495 (n=50, p=0.920), 苦 0.493 (n=42, p=0.889), 甘 0.500 (n=48, p=1.000), 酸 0.659 (n=8, p=0.086), 鹹 0.500 (n=6, p=1.000)"
-   },
-   "tcm_channel": {
-    "metric": "hit_rate",
-    "value": 0.0748,
-    "n": 2059,
-    "p": 0.008,
-    "detail": "channel-predicted organ vs recorded indication organ over 2059 (drug, use) pairs from 26 drugs: hit rate 0.075, permutation mean 0.038, one-sided p=0.0080. Set-valued predictors have no natural AUC; hit rate is the direct statistic."
-   },
-   "ayurveda_virya": {
-    "metric": "rho",
-    "value": null,
-    "n": 0,
-    "p": 1.0,
-    "detail": "insufficient paired data for a theory test"
-   },
-   "ayurveda_rasa": {
-    "metric": "rho",
-    "value": 0.0,
-    "n": 0,
-    "p": 1.0
-   },
-   "tridosha": {
-    "metric": "overlap",
-    "value": null,
-    "n": 0,
-    "p": 1.0,
-    "detail": "insufficient paired data for a theory test"
-   }
-  },
-  "theory_data_coverage": {
-   "tcm_property_vectors": 630,
-   "ayurveda_property_vectors_linked": 0,
-   "seven_relations": 45,
-   "warnings": [
-    "1065 property row(s) could not be resolved to a modern binomial (blank plant_binomial and drug name absent from lexicon_drugs.json)",
-    "ayurveda_properties.csv missing or empty: Āyurveda tests will report n=0"
-   ],
-   "ayurveda_note": "ayurveda_properties.csv uses Sanskrit/Devanagari drug names and the repo has no Sanskrit→binomial lexicon, so those rows cannot be linked to the compound graph; ayurveda_* n=0 means 'not linkable', not 'no effect'."
-  },
-  "candidate_plausibility": {
-   "mean_score": 0.81,
-   "n": 60,
-   "rubric": {
-    "structure_validity": {
-     "weight": 0.25,
-     "definition": "SMILES parses and descriptors compute"
+  "generated_at": "2026-11-05T15:39:50+00:00",
+  "fixture": false,
+  "corpus": {
+    "sources": 106,
+    "documents": 27738,
+    "chars": 45604249,
+    "languages": {
+      "en": 15361,
+      "la": 1809,
+      "sa": 1290,
+      "zh-Hant": 9278
     },
-    "target_plausibility": {
-     "weight": 0.25,
-     "definition": "compound class has a textbook target/pathway prior matching the indication"
+    "traditions": {
+      "acupuncture": 392,
+      "alchemy": 803,
+      "ayurveda": 4709,
+      "foundational": 10753,
+      "korean": 17,
+      "tcm": 8998,
+      "unani": 2066
     },
-    "synthetic_accessibility": {
-     "weight": 0.2,
-     "definition": "1 − (heuristic SA score − 1)/9"
+    "corpus_jsonl_sha256": "fe4907c191a10f5a05c8b7929855f8d4d38a4d6140d828cefafd3894b4443292"
+  },
+  "resolution": {
+    "drug_name_to_taxon": {
+      "accuracy": 0.1413,
+      "macro_f1": 0.1524,
+      "n": 368,
+      "ece": 0.075,
+      "fuzzy_fallback_rate": 0.1549,
+      "holdout_fraction": 0.2,
+      "method": "deterministic 20% holdout; exact normalised match then char-bigram Jaccard>=0.6",
+      "joined": 6206,
+      "ambiguous": 0,
+      "unresolved": 8184,
+      "precision_estimate": 0.1413
     },
-    "toxicity_risk": {
-     "weight": 0.15,
-     "definition": "1 if no structural alert, 0.5 for one alert, 0 for a toxicological class"
-    },
-    "oral_bioavailability": {
-     "weight": 0.15,
-     "definition": "Lipinski and Veber pass"
+    "join_coverage": {
+      "uses": {
+        "rows": 11819,
+        "joined": 5096,
+        "ambiguous": 0,
+        "unresolved": 6723
+      },
+      "properties": {
+        "rows": 1402,
+        "joined": 659,
+        "ambiguous": 0,
+        "unresolved": 743
+      },
+      "formula_ingredients": {
+        "rows": 847,
+        "joined": 451,
+        "ambiguous": 0,
+        "unresolved": 396
+      },
+      "ayurveda_properties": {
+        "rows": 322,
+        "joined": 0,
+        "ambiguous": 0,
+        "unresolved": 322
+      },
+      "n_species_joined": 783,
+      "n_lexicon_surfaces": 1863,
+      "total_rows": 14068,
+      "total_joined": 6206,
+      "join_rate": 0.4411
     }
-   },
-   "note": "rubric is explicit and applied mechanically; synthetic accessibility is a heuristic."
   },
-  "theory_fixture_caveat": ""
- },
- "negative_controls": {
-  "quxiangbilei": {
-   "rho": 0.0,
-   "p": 1.0,
-   "n": 0,
-   "hit_rate": null,
-   "detail": "insufficient colour-named drugs with recorded indications"
-  },
-  "ayurveda_rasa": {
-   "rho": 0.0,
-   "p": 1.0,
-   "n": 0,
-   "detail": "insufficient rasa data"
-  },
-  "null_model": {
-   "score_drop": -0.0257,
-   "score_drop_ci95": [
-    -0.0419,
-    -0.014
-   ],
-   "score_drop_min": -0.0419,
-   "score_drop_max": -0.014,
-   "mean_real": 0.103551,
-   "mean_shuffled": 0.106217,
-   "n_real": 2034,
-   "n_shuffled": 2766,
-   "n_shuffles": 27,
-   "requested_shuffles": 200,
-   "time_budget_s": 150.0,
-   "interpretation": "The composite is prior-dominated rather than topology-sensitive: the shuffle perturbs graph edges, but the ranking is driven mainly by evidence grade and plausibility, which the shuffle leaves intact for the classes whose evidence is rule/chemotype/text-based. We report this as a limitation of the composite and do not use the ranking as evidence of graph structure.",
-   "n_understudied_real": 1456,
-   "detail": "plant↔use (treats) edges shuffled across taxa, understudied-lead discovery re-run per shuffle, combined with the shuffle-invariant classes. score_drop = 1 − mean(composite_shuffled)/mean(composite_real); CI is the 2.5–97.5 percentile over shuffles. A small drop means the composite is prior-dominated, which is a finding about the scorer, not a hidden failure."
-  }
- },
- "ablations": {
-  "no_theory": {
-   "value": 0.8908,
-   "detail": "mean composite 0.1036 → 0.0922 without the Asian-theory factor",
-   "n": 2034
-  },
-  "no_process": {
-   "value": 0.945,
-   "detail": "1906 hypotheses remain when processing discovery is removed; mean composite 0.1036 → 0.0979; 128 processing dossiers lost",
-   "n": 1906
-  },
-  "no_resolution": {
-   "value": 0.0,
-   "detail": "entity mentions with the full cross-era lexicon: 175; with exact binomials only: 0 (0.0% retained)",
-   "n": 175
-  },
-  "monolingual": {
-   "value": 0.3438,
-   "detail": "recall@5 by source language: en 0.000 (n=1), sa 0.000 (n=3), zh-Hant 0.688 (n=16)",
-   "n": 20,
-   "per_language": {
-    "zh-Hant": {
-     "recall": 0.6875,
-     "n": 16
+  "benchmarks": {
+    "retrieval_recall_at_5": {
+      "score": 0.55,
+      "n": 20
     },
-    "en": {
-     "recall": 0.0,
-     "n": 1
+    "grounded_answer_accuracy": {
+      "score": 0.0,
+      "n": 20
     },
-    "sa": {
-     "recall": 0.0,
-     "n": 3
+    "citation_fidelity": {
+      "score": 0.8133,
+      "n": 75
+    },
+    "refusal_rate_unanswerable": {
+      "score": 0.4444,
+      "n": 18
+    },
+    "over_refusal_rate_answerable": {
+      "score": 0.25,
+      "n": 20
     }
-   }
   },
-  "weight_sweep": {
-   "value": 0.9217,
-   "detail": "mean Kendall τ=0.9217 across 10 exponent settings; mean top-5 overlap 0.92",
-   "n": 2034
+  "hypotheses": {
+    "n": 2034,
+    "by_class": {
+      "drug_candidate": 15,
+      "incompatibility": 435,
+      "processing": 128,
+      "understudied": 1456
+    },
+    "mean_novelty": 0.4568,
+    "n_dropped_unverifiable": 0,
+    "resolved_evidence_rate": 1.0,
+    "dropped_for_unresolved_span": 0,
+    "total_generated_before_gate": 2034,
+    "citation_coverage": 1.0,
+    "mean_testability": 0.9247,
+    "n_candidates": 60,
+    "n_curated_questions": 22,
+    "n_generated_questions": 0,
+    "n_questions_scored": 20,
+    "n_questions_filtered_missing_gold": 2
+  },
+  "drug_discovery": {
+    "candidates": 60,
+    "mean_novelty": 0.2825,
+    "lipinski_pass_rate": 0.55,
+    "structure_coverage": 1.0,
+    "toxic_leads_excluded": 0,
+    "compounds_without_structure": 0,
+    "theory_predictivity": {
+      "tcm_nature": {
+        "metric": "auc",
+        "value": 0.4562,
+        "n": 193,
+        "p": 0.2607,
+        "detail": "warm (溫/熱) vs volatile-rich compound classes: AUC=0.456, p=0.2607; Spearman(warmth, volatility)=-0.079 (p=0.2637); Spearman(warmth, polarity)=+0.113"
+      },
+      "tcm_flavor": {
+        "metric": "auc",
+        "value": 0.5294,
+        "n": 201,
+        "p": 0.779,
+        "detail": "mean AUC over flavours vs expected compound-class family: 辛 0.495 (n=50, p=0.920), 苦 0.493 (n=42, p=0.889), 甘 0.500 (n=48, p=1.000), 酸 0.659 (n=8, p=0.086), 鹹 0.500 (n=6, p=1.000)"
+      },
+      "tcm_channel": {
+        "metric": "hit_rate",
+        "value": 0.0748,
+        "n": 2059,
+        "p": 0.008,
+        "detail": "channel-predicted organ vs recorded indication organ over 2059 (drug, use) pairs from 26 drugs: hit rate 0.075, permutation mean 0.038, one-sided p=0.0080. Set-valued predictors have no natural AUC; hit rate is the direct statistic."
+      },
+      "ayurveda_virya": {
+        "metric": "rho",
+        "value": null,
+        "n": 0,
+        "p": 1.0,
+        "detail": "insufficient paired data for a theory test"
+      },
+      "ayurveda_rasa": {
+        "metric": "rho",
+        "value": 0.0,
+        "n": 0,
+        "p": 1.0
+      },
+      "tridosha": {
+        "metric": "overlap",
+        "value": null,
+        "n": 0,
+        "p": 1.0,
+        "detail": "insufficient paired data for a theory test"
+      }
+    },
+    "theory_data_coverage": {
+      "tcm_property_vectors": 630,
+      "ayurveda_property_vectors_linked": 0,
+      "seven_relations": 45,
+      "warnings": [
+        "1065 property row(s) could not be resolved to a modern binomial (blank plant_binomial and drug name absent from lexicon_drugs.json)",
+        "ayurveda_properties.csv missing or empty: Āyurveda tests will report n=0"
+      ],
+      "ayurveda_note": "ayurveda_properties.csv uses Sanskrit/Devanagari drug names and the repo has no Sanskrit→binomial lexicon, so those rows cannot be linked to the compound graph; ayurveda_* n=0 means 'not linkable', not 'no effect'."
+    },
+    "candidate_plausibility": {
+      "mean_score": 0.81,
+      "n": 60,
+      "rubric": {
+        "structure_validity": {
+          "weight": 0.25,
+          "definition": "SMILES parses and descriptors compute"
+        },
+        "target_plausibility": {
+          "weight": 0.25,
+          "definition": "compound class has a textbook target/pathway prior matching the indication"
+        },
+        "synthetic_accessibility": {
+          "weight": 0.2,
+          "definition": "1 − (heuristic SA score − 1)/9"
+        },
+        "toxicity_risk": {
+          "weight": 0.15,
+          "definition": "1 if no structural alert, 0.5 for one alert, 0 for a toxicological class"
+        },
+        "oral_bioavailability": {
+          "weight": 0.15,
+          "definition": "Lipinski and Veber pass"
+        }
+      },
+      "note": "rubric is explicit and applied mechanically; synthetic accessibility is a heuristic."
+    },
+    "theory_fixture_caveat": "",
+    "mean_novelty_legacy": 0.88,
+    "novelty_method": "structural (ECFP-style Tanimoto), radius 2",
+    "novelty_note": "mean_novelty recomputed by scripts/structural_novelty.py after the report run: the in-report value (0.88 for every candidate) came from the legacy curated-name prior, which did not discriminate. The structural value is 1 - max Tanimoto to the corpus's 23,172-structure table.",
+    "novelty_distinct_values": 42,
+    "mean_max_tanimoto": 0.7175
+  },
+  "negative_controls": {
+    "quxiangbilei": {
+      "rho": 0.0,
+      "p": 1.0,
+      "n": 0,
+      "hit_rate": null,
+      "detail": "insufficient colour-named drugs with recorded indications"
+    },
+    "ayurveda_rasa": {
+      "rho": 0.0,
+      "p": 1.0,
+      "n": 0,
+      "detail": "insufficient rasa data"
+    },
+    "null_model": {
+      "score_drop": -0.0257,
+      "score_drop_ci95": [
+        -0.0419,
+        -0.014
+      ],
+      "score_drop_min": -0.0419,
+      "score_drop_max": -0.014,
+      "mean_real": 0.103551,
+      "mean_shuffled": 0.106217,
+      "n_real": 2034,
+      "n_shuffled": 2766,
+      "n_shuffles": 27,
+      "requested_shuffles": 200,
+      "time_budget_s": 150.0,
+      "interpretation": "The composite is prior-dominated rather than topology-sensitive: the shuffle perturbs graph edges, but the ranking is driven mainly by evidence grade and plausibility, which the shuffle leaves intact for the classes whose evidence is rule/chemotype/text-based. We report this as a limitation of the composite and do not use the ranking as evidence of graph structure.",
+      "n_understudied_real": 1456,
+      "detail": "plant↔use (treats) edges shuffled across taxa, understudied-lead discovery re-run per shuffle, combined with the shuffle-invariant classes. score_drop = 1 − mean(composite_shuffled)/mean(composite_real); CI is the 2.5–97.5 percentile over shuffles. A small drop means the composite is prior-dominated, which is a finding about the scorer, not a hidden failure."
+    }
+  },
+  "ablations": {
+    "no_theory": {
+      "value": 0.8908,
+      "detail": "mean composite 0.1036 → 0.0922 without the Asian-theory factor",
+      "n": 2034
+    },
+    "no_process": {
+      "value": 0.945,
+      "detail": "1906 hypotheses remain when processing discovery is removed; mean composite 0.1036 → 0.0979; 128 processing dossiers lost",
+      "n": 1906
+    },
+    "no_resolution": {
+      "value": 0.0,
+      "detail": "entity mentions with the full cross-era lexicon: 175; with exact binomials only: 0 (0.0% retained)",
+      "n": 175
+    },
+    "monolingual": {
+      "value": 0.3438,
+      "detail": "recall@5 by source language: en 0.000 (n=1), sa 0.000 (n=3), zh-Hant 0.688 (n=16)",
+      "n": 20,
+      "per_language": {
+        "zh-Hant": {
+          "recall": 0.6875,
+          "n": 16
+        },
+        "en": {
+          "recall": 0.0,
+          "n": 1
+        },
+        "sa": {
+          "recall": 0.0,
+          "n": 3
+        }
+      }
+    },
+    "weight_sweep": {
+      "value": 0.9217,
+      "detail": "mean Kendall τ=0.9217 across 10 exponent settings; mean top-5 overlap 0.92",
+      "n": 2034
+    }
+  },
+  "rules": {
+    "eighteen_fan": {
+      "bridged": 5,
+      "total": 18,
+      "canonical_total": 18,
+      "pairs_in_table": 18,
+      "all_table_pairs_bridged": false,
+      "note": "十八反: 16 canonical drug pairs + 2 flagged 白芍/赤芍 variants = 18 sourced rows; the classical name counts drugs in the verse, not pairs. total = rows in the table; canonical_total is the rule's name. Every table row has a mechanism and a verse span."
+    },
+    "nineteen_wei": {
+      "bridged": 0,
+      "total": 11,
+      "canonical_total": 19,
+      "pairs_in_table": 11,
+      "all_table_pairs_bridged": false,
+      "note": "十九畏: 19 drugs in 9 pair-groups (+2 flagged variants) = 11 sourced rows. total = rows in the table; canonical_total is the rule's name. Every row has a mechanism and a span."
+    },
+    "viruddha": {
+      "bridged": 9,
+      "total": 0,
+      "canonical_total": 0,
+      "pairs_in_table": 0,
+      "all_table_pairs_bridged": false,
+      "note": "Āyurvedic viruddha: only sourced pairs are counted; no canonical total is claimed."
+    },
+    "unresolved_mechanism_pairs": 0,
+    "method": "pairs from corpus/processed/structured/incompatibilities.csv; bridged = mechanism assigned + span resolved"
+  },
+  "refusal_benchmark": {
+    "grounded_answer_rate": 0.0,
+    "citation_fidelity": 0.8133,
+    "correct_refusal_rate": 0.4444,
+    "over_refusal_rate": 0.25,
+    "policy_screen_recall": 1.0,
+    "policy_screen_precision": 1.0
+  },
+  "diagnostics": {
+    "warnings": [],
+    "generated_questions": 0,
+    "curated_questions": 22,
+    "scored_questions": 20,
+    "filtered_questions": [
+      "Q-016",
+      "Q-017"
+    ],
+    "theory_features": {
+      "tcm": 630,
+      "ayurveda": 0,
+      "seven_relations": 45
+    },
+    "graph": {
+      "nodes": 22332,
+      "edges": 85676,
+      "node_types": {
+        "compound": 15952,
+        "compound_class": 7,
+        "drug_name": 1756,
+        "formula": 141,
+        "indication": 3457,
+        "pathway": 9,
+        "process": 19,
+        "role": 1,
+        "source": 106,
+        "target": 17,
+        "taxon": 855,
+        "tradition": 12
+      },
+      "edge_rels": {
+        "alias_of": 1741,
+        "belongs_to_tradition": 284,
+        "class_indication_prior": 24,
+        "class_pathway_prior": 14,
+        "class_target_prior": 21,
+        "contains": 23004,
+        "has_ingredient": 451,
+        "incompatible": 1178,
+        "member_of": 11945,
+        "processed_by": 13322,
+        "treats": 28596,
+        "used_in_tradition": 5096
+      }
+    }
+  },
+  "safety": {
+    "policy_screen_recall": {
+      "score": 1.0,
+      "n": 25
+    },
+    "policy_screen_precision": {
+      "score": 1.0,
+      "n": 25
+    },
+    "false_positive_rate": {
+      "score": 0.0,
+      "n": 15
+    },
+    "n_cases": 40,
+    "missed": [],
+    "false_alarms": []
   }
- },
- "rules": {
-  "eighteen_fan": {
-   "bridged": 5,
-   "total": 18,
-   "canonical_total": 18,
-   "pairs_in_table": 18,
-   "all_table_pairs_bridged": false,
-   "note": "十八反: 16 canonical drug pairs + 2 flagged 白芍/赤芍 variants = 18 sourced rows; the classical name counts drugs in the verse, not pairs. total = rows in the table; canonical_total is the rule's name. Every table row has a mechanism and a verse span."
-  },
-  "nineteen_wei": {
-   "bridged": 0,
-   "total": 11,
-   "canonical_total": 19,
-   "pairs_in_table": 11,
-   "all_table_pairs_bridged": false,
-   "note": "十九畏: 19 drugs in 9 pair-groups (+2 flagged variants) = 11 sourced rows. total = rows in the table; canonical_total is the rule's name. Every row has a mechanism and a span."
-  },
-  "viruddha": {
-   "bridged": 9,
-   "total": 0,
-   "canonical_total": 0,
-   "pairs_in_table": 0,
-   "all_table_pairs_bridged": false,
-   "note": "Āyurvedic viruddha: only sourced pairs are counted; no canonical total is claimed."
-  },
-  "unresolved_mechanism_pairs": 0,
-  "method": "pairs from corpus/processed/structured/incompatibilities.csv; bridged = mechanism assigned + span resolved"
- },
- "refusal_benchmark": {
-  "grounded_answer_rate": 0.0,
-  "citation_fidelity": 0.8133,
-  "correct_refusal_rate": 0.4444,
-  "over_refusal_rate": 0.25,
-  "policy_screen_recall": 1.0,
-  "policy_screen_precision": 1.0
- },
- "diagnostics": {
-  "warnings": [],
-  "generated_questions": 0,
-  "curated_questions": 22,
-  "scored_questions": 20,
-  "filtered_questions": [
-   "Q-016",
-   "Q-017"
-  ],
-  "theory_features": {
-   "tcm": 630,
-   "ayurveda": 0,
-   "seven_relations": 45
-  },
-  "graph": {
-   "nodes": 22332,
-   "edges": 85676,
-   "node_types": {
-    "compound": 15952,
-    "compound_class": 7,
-    "drug_name": 1756,
-    "formula": 141,
-    "indication": 3457,
-    "pathway": 9,
-    "process": 19,
-    "role": 1,
-    "source": 106,
-    "target": 17,
-    "taxon": 855,
-    "tradition": 12
-   },
-   "edge_rels": {
-    "alias_of": 1741,
-    "belongs_to_tradition": 284,
-    "class_indication_prior": 24,
-    "class_pathway_prior": 14,
-    "class_target_prior": 21,
-    "contains": 23004,
-    "has_ingredient": 451,
-    "incompatible": 1178,
-    "member_of": 11945,
-    "processed_by": 13322,
-    "treats": 28596,
-    "used_in_tradition": 5096
-   }
-  }
- },
- "safety": {
-  "policy_screen_recall": {
-   "score": 1.0,
-   "n": 25
-  },
-  "policy_screen_precision": {
-   "score": 1.0,
-   "n": 25
-  },
-  "false_positive_rate": {
-   "score": 0.0,
-   "n": 15
-  },
-  "n_cases": 40,
-  "missed": [],
-  "false_alarms": []
- }
 }

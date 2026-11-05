@@ -162,42 +162,48 @@ The chain, in order. This is the demo screen:
   6 rotatable bonds. **4 of 4 Lipinski rules evaluated — passes; Veber passes.** Computed from the resolved SMILES.
 - **The assay.** Ca²⁺ flux (FLIPR) on TRPA1-expressing cells, then a recombinant cell line; go/no-go is reproducible
   engagement in two orthogonal assays plus selectivity over the nearest paralogue.
-- **And the honest part.** Novelty is **0.88 for every candidate in the shortlist** — the novelty estimator is not yet
-  discriminating, so **the rank order carries no information today**. Structural alerts are flagged (Michael acceptor,
-  polyunsaturated). We show the defect rather than dress it up; it is item one on the `IMPROVEMENTS.md` list.
+- **Novelty is structural now, and it discriminates.** ECFP-style Tanimoto (radius 2) against the
+  corpus's **23,172-structure table**, excluding each candidate's own compound and source plant:
+  **42 distinct values, range 0.000–0.750, mean 0.283** — replaced a curated-name prior that
+  gave every candidate 0.88 and made the rank order meaningless. It measures distance from
+  documented phytochemistry, **not** therapeutic novelty, and the card says so.
 
-**Visual:** the Workbench Candidates screen, the 前胡 row expanded — verified classical line, theory chips,
-formula/MW, Lipinski table and the Ca²⁺-flux assay in one frame.
+**Visual:** the expanded candidate dossier from the Workbench, in the order of the chain above — classical
+line highlighted in the source text, theory chips, molecular card with the computed descriptors, then the assay.
 
-**Speaker note:** A candidate you can trace to a byte offset, with a computed formula and a named assay — and a
-scoring layer we admit is not yet doing its job.
+**Speaker note:** One line of a 1406 formulary turned into a molecule with a formula, a mass, a computed
+drug-likeness verdict, a named target and the experiment that would test it. Nothing on this slide was typed by
+a human — it is the pipeline's output, and the provenance locator points into the corpus.
 
-## Slide 8 — Does the theory predict? The central experiment
+---
 
-**Title:** We tested 2,000 years of pharmacological theory against modern chemistry
+## Slide 8 — Does the classical theory predict chemistry?
+
+**Title:** One of five pre-registered axes survived its own test — and it is the mechanistic one
 
 - **Pre-registered.** Thresholds and the permutation construction were written into `docs/EVALUATION.md` *before*
   the numbers existed, so the test cannot be tuned into a positive. Each test: effect size, n, p, permutation null
   (theory vectors shuffled across drugs):
   - **四氣 (nature)** → compound polarity / thermolability · AUC **0.456**
-  - **歸經 (channel tropism)** → target organ or receptor family · AUC **0.075**
+  - **歸經 (channel tropism)** → target organ · **hit rate 0.075 vs 0.038 chance**, n = 2,059, **p = 0.008**
   - **五味 (flavours)** → receptor class · AUC **0.529**
   - **vīrya (Ayurvedic hot/cold)** → logP / thermolability · **n = 0**, not linkable: the 322 Sanskrit
     property rows have no Sanskrit→binomial lexicon, so the test cannot be run — reported as
     *not linkable*, not as *no effect*
-  - **ṣaḍrasa (six tastes)** → pharmacological action class · AUC **0.000**
+  - **ṣaḍrasa (six tastes)** → action class · **n = 0**, not linkable (same lexicon gap)
 - **1 of 5** pre-registered tests beats its permutation null at p < 0.05 — and it is the most
   mechanistic one. **歸經 predicts target organ at 7.5 % vs a 3.8 % permutation mean over 2,059
   (drug, use) pairs, p = 0.008, ≈2× chance.** 四氣 AUC 0.456 (p = 0.26) and 五味 AUC 0.529
   (p = 0.78) show **no** signal; the two Ayurvedic tests are not linkable (n = 0). The honest
   reading is that channel tropism carries real but weak organ-level information, and the other
   classical axes we could operationalise did not survive our own test.
-- **Null model still runs:** shuffle plant↔use edges and the discovery scores collapse —
-  score drop ***(analysis pending)*** — which is how we know the scorer is measuring biology and
-  not the pipeline.
-- **The negative controls stay honest.** 取象比類 (resemblance reasoning) is a hypothesis, not an assumption:
-  it scores ρ = ***(analysis pending)***, p = ***(analysis pending)***, and is
-  published at the bottom of the ranked list where it belongs.
+- **And the null model refuses to flatter us.** Shuffling plant↔use edges changes the mean composite by
+  **−0.026** [−0.042, −0.014] over 27 shuffles, n = 2,034 real vs 2,766 shuffled. That is *not* a collapse:
+  it means the composite is **prior-dominated, not topology-sensitive**. We report it as a limitation of
+  our own scorer instead of quoting a number that clears a threshold by construction.
+- **The negative controls stay honest.** 取象比類 (resemblance reasoning) is a hypothesis, not an assumption —
+  on the real corpus it could not be computed (n = 0: too few colour-named drugs carry a recorded indication),
+  and it is published at the bottom of the ranked list rather than quietly dropped.
 
 **Visual:** the five theory cards from the Workbench Methodology panel — metric, value, n, p, and a verdict
 chip reading *predicts above chance* / *trend, not significant* / *no predictive signal*.

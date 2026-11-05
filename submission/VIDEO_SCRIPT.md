@@ -223,9 +223,12 @@ against a byte offset. Expand the **前胡** row and scroll it slowly, in order.
 > **The assay.** Calcium flux on TRPA1-expressing cells, then a recombinant line. Go/no-go: reproducible
 > engagement in two orthogonal assays, plus selectivity over the nearest paralogue.
 >
-> **And the honest part.** Novelty is 0.88 — for every single candidate. The novelty estimator is not yet
-> discriminating, so the rank order does not carry information today. We could sort the table by something that
-> looks like a score. Instead we show the defect, and it is item one on our own improvements list.
+> **And the novelty is now structural.** We compute an ECFP-style fingerprint and take one minus the
+> best Tanimoto match against the twenty-three thousand structures we extracted — excluding the
+> candidate's own compound and its own source plant. Forty-two distinct values, from zero to
+> zero-point-seven-five. That replaced a curated-name prior which gave every candidate 0.88 and
+> made the ranking meaningless. It measures distance from known phytochemistry, not therapeutic
+> novelty — and the card says exactly that.
 
 **Artefact:** Workbench → Candidates → 前胡 expanded; `artifacts/drug_candidates.json` (60 candidates, all
 structures resolved, all classical lines verified). Panel badge: **candidates = LIVE**.

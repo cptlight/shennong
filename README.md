@@ -261,6 +261,45 @@ scores, which means the ranking is driven by evidence grade and plausibility pri
 learned graph structure. We report that as a limitation of the scorer, not as a success.
 
 
+## The loop: ingest → derive → extrapolate
+
+The corpus is not a fixed dump. It grows, and every growth re-derives the graph and the discoveries.
+
+```bash
+python scripts/ingest.py --input new_texts.jsonl --source-id my_source \
+    --title "…" --year 1700 --tradition tcm --lang zh-Hant \
+    --licence "Public Domain" --licence-evidence "https://…"   # refuses anything not open
+python -m shennong.cli cai && zhi && pei && shi                # re-derive graph + hypotheses
+python scripts/extract_discoveries.py && python scripts/extrapolate.py   # re-derive findings
+```
+
+**Grounded generation.** `python -m shennong.generate "Why is 附子 processed before use?"` retrieves
+spans with BM25, refuses when retrieval is weak, and lets the MoE phrase an answer **over the retrieved
+spans only** — the model phrases, the corpus carries the facts.
+
+### What the extraction actually found (text-level, across 106 sources)
+
+| Finding | Count | What it is |
+|---|---|---|
+| **F1** cross-tradition convergence | **439 surfaces** | drug attested in ≥2 traditions — quasi-independent corroboration |
+| **F2** single-attestation | **43 surfaces** | entire textual record is one source — a preservation priority |
+| **F3** orphan procedures | **174 drug×process pairs** | a 炮制 step attested once while the drug has several — candidate lost methods |
+| **F4** corroborated core | **251 surfaces ≥20 sources** | where the tradition agrees — the screening shortlist and the calibration set |
+| **F5** cross-sections | **203 (drug, process, chemotype)** | combinations **no text states**: practice × documented chemistry × operator semantics |
+
+See [`artifacts/DISCOVERIES.md`](artifacts/) and [`artifacts/CROSS_SECTIONS.md`](artifacts/).
+
+**Why these are real and the earlier hypotheses were not.** The previous pass generated grammatically
+perfect claims with real citations and false content — including *"去節 of Aconitum enriches alkaloid
+via standardising ephedrine"*, a sentence about the wrong plant. These five findings cannot be
+templated: they are counts over 106 sources, each checkable in one lookup, each decision-relevant
+(screening · preservation · method recovery · calibration · extrapolation).
+
+**One honest gap:** cross-tradition convergence (F1) was originally computed from `uses.csv` and returned
+zero — because all 5,084 joined use-records come from a *single* source and some joined binomials were
+not plants (*Phycodurus eques*, a seahorse). F1 is now computed from the text itself; the structured
+join still needs fixing, and that is the same 14.1 % resolution problem.
+
 ## Evidence, refusal and the operator ontology
 
 Four standalone, citable artefacts — each reproducible by a command in this repo:

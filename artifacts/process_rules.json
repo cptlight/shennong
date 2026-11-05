@@ -1,0 +1,1739 @@
+{
+  "generated_at": "2026-11-05T10:16:39-0800",
+  "question": "Given a plant of chemotype X, which classical processing method does attested practice select for it, and is the selection non-random?",
+  "method": "single corpus pass → (drug, process, source) with offsets → join drug→compound class → source-weighted process×chemotype table → one-sided binomial vs the row marginal → Benjamini–Hochberg FDR",
+  "unit": "distinct drugs (binomials), not sources — the unit with statistical power",
+  "inputs": {
+    "corpus_chunks_with_evidence": 7795,
+    "records": 62445,
+    "process_terms": 40,
+    "drug_surfaces": 809,
+    "plants_with_chemotype": 328
+  },
+  "n_cells_tested": 172,
+  "n_rules_surviving": 0,
+  "fdr": 0.1,
+  "rules": [],
+  "all_cells": [
+    {
+      "process": "蜜炙",
+      "chemotype": "steroid",
+      "sources": 13,
+      "process_total": 117,
+      "baseline": 0.058,
+      "lift": 1.916,
+      "p": 0.01842058545872512,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒炙",
+      "chemotype": "steroid",
+      "sources": 8,
+      "process_total": 82,
+      "baseline": 0.058,
+      "lift": 1.682,
+      "p": 0.10284111862123857,
+      "survives_fdr": false
+    },
+    {
+      "process": "麴",
+      "chemotype": "phenylpropanoid",
+      "sources": 13,
+      "process_total": 88,
+      "baseline": 0.1033,
+      "lift": 1.429,
+      "p": 0.11919053599901426,
+      "survives_fdr": false
+    },
+    {
+      "process": "土炒",
+      "chemotype": "steroid",
+      "sources": 8,
+      "process_total": 87,
+      "baseline": 0.058,
+      "lift": 1.585,
+      "p": 0.1319672520983288,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒炭",
+      "chemotype": "steroid",
+      "sources": 5,
+      "process_total": 51,
+      "baseline": 0.058,
+      "lift": 1.69,
+      "p": 0.17247894265469554,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋煮",
+      "chemotype": "steroid",
+      "sources": 13,
+      "process_total": 168,
+      "baseline": 0.058,
+      "lift": 1.334,
+      "p": 0.1787477778806189,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋炙",
+      "chemotype": "steroid",
+      "sources": 8,
+      "process_total": 95,
+      "baseline": 0.058,
+      "lift": 1.452,
+      "p": 0.1861794799754204,
+      "survives_fdr": false
+    },
+    {
+      "process": "熏",
+      "chemotype": "phenylpropanoid",
+      "sources": 24,
+      "process_total": 192,
+      "baseline": 0.1033,
+      "lift": 1.209,
+      "p": 0.19065054882138735,
+      "survives_fdr": false
+    },
+    {
+      "process": "去皮",
+      "chemotype": "organosulfur",
+      "sources": 1,
+      "process_total": 337,
+      "baseline": 0.0006,
+      "lift": 4.63,
+      "p": 0.194313261124933,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒焦",
+      "chemotype": "polyketide",
+      "sources": 7,
+      "process_total": 147,
+      "baseline": 0.0327,
+      "lift": 1.457,
+      "p": 0.20708105857804895,
+      "survives_fdr": false
+    },
+    {
+      "process": "炙",
+      "chemotype": "organosulfur",
+      "sources": 1,
+      "process_total": 383,
+      "baseline": 0.0006,
+      "lift": 4.074,
+      "p": 0.2177275364302801,
+      "survives_fdr": false
+    },
+    {
+      "process": "研",
+      "chemotype": "organosulfur",
+      "sources": 1,
+      "process_total": 419,
+      "baseline": 0.0006,
+      "lift": 3.724,
+      "p": 0.2355761016560573,
+      "survives_fdr": false
+    },
+    {
+      "process": "浸",
+      "chemotype": "organosulfur",
+      "sources": 1,
+      "process_total": 427,
+      "baseline": 0.0006,
+      "lift": 3.654,
+      "p": 0.23948681502062322,
+      "survives_fdr": false
+    },
+    {
+      "process": "炮",
+      "chemotype": "steroid",
+      "sources": 8,
+      "process_total": 105,
+      "baseline": 0.058,
+      "lift": 1.314,
+      "p": 0.26465753347232823,
+      "survives_fdr": false
+    },
+    {
+      "process": "去節",
+      "chemotype": "steroid",
+      "sources": 7,
+      "process_total": 90,
+      "baseline": 0.058,
+      "lift": 1.341,
+      "p": 0.2670477403710048,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒炭",
+      "chemotype": "phenylpropanoid",
+      "sources": 7,
+      "process_total": 51,
+      "baseline": 0.1033,
+      "lift": 1.328,
+      "p": 0.27196614591357116,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒炙",
+      "chemotype": "polyketide",
+      "sources": 4,
+      "process_total": 82,
+      "baseline": 0.0327,
+      "lift": 1.492,
+      "p": 0.28037733042484164,
+      "survives_fdr": false
+    },
+    {
+      "process": "浸",
+      "chemotype": "flavonoid",
+      "sources": 83,
+      "process_total": 427,
+      "baseline": 0.1825,
+      "lift": 1.065,
+      "p": 0.28042905441265864,
+      "survives_fdr": false
+    },
+    {
+      "process": "洗",
+      "chemotype": "terpenoid",
+      "sources": 163,
+      "process_total": 425,
+      "baseline": 0.3689,
+      "lift": 1.04,
+      "p": 0.2810410009585011,
+      "survives_fdr": false
+    },
+    {
+      "process": "伏",
+      "chemotype": "phenylpropanoid",
+      "sources": 34,
+      "process_total": 297,
+      "baseline": 0.1033,
+      "lift": 1.108,
+      "p": 0.29025453677492835,
+      "survives_fdr": false
+    },
+    {
+      "process": "煨",
+      "chemotype": "alkaloid",
+      "sources": 72,
+      "process_total": 267,
+      "baseline": 0.254,
+      "lift": 1.062,
+      "p": 0.29900080637127213,
+      "survives_fdr": false
+    },
+    {
+      "process": "去皮",
+      "chemotype": "polyketide",
+      "sources": 13,
+      "process_total": 337,
+      "baseline": 0.0327,
+      "lift": 1.18,
+      "p": 0.3111876599029674,
+      "survives_fdr": false
+    },
+    {
+      "process": "煎",
+      "chemotype": "terpenoid",
+      "sources": 108,
+      "process_total": 281,
+      "baseline": 0.3689,
+      "lift": 1.042,
+      "p": 0.31546011626737147,
+      "survives_fdr": false
+    },
+    {
+      "process": "淬",
+      "chemotype": "alkaloid",
+      "sources": 45,
+      "process_total": 165,
+      "baseline": 0.254,
+      "lift": 1.074,
+      "p": 0.3171925834023872,
+      "survives_fdr": false
+    },
+    {
+      "process": "煅",
+      "chemotype": "polyketide",
+      "sources": 2,
+      "process_total": 35,
+      "baseline": 0.0327,
+      "lift": 1.748,
+      "p": 0.31791243098617583,
+      "survives_fdr": false
+    },
+    {
+      "process": "米炒",
+      "chemotype": "steroid",
+      "sources": 6,
+      "process_total": 80,
+      "baseline": 0.058,
+      "lift": 1.293,
+      "p": 0.3192579783930018,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒炭",
+      "chemotype": "flavonoid",
+      "sources": 11,
+      "process_total": 51,
+      "baseline": 0.1825,
+      "lift": 1.182,
+      "p": 0.32166415892598005,
+      "survives_fdr": false
+    },
+    {
+      "process": "去節",
+      "chemotype": "phenylpropanoid",
+      "sources": 11,
+      "process_total": 90,
+      "baseline": 0.1033,
+      "lift": 1.183,
+      "p": 0.325386437303982,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒",
+      "chemotype": "phenylpropanoid",
+      "sources": 26,
+      "process_total": 228,
+      "baseline": 0.1033,
+      "lift": 1.103,
+      "p": 0.32824086244561057,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒炙",
+      "chemotype": "phenylpropanoid",
+      "sources": 10,
+      "process_total": 82,
+      "baseline": 0.1033,
+      "lift": 1.18,
+      "p": 0.33977582833023146,
+      "survives_fdr": false
+    },
+    {
+      "process": "研",
+      "chemotype": "terpenoid",
+      "sources": 159,
+      "process_total": 419,
+      "baseline": 0.3689,
+      "lift": 1.029,
+      "p": 0.34320432627701963,
+      "survives_fdr": false
+    },
+    {
+      "process": "淬",
+      "chemotype": "phenylpropanoid",
+      "sources": 19,
+      "process_total": 165,
+      "baseline": 0.1033,
+      "lift": 1.114,
+      "p": 0.34489276636372385,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒",
+      "chemotype": "steroid",
+      "sources": 15,
+      "process_total": 228,
+      "baseline": 0.058,
+      "lift": 1.134,
+      "p": 0.3455329208549041,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒焦",
+      "chemotype": "steroid",
+      "sources": 10,
+      "process_total": 147,
+      "baseline": 0.058,
+      "lift": 1.173,
+      "p": 0.34856449180950744,
+      "survives_fdr": false
+    },
+    {
+      "process": "炮",
+      "chemotype": "flavonoid",
+      "sources": 21,
+      "process_total": 105,
+      "baseline": 0.1825,
+      "lift": 1.096,
+      "p": 0.3589326200734057,
+      "survives_fdr": false
+    },
+    {
+      "process": "伏",
+      "chemotype": "terpenoid",
+      "sources": 113,
+      "process_total": 297,
+      "baseline": 0.3689,
+      "lift": 1.032,
+      "p": 0.35963681698707106,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋炙",
+      "chemotype": "alkaloid",
+      "sources": 26,
+      "process_total": 95,
+      "baseline": 0.254,
+      "lift": 1.078,
+      "p": 0.36664085979730104,
+      "survives_fdr": false
+    },
+    {
+      "process": "米炒",
+      "chemotype": "flavonoid",
+      "sources": 16,
+      "process_total": 80,
+      "baseline": 0.1825,
+      "lift": 1.096,
+      "p": 0.3863602653155309,
+      "survives_fdr": false
+    },
+    {
+      "process": "蒸",
+      "chemotype": "phenylpropanoid",
+      "sources": 38,
+      "process_total": 349,
+      "baseline": 0.1033,
+      "lift": 1.054,
+      "p": 0.3922869534065813,
+      "survives_fdr": false
+    },
+    {
+      "process": "焙",
+      "chemotype": "alkaloid",
+      "sources": 86,
+      "process_total": 329,
+      "baseline": 0.254,
+      "lift": 1.029,
+      "p": 0.3989440095978501,
+      "survives_fdr": false
+    },
+    {
+      "process": "洗",
+      "chemotype": "flavonoid",
+      "sources": 80,
+      "process_total": 425,
+      "baseline": 0.1825,
+      "lift": 1.031,
+      "p": 0.39912490975243214,
+      "survives_fdr": false
+    },
+    {
+      "process": "去皮",
+      "chemotype": "terpenoid",
+      "sources": 127,
+      "process_total": 337,
+      "baseline": 0.3689,
+      "lift": 1.022,
+      "p": 0.4002748493151623,
+      "survives_fdr": false
+    },
+    {
+      "process": "焙",
+      "chemotype": "terpenoid",
+      "sources": 124,
+      "process_total": 329,
+      "baseline": 0.3689,
+      "lift": 1.022,
+      "p": 0.4012648476149299,
+      "survives_fdr": false
+    },
+    {
+      "process": "炙",
+      "chemotype": "terpenoid",
+      "sources": 144,
+      "process_total": 383,
+      "baseline": 0.3689,
+      "lift": 1.019,
+      "p": 0.404975311879628,
+      "survives_fdr": false
+    },
+    {
+      "process": "燒",
+      "chemotype": "polyketide",
+      "sources": 12,
+      "process_total": 335,
+      "baseline": 0.0327,
+      "lift": 1.096,
+      "p": 0.41467394091744353,
+      "survives_fdr": false
+    },
+    {
+      "process": "煮",
+      "chemotype": "terpenoid",
+      "sources": 147,
+      "process_total": 392,
+      "baseline": 0.3689,
+      "lift": 1.017,
+      "p": 0.4190475887037774,
+      "survives_fdr": false
+    },
+    {
+      "process": "燒",
+      "chemotype": "alkaloid",
+      "sources": 87,
+      "process_total": 335,
+      "baseline": 0.254,
+      "lift": 1.023,
+      "p": 0.42530181381216814,
+      "survives_fdr": false
+    },
+    {
+      "process": "燒",
+      "chemotype": "phenylpropanoid",
+      "sources": 36,
+      "process_total": 335,
+      "baseline": 0.1033,
+      "lift": 1.04,
+      "p": 0.4282959249616774,
+      "survives_fdr": false
+    },
+    {
+      "process": "去節",
+      "chemotype": "alkaloid",
+      "sources": 24,
+      "process_total": 90,
+      "baseline": 0.254,
+      "lift": 1.05,
+      "p": 0.43052387268018,
+      "survives_fdr": false
+    },
+    {
+      "process": "熏",
+      "chemotype": "steroid",
+      "sources": 12,
+      "process_total": 192,
+      "baseline": 0.058,
+      "lift": 1.078,
+      "p": 0.4375041911850372,
+      "survives_fdr": false
+    },
+    {
+      "process": "研",
+      "chemotype": "flavonoid",
+      "sources": 78,
+      "process_total": 419,
+      "baseline": 0.1825,
+      "lift": 1.02,
+      "p": 0.44291838778214593,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒浸",
+      "chemotype": "alkaloid",
+      "sources": 70,
+      "process_total": 270,
+      "baseline": 0.254,
+      "lift": 1.021,
+      "p": 0.44386955458467053,
+      "survives_fdr": false
+    },
+    {
+      "process": "煮",
+      "chemotype": "flavonoid",
+      "sources": 73,
+      "process_total": 392,
+      "baseline": 0.1825,
+      "lift": 1.02,
+      "p": 0.44473067983681647,
+      "survives_fdr": false
+    },
+    {
+      "process": "煨",
+      "chemotype": "terpenoid",
+      "sources": 100,
+      "process_total": 267,
+      "baseline": 0.3689,
+      "lift": 1.015,
+      "p": 0.44655024919580966,
+      "survives_fdr": false
+    },
+    {
+      "process": "米炒",
+      "chemotype": "phenylpropanoid",
+      "sources": 9,
+      "process_total": 80,
+      "baseline": 0.1033,
+      "lift": 1.089,
+      "p": 0.44674672360066203,
+      "survives_fdr": false
+    },
+    {
+      "process": "蒸",
+      "chemotype": "flavonoid",
+      "sources": 65,
+      "process_total": 349,
+      "baseline": 0.1825,
+      "lift": 1.021,
+      "p": 0.44977271196514373,
+      "survives_fdr": false
+    },
+    {
+      "process": "炮",
+      "chemotype": "polyketide",
+      "sources": 4,
+      "process_total": 105,
+      "baseline": 0.0327,
+      "lift": 1.165,
+      "p": 0.45021423314470543,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒浸",
+      "chemotype": "terpenoid",
+      "sources": 101,
+      "process_total": 270,
+      "baseline": 0.3689,
+      "lift": 1.014,
+      "p": 0.45215552247370955,
+      "survives_fdr": false
+    },
+    {
+      "process": "煮",
+      "chemotype": "alkaloid",
+      "sources": 101,
+      "process_total": 392,
+      "baseline": 0.254,
+      "lift": 1.015,
+      "p": 0.4526028142732125,
+      "survives_fdr": false
+    },
+    {
+      "process": "淬",
+      "chemotype": "polyketide",
+      "sources": 6,
+      "process_total": 165,
+      "baseline": 0.0327,
+      "lift": 1.112,
+      "p": 0.4538455825192153,
+      "survives_fdr": false
+    },
+    {
+      "process": "熏",
+      "chemotype": "flavonoid",
+      "sources": 36,
+      "process_total": 192,
+      "baseline": 0.1825,
+      "lift": 1.027,
+      "p": 0.45799666489999974,
+      "survives_fdr": false
+    },
+    {
+      "process": "浸",
+      "chemotype": "terpenoid",
+      "sources": 159,
+      "process_total": 427,
+      "baseline": 0.3689,
+      "lift": 1.01,
+      "p": 0.45831528243499614,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋煮",
+      "chemotype": "polyketide",
+      "sources": 6,
+      "process_total": 168,
+      "baseline": 0.0327,
+      "lift": 1.093,
+      "p": 0.47100863398705284,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒浸",
+      "chemotype": "flavonoid",
+      "sources": 50,
+      "process_total": 270,
+      "baseline": 0.1825,
+      "lift": 1.015,
+      "p": 0.4792597302173764,
+      "survives_fdr": false
+    },
+    {
+      "process": "去節",
+      "chemotype": "flavonoid",
+      "sources": 17,
+      "process_total": 90,
+      "baseline": 0.1825,
+      "lift": 1.035,
+      "p": 0.4802704640029955,
+      "survives_fdr": false
+    },
+    {
+      "process": "炙",
+      "chemotype": "polyketide",
+      "sources": 13,
+      "process_total": 383,
+      "baseline": 0.0327,
+      "lift": 1.038,
+      "p": 0.4841654943764782,
+      "survives_fdr": false
+    },
+    {
+      "process": "米炒",
+      "chemotype": "polyketide",
+      "sources": 3,
+      "process_total": 80,
+      "baseline": 0.0327,
+      "lift": 1.147,
+      "p": 0.4878763474644394,
+      "survives_fdr": false
+    },
+    {
+      "process": "淬",
+      "chemotype": "steroid",
+      "sources": 10,
+      "process_total": 165,
+      "baseline": 0.058,
+      "lift": 1.045,
+      "p": 0.4895347243405355,
+      "survives_fdr": false
+    },
+    {
+      "process": "研",
+      "chemotype": "alkaloid",
+      "sources": 107,
+      "process_total": 419,
+      "baseline": 0.254,
+      "lift": 1.006,
+      "p": 0.49236798059367726,
+      "survives_fdr": false
+    },
+    {
+      "process": "浸",
+      "chemotype": "alkaloid",
+      "sources": 109,
+      "process_total": 427,
+      "baseline": 0.254,
+      "lift": 1.005,
+      "p": 0.49384621417778274,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒炭",
+      "chemotype": "polyketide",
+      "sources": 2,
+      "process_total": 51,
+      "baseline": 0.0327,
+      "lift": 1.2,
+      "p": 0.49993816479873376,
+      "survives_fdr": false
+    },
+    {
+      "process": "燒",
+      "chemotype": "terpenoid",
+      "sources": 124,
+      "process_total": 335,
+      "baseline": 0.3689,
+      "lift": 1.004,
+      "p": 0.500963976364647,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒浸",
+      "chemotype": "steroid",
+      "sources": 16,
+      "process_total": 270,
+      "baseline": 0.058,
+      "lift": 1.022,
+      "p": 0.5012898336361681,
+      "survives_fdr": false
+    },
+    {
+      "process": "蒸",
+      "chemotype": "terpenoid",
+      "sources": 129,
+      "process_total": 349,
+      "baseline": 0.3689,
+      "lift": 1.002,
+      "p": 0.5081980756732072,
+      "survives_fdr": false
+    },
+    {
+      "process": "煨",
+      "chemotype": "polyketide",
+      "sources": 9,
+      "process_total": 267,
+      "baseline": 0.0327,
+      "lift": 1.031,
+      "p": 0.5095698580530833,
+      "survives_fdr": false
+    },
+    {
+      "process": "蜜炙",
+      "chemotype": "alkaloid",
+      "sources": 30,
+      "process_total": 117,
+      "baseline": 0.254,
+      "lift": 1.01,
+      "p": 0.5111413273679033,
+      "survives_fdr": false
+    },
+    {
+      "process": "熏",
+      "chemotype": "alkaloid",
+      "sources": 49,
+      "process_total": 192,
+      "baseline": 0.254,
+      "lift": 1.005,
+      "p": 0.511847306729447,
+      "survives_fdr": false
+    },
+    {
+      "process": "炙",
+      "chemotype": "flavonoid",
+      "sources": 70,
+      "process_total": 383,
+      "baseline": 0.1825,
+      "lift": 1.001,
+      "p": 0.5154412931956583,
+      "survives_fdr": false
+    },
+    {
+      "process": "煮",
+      "chemotype": "polyketide",
+      "sources": 13,
+      "process_total": 392,
+      "baseline": 0.0327,
+      "lift": 1.015,
+      "p": 0.5177409676256993,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒焦",
+      "chemotype": "flavonoid",
+      "sources": 27,
+      "process_total": 147,
+      "baseline": 0.1825,
+      "lift": 1.006,
+      "p": 0.5188777352495926,
+      "survives_fdr": false
+    },
+    {
+      "process": "焙",
+      "chemotype": "flavonoid",
+      "sources": 60,
+      "process_total": 329,
+      "baseline": 0.1825,
+      "lift": 0.999,
+      "p": 0.5249083454738962,
+      "survives_fdr": false
+    },
+    {
+      "process": "洗",
+      "chemotype": "polyketide",
+      "sources": 14,
+      "process_total": 425,
+      "baseline": 0.0327,
+      "lift": 1.008,
+      "p": 0.5256488258245057,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋煮",
+      "chemotype": "terpenoid",
+      "sources": 62,
+      "process_total": 168,
+      "baseline": 0.3689,
+      "lift": 1.001,
+      "p": 0.5269721199024308,
+      "survives_fdr": false
+    },
+    {
+      "process": "炙",
+      "chemotype": "alkaloid",
+      "sources": 97,
+      "process_total": 383,
+      "baseline": 0.254,
+      "lift": 0.997,
+      "p": 0.5321461595266224,
+      "survives_fdr": false
+    },
+    {
+      "process": "煎",
+      "chemotype": "flavonoid",
+      "sources": 51,
+      "process_total": 281,
+      "baseline": 0.1825,
+      "lift": 0.994,
+      "p": 0.5417149379939196,
+      "survives_fdr": false
+    },
+    {
+      "process": "土炒",
+      "chemotype": "polyketide",
+      "sources": 3,
+      "process_total": 87,
+      "baseline": 0.0327,
+      "lift": 1.055,
+      "p": 0.5442179373137312,
+      "survives_fdr": false
+    },
+    {
+      "process": "伏",
+      "chemotype": "alkaloid",
+      "sources": 75,
+      "process_total": 297,
+      "baseline": 0.254,
+      "lift": 0.994,
+      "p": 0.544924583015957,
+      "survives_fdr": false
+    },
+    {
+      "process": "煅",
+      "chemotype": "alkaloid",
+      "sources": 9,
+      "process_total": 35,
+      "baseline": 0.254,
+      "lift": 1.013,
+      "p": 0.547276487625021,
+      "survives_fdr": false
+    },
+    {
+      "process": "麴",
+      "chemotype": "flavonoid",
+      "sources": 16,
+      "process_total": 88,
+      "baseline": 0.1825,
+      "lift": 0.996,
+      "p": 0.5499646877030473,
+      "survives_fdr": false
+    },
+    {
+      "process": "土炒",
+      "chemotype": "phenylpropanoid",
+      "sources": 9,
+      "process_total": 87,
+      "baseline": 0.1033,
+      "lift": 1.001,
+      "p": 0.5503904545931354,
+      "survives_fdr": false
+    },
+    {
+      "process": "去皮",
+      "chemotype": "flavonoid",
+      "sources": 61,
+      "process_total": 337,
+      "baseline": 0.1825,
+      "lift": 0.992,
+      "p": 0.5504460861860345,
+      "survives_fdr": false
+    },
+    {
+      "process": "煅",
+      "chemotype": "terpenoid",
+      "sources": 13,
+      "process_total": 35,
+      "baseline": 0.3689,
+      "lift": 1.007,
+      "p": 0.5509118621537626,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒焦",
+      "chemotype": "phenylpropanoid",
+      "sources": 15,
+      "process_total": 147,
+      "baseline": 0.1033,
+      "lift": 0.987,
+      "p": 0.5605463228671037,
+      "survives_fdr": false
+    },
+    {
+      "process": "炙",
+      "chemotype": "phenylpropanoid",
+      "sources": 39,
+      "process_total": 383,
+      "baseline": 0.1033,
+      "lift": 0.985,
+      "p": 0.5635843047012687,
+      "survives_fdr": false
+    },
+    {
+      "process": "去節",
+      "chemotype": "polyketide",
+      "sources": 3,
+      "process_total": 90,
+      "baseline": 0.0327,
+      "lift": 1.02,
+      "p": 0.5672302527353202,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒",
+      "chemotype": "flavonoid",
+      "sources": 41,
+      "process_total": 228,
+      "baseline": 0.1825,
+      "lift": 0.985,
+      "p": 0.568576097404917,
+      "survives_fdr": false
+    },
+    {
+      "process": "煎",
+      "chemotype": "polyketide",
+      "sources": 9,
+      "process_total": 281,
+      "baseline": 0.0327,
+      "lift": 0.98,
+      "p": 0.5710127246153324,
+      "survives_fdr": false
+    },
+    {
+      "process": "麴",
+      "chemotype": "alkaloid",
+      "sources": 22,
+      "process_total": 88,
+      "baseline": 0.254,
+      "lift": 0.984,
+      "p": 0.5746750823818585,
+      "survives_fdr": false
+    },
+    {
+      "process": "米炒",
+      "chemotype": "alkaloid",
+      "sources": 20,
+      "process_total": 80,
+      "baseline": 0.254,
+      "lift": 0.984,
+      "p": 0.5750775266291511,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒",
+      "chemotype": "alkaloid",
+      "sources": 57,
+      "process_total": 228,
+      "baseline": 0.254,
+      "lift": 0.984,
+      "p": 0.5798836719942629,
+      "survives_fdr": false
+    },
+    {
+      "process": "麴",
+      "chemotype": "steroid",
+      "sources": 5,
+      "process_total": 88,
+      "baseline": 0.058,
+      "lift": 0.98,
+      "p": 0.5832984982773649,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋煮",
+      "chemotype": "flavonoid",
+      "sources": 30,
+      "process_total": 168,
+      "baseline": 0.1825,
+      "lift": 0.978,
+      "p": 0.5837465082227707,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒",
+      "chemotype": "terpenoid",
+      "sources": 83,
+      "process_total": 228,
+      "baseline": 0.3689,
+      "lift": 0.987,
+      "p": 0.5845469741410381,
+      "survives_fdr": false
+    },
+    {
+      "process": "蒸",
+      "chemotype": "polyketide",
+      "sources": 11,
+      "process_total": 349,
+      "baseline": 0.0327,
+      "lift": 0.964,
+      "p": 0.5904758166987573,
+      "survives_fdr": false
+    },
+    {
+      "process": "炮",
+      "chemotype": "terpenoid",
+      "sources": 38,
+      "process_total": 105,
+      "baseline": 0.3689,
+      "lift": 0.981,
+      "p": 0.5948783078108184,
+      "survives_fdr": false
+    },
+    {
+      "process": "煎",
+      "chemotype": "alkaloid",
+      "sources": 70,
+      "process_total": 281,
+      "baseline": 0.254,
+      "lift": 0.981,
+      "p": 0.596726131341545,
+      "survives_fdr": false
+    },
+    {
+      "process": "去皮",
+      "chemotype": "alkaloid",
+      "sources": 84,
+      "process_total": 337,
+      "baseline": 0.254,
+      "lift": 0.981,
+      "p": 0.5992647765017963,
+      "survives_fdr": false
+    },
+    {
+      "process": "蒸",
+      "chemotype": "alkaloid",
+      "sources": 87,
+      "process_total": 349,
+      "baseline": 0.254,
+      "lift": 0.982,
+      "p": 0.5998445990253563,
+      "survives_fdr": false
+    },
+    {
+      "process": "熏",
+      "chemotype": "polyketide",
+      "sources": 6,
+      "process_total": 192,
+      "baseline": 0.0327,
+      "lift": 0.956,
+      "p": 0.6008045118840403,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋炙",
+      "chemotype": "polyketide",
+      "sources": 3,
+      "process_total": 95,
+      "baseline": 0.0327,
+      "lift": 0.966,
+      "p": 0.6039482478315288,
+      "survives_fdr": false
+    },
+    {
+      "process": "煎",
+      "chemotype": "phenylpropanoid",
+      "sources": 28,
+      "process_total": 281,
+      "baseline": 0.1033,
+      "lift": 0.964,
+      "p": 0.609522496298708,
+      "survives_fdr": false
+    },
+    {
+      "process": "煅",
+      "chemotype": "steroid",
+      "sources": 2,
+      "process_total": 35,
+      "baseline": 0.058,
+      "lift": 0.985,
+      "p": 0.6102898139470027,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒焦",
+      "chemotype": "terpenoid",
+      "sources": 53,
+      "process_total": 147,
+      "baseline": 0.3689,
+      "lift": 0.977,
+      "p": 0.6130177277695219,
+      "survives_fdr": false
+    },
+    {
+      "process": "研",
+      "chemotype": "polyketide",
+      "sources": 13,
+      "process_total": 419,
+      "baseline": 0.0327,
+      "lift": 0.949,
+      "p": 0.61387854036037,
+      "survives_fdr": false
+    },
+    {
+      "process": "蜜炙",
+      "chemotype": "terpenoid",
+      "sources": 42,
+      "process_total": 117,
+      "baseline": 0.3689,
+      "lift": 0.973,
+      "p": 0.6215032333252467,
+      "survives_fdr": false
+    },
+    {
+      "process": "煮",
+      "chemotype": "phenylpropanoid",
+      "sources": 39,
+      "process_total": 392,
+      "baseline": 0.1033,
+      "lift": 0.963,
+      "p": 0.6233157421716928,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒炙",
+      "chemotype": "alkaloid",
+      "sources": 20,
+      "process_total": 82,
+      "baseline": 0.254,
+      "lift": 0.96,
+      "p": 0.624441266180287,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋炙",
+      "chemotype": "terpenoid",
+      "sources": 34,
+      "process_total": 95,
+      "baseline": 0.3689,
+      "lift": 0.97,
+      "p": 0.6251438881065026,
+      "survives_fdr": false
+    },
+    {
+      "process": "煨",
+      "chemotype": "flavonoid",
+      "sources": 47,
+      "process_total": 267,
+      "baseline": 0.1825,
+      "lift": 0.965,
+      "p": 0.6323741539928005,
+      "survives_fdr": false
+    },
+    {
+      "process": "焙",
+      "chemotype": "steroid",
+      "sources": 18,
+      "process_total": 329,
+      "baseline": 0.058,
+      "lift": 0.943,
+      "p": 0.6341473662637155,
+      "survives_fdr": false
+    },
+    {
+      "process": "土炒",
+      "chemotype": "terpenoid",
+      "sources": 31,
+      "process_total": 87,
+      "baseline": 0.3689,
+      "lift": 0.966,
+      "p": 0.6347378028351137,
+      "survives_fdr": false
+    },
+    {
+      "process": "煅",
+      "chemotype": "flavonoid",
+      "sources": 6,
+      "process_total": 35,
+      "baseline": 0.1825,
+      "lift": 0.939,
+      "p": 0.6355204295505229,
+      "survives_fdr": false
+    },
+    {
+      "process": "土炒",
+      "chemotype": "flavonoid",
+      "sources": 15,
+      "process_total": 87,
+      "baseline": 0.1825,
+      "lift": 0.945,
+      "p": 0.6392676912548287,
+      "survives_fdr": false
+    },
+    {
+      "process": "洗",
+      "chemotype": "phenylpropanoid",
+      "sources": 42,
+      "process_total": 425,
+      "baseline": 0.1033,
+      "lift": 0.956,
+      "p": 0.6435506355603053,
+      "survives_fdr": false
+    },
+    {
+      "process": "蒸",
+      "chemotype": "steroid",
+      "sources": 19,
+      "process_total": 349,
+      "baseline": 0.058,
+      "lift": 0.939,
+      "p": 0.6443987489731764,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋煮",
+      "chemotype": "alkaloid",
+      "sources": 41,
+      "process_total": 168,
+      "baseline": 0.254,
+      "lift": 0.961,
+      "p": 0.6447901818911301,
+      "survives_fdr": false
+    },
+    {
+      "process": "洗",
+      "chemotype": "alkaloid",
+      "sources": 105,
+      "process_total": 425,
+      "baseline": 0.254,
+      "lift": 0.973,
+      "p": 0.6461486770080759,
+      "survives_fdr": false
+    },
+    {
+      "process": "土炒",
+      "chemotype": "alkaloid",
+      "sources": 21,
+      "process_total": 87,
+      "baseline": 0.254,
+      "lift": 0.95,
+      "p": 0.6462429588425763,
+      "survives_fdr": false
+    },
+    {
+      "process": "伏",
+      "chemotype": "flavonoid",
+      "sources": 52,
+      "process_total": 297,
+      "baseline": 0.1825,
+      "lift": 0.959,
+      "p": 0.6527039270695916,
+      "survives_fdr": false
+    },
+    {
+      "process": "去皮",
+      "chemotype": "phenylpropanoid",
+      "sources": 33,
+      "process_total": 337,
+      "baseline": 0.1033,
+      "lift": 0.947,
+      "p": 0.6542476210618517,
+      "survives_fdr": false
+    },
+    {
+      "process": "煨",
+      "chemotype": "phenylpropanoid",
+      "sources": 26,
+      "process_total": 267,
+      "baseline": 0.1033,
+      "lift": 0.942,
+      "p": 0.6549480762333519,
+      "survives_fdr": false
+    },
+    {
+      "process": "浸",
+      "chemotype": "phenylpropanoid",
+      "sources": 42,
+      "process_total": 427,
+      "baseline": 0.1033,
+      "lift": 0.952,
+      "p": 0.6556067409463554,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋炙",
+      "chemotype": "phenylpropanoid",
+      "sources": 9,
+      "process_total": 95,
+      "baseline": 0.1033,
+      "lift": 0.917,
+      "p": 0.657995179287961,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒浸",
+      "chemotype": "polyketide",
+      "sources": 8,
+      "process_total": 270,
+      "baseline": 0.0327,
+      "lift": 0.906,
+      "p": 0.6589714143191086,
+      "survives_fdr": false
+    },
+    {
+      "process": "燒",
+      "chemotype": "steroid",
+      "sources": 18,
+      "process_total": 335,
+      "baseline": 0.058,
+      "lift": 0.926,
+      "p": 0.6639809492829136,
+      "survives_fdr": false
+    },
+    {
+      "process": "煎",
+      "chemotype": "steroid",
+      "sources": 15,
+      "process_total": 281,
+      "baseline": 0.058,
+      "lift": 0.92,
+      "p": 0.6659231356695384,
+      "survives_fdr": false
+    },
+    {
+      "process": "研",
+      "chemotype": "phenylpropanoid",
+      "sources": 41,
+      "process_total": 419,
+      "baseline": 0.1033,
+      "lift": 0.947,
+      "p": 0.6673798738263725,
+      "survives_fdr": false
+    },
+    {
+      "process": "焙",
+      "chemotype": "phenylpropanoid",
+      "sources": 32,
+      "process_total": 329,
+      "baseline": 0.1033,
+      "lift": 0.941,
+      "p": 0.6677598769947706,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋煮",
+      "chemotype": "phenylpropanoid",
+      "sources": 16,
+      "process_total": 168,
+      "baseline": 0.1033,
+      "lift": 0.922,
+      "p": 0.6719497455528693,
+      "survives_fdr": false
+    },
+    {
+      "process": "去皮",
+      "chemotype": "steroid",
+      "sources": 18,
+      "process_total": 337,
+      "baseline": 0.058,
+      "lift": 0.921,
+      "p": 0.6736324775847846,
+      "survives_fdr": false
+    },
+    {
+      "process": "炮",
+      "chemotype": "alkaloid",
+      "sources": 25,
+      "process_total": 105,
+      "baseline": 0.254,
+      "lift": 0.938,
+      "p": 0.6812408495427326,
+      "survives_fdr": false
+    },
+    {
+      "process": "燒",
+      "chemotype": "flavonoid",
+      "sources": 58,
+      "process_total": 335,
+      "baseline": 0.1825,
+      "lift": 0.949,
+      "p": 0.6926851755547898,
+      "survives_fdr": false
+    },
+    {
+      "process": "淬",
+      "chemotype": "flavonoid",
+      "sources": 28,
+      "process_total": 165,
+      "baseline": 0.1825,
+      "lift": 0.93,
+      "p": 0.6952688120110742,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒焦",
+      "chemotype": "alkaloid",
+      "sources": 35,
+      "process_total": 147,
+      "baseline": 0.254,
+      "lift": 0.938,
+      "p": 0.7003515943314967,
+      "survives_fdr": false
+    },
+    {
+      "process": "煅",
+      "chemotype": "phenylpropanoid",
+      "sources": 3,
+      "process_total": 35,
+      "baseline": 0.1033,
+      "lift": 0.829,
+      "p": 0.7157400483651721,
+      "survives_fdr": false
+    },
+    {
+      "process": "蜜炙",
+      "chemotype": "polyketide",
+      "sources": 3,
+      "process_total": 117,
+      "baseline": 0.0327,
+      "lift": 0.784,
+      "p": 0.739850458487782,
+      "survives_fdr": false
+    },
+    {
+      "process": "浸",
+      "chemotype": "polyketide",
+      "sources": 12,
+      "process_total": 427,
+      "baseline": 0.0327,
+      "lift": 0.86,
+      "p": 0.7405357256914766,
+      "survives_fdr": false
+    },
+    {
+      "process": "麴",
+      "chemotype": "terpenoid",
+      "sources": 30,
+      "process_total": 88,
+      "baseline": 0.3689,
+      "lift": 0.924,
+      "p": 0.7414358526183867,
+      "survives_fdr": false
+    },
+    {
+      "process": "伏",
+      "chemotype": "steroid",
+      "sources": 15,
+      "process_total": 297,
+      "baseline": 0.058,
+      "lift": 0.871,
+      "p": 0.7443702398870692,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒浸",
+      "chemotype": "phenylpropanoid",
+      "sources": 25,
+      "process_total": 270,
+      "baseline": 0.1033,
+      "lift": 0.896,
+      "p": 0.7473575419216612,
+      "survives_fdr": false
+    },
+    {
+      "process": "蜜炙",
+      "chemotype": "flavonoid",
+      "sources": 19,
+      "process_total": 117,
+      "baseline": 0.1825,
+      "lift": 0.89,
+      "p": 0.7482252456586463,
+      "survives_fdr": false
+    },
+    {
+      "process": "焙",
+      "chemotype": "polyketide",
+      "sources": 9,
+      "process_total": 329,
+      "baseline": 0.0327,
+      "lift": 0.837,
+      "p": 0.7497794972854385,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒炙",
+      "chemotype": "flavonoid",
+      "sources": 13,
+      "process_total": 82,
+      "baseline": 0.1825,
+      "lift": 0.869,
+      "p": 0.7546008669986514,
+      "survives_fdr": false
+    },
+    {
+      "process": "伏",
+      "chemotype": "polyketide",
+      "sources": 8,
+      "process_total": 297,
+      "baseline": 0.0327,
+      "lift": 0.824,
+      "p": 0.7567338206747187,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒",
+      "chemotype": "polyketide",
+      "sources": 6,
+      "process_total": 228,
+      "baseline": 0.0327,
+      "lift": 0.805,
+      "p": 0.7578680082820223,
+      "survives_fdr": false
+    },
+    {
+      "process": "淬",
+      "chemotype": "terpenoid",
+      "sources": 57,
+      "process_total": 165,
+      "baseline": 0.3689,
+      "lift": 0.937,
+      "p": 0.757972223028028,
+      "survives_fdr": false
+    },
+    {
+      "process": "炮",
+      "chemotype": "phenylpropanoid",
+      "sources": 9,
+      "process_total": 105,
+      "baseline": 0.1033,
+      "lift": 0.829,
+      "p": 0.7689332235229929,
+      "survives_fdr": false
+    },
+    {
+      "process": "醋炙",
+      "chemotype": "flavonoid",
+      "sources": 15,
+      "process_total": 95,
+      "baseline": 0.1825,
+      "lift": 0.865,
+      "p": 0.7707555235991285,
+      "survives_fdr": false
+    },
+    {
+      "process": "煨",
+      "chemotype": "steroid",
+      "sources": 13,
+      "process_total": 267,
+      "baseline": 0.058,
+      "lift": 0.839,
+      "p": 0.7785369853104409,
+      "survives_fdr": false
+    },
+    {
+      "process": "蜜炙",
+      "chemotype": "phenylpropanoid",
+      "sources": 10,
+      "process_total": 117,
+      "baseline": 0.1033,
+      "lift": 0.827,
+      "p": 0.7799098270335257,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒炭",
+      "chemotype": "alkaloid",
+      "sources": 11,
+      "process_total": 51,
+      "baseline": 0.254,
+      "lift": 0.849,
+      "p": 0.7818235935434498,
+      "survives_fdr": false
+    },
+    {
+      "process": "麴",
+      "chemotype": "polyketide",
+      "sources": 2,
+      "process_total": 88,
+      "baseline": 0.0327,
+      "lift": 0.695,
+      "p": 0.7866530804592119,
+      "survives_fdr": false
+    },
+    {
+      "process": "炙",
+      "chemotype": "steroid",
+      "sources": 19,
+      "process_total": 383,
+      "baseline": 0.058,
+      "lift": 0.855,
+      "p": 0.7885924286738444,
+      "survives_fdr": false
+    },
+    {
+      "process": "洗",
+      "chemotype": "steroid",
+      "sources": 21,
+      "process_total": 425,
+      "baseline": 0.058,
+      "lift": 0.852,
+      "p": 0.8034939241701277,
+      "survives_fdr": false
+    },
+    {
+      "process": "酒炙",
+      "chemotype": "terpenoid",
+      "sources": 27,
+      "process_total": 82,
+      "baseline": 0.3689,
+      "lift": 0.893,
+      "p": 0.803571420497898,
+      "survives_fdr": false
+    },
+    {
+      "process": "浸",
+      "chemotype": "steroid",
+      "sources": 21,
+      "process_total": 427,
+      "baseline": 0.058,
+      "lift": 0.848,
+      "p": 0.8098833634657465,
+      "survives_fdr": false
+    },
+    {
+      "process": "煮",
+      "chemotype": "steroid",
+      "sources": 19,
+      "process_total": 392,
+      "baseline": 0.058,
+      "lift": 0.836,
+      "p": 0.8189455021046891,
+      "survives_fdr": false
+    },
+    {
+      "process": "米炒",
+      "chemotype": "terpenoid",
+      "sources": 26,
+      "process_total": 80,
+      "baseline": 0.3689,
+      "lift": 0.881,
+      "p": 0.8231093675733909,
+      "survives_fdr": false
+    },
+    {
+      "process": "熏",
+      "chemotype": "terpenoid",
+      "sources": 65,
+      "process_total": 192,
+      "baseline": 0.3689,
+      "lift": 0.918,
+      "p": 0.8275482801033524,
+      "survives_fdr": false
+    },
+    {
+      "process": "研",
+      "chemotype": "steroid",
+      "sources": 20,
+      "process_total": 419,
+      "baseline": 0.058,
+      "lift": 0.823,
+      "p": 0.8426992632346235,
+      "survives_fdr": false
+    },
+    {
+      "process": "去節",
+      "chemotype": "terpenoid",
+      "sources": 28,
+      "process_total": 90,
+      "baseline": 0.3689,
+      "lift": 0.843,
+      "p": 0.8944892371714416,
+      "survives_fdr": false
+    },
+    {
+      "process": "炒炭",
+      "chemotype": "terpenoid",
+      "sources": 15,
+      "process_total": 51,
+      "baseline": 0.3689,
+      "lift": 0.797,
+      "p": 0.8962100240821502,
+      "survives_fdr": false
+    }
+  ]
+}

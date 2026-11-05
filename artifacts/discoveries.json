@@ -1,0 +1,1650 @@
+{
+  "generated_at": "2026-11-05T10:18:34-0800",
+  "method": "one pass over corpus.jsonl; every lexicon drug-surface is matched per chunk and attributed to its source, tradition and year. Text-level so source diversity is not an artifact of the (single-source) structured join.",
+  "corpus": {
+    "chunks_with_drug_mention": 8266,
+    "sources_seen": 70,
+    "surfaces_in_lexicon": 809,
+    "surfaces_attested": 809
+  },
+  "findings": {
+    "F1_cross_tradition_convergence": {
+      "definition": "surface attested in >=2 traditions — quasi-independent corroboration",
+      "n": 439,
+      "top": [
+        {
+          "surface": "附子",
+          "drug": "Aconitum carmichaelii",
+          "n_sources": 59,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "甘草",
+          "drug": "Glycyrrhiza uralensis",
+          "n_sources": 57,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "茯苓",
+          "drug": "Wolfiporia cocos",
+          "n_sources": 57,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "茱萸",
+          "drug": "Cornus mas",
+          "n_sources": 55,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "干姜",
+          "drug": "Zingiber officinale",
+          "n_sources": 54,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "黄连",
+          "drug": "Coptis chinensis",
+          "n_sources": 54,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "半夏",
+          "drug": "Pinellia ternata",
+          "n_sources": 54,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_shiyi",
+            "ws_zh_bencao_haili"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "泽泻",
+          "drug": "Alisma plantago-aquatica",
+          "n_sources": 53,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "当归",
+          "drug": "Angelica sinensis",
+          "n_sources": 52,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "菖蒲",
+          "drug": "Acorus calamus",
+          "n_sources": 52,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            320,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "芍药",
+          "drug": "Paeonia lactiflora",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "生姜",
+          "drug": "Zingiber officinale",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            220,
+            280,
+            340,
+            470,
+            500
+          ]
+        },
+        {
+          "surface": "栀子",
+          "drug": "Gardenia jasminoides",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_shiyi",
+            "ws_zh_bencao_haili",
+            "ws_zh_bencao_jingjie"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            220,
+            280,
+            340,
+            470,
+            540
+          ]
+        },
+        {
+          "surface": "细辛",
+          "drug": "Asarum sieboldii",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_shiyi",
+            "ws_zh_bencao_haili"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            220,
+            280,
+            340,
+            470,
+            500
+          ]
+        },
+        {
+          "surface": "麝香",
+          "drug": "Moschus moschiferus",
+          "n_sources": 50,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            320,
+            340,
+            470,
+            500
+          ]
+        },
+        {
+          "surface": "杏仁",
+          "drug": "Armeniaca vulgaris",
+          "n_sources": 50,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_shiyi",
+            "ws_zh_bencao_haili"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            220,
+            280,
+            340,
+            470,
+            500
+          ]
+        },
+        {
+          "surface": "乌头",
+          "drug": "Aconitum carmichaeli",
+          "n_sources": 50,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "知母",
+          "drug": "Anemarrhena asphodeloides",
+          "n_sources": 49,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "升麻",
+          "drug": "Actaea cimicifuga",
+          "n_sources": 49,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "木香",
+          "drug": "Aucklandia lappa",
+          "n_sources": 49,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            340,
+            470,
+            500,
+            540
+          ]
+        }
+      ]
+    },
+    "F2_single_attestation": {
+      "definition": "surface in exactly 1 of 70 sources — knowledge at risk",
+      "n": 43,
+      "top": [
+        {
+          "surface": "鼠麴草",
+          "drug": "Gnaphalium affine",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "黄顙魚",
+          "drug": "Tachysurus fulvidraco",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "黄頷蛇",
+          "drug": "Colubridae",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "鱤魚",
+          "drug": "Elopichthys bambusa",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "鱅魚",
+          "drug": "Hypophthalmichthys nobilis",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "魚虎",
+          "drug": "Channa micropeltes",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "駝鳥",
+          "drug": "Struthio camelus",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "铁鏽",
+          "drug": "Platycerus tabanai tabanai",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "鏨菜",
+          "drug": "Leonurus pseudomacranthus",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "錦地羅",
+          "drug": "Drosera burmanni",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "鉤栗",
+          "drug": "Castanopsis hystrix",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "釵子股",
+          "drug": "Luisia morsei",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "醉魚草",
+          "drug": "Buddleja axillaris",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "豪豬",
+          "drug": "Haemaphysalis hystricis",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "蠵龟",
+          "drug": "Caretta caretta",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "蓬蘽",
+          "drug": "Rubus hirsutus",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "蓬莪荗",
+          "drug": "Curcuma phaeocaulis",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "莕菜",
+          "drug": "Nymphoides peltatum",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "荊三棱",
+          "drug": "Scirpus yagara",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        },
+        {
+          "surface": "絨毛",
+          "drug": "Brachyteles arachnoides",
+          "n_sources": 1,
+          "sources": [
+            "ws_zh_bencao_gangmu"
+          ],
+          "traditions": [
+            "tcm"
+          ],
+          "n_traditions": 1,
+          "years": [
+            1596
+          ]
+        }
+      ]
+    },
+    "F3_orphan_procedures": {
+      "definition": "a 炮制 step attested in exactly 1 source while the drug has >=2",
+      "n": 174,
+      "top": [
+        {
+          "drug": "钟乳",
+          "process": "煮",
+          "modern": "boiling in water or an excipient liquor",
+          "effect": "hydrolysis, extraction, detoxification",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "钟乳",
+          "process": "伏",
+          "modern": "suppression/fixation (伏火)",
+          "effect": "controlled oxidation/complexation, detonation-tendency reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "钟乳",
+          "process": "焙",
+          "modern": "gentle drying over fire (焙)",
+          "effect": "dehydration, enzyme inactivation",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "钟乳",
+          "process": "研",
+          "modern": "grinding/milling (研, 研細)",
+          "effect": "particle-size reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "牡蛎",
+          "process": "炮",
+          "modern": "high-temperature dry roasting (often in ash/sand), 160–250 °C",
+          "effect": "detoxification, reduction of irritant volatiles",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "牡蛎",
+          "process": "煮",
+          "modern": "boiling in water or an excipient liquor",
+          "effect": "hydrolysis, extraction, detoxification",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "牡蛎",
+          "process": "伏",
+          "modern": "suppression/fixation (伏火)",
+          "effect": "controlled oxidation/complexation, detonation-tendency reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "牡蛎",
+          "process": "研",
+          "modern": "grinding/milling (研, 研細)",
+          "effect": "particle-size reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 4
+        },
+        {
+          "drug": "朱砂",
+          "process": "煮",
+          "modern": "boiling in water or an excipient liquor",
+          "effect": "hydrolysis, extraction, detoxification",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "朱砂",
+          "process": "伏",
+          "modern": "suppression/fixation (伏火)",
+          "effect": "controlled oxidation/complexation, detonation-tendency reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "朱砂",
+          "process": "研",
+          "modern": "grinding/milling (研, 研細)",
+          "effect": "particle-size reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "白矾",
+          "process": "炙",
+          "modern": "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)",
+          "effect": "modify drug property, reduce toxicity, target organ",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "白矾",
+          "process": "伏",
+          "modern": "suppression/fixation (伏火)",
+          "effect": "controlled oxidation/complexation, detonation-tendency reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "白矾",
+          "process": "研",
+          "modern": "grinding/milling (研, 研細)",
+          "effect": "particle-size reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "滑石",
+          "process": "煮",
+          "modern": "boiling in water or an excipient liquor",
+          "effect": "hydrolysis, extraction, detoxification",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "滑石",
+          "process": "伏",
+          "modern": "suppression/fixation (伏火)",
+          "effect": "controlled oxidation/complexation, detonation-tendency reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "滑石",
+          "process": "研",
+          "modern": "grinding/milling (研, 研細)",
+          "effect": "particle-size reduction",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "甘草",
+          "process": "炮",
+          "modern": "high-temperature dry roasting (often in ash/sand), 160–250 °C",
+          "effect": "detoxification, reduction of irritant volatiles",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "甘草",
+          "process": "炙",
+          "modern": "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)",
+          "effect": "modify drug property, reduce toxicity, target organ",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        },
+        {
+          "drug": "甘草",
+          "process": "蒸",
+          "modern": "steaming (often repeated, 九蒸九曬)",
+          "effect": "hydrolysis, decarboxylation, removal of irritants",
+          "source": "ws_zh_leigong_paozhi",
+          "drug_total_process_sources": 3
+        }
+      ]
+    },
+    "F4_corroborated_core": {
+      "definition": "surface attested in >=20 independent sources — the stable core",
+      "n": 251,
+      "top": [
+        {
+          "surface": "附子",
+          "drug": "Aconitum carmichaelii",
+          "n_sources": 59,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "甘草",
+          "drug": "Glycyrrhiza uralensis",
+          "n_sources": 57,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "茯苓",
+          "drug": "Wolfiporia cocos",
+          "n_sources": 57,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "大黄",
+          "drug": "Rheum rhaponticum",
+          "n_sources": 56,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "tcm"
+          ],
+          "n_traditions": 3,
+          "years": [
+            200,
+            220,
+            280,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "茱萸",
+          "drug": "Cornus mas",
+          "n_sources": 55,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "干姜",
+          "drug": "Zingiber officinale",
+          "n_sources": 54,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "黄连",
+          "drug": "Coptis chinensis",
+          "n_sources": 54,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "半夏",
+          "drug": "Pinellia ternata",
+          "n_sources": 54,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_shiyi",
+            "ws_zh_bencao_haili"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "雄黄",
+          "drug": "Chelidonium majus",
+          "n_sources": 53,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "tcm"
+          ],
+          "n_traditions": 3,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "泽泻",
+          "drug": "Alisma plantago-aquatica",
+          "n_sources": 53,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "巴豆",
+          "drug": "Croton tiglium",
+          "n_sources": 53,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "tcm"
+          ],
+          "n_traditions": 3,
+          "years": [
+            142,
+            200,
+            220,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "滑石",
+          "drug": "Talc",
+          "n_sources": 52,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "tcm"
+          ],
+          "n_traditions": 3,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "当归",
+          "drug": "Angelica sinensis",
+          "n_sources": 52,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "菖蒲",
+          "drug": "Acorus calamus",
+          "n_sources": 52,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            320,
+            340,
+            470
+          ]
+        },
+        {
+          "surface": "赤小豆",
+          "drug": "Vigna umbellata",
+          "n_sources": 52,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "tcm"
+          ],
+          "n_traditions": 3,
+          "years": [
+            -200,
+            200,
+            220,
+            280,
+            282
+          ]
+        },
+        {
+          "surface": "芍药",
+          "drug": "Paeonia lactiflora",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "麻黄",
+          "drug": "Ephedra sinica",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_baopuzi",
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "tcm"
+          ],
+          "n_traditions": 3,
+          "years": [
+            200,
+            220,
+            280,
+            320,
+            340
+          ]
+        },
+        {
+          "surface": "生姜",
+          "drug": "Zingiber officinale",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_bieninglu",
+            "ws_zh_bencao_gangmu_shiyi"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            220,
+            280,
+            340,
+            470,
+            500
+          ]
+        },
+        {
+          "surface": "栀子",
+          "drug": "Gardenia jasminoides",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_shiyi",
+            "ws_zh_bencao_haili",
+            "ws_zh_bencao_jingjie"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            220,
+            280,
+            340,
+            470,
+            540
+          ]
+        },
+        {
+          "surface": "细辛",
+          "drug": "Asarum sieboldii",
+          "n_sources": 51,
+          "sources": [
+            "ws_zh_bencao_beiyao",
+            "ws_zh_bencao_biandu",
+            "ws_zh_bencao_chongyuan",
+            "ws_zh_bencao_congxin",
+            "ws_zh_bencao_fenjing",
+            "ws_zh_bencao_gangmu",
+            "ws_zh_bencao_gangmu_shiyi",
+            "ws_zh_bencao_haili"
+          ],
+          "traditions": [
+            "acupuncture",
+            "alchemy",
+            "korean",
+            "tcm"
+          ],
+          "n_traditions": 4,
+          "years": [
+            220,
+            280,
+            340,
+            470,
+            500
+          ]
+        }
+      ]
+    }
+  }
+}

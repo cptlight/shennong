@@ -1,0 +1,389 @@
+{
+  "generated_at": "2026-11-05T10:19:06-0800",
+  "what": "cross-sections: (drug, 炮制 process, chemotype) combinations that no single text in the corpus asserts, produced by joining attested practice against documented chemistry and the operator ontology",
+  "why_novel": "the process is attested for the drug; the chemotype is documented for the plant; no text states the interaction. The join is the discovery.",
+  "inputs": {
+    "procedure_records": 287,
+    "plants_with_chemotype": 300,
+    "operator_terms": 25,
+    "corpus_sources": 70
+  },
+  "n_cross_sections": 203,
+  "top": [
+    {
+      "drug_surface": "麝香",
+      "binomial": "Moschus moschiferus",
+      "process": "研",
+      "modern_operation": [
+        "grinding/milling (研, 研細)"
+      ],
+      "documented_effect": "particle-size reduction",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": "4 traditions / 50 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "白薇",
+      "binomial": "Vincetoxicum atratum",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "白前",
+      "binomial": "Vincetoxicum glaucescens",
+      "process": "伏",
+      "modern_operation": [
+        "suppression/fixation (伏火)"
+      ],
+      "documented_effect": "controlled oxidation/complexation, detonation-tendency reduction",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "白前",
+      "binomial": "Vincetoxicum glaucescens",
+      "process": "焙",
+      "modern_operation": [
+        "gentle drying over fire (焙)"
+      ],
+      "documented_effect": "dehydration, enzyme inactivation",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "乌头",
+      "binomial": "Aconitum carmichaeli",
+      "process": "炮",
+      "modern_operation": [
+        "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+      ],
+      "documented_effect": "detoxification, reduction of irritant volatiles",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": "4 traditions / 50 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "乌蛇",
+      "binomial": "Diospyros eriantha",
+      "process": "炙",
+      "modern_operation": [
+        "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)"
+      ],
+      "documented_effect": "modify drug property, reduce toxicity, target organ",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "乌蛇",
+      "binomial": "Diospyros eriantha",
+      "process": "煮",
+      "modern_operation": [
+        "boiling in water or an excipient liquor"
+      ],
+      "documented_effect": "hydrolysis, extraction, detoxification",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "乌蛇",
+      "binomial": "Diospyros eriantha",
+      "process": "焙",
+      "modern_operation": [
+        "gentle drying over fire (焙)"
+      ],
+      "documented_effect": "dehydration, enzyme inactivation",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 1,
+      "sharpness": 1.0
+    },
+    {
+      "drug_surface": "黄精",
+      "binomial": "Polygonatum sibiricum",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "黄精",
+      "binomial": "Polygonatum sibiricum",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "菖蒲",
+      "binomial": "Acorus calamus",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": "corroborated in 52 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "菖蒲",
+      "binomial": "Acorus calamus",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": "corroborated in 52 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "天门冬",
+      "binomial": "Asparagus cochinchinensis",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "天门冬",
+      "binomial": "Asparagus cochinchinensis",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "天门冬",
+      "binomial": "Asparagus cochinchinensis",
+      "process": "伏",
+      "modern_operation": [
+        "suppression/fixation (伏火)"
+      ],
+      "documented_effect": "controlled oxidation/complexation, detonation-tendency reduction",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "天门冬",
+      "binomial": "Asparagus cochinchinensis",
+      "process": "伏",
+      "modern_operation": [
+        "suppression/fixation (伏火)"
+      ],
+      "documented_effect": "controlled oxidation/complexation, detonation-tendency reduction",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "干地黄",
+      "binomial": "Rehmannia glutinosa",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "干地黄",
+      "binomial": "Rehmannia glutinosa",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "升麻",
+      "binomial": "Actaea cimicifuga",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": "4 traditions / 49 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "升麻",
+      "binomial": "Actaea cimicifuga",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": "4 traditions / 49 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "黄连",
+      "binomial": "Coptis chinensis",
+      "process": "伏",
+      "modern_operation": [
+        "suppression/fixation (伏火)"
+      ],
+      "documented_effect": "controlled oxidation/complexation, detonation-tendency reduction",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": "corroborated in 54 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "黄连",
+      "binomial": "Coptis chinensis",
+      "process": "伏",
+      "modern_operation": [
+        "suppression/fixation (伏火)"
+      ],
+      "documented_effect": "controlled oxidation/complexation, detonation-tendency reduction",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": "corroborated in 54 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "黄连",
+      "binomial": "Coptis chinensis",
+      "process": "焙",
+      "modern_operation": [
+        "gentle drying over fire (焙)"
+      ],
+      "documented_effect": "dehydration, enzyme inactivation",
+      "chemotype": "alkaloid",
+      "practice_sources": 1,
+      "drug_support": "corroborated in 54 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "黄连",
+      "binomial": "Coptis chinensis",
+      "process": "焙",
+      "modern_operation": [
+        "gentle drying over fire (焙)"
+      ],
+      "documented_effect": "dehydration, enzyme inactivation",
+      "chemotype": "terpenoid",
+      "practice_sources": 1,
+      "drug_support": "corroborated in 54 sources",
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    },
+    {
+      "drug_surface": "漏芦",
+      "binomial": "Rhaponticum uniflorum",
+      "process": "蒸",
+      "modern_operation": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "documented_effect": "hydrolysis, decarboxylation, removal of irritants",
+      "chemotype": "flavonoid",
+      "practice_sources": 1,
+      "drug_support": null,
+      "citation": "ws_zh_leigong_paozhi",
+      "chemotype_breadth": 2,
+      "sharpness": 0.5
+    }
+  ]
+}

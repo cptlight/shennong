@@ -1,6 +1,6 @@
 # SHENNONG — drug candidate shortlist
 
-Generated 2026-11-05T14:39:06+00:00. **60 candidates** from classical Asian leads with real SMILES.
+Generated 2026-11-05T14:57:25+00:00. **60 candidates** from classical Asian leads with real SMILES.
 
 > Research use only. Not medical advice. No dose or human-use protocol is given. Toxicological drugs (heavy metals, aristolochic acid, pyrrolizidine alkaloids, cyanogenic glycosides, cardiac glycosides, Aconitum diesters) are excluded by design.
 

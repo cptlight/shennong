@@ -1,16 +1,33 @@
 # DATA SOURCES — the canonical choices, and why
 
+> ## The order governs every choice
+>
+> **1. Ancient Asian records (the primary corpus).** 本草綱目, 神農本草經, 證類本草, 傷寒論, 黃帝內經,
+> 雷公炮炙論, 抱朴子, 天工開物, 齊民要術 … the *originals*, in Classical Chinese/Sanskrit/Arabic.
+> **This is the source. Everything else is a check on it.**
+>
+> **2. Asian medicine (the interpretive frame).** TCMSP / HERB / IMPPAT / SymMap, and the theory layer
+> (四氣五味歸經, rasa/guṇa/vīrya) — the tradition's own way of organising what the texts say.
+>
+> **3. Western medicine (the last, validating layer).** PubChem, ChEMBL, Open Targets, Dr Duke's.
+> These arrive **last** and may only corroborate or falsify. They may never supply the hypothesis,
+> and they may never rescue a claim the classical record does not attest.
+>
+> This ordering is enforced in code (`shennong/experts/stages.py`): a candidate failing the ancient-record
+> or Asian-theory gate is excluded **regardless of how strong the Western evidence is**.
+
+
 The question this answers: **if you can only pull from a few places, which ones?** Not a survey —
 a decision. Every choice below is justified by three criteria: coverage, licence (can it ship in a
 public repo), and access (API vs bulk dump).
 
 ---
 
-## 1. The single best herbal data source for **both Western and Asian plants**
+## 3a. The best Western/global cross-check layer
 
 ### → Dr. Duke's Phytochemical and Ethnobotanical Databases (USDA ARS)
 
-**Why it is the single best:** it is the only public-domain dataset that puts **phytochemistry,
+**Why it is the best cross-check:** it is the only public-domain dataset that puts **phytochemistry,
 ethnobotanical use, biological activity and LD toxicity for the global flora — including Asian
 species — in one place, with literature references**. Nothing else covers western and Asian plants in
 the same schema.
@@ -33,7 +50,7 @@ join in any serious pipeline, and it is exactly the step that, done badly, produ
 
 ---
 
-## 2. The single best **Asian-tradition** structured source
+## 2. The Asian structured layer (stage 2 — the interpretive frame)
 
 ### Chinese: HERB — and TCMSP for a smaller, cleaner core
 
@@ -64,7 +81,7 @@ the traditional and the modern vocabulary.
 
 ---
 
-## 3. The single best source of **Asian scientific data retrievable on demand**
+## 4. On-demand APIs (stage 4 — corroboration only)
 
 **Honest answer: there is no single API.** Every Asian-tradition database above is a *bulk download*
 (HERB, TCMSP, IMPPAT, SymMap), not a query service. Anyone claiming "one API for Asian medicine" is
@@ -90,7 +107,7 @@ the world knows about the molecule the text implies".
 
 ---
 
-## 4. What this changes about the design
+## 5. What this changes about the design
 
 The earlier design derived hypotheses **within** one corpus. The user's ask — interpolate between
 domains — requires the opposite shape: **independent experts, each grounded in a different data

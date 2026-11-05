@@ -1,0 +1,4386 @@
+{
+  "generated_at": "2026-11-05T10:31:24-0800",
+  "ordering": [
+    "ancient record (GATE)",
+    "Asian theory (GATE)",
+    "Asian pharmacy (score)",
+    "modern corroboration (score, cannot rescue)"
+  ],
+  "rule": "a claim failing either gate is excluded regardless of modern evidence; modern data may strengthen a tradition-grounded hypothesis but may never substitute for one",
+  "weights": {
+    "ancient_record": 0.35,
+    "asian_theory": 0.25,
+    "asian_pharmacy": 0.2,
+    "modern": 0.2
+  },
+  "n_candidates": 203,
+  "n_passed_gates": 28,
+  "n_failed_ancient_gate": 151,
+  "n_failed_theory_gate": 24,
+  "n_strongest_class": 28,
+  "results": [
+    {
+      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its alkaloid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "52 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 心/脾/膀胱, 無毒",
+              "evidence": [
+                "菖蒲: 溫/心/脾/膀胱"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "11 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Acorus calamus: 11 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "菖蒲 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "52 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 心/脾/膀胱, 無毒",
+              "evidence": [
+                "菖蒲: 溫/心/脾/膀胱"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "138 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Acorus calamus: 138 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 菖蒲 marked 有毒",
+              "evidence": [
+                "菖蒲"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its terpenoid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 大腸/脾/胃/肺, 無毒",
+              "evidence": [
+                "升麻: 平/大腸/脾/胃/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "16 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Actaea cimicifuga: 16 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 升麻 marked 有毒",
+              "evidence": [
+                "升麻"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "59 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+              "evidence": [
+                "附子: 溫/肝/腎/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "39 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Aconitum carmichaelii: 39 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "附子 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "59 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+              "evidence": [
+                "附子: 溫/肝/腎/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "17 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Aconitum carmichaelii: 17 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 附子 marked 有毒",
+              "evidence": [
+                "附子"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "59 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+              "evidence": [
+                "附子: 溫/肝/腎/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "39 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Aconitum carmichaelii: 39 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "附子 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "59 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
+              "evidence": [
+                "附子: 溫/肝/腎/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "17 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Aconitum carmichaelii: 17 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 附子 marked 有毒",
+              "evidence": [
+                "附子"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.99,
+              "rationale": "53 independent sources, 3 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+              "evidence": [
+                "巴豆: 溫/脾/胃/大腸"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "煮 = boiling in water or an excipient liquor",
+              "evidence": [
+                "煮: hydrolysis, extraction, detoxification"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "21 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Croton tiglium: 21 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 巴豆 marked 有毒",
+              "evidence": [
+                "巴豆"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
+      "tradition_first_score": 1.0,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.99,
+              "rationale": "53 independent sources, 3 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+              "evidence": [
+                "巴豆: 溫/脾/胃/大腸"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "研 = grinding/milling (研, 研細)",
+              "evidence": [
+                "研: particle-size reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "21 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Croton tiglium: 21 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 巴豆 marked 有毒",
+              "evidence": [
+                "巴豆"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its alkaloid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 大腸/脾/胃/肺, 無毒",
+              "evidence": [
+                "升麻: 平/大腸/脾/胃/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Actaea cimicifuga: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "升麻 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "24 documented flavonoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 24 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "13 documented steroid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 13 × steroid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "88 documented terpenoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 88 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "24 documented flavonoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 24 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "13 documented steroid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 13 × steroid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "88 documented terpenoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 88 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "24 documented flavonoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 24 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "13 documented steroid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 13 × steroid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "88 documented terpenoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 88 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its alkaloid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 腎, 無毒",
+              "evidence": [
+                "知母: 寒/腎"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.5,
+              "rationale": "1 documented alkaloid compounds; 4 classes total",
+              "evidence": [
+                "Anemarrhena asphodeloides: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "知母 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its steroid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 腎, 無毒",
+              "evidence": [
+                "知母: 寒/腎"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "14 documented steroid compounds; 4 classes total",
+              "evidence": [
+                "Anemarrhena asphodeloides: 14 × steroid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 知母 marked 有毒",
+              "evidence": [
+                "知母"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid content",
+      "tradition_first_score": 0.9828,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 腎, 無毒",
+              "evidence": [
+                "知母: 寒/腎"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "20 documented terpenoid compounds; 4 classes total",
+              "evidence": [
+                "Anemarrhena asphodeloides: 20 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 知母 marked 有毒",
+              "evidence": [
+                "知母"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+      "tradition_first_score": 0.979,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.99,
+              "rationale": "53 independent sources, 3 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+              "evidence": [
+                "巴豆: 溫/脾/胃/大腸"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "煮 = boiling in water or an excipient liquor",
+              "evidence": [
+                "煮: hydrolysis, extraction, detoxification"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Croton tiglium: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "巴豆 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+      "tradition_first_score": 0.979,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.99,
+              "rationale": "53 independent sources, 3 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
+              "evidence": [
+                "巴豆: 溫/脾/胃/大腸"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "研 = grinding/milling (研, 研細)",
+              "evidence": [
+                "研: particle-size reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Croton tiglium: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "巴豆 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
+      "tradition_first_score": 0.9396,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 4 × phenylpropanoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
+      "tradition_first_score": 0.9396,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 4 × phenylpropanoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
+      "tradition_first_score": 0.9396,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "57 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/脾, 無毒",
+              "evidence": [
+                "甘草: 平/心/脾"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
+              "evidence": [
+                "Glycyrrhiza uralensis: 4 × phenylpropanoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 甘草 marked 有毒",
+              "evidence": [
+                "甘草"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its phenylpropanoid content",
+      "tradition_first_score": 0.9288,
+      "gates_passed": true,
+      "failed_gate": null,
+      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
+      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 腎, 無毒",
+              "evidence": [
+                "知母: 寒/腎"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.5,
+              "rationale": "1 documented phenylpropanoid compounds; 4 classes total",
+              "evidence": [
+                "Anemarrhena asphodeloides: 1 × phenylpropanoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 知母 marked 有毒",
+              "evidence": [
+                "知母"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "研 of 麝香 (Moschus moschiferus) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 2,
+      "verdict": "OUT — attested, but the tradition's own theory does not frame it",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "50 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "研 = grinding/milling (研, 研細)",
+              "evidence": [
+                "研: particle-size reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.7,
+              "rationale": "2 documented alkaloid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Moschus moschiferus: 2 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 白薇 (Vincetoxicum atratum) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 心/腎, 無毒",
+              "evidence": [
+                "白薇: 平/心/腎"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "13 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Vincetoxicum atratum: 13 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 白薇 marked 有毒",
+              "evidence": [
+                "白薇"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "伏 of 白前 (Vincetoxicum glaucescens) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肺, 無毒",
+              "evidence": [
+                "白前: 溫/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "伏 = suppression/fixation (伏火)",
+              "evidence": [
+                "伏: controlled oxidation/complexation, detonation-tendency reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "5 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Vincetoxicum glaucescens: 5 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 白前 marked 有毒",
+              "evidence": [
+                "白前"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 白前 (Vincetoxicum glaucescens) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 肺, 無毒",
+              "evidence": [
+                "白前: 溫/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "5 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Vincetoxicum glaucescens: 5 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 白前 marked 有毒",
+              "evidence": [
+                "白前"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炮 of 乌头 (Aconitum carmichaeli) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 2,
+      "verdict": "OUT — attested, but the tradition's own theory does not frame it",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "50 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
+              "evidence": [
+                "炮: detoxification, reduction of irritant volatiles"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "11 documented alkaloid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Aconitum carmichaeli: 11 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 乌蛇 (Diospyros eriantha) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "11 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Diospyros eriantha: 11 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "煮 of 乌蛇 (Diospyros eriantha) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "煮 = boiling in water or an excipient liquor",
+              "evidence": [
+                "煮: hydrolysis, extraction, detoxification"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "11 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Diospyros eriantha: 11 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 乌蛇 (Diospyros eriantha) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "11 documented terpenoid compounds; 1 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Diospyros eriantha: 11 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 黄精 (Polygonatum sibiricum) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Polygonatum sibiricum: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 黄精 (Polygonatum sibiricum) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.95,
+              "rationale": "7 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Polygonatum sibiricum: 7 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 天门冬 (Asparagus cochinchinensis) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Asparagus cochinchinensis: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 天门冬 (Asparagus cochinchinensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "18 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Asparagus cochinchinensis: 18 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "伏 of 天门冬 (Asparagus cochinchinensis) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "伏 = suppression/fixation (伏火)",
+              "evidence": [
+                "伏: controlled oxidation/complexation, detonation-tendency reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Asparagus cochinchinensis: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "伏 of 天门冬 (Asparagus cochinchinensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "伏 = suppression/fixation (伏火)",
+              "evidence": [
+                "伏: controlled oxidation/complexation, detonation-tendency reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "18 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Asparagus cochinchinensis: 18 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 干地黄 (Rehmannia glutinosa) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.95,
+              "rationale": "7 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Rehmannia glutinosa: 7 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 干地黄 (Rehmannia glutinosa) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "83 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Rehmannia glutinosa: 83 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "伏 of 黄连 (Coptis chinensis) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 2,
+      "verdict": "OUT — attested, but the tradition's own theory does not frame it",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "54 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "伏 = suppression/fixation (伏火)",
+              "evidence": [
+                "伏: controlled oxidation/complexation, detonation-tendency reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "9 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Coptis chinensis: 9 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "伏 of 黄连 (Coptis chinensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 2,
+      "verdict": "OUT — attested, but the tradition's own theory does not frame it",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "54 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "伏 = suppression/fixation (伏火)",
+              "evidence": [
+                "伏: controlled oxidation/complexation, detonation-tendency reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Coptis chinensis: 1 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 黄连 (Coptis chinensis) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 2,
+      "verdict": "OUT — attested, but the tradition's own theory does not frame it",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "54 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "9 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Coptis chinensis: 9 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 黄连 (Coptis chinensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 2,
+      "verdict": "OUT — attested, but the tradition's own theory does not frame it",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "54 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Coptis chinensis: 1 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 漏芦 (Rhaponticum uniflorum) should measurably change its flavonoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Rhaponticum uniflorum: 1 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 漏芦 (Rhaponticum uniflorum) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "11 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Rhaponticum uniflorum: 11 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 柏木 (Cupressus funebris) should measurably change its flavonoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.75,
+              "rationale": "3 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Cupressus funebris: 3 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 柏木 (Cupressus funebris) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.7,
+              "rationale": "2 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Cupressus funebris: 2 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 杜仲 (Eucommia ulmoides) should measurably change its flavonoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.8,
+              "rationale": "4 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Eucommia ulmoides: 4 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炙 of 杜仲 (Eucommia ulmoides) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "evidence": [
+                "炙: modify drug property, reduce toxicity, target organ"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "46 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Eucommia ulmoides: 46 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 玄参 (Scrophularia ningpoensis) should measurably change its phenylpropanoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "5 documented phenylpropanoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Scrophularia ningpoensis: 5 × phenylpropanoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 玄参 (Scrophularia ningpoensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "30 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Scrophularia ningpoensis: 30 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "伏 of 玄参 (Scrophularia ningpoensis) should measurably change its phenylpropanoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "伏 = suppression/fixation (伏火)",
+              "evidence": [
+                "伏: controlled oxidation/complexation, detonation-tendency reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.85,
+              "rationale": "5 documented phenylpropanoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Scrophularia ningpoensis: 5 × phenylpropanoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "伏 of 玄参 (Scrophularia ningpoensis) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "伏 = suppression/fixation (伏火)",
+              "evidence": [
+                "伏: controlled oxidation/complexation, detonation-tendency reduction"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "30 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Scrophularia ningpoensis: 30 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炒 of 淫羊藿 (Epimedium brevicornu) should measurably change its flavonoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炒 = dry stir-frying",
+              "evidence": [
+                "炒: deactivation of enzymes, partial pyrolysis"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.7,
+              "rationale": "2 documented flavonoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Epimedium brevicornu: 2 × flavonoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "炒 of 淫羊藿 (Epimedium brevicornu) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "炒 = dry stir-frying",
+              "evidence": [
+                "炒: deactivation of enzymes, partial pyrolysis"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "modern corroboration (chemistry, bioactivity, toxicology)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.9,
+              "rationale": "6 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Epimedium brevicornu: 6 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

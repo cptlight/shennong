@@ -261,6 +261,30 @@ scores, which means the ranking is driven by evidence grade and plausibility pri
 learned graph structure. We report that as a limitation of the scorer, not as a success.
 
 
+## The order: ancient record → Asian medicine → Western medicine
+
+This is not a slogan; it is a set of gates, enforced in `shennong/experts/stages.py`:
+
+```
+STAGE 1  ANCIENT RECORD       attested in the classical corpus?          GATE
+STAGE 2  ASIAN THEORY         四氣/五味/歸經 (rasa/vīrya) frame it?      GATE
+STAGE 3  ASIAN PHARMACY       炮制 / formula layer support it?           score
+STAGE 4  MODERN CORROBORATION measured chemistry / bioactivity agrees?   score, CANNOT rescue
+```
+
+Most computational ethnopharmacology runs the opposite way round: start from a compound–target database,
+find a plant that might contain the compound, then cite a traditional use as colour. That makes the
+tradition a marketing layer. Here **a claim failing either gate is out, however strong the Western
+evidence is** — modern data may strengthen a tradition-grounded hypothesis, never substitute for one.
+
+**Measured over 203 candidates: 28 pass both gates; 151 fail at the ancient-record gate; 24 fail at the
+Asian-theory gate.** Under a Western-first pipeline the 151 would have been *priorities*. Here they are
+non-hypotheses, because a molecule the record does not attest is a Western screen with a footnote.
+
+The 28 that survive are split into **tradition-grounded + modern-corroborated** (the strongest class) and
+**tradition-grounded, awaiting corroboration** (the pre-clinical class a pharmacognosist would want
+before any assay). [`artifacts/TRADITION_FIRST.md`](artifacts/) · [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md)
+
 ## Multi-domain experts, and a system that adjusts itself
 
 **A hypothesis is an interpolation only if independent domains agree.** Five experts, each grounded in

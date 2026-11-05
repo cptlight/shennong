@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-11-05T09:16:42-0800",
+  "what_this_is": "A measured check that each candidate's cited span supports its claim — entity, relation cue, polarity, length — plus the verifier's own precision/recall/AUC on a shuffled-negative gold set.",
+  "what_this_is_not": "Not cross-lingual semantic entailment. Claims are largely English and spans Chinese/Sanskrit; judging entailment needs a multilingual encoder, which is the documented next step.",
+  "n_candidates": 60,
+  "n_positives": 60,
+  "n_negatives": 300,
+  "verifier_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "auc": 1.0,
+    "tp": 60,
+    "fp": 0,
+    "tn": 300,
+    "fn": 0,
+    "mean_score_pos": 0.8,
+    "mean_score_neg": 0.1225,
+    "adopted_threshold": 0.3,
+    "threshold_rule": "score >= adopted_threshold; chosen to maximise F1 on this gold set"
+  },
+  "operating_characteristic": [
+    {
+      "threshold": 0.3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "tn": 300,
+      "fn": 0
+    },
+    {
+      "threshold": 0.4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "tn": 300,
+      "fn": 0
+    },
+    {
+      "threshold": 0.5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "tn": 300,
+      "fn": 0
+    },
+    {
+      "threshold": 0.6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "tn": 300,
+      "fn": 0
+    },
+    {
+      "threshold": 0.7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "tn": 300,
+      "fn": 0
+    },
+    {
+      "threshold": 0.75,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "tn": 300,
+      "fn": 0
+    },
+    {
+      "threshold": 0.8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "tn": 300,
+      "fn": 0
+    }
+  ],
+  "candidates_supported": 60,
+  "candidates_unsupported": [],
+  "false_positive_examples": [],
+  "how_to_read_this": "The verifier scores 1.0 on this gold set, and that number means: it reliably decides whether a cited span is about the claimed drug. It does NOT mean it verifies the mechanism. On a shuffled set from different lead drugs, entity presence alone separates the classes, so this is closer to a strong entity gate than to an entailment model. Its real-world value is concrete: the same check flagged 8 of 10 mislocated citations in an earlier candidate artefact, where the span quoted 甘草 for a claim about 陳皮. The harder question — does a Chinese span entail an English mechanistic claim — requires a multilingual encoder and is the documented next step, not a solved problem."
+}

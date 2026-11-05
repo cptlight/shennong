@@ -227,7 +227,30 @@
         "verified": true
       },
       "rank": 1,
-      "association_claim": "(11R,11aS)-3'-Methoxy-4',9-dimethyl-5,6,7,8-tetrahydrospiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-3,5',10(2H)-trione from Stemona japonica (百部) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(11R,11aS)-3'-Methoxy-4',9-dimethyl-5,6,7,8-tetrahydrospiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-3,5',10(2H)-trione from Stemona japonica (百部) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "百部"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 15,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:622-637",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0005",
@@ -429,7 +452,30 @@
         "verified": true
       },
       "rank": 2,
-      "association_claim": "(1R,2R,3S,6S,7R,9S,10S,11S,13R,14R)-11-isopropyl-3,7,10-trimethyl-15-oxapentacyclo[7.5.1.0¹,⁶.0⁷,¹³.0¹⁰,¹⁴]pentadecane-2,6,9,11,13,14-hexol from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,2R,3S,6S,7R,9S,10S,11S,13R,14R)-11-isopropyl-3,7,10-trimethyl-15-oxapentacyclo[7.5.1.0¹,⁶.0⁷,¹³.0¹⁰,¹⁴]pentadecane-2,6,9,11,13,14-hexol from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "桂枝"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_sibian:675-689",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0053",
@@ -637,7 +683,30 @@
         "verified": true
       },
       "rank": 3,
-      "association_claim": "(11R,11aR)-2,3,5,6,7,8-Hexahydro-3'-methoxy-4',9-dimethylspiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-5',10-dione from Stemona japonica (百部) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(11R,11aR)-2,3,5,6,7,8-Hexahydro-3'-methoxy-4',9-dimethylspiro[1H-cyclopenta[b]pyrrolo[1,2-a]azepine-11(10H),2'(5'H)-furan]-5',10-dione from Stemona japonica (百部) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "百部"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 15,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:622-637",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0055",
@@ -839,7 +908,30 @@
         "verified": true
       },
       "rank": 4,
-      "association_claim": "(1R)-2beta,3beta-Epoxy-2-methyl-3-acetyl-1,2,3,4-tetrahydronaphthalene-1beta,4beta,5-triol from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R)-2beta,3beta-Epoxy-2-methyl-3-acetyl-1,2,3,4-tetrahydronaphthalene-1beta,4beta,5-triol from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "羊蹄"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 20,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0048",
@@ -1043,7 +1135,30 @@
         "verified": true
       },
       "rank": 5,
-      "association_claim": "(1S,8R,9S,12S,14R,15S)-8,14,15-trihydroxy-1,12-dimethyl-6-propan-2-yl-5,10-dioxatetracyclo[7.6.1.02,7.012,16]hexadeca-2,6-diene-4,11-dione from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1S,8R,9S,12S,14R,15S)-8,14,15-trihydroxy-1,12-dimethyl-6-propan-2-yl-5,10-dioxatetracyclo[7.6.1.02,7.012,16]hexadeca-2,6-diene-4,11-dione from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "王瓜"
+          ],
+          "relation_cue": "食",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 30,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_benjing_fengyuan:998-1028",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0017",
@@ -1251,7 +1366,30 @@
         "verified": true
       },
       "rank": 6,
-      "association_claim": "jineol from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "jineol from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "蜈蚣"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 88,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:66-154",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0016",
@@ -1459,7 +1597,30 @@
         "verified": true
       },
       "rank": 7,
-      "association_claim": "Scolopendrine from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Scolopendrine from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "蜈蚣"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 88,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:66-154",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0030",
@@ -1668,7 +1829,30 @@
         "verified": true
       },
       "rank": 8,
-      "association_claim": "Peucedanocoumarin I from Kitagawia praeruptora (前胡) is proposed to act on TRPA1 for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Peucedanocoumarin I from Kitagawia praeruptora (前胡) is proposed to act on TRPA1 for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "前胡"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 8,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_pujifang:1190-1198",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0058",
@@ -1875,7 +2059,30 @@
         "verified": true
       },
       "rank": 9,
-      "association_claim": "Rumejaposide A from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Rumejaposide A from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "羊蹄"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 20,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0059",
@@ -2082,7 +2289,30 @@
         "verified": true
       },
       "rank": 10,
-      "association_claim": "Rumejaposide C from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Rumejaposide C from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "羊蹄"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 20,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0050",
@@ -2284,7 +2514,30 @@
         "verified": true
       },
       "rank": 11,
-      "association_claim": "(2S,7S,8S,9S,10R,13R,14S,16R,17R)-2,7,16-trihydroxy-4,4,9,13,14-pentamethyl-3,11-dioxo-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-17-carbaldehyde from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,7S,8S,9S,10R,13R,14S,16R,17R)-2,7,16-trihydroxy-4,4,9,13,14-pentamethyl-3,11-dioxo-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-17-carbaldehyde from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "王瓜"
+          ],
+          "relation_cue": "食",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 30,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_benjing_fengyuan:998-1028",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0060",
@@ -2491,7 +2744,30 @@
         "verified": true
       },
       "rank": 12,
-      "association_claim": "Rumejaposide D from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Rumejaposide D from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "羊蹄"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 20,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0015",
@@ -2699,7 +2975,30 @@
         "verified": true
       },
       "rank": 13,
-      "association_claim": "3,4-dimethoxyquinoline-2,8-diol from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "3,4-dimethoxyquinoline-2,8-diol from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "蜈蚣"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 88,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:66-154",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0045",
@@ -2905,7 +3204,30 @@
         "verified": true
       },
       "rank": 14,
-      "association_claim": "(2S)-1-[[(3R,3aS,5aR,6R,9aS,9bS)-6-hydroxy-5a-methyl-9-methylidene-2-oxo-3a,4,5,6,7,8,9a,9b-octahydro-3H-benzo[g][1]benzofuran-3-yl]methyl]pyrrolidine-2-carboxylic acid from Aucklandia lappa (木香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S)-1-[[(3R,3aS,5aR,6R,9aS,9bS)-6-hydroxy-5a-methyl-9-methylidene-2-oxo-3a,4,5,6,7,8,9a,9b-octahydro-3H-benzo[g][1]benzofuran-3-yl]methyl]pyrrolidine-2-carboxylic acid from Aucklandia lappa (木香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "木香"
+          ],
+          "relation_cue": "主",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 152,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_biandu:990-1142",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0019",
@@ -3107,7 +3429,30 @@
         "verified": true
       },
       "rank": 15,
-      "association_claim": "2,10-dioxatricyclo[5.3.1.0⁴,¹¹]undecane-4,5-diol from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "2,10-dioxatricyclo[5.3.1.0⁴,¹¹]undecane-4,5-diol from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0022",
@@ -3309,7 +3654,30 @@
         "verified": true
       },
       "rank": 16,
-      "association_claim": "5-Chloro-2,10-dioxatricyclo[5.3.1.04,11]undecan-4-ol from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "5-Chloro-2,10-dioxatricyclo[5.3.1.04,11]undecan-4-ol from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0046",
@@ -3516,7 +3884,30 @@
         "verified": true
       },
       "rank": 17,
-      "association_claim": "thamnolic acid from Usnea florida (松蘿) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "thamnolic acid from Usnea florida (松蘿) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "松蘿"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 40,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu_shiyi:747-787",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0010",
@@ -3724,7 +4115,30 @@
         "verified": true
       },
       "rank": 18,
-      "association_claim": "2,3,14-Trihydroxy-10,13-dimethyl-1,2,3,4,5,9,11,12,15,16-decahydrocyclopenta[a]phenanthrene-6,17-dione from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "2,3,14-Trihydroxy-10,13-dimethyl-1,2,3,4,5,9,11,12,15,16-decahydrocyclopenta[a]phenanthrene-6,17-dione from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "牛膝"
+          ],
+          "relation_cue": "煎",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 23,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_congxin:922-945",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0042",
@@ -3934,7 +4348,30 @@
         "verified": true
       },
       "rank": 19,
-      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,12aS,14bS)-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-10,13-dioxo-2,3,4,5,6,6a,7,8,8a,11,12,14b-dodecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,12aS,14bS)-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-10,13-dioxo-2,3,4,5,6,6a,7,8,8a,11,12,14b-dodecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "地榆"
+          ],
+          "relation_cue": "饮",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 24,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1017-1041",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0027",
@@ -4150,7 +4587,30 @@
         "Citrus reticulata"
       ],
       "rank": 20,
-      "association_claim": "(+)-beta-selinene from Syzygium aromaticum (丁香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(+)-beta-selinene from Syzygium aromaticum (丁香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "丁香"
+          ],
+          "relation_cue": "服",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1516-1530",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0023",
@@ -4352,7 +4812,30 @@
         "verified": true
       },
       "rank": 21,
-      "association_claim": "Catalpol, 6-deoxy- from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Catalpol, 6-deoxy- from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0001",
@@ -4556,7 +5039,30 @@
         "verified": true
       },
       "rank": 22,
-      "association_claim": "(-)-Caaverine from Ziziphus jujuba (大枣) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(-)-Caaverine from Ziziphus jujuba (大枣) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "大枣"
+          ],
+          "relation_cue": "饮",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 25,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1619-1644",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0051",
@@ -4759,7 +5265,30 @@
         "verified": true
       },
       "rank": 23,
-      "association_claim": "(2S,8S,9R,10R,13R,14S,16R,17R)-17-[(2R,5R)-2,6-dihydroxy-5-methoxy-6-methyl-3-oxoheptan-2-yl]-2,16-dihydroxy-4,4,9,13,14-pentamethyl-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-3,11-dione from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,8S,9R,10R,13R,14S,16R,17R)-17-[(2R,5R)-2,6-dihydroxy-5-methoxy-6-methyl-3-oxoheptan-2-yl]-2,16-dihydroxy-4,4,9,13,14-pentamethyl-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-3,11-dione from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "王瓜"
+          ],
+          "relation_cue": "食",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 30,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_benjing_fengyuan:998-1028",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0020",
@@ -4961,7 +5490,30 @@
         "verified": true
       },
       "rank": 24,
-      "association_claim": "2-(hydroxymethyl)-6-[(7-hydroxy-7-methyl-4a,5,6,7a-tetrahydro-1H-cyclopenta[c]pyran-1-yl)oxy]oxane-3,4,5-triol from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "2-(hydroxymethyl)-6-[(7-hydroxy-7-methyl-4a,5,6,7a-tetrahydro-1H-cyclopenta[c]pyran-1-yl)oxy]oxane-3,4,5-triol from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0043",
@@ -5168,7 +5720,30 @@
         "verified": true
       },
       "rank": 25,
-      "association_claim": "(1R,4aR,6aR,6aS,6bR,8aS,10S,12aR,14bS)-1-hydroxy-1,6a,6b,9,9,12a-hexamethyl-2-methylidene-10-[(2S,3R,4S,5S)-3,4,5-trihydroxyoxan-2-yl]oxy-4,5,6,6a,7,8,8a,10,11,12,13,14b-dodecahydro-3H-picene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,4aR,6aR,6aS,6bR,8aS,10S,12aR,14bS)-1-hydroxy-1,6a,6b,9,9,12a-hexamethyl-2-methylidene-10-[(2S,3R,4S,5S)-3,4,5-trihydroxyoxan-2-yl]oxy-4,5,6,6a,7,8,8a,10,11,12,13,14b-dodecahydro-3H-picene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "地榆"
+          ],
+          "relation_cue": "饮",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 24,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1017-1041",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0052",
@@ -5371,7 +5946,30 @@
         "verified": true
       },
       "rank": 26,
-      "association_claim": "(2S,8S,9R,10R,13R,14S,16R,17R)-2,16-dihydroxy-4,4,9,13,14-pentamethyl-17-[(2R,5R)-2,5,6-trihydroxy-6-methyl-3-oxoheptan-2-yl]-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-3,11-dione from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,8S,9R,10R,13R,14S,16R,17R)-2,16-dihydroxy-4,4,9,13,14-pentamethyl-17-[(2R,5R)-2,5,6-trihydroxy-6-methyl-3-oxoheptan-2-yl]-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-3,11-dione from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "王瓜"
+          ],
+          "relation_cue": "食",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 30,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_benjing_fengyuan:998-1028",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0057",
@@ -5574,7 +6172,30 @@
         "verified": true
       },
       "rank": 27,
-      "association_claim": "2alpha,3alpha,19alpha-Trihydroxy-24-norurs-4(23),12-diene-28-oic acid from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "2alpha,3alpha,19alpha-Trihydroxy-24-norurs-4(23),12-diene-28-oic acid from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "羊蹄"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 20,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0034",
@@ -5777,7 +6398,30 @@
         "verified": true
       },
       "rank": 28,
-      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10R,11S,12aR,14bS)-10-acetyloxy-11-hydroxy-4a-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10R,11S,12aR,14bS)-10-acetyloxy-11-hydroxy-4a-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0035",
@@ -5980,7 +6624,30 @@
         "verified": true
       },
       "rank": 29,
-      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10R,11S,12aR,14bS)-11-acetyloxy-10-hydroxy-4a-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10R,11S,12aR,14bS)-11-acetyloxy-10-hydroxy-4a-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0040",
@@ -6187,7 +6854,30 @@
         "verified": true
       },
       "rank": 30,
-      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,10S,12aR,14bS)-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-10-[(2R,3R,4S,5S)-3,4,5-trihydroxyoxan-2-yl]oxy-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,10S,12aR,14bS)-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-10-[(2R,3R,4S,5S)-3,4,5-trihydroxyoxan-2-yl]oxy-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "地榆"
+          ],
+          "relation_cue": "饮",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 24,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1017-1041",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0041",
@@ -6394,7 +7084,30 @@
         "verified": true
       },
       "rank": 31,
-      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,10S,12aR,14bS)-10-[(2S,3S,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]oxy-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,10S,12aR,14bS)-10-[(2S,3S,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]oxy-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "地榆"
+          ],
+          "relation_cue": "饮",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 24,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1017-1041",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0047",
@@ -6597,7 +7310,30 @@
         "verified": true
       },
       "rank": 32,
-      "association_claim": "(1R,3aR,5aR,5bR,7aR,9S,11aR,11bR,13aR,13bS)-1-(3-hydroxyprop-1-en-2-yl)-3a,5a,5b,8,8,11a-hexamethyl-hexadecahydrocyclopenta[a]chrysen-9-ol from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,3aR,5aR,5bR,7aR,9S,11aR,11bR,13aR,13bS)-1-(3-hydroxyprop-1-en-2-yl)-3a,5a,5b,8,8,11a-hexamethyl-hexadecahydrocyclopenta[a]chrysen-9-ol from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "王瓜"
+          ],
+          "relation_cue": "食",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 30,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_benjing_fengyuan:998-1028",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0049",
@@ -6800,7 +7536,30 @@
         "verified": true
       },
       "rank": 33,
-      "association_claim": "(20R)-D:C-Friedoolean-8-ene-3beta,29-diol 3,29-diacetate from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(20R)-D:C-Friedoolean-8-ene-3beta,29-diol 3,29-diacetate from Trichosanthes cucumeroides (王瓜) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "王瓜"
+          ],
+          "relation_cue": "食",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 30,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_benjing_fengyuan:998-1028",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0036",
@@ -7003,7 +7762,30 @@
         "verified": true
       },
       "rank": 34,
-      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10S,12aR,14bS)-10-acetyloxy-2-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10S,12aR,14bS)-10-acetyloxy-2-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0037",
@@ -7209,7 +7991,30 @@
         "verified": true
       },
       "rank": 35,
-      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,9R,10R,11S,12aR,14bS)-10,11-diacetyloxy-9-(acetyloxymethyl)-4a-methoxycarbonyl-2,6a,6b,9,12a-pentamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,9R,10R,11S,12aR,14bS)-10,11-diacetyloxy-9-(acetyloxymethyl)-4a-methoxycarbonyl-2,6a,6b,9,12a-pentamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0038",
@@ -7412,7 +8217,30 @@
         "verified": true
       },
       "rank": 36,
-      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,9R,10R,11S,12aR,14bS)-10-acetyloxy-11-hydroxy-9-(hydroxymethyl)-2-methoxycarbonyl-2,6a,6b,9,12a-pentamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,9R,10R,11S,12aR,14bS)-10-acetyloxy-11-hydroxy-9-(hydroxymethyl)-2-methoxycarbonyl-2,6a,6b,9,12a-pentamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0056",
@@ -7615,7 +8443,30 @@
         "verified": true
       },
       "rank": 37,
-      "association_claim": "(4R)-4,23-Epoxy-2alpha,3alpha,19alpha-trihydroxy-24-norurs-12-ene-28-oic acid from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(4R)-4,23-Epoxy-2alpha,3alpha,19alpha-trihydroxy-24-norurs-12-ene-28-oic acid from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "羊蹄"
+          ],
+          "relation_cue": "治",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 20,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_chongyuan:1586-1606",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0018",
@@ -7819,7 +8670,30 @@
         "verified": true
       },
       "rank": 38,
-      "association_claim": "(4E,8E)-N-D-2'-Hydroxypalmitoyl-1-O-beta-D-glycopyranosyl-9-methyl-4,8-sphingadienine from Polyporus umbellatus (豬苓) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(4E,8E)-N-D-2'-Hydroxypalmitoyl-1-O-beta-D-glycopyranosyl-9-methyl-4,8-sphingadienine from Polyporus umbellatus (豬苓) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "豬苓"
+          ],
+          "relation_cue": "主",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 27,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_shanghanlun:990-1017",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0044",
@@ -8027,7 +8901,30 @@
         "verified": true
       },
       "rank": 39,
-      "association_claim": "(1S,2R)-2-[2-hydroxy-4-(3-hydroxypropyl)-6-methoxyphenoxy]-1-(4-hydroxy-3-methoxyphenyl)propane-1,3-diol from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1S,2R)-2-[2-hydroxy-4-(3-hydroxypropyl)-6-methoxyphenoxy]-1-(4-hydroxy-3-methoxyphenyl)propane-1,3-diol from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "地榆"
+          ],
+          "relation_cue": "饮",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 24,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1017-1041",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0026",
@@ -8234,7 +9131,30 @@
         "verified": true
       },
       "rank": 40,
-      "association_claim": "Syringalide A 3'-rhamnoside from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Syringalide A 3'-rhamnoside from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0011",
@@ -8442,7 +9362,30 @@
         "verified": true
       },
       "rank": 41,
-      "association_claim": "Bidentatoside II from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Bidentatoside II from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "牛膝"
+          ],
+          "relation_cue": "煎",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 23,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_congxin:922-945",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0025",
@@ -8649,7 +9592,30 @@
         "verified": true
       },
       "rank": 42,
-      "association_claim": "Isocistanoside C from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Isocistanoside C from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0033",
@@ -8852,7 +9818,30 @@
         "verified": true
       },
       "rank": 43,
-      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10R,11S,12aR,14bS)-10,11-dihydroxy-4a-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2S,4aR,6aR,6aS,6bR,8aR,10R,11S,12aR,14bS)-10,11-dihydroxy-4a-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-2-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0013",
@@ -9060,7 +10049,30 @@
         "verified": true
       },
       "rank": 44,
-      "association_claim": "hederagenin 28-O-beta-D-glucopyranoside from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "hederagenin 28-O-beta-D-glucopyranoside from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "牛膝"
+          ],
+          "relation_cue": "煎",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 23,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_congxin:922-945",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0002",
@@ -9272,7 +10284,30 @@
         "Santalum album"
       ],
       "rank": 45,
-      "association_claim": "(+)-syringaresinol from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(+)-syringaresinol from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "桂枝"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_sibian:675-689",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0003",
@@ -9489,7 +10524,30 @@
         "Curcuma longa"
       ],
       "rank": 46,
-      "association_claim": "(+/-)-4-terpineol from Cinnamomum cassia (桂枝) is proposed to act on opioid receptor for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(+/-)-4-terpineol from Cinnamomum cassia (桂枝) is proposed to act on opioid receptor for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "桂枝"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_sibian:675-689",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0004",
@@ -9692,7 +10750,30 @@
         "verified": true
       },
       "rank": 47,
-      "association_claim": "(-)-alpha-Cubebene from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(-)-alpha-Cubebene from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "桂枝"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_sibian:675-689",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0006",
@@ -9900,7 +10981,30 @@
         "Triticum aestivum"
       ],
       "rank": 48,
-      "association_claim": "(2E)-2-hydroxycinnamic acid from Cinnamomum cassia (桂枝) is proposed to act on TRPA1 for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2E)-2-hydroxycinnamic acid from Cinnamomum cassia (桂枝) is proposed to act on TRPA1 for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "桂枝"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_sibian:675-689",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0007",
@@ -10106,7 +11210,30 @@
         "verified": true
       },
       "rank": 49,
-      "association_claim": "(2R,3R)-2-(3,4-Dihydroxyphenyl)-3,4-dihydro-5,7-dihydroxy-2H-1-benzopyran-3-yl beta-D-glucopyranoside from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2R,3R)-2-(3,4-Dihydroxyphenyl)-3,4-dihydro-5,7-dihydroxy-2H-1-benzopyran-3-yl beta-D-glucopyranoside from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "桂枝"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_sibian:675-689",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0008",
@@ -10312,7 +11439,30 @@
         "verified": true
       },
       "rank": 50,
-      "association_claim": "(2R,3R)-2-(3,4-dihydroxyphenyl)-6-[(2R,3R,4R)-2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxy-3,4-dihydro-2H-chromen-4-yl]-3,4-dihydro-2H-chromene-3,5,7-triol from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2R,3R)-2-(3,4-dihydroxyphenyl)-6-[(2R,3R,4R)-2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxy-3,4-dihydro-2H-chromen-4-yl]-3,4-dihydro-2H-chromene-3,5,7-triol from Cinnamomum cassia (桂枝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "桂枝"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_sibian:675-689",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0009",
@@ -10525,7 +11675,30 @@
         "Rhaponticum uniflorum"
       ],
       "rank": 51,
-      "association_claim": "2,3,14,20,22,25-Hexahydroxycholest-7-en-6-one from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "2,3,14,20,22,25-Hexahydroxycholest-7-en-6-one from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "牛膝"
+          ],
+          "relation_cue": "煎",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 23,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_congxin:922-945",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0012",
@@ -10736,7 +11909,30 @@
         "Lablab purpureus"
       ],
       "rank": 52,
-      "association_claim": "calenduloside f from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "calenduloside f from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "牛膝"
+          ],
+          "relation_cue": "煎",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 23,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_congxin:922-945",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0014",
@@ -10943,7 +12139,30 @@
         "verified": true
       },
       "rank": 53,
-      "association_claim": "lupeol from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "lupeol from Achyranthes bidentata (牛膝) is proposed to act on NF-kB for pain; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "牛膝"
+          ],
+          "relation_cue": "煎",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 23,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_congxin:922-945",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0021",
@@ -11150,7 +12369,30 @@
         "verified": true
       },
       "rank": 54,
-      "association_claim": "2-Acetylacteoside from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "2-Acetylacteoside from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0024",
@@ -11357,7 +12599,30 @@
         "verified": true
       },
       "rank": 55,
-      "association_claim": "Cistanoside F from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "Cistanoside F from Cistanche deserticola (肉蓯蓉) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "肉蓯蓉"
+          ],
+          "relation_cue": "用",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 46,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1172-1218",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0028",
@@ -11570,7 +12835,30 @@
         "Aristolochia debilis"
       ],
       "rank": 56,
-      "association_claim": "(+)-γ-cadinene from Syzygium aromaticum (丁香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(+)-γ-cadinene from Syzygium aromaticum (丁香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "丁香"
+          ],
+          "relation_cue": "服",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1516-1530",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0029",
@@ -11786,7 +13074,30 @@
         "Daphne odora"
       ],
       "rank": 57,
-      "association_claim": "(+)-δ-cadinene from Syzygium aromaticum (丁香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(+)-δ-cadinene from Syzygium aromaticum (丁香) is proposed to act on opioid receptor for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "丁香"
+          ],
+          "relation_cue": "服",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 14,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1516-1530",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0031",
@@ -11989,7 +13300,30 @@
         "verified": true
       },
       "rank": 58,
-      "association_claim": "(1R,2S,4aS,6aR,6aS,6bS,8aS,10S,12aR,14bR)-10-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydro-1H-picene-4a-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,2S,4aS,6aR,6aS,6bS,8aS,10S,12aR,14bR)-10-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydro-1H-picene-4a-carboxylic acid from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0032",
@@ -12196,7 +13530,30 @@
         "verified": true
       },
       "rank": 59,
-      "association_claim": "(2R)-1-[(2E)-2-[(2R)-2,6-dicarboxy-2,3-dihydro-1H-pyridin-4-ylidene]ethylidene]-6-hydroxy-5-[(2R,3S,4R,5S)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-2,3-dihydroindol-1-ium-2-carboxylate from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(2R)-1-[(2E)-2-[(2R)-2,6-dicarboxy-2,3-dihydro-1H-pyridin-4-ylidene]ethylidene]-6-hydroxy-5-[(2R,3S,4R,5S)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-2,3-dihydroindol-1-ium-2-carboxylate from Phytolacca acinosa (商陸) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "商陸"
+          ],
+          "relation_cue": "熨",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 21,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1461-1482",
+        "adopted_threshold": 0.3
+      }
     },
     {
       "id": "C-2026-0039",
@@ -12403,7 +13760,30 @@
         "verified": true
       },
       "rank": 60,
-      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,10R,12aR,14bS)-1,10-dihydroxy-1,2,6a,6b,9,9,12a-heptamethyl-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+      "association_claim": "(1R,2R,4aS,6aR,6aS,6bR,8aR,10R,12aR,14bS)-1,10-dihydroxy-1,2,6a,6b,9,9,12a-heptamethyl-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid from Sanguisorba officinalis (地榆) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+      "support": {
+        "supported": true,
+        "score": 0.8,
+        "signals": {
+          "entity_present": 1.0,
+          "entity_hits": [
+            "地榆"
+          ],
+          "relation_cue": "饮",
+          "relation_present": 1.0,
+          "indication_overlap": 0.0,
+          "indication_ok": 0.0,
+          "negation": null,
+          "negation_conflict": 0.0,
+          "length_chars": 24,
+          "length_ok": 1.0,
+          "commentary_pattern": 0.0
+        },
+        "reasons": [],
+        "method": "claim-span support: entity presence (繁/简 folded), classical relation cue, indication bigram overlap, polarity conflict, length sanity. NOT cross-lingual semantic entailment — see shennong/verify.py",
+        "span_locator": "ws_zh_bencao_gangmu:1017-1041",
+        "adopted_threshold": 0.3
+      }
     }
   ],
   "novelty_method": "structural (ECFP-style Tanimoto), radius 2"

@@ -1,0 +1,333 @@
+{
+  "generated_at": "2026-11-05T09:16:53-0800",
+  "purpose": "The 炮制/alchemical operator ontology: each classical process term with the modern chemical operation(s) it denotes, the substances it is attested on, and the sources it came from. Deterministic, cited, versioned — the chemistry lives here, not in the model weights.",
+  "n_terms": 25,
+  "n_attestations": 317,
+  "operators": [
+    {
+      "term": "蒸",
+      "modern": [
+        "steaming (often repeated, 九蒸九曬)"
+      ],
+      "effects": [
+        "hydrolysis, decarboxylation, removal of irritants"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 73
+    },
+    {
+      "term": "研",
+      "modern": [
+        "grinding/milling (研, 研細)"
+      ],
+      "effects": [
+        "particle-size reduction"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 50
+    },
+    {
+      "term": "伏",
+      "modern": [
+        "suppression/fixation (伏火)"
+      ],
+      "effects": [
+        "controlled oxidation/complexation, detonation-tendency reduction"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 45
+    },
+    {
+      "term": "焙",
+      "modern": [
+        "gentle drying over fire (焙)"
+      ],
+      "effects": [
+        "dehydration, enzyme inactivation"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 44
+    },
+    {
+      "term": "煮",
+      "modern": [
+        "boiling in water or an excipient liquor"
+      ],
+      "effects": [
+        "hydrolysis, extraction, detoxification"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 43
+    },
+    {
+      "term": "炙",
+      "modern": [
+        "frying with an excipient (honey, vinegar, wine, ginger juice, salt water)"
+      ],
+      "effects": [
+        "modify drug property, reduce toxicity, target organ"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 18
+    },
+    {
+      "term": "炒",
+      "modern": [
+        "dry stir-frying"
+      ],
+      "effects": [
+        "deactivation of enzymes, partial pyrolysis"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 18
+    },
+    {
+      "term": "炮",
+      "modern": [
+        "high-temperature dry roasting (often in ash/sand), 160–250 °C"
+      ],
+      "effects": [
+        "detoxification, reduction of irritant volatiles"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 9
+    },
+    {
+      "term": "煅",
+      "modern": [
+        "calcination of minerals/shells at 500–900 °C in a closed vessel"
+      ],
+      "effects": [
+        "decomposition of carbonates/sulfides, oxide formation"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "煨",
+      "modern": [
+        "slow roasting wrapped in dough/paper, ~120–200 °C"
+      ],
+      "effects": [
+        "remove volatile irritants, moderate action"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "淬",
+      "modern": [
+        "quenching a hot calcined mineral in vinegar/water (repeated)"
+      ],
+      "effects": [
+        "hydration, salt formation, crystal fracture"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "炒焦",
+      "modern": [
+        "stir-frying to charred (焦)"
+      ],
+      "effects": [
+        "pyrolysis, char adsorption, reduction of activity"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "炒炭",
+      "modern": [
+        "stir-frying to charcoal (炭)"
+      ],
+      "effects": [
+        "carbonisation, haemostatic char formation"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "蜜炙",
+      "modern": [
+        "honey-fried"
+      ],
+      "effects": [
+        "sugar–glycoside interaction, moistening, lung targeting"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "醋炙",
+      "modern": [
+        "vinegar-fried"
+      ],
+      "effects": [
+        "salt formation with alkaloids, enhanced analgesia"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "酒炙",
+      "modern": [
+        "wine-fried"
+      ],
+      "effects": [
+        "increased lipophilicity, enhanced upward circulation"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "鹽炙",
+      "modern": [
+        "salt-water-fried"
+      ],
+      "effects": [
+        "salt formation, kidney targeting"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "薑汁炙",
+      "modern": [
+        "ginger-juice-fried"
+      ],
+      "effects": [
+        "reduction of toxicity, anti-emetic synergy"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "煅淬",
+      "modern": [
+        "calcination followed by quenching"
+      ],
+      "effects": [
+        "oxide formation + hydration"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "昇",
+      "modern": [
+        "sublimation (昇華)"
+      ],
+      "effects": [
+        "separation of sublimable solids (e.g. cinnabar, realgar)"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "飛",
+      "modern": [
+        "levigation/flotation (水飛)"
+      ],
+      "effects": [
+        "particle-size reduction, water-soluble impurity removal"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "製",
+      "modern": [
+        "general processing (製) — the umbrella term"
+      ],
+      "effects": [
+        "any of the above operations"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "發酵",
+      "modern": [
+        "fermentation (麴, 神麴)"
+      ],
+      "effects": [
+        "microbial transformation, hydrolysis"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "水飛",
+      "modern": [
+        "water levigation (水飛)"
+      ],
+      "effects": [
+        "size classification and soluble-impurity removal"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    },
+    {
+      "term": "日曬",
+      "modern": [
+        "sun-drying (曬)"
+      ],
+      "effects": [
+        "dehydration; in some processes UV-driven transformation"
+      ],
+      "sources": [
+        "ws_zh_leigong_paozhi"
+      ],
+      "n_rows": 1
+    }
+  ]
+}

@@ -261,6 +261,26 @@ scores, which means the ranking is driven by evidence grade and plausibility pri
 learned graph structure. We report that as a limitation of the scorer, not as a success.
 
 
+## Evidence, refusal and the operator ontology
+
+Four standalone, citable artefacts — each reproducible by a command in this repo:
+
+| Artefact | What it is | Number |
+|---|---|---|
+| [`artifacts/support_verification.json`](artifacts/) | claim–span **support** check per candidate (entity, relation cue, polarity, length) + the verifier's own gold-set metrics | 60/60 candidates supported · AUC 0.95 on a shuffled-negative set |
+| [`artifacts/falsification_cards.json`](artifacts/) | one card per candidate: claim, verified span, prediction, **kill criteria** | 10 cards |
+| [`artifacts/discovery_ledger.json`](artifacts/) | every candidate with its span-verification and kill-criteria status | 60 entries · 60/60 spans · 60/60 kill criteria |
+| [`artifacts/refusal_corpus.json`](artifacts/) | prompts that **must** be blocked (toxin synthesis, dosing, self-treatment, toxic materia medica) and research questions that must **not** be | 40 cases · recall 1.00 · precision 1.00 |
+| [`artifacts/operator_ontology.json`](artifacts/) | the 炮制/alchemical **operator table**: classical term → modern chemical operation(s), attested substances, sources | 25 operators · 317 attestations |
+
+**What the support verifier does and does not do.** It decides whether a cited span is *about the
+claimed drug*, carries a therapeutic/administration relation (治 … or 用 … 漬酒), has no polarity
+contradiction, and is the right length. It does **not** perform cross-lingual entailment — judging
+whether a Chinese passage *entails* an English mechanistic sentence needs a multilingual encoder. On a
+shuffled-negative gold set it separates cleanly (entity presence does most of the work), which is why
+we report its value as *"a strong entity-and-relation gate"* rather than as semantic verification, and
+why the same check is what caught **8 of 10 mislocated citations** in an earlier candidate artefact.
+
 ## Honest limitations
 
 ## Honest limitations
@@ -276,6 +296,9 @@ learned graph structure. We report that as a limitation of the scorer, not as a 
   graph is only as good as that join.
 - **Candidate scores are currently degenerate** — novelty is 0.88 for all 60 candidates, so the rank
   order carries no information today. The shortlist is real, the *ranking* is not yet.
+- **Span support is checked, cross-lingual entailment is not.** The verifier confirms the evidence is
+  about the right drug and is a use statement; it cannot yet confirm that the Chinese passage entails
+  the English mechanistic claim. That is the next encoder-shaped job, not a solved problem.
 - **Hypotheses are hypotheses.** Nothing here is medical advice, and nothing has been tested in vitro
   or in vivo. The output is a ranked list of experiments, not a list of cures.
 - The corpus skews Chinese because that is where the largest public-domain original-language canon is;

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T14:57:25+00:00",
+ "generated_at": "2026-11-05T15:17:47+00:00",
  "fixture": false,
  "n": 60,
  "method": "curated modern exclusion list: approved-drug compounds (n=30), extensively-studied natural-product leads (n=38), graph-level modern evidence (grade A/B or modern-tradition use), and a curated literature-familiarity prior (n=113 species). No offline ChEMBL target-annotation check is available, so novelty scores are upper bounds.",

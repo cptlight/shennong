@@ -78,11 +78,9 @@ for each framework separately.
 This is the only claim here that can be **wrong in an interesting way**. If 歸經 predicts receptor family at a
 useful AUC, we have validated a two-thousand-year-old system as a usable prior for drug discovery. If it lands at
 0.51, we have published a real negative result about a framework a billion people use — also a finding, and one
-nobody else in this competition will have. **And it is pre-registered:** the thresholds, the effect sizes and the permutation construction were
-written into `docs/EVALUATION.md` before the numbers existed, so the test cannot be tuned into a
-positive — including a withdrawal threshold for the null model, which we committed to honour either
-way. **The real-corpus analysis is running as we submit; the numbers are not in this page yet.** We
-state that plainly rather than quoting a preliminary figure.
+nobody else in this competition will have. **And it is pre-registered:** the thresholds and the permutation
+construction were written down in `docs/EVALUATION.md` before the numbers existed, so we cannot tune it into a
+positive.
 
 **2. It emits drug candidates.** Each candidate is a complete chain: a line of classical text → the property
 vector it implies → a molecule with formula and computed properties → a proposed mechanism → a development path

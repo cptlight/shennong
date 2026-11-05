@@ -177,13 +177,29 @@ python -m shennong.cli report --out eval/report.json          # evaluate
 | **Held-out quality** | val loss **6.390** · ppl **605.3** · **2.526 bits/byte** vs unigram baseline **3.076 bpb** (1.22× better) |
 | **Weights** | `shennong-mini-f16.gguf` **18,054,560 B**, sha256 `a67ad442…4cdb60`, 56 tensors, 8,719,616 elements — GGUF↔HF bit-exact, tokenizer parity 100 % |
 | **Candidates** | **60** drug candidates across 15 taxa, all classical lines verified against corpus spans |
-| **Honest gap** | Per-language bpb: en 2.56 · zh-Hant 3.34 · la 4.58 · **sa 13.46** (Devanagari never trained — stated, not hidden) |
+| **Honest gaps** | Per-language bpb: en 2.56 · zh-Hant 3.34 · la 4.58 · **sa 13.46** (Devanagari never trained) · drug-name→taxon **accuracy 14.1 % (n=368)** — the weakest link in the whole chain |
 
-**The pre-registered theory experiment (四氣五味 / 歸經 / rasa / vīrya) is specified, implemented and
-unit-tested, but the single real-corpus run did not finish inside the submission window** — it was
-CPU-starved across four attempts on a shared machine. We publish the specification and an em dash
-rather than an estimate. `python -m shennong.cli report` produces the table; see
-[`docs/EVALUATION.md`](docs/EVALUATION.md) §2.3.
+### The pre-registered theory experiment — the result
+
+Five tests, fixed thresholds (AUC ≥ 0.60 or |ρ| ≥ 0.15 **and** permutation p < 0.05), Holm–Bonferroni
+corrected, run on the real corpus (`eval/report.json` → `drug_discovery.theory_predictivity`):
+
+| Test | Statistic | Value | n | p | Verdict |
+|---|---|---|---|---|---|
+| **T2 歸經** → target organ | hit rate vs permutation mean | **7.48 % vs 3.8 %** (≈2×) | **2,059** pairs / 26 drugs | **0.008** | **predicts — weakly but significantly** |
+| T1 四氣 → polarity/volatility | AUC | 0.456 | 193 | 0.261 | no signal |
+| T3 五味 → compound-class family | AUC | 0.529 | 201 | 0.779 | no signal |
+| T4 vīrya → logP | ρ | — | **0** | — | not linkable (no Sanskrit→binomial lexicon) |
+| T5 ṣaḍrasa → action class | AUC | — | **0** | — | not linkable |
+| **取象比類 control** | ρ | — | 0 | — | insufficient colour-named drugs |
+| **Null model** (shuffled plant↔use edges, 27 shuffles) | score drop | **−0.026** [−0.042, −0.014] | 2,034 vs 2,766 | — | **composite is prior-dominated, not topology-sensitive** |
+
+**How to read that honestly.** Channel tropism carries real but weak organ-level information — about
+twice chance, and the only one of the five axes to survive its own pre-registered test. The other
+classical axes we could operationalise did **not** survive, and the two Ayurvedic tests could not be run
+at all. And our own composite **failed its topology check**: shuffling the graph does not lower the
+scores, which means the ranking is driven by evidence grade and plausibility priors rather than by
+learned graph structure. We report that as a limitation of the scorer, not as a success.
 
 
 ## Honest limitations

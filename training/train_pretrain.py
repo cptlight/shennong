@@ -31,6 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "model"))
 
 from shennong_mini import ModelConfig, ShennongMini, load_checkpoint, save_checkpoint  # noqa: E402
+from shennong_moe import MoEConfig, ShennongMoE  # noqa: E402,F401
 
 CACHE = ROOT / "training" / "cache"
 
@@ -161,8 +162,17 @@ def main() -> int:
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
 
-    cfg = ModelConfig.from_json(ROOT / args.config)
-    cfg.vocab_size = cfg.vocab_size  # explicit: must match the trained tokenizer
+    # --- model family: dense or sparse-MoE, decided by the config ---------------------
+    raw_cfg = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
+    is_moe = int(raw_cfg.get("n_experts", 1)) > 1
+    if is_moe:
+        cfg = MoEConfig.from_dict(raw_cfg)
+        model = ShennongMoE(cfg)
+        print(f"[MoE] n_experts={cfg.n_experts} top_k={cfg.top_k} "
+              f"total={cfg.n_params_estimate:,} active={cfg.n_params_active:,}")
+    else:
+        cfg = ModelConfig.from_json(ROOT / args.config)
+        model = ShennongMini(cfg)
     run_name = args.run_name or time.strftime("shennong-mini-%Y%m%d-%H%M%S")
     run_dir = ROOT / "training" / "runs" / run_name
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -189,7 +199,6 @@ def main() -> int:
         train_all = np.asarray(train_all[: int(len(train_all) * args.train_frac)])
         val_all = np.asarray(val_all[: max(args.seq * 4, int(len(val_all) * args.train_frac))])
 
-    model = ShennongMini(cfg)
     n_params = model.num_parameters()
     opt = torch.optim.AdamW(model.parameters(), lr=args.lr, betas=(0.9, 0.95), weight_decay=0.1, eps=1e-8)
 
@@ -212,6 +221,8 @@ def main() -> int:
         "created_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "config": cfg.to_dict(),
         "params": n_params,
+        "model_family": "moe" if is_moe else "dense",
+        "active_params": (cfg.n_params_active if is_moe else n_params),
         "non_embedding_params": model.num_parameters(non_embedding=True),
         "args": vars(args),
         "corpus": meta,

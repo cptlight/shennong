@@ -1,0 +1,111 @@
+{
+  "run_id": "shennong-moe-r1",
+  "created_at": "2026-11-05T07:16:03-0800",
+  "config": {
+    "vocab_size": 16384,
+    "d_model": 256,
+    "n_layer": 6,
+    "n_head": 4,
+    "n_kv_head": 1,
+    "d_ff": 768,
+    "seq_len": 512,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05,
+    "tie_word_embeddings": true,
+    "init_std": 0.02,
+    "attention_bias": false,
+    "n_experts": 4,
+    "top_k": 2,
+    "aux_loss_coef": 0.01,
+    "router_jitter": 0.01,
+    "expert_dropout": 0.0
+  },
+  "params": 19342616,
+  "model_family": "moe",
+  "active_params": 12264728,
+  "non_embedding_params": 15148312,
+  "corpus": {
+    "train_tokens": 29819163,
+    "val_tokens": 619492,
+    "train_docs": 27184,
+    "val_docs": 554,
+    "corpus_chars": 45604249,
+    "tokenizer": "/Users/tom/Documents/ETHno/tokenizer/shennong-bpe/tokenizer.json",
+    "corpus": "/Users/tom/Documents/ETHno/corpus/processed/corpus.jsonl",
+    "eos_id": 2,
+    "build_seconds": 26.6
+  },
+  "threads": 2,
+  "torch_version": "2.2.2",
+  "platform": "darwin",
+  "seed": 1337,
+  "steps_completed": 151,
+  "tokens_seen": 1236992,
+  "epochs": 0.041,
+  "wall_clock_s": 1666.2,
+  "tokens_per_s": 742.4,
+  "final_train_loss": 5.1445934772491455,
+  "final_val_loss": 5.554085373878479,
+  "best_val_loss": 5.554085373878479,
+  "val_ppl": 258.29,
+  "loss_curve": [
+    {
+      "step": 0,
+      "loss": 9.7969,
+      "val_loss": 9.7154,
+      "lr": 3e-05,
+      "tokens_seen": 8192,
+      "tokens_per_s": 568.7
+    },
+    {
+      "step": 25,
+      "loss": 7.2063,
+      "val_loss": null,
+      "lr": 0.00059897,
+      "tokens_seen": 212992,
+      "tokens_per_s": 557.6
+    },
+    {
+      "step": 50,
+      "loss": 5.258,
+      "val_loss": 6.1662,
+      "lr": 0.00056383,
+      "tokens_seen": 417792,
+      "tokens_per_s": 924.5
+    },
+    {
+      "step": 75,
+      "loss": 6.1469,
+      "val_loss": null,
+      "lr": 0.00048487,
+      "tokens_seen": 622592,
+      "tokens_per_s": 705.2
+    },
+    {
+      "step": 100,
+      "loss": 4.635,
+      "val_loss": 5.7245,
+      "lr": 0.00037689,
+      "tokens_seen": 827392,
+      "tokens_per_s": 712.7
+    },
+    {
+      "step": 125,
+      "loss": 6.2977,
+      "val_loss": null,
+      "lr": 0.00026012,
+      "tokens_seen": 1032192,
+      "tokens_per_s": 752.2
+    },
+    {
+      "step": 150,
+      "loss": 5.1446,
+      "val_loss": 5.5541,
+      "lr": 0.00015645,
+      "tokens_seen": 1236992,
+      "tokens_per_s": 933.2
+    }
+  ],
+  "completed": false,
+  "checkpoint": "/Users/tom/Documents/ETHno/training/runs/shennong-moe-r1/ckpt.pt"
+}

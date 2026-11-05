@@ -17,6 +17,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -321,20 +322,26 @@ def check_artifacts(rep: Report, strict: bool) -> None:
 
 
 def check_git_limits(rep: Report) -> None:
+    """Only *tracked* files matter: checkpoints and caches are gitignored by design."""
     big: list[str] = []
-    for dirpath, dirnames, filenames in os.walk(ROOT):
-        dirnames[:] = [d for d in dirnames if d not in {".git", ".venv", "__pycache__", ".tmp", "node_modules"}]
-        for fn in filenames:
-            p = Path(dirpath) / fn
-            try:
-                if p.stat().st_size > MAX_GIT_FILE_BYTES:
-                    big.append(str(p.relative_to(ROOT)))
-            except OSError:
-                continue
+    try:
+        tracked = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True,
+                                 check=True).stdout.split(b"\0")
+    except Exception:  # noqa: BLE001
+        tracked = []
+    for raw in tracked:
+        if not raw:
+            continue
+        p = ROOT / raw.decode("utf-8", "replace")
+        try:
+            if p.is_file() and p.stat().st_size > MAX_GIT_FILE_BYTES:
+                big.append(str(p.relative_to(ROOT)))
+        except OSError:
+            continue
     if big:
-        rep.fail("git.file_size", f"files above GitHub's 100 MB limit: {big[:5]}")
+        rep.fail("git.file_size", f"tracked files above GitHub's 100 MB limit: {big[:5]}")
     else:
-        rep.ok("git.file_size", "no file exceeds 100 MB")
+        rep.ok("git.file_size", f"no tracked file exceeds 100 MB ({len(tracked)} tracked)")
 
 
 def check_no_placeholders(rep: Report) -> None:

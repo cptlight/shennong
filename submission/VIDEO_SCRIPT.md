@@ -253,17 +253,8 @@ marked as a vertical line.
 > 取象比類 — reasoning by resemblance — gets the same treatment. It's a control, not an assumption, and it
 > sits at the bottom of our ranked list where it belongs.
 
-**Artefact:** Workbench Methodology → theory-predictivity cards; `eval/report.json`;
-`docs/EVALUATION.md`.
-
-**If the real-corpus report has not landed at record time, speak this instead of reading numbers:**
-> "The five tests are pre-registered — the thresholds and the permutation construction are in the
-> repository, written before the numbers existed. The real-corpus run is still going as we record this.
-> What I can tell you is the design: AUC or rank correlation, a permutation null, n, and a withdrawal
-> threshold we committed to before we saw a single result. When it finishes, the number goes in the
-> repository next to the method — win or lose."
-
-Numbers, when present, are read on camera from `eval/report.json` — the same file a judge can open.
+**Artefact:** Workbench Methodology → theory-predictivity cards; `eval/report.json`; `docs/EVALUATION.md`.
+Numbers read on camera from `eval/report.json` — the same file a judge can open.
 
 ---
 

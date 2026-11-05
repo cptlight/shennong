@@ -20,5 +20,5 @@
   "vocab_size": 16384,
   "cache_key": "shennong-bpe-6f23fd9d1d",
   "train_tokens": 16687735,
-  "tokenizer": "/Users/tom/Documents/ETHno/tokenizer/shennong-bpe/tokenizer.json"
+  "tokenizer": "tokenizer/shennong-bpe/tokenizer.json"
 }

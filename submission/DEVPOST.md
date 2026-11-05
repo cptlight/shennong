@@ -194,25 +194,48 @@ early-twentieth-century translations. Everything is audited. One GRETIL *rasaś�
 entry in `corpus/registry/sources.yaml`). That is a more
 useful statement than "our licences are clean".
 
-The corpus currently holds **[[PENDING: corpus.sources_ok]]** sources and **[[PENDING: corpus.chars]]**
-characters across **[[PENDING: corpus.traditions]]** traditions and
-**[[PENDING: corpus.languages]]** languages; **[[PENDING: corpus.excluded]]** sources were excluded. Trained
-text is **[[PENDING: corpus.licence_dom]]** and **[[PENDING: corpus.licence_ccby]]** — no NonCommercial
+The corpus currently holds **106** sources and **45,604,249**
+characters across **7** traditions and
+**5** languages; **3** sources were excluded. Trained
+text is **30** and **76** — no NonCommercial
 material is used.
 
-**The model.** `shennong-mini` is a Llama-style transformer trained from scratch on this machine — an Intel
-i7-4790K with **no GPU** — in PyTorch 2.2.2 on CPU. It has **8,719,616 parameters** (4,525,312 of them
-non-embedding) with a 16,384-token vocabulary, `d_model` 256, 6 layers, 4 heads (1 KV head), `d_ff` 768 and a
-512-token context. Round `shennong-mini-r1` is **[[PENDING: model.steps]] steps × 8,192 tokens = [[PENDING: model.tokens]] tokens seen**, against a
-training split of 16.7 M available tokens across 23,652 documents. The loss curve in the Workbench is the logged
-curve from `training/runs/<id>/metrics.json` — not a render, and not an illustration.
+**The model.** `shennong-mini` is a Llama-style transformer trained **from scratch on this laptop's CPU** — an
+Intel i7-4790K with **no GPU** — in PyTorch 2.2.2. The completed round took **45 minutes** (2,711 s, 604
+tokens/s, one thread). It has **8,719,616 parameters** (4,525,312 non-embedding) with a 16,384-token vocabulary
+built for Classical Chinese and Sanskrit, `d_model` 256, 6 layers, 4 heads (1 KV head), `d_ff` 768 and a
+512-token context.
 
-**And we will say the uncomfortable part plainly:** at roughly **0.85 tokens per parameter**, this round is
-*deliberately undertrained*. It is a real run with real logs on a CPU-only machine inside a hackathon week, not a
-converged model — and the model card says so in those words. We report it this way because a project whose entire
-credibility rests on not flattering its own results cannot start by flattering its own loss curve. The flagship
-`shennong-0.5b` is a fully executable recipe plus a quantisation path; where we quote a number for it we label it
-a recipe number in the same sentence.
+Round `shennong-mini-r1` ran **200 steps × 8,192 = 1,638,400 tokens** (0.098 epochs) and finished at
+**train loss 6.3662 / validation loss 6.3901** — held-out perplexity **595.9** — with the validation curve
+falling 9.735 → 7.336 → 6.717 → 6.481 → **6.390**. The loss curve in the Workbench is that log, plotted from
+`training/runs/shennong-mini-r1/metrics.json`. It is not a render and not an illustration.
+
+**The "did it actually learn anything" test.** **≈ 2.53 bits/byte, computed from the run's held-out cross-entropy
+and the held-out byte count** (6.3901 nats/token × 339,639 held-out tokens ÷ 1,239,972 held-out bytes ÷ ln 2).
+That is against a **3.076 bits/byte unigram-token baseline** on the same held-out stream — so the model learned
+structure beyond token frequency, by about 18 %. Bits per byte is the honest metric here: it is
+tokeniser-independent and byte-normalised, so it cannot be improved by choosing a friendlier vocabulary. This
+figure is a derivation, not a native field of `metrics.json`, and we label it as one.
+
+**The weights are published.** `artifacts/shennong-mini-f16.gguf` — **18,054,560 bytes — 18.05 MB, or 17.2 MiB**, sha256
+`a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60` — GGUF v3, **56 tensors**,
+**8,719,616 elements**. That element count is not a claim about the config: it is read out of the weight file's
+own tensor metadata and summed, so it matches the trained parameter count exactly (`general.architecture:
+llama`, `general.file_type: f16`). The Workbench re-reads the file on load and displays the same three numbers,
+so a reader can check them without trusting us. That is **1.8 % of the 1 GB ceiling** — we used 55× less room than
+the constraint allowed, and we would rather state the real number than hide behind the limit.
+
+**And the flat version of what this model is.** 1,638,400 tokens against 8,719,616 parameters is **0.188 tokens
+per parameter — roughly 0.9 % of a compute-optimal training budget**. This is a **pipeline proof, not a useful
+general language model**: the whole chain — corpus, tokeniser, training, export, quantisation, evaluation,
+discovery and the Workbench — works end to end on a CPU with no accelerator, and the weights are public. The
+honest brag is that one person can reproduce all of it, not that we trained a good LLM.
+
+**Run provenance.** The checkpoint trained on the **02:47 corpus snapshot (38.24 M characters, 16.69 M training
+tokens)**, because the token cache was keyed on the tokeniser; the frozen corpus now post-dates it and is
+larger. The cache-key bug is fixed in `train_pretrain.py`, and we say this rather than letting the reader assume
+the model saw everything the corpus panel shows.
 
 **The discovery engine.** Drug-name resolution is the hard part and the load-bearing part: 異名同物 and
 同名異物 mean one name can denote different plants in different centuries and dialects, which is a documented
@@ -248,6 +271,16 @@ mapping is arguable. We published ours (`docs/METHODOLOGY.md`), including where 
 commentarial tradition disagrees between editions about channel assignments, and we inherited those
 disagreements rather than resolving them.
 
+**The scoring layer is the weakest part, and it is in the Challenges section on purpose.** All 60 candidates
+currently share the same novelty score (0.88) and therefore nearly the same composite, because the novelty
+estimator keys on taxa outside a curated modern-exclusion list rather than on per-molecule evidence. The rank
+order consequently carries little information today, and we say so rather than presenting a sorted table as if
+it were a ranked discovery. Fixing it — a live novelty lookup against chemistry databases instead of a curated
+list — is the first item in `IMPROVEMENTS.md`. A second defect we found and are reporting rather than hiding:
+the `mechanism.rationale` strings are class-level boilerplate and do not always match the compound they sit
+next to (a coumarin is annotated with a cinnamaldehyde/eugenol rationale). The mechanism *target class* is
+per-candidate; the justification sentence still needs to be generated per compound.
+
 **Our own interface caught a bug we would otherwise have shipped.** Every candidate carries a quoted classical
 span. The Workbench verifies that the span actually mentions the drug it is attributed to. When the real artefact
 arrived, **all ten** spans failed that check — the locators pointed at the wrong character offsets, so a candidate
@@ -270,9 +303,9 @@ preparation or dosing guidance is ever emitted, and a distinction the output has
 
 - A **complete pipeline** from licence-audited Asian originals to ranked drug candidates, reproducible with one
   command per stage, **[[PENDING: corpus.n_stages_commands]]** commands from a clean clone on CPU.
-- **[[PENDING: candidates.count]]** drug candidates, each with a classical line, a theory justification, a
+- **60** drug candidates, each with a classical line, a theory justification, a
   mechanism, a development path and a falsification-adjacent assay, of which
-  **[[PENDING: candidates.resolved]]** have fully resolved structures and computed molecular descriptors.
+  **60** have fully resolved structures and computed molecular descriptors.
 - **[[PENDING: eval.theory_positive_count]]** of **[[PENDING: eval.theory_n_tests]]** theory-predictivity tests
   reach significance against a permutation null, including **[[PENDING: eval.headline_test]]** — the honest
   number, including the tests that came back null.
@@ -314,6 +347,11 @@ researcher rather than dangerous to a reader.
 
 ## What's next
 
+We wrote our own critical audit rather than waiting for a reviewer: `IMPROVEMENTS.md` grades eleven
+"make the system stricter, not the model bigger" commitments as **six implemented, three partial, two not
+built** — including the two we consider the biggest real gaps (an embedding-based semantic verifier, and live
+novelty lookup instead of a curated exclusion list). The "what's next" list below is drawn from it.
+
 1. **Wet-lab validation of the top candidates**, starting with the cheapest falsification: the processed-versus-raw
    comparison for 附子, where the mechanism is known and the experiment is a single LC-MS method.
 2. **Extend the corpus** to the remaining science and agricultural texts (農政全書, 廣群芳譜, 救荒本草's full
@@ -341,7 +379,9 @@ Phytochemical and Ethnobotanical Databases, and POWO/WCVP.
 ## Links
 
 - **Repository:** https://github.com/cptlight/shennong
-- **Model weights:** in this repository's **Releases** (GGUF, Apache-2.0, no gate)
+- **Model weights:** https://github.com/cptlight/shennong/releases/tag/v0.1.0
+  — `shennong-mini-f16.gguf`, **18.05 MB** (18,054,560 bytes), Apache-2.0, no gate, sha256
+  `a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60`
 - **Workbench:** `python app/serve.py` — local, offline, standard library only
 - **Replicate everything:** `make setup && make corpus && make tokenizer && make train-mini && make eval &&
   make app-data && make workbench`

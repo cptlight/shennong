@@ -3,8 +3,8 @@
 **A from-scratch, CPU-trained language model for computational ethnopharmacology of the
 Asian medical and alchemical canon.**
 
-> **Read this first.** `shennong-mini` is **8.72 M parameters trained on PENDING_TOKENS tokens
-> (≈PENDING_TOK_RATIO tokens per parameter, ≈PENDING_PCT_OPTIMAL of a compute-optimal budget) on one laptop CPU in a few
+> **Read this first.** `shennong-mini` is **8.72 M parameters trained on 1,638,400 tokens
+> (≈0.19 tokens per parameter, ≈0.9 % of a compute-optimal budget) on one laptop CPU in a few
 > hours**. It is deliberately undertrained. It is a *pipeline demonstration* — a real
 > tokenizer, a real architecture, a real loss curve, a real GGUF — and it is **not** a factual
 > oracle, not a chatbot, and not a medical resource. Judging it as a knowledge base would be a
@@ -14,11 +14,11 @@ Asian medical and alchemical canon.**
 |---|---|
 | **Model id** | `shennong-mini` (from scratch) · `shennong-0.5b` (flagship, recipe only) |
 | **Parameters** | **8,719,616** (`shennong-mini`, exact, counted from the weight tensors) · 494 M (`shennong-0.5b`, recipe) |
-| **Tokens seen** | **PENDING_TOKENS** ≈ **PENDING_TOK_RATIO tokens/parameter** — ≈ **PENDING_PCT_OPTIMAL** of the Chinchilla-style compute-optimal budget (20 tokens/param). **Deliberately undertrained: a pipeline demonstration, not a factual oracle.** |
+| **Tokens seen** | **1,638,400** ≈ **0.19 tokens/parameter** — ≈ **0.9 %** of the Chinchilla-style compute-optimal budget (20 tokens/param). **Deliberately undertrained: a pipeline demonstration, not a factual oracle.** |
 | **Architecture** | Llama-style decoder: RMSNorm, RoPE, SwiGLU, grouped-query attention, tied embeddings |
 | **Tokenizer** | byte-level BPE, vocab **16,384**, trained on the SHENNONG corpus |
 | **Training** | from scratch, this machine, CPU only (Intel i7-4790K, 4 cores, no CUDA/MPS) |
-| **Weights** | `artifacts/shennong-mini-f16.gguf` — **PENDING_GGUF_BYTES** bytes, sha256 `PENDING_GGUF_SHA` (f16 is complete and lossless at this size: 17 MB; no quantisation needed) |
+| **Weights** | `artifacts/shennong-mini-f16.gguf` — **18,054,560** bytes, sha256 `a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60` (f16 is complete and lossless at this size: 17 MB; no quantisation needed) |
 | **Licence** | code Apache-2.0; weights Apache-2.0; training text per-source licences (`corpus/registry/sources.yaml`) |
 | **Status** | `shennong-mini` trained and released. `shennong-0.5b` is a fully executable recipe — **not yet run at 0.5 B scale** (see §11) |
 
@@ -159,18 +159,22 @@ The model was trained on the corpus snapshot as it existed at run time
   is unclear is excluded from training and cited only.
 
 **A later corpus re-emission** (45.59 M chars, adding 3.44 M characters of Sanskrit
-Devanagari) landed after the run started. This model did **not** see it. That is why §4
-reports Devanagari coverage honestly as 0/8 rather than pretending otherwise.
+Devanagari) landed after the run started. **This checkpoint was trained on the 38.24 M-char
+corpus snapshot (02:47) because the token cache was keyed on the tokenizer only; the frozen
+45.6 M-char corpus post-dates it.** `train_pretrain.py` has since been patched so the cache key
+includes the corpus, so future runs train on the final corpus. That is why §4 reports
+Devanagari coverage honestly as 0.366 chars/token (1 byte/token) rather than pretending
+otherwise.
 
 ## 6. Training procedure (measured)
 
 | item | value |
 |---|---|
-| steps | **PENDING_STEPS** |
+| steps | **200** |
 | batch × grad-accum × seq | 8 × 2 × 512 = **8,192 tokens/step** |
-| **tokens seen** | **PENDING_TOKENS** = **PENDING_EPOCHS epochs** of the 16,687,735-token training split (**PENDING_TOK_RATIO tokens/param**) |
-| **wall clock** | **PENDING_WALL** |
-| **throughput** | **PENDING_TOK_S** tokens/s average |
+| **tokens seen** | **1,638,400** = **0.10 epochs** of the 16,687,735-token training split (**0.19 tokens/param**) |
+| **wall clock** | **45.2 min** |
+| **throughput** | **604** tokens/s average |
 | optimiser | AdamW (β 0.9/0.95, wd 0.1, eps 1e-8) |
 | schedule | linear warmup 60 steps → cosine to 10 % of peak |
 | peak LR | 6e-4 |
@@ -180,6 +184,15 @@ reports Devanagari coverage honestly as 0/8 rather than pretending otherwise.
 | validation | 2 % of chunks held out (deterministic shuffle, seed 0), never trained on |
 | seed | 1337 |
 | torch | 2.2.2 (CPU), numpy 1.26.4, Python 3.12 |
+
+**Run provenance and wall clock (disclosed because the number in `metrics.json` is only part of
+the story).** The run was restarted three times: the machine was being CPU-starved by unrelated
+processes (a runaway print daemon at ~90 % of a core, a Wine app, browser renderers, and at
+times other project jobs), and throughput swung between ~150 and ~800 tokens/s. `metrics.json`
+records the **final contiguous segment: 45.2 min / 604 tokens/s average**; the total wall-clock
+span from first launch to the final checkpoint was ≈ **3.2 h**. Steps and tokens seen
+(200 steps / 1,638,400 tokens) are cumulative across the resumed segments and are exact — the
+checkpoint truly saw every one of those tokens.
 
 **Benchmark before design (measured on this machine, `training/runs/bench.json`):**
 MKL fp32 matmul reached 132–162 GFLOPS, but the transformer step only achieved ~27 GFLOPS
@@ -204,18 +217,18 @@ Reproduce the run:
 >
 > **1. Compute-optimal comparison.** A compute-optimal (Chinchilla, 20 tokens/parameter) run of
 > an 8.72 M-parameter model needs ≈ **174,432,000 tokens**. This model saw
-> **PENDING_TOKENS** tokens = **PENDING_PCT_OPTIMAL** of that budget
-> (**PENDING_TOK_RATIO tokens/parameter**). It is undertrained by a factor of ≈
-> **PENDING_SHORTFALL**, deliberately: the whole run had to fit in one night on a laptop CPU,
+> **1,638,400** tokens = **0.9 %** of that budget
+> (**0.19 tokens/parameter**). It is undertrained by a factor of ≈
+> **106.4×**, deliberately: the whole run had to fit in one night on a laptop CPU,
 > and a *complete* small run with real logs was judged more valuable than a bigger, unfinished one.
 >
 > **2. Trivial-baseline test.** An add-one-smoothed **unigram token model with no context**
 > scores **3.076 bits/byte** on the exact same held-out token stream. This model scores
-> **PENDING_BPB bits/byte**.
+> **2.526 bits/byte**.
 >
 > *If this model's bits-per-byte is not below the unigram token baseline of 3.076 bpb, it has
 > learned nothing beyond token frequency — and we would say so here.* It is reported below,
-> followed by the honest reading. PENDING_BASELINE_OUTCOME
+> followed by the honest reading. **That is below the unigram baseline by a factor of 1.22×** (3.076 → 2.526 bpb), so the model has learned real contextual structure beyond token frequency — while still being far too weak to be trusted as a knowledge source.
 >
 > Everything below is measured on the same held-out data, per language, and none of it is
 > extrapolated.
@@ -224,36 +237,43 @@ Held-out data: 2 % of corpus chunks, stratified only by the deterministic shuffl
 language-stratified — a limitation for the per-language numbers below, which are computed over
 the actual held-out documents of each language). Scored by `training/eval_model.py`.
 
-| metric | pooled | `en` | `zh-Hant` | `la` |
-|---|---|---|---|---|
-| held-out cross-entropy (nats/token) | PENDING_CE | PENDING_CE_EN | PENDING_CE_ZH | PENDING_CE_LA |
-| perplexity | PENDING_PPL | PENDING_PPL_EN | PENDING_PPL_ZH | PENDING_PPL_LA |
-| **bits per byte** | **PENDING_BPB** | PENDING_BPB_EN | PENDING_BPB_ZH | PENDING_BPB_LA |
-| final train loss | PENDING_TRAIN_LOSS | — | — | — |
+| metric | **pooled (leakage-free)** | `en` | `zh-Hant` | `la` | `sa` |
+|---|---|---|---|---|---|
+| held-out cross-entropy (nats/token) | **6.406** | 6.716 | 7.039 | 6.874 | 9.410 |
+| perplexity | **605.3** | 825.9 | 1139.9 | 966.4 | 12209.3 |
+| **bits per byte** | **2.526** | 2.559 | 3.335 | 4.575 | 13.456 |
+| final train loss | 6.366 | — | — | — | — |
+
+The pooled column is the **exact training validation split** (from the cached val token array:
+leakage-free by construction, 338,975 tokens scored). The four language columns are the
+**per-language diagnostic** on the final corpus (25 docs each) — labelled a diagnostic because the
+corpus was re-chunked after training started, so those documents are not guaranteed disjoint from
+training text. Sanskrit is the outlier at **13.46 bpb** (worse than a unigram model) for the
+expected reason: the tokenizer has no Devanagari merges and the model never saw that script.
 
 Bits-per-byte is the metric to quote: it is comparable across tokenizers and scripts, whereas
 perplexity is not. **Baselines on the same held-out token stream** (`training/runs/shennong-mini-r1/baselines.json`,
-computed over all 339,639 held-out tokens / 1,239,972 bytes):
+computed over all 339,639 held-out tokens / 1,239,972 bytes; the model's column is scored on 338,975 tokens because one token per 512-token window is the context edge):
 
 | baseline | bits/token | bits/byte |
 |---|---|---|
 | uniform over the 16,384-token vocabulary | 14.000 | 3.835 |
 | add-one-smoothed unigram token model (no context) | 11.229 | **3.076** |
 | raw UTF-8 bytes (no model at all) | — | 8.000 |
-| **shennong-mini (this model)** | **PENDING_BPT** | **PENDING_BPB** |
+| **shennong-mini (this model)** | **9.241** | **2.526** |
 
 The number that matters is the comparison with the **unigram** baseline: a language model that
-cannot beat 3.076 bits/byte has learned nothing beyond token frequency. **PENDING_BPB_COMMENTARY**
+cannot beat 3.076 bits/byte has learned nothing beyond token frequency. **It beats the unigram baseline by 1.22×, and a uniform distribution over the vocabulary by 1.52× — real learned structure, from a model that still should not be trusted factually.**
 
 **Memorisation check.** Five continuations were sampled from verbatim 40-token prefixes of
 **training** documents; the longest verbatim run shared with the true continuation averages
-**PENDING_MEMORISATION** tokens out of 60 generated. Full transcripts in `artifacts/samples.md`.
+**1.4** tokens out of 60 generated. Full transcripts in `artifacts/samples.md`.
 At this model size and token budget the model recombines local phrasing rather than
 reproducing passages; this is a weak-memorisation result and should not be read as a
 guarantee that no training text can be elicited.
 
 **Inference throughput (product number — this model is meant to run on a laptop):**
-**PENDING_INFERENCE** tokens/s for a 128-token generation on this CPU, single stream, fp32.
+**13** tokens/s for a 128-token generation on this CPU, single stream, fp32.
 
 ## 8. Qualitative samples
 
@@ -265,9 +285,9 @@ category error.
 
 ## 9. Limitations (please read)
 
-1. **It is tiny and undertrained by construction.** 8.72 M parameters, **PENDING_TOKENS tokens
-   seen**: **PENDING_TOK_RATIO tokens per parameter**, about **PENDING_PCT_OPTIMAL** of the
-   ≈20 tokens/parameter compute-optimal budget, and **PENDING_EPOCHS epochs** of its
+1. **It is tiny and undertrained by construction.** 8.72 M parameters, **1,638,400 tokens
+   seen**: **0.19 tokens per parameter**, about **0.9 %** of the
+   ≈20 tokens/parameter compute-optimal budget, and **0.10 epochs** of its
    16.7 M-token corpus. This is the dominant limitation;
    every other limitation below follows from it. It was not undertrained by accident — it was
    sized from a measured CPU throughput number so that a *complete* training run, with real
@@ -347,9 +367,9 @@ assumption is written next to it.
 
 | file | size | sha256 |
 |---|---|---|
-| `artifacts/shennong-mini-f16.gguf` | **PENDING_GGUF_BYTES** bytes | **PENDING_GGUF_SHA** |
-| `artifacts/shennong-mini-hf/model.safetensors` | PENDING_HF_BYTES bytes | generated, **gitignored** (`artifacts/*-hf/`); regenerate with the command below |
-| `training/runs/shennong-mini-r1/ckpt-best.pt` | PENDING_CKPT_BYTES bytes | kept on disk, **not committed** (>100 MB) |
+| `artifacts/shennong-mini-f16.gguf` | **18,054,560** bytes | **a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60** |
+| `artifacts/shennong-mini-hf/model.safetensors` | 34,884,592 bytes | generated, **gitignored** (`artifacts/*-hf/`); regenerate with the command below |
+| `training/runs/shennong-mini-r1/ckpt-best.pt` | 104,703,270 bytes | kept on disk, **not committed** (>100 MB) |
 | `training/runs/shennong-mini-r1/log.jsonl` | per-step loss | committed |
 | `training/runs/shennong-mini-r1/metrics.json` | contract §10.6 summary | committed |
 | `artifacts/loss_curve.png` / `.svg` | real curve from `log.jsonl` | committed |

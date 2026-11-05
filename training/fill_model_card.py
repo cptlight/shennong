@@ -156,7 +156,8 @@ def main() -> int:
 
     s = CARD.read_text(encoding="utf-8")
     applied, missing = {}, []
-    for key, val in fill.items():
+    # longest key first: PENDING_CE must never consume the prefix of PENDING_CE_EN
+    for key, val in sorted(fill.items(), key=lambda kv: -len(kv[0])):
         if key in s:
             s = s.replace(key, str(val))
             applied[key] = val

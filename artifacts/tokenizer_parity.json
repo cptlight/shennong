@@ -1,0 +1,50 @@
+{
+  "gguf": "artifacts/shennong-mini-f16.gguf",
+  "pre": "gpt-2",
+  "n_tokens": 16384,
+  "n_merges": 16122,
+  "per_language": {
+    "en": {
+      "docs": 60,
+      "exact_match_docs": 60,
+      "exact_match_rate": 1.0,
+      "hf_tokens": 22455,
+      "llama_tokens": 22455,
+      "token_count_ratio": 1.0,
+      "bytes": 88078,
+      "mismatch_example": null
+    },
+    "la": {
+      "docs": 60,
+      "exact_match_docs": 60,
+      "exact_match_rate": 1.0,
+      "hf_tokens": 43383,
+      "llama_tokens": 43383,
+      "token_count_ratio": 1.0,
+      "bytes": 95633,
+      "mismatch_example": null
+    },
+    "sa": {
+      "docs": 60,
+      "exact_match_docs": 60,
+      "exact_match_rate": 1.0,
+      "hf_tokens": 463142,
+      "llama_tokens": 463142,
+      "token_count_ratio": 1.0,
+      "bytes": 463641,
+      "mismatch_example": null
+    },
+    "zh-Hant": {
+      "docs": 60,
+      "exact_match_docs": 60,
+      "exact_match_rate": 1.0,
+      "hf_tokens": 128771,
+      "llama_tokens": 128771,
+      "token_count_ratio": 1.0,
+      "bytes": 379374,
+      "mismatch_example": null
+    }
+  },
+  "overall_exact_match_rate": 1.0,
+  "overall_docs": 240
+}

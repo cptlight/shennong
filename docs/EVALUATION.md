@@ -156,7 +156,7 @@ For each candidate compound:
    corpus-derived drug — if the scorer called this novel, the scorer is broken) and **fennel/parthenolide 0.18**.
 
 Aggregate: `drug_discovery.mean_novelty` = [[PENDING: eval.mean_candidate_novelty]] over
-[[PENDING: candidates.count]] candidates.
+60 candidates.
 
 **What novelty does not mean.** A novelty score of 0.6 does not mean "new drug". It means "we could not find
 this specific chain asserted in the modern literature we can search". Absence of evidence, stated as such.

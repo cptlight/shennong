@@ -77,18 +77,18 @@ bottom.
 
 ## Slide 4 — The corpus: Asian medicine *and* Asian science
 
-**Title:** [[PENDING: corpus.sources_ok]] sources · [[PENDING: corpus.chars]] characters ·
-[[PENDING: corpus.languages]] languages
+**Title:** 106 sources · 45,604,249 characters ·
+5 languages
 
 - **Chinese:** 神農本草經 · 本草綱目 · 傷寒論 · 金匱要略 · 千金要方 · 太平惠民和劑局方 · 雷公炮炙論 · 海藥本草
 - **Ayurveda / Unani:** Caraka · Suśruta · Bhāvaprakāśa · Rasa Ratna Samuccaya · al-Qānūn · al-Ḥāwī
 - **Ancient science (new):** 天工開物 · 齊民要術 · 夢溪筆談 · 救荒本草 · 植物名實圖考 · 飲膳正要 · Vṛkṣāyurveda ·
   Kitāb al-Nabāt
 - **Structured ground truth:** Dr Duke's · PubChem · ChEMBL · POWO/WCVP · GBIF · MeSH
-- **The licence audit is a result:** [[PENDING: corpus.sources_ok]] accepted,
-  [[PENDING: corpus.excluded]] rejected and documented. One GRETIL *rasaśāstra* source carried
+- **The licence audit is a result:** 106 accepted,
+  3 rejected and documented. One GRETIL *rasaśāstra* source carried
   **CC BY-NC-SA** — incompatible with a public Apache-2.0 repository, so it was excluded, not quietly used.
-  Trained text is [[PENDING: corpus.licence_dom]] + [[PENDING: corpus.licence_ccby]].
+  Trained text is 30 + 76.
 
 **Visual:** `assets/corpus_tiers.svg` plus three licence badges: `PUBLIC DOMAIN` (verdigris),
 `CC BY-SA` (indigo), `REJECTED — NC` (cinnabar, struck through).
@@ -97,29 +97,30 @@ bottom.
 
 ---
 
-## Slide 5 — The model: bilingual classical, under 1 GB, trained here
+## Slide 5 — The model: 8.72 M parameters, 45 minutes, 18 MB
 
-**Title:** 8.72 M parameters, trained on this CPU, with the real loss curve
+**Title:** Trained from scratch on a laptop CPU in 45 minutes — and the weights are published
 
-- `shennong-mini`: Llama-style transformer, **trained from scratch on an Intel i7-4790K with no GPU**, PyTorch
-  2.2.2 CPU. Real logs, real seeds, real wall-clock.
-- Vocabulary is budgeted for **Classical Chinese (繁/简) and Sanskrit (Devanagari + IAST)** — because the point
-  is reading untranslated originals, not English summaries. That is the whole novelty of the model layer.
-- **8,719,616 parameters** (4,525,312 non-embedding) · 16,384-token vocab · `d_model` 256 · 6 layers · 512-token
-  context · **[[PENDING: model.steps]] steps × 8,192 = [[PENDING: model.tokens]] tokens**. Final train loss **[[PENDING: model.final_train_loss]]**,
-  val loss **[[PENDING: model.final_val_loss]]** ([[PENDING: model.val_ppl]] ppl).
-- **Deliberately undertrained at ≈0.85 tokens per parameter** — a real run with real logs inside a hackathon week,
-  not a converged model. We say so in the deck, the Devpost and the model card.
-- The chart on this slide is the **logged curve** from `training/runs/<id>/metrics.json` — not a render.
-- `shennong-0.5b` (flagship, < 1 GB GGUF) is a fully executable recipe + quantisation path. Where we quote a
-  number for it, we label it a **recipe number in the same sentence**.
+- **8,719,616 parameters** (4,525,312 non-embedding) · 16,384-token vocabulary built for Classical Chinese and
+  Sanskrit · `d_model` 256 · 6 layers · 4 heads · 512-token context · PyTorch 2.2.2, **no GPU**.
+- **200 steps × 8,192 = 1,638,400 tokens** in **2,711 s (45 min)** at 604 tokens/s, single thread.
+  Train loss **6.3662**, validation **6.3901** (held-out perplexity 595.9); val curve 9.735 → 7.336 → 6.717 →
+  6.481 → **6.390**. The chart is that log, not a render.
+- **The weights: `shennong-mini-f16.gguf` = 18.05 MB** (18,054,560 bytes = 17.2 MiB), 56 tensors, sha256
+  `a67ad442…4cdb60`. That is **1.8 % of the 1 GB ceiling** — 55× less room than the constraint allowed.
+- **Stated flatly:** 1,638,400 tokens ÷ 8,719,616 params = **0.188 tokens/param ≈ 0.9 % of a compute-optimal
+  budget**. This is a **pipeline proof, not a useful general model** — the honest claim is reproducibility,
+  not capability.
+- **Run provenance:** the checkpoint trained on the 02:47 corpus snapshot (38.24 M chars / 16.69 M tokens)
+  because the token cache was keyed on the tokeniser; the frozen corpus post-dates it. The bug is fixed, and we
+  say so rather than letting the reader assume otherwise.
 
-**Visual:** left, architecture block diagram (embeddings → N × [attention + MLP] → LM head) with the
-bilingual vocabulary highlighted; right, the real loss curve, train and val, axes labelled.
+**Visual:** left, the architecture block diagram with the bilingual vocabulary highlighted; right, the real
+logged loss curve (train solid, held-out dashed) from `training/runs/shennong-mini-r1/metrics.json`, with
+18.05 MB and the 1 GB ceiling drawn to scale as a bar.
 
-**Speaker note:** No GPU, no borrowed numbers — the curve is the log.
-
----
+**Speaker note:** 1.8 % of the budget we were given, on a CPU, with public weights — and we will not pretend it
+is more model than it is.
 
 ## Slide 6 — The pipeline: 采 → 制 → 配 → 使
 
@@ -146,30 +147,30 @@ the specification.
 
 ---
 
-## Slide 7 — [[PENDING: candidates.count]] drug candidates — one worked end-to-end
+## Slide 7 — 60 drug candidates across 15 taxa — one worked end-to-end
 
-**Title:** A 1,800-year-old prescription line becomes a molecule — and the system de-rates it honestly
+**Title:** A prescription line from a 1406 formulary becomes a molecule with a name, a number and an assay
 
 The chain, in order. This is the demo screen:
 
-- **The line.** *神農本草經* (compiled c. 1st c. CE), 下品 · 大黃: 「大黃，味苦寒。主下瘀血，血閉寒熱，破癥瘕積聚，
-  留飲宿食，蕩滌腸胃，推陳致新，通利水穀。」 — "scours the stomach and bowels, expelling the old and bringing in the new."
-- **The theory predicts the compartment.** 大黄 is 寒 · 苦 · 降 · 入脾/胃/大腸, graded **下品**. The prediction is a
-  downward, gut-localised action — and the candidate's proposed pathway is **gastrointestinal motility**. The framework
-  got the organ right; that is what makes it testable rather than decorative.
-- **The molecule.** Emodin, **C₁₅H₁₀O₅**, **MW 270.24**, logP 1.05, HBD 3, HBA 5, TPSA 79.15 Å², 3 rings, 0 rotatable
-  bonds. **4 of 4 Lipinski rules evaluated — passes; Veber passes.** Computed from the resolved SMILES, not estimated.
-- **The assay.** Cell-free membrane-permeability assay, then a liposome model: a membrane-active mechanism is tested
-  without culturing a pathogen. Go/no-go: reproducible engagement in two orthogonal assays plus selectivity over the
-  nearest paralogue.
-- **And then the honest part.** Novelty **0.087** — emodin is *not* new. Structural alert: **quinone**. Mechanism
-  evidence level: *class-level prior*. The system proposes a candidate and immediately tells you it is a lead with a
-  known liability, not a discovery. That refusal to flatter its own output is the product.
+- **The line.** *普濟方* (1406), the 前胡湯 entry: 「前胡汤治肺热咳嗽」 — "Qianhu decoction treats cough from lung
+  heat." Verified verbatim, with a byte offset into the corpus (`ws_zh_pujifang:1190-1198`).
+- **The theory predicts the compartment.** 前胡 is 寒 · 苦 · 歸肺/肝/脾/膀胱 · 中品 — cold, bitter, entering **Lung**.
+  The prediction is a lung-directed action, and the recorded indication is a cough syndrome. The framework named the
+  organ; that is what makes it testable rather than decorative.
+- **The molecule.** Peucedanocoumarin I, **C₂₁H₂₄O₇**, **MW 388.42**, logP 4.6, HBD 0, HBA 7, TPSA 64.61 Å², 3 rings,
+  6 rotatable bonds. **4 of 4 Lipinski rules evaluated — passes; Veber passes.** Computed from the resolved SMILES.
+- **The assay.** Ca²⁺ flux (FLIPR) on TRPA1-expressing cells, then a recombinant cell line; go/no-go is reproducible
+  engagement in two orthogonal assays plus selectivity over the nearest paralogue.
+- **And the honest part.** Novelty is **0.88 for every candidate in the shortlist** — the novelty estimator is not yet
+  discriminating, so **the rank order carries no information today**. Structural alerts are flagged (Michael acceptor,
+  polyunsaturated). We show the defect rather than dress it up; it is item one on the `IMPROVEMENTS.md` list.
 
-**Visual:** the Workbench Candidates screen, the 大黄/emodin row expanded so the classical line, theory chips,
-formula/MW, Lipinski table and the assay are visible in one frame; the novelty bar near zero beside it.
+**Visual:** the Workbench Candidates screen, the 前胡 row expanded — verified classical line, theory chips,
+formula/MW, Lipinski table and the Ca²⁺-flux assay in one frame.
 
-**Speaker note:** A demonstration that can only show wins is a demo. This one shows a candidate being ranked down.
+**Speaker note:** A candidate you can trace to a byte offset, with a computed formula and a named assay — and a
+scoring layer we admit is not yet doing its job.
 
 ## Slide 8 — Does the theory predict? The central experiment
 

@@ -1,0 +1,159 @@
+{
+  "run": "shennong-mini-r1",
+  "checkpoint": "training/runs/shennong-mini-r1/ckpt-best.pt",
+  "params": 8719616,
+  "config": {
+    "vocab_size": 16384,
+    "d_model": 256,
+    "n_layer": 6,
+    "n_head": 4,
+    "n_kv_head": 1,
+    "d_ff": 768,
+    "seq_len": 512,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05,
+    "tie_word_embeddings": true,
+    "init_std": 0.02,
+    "attention_bias": false
+  },
+  "per_language_note": "language-balanced diagnostic on the FINAL corpus; the corpus was re-chunked after training started, so this is not guaranteed to be disjoint from training text. The pooled number comes from the exact training validation token cache and is leakage-free.",
+  "held_out_pooled": {
+    "tokens": 338975,
+    "mean_nats_per_token": 6.4057,
+    "perplexity": 605.31,
+    "bits_per_byte": 2.5264,
+    "utf8_bytes": null
+  },
+  "per_language_diagnostic": {
+    "en": {
+      "docs": 25,
+      "tokens": 9451,
+      "mean_nats_per_token": 6.7165,
+      "perplexity": 825.9,
+      "bits_per_byte": 2.5591,
+      "lang": "en"
+    },
+    "la": {
+      "docs": 25,
+      "tokens": 18158,
+      "mean_nats_per_token": 6.8736,
+      "perplexity": 966.41,
+      "bits_per_byte": 4.5747,
+      "lang": "la"
+    },
+    "sa": {
+      "docs": 25,
+      "tokens": 29301,
+      "mean_nats_per_token": 9.41,
+      "perplexity": 12209.34,
+      "bits_per_byte": 13.4563,
+      "lang": "sa"
+    },
+    "zh-Hant": {
+      "docs": 25,
+      "tokens": 27714,
+      "mean_nats_per_token": 7.0387,
+      "perplexity": 1139.94,
+      "bits_per_byte": 3.3348,
+      "lang": "zh-Hant"
+    }
+  },
+  "memorisation": {
+    "method": "generate 60 tokens from a verbatim 40-token training prefix (temperature 0.7, top-k 40, top-p 0.9); longest common token run vs the true continuation",
+    "mean_longest_verbatim_run_tokens": 1.4,
+    "samples": []
+  },
+  "inference": {
+    "prompt": "The processing of Aconitum in classical Chinese pharmacy is intended to",
+    "new_tokens": 128,
+    "seconds": 9.78,
+    "tokens_per_s": 13.1,
+    "text": " the large, and the not in the be small of the other very this is its two by the same other it is the a that of the more a plant of the the used of the other part and it is a made, and the it is in the in the its to the its all the more to the not of an other part of the the more, and which on the some of the hing and in the be other is the _Ees (p.\nTerin. It is as (The a a action to be the same in this with a been or in the this it is of the this, and"
+  },
+  "samples": [
+    {
+      "lang": "en",
+      "prompt": "The processing of Aconitum in classical Chinese pharmacy is intended to",
+      "new_tokens": 80,
+      "seconds": 9.19,
+      "tokens_per_s": 8.7,
+      "text": " it is in the used in the the fact, and a an case of the same have the other of the same may a very some of the be is in the two the same has an be in the this have the these as-. The a _B.\nThe very two is the this is of the a in _[a; and which is, and the drug of the case."
+    },
+    {
+      "lang": "en",
+      "prompt": "Glycyrrhiza uralensis is described in the Bencao Gangmu as",
+      "new_tokens": 80,
+      "seconds": 9.85,
+      "tokens_per_s": 8.1,
+      "text": " the same, for a more is in the same of the large have the most has the the other, a large a water and the one of the a the most one of the in the be be may a very same same it is the the this as the a not with the the an not of a for the its this in _Tat--._ of the the used as the"
+    },
+    {
+      "lang": "en",
+      "prompt": "A falsifiable hypothesis connecting 炮制 (processing) to modern extraction chemistry:",
+      "new_tokens": 80,
+      "seconds": 8.13,
+      "tokens_per_s": 9.8,
+      "text": " O. The other in the one.\n=[.\nAicuming the same is the an very said are by the the a an hus. In the one are a that the small, the an in the been the not more be in the same that is a a a be to the a an case, but to its be to the also-d, which the which in"
+    },
+    {
+      "lang": "en",
+      "prompt": "Salvia miltiorrhiza contains tanshinones, which",
+      "new_tokens": 80,
+      "seconds": 5.87,
+      "tokens_per_s": 13.6,
+      "text": " is been not for the more, and one of the same in the the leaves and the water, and one in the same to its very leaves of the a made the _c--m-by (e, in the the same of a the the the a of the the it- is to the all of the small in the large to the other in the its it in a or"
+    },
+    {
+      "lang": "en",
+      "prompt": "The eighteen antagonisms (十八反) matter to pharmacology because",
+      "new_tokens": 80,
+      "seconds": 7.69,
+      "tokens_per_s": 10.4,
+      "text": " have the the _ (S, and the the its same the also the _Daes, but by the first, when that the very the a the in a an a a _Cing to the the a water of the the the the been two the be in the form to the be.\n. It is not the first to some be be same it by the the very other in"
+    },
+    {
+      "lang": "zh-Hant",
+      "prompt": "甘草味甘，性平，歸",
+      "new_tokens": 80,
+      "seconds": 6.16,
+      "tokens_per_s": 13.0,
+      "text": "，或。以主此》而氣，生云。治以\n【氣味。\n【附方S1T1\n_Cp, and _Pus.\nThe the a part as the all of the be in the an be be are is the most it in the a a so as the is are used is very very same is the body of the the the"
+    },
+    {
+      "lang": "zh-Hant",
+      "prompt": "凡藥炮製之法，",
+      "new_tokens": 80,
+      "seconds": 6.24,
+      "tokens_per_s": 12.8,
+      "text": "非主一，其不用生，此于有人、若其則得，如人中。若大也，以治有则而，以其寒者，其主云，，以而血也。如之，或生为则食者，如治多作作也。主生其下，有者，以有。取、如其"
+    },
+    {
+      "lang": "zh-Hant",
+      "prompt": "神農本草經曰：上品",
+      "new_tokens": 80,
+      "seconds": 5.76,
+      "tokens_per_s": 13.9,
+      "text": "，而亦而其之，用，有非有，其而、亦而食，，是非不，可入、則亦能，得，水、亦不則生者，及以而中，用，以非其此者，其人，今。及治之中，乃而多人之，以如不而者，以則则"
+    },
+    {
+      "lang": "zh-Hant",
+      "prompt": "凡藥有十八反，其間",
+      "new_tokens": 80,
+      "seconds": 6.05,
+      "tokens_per_s": 13.2,
+      "text": "血者，以能，以皆之。\n【\n【】\n【\n以\n【】\n【∶\n【治∶\n【\n\\x（一两（一两）\n（各一两）\n【\n（炒）\n（各\n\n\\x（三分）\n【丸（一两，用）甘草（半两）上为末。\n\\x（去皮）\n"
+    },
+    {
+      "lang": "zh-Hant",
+      "prompt": "傷寒論太陽病，脈浮",
+      "new_tokens": 80,
+      "seconds": 5.46,
+      "tokens_per_s": 14.6,
+      "text": "生∶大，治入大。故即用，用，不其白、主《生云也。以大用、治治其，但下之︰治一之，除其即有以又則而则有。其食如︰但作下为治。又其︰以生之而以病，而病、治，有寒，故"
+    }
+  ],
+  "seed": 1337,
+  "torch_version": "2.2.2",
+  "generated_at": "2026-11-05T06:38:45",
+  "provenance": "pooled + per-language + memorisation values parsed from the eval_model.py run log (/tmp/finalize.log); samples and throughput generated live after the interrupted finalize."
+}

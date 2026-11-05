@@ -55,7 +55,8 @@ def _json(path):
 
 
 def load_corpus_stats():
-    """Read the real registry through the Workbench's own parser, so there is one implementation."""
+    """Corpus figures: `stats.json` (emitted training text) wins; the registry supplies licence counts."""
+    emitted = _json(os.path.join(ROOT, "corpus", "processed", "stats.json")) or {}
     try:
         import serve  # app/serve.py
     except Exception:  # noqa: BLE001
@@ -65,11 +66,13 @@ def load_corpus_stats():
         return None
     ok = [r for r in rows if r["status"] == "ok"]
     return dict(
-        sources_ok=len(ok),
+        # emitted text is authoritative when the builder has published its stats
+        sources_ok=emitted.get("sources_total") or len(ok),
+        chars=emitted.get("chars_total") or sum(r["chars"] for r in ok if isinstance(r["chars"], int)),
+        records=emitted.get("records"),
+        languages=len((emitted.get("chars_by_lang") or {})) or len({r["lang"] for r in ok}),
+        traditions=len((emitted.get("chars_by_tradition") or {})) or len({r["tradition"] for r in ok}),
         excluded=len(rows) - len(ok),
-        chars=sum(r["chars"] for r in ok if isinstance(r["chars"], int)),
-        languages=len({r["lang"] for r in ok}),
-        traditions=len({r["tradition"] for r in ok}),
         licence_dom=sum(1 for r in ok if str(r["licence"]).lower().startswith("public domain")),
         licence_ccby=sum(1 for r in ok if "CC-BY" in str(r["licence"]).upper()),
     )

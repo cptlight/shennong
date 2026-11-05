@@ -296,17 +296,41 @@ def load_passages():
     return dict(passages=[], fixture=True, source="(missing)")
 
 
+def load_emitted_stats():
+    """`corpus/processed/stats.json` is the corpus builder's own output for the text it actually emitted.
+
+    It is authoritative for *training text*: the registry counts what was fetched, this counts what was
+    written to corpus.jsonl after cleaning and dedupe. The two legitimately differ, so the panel shows the
+    emitted figure and says which it is showing.
+    """
+    d = _read_json(os.path.join(ROOT, "corpus", "processed", "stats.json"))
+    if not isinstance(d, dict) or not isinstance(d.get("chars_total"), int):
+        return None
+    return dict(sources=d.get("sources_total"), records=d.get("records"),
+                chars=d.get("chars_total"), chars_cjk=d.get("chars_cjk"),
+                chars_non_cjk=d.get("chars_non_cjk"), tokens_estimate=d.get("tokens_estimate"),
+                dup_dropped=d.get("duplicate_chunks_dropped"),
+                corpus_sha256=d.get("corpus_sha256"), corpus_bytes=d.get("corpus_bytes"),
+                by_tier=d.get("chars_by_tier") or {}, by_tradition=d.get("chars_by_tradition") or {},
+                by_lang=d.get("chars_by_lang") or {}, generated_at=d.get("generated_at"))
+
+
 def load_corpus():
+    emitted = load_emitted_stats()
     ypath = os.path.join(ROOT, "corpus", "registry", "sources.yaml")
     rows = normalise_sources(parse_sources_yaml(ypath))
     if rows:
-        return _summarise_corpus(rows, "corpus/registry/sources.yaml", False)
-    fx = _read_json(os.path.join(DATA_DIR, "corpus.json"))
-    rows = normalise_sources((fx or {}).get("sources"))
-    if rows:
-        return _summarise_corpus(rows, "app/data/corpus.json", True,
+        res = _summarise_corpus(rows, "corpus/registry/sources.yaml", False)
+    else:
+        fx = _read_json(os.path.join(DATA_DIR, "corpus.json"))
+        rows = normalise_sources((fx or {}).get("sources"))
+        res = (_summarise_corpus(rows, "app/data/corpus.json", True,
                                  built=(fx or {}).get("built"), stages=(fx or {}).get("stages"))
-    return _summarise_corpus([], "(missing)", True)
+               if rows else _summarise_corpus([], "(missing)", True))
+    if emitted:
+        res["emitted"] = emitted
+        res["stats"]["chars"] = emitted["chars"]          # authoritative for emitted text
+    return res
 
 
 ERA_BUCKETS = [
@@ -604,6 +628,53 @@ def load_eval():
                     generated_at=fx.get("generated_at"),
                     awaiting="python -m shennong.cli report --out eval/report.json")
     return dict(report=None, fixture=True, source="(no eval/report.json)", awaiting=None)
+
+
+_SHA_CACHE: dict = {}
+
+
+def load_artifacts():
+    """Published weight artefacts, verified from disk.
+
+    The sha256 is computed here rather than quoted from a document, so the number on screen is a fact about
+    the file in this checkout. That is the whole point of showing it.
+    """
+    import hashlib
+    import struct
+
+    def gguf_header(path):
+        """Read tensor_count straight out of the GGUF header (24 bytes). Stdlib only, no gguf dependency."""
+        try:
+            with open(path, "rb") as f:
+                head = f.read(24)
+            magic, version, tensor_count, kv_count = struct.unpack("<IIQQ", head)
+            if magic != 0x46554747:  # b'GGUF'
+                return None
+            return dict(version=version, tensors=tensor_count, kv_count=kv_count)
+        except (OSError, struct.error):
+            return None
+
+    out = []
+    for path in sorted(glob.glob(os.path.join(ROOT, "artifacts", "*.gguf"))):
+        try:
+            st = os.stat(path)
+            key = (path, st.st_mtime, st.st_size)
+            digest = _SHA_CACHE.get(key)
+            if digest is None:
+                h = hashlib.sha256()
+                with open(path, "rb") as f:
+                    for chunk in iter(lambda: f.read(1 << 20), b""):
+                        h.update(chunk)
+                digest = h.hexdigest()
+                _SHA_CACHE.clear()
+                _SHA_CACHE[key] = digest
+            out.append(dict(name=os.path.basename(path), bytes=st.st_size,
+                            mb=round(st.st_size / 1_000_000, 2), mib=round(st.st_size / (1 << 20), 2),
+                            sha256=digest, path=os.path.relpath(path, ROOT),
+                            header=gguf_header(path)))
+        except OSError:
+            continue
+    return out
 
 
 def load_metrics():
@@ -970,7 +1041,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json(dict(eval=load_eval(), metrics=load_metrics(),
                                        pipeline=self._pipeline(),
                                        hypotheses=load_hypotheses()["counts"],
-                                       candidates=cand["counts"]))
+                                       candidates=cand["counts"],
+                                       artifacts=load_artifacts()))
             if path == "/api/ask":
                 return self._json(ask((q.get("q") or [""])[0]))
             return self._err(404, f"no route {path}")

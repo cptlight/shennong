@@ -1,0 +1,31 @@
+{
+  "applied": {
+    "PENDING_BPB": "2.526",
+    "PENDING_BPT": "9.241",
+    "PENDING_BASELINE_OUTCOME": "**That is below the unigram baseline by a factor of 1.22\u00d7** (3.076 \u2192 2.526 bpb), so the model has learned real contextual structure beyond token frequency \u2014 while still being far too weak to be trusted as a knowledge source.",
+    "PENDING_STEPS": "200",
+    "PENDING_TOKENS": "1,638,400",
+    "PENDING_EPOCHS": "0.10",
+    "PENDING_TOK_RATIO": "0.19",
+    "PENDING_PCT_OPTIMAL": "0.9 %",
+    "PENDING_SHORTFALL": "106.4\u00d7",
+    "PENDING_WALL": "45.2 min",
+    "PENDING_TOK_S": "604",
+    "PENDING_CE": "6.406",
+    "PENDING_PPL": "605.3",
+    "PENDING_TRAIN_LOSS": "6.366",
+    "PENDING_MEMORISATION": "1.4",
+    "PENDING_INFERENCE": "13",
+    "PENDING_GGUF_BYTES": "18,054,560",
+    "PENDING_GGUF_SHA": "a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60",
+    "PENDING_HF_BYTES": "34,884,592",
+    "PENDING_CKPT_BYTES": "104,703,270"
+  },
+  "unresolved": [],
+  "sources": {
+    "metrics": "/Users/tom/Documents/ETHno/training/runs/shennong-mini-r1/metrics.json",
+    "eval": "/Users/tom/Documents/ETHno/training/runs/shennong-mini-r1/eval.json",
+    "baselines": "/Users/tom/Documents/ETHno/training/runs/shennong-mini-r1/baselines.json",
+    "gguf": "artifacts/shennong-mini-f16.gguf"
+  }
+}

@@ -1120,6 +1120,26 @@ function metricsBlock(m) {
 
 function renderMethod(d) {
   const ev = d.eval, m = d.metrics;
+
+  const arts = d.artifacts || [];
+  const weightsBlock = arts.length ? `<div class="card"><h3>Published weights — verified from disk</h3>
+    <p class="sub">The size and hash below are computed from the file in this checkout when the page loads,
+      not copied from a document. If the file changed, this line would change.</p>
+    <div class="wrap-scroll"><table class="data">
+      <thead><tr><th>file</th><th class="num">bytes</th><th class="num">size</th><th>sha256</th></tr></thead>
+      <tbody>${arts.map((a) => `<tr>
+        <td><code>${esc(a.path)}</code></td>
+        <td class="num">${fmt(a.bytes)}</td>
+        <td class="num">${a.mb} MB <span class="am">(${a.mib} MiB)</span></td>
+        <td><code style="font-size:.68rem;word-break:break-all">${esc(a.sha256)}</code></td></tr>`).join('')}
+      </tbody></table></div>
+    <p class="muted" style="font-size:.76rem;margin:.5rem 0 0">${arts.map((a) => a.header
+      ? `${esc(a.name)}: GGUF v${a.header.version}, <strong>${a.header.tensors} tensors</strong> (read from the file header), ${a.header.kv_count} metadata entries.`
+      : `${esc(a.name)}: header not parseable.`).join(' ')}</p>
+    ${arts.every((a) => a.bytes < 1e9) ? `<p class="muted" style="font-size:.76rem;margin:.5rem 0 0">
+      Every weight file here is under the 1 GB ceiling — the largest uses
+      ${(Math.max(...arts.map((a) => a.bytes)) / 1e9 * 100).toFixed(2)} % of it.</p>` : ''}
+  </div>` : '';
   badge($('#method-badge'), ev.fixture || m.fixture,
     [ev.fixture ? 'eval: fixture' : 'eval: live', m.fixture ? 'run: absent' : 'run: live'].join(' · '),
     ev.source);
@@ -1142,6 +1162,7 @@ function renderMethod(d) {
         product is a design choice and should be visible as one.</p>
     </div>
     ${metricsBlock(m)}
+    ${weightsBlock}
     ${evalBlock(ev, d.hypotheses || {})}
     <div class="card"><h3>Reproduce</h3>
       <div class="wrap-scroll"><table class="data"><tbody>

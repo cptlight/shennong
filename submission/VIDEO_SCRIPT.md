@@ -111,8 +111,8 @@ Cut to `corpus/registry/sources.yaml` in the editor; scroll to a `status: unveri
 `grep -c 'licence: Public Domain' corpus/registry/sources.yaml`.
 
 **VO:**
-> [[PENDING: corpus.sources_ok]] sources. [[PENDING: corpus.chars]] characters.
-> [[PENDING: corpus.languages]] languages, from the first century to the twentieth.
+> 106 sources. 45.6 million characters. Twenty-seven thousand records.
+> 5 languages, from the first century to the twentieth.
 >
 > 神農本草經, 本草綱目, 傷寒論, 雷公炮炙論. Caraka, Suśruta, al-Qānūn. And the science corpus most people
 > skip — 天工開物 on materials, 齊民要術 on fermentation, 夢溪筆談 on natural observation. That's where the
@@ -132,24 +132,32 @@ Cut to `corpus/registry/sources.yaml` in the editor; scroll to a `status: unveri
 
 ## 6 · 04:02–05:00 — The model, and the real curve
 
-**On screen:** Terminal: `cat training/runs/<id>/metrics.json | head -20`. Then the Workbench **Methodology**
-panel with the loss curve animating in. Zoom the axes so the train and val lines are legible.
+**On screen:** Terminal: `cat training/runs/shennong-mini-r1/metrics.json | head -20`. Then the Workbench
+**Methodology** panel with the loss curve drawing in. Zoom the axes so train and held-out lines are legible.
+Cut to a terminal: `ls -l artifacts/*.gguf` and `sha256sum artifacts/shennong-mini-f16.gguf`.
 
 **VO:**
-> The model is `shennong-mini`: 8.72 million parameters, trained from scratch on this machine. An Intel i7 —
-> no GPU at all. [[PENDING: model.steps]] steps, [[PENDING: model.tokens]] tokens, on a 16,384-token vocabulary for Classical Chinese and
-> Sanskrit.
+> The model is `shennong-mini`: 8.72 million parameters, trained **from scratch on this laptop's CPU**. An
+> Intel i7 — no GPU at all. Two hundred steps, 1.64 million tokens, and it took **forty-five minutes**.
 >
-> The vocabulary is budgeted for Classical Chinese and Sanskrit, because the entire point is reading the
-> originals rather than English summaries. That's a design constraint that costs us parameters everywhere else.
+> The vocabulary is 16,384 tokens, budgeted for Classical Chinese and Sanskrit, because the entire point is
+> reading the originals rather than English summaries.
 >
-> And this curve — this is the actual log. Train loss [[PENDING: model.final_train_loss]], validation
-> [[PENDING: model.final_val_loss]]. At about 0.85 tokens per parameter this round is deliberately
-> undertrained — a real run inside a hackathon, not a converged model, and the model card says so. We could
-> have shown you a nicer curve. It would have been fiction, and then you'd have no reason to believe any
-> other number in this video.
+> This curve is the actual log — train loss 6.37, held-out 6.39, validation curve falling from 9.74 to 6.39.
+> We could have shown you a nicer curve. It would have been fiction, and then you'd have no reason to believe
+> any other number in this video.
+>
+> Now the part that is easy to oversell, so let me undersell it. 1.6 million tokens against 8.7 million
+> parameters is 0.19 tokens per parameter — about **one percent of a compute-optimal budget**. This is a
+> **pipeline proof, not a useful model**. Anyone who tells you a model this size is generally capable is
+> selling something.
+>
+> What is genuinely unusual is the rest of it: the weights are **18 megabytes**, not gigabytes — one point
+> eight percent of the one-gigabyte ceiling we were given — and they are published, with a hash you can check.
+> The whole chain runs on a CPU, offline, and one person can reproduce it.
 
-**Artefact:** `training/runs/<id>/metrics.json`, Workbench Methodology → loss chart.
+**Artefact:** `training/runs/shennong-mini-r1/metrics.json`, `artifacts/shennong-mini-f16.gguf` (18,054,560 B,
+sha256 `a67ad442…4cdb60`), Workbench Methodology → loss chart.
 
 ---
 
@@ -192,38 +200,35 @@ python -m shennong.cli shi  --n 12 --out app/data/hypotheses.json   # deploy
 ## 8 · 06:00–07:22 — The Workbench: one candidate, end to end
 
 **On screen:** `python app/serve.py` → prints the provenance banner → browser opens the Workbench. Click
-**Candidates**. The table is real output: 10 candidates, every structure resolved. Then expand **one** row —
-大黄 → emodin — and scroll it slowly so the chain is followed in order.
+**Candidates**. The table is real output: 60 candidate molecules across 15 taxa, every classical line verified
+against a byte offset. Expand the **前胡** row and scroll it slowly, in order.
 
 **VO:**
 > This is the screen that matters. `python app/serve.py` — standard library only, no build step, no network.
 >
-> Every row here is a classical lead turned into a molecule. Let's open one.
+> Sixty candidate molecules across fifteen taxa. Every row is a classical lead turned into a molecule. Let's
+> open one.
 >
-> **The line.** *神農本草經*, compiled around the first century. On 大黃: bitter, cold; it scours the stomach and
-> bowels, expelling the old and bringing in the new.
+> **The line.** The 普濟方 formulary, 1406. The 前胡湯 entry: *“Qianhu decoction treats cough from lung heat.”*
+> Verbatim, with a byte offset into the corpus, so you can go and read it yourself.
 >
-> **The theory.** 大黄 is 寒, 苦, 降 — cold, bitter, downward — entering Stomach and Large Intestine, and graded
-> 下品, the toxic grade. So the prediction is specific: a downward, gut-localised action. And the proposed
-> pathway for the candidate is gastrointestinal motility. The framework got the compartment right. That is what
-> makes it testable rather than decorative.
+> **The theory.** 前胡 is cold, bitter, entering the Lung channel. So the prediction is specific: an action
+> directed at the lung. And the recorded indication is a cough syndrome. The framework named the organ — that is
+> what makes it a testable system rather than poetry.
 >
-> **The molecule.** Emodin. C₁₅H₁₀O₅. Molecular weight 270.24. logP 1.05, three H-bond donors, five acceptors,
-> TPSA 79.15, three rings, zero rotatable bonds. Four of four Lipinski rules evaluated — it passes. Veber passes.
-> Those descriptors are computed from the resolved SMILES, not estimated.
+> **The molecule.** Peucedanocoumarin I. C₂₁H₂₄O₇, molecular weight 388.42, logP 4.6, zero hydrogen-bond donors,
+> seven acceptors, TPSA 64.6. Four of four Lipinski rules evaluated — it passes. Veber passes. Those numbers are
+> computed from the resolved SMILES, not estimated.
 >
-> **The assay.** A cell-free membrane-permeability assay, then a liposome model — a membrane-active mechanism
-> tested without culturing a pathogen. Go/no-go: reproducible engagement in two orthogonal assays, plus
-> selectivity over the nearest paralogue.
+> **The assay.** Calcium flux on TRPA1-expressing cells, then a recombinant line. Go/no-go: reproducible
+> engagement in two orthogonal assays, plus selectivity over the nearest paralogue.
 >
-> **And now the honest part.** Novelty: 0.087. Emodin is not new. Structural alert: quinone. Mechanism evidence
-> level: class-level prior.
->
-> The system proposes a candidate and immediately tells you it is a lead with a known liability — not a
-> discovery. A demo that can only show wins is a demo. This one shows a candidate being ranked down.
+> **And the honest part.** Novelty is 0.88 — for every single candidate. The novelty estimator is not yet
+> discriminating, so the rank order does not carry information today. We could sort the table by something that
+> looks like a score. Instead we show the defect, and it is item one on our own improvements list.
 
-**Artefact:** Workbench → Candidates → emodin expanded; `artifacts/drug_candidates.json`. Note the per-panel
-provenance badge: **candidates = LIVE, from `artifacts/drug_candidates.json`**.
+**Artefact:** Workbench → Candidates → 前胡 expanded; `artifacts/drug_candidates.json` (60 candidates, all
+structures resolved, all classical lines verified). Panel badge: **candidates = LIVE**.
 
 ---
 

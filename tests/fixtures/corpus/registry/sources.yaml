@@ -1,0 +1,66 @@
+# TEST FIXTURES ONLY -- not the shipped corpus.
+# These are short, lightly modernised excerpts in early-modern English used to exercise
+# the extractor, KG builder and eval harness before the real corpus lands. They are
+# adapted from public-domain herbals (Culpeper 1653, Gerard 1597, Parkinson 1640,
+# an English Dioscorides, and Paracelsian/Basil-Valentine spagyric texts). They are
+# representative of the genre, not critical editions. Do not cite them.
+- id: fixture_culpeper_1653
+  title: "Culpeper's Complete Herbal (fixture excerpts)"
+  author: "Nicholas Culpeper"
+  year: 1653
+  url: "https://www.gutenberg.org/ebooks/49537"
+  licence: "Public Domain"
+  licence_evidence: "https://www.gutenberg.org/policy/license.html"
+  tier: 3
+  lang: en
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_gerard_1597
+  title: "The Herball or Generall Historie of Plantes (fixture excerpts)"
+  author: "John Gerard"
+  year: 1597
+  url: "https://www.gutenberg.org/"
+  licence: "Public Domain"
+  licence_evidence: "pre-1929 publication, public domain"
+  tier: 3
+  lang: en
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_dioscorides_1655
+  title: "The Greek Herbal of Dioscorides (Goodyer 1655, fixture excerpts)"
+  author: "Pedanius Dioscorides (trans. John Goodyer)"
+  year: 1655
+  url: "https://www.gutenberg.org/"
+  licence: "Public Domain"
+  licence_evidence: "pre-1929 publication, public domain"
+  tier: 2
+  lang: en
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_paracelsian_1600
+  title: "Spagyric and Tria Prima texts (fixture excerpts)"
+  author: "Paracelsian / Basil Valentine tradition (anon. English translation)"
+  year: 1600
+  url: "https://www.gutenberg.org/"
+  licence: "Public Domain"
+  licence_evidence: "pre-1929 publication, public domain"
+  tier: 3
+  lang: en
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_duke_ethnobotany
+  title: "Duke-style ethnobotanical extract (fixture)"
+  author: "ATHANOR fixture"
+  year: 2000
+  url: "local"
+  licence: "Public Domain"
+  licence_evidence: "synthetic fixture"
+  tier: 5
+  lang: en
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok

@@ -1,0 +1,1574 @@
+{
+ "generated_at": "2026-11-05T09:00:00Z",
+ "fixture": true,
+ "nodes": [
+  {
+   "id": "source:fixture:dioscorides",
+   "label": "Pedanius Dioscorides",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:galen",
+   "label": "Galen of Pergamon",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:parkinson-1629",
+   "label": "John Parkinson",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:gerard-1633",
+   "label": "John Gerard",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:culpeper-1653",
+   "label": "Nicholas Culpeper",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:paracelsus",
+   "label": "Paracelsus",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:ripley",
+   "label": "George Ripley",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:rosarium",
+   "label": "anon. (Pseudo-Arnaldus)",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:bencao-gangmu",
+   "label": "Li Shizhen",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:charaka",
+   "label": "Agnivesha / Charaka",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:kings-1898",
+   "label": "Harvey W. Felter & John U. Lloyd",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:grieve-1931",
+   "label": "Maud Grieve",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:ema-monographs",
+   "label": "European Medicines Agency",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:duke",
+   "label": "James A. Duke (USDA ARS)",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:chembl",
+   "label": "EMBL-EBI",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:wfo",
+   "label": "WFO Consortium",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:huangdi-neijing",
+   "label": "anon. (Yellow Emperor corpus)",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "source:fixture:zhenjiu",
+   "label": "Huangfu Mi",
+   "type": "source",
+   "weight": 0.3
+  },
+  {
+   "id": "taxon:Glycyrrhiza glabra",
+   "label": "Glycyrrhiza glabra",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Decoction of the root, taken daily for 4–6 weeks",
+   "label": "Decoction of the root, taken daily for 4–6 weeks",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:11β-hydroxysteroid dehydrogenase type 2",
+   "label": "11β-hydroxysteroid dehydrogenase type 2",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema",
+   "label": "Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Artemisia absinthium",
+   "label": "Artemisia absinthium",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Ethanolic tincture of the flowering tops",
+   "label": "Ethanolic tincture of the flowering tops",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:NF-κB p65",
+   "label": "NF-κB p65",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Ulcerative colitis, mucosal inflammatory signalling",
+   "label": "Ulcerative colitis, mucosal inflammatory signalling",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Salvia miltiorrhiza",
+   "label": "Salvia miltiorrhiza",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Wine decoction of the root",
+   "label": "Wine decoction of the root",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:KEAP1/Nrf2",
+   "label": "KEAP1/Nrf2",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Endothelial oxidative stress in early hypertension",
+   "label": "Endothelial oxidative stress in early hypertension",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Lavandula angustifolia",
+   "label": "Lavandula angustifolia",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Hydrodistillation in balneum Mariae, 3 h",
+   "label": "Hydrodistillation in balneum Mariae, 3 h",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:GABA_A receptor complex, benzodiazepine site",
+   "label": "GABA_A receptor complex, benzodiazepine site",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Generalised anxiety",
+   "label": "Generalised anxiety",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Marrubium vulgare",
+   "label": "Marrubium vulgare",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Infusion of the dried herb",
+   "label": "Infusion of the dried herb",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:TAS2R bitter receptors on airway smooth muscle",
+   "label": "TAS2R bitter receptors on airway smooth muscle",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Cough and bronchospasm in obstructive airway disease",
+   "label": "Cough and bronchospasm in obstructive airway disease",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
+   "label": "Paeonia lactiflora / Glycyrrhiza uralensis",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Combined decoction",
+   "label": "Combined decoction",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
+   "label": "NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Muscle cramp and spasm",
+   "label": "Muscle cramp and spasm",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Tanacetum parthenium",
+   "label": "Tanacetum parthenium",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Freeze-dried leaf capsules",
+   "label": "Freeze-dried leaf capsules",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:NF-κB p65 Cys38 alkylation; also IKKβ",
+   "label": "NF-κB p65 Cys38 alkylation; also IKKβ",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Migraine prophylaxis",
+   "label": "Migraine prophylaxis",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Berberis vulgaris",
+   "label": "Berberis vulgaris",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Decoction of the root bark",
+   "label": "Decoction of the root bark",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:AMPK activation",
+   "label": "AMPK activation",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Metabolic syndrome: dyslipidaemia, insulin resistance",
+   "label": "Metabolic syndrome: dyslipidaemia, insulin resistance",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Curcuma longa",
+   "label": "Curcuma longa",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Decoction / powder",
+   "label": "Decoction / powder",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:NF-κB; also numerous pan-assay interference liabilities",
+   "label": "NF-κB; also numerous pan-assay interference liabilities",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Osteoarthritis pain and inflammation",
+   "label": "Osteoarthritis pain and inflammation",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "taxon:Pulmonaria officinalis",
+   "label": "Pulmonaria officinalis",
+   "type": "taxon",
+   "weight": 0.9
+  },
+  {
+   "id": "process:Infusion of the leaves",
+   "label": "Infusion of the leaves",
+   "type": "preparation",
+   "weight": 0.7
+  },
+  {
+   "id": "target:Pulmonary epithelium",
+   "label": "Pulmonary epithelium",
+   "type": "target",
+   "weight": 0.8
+  },
+  {
+   "id": "indication:Cough, catarrh, 'diseases of the lungs'",
+   "label": "Cough, catarrh, 'diseases of the lungs'",
+   "type": "indication",
+   "weight": 0.7
+  },
+  {
+   "id": "process:Balneum Mariae",
+   "label": "Balneum Mariae",
+   "type": "preparation",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Linalool",
+   "label": "Linalool",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Linalyl acetate",
+   "label": "Linalyl acetate",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Rosmarinus officinalis",
+   "label": "Rosmarinus officinalis",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Mentha x piperita",
+   "label": "Mentha x piperita",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "target:GABA-A",
+   "label": "GABA-A",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Anxiety",
+   "label": "Anxiety",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Glycyrrhizin",
+   "label": "Glycyrrhizin",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Glycyrrhetinic acid",
+   "label": "Glycyrrhetinic acid",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:11b-HSD2",
+   "label": "11b-HSD2",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "target:Mineralocorticoid receptor",
+   "label": "Mineralocorticoid receptor",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Hypertension",
+   "label": "Hypertension",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Absinthin",
+   "label": "Absinthin",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Artabsin",
+   "label": "Artabsin",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:NF-kB p65",
+   "label": "NF-kB p65",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Parthenolide",
+   "label": "Parthenolide",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Colitis",
+   "label": "Colitis",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Migraine",
+   "label": "Migraine",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Osteoarthritis",
+   "label": "Osteoarthritis",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Tanshinone IIA",
+   "label": "Tanshinone IIA",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Salvianolic acid B",
+   "label": "Salvianolic acid B",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:Nrf2/KEAP1",
+   "label": "Nrf2/KEAP1",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Endothelial dysfunction",
+   "label": "Endothelial dysfunction",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Marrubiin",
+   "label": "Marrubiin",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:TAS2R",
+   "label": "TAS2R",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Bronchospasm",
+   "label": "Bronchospasm",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Paeonia lactiflora",
+   "label": "Paeonia lactiflora",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Paeoniflorin",
+   "label": "Paeoniflorin",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:NKCC1/KCC2",
+   "label": "NKCC1/KCC2",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Muscle cramp",
+   "label": "Muscle cramp",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Berberine",
+   "label": "Berberine",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:AMPK",
+   "label": "AMPK",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Metabolic syndrome",
+   "label": "Metabolic syndrome",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Curcumin",
+   "label": "Curcumin",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Cough",
+   "label": "Cough",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Rosmarinic acid",
+   "label": "Rosmarinic acid",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "process:Dung digestion",
+   "label": "Dung digestion",
+   "type": "preparation",
+   "weight": 0.0
+  },
+  {
+   "id": "process:Spagyric separation",
+   "label": "Spagyric separation",
+   "type": "preparation",
+   "weight": 0.0
+  },
+  {
+   "id": "tradition:Channel theory",
+   "label": "Channel theory",
+   "type": "preparation",
+   "weight": 0.0
+  }
+ ],
+ "edges": [
+  {
+   "source": "taxon:Glycyrrhiza glabra",
+   "target": "process:Decoction of the root, taken daily for 4–6 weeks",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Decoction of the root, taken daily for 4–6 weeks",
+   "target": "target:11β-hydroxysteroid dehydrogenase type 2",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:11β-hydroxysteroid dehydrogenase type 2",
+   "target": "indication:Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:kings-1898",
+   "target": "taxon:Glycyrrhiza glabra",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:ema-monographs",
+   "target": "taxon:Glycyrrhiza glabra",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:culpeper-1653",
+   "target": "taxon:Glycyrrhiza glabra",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Artemisia absinthium",
+   "target": "process:Ethanolic tincture of the flowering tops",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Ethanolic tincture of the flowering tops",
+   "target": "target:NF-κB p65",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NF-κB p65",
+   "target": "indication:Ulcerative colitis, mucosal inflammatory signalling",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:culpeper-1653",
+   "target": "taxon:Artemisia absinthium",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:gerard-1633",
+   "target": "taxon:Artemisia absinthium",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:grieve-1931",
+   "target": "taxon:Artemisia absinthium",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Salvia miltiorrhiza",
+   "target": "process:Wine decoction of the root",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Wine decoction of the root",
+   "target": "target:KEAP1/Nrf2",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:KEAP1/Nrf2",
+   "target": "indication:Endothelial oxidative stress in early hypertension",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:bencao-gangmu",
+   "target": "taxon:Salvia miltiorrhiza",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:grieve-1931",
+   "target": "taxon:Salvia miltiorrhiza",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Lavandula angustifolia",
+   "target": "process:Hydrodistillation in balneum Mariae, 3 h",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Hydrodistillation in balneum Mariae, 3 h",
+   "target": "target:GABA_A receptor complex, benzodiazepine site",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:GABA_A receptor complex, benzodiazepine site",
+   "target": "indication:Generalised anxiety",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:rosarium",
+   "target": "taxon:Lavandula angustifolia",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:gerard-1633",
+   "target": "taxon:Lavandula angustifolia",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:culpeper-1653",
+   "target": "taxon:Lavandula angustifolia",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:ema-monographs",
+   "target": "taxon:Lavandula angustifolia",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Marrubium vulgare",
+   "target": "process:Infusion of the dried herb",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Infusion of the dried herb",
+   "target": "target:TAS2R bitter receptors on airway smooth muscle",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:TAS2R bitter receptors on airway smooth muscle",
+   "target": "indication:Cough and bronchospasm in obstructive airway disease",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:grieve-1931",
+   "target": "taxon:Marrubium vulgare",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:kings-1898",
+   "target": "taxon:Marrubium vulgare",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
+   "target": "process:Combined decoction",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Combined decoction",
+   "target": "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
+   "target": "indication:Muscle cramp and spasm",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:ema-monographs",
+   "target": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:kings-1898",
+   "target": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:dioscorides",
+   "target": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Tanacetum parthenium",
+   "target": "process:Freeze-dried leaf capsules",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Freeze-dried leaf capsules",
+   "target": "target:NF-κB p65 Cys38 alkylation; also IKKβ",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NF-κB p65 Cys38 alkylation; also IKKβ",
+   "target": "indication:Migraine prophylaxis",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:gerard-1633",
+   "target": "taxon:Tanacetum parthenium",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:grieve-1931",
+   "target": "taxon:Tanacetum parthenium",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Berberis vulgaris",
+   "target": "process:Decoction of the root bark",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Decoction of the root bark",
+   "target": "target:AMPK activation",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:AMPK activation",
+   "target": "indication:Metabolic syndrome: dyslipidaemia, insulin resistance",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:dioscorides",
+   "target": "taxon:Berberis vulgaris",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:kings-1898",
+   "target": "taxon:Berberis vulgaris",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Curcuma longa",
+   "target": "process:Decoction / powder",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Decoction / powder",
+   "target": "target:NF-κB; also numerous pan-assay interference liabilities",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NF-κB; also numerous pan-assay interference liabilities",
+   "target": "indication:Osteoarthritis pain and inflammation",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:charaka",
+   "target": "taxon:Curcuma longa",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:grieve-1931",
+   "target": "taxon:Curcuma longa",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Pulmonaria officinalis",
+   "target": "process:Infusion of the leaves",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Infusion of the leaves",
+   "target": "target:Pulmonary epithelium",
+   "rel": "points_to",
+   "weight": 1.0
+  },
+  {
+   "source": "target:Pulmonary epithelium",
+   "target": "indication:Cough, catarrh, 'diseases of the lungs'",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:culpeper-1653",
+   "target": "taxon:Pulmonaria officinalis",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:gerard-1633",
+   "target": "taxon:Pulmonaria officinalis",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Lavandula angustifolia",
+   "target": "process:Balneum Mariae",
+   "rel": "prepared_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Balneum Mariae",
+   "target": "compound:Linalool",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "process:Balneum Mariae",
+   "target": "compound:Linalyl acetate",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Rosmarinus officinalis",
+   "target": "compound:Linalool",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Mentha x piperita",
+   "target": "compound:Linalool",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Linalool",
+   "target": "target:GABA-A",
+   "rel": "modulates",
+   "weight": 1.0
+  },
+  {
+   "source": "target:GABA-A",
+   "target": "indication:Anxiety",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Glycyrrhiza glabra",
+   "target": "compound:Glycyrrhizin",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Glycyrrhizin",
+   "target": "compound:Glycyrrhetinic acid",
+   "rel": "metabolised_to",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Glycyrrhetinic acid",
+   "target": "target:11b-HSD2",
+   "rel": "inhibits",
+   "weight": 1.0
+  },
+  {
+   "source": "target:11b-HSD2",
+   "target": "target:Mineralocorticoid receptor",
+   "rel": "regulates",
+   "weight": 1.0
+  },
+  {
+   "source": "target:Mineralocorticoid receptor",
+   "target": "indication:Hypertension",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Artemisia absinthium",
+   "target": "compound:Absinthin",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Artemisia absinthium",
+   "target": "compound:Artabsin",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Absinthin",
+   "target": "target:NF-kB p65",
+   "rel": "modulates",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Artabsin",
+   "target": "target:NF-kB p65",
+   "rel": "modulates",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Parthenolide",
+   "target": "target:NF-kB p65",
+   "rel": "inhibits",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Tanacetum parthenium",
+   "target": "compound:Parthenolide",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NF-kB p65",
+   "target": "indication:Colitis",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NF-kB p65",
+   "target": "indication:Migraine",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NF-kB p65",
+   "target": "indication:Osteoarthritis",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Salvia miltiorrhiza",
+   "target": "compound:Tanshinone IIA",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Salvia miltiorrhiza",
+   "target": "compound:Salvianolic acid B",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Tanshinone IIA",
+   "target": "target:Nrf2/KEAP1",
+   "rel": "activates",
+   "weight": 1.0
+  },
+  {
+   "source": "target:Nrf2/KEAP1",
+   "target": "indication:Endothelial dysfunction",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Marrubium vulgare",
+   "target": "compound:Marrubiin",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Marrubiin",
+   "target": "target:TAS2R",
+   "rel": "agonises",
+   "weight": 1.0
+  },
+  {
+   "source": "target:TAS2R",
+   "target": "indication:Bronchospasm",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Paeonia lactiflora",
+   "target": "compound:Paeoniflorin",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Paeoniflorin",
+   "target": "compound:Glycyrrhizin",
+   "rel": "co-administered_with",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Paeoniflorin",
+   "target": "target:NKCC1/KCC2",
+   "rel": "candidate",
+   "weight": 1.0
+  },
+  {
+   "source": "target:NKCC1/KCC2",
+   "target": "indication:Muscle cramp",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Berberis vulgaris",
+   "target": "compound:Berberine",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Berberine",
+   "target": "target:AMPK",
+   "rel": "activates",
+   "weight": 1.0
+  },
+  {
+   "source": "target:AMPK",
+   "target": "indication:Metabolic syndrome",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Curcuma longa",
+   "target": "compound:Curcumin",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Curcumin",
+   "target": "target:NF-kB p65",
+   "rel": "modulates",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Pulmonaria officinalis",
+   "target": "target:Pulmonary epithelium",
+   "rel": "signature_link",
+   "weight": 1.0
+  },
+  {
+   "source": "target:Pulmonary epithelium",
+   "target": "indication:Cough",
+   "rel": "implicated_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Pulmonaria officinalis",
+   "target": "compound:Rosmarinic acid",
+   "rel": "yields",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:rosarium",
+   "target": "process:Balneum Mariae",
+   "rel": "describes",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:ripley",
+   "target": "process:Dung digestion",
+   "rel": "describes",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:paracelsus",
+   "target": "process:Spagyric separation",
+   "rel": "describes",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fixture:huangdi-neijing",
+   "target": "tradition:Channel theory",
+   "rel": "grounds",
+   "weight": 1.0
+  }
+ ],
+ "layout": {
+  "source:fixture:dioscorides": [
+   656.4,
+   780.0
+  ],
+  "source:fixture:galen": [
+   1160.0,
+   40
+  ],
+  "source:fixture:parkinson-1629": [
+   1160.0,
+   780.0
+  ],
+  "source:fixture:gerard-1633": [
+   46.8,
+   330.8
+  ],
+  "source:fixture:culpeper-1653": [
+   209.8,
+   511.7
+  ],
+  "source:fixture:paracelsus": [
+   1160.0,
+   40
+  ],
+  "source:fixture:ripley": [
+   1160.0,
+   128.9
+  ],
+  "source:fixture:rosarium": [
+   40,
+   780.0
+  ],
+  "source:fixture:bencao-gangmu": [
+   902.6,
+   40
+  ],
+  "source:fixture:charaka": [
+   422.7,
+   40
+  ],
+  "source:fixture:kings-1898": [
+   720.8,
+   761.6
+  ],
+  "source:fixture:grieve-1931": [
+   478.2,
+   40
+  ],
+  "source:fixture:ema-monographs": [
+   344.0,
+   780.0
+  ],
+  "source:fixture:duke": [
+   1160.0,
+   780.0
+  ],
+  "source:fixture:chembl": [
+   1160.0,
+   780.0
+  ],
+  "source:fixture:wfo": [
+   1160.0,
+   780.0
+  ],
+  "source:fixture:huangdi-neijing": [
+   1160.0,
+   780.0
+  ],
+  "source:fixture:zhenjiu": [
+   687.9,
+   780.0
+  ],
+  "taxon:Glycyrrhiza glabra": [
+   616.3,
+   754.9
+  ],
+  "process:Decoction of the root, taken daily for 4–6 weeks": [
+   807.1,
+   780.0
+  ],
+  "target:11β-hydroxysteroid dehydrogenase type 2": [
+   966.2,
+   780.0
+  ],
+  "indication:Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema": [
+   1083.2,
+   780.0
+  ],
+  "taxon:Artemisia absinthium": [
+   164.0,
+   101.2
+  ],
+  "process:Ethanolic tincture of the flowering tops": [
+   40,
+   40.6
+  ],
+  "target:NF-κB p65": [
+   40,
+   40
+  ],
+  "indication:Ulcerative colitis, mucosal inflammatory signalling": [
+   40,
+   40
+  ],
+  "taxon:Salvia miltiorrhiza": [
+   758.3,
+   40
+  ],
+  "process:Wine decoction of the root": [
+   987.2,
+   40
+  ],
+  "target:KEAP1/Nrf2": [
+   1160.0,
+   40
+  ],
+  "indication:Endothelial oxidative stress in early hypertension": [
+   1160.0,
+   40
+  ],
+  "taxon:Lavandula angustifolia": [
+   40,
+   732.7
+  ],
+  "process:Hydrodistillation in balneum Mariae, 3 h": [
+   40,
+   780.0
+  ],
+  "target:GABA_A receptor complex, benzodiazepine site": [
+   40,
+   780.0
+  ],
+  "indication:Generalised anxiety": [
+   40,
+   780.0
+  ],
+  "taxon:Marrubium vulgare": [
+   750.3,
+   268.3
+  ],
+  "process:Infusion of the dried herb": [
+   1022.9,
+   246.0
+  ],
+  "target:TAS2R bitter receptors on airway smooth muscle": [
+   1160.0,
+   216.2
+  ],
+  "indication:Cough and bronchospasm in obstructive airway disease": [
+   1160.0,
+   188.8
+  ],
+  "taxon:Paeonia lactiflora / Glycyrrhiza uralensis": [
+   536.3,
+   780.0
+  ],
+  "process:Combined decoction": [
+   460.2,
+   780.0
+  ],
+  "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle": [
+   405.1,
+   780.0
+  ],
+  "indication:Muscle cramp and spasm": [
+   369.6,
+   780.0
+  ],
+  "taxon:Tanacetum parthenium": [
+   131.2,
+   40
+  ],
+  "process:Freeze-dried leaf capsules": [
+   40,
+   40
+  ],
+  "target:NF-κB p65 Cys38 alkylation; also IKKβ": [
+   40,
+   40
+  ],
+  "indication:Migraine prophylaxis": [
+   40,
+   40
+  ],
+  "taxon:Berberis vulgaris": [
+   809.9,
+   780.0
+  ],
+  "process:Decoction of the root bark": [
+   832.6,
+   780.0
+  ],
+  "target:AMPK activation": [
+   857.7,
+   780.0
+  ],
+  "indication:Metabolic syndrome: dyslipidaemia, insulin resistance": [
+   880.3,
+   780.0
+  ],
+  "taxon:Curcuma longa": [
+   394.9,
+   40
+  ],
+  "process:Decoction / powder": [
+   356.8,
+   40
+  ],
+  "target:NF-κB; also numerous pan-assay interference liabilities": [
+   325.4,
+   40
+  ],
+  "indication:Osteoarthritis pain and inflammation": [
+   304.2,
+   40
+  ],
+  "taxon:Pulmonaria officinalis": [
+   40,
+   458.1
+  ],
+  "process:Infusion of the leaves": [
+   40,
+   436.6
+  ],
+  "target:Pulmonary epithelium": [
+   40,
+   453.6
+  ],
+  "indication:Cough, catarrh, 'diseases of the lungs'": [
+   40,
+   405.5
+  ],
+  "process:Balneum Mariae": [
+   40,
+   780.0
+  ],
+  "compound:Linalool": [
+   40,
+   780.0
+  ],
+  "compound:Linalyl acetate": [
+   40,
+   780.0
+  ],
+  "taxon:Rosmarinus officinalis": [
+   40,
+   780.0
+  ],
+  "taxon:Mentha x piperita": [
+   40,
+   780.0
+  ],
+  "target:GABA-A": [
+   40,
+   780.0
+  ],
+  "indication:Anxiety": [
+   40,
+   780.0
+  ],
+  "compound:Glycyrrhizin": [
+   1073.6,
+   780.0
+  ],
+  "compound:Glycyrrhetinic acid": [
+   1160.0,
+   780.0
+  ],
+  "target:11b-HSD2": [
+   1160.0,
+   780.0
+  ],
+  "target:Mineralocorticoid receptor": [
+   1160.0,
+   780.0
+  ],
+  "indication:Hypertension": [
+   1160.0,
+   780.0
+  ],
+  "compound:Absinthin": [
+   68.6,
+   40
+  ],
+  "compound:Artabsin": [
+   140.1,
+   40
+  ],
+  "target:NF-kB p65": [
+   53.3,
+   40
+  ],
+  "compound:Parthenolide": [
+   69.0,
+   40
+  ],
+  "indication:Colitis": [
+   40,
+   40
+  ],
+  "indication:Migraine": [
+   40,
+   40
+  ],
+  "indication:Osteoarthritis": [
+   40,
+   40
+  ],
+  "compound:Tanshinone IIA": [
+   849.1,
+   40
+  ],
+  "compound:Salvianolic acid B": [
+   791.7,
+   40
+  ],
+  "target:Nrf2/KEAP1": [
+   925.5,
+   40
+  ],
+  "indication:Endothelial dysfunction": [
+   983.1,
+   40
+  ],
+  "compound:Marrubiin": [
+   974.4,
+   115.9
+  ],
+  "target:TAS2R": [
+   1160.0,
+   40
+  ],
+  "indication:Bronchospasm": [
+   1160.0,
+   40
+  ],
+  "taxon:Paeonia lactiflora": [
+   1160.0,
+   780.0
+  ],
+  "compound:Paeoniflorin": [
+   1160.0,
+   780.0
+  ],
+  "target:NKCC1/KCC2": [
+   1160.0,
+   780.0
+  ],
+  "indication:Muscle cramp": [
+   1160.0,
+   780.0
+  ],
+  "compound:Berberine": [
+   968.4,
+   780.0
+  ],
+  "target:AMPK": [
+   1096.0,
+   780.0
+  ],
+  "indication:Metabolic syndrome": [
+   1160.0,
+   780.0
+  ],
+  "compound:Curcumin": [
+   215.7,
+   40
+  ],
+  "indication:Cough": [
+   40,
+   503.3
+  ],
+  "compound:Rosmarinic acid": [
+   40,
+   539.9
+  ],
+  "process:Dung digestion": [
+   1160.0,
+   213.0
+  ],
+  "process:Spagyric separation": [
+   1160.0,
+   40
+  ],
+  "tradition:Channel theory": [
+   1160.0,
+   780.0
+  ]
+ }
+}

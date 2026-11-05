@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shennong"
+version = "0.1.0"
+description = "SHENNONG — a <1 GB open-weights classical-Asian-medicine language model and first-principles discovery engine for ethnopharmacology"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "SHENNONG contributors" }]
+keywords = ["ethnopharmacology", "TCM", "ayurveda", "ethnobotany", "natural products", "tiny-llm"]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+
+# Runtime deps for the *package* are deliberately minimal: the discovery engine must run offline
+# on a laptop. Training/export deps live in the `train` extra.
+dependencies = [
+  "numpy>=1.24,<2",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+train = [
+  "torch==2.2.2",
+  "tokenizers>=0.15",
+  "safetensors>=0.4",
+  "gguf>=0.10",
+  "matplotlib>=3.7",
+]
+data = ["requests>=2.31", "beautifulsoup4>=4.12", "lxml>=5.0", "tqdm>=4.66"]
+dev = ["pytest>=7.4", "regex>=2023.0"]
+
+[project.scripts]
+shennong = "shennong.cli:main"
+
+[tool.setuptools]
+packages = ["shennong", "shennong.kg", "shennong.extract", "shennong.decode", "shennong.discover",
+            "shennong.rag", "shennong.safety", "shennong.learn", "shennong.eval"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

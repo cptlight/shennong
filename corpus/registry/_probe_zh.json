@@ -1,0 +1,49 @@
+{
+ "神農本草經": {
+  "nsub": 0,
+  "main_chars": 18347,
+  "sample_subs": []
+ },
+ "本草綱目": {
+  "nsub": 66,
+  "main_chars": 4922,
+  "sample_subs": [
+   "本草綱目/主治",
+   "本草綱目/人部",
+   "本草綱目/介之一"
+  ]
+ },
+ "本草經集注": {
+  "nsub": 11,
+  "main_chars": 64,
+  "sample_subs": [
+   "本草經集注/卷第一",
+   "本草經集注/卷第七",
+   "本草經集注/卷第三"
+  ]
+ },
+ "新修本草": {
+  "nsub": 0,
+  "main_chars": 178063,
+  "sample_subs": []
+ },
+ "證類本草": {
+  "nsub": 30,
+  "main_chars": 126,
+  "sample_subs": [
+   "證類本草/1",
+   "證類本草/10",
+   "證類本草/11"
+  ]
+ },
+ "傷寒論": {
+  "nsub": 0,
+  "main_chars": 44216,
+  "sample_subs": []
+ },
+ "金匱要略": {
+  "nsub": 0,
+  "main_chars": 30750,
+  "sample_subs": []
+ }
+}

@@ -1,0 +1,29 @@
+# ---- environment ----
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# ---- working dirs ----
+.tmp/
+.cache/
+
+# ---- corpus: raw downloads are reproducible via `make corpus`; the registry carries sha256 ----
+corpus/raw/
+!corpus/raw/.gitkeep
+
+# ---- model artefacts: keep the small GGUF + hashes + logs; exclude giant checkpoints ----
+artifacts/*.pt
+artifacts/*.bin
+artifacts/*.safetensors
+artifacts/*-hf/
+artifacts/checkpoints/
+training/runs/*/ckpt-*.pt
+training/runs/*/checkpoint*/
+
+# ---- keep these though ----
+!artifacts/*.gguf
+!artifacts/*.json
+!artifacts/*.png
+!artifacts/*.svg

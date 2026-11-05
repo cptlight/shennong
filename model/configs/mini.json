@@ -1,0 +1,16 @@
+{
+  "name": "athanor-mini",
+  "architecture": "athanor_mini.AthanorMini",
+  "vocab_size": 16384,
+  "d_model": 384,
+  "n_layer": 8,
+  "n_head": 6,
+  "n_kv_head": 2,
+  "d_ff": 1024,
+  "seq_len": 512,
+  "rope_theta": 10000.0,
+  "norm_eps": 1e-5,
+  "tie_word_embeddings": true,
+  "init_std": 0.02,
+  "attention_bias": false
+}

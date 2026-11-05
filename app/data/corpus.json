@@ -1,0 +1,244 @@
+{
+ "generated_at": "2026-11-05T09:00:00Z",
+ "fixture": true,
+ "sources": [
+  {
+   "source_id": "fixture:dioscorides",
+   "title": "De Materia Medica",
+   "author": "Pedanius Dioscorides",
+   "year": 70,
+   "era": "1st c. CE",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 612400,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:galen",
+   "title": "De Simplicium Medicamentorum Facultatibus",
+   "author": "Galen of Pergamon",
+   "year": 180,
+   "era": "2nd c. CE",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 488100,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:parkinson-1629",
+   "title": "Paradisi in Sole Paradisus Terrestris",
+   "author": "John Parkinson",
+   "year": 1629,
+   "era": "17th c.",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 934700,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:gerard-1633",
+   "title": "The Herball or Generall Historie of Plantes",
+   "author": "John Gerard",
+   "year": 1633,
+   "era": "17th c.",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 2104300,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:culpeper-1653",
+   "title": "The Complete Herbal",
+   "author": "Nicholas Culpeper",
+   "year": 1653,
+   "era": "17th c.",
+   "tier": 3,
+   "licence": "Public Domain",
+   "chars": 1187600,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:paracelsus",
+   "title": "On the Nature of Things (spagyric writings)",
+   "author": "Paracelsus",
+   "year": 1537,
+   "era": "16th c.",
+   "tier": 3,
+   "licence": "Public Domain",
+   "chars": 341200,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:ripley",
+   "title": "The Compound of Alchymy (Ripley Scroll tradition)",
+   "author": "George Ripley",
+   "year": 1471,
+   "era": "15th c.",
+   "tier": 3,
+   "licence": "Public Domain",
+   "chars": 98400,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:rosarium",
+   "title": "Rosarium Philosophorum",
+   "author": "anon. (Pseudo-Arnaldus)",
+   "year": 1550,
+   "era": "16th c.",
+   "tier": 3,
+   "licence": "Public Domain",
+   "chars": 54900,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:bencao-gangmu",
+   "title": "Bencao Gangmu (Compendium of Materia Medica, trans.)",
+   "author": "Li Shizhen",
+   "year": 1596,
+   "era": "16th c.",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 1642000,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:charaka",
+   "title": "Charaka Samhita (English trans.)",
+   "author": "Agnivesha / Charaka",
+   "year": 100,
+   "era": "1st–2nd c. CE",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 1310500,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:kings-1898",
+   "title": "King's American Dispensatory",
+   "author": "Harvey W. Felter & John U. Lloyd",
+   "year": 1898,
+   "era": "19th c.",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 3402800,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:grieve-1931",
+   "title": "A Modern Herbal",
+   "author": "Maud Grieve",
+   "year": 1931,
+   "era": "20th c.",
+   "tier": 2,
+   "licence": "Public Domain",
+   "chars": 1736900,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:ema-monographs",
+   "title": "EMA herbal monographs (selected)",
+   "author": "European Medicines Agency",
+   "year": 2016,
+   "era": "21st c.",
+   "tier": 2,
+   "licence": "CC-BY-SA-4.0",
+   "chars": 402300,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:duke",
+   "title": "Dr Duke's Phytochemical and Ethnobotanical Databases",
+   "author": "James A. Duke (USDA ARS)",
+   "year": 2003,
+   "era": "21st c.",
+   "tier": 5,
+   "licence": "Public Domain",
+   "chars": 8910000,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:chembl",
+   "title": "ChEMBL — compound bioactivity records (subset)",
+   "author": "EMBL-EBI",
+   "year": 2025,
+   "era": "21st c.",
+   "tier": 5,
+   "licence": "CC-BY-SA-4.0",
+   "chars": 2207000,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:wfo",
+   "title": "World Flora Online / WCVP taxonomy backbone",
+   "author": "WFO Consortium",
+   "year": 2024,
+   "era": "21st c.",
+   "tier": 5,
+   "licence": "CC-BY-4.0",
+   "chars": 744500,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:huangdi-neijing",
+   "title": "Huangdi Neijing — Suwen (trans.)",
+   "author": "anon. (Yellow Emperor corpus)",
+   "year": -200,
+   "era": "2nd c. BCE",
+   "tier": 4,
+   "licence": "Public Domain",
+   "chars": 613000,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:zhenjiu",
+   "title": "Zhenjiu Jiayi Jing (Systematic Classic of Acupuncture, trans.)",
+   "author": "Huangfu Mi",
+   "year": 282,
+   "era": "3rd c. CE",
+   "tier": 4,
+   "licence": "Public Domain",
+   "chars": 289400,
+   "status": "ok"
+  },
+  {
+   "source_id": "fixture:unverified-grimoire",
+   "title": "Untraced grimoire scan (licence unclear)",
+   "author": "unknown",
+   "year": 1700,
+   "era": "18th c.",
+   "tier": 3,
+   "licence": "UNVERIFIED",
+   "chars": 0,
+   "status": "excluded"
+  }
+ ],
+ "built": {
+  "fetched": 19,
+  "kept": 18,
+  "excluded": 1,
+  "deduped": 0,
+  "chars": 27080000
+ },
+ "stages": [
+  {
+   "stage": "aquire",
+   "label": "Licence-audited fetch",
+   "detail": "one entry per source in corpus/registry/sources.yaml"
+  },
+  {
+   "stage": "clean",
+   "label": "OCR clean · NFC · ≥200 chars",
+   "detail": "drops headers, page furniture, ligature noise"
+  },
+  {
+   "stage": "dedupe",
+   "label": "13-gram hash across sources",
+   "detail": "removes Gutenberg boilerplate and parallel editions"
+  },
+  {
+   "stage": "split",
+   "label": "deterministic 98/2 held-out",
+   "detail": "hash-based, reproducible from the manifest"
+  }
+ ]
+}

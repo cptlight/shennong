@@ -1,0 +1,801 @@
+{
+ "generated_at": "2026-11-05T09:00:00Z",
+ "fixture": true,
+ "note": "DEMO FIXTURE — invented scores, paraphrased provenance spans, for UI development only. Replaced by athanor's real output.",
+ "corpus": {
+  "sources": 18,
+  "chars": 27080000,
+  "tokens": 0
+ },
+ "hypotheses": [
+  {
+   "id": "H-06",
+   "title": "Liquorice decoction, taken for weeks, reproduces the mineralocorticoid excess the herbals describe",
+   "archetype": "repurposing",
+   "chain": {
+    "plant": "Glycyrrhiza glabra",
+    "preparation": "Decoction of the root, taken daily for 4–6 weeks",
+    "chemotype": "18β-glycyrrhetinic acid (glycyrrhizin aglycone)",
+    "target": "11β-hydroxysteroid dehydrogenase type 2 (11β-HSD2) inhibition",
+    "indication": "Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema"
+   },
+   "scores": {
+    "novelty": 0.47,
+    "plausibility": 0.83,
+    "testability": 0.91,
+    "evidence": 0.88,
+    "composite": 0.722
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:kings-1898",
+     "title": "King's American Dispensatory",
+     "author": "Harvey W. Felter & John U. Lloyd",
+     "year": 1898,
+     "era": "19th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "In large doses, long continued, it has been known to produce puffiness of the face and swelling of the ankles, and to disorder the action of the heart.",
+     "span_kind": "paraphrase",
+     "locator": "Liquorice"
+    },
+    {
+     "source_id": "fixture:ema-monographs",
+     "title": "EMA herbal monographs (selected)",
+     "author": "European Medicines Agency",
+     "year": 2016,
+     "era": "21st c.",
+     "tier": 2,
+     "licence": "CC-BY-SA-4.0",
+     "span": "Contraindicated in patients with hypertension, hypokalaemia, or a history of fluid retention; use limited to four to six weeks.",
+     "span_kind": "paraphrase",
+     "locator": "Liquorice root"
+    },
+    {
+     "source_id": "fixture:culpeper-1653",
+     "title": "The Complete Herbal",
+     "author": "Nicholas Culpeper",
+     "year": 1653,
+     "era": "17th c.",
+     "tier": 3,
+     "licence": "Public Domain",
+     "span": "The root is boiled in waters for the breast and the roughness of the throat.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "Take urinary free cortisol/cortisone ratio in a 24 h collection, with and without a 4-week liquorice-decoction exposure in a controlled feeding study n=24. 11β-HSD2 inhibition raises the cortisol:cortisone ratio and lowers serum potassium; if neither moves at intake-matched exposure, the mechanism is wrong and the effect is something else. Readouts are non-invasive and cost roughly the price of a metabolic-ward day-case.",
+   "uncertainty": "The historical record does not tell us how much glycyrrhizin the decoctions contained — root quality varies by an order of magnitude. We also cannot separate glycyrrhizin from the flavonoid fraction, which may contribute independently.",
+   "safety": {
+    "flags": [
+     "highest-severity safety signal in the ranked set",
+     "contraindicated in hypertension / hypokalaemia / pregnancy",
+     "interacts with diuretics and digoxin via potassium"
+    ],
+    "severity": "high"
+   },
+   "dossier": {
+    "rationale": "This is the ranked list doing its job in the direction nobody advertises. King's American Dispensatory (1898) already describes the oedema; the EMA monograph turns that observation into a contraindication. The corpus contains both ends of the chain. Nothing in the output is new pharmacology — the new thing is that a system reconstructed a hazard from a 17th-century comfort remedy and surfaced it beside the therapeutic hypotheses, where a person could actually read it.",
+    "mechanistic_chain": [
+     "Glycyrrhizin is hydrolysed in the gut to 18β-glycyrrhetinic acid.",
+     "18β-glycyrrhetinic acid competitively inhibits 11β-HSD2 in the distal nephron.",
+     "Cortisol is no longer inactivated to cortisone, so it occupies the mineralocorticoid receptor.",
+     "Sodium retention, potassium loss, hypertension, suppression of renin and aldosterone.",
+     "The same enzyme inhibition explains the hypokalaemic muscle weakness reported in the older dispensatories."
+    ],
+    "prior_art_refs": [
+     "Conn, Rovner & Cohen (1968) — liquorice-induced pseudoaldosteronism",
+     "Stewart et al. (1987) — 11β-HSD2 and the cortisol/cortisone shuttle",
+     "EMA herbal monograph, Glycyrrhiza glabra root"
+    ],
+    "cost_estimate": "Low — no new compounds, no animal work; a clinical-metabolism collaborator and one IRB amendment.",
+    "next_steps": [
+     "Add a dose-duration field to the Preparation entity so the graph can reason about exposure.",
+     "Check whether the corpus records the same warning for other glycyrrhizin-containing formulas.",
+     "Ship as a safety annotation on every hypothesis that proposes a liquorice preparation."
+    ]
+   },
+   "rank": 1
+  },
+  {
+   "id": "H-03",
+   "title": "Wormwood's sesquiterpene lactones alkylate NF-κB p65 — a colitis rationale hiding in a bitter digestive",
+   "archetype": "repurposing",
+   "chain": {
+    "plant": "Artemisia absinthium",
+    "preparation": "Ethanolic tincture of the flowering tops (1:5, 45% EtOH)",
+    "chemotype": "absinthin, artabsin, artemolin (guaianolide sesquiterpene lactones; α-methylene-γ-butyrolactone)",
+    "target": "NF-κB p65 (RelA) — irreversible Michael addition at Cys38",
+    "indication": "Ulcerative colitis, mucosal inflammatory signalling"
+   },
+   "scores": {
+    "novelty": 0.62,
+    "plausibility": 0.64,
+    "testability": 0.79,
+    "evidence": 0.48,
+    "composite": 0.64
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:culpeper-1653",
+     "title": "The Complete Herbal",
+     "author": "Nicholas Culpeper",
+     "year": 1653,
+     "era": "17th c.",
+     "tier": 3,
+     "licence": "Public Domain",
+     "span": "Wormwood is bitter and warming; it strengthens the stomach, kills worms, and is good for a weak digestion.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:gerard-1633",
+     "title": "The Herball or Generall Historie of Plantes",
+     "author": "John Gerard",
+     "year": 1633,
+     "era": "17th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "The herb is used in bitter drinks and conserves for the stomach and the obstructions of the liver and the spleen.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:grieve-1931",
+     "title": "A Modern Herbal",
+     "author": "Maud Grieve",
+     "year": 1931,
+     "era": "20th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Wormwood is one of the most bitter plants; the infusion is a stomachic and a tonic, and the powdered herb has been used as a vermifuge.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "The claim is mechanism-specific. Treat DSS-colitis mice with an absinthin-enriched fraction and a lactone-depleted fraction at matched bitterness; if p65 Cys38 adducts are absent by click-probe and the lactone-depleted fraction is equally protective, the NF-κB mechanism is dead. Positive control: parthenolide. If IL-10-/- spontaneous colitis is unaffected, the effect is DSS-model-specific and does not generalise.",
+   "uncertainty": "Bitterness itself drives gut hormone release (GLP-1, CCK), which could produce an anti-inflammatory readout with no direct NF-κB involvement. The guaianolide content of commercial wormwood varies enormously and is rarely specified.",
+   "safety": {
+    "flags": [
+     "thujone content limits oral use and is itself a regulatory concern",
+     "absinthe-associated neurotoxicity is historically contested; do not conflate",
+     "no dosing conclusion is implied — this is a preclinical rationale"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "Bitter European digestives are a pharmacological family, not a list of folk claims. The α-methylene-γ-butyrolactone pharmacophore is the best-characterised covalent NF-κB warhead in natural products — parthenolide is the reference compound. Wormwood carries the same warhead on guaianolide scaffolds. The tradition recorded the use (weak digestion, 'obstructions'); the modern literature supplies the chemistry; nobody appears to have put the two together for colitis specifically.",
+    "mechanistic_chain": [
+     "Absinthin/artabsin bear an exocyclic methylene on the lactone ring.",
+     "The β-carbon is electrophilic and is attacked by the Cys38 thiol of p65 — covalent, irreversible.",
+     "Loss of p65 DNA binding reduces transcription of IL-6, TNF-α and ICAM-1.",
+     "In intestinal epithelium this maps onto the documented mucosal inflammatory cascade.",
+     "Bitterness additionally recruits TAS2R signalling in enteroendocrine cells — a second, independent axis."
+    ],
+    "prior_art_refs": [
+     "García-Piñeres et al. — sesquiterpene lactones as NF-κB inhibitors",
+     "Mathema et al. (2012) — parthenolide and NF-κB in inflammation",
+     "Bork et al. (1997) — guaianolides of Artemisia absinthium"
+    ],
+    "cost_estimate": "Medium — one fractionation campaign plus a 4-week DSS study.",
+    "next_steps": [
+     "Resolve 'absinthium' vs 'absinthium album' historical naming to one taxon with confidence scores.",
+     "Ask whether the corpus's 'obstructions' language co-occurs with intestinal terms more than chance.",
+     "Specify the chemotype requirement explicitly in the falsification plan before any wet work."
+    ]
+   },
+   "rank": 2
+  },
+  {
+   "id": "H-02",
+   "title": "Danshen's tanshinones activate Nrf2 — a vascular oxidative-stress rationale for a heart herb",
+   "archetype": "chemotype_bridge",
+   "chain": {
+    "plant": "Salvia miltiorrhiza",
+    "preparation": "Wine decoction of the root (traditional 'jiu jian')",
+    "chemotype": "tanshinone IIA, cryptotanshinone, salvianolic acid B",
+    "target": "KEAP1/Nrf2 (cytoprotective response element induction)",
+    "indication": "Endothelial oxidative stress in early hypertension"
+   },
+   "scores": {
+    "novelty": 0.55,
+    "plausibility": 0.61,
+    "testability": 0.72,
+    "evidence": 0.58,
+    "composite": 0.612
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:bencao-gangmu",
+     "title": "Bencao Gangmu (Compendium of Materia Medica, trans.)",
+     "author": "Li Shizhen",
+     "year": 1596,
+     "era": "16th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Dan shen invigorates the blood, cools the heart and quiets the spirit; it is given when the blood is stasis and the chest is oppressed.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:grieve-1931",
+     "title": "A Modern Herbal",
+     "author": "Maud Grieve",
+     "year": 1931,
+     "era": "20th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "The red-rooted sage of the Chinese is used for the blood, and the decoction is taken warm with wine where the circulation is sluggish.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "Human aortic endothelial cells under H2O2: if tanshinone IIA does not raise NQO1/HO-1 transcripts and nuclear Nrf2, and if ML385 (Nrf2 inhibitor) does not ablate the protective effect, the pathway claim fails. In vivo: Nrf2-/- mice should lose the vascular protection completely.",
+   "uncertainty": "'Blood stasis' is a process category, not a molecular one — the mapping to oxidative stress is our inference, and a plausible alternative reading is that the TCM category is closer to rheology.",
+   "safety": {
+    "flags": [
+     "Danshen is a recognised warfarin interaction — bleeding risk",
+     "no dosing or co-administration guidance is implied"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "Tanshinones are lipophilic quinones with a well-documented electrophilic response element signature; salvianolic acid B is a parallel antioxidant axis in the same root. The tradition's 'blood stasis' category and the modern oxidative-stress literature describe the same organ-level problem at two different resolutions.",
+    "mechanistic_chain": [
+     "Tanshinone IIA modifies KEAP1 cysteines.",
+     "Nrf2 escapes ubiquitination and translocates.",
+     "NQO1, HO-1, GCLM induced.",
+     "Endothelial ROS burden falls; adhesion molecule expression drops."
+    ],
+    "prior_art_refs": [
+     "Xu & Liu — tanshinones and Nrf2 signalling",
+     "EMA/WHO monographs on Salvia miltiorrhiza"
+    ],
+    "cost_estimate": "Medium — cell work is cheap; the in vivo arm needs a breeding colony.",
+    "next_steps": [
+     "Separate the quinone and the phenolic-acid arms in the fractionation plan.",
+     "Check the corpus for 'blood stasis' co-occurrence with pulse-quality terms."
+    ]
+   },
+   "rank": 3
+  },
+  {
+   "id": "H-01",
+   "title": "The water-bath distillation the alchemists insisted on yields a linalool chemotype that modulates the benzodiazepine site",
+   "archetype": "process_translation",
+   "chain": {
+    "plant": "Lavandula angustifolia",
+    "preparation": "Hydrodistillation in balneum Mariae, 3 h (the alchemical 'bath of Mary')",
+    "chemotype": "linalool 28–44%, linalyl acetate 25–38%, terpinen-4-ol",
+    "target": "GABA_A receptor complex, benzodiazepine site (positive allosteric modulation)",
+    "indication": "Generalised anxiety — inhaled and oral routes are not interchangeable"
+   },
+   "scores": {
+    "novelty": 0.41,
+    "plausibility": 0.68,
+    "testability": 0.86,
+    "evidence": 0.62,
+    "composite": 0.611
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:rosarium",
+     "title": "Rosarium Philosophorum",
+     "author": "anon. (Pseudo-Arnaldus)",
+     "year": 1550,
+     "era": "16th c.",
+     "tier": 3,
+     "licence": "Public Domain",
+     "span": "In the bath of Mary the vessel is warmed with the heat of water only, so that the gentle heat may draw the spirit without burning it; this is the distillation that admitteth no violence.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:gerard-1633",
+     "title": "The Herball or Generall Historie of Plantes",
+     "author": "John Gerard",
+     "year": 1633,
+     "era": "17th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "The distilled water of Lavender drawn in a bath of warm water, that the fire touch it not, is of all the waters the most comfortable to the head and to the sinews.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:culpeper-1653",
+     "title": "The Complete Herbal",
+     "author": "Nicholas Culpeper",
+     "year": 1653,
+     "era": "17th c.",
+     "tier": 3,
+     "licence": "Public Domain",
+     "span": "It comforteth the brain and the nerves, and is good against the trembling of the joints and the palsy.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:ema-monographs",
+     "title": "EMA herbal monographs (selected)",
+     "author": "European Medicines Agency",
+     "year": 2016,
+     "era": "21st c.",
+     "tier": 2,
+     "licence": "CC-BY-SA-4.0",
+     "span": "Traditional herbal medicinal product for the relief of mild symptoms of mental stress and exhaustion, and mild sleep disorders.",
+     "span_kind": "paraphrase",
+     "locator": "Lavender flower"
+    }
+   ],
+   "falsification_plan": "Elevated plus maze in C57BL/6J, inhaled linalool at a fixed chamber concentration. If flumazenil (3 mg/kg i.p.) fails to reverse the anxiolytic effect, the benzodiazepine-site mechanism is falsified and a 5-HT1A or olfactory route remains. Second kill: β2/β3-subunit knockouts should abolish the effect if the GABA_A site is truly involved. Preclinical design only — not a dosing recommendation for any human.",
+   "uncertainty": "Route is the confounder that decides the whole hypothesis: inhaled linalool reaches plasma at a fraction of the oral dose, and the human trial literature mixes both. 'Anxiolytic' also spans acute sedation and chronic trait anxiety, which are different claims.",
+   "safety": {
+    "flags": [
+     "essential oils are not benign by default — oral linalool has a documented paediatric toxicity literature",
+     "no dosing guidance is offered or implied"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "The alchemists were emphatic about the water bath, and they were right for a reason they did not articulate: hydrodistillation at ~100 °C in a sealed gentle-heat regime preserves the acetate esters that a naked flame destroys. Gerard's 'that the fire touch it not' is an extraction parameter wearing a liturgical costume. The chemistry of the resulting oil points at a specific receptor site, and that site has a selective antagonist, which makes the whole hypothesis cheap to kill.",
+    "mechanistic_chain": [
+     "Balneum Mariae holds the still below the thermal degradation threshold of linalyl acetate.",
+     "The condensate is a monoterpene-rich oil rather than a sesquiterpene-heavy one.",
+     "Linalool reaches the GABA_A complex and potentiates GABA-evoked currents at the benzodiazepine site.",
+     "Flumazenil reverses the potentiation — the discriminating experiment.",
+     "Chronic exposure additionally down-regulates 5-HT1A in some models — a second axis."
+    ],
+    "prior_art_refs": [
+     "Russo (2011) — linalool and the GABA_A / 5-HT1A framework",
+     "Hritcu et al. — inhaled linalool and anxiety behaviour",
+     "EMA monograph, Lavandula angustifolia flower"
+    ],
+    "cost_estimate": "Low — one still, one GC-MS run, one behavioural cohort.",
+    "next_steps": [
+     "Encode the distillation temperature as a Process entity attribute, not free text.",
+     "Check whether the corpus's water-bath insistence correlates with ester-rich plants.",
+     "Run the flumazenil arm before committing to any larger study."
+    ]
+   },
+   "rank": 4
+  },
+  {
+   "id": "H-10",
+   "title": "Horehound's bitterness may be a bronchodilator, not just an expectorant",
+   "archetype": "chemotype_bridge",
+   "chain": {
+    "plant": "Marrubium vulgare",
+    "preparation": "Infusion of the dried herb",
+    "chemotype": "marrubiin, premarrubiin (labdane diterpenoid bitter)",
+    "target": "TAS2R bitter receptors on airway smooth muscle (bronchodilation)",
+    "indication": "Cough and bronchospasm in obstructive airway disease"
+   },
+   "scores": {
+    "novelty": 0.66,
+    "plausibility": 0.52,
+    "testability": 0.71,
+    "evidence": 0.35,
+    "composite": 0.569
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:grieve-1931",
+     "title": "A Modern Herbal",
+     "author": "Maud Grieve",
+     "year": 1931,
+     "era": "20th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Horehound is esteemed for its bitter tonic action and for coughs; it gently promotes expectoration. Its bitterness is very great.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:kings-1898",
+     "title": "King's American Dispensatory",
+     "author": "Harvey W. Felter & John U. Lloyd",
+     "year": 1898,
+     "era": "19th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Horehound is tonic, expectorant and gently laxative; it is much used in cough mixtures and in the form of a syrup.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "Isolated human airway smooth-muscle strips, pre-contracted with carbachol: if marrubiin does not relax them and if the effect is not lost in TAS2R-specific knockdown, the bitter-bronchodilator hypothesis fails. Chloroquine (known TAS2R agonist) is the positive control.",
+   "uncertainty": "The expectorant tradition and the bronchodilator hypothesis can both be true; a cough outcome cannot distinguish them. Marrubiin's bitterness is on a different receptor class from the canonical horehound mucilage effect, so the fraction matters.",
+   "safety": {
+    "flags": [
+     "animal toxicity signal for marrubiin at high parenteral doses — route matters"
+    ],
+    "severity": "none"
+   },
+   "dossier": {
+    "rationale": "Bitter taste receptors are expressed in airway smooth muscle, where agonists cause relaxation that is independent of β2-adrenoceptors. Horehound is one of the bitterest herbs in the European materia medica and its indication is literally the airway. The tradition had the right organ and the wrong mechanism; the receptor was only characterised in the 2010s.",
+    "mechanistic_chain": [
+     "Marrubiin binds TAS2R isoforms on airway smooth muscle.",
+     "Gβγ and PLCβ signalling raises local Ca²⁺ in a compartmentalised way.",
+     "BK_Ca channel opening hyperpolarises the cell.",
+     "Smooth muscle relaxes — bronchodilation without β2 involvement."
+    ],
+    "prior_art_refs": [
+     "Deshpande et al. (2010) — TAS2R agonists relax human airway smooth muscle",
+     "Ligresti et al. — marrubiin and TRP channel modulation"
+    ],
+    "cost_estimate": "Low — isolated-tissue pharmacology is the cheapest honest test in the set.",
+    "next_steps": [
+     "Check whether the corpus pairs horehound with 'wheeze' rather than 'cough'.",
+     "Add TAS2R to the Target ontology with a receptor-family parent."
+    ]
+   },
+   "rank": 5
+  },
+  {
+   "id": "H-08",
+   "title": "Peony–liquorice may act on muscle chloride handling — and we are the least sure of this one",
+   "archetype": "repurposing",
+   "chain": {
+    "plant": "Paeonia lactiflora / Glycyrrhiza uralensis",
+    "preparation": "Combined decoction (kampo shakuyaku-kanzo-tō proportions)",
+    "chemotype": "paeoniflorin + glycyrrhizin, co-extracted",
+    "target": "NKCC1 / KCC2 chloride homeostasis in skeletal muscle (candidate)",
+    "indication": "Muscle cramp and spasm"
+   },
+   "scores": {
+    "novelty": 0.58,
+    "plausibility": 0.49,
+    "testability": 0.68,
+    "evidence": 0.55,
+    "composite": 0.569
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:ema-monographs",
+     "title": "EMA herbal monographs (selected)",
+     "author": "European Medicines Agency",
+     "year": 2016,
+     "era": "21st c.",
+     "tier": 2,
+     "licence": "CC-BY-SA-4.0",
+     "span": "Peony root: traditional use for mild spasms and cramping in the lower abdomen; combinations with liquorice root are traditional in Japanese kampo medicine for muscle cramp.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:kings-1898",
+     "title": "King's American Dispensatory",
+     "author": "Harvey W. Felter & John U. Lloyd",
+     "year": 1898,
+     "era": "19th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Peony is antispasmodic and tonic; it has been recommended in spasms of the muscles and in the convulsive affections of childhood.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:dioscorides",
+     "title": "De Materia Medica",
+     "author": "Pedanius Dioscorides",
+     "year": 70,
+     "era": "1st c. CE",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "The root dried helpeth the falling sickness, and the seed taken in wine appeaseth the pains of the belly.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "Intracellular chloride imaging in isolated muscle fibres with and without the formula: if the NKCC1/KCC2 ratio does not shift, or if bumetanide (NKCC1 inhibitor) occludes the whole effect rather than adding to it, the chloride hypothesis is unsupported. The honest alternative is that the effect is glycyrrhizin-driven mineralocorticoid action, which H-06 already covers.",
+   "uncertainty": "This is the weakest hypothesis in the ranked set and it is presented as such. The formula is a combination, so attribution to a single compound is not available. The mechanism is a candidate, not a finding — the composite score reflects that.",
+   "safety": {
+    "flags": [
+     "contains liquorice — inherits every H-06 contraindication",
+     "combination products make dose attribution impossible"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "Two independent traditions converge on spasm and cramp with the same pair of roots, which is the kind of convergence the pipeline is built to notice. The mechanism, however, is genuinely unknown; we surface the hypothesis with a deliberately low plausibility score rather than dressing it up.",
+    "mechanistic_chain": [
+     "Unexplained at the molecular level.",
+     "Candidate: altered NKCC1/KCC2 balance changes intracellular Cl⁻.",
+     "Candidate: glycyrrhizin-mediated mineralocorticoid effect on the muscle membrane.",
+     "Distinguishing experiment: chloride imaging plus bumetanide occlusion."
+    ],
+    "prior_art_refs": [
+     "Kampo clinical literature on shakuyaku-kanzo-tō and muscle cramp",
+     "EMA monograph, Paeonia lactiflora root"
+    ],
+    "cost_estimate": "Medium — needs electrophysiology or chloride-sensitive dye work.",
+    "next_steps": [
+     "Mark this as 'mechanism open' in the UI rather than shipping a fake chain.",
+     "Search the corpus for the two plants named together — that is the real signal."
+    ]
+   },
+   "rank": 6
+  },
+  {
+   "id": "H-09",
+   "title": "Feverfew's parthenolide is the reference NF-κB warhead — and that is exactly why its novelty score is low",
+   "archetype": "repurposing",
+   "chain": {
+    "plant": "Tanacetum parthenium",
+    "preparation": "Freeze-dried leaf capsules (traditional prophylactic)",
+    "chemotype": "parthenolide (germacranolide sesquiterpene lactone)",
+    "target": "NF-κB p65 Cys38 alkylation; also IKKβ",
+    "indication": "Migraine prophylaxis"
+   },
+   "scores": {
+    "novelty": 0.18,
+    "plausibility": 0.78,
+    "testability": 0.74,
+    "evidence": 0.83,
+    "composite": 0.5
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:gerard-1633",
+     "title": "The Herball or Generall Historie of Plantes",
+     "author": "John Gerard",
+     "year": 1633,
+     "era": "17th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Featherfew is used for the megrim and for the giddiness of the head, and the herb is worn about the person by some for that purpose.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:grieve-1931",
+     "title": "A Modern Herbal",
+     "author": "Maud Grieve",
+     "year": 1931,
+     "era": "20th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Feverfew has been used for many years for the relief of migraine, and the leaves are eaten fresh in some country districts for that complaint.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "Already substantially tested — the falsifying experiment is the literature itself. A novelty score of 0.18 is the system reporting that this idea is in the modern literature, which is the correct answer, not a failure.",
+   "uncertainty": "The clinical trial literature is mixed and the parthenolide content of commercial preparations is wildly variable. We cite this as a calibration point for the novelty axis.",
+   "safety": {
+    "flags": [
+     "Asteraceae allergy",
+     "traditional contraindication in pregnancy"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "A deliberately included low-novelty control at the *scientific* level (as distinct from the negative control at the statistical level). If our novelty score could not recognise parthenolide/NF-κB as well-trodden, it would not be measuring novelty at all.",
+    "mechanistic_chain": [
+     "Parthenolide alkylates p65 Cys38 and inhibits IKKβ.",
+     "NF-κB-dependent cytokine transcription falls.",
+     "Downstream effect on trigeminal CGRP release is the migraine link (inferred)."
+    ],
+    "prior_art_refs": [
+     "Mathema et al. (2012)",
+     "Palevitch & Earon — feverfew migraine trials",
+     "EMA monograph, Tanacetum parthenium"
+    ],
+    "cost_estimate": "None — the experiment has been run by others. This is a calibration record.",
+    "next_steps": [
+     "Keep as a regression test: if the novelty score drifts above 0.4 on a known pairing, the novelty estimator is broken."
+    ]
+   },
+   "rank": 7
+  },
+  {
+   "id": "H-07",
+   "title": "Berberine, AMPK and the gut — a known axis, scored as known",
+   "archetype": "chemotype_bridge",
+   "chain": {
+    "plant": "Berberis vulgaris",
+    "preparation": "Decoction of the root bark",
+    "chemotype": "berberine (protoberberine isoquinoline alkaloid)",
+    "target": "AMPK activation (indirect, via gut microbiota and mitochondrial respiration)",
+    "indication": "Metabolic syndrome: dyslipidaemia, insulin resistance"
+   },
+   "scores": {
+    "novelty": 0.22,
+    "plausibility": 0.74,
+    "testability": 0.61,
+    "evidence": 0.7,
+    "composite": 0.486
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:dioscorides",
+     "title": "De Materia Medica",
+     "author": "Pedanius Dioscorides",
+     "year": 70,
+     "era": "1st c. CE",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "The root of the barberry is sharp and cleansing; it is given for the jaundice and for the fluxes of the belly.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:kings-1898",
+     "title": "King's American Dispensatory",
+     "author": "Harvey W. Felter & John U. Lloyd",
+     "year": 1898,
+     "era": "19th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Barberry is tonic and laxative; the bark is used in jaundice and in dyspepsia with a bitter taste.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "Well studied; the discriminating experiment is germ-free vs conventionalised mice, which separates the microbiota-mediated effect from direct AMPK activation. Largely already done.",
+   "uncertainty": "The tradition's indication (jaundice, fluxes) is not the modern one (metabolic syndrome). The chain is real but the traditional-source link is weak, which is why evidence is graded 0.70 rather than higher.",
+   "safety": {
+    "flags": [
+     "berberine interacts with CYP3A4 substrates; pregnancy contraindication"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "Another calibration record: high plausibility, high evidence, low novelty. The corpus link is thin because the tradition used barberry for the liver and the bowel, not for glucose — the modern indication is an extension, not a rediscovery.",
+    "mechanistic_chain": [
+     "Berberine alters bile-acid metabolism and gut microbiota composition.",
+     "Secondary bile acids modulate FXR signalling.",
+     "AMPK is activated indirectly; hepatic gluconeogenesis falls."
+    ],
+    "prior_art_refs": [
+     "Kong et al. (2004) — berberine and AMPK",
+     "Zhang et al. — gut microbiota and berberine"
+    ],
+    "cost_estimate": "Already done in the literature.",
+    "next_steps": [
+     "Grade the traditional-evidence axis separately from the modern-mechanism axis."
+    ]
+   },
+   "rank": 8
+  },
+  {
+   "id": "H-05",
+   "title": "Curcumin for osteoarthritis — ranked last on novelty because it is ranked by novelty",
+   "archetype": "repurposing",
+   "chain": {
+    "plant": "Curcuma longa",
+    "preparation": "Decoction / powder",
+    "chemotype": "curcumin, demethoxycurcumin",
+    "target": "NF-κB; also numerous pan-assay interference liabilities",
+    "indication": "Osteoarthritis pain and inflammation"
+   },
+   "scores": {
+    "novelty": 0.03,
+    "plausibility": 0.72,
+    "testability": 0.44,
+    "evidence": 0.81,
+    "composite": 0.25
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:charaka",
+     "title": "Charaka Samhita (English trans.)",
+     "author": "Agnivesha / Charaka",
+     "year": 100,
+     "era": "1st–2nd c. CE",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "The physician should consider the country, the season, the digestive fire and the strength of the body, for the same drug acts differently in different constitutions.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:grieve-1931",
+     "title": "A Modern Herbal",
+     "author": "Maud Grieve",
+     "year": 1931,
+     "era": "20th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "Turmeric is used as a colouring and as a stimulant to the liver.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "Nothing left to falsify that has not been attempted. Included as the floor of the novelty axis: 2,000 years of use and a very large modern literature.",
+   "uncertainty": "Curcumin is the canonical cautionary tale of natural-product pharmacology — poor bioavailability and PAINS interference. Its low rank is a feature of the scorer.",
+   "safety": {
+    "flags": [
+     "curcumin is a known pan-assay interference compound; bioactivity readings need care"
+    ],
+    "severity": "none"
+   },
+   "dossier": {
+    "rationale": "The floor of the novelty axis and the reason the axis exists. A system that ranked curcumin highly would be re-deriving other people's search results.",
+    "mechanistic_chain": [
+     "Curcumin is an electrophile that modifies many targets.",
+     "NF-κB inhibition is reported but not mechanism-specific.",
+     "Bioavailability without an adjuvant is very low."
+    ],
+    "prior_art_refs": [
+     "Nelson et al. (2017) — the curcumin clinical literature",
+     "Baell & Holloway (2010) — PAINS"
+    ],
+    "cost_estimate": "None — do not run this experiment.",
+    "next_steps": [
+     "Keep as the novelty floor regression test."
+    ]
+   },
+   "rank": 9
+  },
+  {
+   "id": "H-04",
+   "title": "Lungwort is spotted like a lung, therefore it treats the lungs — the negative control",
+   "archetype": "signature_test",
+   "chain": {
+    "plant": "Pulmonaria officinalis",
+    "preparation": "Infusion of the leaves",
+    "chemotype": "mucilage polysaccharides, allantoin, rosmarinic acid (no lung-specific warhead identified)",
+    "target": "Pulmonary epithelium (by morphological analogy only)",
+    "indication": "Cough, catarrh, 'diseases of the lungs'"
+   },
+   "scores": {
+    "novelty": 0.12,
+    "plausibility": 0.15,
+    "testability": 0.55,
+    "evidence": 0.2,
+    "composite": 0.203
+   },
+   "provenance": [
+    {
+     "source_id": "fixture:culpeper-1653",
+     "title": "The Complete Herbal",
+     "author": "Nicholas Culpeper",
+     "year": 1653,
+     "era": "17th c.",
+     "tier": 3,
+     "licence": "Public Domain",
+     "span": "Lungwort is so called because the leaves are spotted like the lungs of a man, and therefore it was held by the signature of the thing to be a sovereign remedy for all diseases of the lungs.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    },
+    {
+     "source_id": "fixture:gerard-1633",
+     "title": "The Herball or Generall Historie of Plantes",
+     "author": "John Gerard",
+     "year": 1633,
+     "era": "17th c.",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "It is called lungwort of the spots and marks of the leaf, resembling the lungs of a beast; and is thought good for the cough and the ptisick.",
+     "span_kind": "paraphrase",
+     "locator": ""
+    }
+   ],
+   "falsification_plan": "This is the doctrine of signatures stated as a testable claim. Prediction: across the corpus, morphological similarity to an organ predicts the recorded indication better than chance. The measured answer is close to zero (see the negative control in the eval table). A null here is the result we expect; a strong non-zero correlation would mean our extraction is picking up organ-word co-occurrence, not pharmacology.",
+   "uncertainty": "Demulcent mucilage genuinely soothes a sore throat — a real, non-signature effect that could mimic a positive correlation on cough outcomes. That confound is why the test is on organ-level indication, not symptom relief.",
+   "safety": {
+    "flags": [],
+    "severity": "none"
+   },
+   "dossier": {
+    "rationale": "Included so the negative control has a face. The doctrine of signatures is one of the most productive and most wrong ideas in the history of pharmacology, and it is exactly what a naive text-mining system will 'discover' if you do not test for it.",
+    "mechanistic_chain": [
+     "Morphological resemblance asserted.",
+     "Indication assigned by analogy.",
+     "No molecular link proposed.",
+     "This is the null."
+    ],
+    "prior_art_refs": [
+     "Foucault, The Order of Things — the signature episteme",
+     "Pearce (2008) — doctrine of signatures in practice"
+    ],
+    "cost_estimate": "None — and it is the reason we trust the rest of the list.",
+    "next_steps": [
+     "Report the rho and p in the eval table on every run, not just once."
+    ]
+   },
+   "rank": 10
+  }
+ ]
+}

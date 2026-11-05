@@ -1,0 +1,38 @@
+name,plant_binomial,compound_class,smiles,cid,source_id
+absinthin,Artemisia absinthium,sesquiterpene_lactone,,,fixture_duke_ethnobotany
+thujone,Artemisia absinthium,monoterpenoid,,,fixture_duke_ethnobotany
+rosmarinic_acid,Pulmonaria officinalis,phenolic_acid,,,fixture_duke_ethnobotany
+crocin,Crocus sativus,carotenoid,,,fixture_duke_ethnobotany
+safranal,Crocus sativus,monoterpenoid,,,fixture_duke_ethnobotany
+allantoin,Symphytum officinale,purine,,,fixture_duke_ethnobotany
+pyrrolizidine_alkaloid,Symphytum officinale,pyrrolizidine_alkaloid,,,fixture_duke_ethnobotany
+stachydrine,Stachys officinalis,alkaloid,,,fixture_duke_ethnobotany
+anethole,Foeniculum vulgare,phenylpropanoid,,,fixture_duke_ethnobotany
+fenchone,Foeniculum vulgare,monoterpenoid,,,fixture_duke_ethnobotany
+salicin,Salix alba,phenolic_glycoside,,,fixture_duke_ethnobotany
+morphine,Papaver somniferum,alkaloid,,,fixture_duke_ethnobotany
+codeine,Papaver somniferum,alkaloid,,,fixture_duke_ethnobotany
+allicin,Allium sativum,organosulfur,,,fixture_duke_ethnobotany
+menthol,Mentha x piperita,monoterpenoid,,,fixture_duke_ethnobotany
+menthone,Mentha x piperita,monoterpenoid,,,fixture_duke_ethnobotany
+glycyrrhizin,Glycyrrhiza glabra,triterpenoid_saponin,,,fixture_duke_ethnobotany
+bisabolol,Matricaria chamomilla,sesquiterpenoid,,,fixture_duke_ethnobotany
+apigenin,Matricaria chamomilla,flavonoid,,,fixture_duke_ethnobotany
+linalool,Lavandula angustifolia,monoterpenoid,,,fixture_duke_ethnobotany
+linalyl_acetate,Lavandula angustifolia,monoterpenoid_ester,,,fixture_duke_ethnobotany
+curcumin,Curcuma longa,curcuminoid,,,fixture_duke_ethnobotany
+gingerol,Zingiber officinale,gingerol,,,fixture_duke_ethnobotany
+ginkgolide_B,Ginkgo biloba,diterpenoid_lactone,,,fixture_duke_ethnobotany
+ginsenoside_Rb1,Panax ginseng,triterpenoid_saponin,,,fixture_duke_ethnobotany
+quinine,Cinchona officinalis,alkaloid,,,fixture_duke_ethnobotany
+digoxin,Digitalis purpurea,cardiac_glycoside,,,fixture_duke_ethnobotany
+atropine,Atropa belladonna,alkaloid,,,fixture_duke_ethnobotany
+scopolamine,Atropa belladonna,alkaloid,,,fixture_duke_ethnobotany
+tetrahydrocannabinol,Cannabis sativa,cannabinoid,,,fixture_duke_ethnobotany
+cannabidiol,Cannabis sativa,cannabinoid,,,fixture_duke_ethnobotany
+hypericin,Hypericum perforatum,naphthodianthrone,,,fixture_duke_ethnobotany
+hyperforin,Hypericum perforatum,phloroglucinol,,,fixture_duke_ethnobotany
+thymol,Thymus vulgaris,monoterpenoid,,,fixture_duke_ethnobotany
+chamazulene,Achillea millefolium,sesquiterpenoid,,,fixture_duke_ethnobotany
+aloin,Aloe vera,anthraquinone,,,fixture_duke_ethnobotany
+emodin,Aloe vera,anthraquinone,,,fixture_duke_ethnobotany

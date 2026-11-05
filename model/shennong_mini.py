@@ -1,10 +1,10 @@
-"""ATHANOR-Mini: a small Llama-style decoder for computational ethnopharmacology.
+"""SHENNONG-Mini: a small Llama-style decoder for computational ethnopharmacology.
 
 Written from scratch in plain PyTorch (no transformers/ xformers / flash-attn) so the
 whole training stack is reproducible on a CPU-only machine.  Architecture matches
 Llama 2/3 and Qwen2.5 (RMSNorm, RoPE, SwiGLU, grouped-query attention, tied
-embeddings), so the *same* file can instantiate the from-scratch ``athanor-mini``
-and a Qwen2.5-0.5B-shaped ``athanor-0.5B`` config.
+embeddings), so the *same* file can instantiate the from-scratch ``shennong-mini``
+and a Qwen2.5-0.5B-shaped ``shennong-0.5B`` config.
 
 Reference: Touvron et al. 2023 (Llama 2, arXiv:2307.09288); Su et al. 2021 (RoPE,
 arXiv:2104.09864); Shazeer 2020 (SwiGLU, arXiv:2002.05202).
@@ -204,7 +204,7 @@ class Block(nn.Module):
 # --------------------------------------------------------------------------------------
 # Model
 # --------------------------------------------------------------------------------------
-class AthanorMini(nn.Module):
+class ShennongMini(nn.Module):
     """Small Llama-style causal language model."""
 
     def __init__(self, cfg: ModelConfig) -> None:
@@ -236,7 +236,7 @@ class AthanorMini(nn.Module):
 
     # -- convenience ------------------------------------------------------------------
     @classmethod
-    def from_config(cls, config: ModelConfig | str | Path | dict) -> "AthanorMini":
+    def from_config(cls, config: ModelConfig | str | Path | dict) -> "ShennongMini":
         if isinstance(config, (str, Path)):
             config = ModelConfig.from_json(config)
         elif isinstance(config, dict):
@@ -337,7 +337,7 @@ class AthanorMini(nn.Module):
 # --------------------------------------------------------------------------------------
 # Checkpoint helpers (shared by training scripts)
 # --------------------------------------------------------------------------------------
-def save_checkpoint(path: str | Path, model: AthanorMini, optimizer=None, step: int = 0,
+def save_checkpoint(path: str | Path, model: ShennongMini, optimizer=None, step: int = 0,
                     extra: dict | None = None) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -362,7 +362,7 @@ if __name__ == "__main__":  # tiny smoke test
         path = Path(__file__).parent / "configs" / f"{name}.json"
         if path.exists():
             cfg = ModelConfig.from_json(path)
-            m = AthanorMini(cfg)
+            m = ShennongMini(cfg)
             print(f"{name}: {cfg}")
             print(f"  params={m.num_parameters():,}  non-emb={m.num_parameters(True):,}  "
                   f"estimate={cfg.n_params_estimate:,}")

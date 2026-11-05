@@ -3,393 +3,405 @@
  "fixture": true,
  "nodes": [
   {
-   "id": "source:fixture:dioscorides",
-   "label": "Pedanius Dioscorides",
+   "id": "source:fx_shennong_bencao",
+   "label": "神農本草經",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:galen",
-   "label": "Galen of Pergamon",
+   "id": "source:fx_bencao_gangmu",
+   "label": "本草綱目",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:parkinson-1629",
-   "label": "John Parkinson",
+   "id": "source:fx_bencao_jing_jizhu",
+   "label": "本草經集注",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:gerard-1633",
-   "label": "John Gerard",
+   "id": "source:fx_xinxiu_bencao",
+   "label": "新修本草",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:culpeper-1653",
-   "label": "Nicholas Culpeper",
+   "id": "source:fx_shanghanlun",
+   "label": "傷寒論",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:paracelsus",
-   "label": "Paracelsus",
+   "id": "source:fx_jingui_yaolue",
+   "label": "金匱要略",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:ripley",
-   "label": "George Ripley",
+   "id": "source:fx_qianjin_yaofang",
+   "label": "備急千金要方",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:rosarium",
-   "label": "anon. (Pseudo-Arnaldus)",
+   "id": "source:fx_taiping_huimin",
+   "label": "太平惠民和劑局方",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:bencao-gangmu",
-   "label": "Li Shizhen",
+   "id": "source:fx_leigong_paozhi",
+   "label": "雷公炮炙論",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:charaka",
-   "label": "Agnivesha / Charaka",
+   "id": "source:fx_ru-men-shi-qin",
+   "label": "儒門事親",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:kings-1898",
-   "label": "Harvey W. Felter & John U. Lloyd",
+   "id": "source:fx_baopuzi",
+   "label": "抱朴子內篇",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:grieve-1931",
-   "label": "Maud Grieve",
+   "id": "source:fx_cantong_qi",
+   "label": "周易參同契",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:ema-monographs",
-   "label": "European Medicines Agency",
+   "id": "source:fx_huangdi_neijing",
+   "label": "黃帝內經·素問",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:duke",
-   "label": "James A. Duke (USDA ARS)",
+   "id": "source:fx_nanjing",
+   "label": "難經",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:chembl",
-   "label": "EMBL-EBI",
+   "id": "source:fx_zhenjiu_jiayi",
+   "label": "針灸甲乙經",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:wfo",
-   "label": "WFO Consortium",
+   "id": "source:fx_zhenjiu_dacheng",
+   "label": "針灸大成",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:huangdi-neijing",
-   "label": "anon. (Yellow Emperor corpus)",
+   "id": "source:fx_dongui_bogam",
+   "label": "東醫寶鑑",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "source:fixture:zhenjiu",
-   "label": "Huangfu Mi",
+   "id": "source:fx_charaka",
+   "label": "Caraka Saṃhitā",
    "type": "source",
-   "weight": 0.3
+   "weight": 0.45
   },
   {
-   "id": "taxon:Glycyrrhiza glabra",
-   "label": "Glycyrrhiza glabra",
-   "type": "taxon",
-   "weight": 0.9
+   "id": "source:fx_susruta",
+   "label": "Suśruta Saṃhitā",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "process:Decoction of the root, taken daily for 4–6 weeks",
-   "label": "Decoction of the root, taken daily for 4–6 weeks",
-   "type": "preparation",
-   "weight": 0.7
+   "id": "source:fx_bhavaprakasa",
+   "label": "Bhāvaprakāśa",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "target:11β-hydroxysteroid dehydrogenase type 2",
-   "label": "11β-hydroxysteroid dehydrogenase type 2",
-   "type": "target",
-   "weight": 0.8
+   "id": "source:fx_rasa_ratna",
+   "label": "Rasa Ratna Samuccaya",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "indication:Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema",
-   "label": "Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema",
-   "type": "indication",
-   "weight": 0.7
+   "id": "source:fx_astangahridaya",
+   "label": "Aṣṭāṅgahṛdaya",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "taxon:Artemisia absinthium",
-   "label": "Artemisia absinthium",
-   "type": "taxon",
-   "weight": 0.9
+   "id": "source:fx_kanun",
+   "label": "القانون في الطب",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "process:Ethanolic tincture of the flowering tops",
-   "label": "Ethanolic tincture of the flowering tops",
-   "type": "preparation",
-   "weight": 0.7
+   "id": "source:fx_hawi",
+   "label": "الحاوي في الطب",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "target:NF-κB p65",
-   "label": "NF-κB p65",
-   "type": "target",
-   "weight": 0.8
+   "id": "source:fx_gretil",
+   "label": "GRETIL Sanskrit corpus (selected medical texts)",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "indication:Ulcerative colitis, mucosal inflammatory signalling",
-   "label": "Ulcerative colitis, mucosal inflammatory signalling",
-   "type": "indication",
-   "weight": 0.7
+   "id": "source:fx_duke",
+   "label": "Dr Duke's Phytochemical & Ethnobotanical Databases",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "taxon:Salvia miltiorrhiza",
-   "label": "Salvia miltiorrhiza",
-   "type": "taxon",
-   "weight": 0.9
+   "id": "source:fx_chembl",
+   "label": "ChEMBL bioactivity (subset)",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "process:Wine decoction of the root",
-   "label": "Wine decoction of the root",
-   "type": "preparation",
-   "weight": 0.7
+   "id": "source:fx_powo",
+   "label": "Plants of the World Online / WCVP",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "target:KEAP1/Nrf2",
-   "label": "KEAP1/Nrf2",
-   "type": "target",
-   "weight": 0.8
+   "id": "source:fx_gbif",
+   "label": "GBIF taxonomy backbone",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "indication:Endothelial oxidative stress in early hypertension",
-   "label": "Endothelial oxidative stress in early hypertension",
-   "type": "indication",
-   "weight": 0.7
+   "id": "source:fx_culpeper_control",
+   "label": "The Complete Herbal",
+   "type": "source",
+   "weight": 0.45
   },
   {
-   "id": "taxon:Lavandula angustifolia",
-   "label": "Lavandula angustifolia",
-   "type": "taxon",
-   "weight": 0.9
-  },
-  {
-   "id": "process:Hydrodistillation in balneum Mariae, 3 h",
-   "label": "Hydrodistillation in balneum Mariae, 3 h",
-   "type": "preparation",
-   "weight": 0.7
-  },
-  {
-   "id": "target:GABA_A receptor complex, benzodiazepine site",
-   "label": "GABA_A receptor complex, benzodiazepine site",
-   "type": "target",
-   "weight": 0.8
-  },
-  {
-   "id": "indication:Generalised anxiety",
-   "label": "Generalised anxiety",
-   "type": "indication",
-   "weight": 0.7
-  },
-  {
-   "id": "taxon:Marrubium vulgare",
-   "label": "Marrubium vulgare",
-   "type": "taxon",
-   "weight": 0.9
-  },
-  {
-   "id": "process:Infusion of the dried herb",
-   "label": "Infusion of the dried herb",
-   "type": "preparation",
-   "weight": 0.7
-  },
-  {
-   "id": "target:TAS2R bitter receptors on airway smooth muscle",
-   "label": "TAS2R bitter receptors on airway smooth muscle",
-   "type": "target",
-   "weight": 0.8
-  },
-  {
-   "id": "indication:Cough and bronchospasm in obstructive airway disease",
-   "label": "Cough and bronchospasm in obstructive airway disease",
-   "type": "indication",
-   "weight": 0.7
-  },
-  {
-   "id": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
-   "label": "Paeonia lactiflora / Glycyrrhiza uralensis",
-   "type": "taxon",
-   "weight": 0.9
-  },
-  {
-   "id": "process:Combined decoction",
-   "label": "Combined decoction",
-   "type": "preparation",
-   "weight": 0.7
-  },
-  {
-   "id": "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
-   "label": "NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
-   "type": "target",
-   "weight": 0.8
-  },
-  {
-   "id": "indication:Muscle cramp and spasm",
-   "label": "Muscle cramp and spasm",
-   "type": "indication",
-   "weight": 0.7
-  },
-  {
-   "id": "taxon:Tanacetum parthenium",
-   "label": "Tanacetum parthenium",
-   "type": "taxon",
-   "weight": 0.9
-  },
-  {
-   "id": "process:Freeze-dried leaf capsules",
-   "label": "Freeze-dried leaf capsules",
-   "type": "preparation",
-   "weight": 0.7
-  },
-  {
-   "id": "target:NF-κB p65 Cys38 alkylation; also IKKβ",
-   "label": "NF-κB p65 Cys38 alkylation; also IKKβ",
-   "type": "target",
-   "weight": 0.8
-  },
-  {
-   "id": "indication:Migraine prophylaxis",
-   "label": "Migraine prophylaxis",
-   "type": "indication",
-   "weight": 0.7
-  },
-  {
-   "id": "taxon:Berberis vulgaris",
-   "label": "Berberis vulgaris",
-   "type": "taxon",
-   "weight": 0.9
-  },
-  {
-   "id": "process:Decoction of the root bark",
-   "label": "Decoction of the root bark",
-   "type": "preparation",
-   "weight": 0.7
-  },
-  {
-   "id": "target:AMPK activation",
-   "label": "AMPK activation",
-   "type": "target",
-   "weight": 0.8
-  },
-  {
-   "id": "indication:Metabolic syndrome: dyslipidaemia, insulin resistance",
-   "label": "Metabolic syndrome: dyslipidaemia, insulin resistance",
-   "type": "indication",
-   "weight": 0.7
-  },
-  {
-   "id": "taxon:Curcuma longa",
-   "label": "Curcuma longa",
-   "type": "taxon",
-   "weight": 0.9
-  },
-  {
-   "id": "process:Decoction / powder",
-   "label": "Decoction / powder",
-   "type": "preparation",
-   "weight": 0.7
-  },
-  {
-   "id": "target:NF-κB; also numerous pan-assay interference liabilities",
-   "label": "NF-κB; also numerous pan-assay interference liabilities",
-   "type": "target",
-   "weight": 0.8
-  },
-  {
-   "id": "indication:Osteoarthritis pain and inflammation",
-   "label": "Osteoarthritis pain and inflammation",
-   "type": "indication",
-   "weight": 0.7
-  },
-  {
-   "id": "taxon:Pulmonaria officinalis",
-   "label": "Pulmonaria officinalis",
-   "type": "taxon",
-   "weight": 0.9
-  },
-  {
-   "id": "process:Infusion of the leaves",
-   "label": "Infusion of the leaves",
-   "type": "preparation",
-   "weight": 0.7
-  },
-  {
-   "id": "target:Pulmonary epithelium",
-   "label": "Pulmonary epithelium",
-   "type": "target",
-   "weight": 0.8
-  },
-  {
-   "id": "indication:Cough, catarrh, 'diseases of the lungs'",
-   "label": "Cough, catarrh, 'diseases of the lungs'",
-   "type": "indication",
-   "weight": 0.7
-  },
-  {
-   "id": "process:Balneum Mariae",
-   "label": "Balneum Mariae",
-   "type": "preparation",
+   "id": "drug:木通",
+   "label": "木通",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "compound:Linalool",
-   "label": "Linalool",
+   "id": "taxon:Akebia quinata",
+   "label": "Akebia quinata",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Aristolochia manshuriensis",
+   "label": "Aristolochia manshuriensis",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Aristolochic acid I",
+   "label": "Aristolochic acid I",
    "type": "compound",
    "weight": 0.0
   },
   {
-   "id": "compound:Linalyl acetate",
-   "label": "Linalyl acetate",
-   "type": "compound",
-   "weight": 0.0
-  },
-  {
-   "id": "taxon:Rosmarinus officinalis",
-   "label": "Rosmarinus officinalis",
-   "type": "taxon",
-   "weight": 0.0
-  },
-  {
-   "id": "taxon:Mentha x piperita",
-   "label": "Mentha x piperita",
-   "type": "taxon",
-   "weight": 0.0
-  },
-  {
-   "id": "target:GABA-A",
-   "label": "GABA-A",
+   "id": "target:OAT1/OAT3",
+   "label": "OAT1/OAT3",
    "type": "target",
    "weight": 0.0
   },
   {
-   "id": "indication:Anxiety",
-   "label": "Anxiety",
+   "id": "indication:Urothelial carcinoma",
+   "label": "Urothelial carcinoma",
    "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Akeboside",
+   "label": "Akeboside",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:三七",
+   "label": "三七",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Panax notoginseng",
+   "label": "Panax notoginseng",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Gynura pseudochina",
+   "label": "Gynura pseudochina",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Pyrrolizidine alkaloids",
+   "label": "Pyrrolizidine alkaloids",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:CYP3A4",
+   "label": "CYP3A4",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Hepatic sinusoidal obstruction",
+   "label": "Hepatic sinusoidal obstruction",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Notoginsenoside R1",
+   "label": "Notoginsenoside R1",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Aconitum carmichaelii",
+   "label": "Aconitum carmichaelii",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:附子",
+   "label": "附子",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "process:炮",
+   "label": "炮",
+   "type": "process",
+   "weight": 0.0
+  },
+  {
+   "id": "process:蜜水煮",
+   "label": "蜜水煮",
+   "type": "process",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Aconine",
+   "label": "Aconine",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Aconitine",
+   "label": "Aconitine",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:NaV channel",
+   "label": "NaV channel",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Benzoylaconine",
+   "label": "Benzoylaconine",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Polygonum multiflorum",
+   "label": "Polygonum multiflorum",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:何首烏",
+   "label": "何首烏",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "process:九蒸九曬",
+   "label": "九蒸九曬",
+   "type": "process",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:TSG",
+   "label": "TSG",
+   "type": "compound",
+   "weight": 0.0
+  },
+  {
+   "id": "target:Hepatocyte mitochondrion",
+   "label": "Hepatocyte mitochondrion",
+   "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Herb-induced liver injury",
+   "label": "Herb-induced liver injury",
+   "type": "indication",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:甘草",
+   "label": "甘草",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:甘遂",
+   "label": "甘遂",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:半夏",
+   "label": "半夏",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:海藻",
+   "label": "海藻",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:水銀",
+   "label": "水銀",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:砒霜",
+   "label": "砒霜",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:丁香",
+   "label": "丁香",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:鬱金",
+   "label": "鬱金",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Glycyrrhiza uralensis",
+   "label": "Glycyrrhiza uralensis",
+   "type": "taxon",
    "weight": 0.0
   },
   {
@@ -411,9 +423,21 @@
    "weight": 0.0
   },
   {
-   "id": "target:Mineralocorticoid receptor",
-   "label": "Mineralocorticoid receptor",
+   "id": "target:P-gp",
+   "label": "P-gp",
    "type": "target",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Euphorbia kansui",
+   "label": "Euphorbia kansui",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Kansuinin A",
+   "label": "Kansuinin A",
+   "type": "compound",
    "weight": 0.0
   },
   {
@@ -423,545 +447,413 @@
    "weight": 0.0
   },
   {
-   "id": "compound:Absinthin",
-   "label": "Absinthin",
-   "type": "compound",
+   "id": "formula:四逆湯",
+   "label": "四逆湯",
+   "type": "formula",
    "weight": 0.0
   },
   {
-   "id": "compound:Artabsin",
-   "label": "Artabsin",
-   "type": "compound",
+   "id": "drug:乾薑",
+   "label": "乾薑",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "target:NF-kB p65",
-   "label": "NF-kB p65",
-   "type": "target",
+   "id": "formula:麻黃湯",
+   "label": "麻黃湯",
+   "type": "formula",
    "weight": 0.0
   },
   {
-   "id": "compound:Parthenolide",
-   "label": "Parthenolide",
-   "type": "compound",
+   "id": "drug:麻黃",
+   "label": "麻黃",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "indication:Colitis",
-   "label": "Colitis",
-   "type": "indication",
+   "id": "drug:桂枝",
+   "label": "桂枝",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "indication:Migraine",
-   "label": "Migraine",
-   "type": "indication",
+   "id": "drug:杏仁",
+   "label": "杏仁",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "indication:Osteoarthritis",
-   "label": "Osteoarthritis",
-   "type": "indication",
+   "id": "formula:參蘇飲",
+   "label": "參蘇飲",
+   "type": "formula",
    "weight": 0.0
   },
   {
-   "id": "compound:Tanshinone IIA",
-   "label": "Tanshinone IIA",
-   "type": "compound",
+   "id": "drug:人參",
+   "label": "人參",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "compound:Salvianolic acid B",
-   "label": "Salvianolic acid B",
-   "type": "compound",
+   "id": "drug:紫蘇",
+   "label": "紫蘇",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "target:Nrf2/KEAP1",
-   "label": "Nrf2/KEAP1",
-   "type": "target",
+   "id": "drug:胡椒",
+   "label": "胡椒",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "indication:Endothelial dysfunction",
-   "label": "Endothelial dysfunction",
-   "type": "indication",
+   "id": "role:使",
+   "label": "使",
+   "type": "concept",
    "weight": 0.0
   },
   {
-   "id": "compound:Marrubiin",
-   "label": "Marrubiin",
-   "type": "compound",
-   "weight": 0.0
-  },
-  {
-   "id": "target:TAS2R",
-   "label": "TAS2R",
-   "type": "target",
-   "weight": 0.0
-  },
-  {
-   "id": "indication:Bronchospasm",
-   "label": "Bronchospasm",
-   "type": "indication",
-   "weight": 0.0
-  },
-  {
-   "id": "taxon:Paeonia lactiflora",
-   "label": "Paeonia lactiflora",
+   "id": "taxon:Piper longum",
+   "label": "Piper longum",
    "type": "taxon",
    "weight": 0.0
   },
   {
-   "id": "compound:Paeoniflorin",
-   "label": "Paeoniflorin",
+   "id": "compound:Piperine",
+   "label": "Piperine",
    "type": "compound",
    "weight": 0.0
   },
   {
-   "id": "target:NKCC1/KCC2",
-   "label": "NKCC1/KCC2",
-   "type": "target",
+   "id": "taxon:Ranunculus ternatus",
+   "label": "Ranunculus ternatus",
+   "type": "taxon",
    "weight": 0.0
   },
   {
-   "id": "indication:Muscle cramp",
-   "label": "Muscle cramp",
+   "id": "drug:貓爪草",
+   "label": "貓爪草",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:瘰癧 scrofula",
+   "label": "瘰癧 scrofula",
    "type": "indication",
    "weight": 0.0
   },
   {
-   "id": "compound:Berberine",
-   "label": "Berberine",
+   "id": "taxon:Scutellaria barbata",
+   "label": "Scutellaria barbata",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:半枝蓮",
+   "label": "半枝蓮",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "compound:Scutellarein",
+   "label": "Scutellarein",
    "type": "compound",
    "weight": 0.0
   },
   {
-   "id": "target:AMPK",
-   "label": "AMPK",
-   "type": "target",
-   "weight": 0.0
-  },
-  {
-   "id": "indication:Metabolic syndrome",
-   "label": "Metabolic syndrome",
+   "id": "indication:Colorectal cancer (adjunct)",
+   "label": "Colorectal cancer (adjunct)",
    "type": "indication",
    "weight": 0.0
   },
   {
-   "id": "compound:Curcumin",
-   "label": "Curcumin",
-   "type": "compound",
+   "id": "drug:犀角",
+   "label": "犀角",
+   "type": "drug",
    "weight": 0.0
   },
   {
-   "id": "indication:Cough",
-   "label": "Cough",
+   "id": "drug:水牛角",
+   "label": "水牛角",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Rhinoceros",
+   "label": "Rhinoceros",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Bubalus bubalis",
+   "label": "Bubalus bubalis",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:穿山甲",
+   "label": "穿山甲",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:豬蹄甲",
+   "label": "豬蹄甲",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Manis pentadactyla",
+   "label": "Manis pentadactyla",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "process:煅",
+   "label": "煅",
+   "type": "process",
+   "weight": 0.0
+  },
+  {
+   "id": "cite:CITES Appendix I",
+   "label": "CITES Appendix I",
+   "type": "concept",
+   "weight": 0.0
+  },
+  {
+   "id": "taxon:Juglans regia",
+   "label": "Juglans regia",
+   "type": "taxon",
+   "weight": 0.0
+  },
+  {
+   "id": "drug:核桃仁",
+   "label": "核桃仁",
+   "type": "drug",
+   "weight": 0.0
+  },
+  {
+   "id": "indication:Memory (by resemblance)",
+   "label": "Memory (by resemblance)",
    "type": "indication",
    "weight": 0.0
   },
   {
-   "id": "compound:Rosmarinic acid",
-   "label": "Rosmarinic acid",
-   "type": "compound",
+   "id": "concept:ṣaḍrasa",
+   "label": "ṣaḍrasa",
+   "type": "concept",
    "weight": 0.0
   },
   {
-   "id": "process:Dung digestion",
-   "label": "Dung digestion",
-   "type": "preparation",
-   "weight": 0.0
-  },
-  {
-   "id": "process:Spagyric separation",
-   "label": "Spagyric separation",
-   "type": "preparation",
-   "weight": 0.0
-  },
-  {
-   "id": "tradition:Channel theory",
-   "label": "Channel theory",
-   "type": "preparation",
+   "id": "concept:取象比類",
+   "label": "取象比類",
+   "type": "concept",
    "weight": 0.0
   }
  ],
  "edges": [
   {
-   "source": "taxon:Glycyrrhiza glabra",
-   "target": "process:Decoction of the root, taken daily for 4–6 weeks",
-   "rel": "prepared_by",
+   "source": "drug:木通",
+   "target": "taxon:Akebia quinata",
+   "rel": "resolves_to",
    "weight": 1.0
   },
   {
-   "source": "process:Decoction of the root, taken daily for 4–6 weeks",
-   "target": "target:11β-hydroxysteroid dehydrogenase type 2",
-   "rel": "points_to",
+   "source": "drug:木通",
+   "target": "taxon:Aristolochia manshuriensis",
+   "rel": "resolves_to",
    "weight": 1.0
   },
   {
-   "source": "target:11β-hydroxysteroid dehydrogenase type 2",
-   "target": "indication:Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema",
+   "source": "taxon:Aristolochia manshuriensis",
+   "target": "compound:Aristolochic acid I",
+   "rel": "contains",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Aristolochic acid I",
+   "target": "target:OAT1/OAT3",
+   "rel": "transported_by",
+   "weight": 1.0
+  },
+  {
+   "source": "target:OAT1/OAT3",
+   "target": "indication:Urothelial carcinoma",
    "rel": "implicated_in",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:kings-1898",
-   "target": "taxon:Glycyrrhiza glabra",
-   "rel": "attests",
+   "source": "taxon:Akebia quinata",
+   "target": "compound:Akeboside",
+   "rel": "contains",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:ema-monographs",
-   "target": "taxon:Glycyrrhiza glabra",
-   "rel": "attests",
+   "source": "drug:三七",
+   "target": "taxon:Panax notoginseng",
+   "rel": "resolves_to",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:culpeper-1653",
-   "target": "taxon:Glycyrrhiza glabra",
-   "rel": "attests",
+   "source": "drug:三七",
+   "target": "taxon:Gynura pseudochina",
+   "rel": "resolves_to",
    "weight": 1.0
   },
   {
-   "source": "taxon:Artemisia absinthium",
-   "target": "process:Ethanolic tincture of the flowering tops",
-   "rel": "prepared_by",
+   "source": "taxon:Gynura pseudochina",
+   "target": "compound:Pyrrolizidine alkaloids",
+   "rel": "contains",
    "weight": 1.0
   },
   {
-   "source": "process:Ethanolic tincture of the flowering tops",
-   "target": "target:NF-κB p65",
-   "rel": "points_to",
+   "source": "compound:Pyrrolizidine alkaloids",
+   "target": "target:CYP3A4",
+   "rel": "bioactivated_by",
    "weight": 1.0
   },
   {
-   "source": "target:NF-κB p65",
-   "target": "indication:Ulcerative colitis, mucosal inflammatory signalling",
+   "source": "target:CYP3A4",
+   "target": "indication:Hepatic sinusoidal obstruction",
    "rel": "implicated_in",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:culpeper-1653",
-   "target": "taxon:Artemisia absinthium",
-   "rel": "attests",
+   "source": "taxon:Panax notoginseng",
+   "target": "compound:Notoginsenoside R1",
+   "rel": "contains",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:gerard-1633",
-   "target": "taxon:Artemisia absinthium",
-   "rel": "attests",
+   "source": "taxon:Aconitum carmichaelii",
+   "target": "drug:附子",
+   "rel": "provides",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:grieve-1931",
-   "target": "taxon:Artemisia absinthium",
-   "rel": "attests",
+   "source": "drug:附子",
+   "target": "process:炮",
+   "rel": "processed_by",
    "weight": 1.0
   },
   {
-   "source": "taxon:Salvia miltiorrhiza",
-   "target": "process:Wine decoction of the root",
-   "rel": "prepared_by",
+   "source": "process:炮",
+   "target": "process:蜜水煮",
+   "rel": "followed_by",
    "weight": 1.0
   },
   {
-   "source": "process:Wine decoction of the root",
-   "target": "target:KEAP1/Nrf2",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:KEAP1/Nrf2",
-   "target": "indication:Endothelial oxidative stress in early hypertension",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:bencao-gangmu",
-   "target": "taxon:Salvia miltiorrhiza",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:grieve-1931",
-   "target": "taxon:Salvia miltiorrhiza",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Lavandula angustifolia",
-   "target": "process:Hydrodistillation in balneum Mariae, 3 h",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Hydrodistillation in balneum Mariae, 3 h",
-   "target": "target:GABA_A receptor complex, benzodiazepine site",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:GABA_A receptor complex, benzodiazepine site",
-   "target": "indication:Generalised anxiety",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:rosarium",
-   "target": "taxon:Lavandula angustifolia",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:gerard-1633",
-   "target": "taxon:Lavandula angustifolia",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:culpeper-1653",
-   "target": "taxon:Lavandula angustifolia",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:ema-monographs",
-   "target": "taxon:Lavandula angustifolia",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Marrubium vulgare",
-   "target": "process:Infusion of the dried herb",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Infusion of the dried herb",
-   "target": "target:TAS2R bitter receptors on airway smooth muscle",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:TAS2R bitter receptors on airway smooth muscle",
-   "target": "indication:Cough and bronchospasm in obstructive airway disease",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:grieve-1931",
-   "target": "taxon:Marrubium vulgare",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:kings-1898",
-   "target": "taxon:Marrubium vulgare",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
-   "target": "process:Combined decoction",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Combined decoction",
-   "target": "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle",
-   "target": "indication:Muscle cramp and spasm",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:ema-monographs",
-   "target": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:kings-1898",
-   "target": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:dioscorides",
-   "target": "taxon:Paeonia lactiflora / Glycyrrhiza uralensis",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Tanacetum parthenium",
-   "target": "process:Freeze-dried leaf capsules",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Freeze-dried leaf capsules",
-   "target": "target:NF-κB p65 Cys38 alkylation; also IKKβ",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:NF-κB p65 Cys38 alkylation; also IKKβ",
-   "target": "indication:Migraine prophylaxis",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:gerard-1633",
-   "target": "taxon:Tanacetum parthenium",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:grieve-1931",
-   "target": "taxon:Tanacetum parthenium",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Berberis vulgaris",
-   "target": "process:Decoction of the root bark",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Decoction of the root bark",
-   "target": "target:AMPK activation",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:AMPK activation",
-   "target": "indication:Metabolic syndrome: dyslipidaemia, insulin resistance",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:dioscorides",
-   "target": "taxon:Berberis vulgaris",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:kings-1898",
-   "target": "taxon:Berberis vulgaris",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Curcuma longa",
-   "target": "process:Decoction / powder",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Decoction / powder",
-   "target": "target:NF-κB; also numerous pan-assay interference liabilities",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:NF-κB; also numerous pan-assay interference liabilities",
-   "target": "indication:Osteoarthritis pain and inflammation",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:charaka",
-   "target": "taxon:Curcuma longa",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:grieve-1931",
-   "target": "taxon:Curcuma longa",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Pulmonaria officinalis",
-   "target": "process:Infusion of the leaves",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Infusion of the leaves",
-   "target": "target:Pulmonary epithelium",
-   "rel": "points_to",
-   "weight": 1.0
-  },
-  {
-   "source": "target:Pulmonary epithelium",
-   "target": "indication:Cough, catarrh, 'diseases of the lungs'",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:culpeper-1653",
-   "target": "taxon:Pulmonaria officinalis",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "source:fixture:gerard-1633",
-   "target": "taxon:Pulmonaria officinalis",
-   "rel": "attests",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Lavandula angustifolia",
-   "target": "process:Balneum Mariae",
-   "rel": "prepared_by",
-   "weight": 1.0
-  },
-  {
-   "source": "process:Balneum Mariae",
-   "target": "compound:Linalool",
+   "source": "process:蜜水煮",
+   "target": "compound:Aconine",
    "rel": "yields",
    "weight": 1.0
   },
   {
-   "source": "process:Balneum Mariae",
-   "target": "compound:Linalyl acetate",
-   "rel": "yields",
+   "source": "drug:附子",
+   "target": "compound:Aconitine",
+   "rel": "contains",
    "weight": 1.0
   },
   {
-   "source": "taxon:Rosmarinus officinalis",
-   "target": "compound:Linalool",
-   "rel": "yields",
+   "source": "compound:Aconitine",
+   "target": "target:NaV channel",
+   "rel": "binds",
    "weight": 1.0
   },
   {
-   "source": "taxon:Mentha x piperita",
-   "target": "compound:Linalool",
-   "rel": "yields",
+   "source": "compound:Benzoylaconine",
+   "target": "target:NaV channel",
+   "rel": "binds_weakly",
    "weight": 1.0
   },
   {
-   "source": "compound:Linalool",
-   "target": "target:GABA-A",
-   "rel": "modulates",
+   "source": "compound:Aconine",
+   "target": "target:NaV channel",
+   "rel": "binds_weakly",
    "weight": 1.0
   },
   {
-   "source": "target:GABA-A",
-   "target": "indication:Anxiety",
+   "source": "compound:Aconitine",
+   "target": "compound:Benzoylaconine",
+   "rel": "hydrolyses_to",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Benzoylaconine",
+   "target": "compound:Aconine",
+   "rel": "hydrolyses_to",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Polygonum multiflorum",
+   "target": "drug:何首烏",
+   "rel": "provides",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:何首烏",
+   "target": "process:九蒸九曬",
+   "rel": "processed_by",
+   "weight": 1.0
+  },
+  {
+   "source": "process:九蒸九曬",
+   "target": "compound:TSG",
+   "rel": "reduces",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:TSG",
+   "target": "target:Hepatocyte mitochondrion",
+   "rel": "injures",
+   "weight": 1.0
+  },
+  {
+   "source": "target:Hepatocyte mitochondrion",
+   "target": "indication:Herb-induced liver injury",
    "rel": "implicated_in",
    "weight": 1.0
   },
   {
-   "source": "taxon:Glycyrrhiza glabra",
+   "source": "drug:甘草",
+   "target": "drug:甘遂",
+   "rel": "incompatible_18fan",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:附子",
+   "target": "drug:半夏",
+   "rel": "incompatible_18fan",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:甘草",
+   "target": "drug:海藻",
+   "rel": "incompatible_18fan",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:水銀",
+   "target": "drug:砒霜",
+   "rel": "incompatible_19wei",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:丁香",
+   "target": "drug:鬱金",
+   "rel": "incompatible_19wei",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Glycyrrhiza uralensis",
+   "target": "drug:甘草",
+   "rel": "provides",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:甘草",
    "target": "compound:Glycyrrhizin",
-   "rel": "yields",
+   "rel": "contains",
    "weight": 1.0
   },
   {
@@ -977,598 +869,786 @@
    "weight": 1.0
   },
   {
-   "source": "target:11b-HSD2",
-   "target": "target:Mineralocorticoid receptor",
-   "rel": "regulates",
+   "source": "compound:Glycyrrhetinic acid",
+   "target": "target:P-gp",
+   "rel": "modulates",
    "weight": 1.0
   },
   {
-   "source": "target:Mineralocorticoid receptor",
+   "source": "taxon:Euphorbia kansui",
+   "target": "drug:甘遂",
+   "rel": "provides",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:甘遂",
+   "target": "compound:Kansuinin A",
+   "rel": "contains",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Kansuinin A",
+   "target": "target:P-gp",
+   "rel": "substrate",
+   "weight": 1.0
+  },
+  {
+   "source": "target:11b-HSD2",
    "target": "indication:Hypertension",
    "rel": "implicated_in",
    "weight": 1.0
   },
   {
-   "source": "taxon:Artemisia absinthium",
-   "target": "compound:Absinthin",
-   "rel": "yields",
+   "source": "formula:四逆湯",
+   "target": "drug:附子",
+   "rel": "jun",
    "weight": 1.0
   },
   {
-   "source": "taxon:Artemisia absinthium",
-   "target": "compound:Artabsin",
-   "rel": "yields",
+   "source": "formula:四逆湯",
+   "target": "drug:甘草",
+   "rel": "chen",
    "weight": 1.0
   },
   {
-   "source": "compound:Absinthin",
-   "target": "target:NF-kB p65",
-   "rel": "modulates",
+   "source": "formula:四逆湯",
+   "target": "drug:乾薑",
+   "rel": "zuo",
    "weight": 1.0
   },
   {
-   "source": "compound:Artabsin",
-   "target": "target:NF-kB p65",
-   "rel": "modulates",
+   "source": "formula:麻黃湯",
+   "target": "drug:麻黃",
+   "rel": "jun",
    "weight": 1.0
   },
   {
-   "source": "compound:Parthenolide",
-   "target": "target:NF-kB p65",
+   "source": "formula:麻黃湯",
+   "target": "drug:桂枝",
+   "rel": "chen",
+   "weight": 1.0
+  },
+  {
+   "source": "formula:麻黃湯",
+   "target": "drug:杏仁",
+   "rel": "zuo",
+   "weight": 1.0
+  },
+  {
+   "source": "formula:麻黃湯",
+   "target": "drug:甘草",
+   "rel": "shi",
+   "weight": 1.0
+  },
+  {
+   "source": "formula:參蘇飲",
+   "target": "drug:人參",
+   "rel": "jun",
+   "weight": 1.0
+  },
+  {
+   "source": "formula:參蘇飲",
+   "target": "drug:紫蘇",
+   "rel": "chen",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:胡椒",
+   "target": "role:使",
+   "rel": "annotated_as",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:甘草",
+   "target": "role:使",
+   "rel": "annotated_as",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Piper longum",
+   "target": "drug:胡椒",
+   "rel": "provides",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:胡椒",
+   "target": "compound:Piperine",
+   "rel": "contains",
+   "weight": 1.0
+  },
+  {
+   "source": "compound:Piperine",
+   "target": "target:CYP3A4",
    "rel": "inhibits",
    "weight": 1.0
   },
   {
-   "source": "taxon:Tanacetum parthenium",
-   "target": "compound:Parthenolide",
-   "rel": "yields",
-   "weight": 1.0
-  },
-  {
-   "source": "target:NF-kB p65",
-   "target": "indication:Colitis",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "target:NF-kB p65",
-   "target": "indication:Migraine",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "target:NF-kB p65",
-   "target": "indication:Osteoarthritis",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Salvia miltiorrhiza",
-   "target": "compound:Tanshinone IIA",
-   "rel": "yields",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Salvia miltiorrhiza",
-   "target": "compound:Salvianolic acid B",
-   "rel": "yields",
-   "weight": 1.0
-  },
-  {
-   "source": "compound:Tanshinone IIA",
-   "target": "target:Nrf2/KEAP1",
-   "rel": "activates",
-   "weight": 1.0
-  },
-  {
-   "source": "target:Nrf2/KEAP1",
-   "target": "indication:Endothelial dysfunction",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Marrubium vulgare",
-   "target": "compound:Marrubiin",
-   "rel": "yields",
-   "weight": 1.0
-  },
-  {
-   "source": "compound:Marrubiin",
-   "target": "target:TAS2R",
-   "rel": "agonises",
-   "weight": 1.0
-  },
-  {
-   "source": "target:TAS2R",
-   "target": "indication:Bronchospasm",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Paeonia lactiflora",
-   "target": "compound:Paeoniflorin",
-   "rel": "yields",
-   "weight": 1.0
-  },
-  {
-   "source": "compound:Paeoniflorin",
-   "target": "compound:Glycyrrhizin",
-   "rel": "co-administered_with",
-   "weight": 1.0
-  },
-  {
-   "source": "compound:Paeoniflorin",
-   "target": "target:NKCC1/KCC2",
-   "rel": "candidate",
-   "weight": 1.0
-  },
-  {
-   "source": "target:NKCC1/KCC2",
-   "target": "indication:Muscle cramp",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Berberis vulgaris",
-   "target": "compound:Berberine",
-   "rel": "yields",
-   "weight": 1.0
-  },
-  {
-   "source": "compound:Berberine",
-   "target": "target:AMPK",
-   "rel": "activates",
-   "weight": 1.0
-  },
-  {
-   "source": "target:AMPK",
-   "target": "indication:Metabolic syndrome",
-   "rel": "implicated_in",
-   "weight": 1.0
-  },
-  {
-   "source": "taxon:Curcuma longa",
-   "target": "compound:Curcumin",
-   "rel": "yields",
-   "weight": 1.0
-  },
-  {
-   "source": "compound:Curcumin",
-   "target": "target:NF-kB p65",
+   "source": "compound:Piperine",
+   "target": "target:P-gp",
    "rel": "modulates",
    "weight": 1.0
   },
   {
-   "source": "taxon:Pulmonaria officinalis",
-   "target": "target:Pulmonary epithelium",
-   "rel": "signature_link",
+   "source": "role:使",
+   "target": "target:P-gp",
+   "rel": "predicts",
    "weight": 1.0
   },
   {
-   "source": "target:Pulmonary epithelium",
-   "target": "indication:Cough",
-   "rel": "implicated_in",
+   "source": "taxon:Ranunculus ternatus",
+   "target": "drug:貓爪草",
+   "rel": "provides",
    "weight": 1.0
   },
   {
-   "source": "taxon:Pulmonaria officinalis",
-   "target": "compound:Rosmarinic acid",
-   "rel": "yields",
+   "source": "drug:貓爪草",
+   "target": "indication:瘰癧 scrofula",
+   "rel": "used_for",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:rosarium",
-   "target": "process:Balneum Mariae",
+   "source": "taxon:Scutellaria barbata",
+   "target": "drug:半枝蓮",
+   "rel": "provides",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:半枝蓮",
+   "target": "compound:Scutellarein",
+   "rel": "contains",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:半枝蓮",
+   "target": "indication:Colorectal cancer (adjunct)",
+   "rel": "used_for",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:犀角",
+   "target": "drug:水牛角",
+   "rel": "substituted_by",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:犀角",
+   "target": "taxon:Rhinoceros",
+   "rel": "sourced_from",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:水牛角",
+   "target": "taxon:Bubalus bubalis",
+   "rel": "sourced_from",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:穿山甲",
+   "target": "drug:豬蹄甲",
+   "rel": "substituted_by",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:穿山甲",
+   "target": "taxon:Manis pentadactyla",
+   "rel": "sourced_from",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:穿山甲",
+   "target": "process:煅",
+   "rel": "processed_by",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Rhinoceros",
+   "target": "cite:CITES Appendix I",
+   "rel": "listed_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Manis pentadactyla",
+   "target": "cite:CITES Appendix I",
+   "rel": "listed_in",
+   "weight": 1.0
+  },
+  {
+   "source": "taxon:Juglans regia",
+   "target": "drug:核桃仁",
+   "rel": "provides",
+   "weight": 1.0
+  },
+  {
+   "source": "drug:核桃仁",
+   "target": "indication:Memory (by resemblance)",
+   "rel": "used_for",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_shennong_bencao",
+   "target": "drug:甘草",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_shennong_bencao",
+   "target": "drug:附子",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_bencao_gangmu",
+   "target": "drug:木通",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_bencao_gangmu",
+   "target": "drug:三七",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_bencao_gangmu",
+   "target": "drug:何首烏",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_bencao_gangmu",
+   "target": "drug:穿山甲",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_bencao_gangmu",
+   "target": "drug:犀角",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_leigong_paozhi",
+   "target": "process:炮",
    "rel": "describes",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:ripley",
-   "target": "process:Dung digestion",
+   "source": "source:fx_leigong_paozhi",
+   "target": "process:九蒸九曬",
    "rel": "describes",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:paracelsus",
-   "target": "process:Spagyric separation",
+   "source": "source:fx_ru-men-shi-qin",
+   "target": "drug:甘草",
+   "rel": "asserts_incompatibility",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_shanghanlun",
+   "target": "formula:麻黃湯",
+   "rel": "prescribes",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_shanghanlun",
+   "target": "formula:四逆湯",
+   "rel": "prescribes",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_taiping_huimin",
+   "target": "formula:參蘇飲",
+   "rel": "prescribes",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_baopuzi",
+   "target": "drug:水銀",
+   "rel": "attests",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_rasa_ratna",
+   "target": "process:煅",
    "rel": "describes",
    "weight": 1.0
   },
   {
-   "source": "source:fixture:huangdi-neijing",
-   "target": "tradition:Channel theory",
+   "source": "source:fx_charaka",
+   "target": "concept:ṣaḍrasa",
+   "rel": "defines",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_huangdi_neijing",
+   "target": "concept:取象比類",
    "rel": "grounds",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_gbif",
+   "target": "taxon:Rhinoceros",
+   "rel": "lists",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_gbif",
+   "target": "taxon:Manis pentadactyla",
+   "rel": "lists",
+   "weight": 1.0
+  },
+  {
+   "source": "source:fx_chembl",
+   "target": "compound:Piperine",
+   "rel": "assays",
+   "weight": 1.0
+  },
+  {
+   "source": "concept:取象比類",
+   "target": "drug:核桃仁",
+   "rel": "explains",
+   "weight": 1.0
+  },
+  {
+   "source": "concept:ṣaḍrasa",
+   "target": "indication:Memory (by resemblance)",
+   "rel": "predicts_weakly",
    "weight": 1.0
   }
  ],
  "layout": {
-  "source:fixture:dioscorides": [
-   656.4,
-   780.0
-  ],
-  "source:fixture:galen": [
-   1160.0,
-   40
-  ],
-  "source:fixture:parkinson-1629": [
-   1160.0,
-   780.0
-  ],
-  "source:fixture:gerard-1633": [
-   46.8,
-   330.8
-  ],
-  "source:fixture:culpeper-1653": [
-   209.8,
-   511.7
-  ],
-  "source:fixture:paracelsus": [
-   1160.0,
-   40
-  ],
-  "source:fixture:ripley": [
-   1160.0,
-   128.9
-  ],
-  "source:fixture:rosarium": [
-   40,
-   780.0
-  ],
-  "source:fixture:bencao-gangmu": [
-   902.6,
-   40
-  ],
-  "source:fixture:charaka": [
-   422.7,
-   40
-  ],
-  "source:fixture:kings-1898": [
-   720.8,
-   761.6
-  ],
-  "source:fixture:grieve-1931": [
-   478.2,
-   40
-  ],
-  "source:fixture:ema-monographs": [
-   344.0,
-   780.0
-  ],
-  "source:fixture:duke": [
-   1160.0,
-   780.0
-  ],
-  "source:fixture:chembl": [
-   1160.0,
-   780.0
-  ],
-  "source:fixture:wfo": [
-   1160.0,
-   780.0
-  ],
-  "source:fixture:huangdi-neijing": [
-   1160.0,
-   780.0
-  ],
-  "source:fixture:zhenjiu": [
-   687.9,
-   780.0
-  ],
-  "taxon:Glycyrrhiza glabra": [
-   616.3,
-   754.9
-  ],
-  "process:Decoction of the root, taken daily for 4–6 weeks": [
-   807.1,
-   780.0
-  ],
-  "target:11β-hydroxysteroid dehydrogenase type 2": [
-   966.2,
-   780.0
-  ],
-  "indication:Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema": [
-   1083.2,
-   780.0
-  ],
-  "taxon:Artemisia absinthium": [
-   164.0,
-   101.2
-  ],
-  "process:Ethanolic tincture of the flowering tops": [
-   40,
-   40.6
-  ],
-  "target:NF-κB p65": [
+  "source:fx_shennong_bencao": [
    40,
    40
   ],
-  "indication:Ulcerative colitis, mucosal inflammatory signalling": [
+  "source:fx_bencao_gangmu": [
+   654.6,
+   800.0
+  ],
+  "source:fx_bencao_jing_jizhu": [
+   1200.0,
+   40
+  ],
+  "source:fx_xinxiu_bencao": [
+   1200.0,
+   40
+  ],
+  "source:fx_shanghanlun": [
    40,
    40
   ],
-  "taxon:Salvia miltiorrhiza": [
-   758.3,
+  "source:fx_jingui_yaolue": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_qianjin_yaofang": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_taiping_huimin": [
+   592.7,
    40
   ],
-  "process:Wine decoction of the root": [
-   987.2,
-   40
-  ],
-  "target:KEAP1/Nrf2": [
-   1160.0,
-   40
-  ],
-  "indication:Endothelial oxidative stress in early hypertension": [
-   1160.0,
-   40
-  ],
-  "taxon:Lavandula angustifolia": [
+  "source:fx_leigong_paozhi": [
    40,
-   732.7
+   705.4
   ],
-  "process:Hydrodistillation in balneum Mariae, 3 h": [
-   40,
-   780.0
-  ],
-  "target:GABA_A receptor complex, benzodiazepine site": [
-   40,
-   780.0
-  ],
-  "indication:Generalised anxiety": [
-   40,
-   780.0
-  ],
-  "taxon:Marrubium vulgare": [
-   750.3,
-   268.3
-  ],
-  "process:Infusion of the dried herb": [
-   1022.9,
-   246.0
-  ],
-  "target:TAS2R bitter receptors on airway smooth muscle": [
-   1160.0,
-   216.2
-  ],
-  "indication:Cough and bronchospasm in obstructive airway disease": [
-   1160.0,
-   188.8
-  ],
-  "taxon:Paeonia lactiflora / Glycyrrhiza uralensis": [
-   536.3,
-   780.0
-  ],
-  "process:Combined decoction": [
-   460.2,
-   780.0
-  ],
-  "target:NKCC1 / KCC2 chloride homeostasis in skeletal muscle": [
-   405.1,
-   780.0
-  ],
-  "indication:Muscle cramp and spasm": [
-   369.6,
-   780.0
-  ],
-  "taxon:Tanacetum parthenium": [
-   131.2,
+  "source:fx_ru-men-shi-qin": [
+   248.7,
    40
   ],
-  "process:Freeze-dried leaf capsules": [
+  "source:fx_baopuzi": [
    40,
    40
   ],
-  "target:NF-κB p65 Cys38 alkylation; also IKKβ": [
+  "source:fx_cantong_qi": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_huangdi_neijing": [
+   1200.0,
+   649.5
+  ],
+  "source:fx_nanjing": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_zhenjiu_jiayi": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_zhenjiu_dacheng": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_dongui_bogam": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_charaka": [
+   1200.0,
+   80.7
+  ],
+  "source:fx_susruta": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_bhavaprakasa": [
+   1200.0,
+   800.0
+  ],
+  "source:fx_rasa_ratna": [
+   859.3,
+   800.0
+  ],
+  "source:fx_astangahridaya": [
+   40,
+   800.0
+  ],
+  "source:fx_kanun": [
+   781.8,
+   800.0
+  ],
+  "source:fx_hawi": [
+   40,
+   800.0
+  ],
+  "source:fx_gretil": [
+   40,
+   800.0
+  ],
+  "source:fx_duke": [
+   40,
+   800.0
+  ],
+  "source:fx_chembl": [
+   974.1,
+   40
+  ],
+  "source:fx_powo": [
+   40,
+   800.0
+  ],
+  "source:fx_gbif": [
+   1098.0,
+   800.0
+  ],
+  "source:fx_culpeper_control": [
+   40,
+   800.0
+  ],
+  "drug:木通": [
+   482.4,
+   800.0
+  ],
+  "taxon:Akebia quinata": [
+   453.3,
+   800.0
+  ],
+  "taxon:Aristolochia manshuriensis": [
+   322.9,
+   800.0
+  ],
+  "compound:Aristolochic acid I": [
+   213.2,
+   800.0
+  ],
+  "target:OAT1/OAT3": [
+   135.5,
+   800.0
+  ],
+  "indication:Urothelial carcinoma": [
+   81.6,
+   800.0
+  ],
+  "compound:Akeboside": [
+   441.2,
+   800.0
+  ],
+  "drug:三七": [
+   813.6,
+   800.0
+  ],
+  "taxon:Panax notoginseng": [
+   988.9,
+   800.0
+  ],
+  "taxon:Gynura pseudochina": [
+   873.5,
+   800.0
+  ],
+  "compound:Pyrrolizidine alkaloids": [
+   907.8,
+   555.1
+  ],
+  "target:CYP3A4": [
+   909.8,
+   252.7
+  ],
+  "indication:Hepatic sinusoidal obstruction": [
+   1047.5,
+   264.8
+  ],
+  "compound:Notoginsenoside R1": [
+   1125.8,
+   800.0
+  ],
+  "taxon:Aconitum carmichaelii": [
    40,
    40
   ],
-  "indication:Migraine prophylaxis": [
+  "drug:附子": [
    40,
    40
   ],
-  "taxon:Berberis vulgaris": [
-   809.9,
-   780.0
+  "process:炮": [
+   40,
+   386.6
   ],
-  "process:Decoction of the root bark": [
-   832.6,
-   780.0
+  "process:蜜水煮": [
+   40,
+   402.7
   ],
-  "target:AMPK activation": [
-   857.7,
-   780.0
+  "compound:Aconine": [
+   40,
+   334.1
   ],
-  "indication:Metabolic syndrome: dyslipidaemia, insulin resistance": [
-   880.3,
-   780.0
+  "compound:Aconitine": [
+   40,
+   139.1
   ],
-  "taxon:Curcuma longa": [
-   394.9,
+  "target:NaV channel": [
+   40,
+   204.4
+  ],
+  "compound:Benzoylaconine": [
+   40,
+   240.4
+  ],
+  "taxon:Polygonum multiflorum": [
+   258.6,
+   800.0
+  ],
+  "drug:何首烏": [
+   359.0,
+   800.0
+  ],
+  "process:九蒸九曬": [
+   102.0,
+   800.0
+  ],
+  "compound:TSG": [
+   40,
+   800.0
+  ],
+  "target:Hepatocyte mitochondrion": [
+   40,
+   800.0
+  ],
+  "indication:Herb-induced liver injury": [
+   40,
+   800.0
+  ],
+  "drug:甘草": [
+   206.3,
    40
   ],
-  "process:Decoction / powder": [
-   356.8,
+  "drug:甘遂": [
+   392.7,
    40
   ],
-  "target:NF-κB; also numerous pan-assay interference liabilities": [
-   325.4,
+  "drug:半夏": [
+   40,
+   68.5
+  ],
+  "drug:海藻": [
+   103.4,
    40
   ],
-  "indication:Osteoarthritis pain and inflammation": [
-   304.2,
+  "drug:水銀": [
+   40,
    40
   ],
-  "taxon:Pulmonaria officinalis": [
+  "drug:砒霜": [
    40,
-   458.1
+   40
   ],
-  "process:Infusion of the leaves": [
+  "drug:丁香": [
    40,
-   436.6
+   40
   ],
-  "target:Pulmonary epithelium": [
+  "drug:鬱金": [
    40,
-   453.6
+   40
   ],
-  "indication:Cough, catarrh, 'diseases of the lungs'": [
-   40,
-   405.5
-  ],
-  "process:Balneum Mariae": [
-   40,
-   780.0
-  ],
-  "compound:Linalool": [
-   40,
-   780.0
-  ],
-  "compound:Linalyl acetate": [
-   40,
-   780.0
-  ],
-  "taxon:Rosmarinus officinalis": [
-   40,
-   780.0
-  ],
-  "taxon:Mentha x piperita": [
-   40,
-   780.0
-  ],
-  "target:GABA-A": [
-   40,
-   780.0
-  ],
-  "indication:Anxiety": [
-   40,
-   780.0
+  "taxon:Glycyrrhiza uralensis": [
+   168.2,
+   40
   ],
   "compound:Glycyrrhizin": [
-   1073.6,
-   780.0
+   443.5,
+   40
   ],
   "compound:Glycyrrhetinic acid": [
-   1160.0,
-   780.0
+   667.1,
+   40
   ],
   "target:11b-HSD2": [
-   1160.0,
-   780.0
+   805.9,
+   40
   ],
-  "target:Mineralocorticoid receptor": [
-   1160.0,
-   780.0
+  "target:P-gp": [
+   680.6,
+   40
+  ],
+  "taxon:Euphorbia kansui": [
+   438.7,
+   40
+  ],
+  "compound:Kansuinin A": [
+   567.1,
+   40
   ],
   "indication:Hypertension": [
-   1160.0,
-   780.0
-  ],
-  "compound:Absinthin": [
-   68.6,
+   904.8,
    40
   ],
-  "compound:Artabsin": [
-   140.1,
-   40
-  ],
-  "target:NF-kB p65": [
-   53.3,
-   40
-  ],
-  "compound:Parthenolide": [
-   69.0,
-   40
-  ],
-  "indication:Colitis": [
+  "formula:四逆湯": [
    40,
    40
   ],
-  "indication:Migraine": [
+  "drug:乾薑": [
    40,
    40
   ],
-  "indication:Osteoarthritis": [
+  "formula:麻黃湯": [
    40,
    40
   ],
-  "compound:Tanshinone IIA": [
-   849.1,
-   40
-  ],
-  "compound:Salvianolic acid B": [
-   791.7,
-   40
-  ],
-  "target:Nrf2/KEAP1": [
-   925.5,
-   40
-  ],
-  "indication:Endothelial dysfunction": [
-   983.1,
-   40
-  ],
-  "compound:Marrubiin": [
-   974.4,
-   115.9
-  ],
-  "target:TAS2R": [
-   1160.0,
-   40
-  ],
-  "indication:Bronchospasm": [
-   1160.0,
-   40
-  ],
-  "taxon:Paeonia lactiflora": [
-   1160.0,
-   780.0
-  ],
-  "compound:Paeoniflorin": [
-   1160.0,
-   780.0
-  ],
-  "target:NKCC1/KCC2": [
-   1160.0,
-   780.0
-  ],
-  "indication:Muscle cramp": [
-   1160.0,
-   780.0
-  ],
-  "compound:Berberine": [
-   968.4,
-   780.0
-  ],
-  "target:AMPK": [
-   1096.0,
-   780.0
-  ],
-  "indication:Metabolic syndrome": [
-   1160.0,
-   780.0
-  ],
-  "compound:Curcumin": [
-   215.7,
-   40
-  ],
-  "indication:Cough": [
+  "drug:麻黃": [
    40,
-   503.3
-  ],
-  "compound:Rosmarinic acid": [
-   40,
-   539.9
-  ],
-  "process:Dung digestion": [
-   1160.0,
-   213.0
-  ],
-  "process:Spagyric separation": [
-   1160.0,
    40
   ],
-  "tradition:Channel theory": [
-   1160.0,
-   780.0
+  "drug:桂枝": [
+   40,
+   40
+  ],
+  "drug:杏仁": [
+   40,
+   40
+  ],
+  "formula:參蘇飲": [
+   694.4,
+   40
+  ],
+  "drug:人參": [
+   716.8,
+   40
+  ],
+  "drug:紫蘇": [
+   807.0,
+   40
+  ],
+  "drug:胡椒": [
+   723.5,
+   40
+  ],
+  "role:使": [
+   501.1,
+   40
+  ],
+  "taxon:Piper longum": [
+   869.1,
+   40
+  ],
+  "compound:Piperine": [
+   825.1,
+   40
+  ],
+  "taxon:Ranunculus ternatus": [
+   1200.0,
+   40
+  ],
+  "drug:貓爪草": [
+   1200.0,
+   40
+  ],
+  "indication:瘰癧 scrofula": [
+   1200.0,
+   40
+  ],
+  "taxon:Scutellaria barbata": [
+   1200.0,
+   40
+  ],
+  "drug:半枝蓮": [
+   1200.0,
+   40
+  ],
+  "compound:Scutellarein": [
+   1200.0,
+   40
+  ],
+  "indication:Colorectal cancer (adjunct)": [
+   1200.0,
+   40
+  ],
+  "drug:犀角": [
+   916.2,
+   800.0
+  ],
+  "drug:水牛角": [
+   1118.1,
+   800.0
+  ],
+  "taxon:Rhinoceros": [
+   1039.0,
+   800.0
+  ],
+  "taxon:Bubalus bubalis": [
+   1200.0,
+   800.0
+  ],
+  "drug:穿山甲": [
+   779.6,
+   800.0
+  ],
+  "drug:豬蹄甲": [
+   733.1,
+   800.0
+  ],
+  "taxon:Manis pentadactyla": [
+   954.1,
+   800.0
+  ],
+  "process:煅": [
+   822.8,
+   800.0
+  ],
+  "cite:CITES Appendix I": [
+   1050.3,
+   800.0
+  ],
+  "taxon:Juglans regia": [
+   1200.0,
+   378.0
+  ],
+  "drug:核桃仁": [
+   1200.0,
+   426.0
+  ],
+  "indication:Memory (by resemblance)": [
+   1200.0,
+   302.0
+  ],
+  "concept:ṣaḍrasa": [
+   1200.0,
+   186.1
+  ],
+  "concept:取象比類": [
+   1200.0,
+   550.3
   ]
  }
 }

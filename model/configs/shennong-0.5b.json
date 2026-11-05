@@ -1,5 +1,5 @@
 {
-  "name": "athanor-0.5b",
+  "name": "shennong-0.5b",
   "architecture": "Qwen2ForCausalLM (recipe: continued pretraining from Qwen2.5-0.5B)",
   "hidden_size": 896,
   "intermediate_size": 4864,
@@ -21,7 +21,7 @@
   "norm_eps": 1e-06,
   "init_std": 0.02,
   "notes": [
-    "Dimensions mirror Qwen2.5-0.5B (Qwen Team 2024, arXiv:2412.15115) so that the ATHANOR",
+    "Dimensions mirror Qwen2.5-0.5B (Qwen Team 2024, arXiv:2412.15115) so that the SHENNONG",
     "flagship path is a real CPT of public weights, not a hypothetical architecture.",
     "Qwen2 uses q/k/v projection biases (attention_bias=true); Qwen2.5-0.5B has 494,032,768",
     "parameters in total, of which 398M non-token-embedding (informational; not measured here)."

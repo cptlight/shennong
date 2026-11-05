@@ -37,7 +37,8 @@ VALID_TRADITIONS = {
     "tcm", "ayurveda", "unani", "kampo", "korean", "tibetan", "persian",
     "alchemy", "acupuncture", "foundational", "comparative-control",
 }
-VALID_LANGS = {"zh-Hant", "zh-Hans", "sa", "sa-Latn", "ar", "fa", "bo", "ja", "ko", "en"}
+VALID_LANGS = {"zh-Hant", "zh-Hans", "sa", "sa-Latn", "ar", "fa", "bo", "ja", "ko", "en",
+               "la", "grc", "pi"}  # Latin/Greek/Classical Tibetan-Pali for Avicenna, Dioscorides, canon
 VALID_STATUS = {"ok", "unverified", "excluded"}
 CJK_LANGS = {"zh-Hant", "zh-Hans", "ja", "ko"}
 

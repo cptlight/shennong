@@ -1,6 +1,6 @@
 {
-  "name": "athanor-mini",
-  "architecture": "athanor_mini.AthanorMini",
+  "name": "shennong-mini",
+  "architecture": "shennong_mini.ShennongMini",
   "vocab_size": 16384,
   "d_model": 384,
   "n_layer": 8,

@@ -1,0 +1,19 @@
+drug_name,process_term,process_modern,effect,source_id
+附子,炮,roast or steam with 甘草/黑豆,hydrolyses diester diterpene alkaloids (aconitine) to monoesters (benzoylaconine) reducing cardiotoxicity,fixture_wikisource_leigong
+附子,先煎,decoct first with prolonged boiling,further hydrolysis of diester alkaloids before other drugs are added,fixture_wikisource_bencaogangmu
+半夏,湯洗,wash in hot water,removes mucilaginous irritant surface lectins and calcium oxalate raphides,fixture_wikisource_leigong
+半夏,薑汁拌蒸,steam with ginger juice,reduces irritant lectins and oxalate; ginger acts as processing counter-irritant,fixture_wikisource_leigong
+甘草,蜜炙,honey-fry,glycyrrhizin-sugar interaction; reduced irritation and altered dissolution,fixture_wikisource_leigong
+大黃,酒浸蒸,wine-soak then steam,shifts anthraquinone aglycone/tannin ratio and softens purgative action,fixture_wikisource_leigong
+貝母,麩炒,bran-fry,moderates alkaloid content and irritancy,fixture_wikisource_leigong
+白芍,酒炒,wine-fry,esterification and ethanol-soluble fraction shift,fixture_wikisource_leigong
+黃連,吳茱萸湯浸炒,soak in Evodia decoction then fry,modifies alkaloid profile and reduces bitterness,fixture_wikisource_leigong
+丹砂,燒,calcine,HgS decomposes to mercury vapour (toxic) - alchemical extraction of mercury,fixture_wikisource_baopuzi
+雄黃,燒,calcine or roast,As4S4 oxidises towards As2O3 increasing toxicity,fixture_wikisource_baopuzi
+水銀,昇,sublimate,purification of mercury by sublimation never removes toxicity,fixture_wikisource_baopuzi
+pārada,śodhana,purification with herbal grinding,partial surface oxidation and complexation does not remove mercury toxicity,fixture_archive_rasaratna
+pārada,māraṇa,incineration to bhasma,converts metal to oxide nanoparticles; toxicity remains dose-dependent,fixture_archive_rasaratna
+珍珠,bhasma,calcination,CaCO3 converts to CaO and becomes alkaline,fixture_archive_rasaratna
+loha,bhasma,calcination to iron oxide,iron converts to Fe2O3/Fe3O4 particles,fixture_archive_rasaratna
+肉桂,去粗皮,remove outer bark,removes irritant and non-medicinal outer layers,fixture_duke_ethnobotany
+麻黃,去節,remove nodes,standardises ephedrine content across stem segments,fixture_duke_ethnobotany

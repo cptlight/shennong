@@ -1,66 +1,201 @@
-# TEST FIXTURES ONLY -- not the shipped corpus.
-# These are short, lightly modernised excerpts in early-modern English used to exercise
-# the extractor, KG builder and eval harness before the real corpus lands. They are
-# adapted from public-domain herbals (Culpeper 1653, Gerard 1597, Parkinson 1640,
-# an English Dioscorides, and Paracelsian/Basil-Valentine spagyric texts). They are
-# representative of the genre, not critical editions. Do not cite them.
-- id: fixture_culpeper_1653
-  title: "Culpeper's Complete Herbal (fixture excerpts)"
-  author: "Nicholas Culpeper"
-  year: 1653
-  url: "https://www.gutenberg.org/ebooks/49537"
-  licence: "Public Domain"
-  licence_evidence: "https://www.gutenberg.org/policy/license.html"
-  tier: 3
-  lang: en
-  chars: 0
-  sha256: "FIXTURE-NOT-A-REAL-HASH"
-  status: ok
-- id: fixture_gerard_1597
-  title: "The Herball or Generall Historie of Plantes (fixture excerpts)"
-  author: "John Gerard"
-  year: 1597
-  url: "https://www.gutenberg.org/"
-  licence: "Public Domain"
-  licence_evidence: "pre-1929 publication, public domain"
-  tier: 3
-  lang: en
-  chars: 0
-  sha256: "FIXTURE-NOT-A-REAL-HASH"
-  status: ok
-- id: fixture_dioscorides_1655
-  title: "The Greek Herbal of Dioscorides (Goodyer 1655, fixture excerpts)"
-  author: "Pedanius Dioscorides (trans. John Goodyer)"
-  year: 1655
-  url: "https://www.gutenberg.org/"
-  licence: "Public Domain"
-  licence_evidence: "pre-1929 publication, public domain"
+# TEST FIXTURES ONLY -- not the shipped corpus, not citable.
+# Short representative excerpts in Classical Chinese, IAST Sanskrit, Arabic and
+# English used to exercise extraction / KG / discovery before the real corpus lands.
+# Passages are adapted from public-domain classical sources; they are representative
+# of the genre and terminology, not critical editions.
+- id: fixture_wikisource_bencao
+  title: "神農本草經"
+  title_en: "Shennong Bencao Jing"
+  author: "神農 (attributed)"
+  year: -200
+  tradition: tcm
+  lang: zh-Hant
   tier: 2
-  lang: en
+  url: "https://zh.wikisource.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD-old, pre-1000 CE"
   chars: 0
   sha256: "FIXTURE-NOT-A-REAL-HASH"
   status: ok
-- id: fixture_paracelsian_1600
-  title: "Spagyric and Tria Prima texts (fixture excerpts)"
-  author: "Paracelsian / Basil Valentine tradition (anon. English translation)"
-  year: 1600
-  url: "https://www.gutenberg.org/"
+- id: fixture_wikisource_bencaogangmu
+  title: "本草綱目"
+  title_en: "Compendium of Materia Medica"
+  author: "李時珍 Li Shizhen"
+  year: 1596
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: "https://zh.wikisource.org/"
   licence: "Public Domain"
-  licence_evidence: "pre-1929 publication, public domain"
+  licence_evidence: "PD-old, Ming dynasty"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_wikisource_shanghanlun
+  title: "傷寒論"
+  title_en: "Treatise on Cold Damage"
+  author: "張仲景 Zhang Zhongjing"
+  year: 220
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: "https://zh.wikisource.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD-old"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_wikisource_leigong
+  title: "雷公炮炙論"
+  title_en: "Lei Gong's Treatise on Processing"
+  author: "雷斅 Lei Xiao"
+  year: 500
+  tradition: alchemy
+  lang: zh-Hant
   tier: 3
+  url: "https://zh.wikisource.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD-old"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_wikisource_baopuzi
+  title: "抱朴子"
+  title_en: "Baopuzi"
+  author: "葛洪 Ge Hong"
+  year: 320
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: "https://zh.wikisource.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD-old"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_wikisource_suwen
+  title: "黃帝內經素問"
+  title_en: "Huangdi Neijing Suwen"
+  author: "黃帝 (attributed)"
+  year: -100
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: "https://zh.wikisource.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD-old"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_wikisource_dongui
+  title: "東醫寶鑑"
+  title_en: "Dongui Bogam"
+  author: "許浚 Heo Jun"
+  year: 1613
+  tradition: korean
+  lang: zh-Hant
+  tier: 2
+  url: "https://zh.wikisource.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD-old"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_gretil_caraka
+  title: "Caraka Saṃhitā"
+  title_en: "Caraka Samhita"
+  author: "Caraka (attributed)"
+  year: 200
+  tradition: ayurveda
+  lang: sa-Latn
+  tier: 2
+  url: "https://gretil.sub.uni-goettingen.de/"
+  licence: "Public Domain"
+  licence_evidence: "PD edition"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_gretil_susruta
+  title: "Suśruta Saṃhitā"
+  title_en: "Sushruta Samhita"
+  author: "Suśruta (attributed)"
+  year: 300
+  tradition: ayurveda
+  lang: sa-Latn
+  tier: 2
+  url: "https://gretil.sub.uni-goettingen.de/"
+  licence: "Public Domain"
+  licence_evidence: "PD edition"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_archive_rasaratna
+  title: "Rasa Ratna Samuccaya"
+  title_en: "Rasa Ratna Samuccaya"
+  author: "Vāgbhaṭa (attributed)"
+  year: 1200
+  tradition: alchemy
+  lang: sa-Latn
+  tier: 3
+  url: "https://archive.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD edition"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_archive_qanun
+  title: "القانون في الطب"
+  title_en: "al-Qanun fi al-Tibb"
+  author: "ابن سينا Ibn Sina"
+  year: 1025
+  tradition: unani
+  lang: ar
+  tier: 2
+  url: "https://archive.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD-old"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_archive_bencao_en
+  title: "Shennong Bencao Jing (English excerpt)"
+  title_en: "Shennong Bencao Jing (English excerpt)"
+  author: "anon. translation"
+  year: 1910
+  tradition: tcm
   lang: en
+  tier: 2
+  url: "https://archive.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD 1910 translation"
+  chars: 0
+  sha256: "FIXTURE-NOT-A-REAL-HASH"
+  status: ok
+- id: fixture_archive_caraka_en
+  title: "Caraka Samhita (English excerpt)"
+  title_en: "Caraka Samhita (English excerpt)"
+  author: "anon. translation"
+  year: 1910
+  tradition: ayurveda
+  lang: en
+  tier: 2
+  url: "https://archive.org/"
+  licence: "Public Domain"
+  licence_evidence: "PD 1910 translation"
   chars: 0
   sha256: "FIXTURE-NOT-A-REAL-HASH"
   status: ok
 - id: fixture_duke_ethnobotany
-  title: "Duke-style ethnobotanical extract (fixture)"
-  author: "ATHANOR fixture"
+  title: "Ethnobotanical structured extract (fixture)"
+  title_en: "Ethnobotanical structured extract (fixture)"
+  author: "SHENNONG fixture"
   year: 2000
+  tradition: foundational
+  lang: en
+  tier: 5
   url: "local"
   licence: "Public Domain"
   licence_evidence: "synthetic fixture"
-  tier: 5
-  lang: en
   chars: 0
   sha256: "FIXTURE-NOT-A-REAL-HASH"
   status: ok

@@ -1,0 +1,623 @@
+- id: ia_abderhalden_physiological_chemistry
+  title: Text-book of Physiological Chemistry in Thirty Lectures
+  title_en: Text-book of Physiological Chemistry
+  author: Emil Abderhalden
+  year: 1908
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://archive.org/details/textbookofphysio00abderich
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/textbookofphysio00abderich
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 1979606
+  chars_raw: 2346207
+  sha256: 3853aeeb9ebd91c0e987ba505be220e22a6955acfb7dc89b40c7147f0e7fc8ab
+  status: ok
+- id: ia_cushny_pharmacology
+  title: A Text-book of Pharmacology and Therapeutics
+  title_en: A Text-book of Pharmacology and Therapeutics
+  author: Arthur R. Cushny
+  year: 1899
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://archive.org/details/textbookofpharma00cush
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/textbookofpharma00cush
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 2255785
+  chars_raw: 2647534
+  sha256: 69a9c60a1534cfc84af3a477c3655dea8ebfa0c52371d804067636d63d03cc4e
+  status: ok
+- id: ia_fluckiger_principles_pharmacognosy
+  title: The Principles of Pharmacognosy
+  title_en: The Principles of Pharmacognosy
+  author: Friedrich August Flückiger
+  year: 1887
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://archive.org/details/principlespharm00flgoog
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/principlespharm00flgoog
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 497969
+  chars_raw: 512924
+  sha256: 111fc1a47ffe41eb013f4be15f24941b4cc3a6cd0ae6c5c681df9558d6d0e23a
+  status: ok
+- id: ia_sayre_organic_materia_medica
+  title: A Manual of Organic Materia Medica and Pharmacognosy
+  title_en: A Manual of Organic Materia Medica and Pharmacognosy
+  author: Lucius Elmer Sayre
+  year: 1905
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://archive.org/details/organicmateriame0000unse
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/organicmateriame0000unse
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 1519061
+  chars_raw: 1576209
+  sha256: c2eaa07051194c419e50f7b13547394aca8c90a705961aecdf6b6bf483f2defd
+  status: ok
+- id: pg_atkinson_elementary_botany
+  title: Elementary Botany
+  title_en: Elementary Botany
+  author: George Francis Atkinson
+  year: 1905
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/64601
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 891036
+  chars_raw: 977011
+  sha256: 71945c09a83f27aff8a22de4639af0b9e4ccef6c9f1d20dc21b903e34befc158
+  status: ok
+- id: pg_campbell_structural_botany
+  title: Elements of Structural and Systematic Botany
+  title_en: Elements of Structural and Systematic Botany
+  author: Douglas Houghton Campbell
+  year: 1890
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/20390
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 469065
+  chars_raw: 512160
+  sha256: 336246771e173e4befb226f23a4d76deae5845e3ea4db86c9b8140a769a63450
+  status: ok
+- id: pg_cutter_anatomy_physiology
+  title: A Treatise on Anatomy, Physiology, and Hygiene
+  title_en: A Treatise on Anatomy, Physiology, and Hygiene
+  author: Calvin Cutter
+  year: 1884
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/30541
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 836532
+  chars_raw: 929257
+  sha256: f9838d970039647407a306849b1eb4b757bc46d6dcf3ed4fdca78e915b6daa6f
+  status: ok
+- id: pg_evolution_modern_medicine
+  title: The Evolution of Modern Medicine
+  title_en: The Evolution of Modern Medicine
+  author: Sir William Osler
+  year: 1913
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/1566
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 392225
+  chars_raw: 423093
+  sha256: af0fb7be2b0a8b3019abd71056b2de4fde30b51b4025f20c3e8ed565fffb6ed2
+  status: ok
+- id: pg_fundamentals_bacteriology
+  title: The Fundamentals of Bacteriology
+  title_en: The Fundamentals of Bacteriology
+  author: Charles Bradfield Morrey
+  year: 1912
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/43227
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 518399
+  chars_raw: 595843
+  sha256: b945936c8e22ec2e38b778b0443e1ac716071b22603dde525e603e14d3dab9ea
+  status: ok
+- id: pg_gray_elements_botany
+  title: The Elements of Botany, For Beginners and For Schools
+  title_en: The Elements of Botany
+  author: Asa Gray
+  year: 1836
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/33757
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 525890
+  chars_raw: 572076
+  sha256: 0da85415fc5d97f11672a6937874e2d34cbf46a317e680a76706e6327ed661d8
+  status: ok
+- id: pg_histology_blood
+  title: Histology of the Blood, Normal and Pathological
+  title_en: Histology of the Blood
+  author: Paul Ehrlich and Adolf Lazarus
+  year: 1900
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/29842
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 363152
+  chars_raw: 403142
+  sha256: bd3326a4a7ae3b014f234312c4ab4c3c8c597cade3836ce9d1a8bca2ccbafeb1
+  status: ok
+- id: pg_histology_medicinal_plants
+  title: Histology of Medicinal Plants
+  title_en: Histology of Medicinal Plants
+  author: William James Mansfield
+  year: 1916
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/65569
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 331963
+  chars_raw: 398746
+  sha256: bc6c85ef903886bd0b3891e215d7c5de21f21d5e429092692b63febfb06a55dc
+  status: ok
+- id: pg_mendel_heredity
+  title: 'Mendel''s Principles of Heredity: A Defence'
+  title_en: Mendel's Principles of Heredity
+  author: William Bateson
+  year: 1902
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/69362
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 381993
+  chars_raw: 422576
+  sha256: 7f96b7996c39097a5fbb5fc589ac44adb020a7008126d1ded8ef1384682bb456
+  status: ok
+- id: pg_micrographia
+  title: Micrographia
+  title_en: Micrographia
+  author: Robert Hooke
+  year: 1665
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/15491
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 868523
+  chars_raw: 916468
+  sha256: 344676ed4a4e95f5ae9771c076895ae7f3cec479ae28b0b69ecad5488a1514a3
+  status: ok
+- id: pg_organic_syntheses_v1
+  title: Organic Syntheses
+  title_en: Organic Syntheses, Vol. 1
+  author: Editorial Board
+  year: 1921
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/1234
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 136910
+  chars_raw: 163342
+  sha256: 4ee76197ac9a24ba8febfa7f48d9492ffa187a1f9f6ba952ab21c502b8c68767
+  status: ok
+- id: pg_origin_of_species
+  title: On the Origin of Species By Means of Natural Selection
+  title_en: On the Origin of Species
+  author: Charles Darwin
+  year: 1859
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/1228
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 932145
+  chars_raw: 970611
+  sha256: 362142cb7c6f90850477520cfe2a62fe423ae92ea8eb6d9cd8b30ddb39de60b9
+  status: ok
+- id: pg_pharmacographia
+  title: 'Pharmacographia: A History of the Principal Drugs of Vegetable Origin'
+  title_en: Pharmacographia
+  author: Friedrich A. Flückiger and Daniel Hanbury
+  year: 1879
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/67691
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 2576883
+  chars_raw: 2740808
+  sha256: a59cc17b0f46106743a7ebde0b24154a717b98c02dc02afaab98dd3628ccbb0a
+  status: ok
+- id: pg_story_germ_life
+  title: The Story of Germ Life
+  title_en: The Story of Germ Life
+  author: H. W. Conn
+  year: 1897
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/4962
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 296021
+  chars_raw: 321445
+  sha256: 47a60a3ba8bf06c0b27b6e9c66fb4914240ce43547dec818d0f535226543a58f
+  status: ok
+- id: pg_structure_functions_body
+  title: 'Structure and Functions of the Body: A Handbook of Anatomy and Physiology'
+  title_en: Structure and Functions of the Body
+  author: Annette Fiske
+  year: 1911
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/64754
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 360284
+  chars_raw: 403232
+  sha256: 2270b390a7d6bbf8bda8d00f3a877305ba6398985a929e8bf363ae6c30890419
+  status: ok
+- id: pg_withering_foxglove
+  title: An Account of the Foxglove and some of its Medical Uses
+  title_en: An Account of the Foxglove
+  author: William Withering
+  year: 1785
+  tradition: foundational
+  lang: en
+  tier: 1
+  url: https://www.gutenberg.org/ebooks/24886
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 270542
+  chars_raw: 311051
+  sha256: ad2b7900ac549384f6873f6dab70268aaf3307d145699ec2295d3f7d95e904dc
+  status: ok
+- id: ia_avicenna_canon_latin_1593
+  title: Canon medicinae (Latin, 1593 Venice)
+  title_en: Avicenna, Canon of Medicine (Latin)
+  author: Ibn Sīnā (Avicenna)
+  year: 1593
+  tradition: unani
+  lang: la
+  tier: 2
+  url: https://archive.org/details/BIUSante_00095
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/BIUSante_00095
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 2804522
+  chars_raw: 2955196
+  sha256: b06b617e8fea0be5f06527e6a4d2f5d33fa3f25cf496ef1b4caee2a452949144
+  status: ok
+- id: ia_bhishagratna_sushruta
+  title: An English Translation of the Sushruta Samhita
+  title_en: Suśruta Saṃhitā (English translation)
+  author: Suśruta; trans. Kunja Lal Bhishagratna
+  year: 1907
+  tradition: ayurveda
+  lang: en
+  tier: 2
+  url: https://archive.org/details/englishtranslati00susruoft
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/englishtranslati00susruoft
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 1373908
+  chars_raw: 1627363
+  sha256: 8a597a0e153f5ee4ea036edf3d1c92319f0452e8eca5d97276f1f1041c30dd5a
+  status: ok
+- id: ia_dutt_materia_medica_hindus
+  title: The Materia Medica of the Hindus, compiled from Sanskrit medical works
+  title_en: Materia Medica of the Hindus
+  author: Uday Chand Dutt; George King
+  year: 1877
+  tradition: ayurveda
+  lang: en
+  tier: 2
+  url: https://archive.org/details/materiamedicahi00kinggoog
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/materiamedicahi00kinggoog
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 607175
+  chars_raw: 645908
+  sha256: 34d953c4532840a76013aefe43c4b5643516fed3da01c9c32e2e2437b8e25692
+  status: ok
+- id: ia_hanbury_chinese_materia_medica
+  title: Notes on Chinese Materia Medica
+  title_en: Notes on Chinese Materia Medica
+  author: Daniel Hanbury
+  year: 1862
+  tradition: tcm
+  lang: en
+  tier: 2
+  url: https://archive.org/details/notesonchinesem00hanbgoog
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/notesonchinesem00hanbgoog
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 128000
+  chars_raw: 131440
+  sha256: c07e2a9dbd35ce65c1a0b4bb177cc5f1692f1b753e6e9a0ae702c342929ddff4
+  status: ok
+- id: ia_kirtikar_indian_medicinal_plants_2
+  title: Indian Medicinal Plants (vol. 2)
+  title_en: Indian Medicinal Plants
+  author: K. R. Kirtikar; B. D. Basu
+  year: 1918
+  tradition: ayurveda
+  lang: en
+  tier: 2
+  url: https://archive.org/details/indianmedicinalp02kirt
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/indianmedicinalp02kirt
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 1457698
+  chars_raw: 1504177
+  sha256: 15e13293abc066283bb8a941778b41b5033912c2a9629d45c2ec95122dc64ee9
+  status: ok
+- id: ia_kirtikar_indian_medicinal_plants_b
+  title: Indian Medicinal Plants (vol. 2, alt. scan)
+  title_en: Indian Medicinal Plants
+  author: K. R. Kirtikar; B. D. Basu
+  year: 1918
+  tradition: ayurveda
+  lang: en
+  tier: 2
+  url: https://archive.org/details/b31359644_0002
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/b31359644_0002
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 1439705
+  chars_raw: 1703735
+  sha256: 381e67e4124b0ab50179e6ba4385827672d2c9b50fc69f9e51b1e8ca80034fa5
+  status: ok
+- id: ia_stuart_chinese_materia_medica
+  title: 'Chinese Materia Medica: Vegetable Kingdom'
+  title_en: Chinese Materia Medica
+  author: G. A. Stuart; F. Porter Smith
+  year: 1911
+  tradition: tcm
+  lang: en
+  tier: 2
+  url: https://archive.org/details/chinesemateriame00stuauoft
+  licence: Public Domain
+  licence_evidence: https://archive.org/details/chinesemateriame00stuauoft
+  licence_note: Published before 1929; public domain in the United States (https://guides.library.cornell.edu/copyright/publicdomain).
+  chars: 1182308
+  chars_raw: 1233663
+  sha256: 06c1bc1d0358bca079de1768dae2e9c2216792cf4357bab568c8edc9bdc5a09d
+  status: ok
+- id: pg_taleef_shereef
+  title: The Taleef Shereef; Or, Indian Materia Medica
+  title_en: The Taleef Shereef (Indian Materia Medica)
+  author: trans. George Playfair
+  year: 1833
+  tradition: unani
+  lang: en
+  tier: 2
+  url: https://www.gutenberg.org/ebooks/53755
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 399032
+  chars_raw: 431070
+  sha256: 18341e048f3e1e76427e2e040a4fddb96bc0ce1950767009154ef889ab3d98ee
+  status: ok
+- id: pg_waring_bazaar_medicines
+  title: Remarks on the Uses of some of the Bazaar Medicines and Common Medical Plants of India
+  title_en: Bazaar Medicines and Common Medical Plants of India
+  author: Edward John Waring
+  year: 1867
+  tradition: ayurveda
+  lang: en
+  tier: 2
+  url: https://www.gutenberg.org/ebooks/58525
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 428621
+  chars_raw: 462047
+  sha256: e4bd479dda3885deab99c11a7f1743daba7f45a01efd35ae71ef196623e46c95
+  status: ok
+- id: ws_zh_bencao_beiyao
+  title: 本草備要
+  title_en: Bencao Beiyao (Essentials of Materia Medica)
+  author: 汪昂 Wang Ang
+  year: 1694
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 134941
+  chars_raw: 137223
+  sha256: f2e1c9453481990c324fc4d60b3e982241c40e14763b32c8b1546d8df08dbaf4
+  status: ok
+- id: ws_zh_bencao_congxin
+  title: 本草從新
+  title_en: Bencao Congxin (New Materia Medica)
+  author: 吳儀洛 Wu Yiluo
+  year: 1757
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 173447
+  chars_raw: 175957
+  sha256: f09984baded64dae523eb894c9972ccbe7e27589e90a0904d166e3f664195f86
+  status: ok
+- id: ws_zh_bencao_gangmu
+  title: 本草綱目
+  title_en: Bencao Gangmu (Compendium of Materia Medica)
+  author: 李時珍 Li Shizhen
+  year: 1596
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 1877894
+  chars_raw: 1926467
+  sha256: df4c492fa33c7ac364d37e54378706925086933b28217721de78e61e647e6c87
+  status: ok
+- id: ws_zh_bencao_jingjizhu
+  title: 本草經集注
+  title_en: Bencao Jing Jizhu (Collected Commentaries on the Materia Medica)
+  author: 陶弘景 Tao Hongjing
+  year: 500
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 127156
+  chars_raw: 130169
+  sha256: 2c3f7dfafacda23b78c0f809a54b61e292df9d8f7aa79314b352d2c55b7d9b6e
+  status: ok
+- id: ws_zh_shennong_bencaojing
+  title: 神農本草經
+  title_en: Shennong Bencao Jing (Divine Farmer's Materia Medica)
+  author: 神農 Shennong (attrib.)
+  year: 200
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 17743
+  chars_raw: 18131
+  sha256: a3e544d413cb9751d917c459bc62711481553e1d995f6d822f19197570f33af4
+  status: ok
+- id: ws_zh_xinxiu_bencao
+  title: 新修本草
+  title_en: Xinxiu Bencao (Newly Revised Materia Medica)
+  author: 蘇敬 Su Jing et al.
+  year: 659
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 166063
+  chars_raw: 178063
+  sha256: f9d7715254a619aefcf5283be36365da1cb697ed20626c52ece0b5618f915698
+  status: ok
+- id: ws_zh_zhenglei_bencao
+  title: 證類本草
+  title_en: Zhenglei Bencao (Classified Materia Medica)
+  author: 唐慎微 Tang Shenwei
+  year: 1082
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 789819
+  chars_raw: 800662
+  sha256: 68d76690df31ea55281f1d2b4dd1e487f173949f83e28a36a6ec52c44f4efb9d
+  status: ok
+- id: gretil_rasaratnasamuccaya
+  title: Rasaratnasamuccaya (Vāgbhaṭa)
+  title_en: ''
+  author: ''
+  year: null
+  tradition: alchemy
+  lang: sa-Latn
+  tier: 3
+  url: http://gretil.sub.uni-goettingen.de/gretil.html
+  licence: CC-BY-NC-SA-4.0
+  licence_evidence: TEI header <licence target='https://creativecommons.org/licenses/by-nc-sa/4.0/'>
+  chars: 0
+  sha256: ''
+  status: unverified
+  status_note: 'Non-commercial licence: cannot be used for training, may be cited as reference.'
+- id: ws_zh_leigong_paozhi
+  title: 雷公炮炙論
+  title_en: Leigong Paozhi Lun (Master Lei's Treatise on Processing)
+  author: 雷斅 Lei Xiao
+  year: 470
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 25959
+  chars_raw: 30107
+  sha256: 4f4b39b263a22a7621b76b270e66b7615da6d5ed3f72967879c22dcf8b6fc4ef
+  status: ok
+- id: pg_churchill_acupuncturation
+  title: A Treatise on Acupuncturation
+  title_en: A Treatise on Acupuncturation
+  author: James Morss Churchill
+  year: 1821
+  tradition: acupuncture
+  lang: en
+  tier: 4
+  url: https://www.gutenberg.org/ebooks/50985
+  licence: Public Domain
+  licence_evidence: https://www.gutenberg.org/policy/license.html
+  licence_note: Project Gutenberg public-domain text (US).
+  chars: 53997
+  chars_raw: 75723
+  sha256: 910dab98e89d24f7a4b1f7aa8300256840c4895173f3676e1cc648a88b83762f
+  status: ok

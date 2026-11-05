@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHENNONG 神农 · Workbench</title>
+<meta name="description" content="SHENNONG — decoding the Asian medical canon into falsifiable pharmacological hypotheses. Local research cockpit; research use only, not medical advice.">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".55"/>
+      <!-- 鼎 cauldron: rim, body, three legs -->
+      <path d="M17 24h30" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M20 24c0 10 4.5 17 12 17s12-7 12-17" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M24 41v9M40 41v9M32 41v10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <!-- 禾 grain/leaf rising from the vessel -->
+      <path d="M32 20c0-6 0-10 0-12" stroke="var(--cinnabar)" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M32 12c-4-1-6.5-3-7.5-6M32 12c4-1 6.5-3 7.5-6" fill="none" stroke="var(--cinnabar)" stroke-width="3" stroke-linecap="round"/>
+      <!-- hexagon: the molecule in the grain -->
+      <path d="M32 4.2l3.1 1.8v3.6L32 11.4l-3.1-1.8V6z" fill="none" stroke="var(--cinnabar)" stroke-width="1.4" opacity=".9"/>
+    </svg>
+    <div class="wordmark">
+      <span class="cn">神农</span>
+      <span class="en">SHENNONG</span>
+    </div>
+  </div>
+  <p class="tagline" id="tagline">Shennong tasted a hundred herbs.</p>
+  <div class="topbar-right">
+    <div id="status-pills" class="status-pills" aria-live="polite"></div>
+    <span class="pill pill-safety" title="This tool is a research instrument. It does not give medical advice.">Research only · not medical advice</span>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Workbench sections">
+  <button role="tab" id="tab-hypotheses" aria-controls="panel-hypotheses" aria-selected="true" tabindex="0" data-panel="hypotheses">Hypotheses</button>
+  <button role="tab" id="tab-graph" aria-controls="panel-graph" aria-selected="false" tabindex="-1" data-panel="graph">Knowledge graph</button>
+  <button role="tab" id="tab-ask" aria-controls="panel-ask" aria-selected="false" tabindex="-1" data-panel="ask">Ask</button>
+  <button role="tab" id="tab-corpus" aria-controls="panel-corpus" aria-selected="false" tabindex="-1" data-panel="corpus">Corpus</button>
+  <button role="tab" id="tab-method" aria-controls="panel-method" aria-selected="false" tabindex="-1" data-panel="method">Methodology</button>
+</nav>
+
+<main id="main">
+
+  <!-- ===================================================== HYPOTHESES -->
+  <section class="panel is-active" id="panel-hypotheses" role="tabpanel" aria-labelledby="tab-hypotheses" tabindex="0">
+    <div class="panel-head">
+      <div>
+        <h1>Ranked hypotheses <span class="cn-inline">使 Shǐ</span></h1>
+        <p class="lede">Every hypothesis carries its provenance chain, a score breakdown, the experiment that
+          could kill it, and an honest statement of what we are least sure about.</p>
+      </div>
+      <div id="hyp-badge" class="data-badge"></div>
+    </div>
+
+    <div class="toolbar">
+      <div class="field">
+        <label for="rank-by">Rank by</label>
+        <select id="rank-by">
+          <option value="composite">composite (default)</option>
+          <option value="novelty">novelty</option>
+          <option value="testability">testability</option>
+          <option value="plausibility">plausibility</option>
+          <option value="evidence">evidence</option>
+        </select>
+      </div>
+      <div class="field grow">
+        <label for="hyp-search">Search chain, title, drug</label>
+        <input id="hyp-search" type="search" placeholder="e.g. 附子, aristolochic, courier, 三七" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="class-filter">Discovery class</label>
+        <select id="class-filter"><option value="">all classes</option></select>
+      </div>
+      <button id="clear-filters" class="btn-quiet" type="button">Clear</button>
+    </div>
+
+    <div id="active-node-filter" class="node-filter" hidden>
+      Filtered by graph node <strong id="node-filter-label"></strong>
+      <button type="button" id="node-filter-clear">remove</button>
+    </div>
+
+    <div id="hyp-list" class="hyp-list" aria-live="polite"></div>
+  </section>
+
+  <!-- ===================================================== GRAPH -->
+  <section class="panel" id="panel-graph" role="tabpanel" aria-labelledby="tab-graph" tabindex="0" hidden>
+    <div class="panel-head">
+      <div>
+        <h1>Knowledge graph <span class="cn-inline">配 Pèi</span></h1>
+        <p class="lede">Taxa, drug names, preparations, compounds, targets, indications and sources.
+          Click a node to filter the hypotheses. Hover to trace its neighbourhood.</p>
+      </div>
+      <div id="kg-badge" class="data-badge"></div>
+    </div>
+    <div class="graph-wrap">
+      <div class="graph-main">
+        <div class="graph-toolbar">
+          <label for="node-search" class="sr">Find a node</label>
+          <input id="node-search" type="search" placeholder="Find a node — 木通, aconitine, CYP3A4…" autocomplete="off">
+          <span id="graph-count" class="muted"></span>
+        </div>
+        <div class="graph-canvas" id="graph-canvas">
+          <svg id="kg-svg" viewBox="0 0 1240 840" role="img" aria-labelledby="kg-title">
+            <title id="kg-title">Force-directed knowledge graph of the SHENNONG corpus</title>
+            <g id="kg-edges"></g>
+            <g id="kg-nodes"></g>
+          </svg>
+        </div>
+        <div id="kg-legend" class="legend" aria-label="Node type legend"></div>
+        <p class="graph-hint">Mouse or keyboard: the search box above is the accessible route to every node;
+          results are a plain list you can tab through.</p>
+      </div>
+      <aside class="graph-side" aria-live="polite">
+        <div id="node-inspector" class="inspector">
+          <p class="muted">Select a node to see its neighbourhood.</p>
+        </div>
+        <div id="node-results" class="node-results" role="listbox" aria-label="Node search results"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================================================== ASK -->
+  <section class="panel" id="panel-ask" role="tabpanel" aria-labelledby="tab-ask" tabindex="0" hidden>
+    <div class="panel-head">
+      <div>
+        <h1>Ask the corpus <span class="cn-inline">問</span></h1>
+        <p class="lede">Answers are assembled from passages in the loaded corpus and every sentence carries a
+          citation. When the corpus cannot support a claim, the system refuses — a refusal is a result, not a failure.</p>
+      </div>
+      <div id="ask-badge" class="data-badge"></div>
+    </div>
+
+    <div class="banner banner-warn" role="note">
+      <strong>Research use only — not medical advice.</strong>
+      SHENNONG is an instrument for reading historical texts. It does not give dosing, diagnostic or
+      self-treatment guidance, and it will refuse questions that ask for it.
+      <span class="banner-point">Dual-use screening is on: preparation and synthesis questions for toxic
+      substances are declined by policy, not by inability.</span>
+    </div>
+
+    <form id="ask-form" class="ask-form">
+      <label for="ask-q" class="sr">Your question</label>
+      <input id="ask-q" name="q" type="text" autocomplete="off" spellcheck="false"
+             placeholder="What did 雷公炮炙論 say about preparing 附子?" />
+      <button type="submit" class="btn-primary">Ask</button>
+    </form>
+
+    <div id="ask-examples" class="examples"></div>
+    <div id="ask-out" class="ask-out" aria-live="polite"></div>
+  </section>
+
+  <!-- ===================================================== CORPUS -->
+  <section class="panel" id="panel-corpus" role="tabpanel" aria-labelledby="tab-corpus" tabindex="0" hidden>
+    <div class="panel-head">
+      <div>
+        <h1>The corpus <span class="cn-inline">采 Cǎi</span></h1>
+        <p class="lede">What the model reads, where it came from, and under which licence. Anything whose licence
+          is not verifiable is excluded from training and cited only.</p>
+      </div>
+      <div id="corpus-badge" class="data-badge"></div>
+    </div>
+    <div id="corpus-body"></div>
+  </section>
+
+  <!-- ===================================================== METHODOLOGY -->
+  <section class="panel" id="panel-method" role="tabpanel" aria-labelledby="tab-method" tabindex="0" hidden>
+    <div class="panel-head">
+      <div>
+        <h1>Methodology &amp; evaluation <span class="cn-inline">法</span></h1>
+        <p class="lede">The four classical operations of Chinese pharmacy, the model, and every number we are
+          willing to defend — including the negative controls, which are allowed to say "no signal".</p>
+      </div>
+      <div id="method-badge" class="data-badge"></div>
+    </div>
+    <div id="method-body"></div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-left">
+    <span class="mono">SHENNONG 神农</span> · EthnoHack 2026 · track 01 Traditional Knowledge Mining
+  </div>
+  <div class="foot-right">
+    <span class="pill pill-quiet" id="foot-source">loading…</span>
+    <span class="pill pill-quiet">research use only · not clinical</span>
+  </div>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

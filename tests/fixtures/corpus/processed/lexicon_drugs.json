@@ -1,0 +1,1820 @@
+{
+ "historical": [
+  {
+   "name": "甘草",
+   "lang": "zh-Hant",
+   "readings": [
+    "licorice",
+    "gan cao",
+    "liquorice"
+   ],
+   "modern": "Glycyrrhiza uralensis",
+   "confidence": 0.97,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "gancao"
+  },
+  {
+   "name": "人參",
+   "lang": "zh-Hant",
+   "readings": [
+    "ginseng",
+    "ren shen"
+   ],
+   "modern": "Panax ginseng",
+   "confidence": 0.97,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "renshen"
+  },
+  {
+   "name": "人參",
+   "lang": "zh-Hant",
+   "readings": [
+    "ginseng"
+   ],
+   "modern": "Panax ginseng",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "renshen"
+  },
+  {
+   "name": "黃芪",
+   "lang": "zh-Hant",
+   "readings": [
+    "astragalus",
+    "huang qi"
+   ],
+   "modern": "Astragalus membranaceus",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "huangqi"
+  },
+  {
+   "name": "黃耆",
+   "lang": "zh-Hant",
+   "readings": [
+    "astragalus"
+   ],
+   "modern": "Astragalus membranaceus",
+   "confidence": 0.85,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "huangqi"
+  },
+  {
+   "name": "大黃",
+   "lang": "zh-Hant",
+   "readings": [
+    "rhubarb",
+    "da huang"
+   ],
+   "modern": "Rheum palmatum",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "dahuang"
+  },
+  {
+   "name": "麻黃",
+   "lang": "zh-Hant",
+   "readings": [
+    "ephedra",
+    "ma huang"
+   ],
+   "modern": "Ephedra sinica",
+   "confidence": 0.97,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "mahuang"
+  },
+  {
+   "name": "桂枝",
+   "lang": "zh-Hant",
+   "readings": [
+    "cinnamon twig",
+    "gui zhi"
+   ],
+   "modern": "Cinnamomum cassia",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "guizhi"
+  },
+  {
+   "name": "芍藥",
+   "lang": "zh-Hant",
+   "readings": [
+    "peony root",
+    "shao yao"
+   ],
+   "modern": "Paeonia lactiflora",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shaoyao"
+  },
+  {
+   "name": "白芍",
+   "lang": "zh-Hant",
+   "readings": [
+    "white peony",
+    "bai shao"
+   ],
+   "modern": "Paeonia lactiflora",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "baishao"
+  },
+  {
+   "name": "生薑",
+   "lang": "zh-Hant",
+   "readings": [
+    "fresh ginger",
+    "ginger",
+    "sheng jiang"
+   ],
+   "modern": "Zingiber officinale",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shengjiang"
+  },
+  {
+   "name": "生薑",
+   "lang": "zh-Hant",
+   "readings": [
+    "ginger"
+   ],
+   "modern": "Zingiber officinale",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shengjiang"
+  },
+  {
+   "name": "乾薑",
+   "lang": "zh-Hant",
+   "readings": [
+    "dried ginger",
+    "gan jiang"
+   ],
+   "modern": "Zingiber officinale",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "ganjiang"
+  },
+  {
+   "name": "大棗",
+   "lang": "zh-Hant",
+   "readings": [
+    "jujube",
+    "da zao"
+   ],
+   "modern": "Ziziphus jujuba",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "dazao"
+  },
+  {
+   "name": "杏仁",
+   "lang": "zh-Hant",
+   "readings": [
+    "apricot kernel",
+    "xing ren"
+   ],
+   "modern": "Prunus armeniaca",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xingren"
+  },
+  {
+   "name": "半夏",
+   "lang": "zh-Hant",
+   "readings": [
+    "pinellia",
+    "ban xia"
+   ],
+   "modern": "Pinellia ternata",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "banxia"
+  },
+  {
+   "name": "附子",
+   "lang": "zh-Hant",
+   "readings": [
+    "aconite root",
+    "fuzi"
+   ],
+   "modern": "Aconitum carmichaelii",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "fuzi"
+  },
+  {
+   "name": "川烏",
+   "lang": "zh-Hant",
+   "readings": [
+    "sichuan aconite",
+    "chuan wu"
+   ],
+   "modern": "Aconitum carmichaelii",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chuanwu"
+  },
+  {
+   "name": "草烏",
+   "lang": "zh-Hant",
+   "readings": [
+    "wild aconite",
+    "cao wu"
+   ],
+   "modern": "Aconitum kusnezoffii",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "caowu"
+  },
+  {
+   "name": "貝母",
+   "lang": "zh-Hant",
+   "readings": [
+    "fritillary",
+    "bei mu"
+   ],
+   "modern": "Fritillaria cirrhosa",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "beimu"
+  },
+  {
+   "name": "瓜蔞",
+   "lang": "zh-Hant",
+   "readings": [
+    "trichosanthes",
+    "gua lou"
+   ],
+   "modern": "Trichosanthes kirilowii",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "gualou"
+  },
+  {
+   "name": "白蘞",
+   "lang": "zh-Hant",
+   "readings": [
+    "ampelopsis",
+    "bai lian"
+   ],
+   "modern": "Ampelopsis japonica",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "bailian"
+  },
+  {
+   "name": "白及",
+   "lang": "zh-Hant",
+   "readings": [
+    "bletilla",
+    "bai ji"
+   ],
+   "modern": "Bletilla striata",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "baiji"
+  },
+  {
+   "name": "甘遂",
+   "lang": "zh-Hant",
+   "readings": [
+    "kansui",
+    "gan sui"
+   ],
+   "modern": "Euphorbia kansui",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "gansui"
+  },
+  {
+   "name": "大戟",
+   "lang": "zh-Hant",
+   "readings": [
+    "euphorbia",
+    "da ji"
+   ],
+   "modern": "Euphorbia pekinensis",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "daji"
+  },
+  {
+   "name": "海藻",
+   "lang": "zh-Hant",
+   "readings": [
+    "sargassum",
+    "hai zao"
+   ],
+   "modern": "Sargassum fusiforme",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "haizao"
+  },
+  {
+   "name": "芫花",
+   "lang": "zh-Hant",
+   "readings": [
+    "daphne",
+    "yuan hua"
+   ],
+   "modern": "Daphne genkwa",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "yuanhua"
+  },
+  {
+   "name": "藜蘆",
+   "lang": "zh-Hant",
+   "readings": [
+    "veratrum",
+    "li lu"
+   ],
+   "modern": "Veratrum nigrum",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "lilu"
+  },
+  {
+   "name": "細辛",
+   "lang": "zh-Hant",
+   "readings": [
+    "asarum",
+    "xi xin"
+   ],
+   "modern": "Asarum heterotropoides",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xixin"
+  },
+  {
+   "name": "丹參",
+   "lang": "zh-Hant",
+   "readings": [
+    "salvia",
+    "dan shen"
+   ],
+   "modern": "Salvia miltiorrhiza",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "danshen"
+  },
+  {
+   "name": "玄參",
+   "lang": "zh-Hant",
+   "readings": [
+    "scrophularia",
+    "xuan shen"
+   ],
+   "modern": "Scrophularia ningpoensis",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xuanshen"
+  },
+  {
+   "name": "苦參",
+   "lang": "zh-Hant",
+   "readings": [
+    "sophora",
+    "ku shen"
+   ],
+   "modern": "Sophora flavescens",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "kushen"
+  },
+  {
+   "name": "沙參",
+   "lang": "zh-Hant",
+   "readings": [
+    "adenophora",
+    "sha shen"
+   ],
+   "modern": "Adenophora stricta",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shashen"
+  },
+  {
+   "name": "硫黃",
+   "lang": "zh-Hant",
+   "readings": [
+    "sulfur",
+    "liu huang"
+   ],
+   "modern": "sulfur",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "liuhuang"
+  },
+  {
+   "name": "朴硝",
+   "lang": "zh-Hant",
+   "readings": [
+    "sodium sulfate",
+    "pu xiao"
+   ],
+   "modern": "sodium sulfate",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "puxiao"
+  },
+  {
+   "name": "水銀",
+   "lang": "zh-Hant",
+   "readings": [
+    "mercury",
+    "shui yin"
+   ],
+   "modern": "mercury",
+   "confidence": 0.97,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shuiyin"
+  },
+  {
+   "name": "砒霜",
+   "lang": "zh-Hant",
+   "readings": [
+    "arsenic trioxide",
+    "pi shuang"
+   ],
+   "modern": "arsenic trioxide",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "pishuang"
+  },
+  {
+   "name": "狼毒",
+   "lang": "zh-Hant",
+   "readings": [
+    "lang du"
+   ],
+   "modern": "Euphorbia fischeriana",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "langdu"
+  },
+  {
+   "name": "密陀僧",
+   "lang": "zh-Hant",
+   "readings": [
+    "litharge",
+    "mi tuo seng"
+   ],
+   "modern": "litharge",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "mituoseng"
+  },
+  {
+   "name": "巴豆",
+   "lang": "zh-Hant",
+   "readings": [
+    "croton",
+    "ba dou"
+   ],
+   "modern": "Croton tiglium",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "badou"
+  },
+  {
+   "name": "牽牛",
+   "lang": "zh-Hant",
+   "readings": [
+    "pharbitis",
+    "qian niu"
+   ],
+   "modern": "Pharbitis nil",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "qianniu"
+  },
+  {
+   "name": "丁香",
+   "lang": "zh-Hant",
+   "readings": [
+    "clove",
+    "ding xiang"
+   ],
+   "modern": "Syzygium aromaticum",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "dingxiang"
+  },
+  {
+   "name": "鬱金",
+   "lang": "zh-Hant",
+   "readings": [
+    "turmeric tuber",
+    "yu jin"
+   ],
+   "modern": "Curcuma longa",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "yujin"
+  },
+  {
+   "name": "牙硝",
+   "lang": "zh-Hant",
+   "readings": [
+    "ya xiao"
+   ],
+   "modern": "sodium sulfate",
+   "confidence": 0.85,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "yaxiao"
+  },
+  {
+   "name": "三稜",
+   "lang": "zh-Hant",
+   "readings": [
+    "sparganium",
+    "san leng"
+   ],
+   "modern": "Sparganium stoloniferum",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "sanleng"
+  },
+  {
+   "name": "犀角",
+   "lang": "zh-Hant",
+   "readings": [
+    "rhinoceros horn",
+    "xi jiao"
+   ],
+   "modern": "Rhinoceros",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xijiao"
+  },
+  {
+   "name": "五靈脂",
+   "lang": "zh-Hant",
+   "readings": [
+    "trogopterus dung",
+    "wu ling zhi"
+   ],
+   "modern": "Trogopterus",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "wulingzhi"
+  },
+  {
+   "name": "官桂",
+   "lang": "zh-Hant",
+   "readings": [
+    "cinnamon bark",
+    "guan gui"
+   ],
+   "modern": "Cinnamomum cassia",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "guangui"
+  },
+  {
+   "name": "赤石脂",
+   "lang": "zh-Hant",
+   "readings": [
+    "halloysite",
+    "chi shi zhi"
+   ],
+   "modern": "halloysite",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chishizhi"
+  },
+  {
+   "name": "茯苓",
+   "lang": "zh-Hant",
+   "readings": [
+    "poria",
+    "fu ling"
+   ],
+   "modern": "Poria cocos",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "fuling"
+  },
+  {
+   "name": "白朮",
+   "lang": "zh-Hant",
+   "readings": [
+    "atractylodes",
+    "bai zhu"
+   ],
+   "modern": "Atractylodes macrocephala",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "baizhu"
+  },
+  {
+   "name": "當歸",
+   "lang": "zh-Hant",
+   "readings": [
+    "angelica",
+    "dang gui"
+   ],
+   "modern": "Angelica sinensis",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "danggui"
+  },
+  {
+   "name": "川芎",
+   "lang": "zh-Hant",
+   "readings": [
+    "ligusticum",
+    "chuan xiong"
+   ],
+   "modern": "Ligusticum chuanxiong",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chuanxiong"
+  },
+  {
+   "name": "地黃",
+   "lang": "zh-Hant",
+   "readings": [
+    "rehmannia",
+    "di huang"
+   ],
+   "modern": "Rehmannia glutinosa",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "dihuang"
+  },
+  {
+   "name": "陳皮",
+   "lang": "zh-Hant",
+   "readings": [
+    "tangerine peel",
+    "chen pi"
+   ],
+   "modern": "Citrus reticulata",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chenpi"
+  },
+  {
+   "name": "柴胡",
+   "lang": "zh-Hant",
+   "readings": [
+    "bupleurum",
+    "chai hu"
+   ],
+   "modern": "Bupleurum chinense",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chaihu"
+  },
+  {
+   "name": "黃連",
+   "lang": "zh-Hant",
+   "readings": [
+    "coptis",
+    "huang lian"
+   ],
+   "modern": "Coptis chinensis",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "huanglian"
+  },
+  {
+   "name": "黃芩",
+   "lang": "zh-Hant",
+   "readings": [
+    "scutellaria",
+    "huang qin"
+   ],
+   "modern": "Scutellaria baicalensis",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "huangqin"
+  },
+  {
+   "name": "黃柏",
+   "lang": "zh-Hant",
+   "readings": [
+    "phellodendron",
+    "huang bo"
+   ],
+   "modern": "Phellodendron amurense",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "huangbo"
+  },
+  {
+   "name": "梔子",
+   "lang": "zh-Hant",
+   "readings": [
+    "gardenia",
+    "zhi zi"
+   ],
+   "modern": "Gardenia jasminoides",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "zhizi"
+  },
+  {
+   "name": "桔梗",
+   "lang": "zh-Hant",
+   "readings": [
+    "platycodon",
+    "jie geng"
+   ],
+   "modern": "Platycodon grandiflorus",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "jiegeng"
+  },
+  {
+   "name": "薄荷",
+   "lang": "zh-Hant",
+   "readings": [
+    "mint",
+    "bo he"
+   ],
+   "modern": "Mentha haplocalyx",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "bohe"
+  },
+  {
+   "name": "五味子",
+   "lang": "zh-Hant",
+   "readings": [
+    "schisandra",
+    "wu wei zi"
+   ],
+   "modern": "Schisandra chinensis",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "wuweizi"
+  },
+  {
+   "name": "麥冬",
+   "lang": "zh-Hant",
+   "readings": [
+    "ophiopogon",
+    "mai dong"
+   ],
+   "modern": "Ophiopogon japonicus",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "maidong"
+  },
+  {
+   "name": "杜仲",
+   "lang": "zh-Hant",
+   "readings": [
+    "eucommia",
+    "du zhong"
+   ],
+   "modern": "Eucommia ulmoides",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "duzhong"
+  },
+  {
+   "name": "續斷",
+   "lang": "zh-Hant",
+   "readings": [
+    "dipsacus",
+    "xu duan"
+   ],
+   "modern": "Dipsacus asper",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xuduan"
+  },
+  {
+   "name": "枸杞",
+   "lang": "zh-Hant",
+   "readings": [
+    "goji",
+    "lycium",
+    "gou qi"
+   ],
+   "modern": "Lycium barbarum",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "gouqi"
+  },
+  {
+   "name": "百合",
+   "lang": "zh-Hant",
+   "readings": [
+    "lily bulb",
+    "bai he"
+   ],
+   "modern": "Lilium brownii",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "baihe"
+  },
+  {
+   "name": "山藥",
+   "lang": "zh-Hant",
+   "readings": [
+    "yam",
+    "shan yao"
+   ],
+   "modern": "Dioscorea opposita",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shanyao"
+  },
+  {
+   "name": "山茱萸",
+   "lang": "zh-Hant",
+   "readings": [
+    "cornus",
+    "shan zhu yu"
+   ],
+   "modern": "Cornus officinalis",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shanzhuyu"
+  },
+  {
+   "name": "澤瀉",
+   "lang": "zh-Hant",
+   "readings": [
+    "alisma",
+    "ze xie"
+   ],
+   "modern": "Alisma plantago-aquatica",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "zexie"
+  },
+  {
+   "name": "牡丹皮",
+   "lang": "zh-Hant",
+   "readings": [
+    "moutan",
+    "mu dan pi"
+   ],
+   "modern": "Paeonia suffruticosa",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "mudanpi"
+  },
+  {
+   "name": "木通",
+   "lang": "zh-Hant",
+   "readings": [
+    "akebia",
+    "mu tong"
+   ],
+   "modern": "Akebia quinata",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "mutong"
+  },
+  {
+   "name": "川木通",
+   "lang": "zh-Hant",
+   "readings": [
+    "clematis stem",
+    "chuan mu tong"
+   ],
+   "modern": "Clematis armandii",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chuanmutong"
+  },
+  {
+   "name": "關木通",
+   "lang": "zh-Hant",
+   "readings": [
+    "aristolochia stem",
+    "guan mu tong"
+   ],
+   "modern": "Aristolochia manshuriensis",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "guanmutong"
+  },
+  {
+   "name": "防己",
+   "lang": "zh-Hant",
+   "readings": [
+    "stephania",
+    "fang ji"
+   ],
+   "modern": "Stephania tetrandra",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "fangji"
+  },
+  {
+   "name": "廣防己",
+   "lang": "zh-Hant",
+   "readings": [
+    "guang fang ji"
+   ],
+   "modern": "Aristolochia fangchi",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "guangfangji"
+  },
+  {
+   "name": "粉防己",
+   "lang": "zh-Hant",
+   "readings": [
+    "fen fang ji"
+   ],
+   "modern": "Stephania tetrandra",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "fenfangji"
+  },
+  {
+   "name": "三七",
+   "lang": "zh-Hant",
+   "readings": [
+    "notoginseng",
+    "san qi"
+   ],
+   "modern": "Panax notoginseng",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "sanqi"
+  },
+  {
+   "name": "土三七",
+   "lang": "zh-Hant",
+   "readings": [
+    "gynura",
+    "tu san qi"
+   ],
+   "modern": "Gynura segetum",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "tusanqi"
+  },
+  {
+   "name": "五加皮",
+   "lang": "zh-Hant",
+   "readings": [
+    "wu jia pi"
+   ],
+   "modern": "Eleutherococcus gracilistylus",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "wujiapi"
+  },
+  {
+   "name": "香加皮",
+   "lang": "zh-Hant",
+   "readings": [
+    "periploca",
+    "xiang jia pi"
+   ],
+   "modern": "Periploca sepium",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xiangjiapi"
+  },
+  {
+   "name": "山豆根",
+   "lang": "zh-Hant",
+   "readings": [
+    "shan dou gen"
+   ],
+   "modern": "Sophora tonkinensis",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shandougen"
+  },
+  {
+   "name": "北豆根",
+   "lang": "zh-Hant",
+   "readings": [
+    "bei dou gen"
+   ],
+   "modern": "Menispermum dauricum",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "beidougen"
+  },
+  {
+   "name": "天麻",
+   "lang": "zh-Hant",
+   "readings": [
+    "gastrodia",
+    "tian ma"
+   ],
+   "modern": "Gastrodia elata",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "tianma"
+  },
+  {
+   "name": "石斛",
+   "lang": "zh-Hant",
+   "readings": [
+    "dendrobium",
+    "shi hu"
+   ],
+   "modern": "Dendrobium nobile",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shihu"
+  },
+  {
+   "name": "狗脊",
+   "lang": "zh-Hant",
+   "readings": [
+    "cibotium",
+    "gou ji"
+   ],
+   "modern": "Cibotium barometz",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "gouji"
+  },
+  {
+   "name": "七葉一枝花",
+   "lang": "zh-Hant",
+   "readings": [
+    "paris",
+    "qi ye yi zhi hua"
+   ],
+   "modern": "Paris polyphylla",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "qiyeyizhihua"
+  },
+  {
+   "name": "麝香",
+   "lang": "zh-Hant",
+   "readings": [
+    "musk",
+    "she xiang"
+   ],
+   "modern": "Moschus",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "shexiang"
+  },
+  {
+   "name": "熊膽",
+   "lang": "zh-Hant",
+   "readings": [
+    "bear bile",
+    "xiong dan"
+   ],
+   "modern": "Ursus",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xiongdan"
+  },
+  {
+   "name": "穿山甲",
+   "lang": "zh-Hant",
+   "readings": [
+    "pangolin scales",
+    "chuan shan jia"
+   ],
+   "modern": "Manis",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chuanshanjia"
+  },
+  {
+   "name": "虎骨",
+   "lang": "zh-Hant",
+   "readings": [
+    "tiger bone",
+    "hu gu"
+   ],
+   "modern": "Panthera tigris",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "hugu"
+  },
+  {
+   "name": "沉香",
+   "lang": "zh-Hant",
+   "readings": [
+    "agarwood",
+    "chen xiang"
+   ],
+   "modern": "Aquilaria agallocha",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "chenxiang"
+  },
+  {
+   "name": "雄黃",
+   "lang": "zh-Hant",
+   "readings": [
+    "realgar",
+    "xiong huang"
+   ],
+   "modern": "realgar",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "xionghuang"
+  },
+  {
+   "name": "朱砂",
+   "lang": "zh-Hant",
+   "readings": [
+    "cinnabar",
+    "zhu sha"
+   ],
+   "modern": "cinnabar",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "zhusha"
+  },
+  {
+   "name": "輕粉",
+   "lang": "zh-Hant",
+   "readings": [
+    "calomel",
+    "qing fen"
+   ],
+   "modern": "calomel",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "qingfen"
+  },
+  {
+   "name": "鉛丹",
+   "lang": "zh-Hant",
+   "readings": [
+    "lead oxide",
+    "qian dan"
+   ],
+   "modern": "lead oxide",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "qiandan"
+  },
+  {
+   "name": "白礬",
+   "lang": "zh-Hant",
+   "readings": [
+    "alum",
+    "bai fan"
+   ],
+   "modern": "alum",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "baifan"
+  },
+  {
+   "name": "芒硝",
+   "lang": "zh-Hant",
+   "readings": [
+    "mirabilite",
+    "mang xiao"
+   ],
+   "modern": "sodium sulfate",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "mangxiao"
+  },
+  {
+   "name": "防風",
+   "lang": "zh-Hant",
+   "readings": [
+    "saposhnikovia",
+    "fang feng"
+   ],
+   "modern": "Saposhnikovia divaricata",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "fangfeng"
+  },
+  {
+   "name": "白芷",
+   "lang": "zh-Hant",
+   "readings": [
+    "angelica dahurica",
+    "bai zhi"
+   ],
+   "modern": "Angelica dahurica",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "baizhi"
+  },
+  {
+   "name": "炙甘草",
+   "lang": "zh-Hant",
+   "readings": [
+    "honey-fried licorice",
+    "zhi gan cao"
+   ],
+   "modern": "Glycyrrhiza uralensis",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany",
+   "pinyin": "zhigancao"
+  },
+  {
+   "name": "yashtimadhu",
+   "lang": "sa-Latn",
+   "readings": [
+    "licorice",
+    "yashtimadhu"
+   ],
+   "modern": "Glycyrrhiza glabra",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "ashwagandha",
+   "lang": "sa-Latn",
+   "readings": [
+    "withania",
+    "ashwagandha"
+   ],
+   "modern": "Withania somnifera",
+   "confidence": 0.96,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "guduchi",
+   "lang": "sa-Latn",
+   "readings": [
+    "giloy",
+    "guduchi"
+   ],
+   "modern": "Tinospora cordifolia",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "nimba",
+   "lang": "sa-Latn",
+   "readings": [
+    "neem",
+    "nimba"
+   ],
+   "modern": "Azadirachta indica",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "haritaki",
+   "lang": "sa-Latn",
+   "readings": [
+    "haritaki",
+    "chebulic myrobalan"
+   ],
+   "modern": "Terminalia chebula",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "bibhitaki",
+   "lang": "sa-Latn",
+   "readings": [
+    "bibhitaki"
+   ],
+   "modern": "Terminalia bellirica",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "amalaki",
+   "lang": "sa-Latn",
+   "readings": [
+    "amla",
+    "amalaki"
+   ],
+   "modern": "Phyllanthus emblica",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "pippali",
+   "lang": "sa-Latn",
+   "readings": [
+    "long pepper",
+    "pippali"
+   ],
+   "modern": "Piper longum",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "maricha",
+   "lang": "sa-Latn",
+   "readings": [
+    "black pepper",
+    "maricha"
+   ],
+   "modern": "Piper nigrum",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "shunthi",
+   "lang": "sa-Latn",
+   "readings": [
+    "dried ginger",
+    "shunthi"
+   ],
+   "modern": "Zingiber officinale",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "haridra",
+   "lang": "sa-Latn",
+   "readings": [
+    "turmeric",
+    "haridra"
+   ],
+   "modern": "Curcuma longa",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "brahmi",
+   "lang": "sa-Latn",
+   "readings": [
+    "bacopa",
+    "brahmi"
+   ],
+   "modern": "Bacopa monnieri",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "mandukaparni",
+   "lang": "sa-Latn",
+   "readings": [
+    "gotu kola",
+    "mandukaparni"
+   ],
+   "modern": "Centella asiatica",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "shatavari",
+   "lang": "sa-Latn",
+   "readings": [
+    "shatavari"
+   ],
+   "modern": "Asparagus racemosus",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "shallaki",
+   "lang": "sa-Latn",
+   "readings": [
+    "boswellia",
+    "shallaki"
+   ],
+   "modern": "Boswellia serrata",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "guggulu",
+   "lang": "sa-Latn",
+   "readings": [
+    "guggul",
+    "guggulu"
+   ],
+   "modern": "Commiphora mukul",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "kushtha",
+   "lang": "sa-Latn",
+   "readings": [
+    "costus",
+    "kushtha"
+   ],
+   "modern": "Saussurea lappa",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "kutaja",
+   "lang": "sa-Latn",
+   "readings": [
+    "kutaja"
+   ],
+   "modern": "Holarrhena antidysenterica",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "kutki",
+   "lang": "sa-Latn",
+   "readings": [
+    "kutki"
+   ],
+   "modern": "Picrorhiza kurroa",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "daruharidra",
+   "lang": "sa-Latn",
+   "readings": [
+    "barberry",
+    "daruharidra"
+   ],
+   "modern": "Berberis aristata",
+   "confidence": 0.91,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "manjistha",
+   "lang": "sa-Latn",
+   "readings": [
+    "madder",
+    "manjistha"
+   ],
+   "modern": "Rubia cordifolia",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "jatamansi",
+   "lang": "sa-Latn",
+   "readings": [
+    "jatamansi"
+   ],
+   "modern": "Nardostachys jatamansi",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "chandana",
+   "lang": "sa-Latn",
+   "readings": [
+    "sandalwood",
+    "chandana"
+   ],
+   "modern": "Santalum album",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "agaru",
+   "lang": "sa-Latn",
+   "readings": [
+    "agarwood",
+    "agaru"
+   ],
+   "modern": "Aquilaria agallocha",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "vatsanabha",
+   "lang": "sa-Latn",
+   "readings": [
+    "vatsanabha",
+    "aconite"
+   ],
+   "modern": "Aconitum ferox",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "bhanga",
+   "lang": "sa-Latn",
+   "readings": [
+    "cannabis",
+    "bhanga"
+   ],
+   "modern": "Cannabis sativa",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "dhattura",
+   "lang": "sa-Latn",
+   "readings": [
+    "datura",
+    "dhattura"
+   ],
+   "modern": "Datura metel",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "ahiphena",
+   "lang": "sa-Latn",
+   "readings": [
+    "opium",
+    "ahiphena"
+   ],
+   "modern": "Papaver somniferum",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "vacha",
+   "lang": "sa-Latn",
+   "readings": [
+    "calamus",
+    "vacha"
+   ],
+   "modern": "Acorus calamus",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "musta",
+   "lang": "sa-Latn",
+   "readings": [
+    "nutgrass",
+    "musta"
+   ],
+   "modern": "Cyperus rotundus",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "punarnava",
+   "lang": "sa-Latn",
+   "readings": [
+    "punarnava"
+   ],
+   "modern": "Boerhavia diffusa",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "triphala",
+   "lang": "sa-Latn",
+   "readings": [
+    "triphala"
+   ],
+   "modern": "Terminalia chebula",
+   "confidence": 0.95,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "السوس",
+   "lang": "ar",
+   "readings": [
+    "liquorice",
+    "sous"
+   ],
+   "modern": "Glycyrrhiza glabra",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "الزنجبيل",
+   "lang": "ar",
+   "readings": [
+    "ginger",
+    "zanjabil"
+   ],
+   "modern": "Zingiber officinale",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "الغار",
+   "lang": "ar",
+   "readings": [
+    "laurel",
+    "ghar"
+   ],
+   "modern": "Laurus nobilis",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "القرفة",
+   "lang": "ar",
+   "readings": [
+    "cinnamon",
+    "qirfa"
+   ],
+   "modern": "Cinnamomum verum",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "الفلفل",
+   "lang": "ar",
+   "readings": [
+    "pepper",
+    "filfil"
+   ],
+   "modern": "Piper nigrum",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "الكركم",
+   "lang": "ar",
+   "readings": [
+    "turmeric",
+    "kurkum"
+   ],
+   "modern": "Curcuma longa",
+   "confidence": 0.92,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "الأفيون",
+   "lang": "ar",
+   "readings": [
+    "opium",
+    "afyun"
+   ],
+   "modern": "Papaver somniferum",
+   "confidence": 0.93,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "الزئبق",
+   "lang": "ar",
+   "readings": [
+    "mercury",
+    "zibaq"
+   ],
+   "modern": "mercury",
+   "confidence": 0.94,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "الحنظل",
+   "lang": "ar",
+   "readings": [
+    "colocynth",
+    "hanzal"
+   ],
+   "modern": "Citrullus colocynthis",
+   "confidence": 0.9,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  },
+  {
+   "name": "السقمونيا",
+   "lang": "ar",
+   "readings": [
+    "scammony",
+    "saqmuniya"
+   ],
+   "modern": "Convolvulus scammonia",
+   "confidence": 0.88,
+   "method": "manual",
+   "source_id": "fixture_duke_ethnobotany"
+  }
+ ]
+}

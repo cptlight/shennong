@@ -1,38 +1,151 @@
 name,plant_binomial,compound_class,smiles,cid,source_id
-absinthin,Artemisia absinthium,sesquiterpene_lactone,,,fixture_duke_ethnobotany
-thujone,Artemisia absinthium,monoterpenoid,,,fixture_duke_ethnobotany
-rosmarinic_acid,Pulmonaria officinalis,phenolic_acid,,,fixture_duke_ethnobotany
-crocin,Crocus sativus,carotenoid,,,fixture_duke_ethnobotany
-safranal,Crocus sativus,monoterpenoid,,,fixture_duke_ethnobotany
-allantoin,Symphytum officinale,purine,,,fixture_duke_ethnobotany
-pyrrolizidine_alkaloid,Symphytum officinale,pyrrolizidine_alkaloid,,,fixture_duke_ethnobotany
-stachydrine,Stachys officinalis,alkaloid,,,fixture_duke_ethnobotany
-anethole,Foeniculum vulgare,phenylpropanoid,,,fixture_duke_ethnobotany
-fenchone,Foeniculum vulgare,monoterpenoid,,,fixture_duke_ethnobotany
-salicin,Salix alba,phenolic_glycoside,,,fixture_duke_ethnobotany
-morphine,Papaver somniferum,alkaloid,,,fixture_duke_ethnobotany
-codeine,Papaver somniferum,alkaloid,,,fixture_duke_ethnobotany
-allicin,Allium sativum,organosulfur,,,fixture_duke_ethnobotany
-menthol,Mentha x piperita,monoterpenoid,,,fixture_duke_ethnobotany
-menthone,Mentha x piperita,monoterpenoid,,,fixture_duke_ethnobotany
-glycyrrhizin,Glycyrrhiza glabra,triterpenoid_saponin,,,fixture_duke_ethnobotany
-bisabolol,Matricaria chamomilla,sesquiterpenoid,,,fixture_duke_ethnobotany
-apigenin,Matricaria chamomilla,flavonoid,,,fixture_duke_ethnobotany
-linalool,Lavandula angustifolia,monoterpenoid,,,fixture_duke_ethnobotany
-linalyl_acetate,Lavandula angustifolia,monoterpenoid_ester,,,fixture_duke_ethnobotany
-curcumin,Curcuma longa,curcuminoid,,,fixture_duke_ethnobotany
-gingerol,Zingiber officinale,gingerol,,,fixture_duke_ethnobotany
-ginkgolide_B,Ginkgo biloba,diterpenoid_lactone,,,fixture_duke_ethnobotany
+glycyrrhizin,Glycyrrhiza uralensis,triterpenoid_saponin,,,fixture_duke_ethnobotany
+liquiritin,Glycyrrhiza uralensis,flavonoid,,,fixture_duke_ethnobotany
 ginsenoside_Rb1,Panax ginseng,triterpenoid_saponin,,,fixture_duke_ethnobotany
-quinine,Cinchona officinalis,alkaloid,,,fixture_duke_ethnobotany
-digoxin,Digitalis purpurea,cardiac_glycoside,,,fixture_duke_ethnobotany
-atropine,Atropa belladonna,alkaloid,,,fixture_duke_ethnobotany
-scopolamine,Atropa belladonna,alkaloid,,,fixture_duke_ethnobotany
+ginsenoside_Rg1,Panax ginseng,triterpenoid_saponin,,,fixture_duke_ethnobotany
+astragaloside_IV,Astragalus membranaceus,triterpenoid_saponin,,,fixture_duke_ethnobotany
+astragalus_polysaccharide,Astragalus membranaceus,polysaccharide,,,fixture_duke_ethnobotany
+emodin,Rheum palmatum,anthraquinone,,,fixture_duke_ethnobotany
+rhein,Rheum palmatum,anthraquinone,,,fixture_duke_ethnobotany
+ephedrine,Ephedra sinica,alkaloid,,,fixture_duke_ethnobotany
+pseudoephedrine,Ephedra sinica,alkaloid,,,fixture_duke_ethnobotany
+cinnamaldehyde,Cinnamomum cassia,phenylpropanoid,,,fixture_duke_ethnobotany
+paeoniflorin,Paeonia lactiflora,monoterpenoid_glycoside,,,fixture_duke_ethnobotany
+gingerol,Zingiber officinale,gingerol,,,fixture_duke_ethnobotany
+zingerone,Zingiber officinale,phenolic_acid,,,fixture_duke_ethnobotany
+jujuboside,Ziziphus jujuba,triterpenoid_saponin,,,fixture_duke_ethnobotany
+amygdalin,Prunus armeniaca,cyanogenic_glycoside,,,fixture_duke_ethnobotany
+pinellic_acid,Pinellia ternata,fatty_acid,,,fixture_duke_ethnobotany
+pinellia_lectin,Pinellia ternata,protein,,,fixture_duke_ethnobotany
+aconitine,Aconitum carmichaelii,alkaloid,,,fixture_duke_ethnobotany
+mesaconitine,Aconitum carmichaelii,alkaloid,,,fixture_duke_ethnobotany
+hypaconitine,Aconitum carmichaelii,alkaloid,,,fixture_duke_ethnobotany
+benzoylaconine,Aconitum carmichaelii,alkaloid,,,fixture_duke_ethnobotany
+peimine,Fritillaria cirrhosa,alkaloid,,,fixture_duke_ethnobotany
+peiminine,Fritillaria cirrhosa,alkaloid,,,fixture_duke_ethnobotany
+trichosanthin,Trichosanthes kirilowii,protein,,,fixture_duke_ethnobotany
+cucurbitacin_B,Trichosanthes kirilowii,diterpenoid,,,fixture_duke_ethnobotany
+ampelopsin,Ampelopsis japonica,flavonoid,,,fixture_duke_ethnobotany
+militarine,Bletilla striata,glycoside,,,fixture_duke_ethnobotany
+euphorbia_diterpene,Euphorbia kansui,diterpenoid,,,fixture_duke_ethnobotany
+ingenol,Euphorbia pekinensis,diterpenoid,,,fixture_duke_ethnobotany
+sargassum_polysaccharide,Sargassum fusiforme,polysaccharide,,,fixture_duke_ethnobotany
+daphnetoxin,Daphne genkwa,diterpenoid,,,fixture_duke_ethnobotany
+veratridine,Veratrum nigrum,alkaloid,,,fixture_duke_ethnobotany
+aristolochic_acid,Asarum heterotropoides,aristolochic_acid,,,fixture_duke_ethnobotany
+tanshinone,Salvia miltiorrhiza,diterpenoid,,,fixture_duke_ethnobotany
+salvianolic_acid,Salvia miltiorrhiza,phenolic_acid,,,fixture_duke_ethnobotany
+harpagoside,Scrophularia ningpoensis,iridoid_glycoside,,,fixture_duke_ethnobotany
+matrine,Sophora flavescens,alkaloid,,,fixture_duke_ethnobotany
+oxymatrine,Sophora flavescens,alkaloid,,,fixture_duke_ethnobotany
+adenophora_polysaccharide,Adenophora stricta,polysaccharide,,,fixture_duke_ethnobotany
+phorbol_ester,Croton tiglium,diterpenoid,,,fixture_duke_ethnobotany
+pharbitin,Pharbitis nil,glycoside,,,fixture_duke_ethnobotany
+eugenol,Syzygium aromaticum,phenylpropanoid,,,fixture_duke_ethnobotany
+curcumin,Curcuma longa,curcuminoid,,,fixture_duke_ethnobotany
+ar_turmerone,Curcuma longa,sesquiterpenoid,,,fixture_duke_ethnobotany
+sparganium_saponin,Sparganium stoloniferum,triterpenoid_saponin,,,fixture_duke_ethnobotany
+keratin,Rhinoceros,protein,,,fixture_duke_ethnobotany
+trogopterus_resin,Trogopterus,resin,,,fixture_duke_ethnobotany
+pachymic_acid,Poria cocos,triterpenoid,,,fixture_duke_ethnobotany
+poria_polysaccharide,Poria cocos,polysaccharide,,,fixture_duke_ethnobotany
+atractylenolide,Atractylodes macrocephala,sesquiterpene_lactone,,,fixture_duke_ethnobotany
+ligustilide,Angelica sinensis,phthalide,,,fixture_duke_ethnobotany
+ferulic_acid,Angelica sinensis,phenolic_acid,,,fixture_duke_ethnobotany
+ligustilide_chuanxiong,Ligusticum chuanxiong,phthalide,,,fixture_duke_ethnobotany
+catalpol,Rehmannia glutinosa,iridoid_glycoside,,,fixture_duke_ethnobotany
+rehmannia_polysaccharide,Rehmannia glutinosa,polysaccharide,,,fixture_duke_ethnobotany
+hesperidin,Citrus reticulata,flavonoid,,,fixture_duke_ethnobotany
+limonene,Citrus reticulata,monoterpenoid,,,fixture_duke_ethnobotany
+saikosaponin,Bupleurum chinense,triterpenoid_saponin,,,fixture_duke_ethnobotany
+berberine,Coptis chinensis,alkaloid,,,fixture_duke_ethnobotany
+baicalin,Scutellaria baicalensis,flavonoid,,,fixture_duke_ethnobotany
+wogonin,Scutellaria baicalensis,flavonoid,,,fixture_duke_ethnobotany
+berberine_phellodendron,Phellodendron amurense,alkaloid,,,fixture_duke_ethnobotany
+geniposide,Gardenia jasminoides,iridoid_glycoside,,,fixture_duke_ethnobotany
+platycodin,Platycodon grandiflorus,triterpenoid_saponin,,,fixture_duke_ethnobotany
+menthol,Mentha haplocalyx,monoterpenoid,,,fixture_duke_ethnobotany
+schisandrin,Schisandra chinensis,lignan,,,fixture_duke_ethnobotany
+ophiopogonin,Ophiopogon japonicus,steroidal_saponin,,,fixture_duke_ethnobotany
+aucubin,Eucommia ulmoides,iridoid_glycoside,,,fixture_duke_ethnobotany
+asperosaponin,Dipsacus asper,triterpenoid_saponin,,,fixture_duke_ethnobotany
+zeaxanthin,Lycium barbarum,carotenoid,,,fixture_duke_ethnobotany
+lycium_polysaccharide,Lycium barbarum,polysaccharide,,,fixture_duke_ethnobotany
+lilium_polysaccharide,Lilium brownii,polysaccharide,,,fixture_duke_ethnobotany
+dioscin,Dioscorea opposita,steroidal_saponin,,,fixture_duke_ethnobotany
+loganin,Cornus officinalis,iridoid_glycoside,,,fixture_duke_ethnobotany
+alisol,Alisma plantago-aquatica,triterpenoid,,,fixture_duke_ethnobotany
+paeonol,Paeonia suffruticosa,phenolic_acid,,,fixture_duke_ethnobotany
+akebia_saponin,Akebia quinata,triterpenoid_saponin,,,fixture_duke_ethnobotany
+clematis_saponin,Clematis armandii,triterpenoid_saponin,,,fixture_duke_ethnobotany
+aristolochic_acid_guanmutong,Aristolochia manshuriensis,aristolochic_acid,,,fixture_duke_ethnobotany
+tetrandrine,Stephania tetrandra,alkaloid,,,fixture_duke_ethnobotany
+fangchinoline,Stephania tetrandra,alkaloid,,,fixture_duke_ethnobotany
+aristolochic_acid_guangfangji,Aristolochia fangchi,aristolochic_acid,,,fixture_duke_ethnobotany
+notoginsenoside_R1,Panax notoginseng,triterpenoid_saponin,,,fixture_duke_ethnobotany
+senecionine,Gynura segetum,pyrrolizidine_alkaloid,,,fixture_duke_ethnobotany
+eleutheroside_E,Eleutherococcus gracilistylus,lignan,,,fixture_duke_ethnobotany
+periplocoside,Periploca sepium,cardiac_glycoside,,,fixture_duke_ethnobotany
+matrine_shandougen,Sophora tonkinensis,alkaloid,,,fixture_duke_ethnobotany
+dauricine,Menispermum dauricum,alkaloid,,,fixture_duke_ethnobotany
+gastrodin,Gastrodia elata,phenolic_glycoside,,,fixture_duke_ethnobotany
+dendrobine,Dendrobium nobile,alkaloid,,,fixture_duke_ethnobotany
+militarine_gouji,Cibotium barometz,glycoside,,,fixture_duke_ethnobotany
+diosgenin,Paris polyphylla,steroidal_saponin,,,fixture_duke_ethnobotany
+muscone,Moschus,ketone,,,fixture_duke_ethnobotany
+ursodeoxycholic_acid,Ursus,bile_acid,,,fixture_duke_ethnobotany
+pangolin_keratin,Manis,protein,,,fixture_duke_ethnobotany
+tiger_collagen,Panthera tigris,protein,,,fixture_duke_ethnobotany
+agarospirol,Aquilaria agallocha,sesquiterpenoid,,,fixture_duke_ethnobotany
+benzylacetone,Aquilaria agallocha,phenylpropanoid,,,fixture_duke_ethnobotany
+chromone,Saposhnikovia divaricata,chromone,,,fixture_duke_ethnobotany
+imperatorin,Angelica dahurica,coumarin,,,fixture_duke_ethnobotany
+artemisinin,Artemisia annua,sesquiterpene_lactone,,,fixture_duke_ethnobotany
+piperine,Piper nigrum,alkaloid,,,fixture_duke_ethnobotany
+piperlongumine,Piper longum,alkaloid,,,fixture_duke_ethnobotany
+withanolide,Withania somnifera,steroidal_lactone,,,fixture_duke_ethnobotany
+tinosporaside,Tinospora cordifolia,glycoside,,,fixture_duke_ethnobotany
+azadirachtin,Azadirachta indica,triterpenoid,,,fixture_duke_ethnobotany
+chebulagic_acid,Terminalia chebula,tannin,,,fixture_duke_ethnobotany
+gallic_acid,Terminalia bellirica,tannin,,,fixture_duke_ethnobotany
+emblicanin,Phyllanthus emblica,tannin,,,fixture_duke_ethnobotany
+bacoside,Bacopa monnieri,triterpenoid_saponin,,,fixture_duke_ethnobotany
+asiaticoside,Centella asiatica,triterpenoid_saponin,,,fixture_duke_ethnobotany
+shatavarin,Asparagus racemosus,steroidal_saponin,,,fixture_duke_ethnobotany
+boswellic_acid,Boswellia serrata,triterpenoid,,,fixture_duke_ethnobotany
+guggulsterone,Commiphora mukul,steroidal,,,fixture_duke_ethnobotany
+costunolide,Saussurea lappa,sesquiterpene_lactone,,,fixture_duke_ethnobotany
+conessine,Holarrhena antidysenterica,alkaloid,,,fixture_duke_ethnobotany
+picroside,Picrorhiza kurroa,iridoid_glycoside,,,fixture_duke_ethnobotany
+berberine_daruharidra,Berberis aristata,alkaloid,,,fixture_duke_ethnobotany
+alizarin,Rubia cordifolia,anthraquinone,,,fixture_duke_ethnobotany
+jatamansone,Nardostachys jatamansi,sesquiterpenoid,,,fixture_duke_ethnobotany
+santalol,Santalum album,sesquiterpenoid,,,fixture_duke_ethnobotany
 tetrahydrocannabinol,Cannabis sativa,cannabinoid,,,fixture_duke_ethnobotany
 cannabidiol,Cannabis sativa,cannabinoid,,,fixture_duke_ethnobotany
-hypericin,Hypericum perforatum,naphthodianthrone,,,fixture_duke_ethnobotany
-hyperforin,Hypericum perforatum,phloroglucinol,,,fixture_duke_ethnobotany
-thymol,Thymus vulgaris,monoterpenoid,,,fixture_duke_ethnobotany
-chamazulene,Achillea millefolium,sesquiterpenoid,,,fixture_duke_ethnobotany
-aloin,Aloe vera,anthraquinone,,,fixture_duke_ethnobotany
-emodin,Aloe vera,anthraquinone,,,fixture_duke_ethnobotany
+scopolamine,Datura metel,alkaloid,,,fixture_duke_ethnobotany
+atropine,Datura metel,alkaloid,,,fixture_duke_ethnobotany
+morphine,Papaver somniferum,alkaloid,,,fixture_duke_ethnobotany
+codeine,Papaver somniferum,alkaloid,,,fixture_duke_ethnobotany
+asarone,Acorus calamus,phenylpropanoid,,,fixture_duke_ethnobotany
+cyperone,Cyperus rotundus,sesquiterpenoid,,,fixture_duke_ethnobotany
+punarnavine,Boerhavia diffusa,alkaloid,,,fixture_duke_ethnobotany
+colocynthin,Citrullus colocynthis,triterpenoid,,,fixture_duke_ethnobotany
+sulfur_compound,sulfur,mineral_salt,,,fixture_duke_ethnobotany
+sodium_sulfate,sodium sulfate,mineral_salt,,,fixture_duke_ethnobotany
+mercury_metal,mercury,heavy_metal,,,fixture_duke_ethnobotany
+arsenic_trioxide,arsenic trioxide,heavy_metal,,,fixture_duke_ethnobotany
+arsenic_sulfide,realgar,heavy_metal,,,fixture_duke_ethnobotany
+mercury_sulfide,cinnabar,heavy_metal,,,fixture_duke_ethnobotany
+mercury_chloride,calomel,heavy_metal,,,fixture_duke_ethnobotany
+lead_oxide,lead oxide,heavy_metal,,,fixture_duke_ethnobotany
+potassium_alum,alum,mineral_salt,,,fixture_duke_ethnobotany
+halloysite_clay,halloysite,mineral_salt,,,fixture_duke_ethnobotany
+lead_monoxide,litharge,heavy_metal,,,fixture_duke_ethnobotany
+euphorbia_resin,Euphorbia fischeriana,diterpenoid,,,fixture_duke_ethnobotany
+cimicifugoside,Cimicifuga foetida,glycoside,,,fixture_duke_ethnobotany
+synephrine,Citrus aurantium,alkaloid,,,fixture_duke_ethnobotany
+honokiol,Magnolia officinalis,lignan,,,fixture_duke_ethnobotany
+magnolol,Magnolia officinalis,lignan,,,fixture_duke_ethnobotany
+calcium_sulfate,gypsum,mineral_salt,,,fixture_duke_ethnobotany
+mangiferin,Anemarrhena asphodeloides,flavonoid,,,fixture_duke_ethnobotany

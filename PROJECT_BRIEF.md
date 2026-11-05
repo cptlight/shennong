@@ -289,3 +289,114 @@ App data contract: `cli shi --out app/data/hypotheses.json`,
                       "ayurveda_rasa":{"rho":0.0,"p":0.0},
                       "null_model":{"score_drop":0.0}}}
 ```
+
+---
+
+# §11. v3 DIRECTION — "drug creation, grounded in Asian science" (supersedes where it conflicts)
+
+## 11.1 The goal, restated exactly
+
+> **Read the entire pre-modern Asian record of medicine, herbs and science — and use it, through Asian
+> scientific frameworks, to propose new drugs and new pharmacological breakthroughs.**
+
+Three consequences, and they are not optional:
+
+1. **The output is a drug candidate, not an answer.** The terminal artefact of SHENNONG is a ranked
+   shortlist of **leads → candidate molecules/extracts → development paths**, each with a mechanism,
+   a scaffold, a novelty claim against modern chemistry, and the assay that would advance or kill it.
+   Hypothesis dossiers remain, but they serve the candidates.
+2. **Asian science is the method, not the decoration.** The classical theoretical systems are
+   **first-class predictive frameworks** to be used and *tested*, not background colour:
+   - TCM: 四氣五味 (four natures × five flavours), 歸經 (channel/organ tropism), 升降浮沉
+     (directional action), 君臣佐使 (formula roles), **七情** (the seven relations of combination:
+     單行, 相須, 相使, 相畏, 相殺, 相惡, 相反), 炮制 (processing), 五行 (five phases), 取象比類.
+   - Ayurveda: **rasa / guṇa / vīrya / vipāka / prabhāva** (taste, quality, potency, post-digestive
+     effect, specific action), tridoṣa (vāta/pitta/kapha), dhātu, srotas, the 20 guṇas, viruddha.
+   - Alchemy: 丹/rasaśāstra process theory, 三品 (three grades) classification, 七情 of minerals.
+   We therefore treat "cold, bitter, enters the Liver channel" as a **feature vector** that we test for
+   predictive power against measured chemistry and target biology. Where it predicts, we have a
+   validated non-Western discovery engine. Where it does not, we say so with numbers.
+3. **"All ancient texts" includes ancient *science*, not only medical texts.** The corpus expands to
+   agriculture, food/dietary therapy, technology/chemistry, botany and natural philosophy, because
+   these carry the processing, extraction and material knowledge that medicine used.
+
+## 11.2 Corpus expansion (in addition to §5)
+
+**Chinese science / technology / agriculture / botany / dietetics (Tier 2/3):**
+天工開物 *Tiangong Kaiwu* (1637 — technology, chemistry, metallurgy, materials) · 齊民要術 *Qimin
+Yaoshu* (agriculture, food processing, fermentation) · 夢溪筆談 *Mengxi Bitan* (science, natural
+observation) · 農政全書 *Nongzheng Quanshu* · 救荒本草 *Jiuhuang Bencao* (famine plants) ·
+植物名實圖考 *Zhiwu Ming Shi Tukao* (botany, 19th c.) · 廣群芳譜 · 飲膳正要 *Yinshan Zhengyao*
+(Yuan dietary medicine) · 食療本草 (dietary materia medica) · 海藥本草 (foreign/imported drugs —
+critical for cross-tradition contact) · 本草拾遺 · 新修本草 · 炮炙大法 · 雷公炮炙論.
+
+**Indian science / botany / pharmacy:** Vṛkṣāyurveda (plant science), Arthaśāstra (materials and
+poisons chapters), Rasa Ratna Samuccaya, Rasaśāstra compendia, nighaṇṭu corpus, Bhela Saṃhitā.
+
+**Arabic/Persian science:** Ibn Sīnā *al-Qānūn* + *Kitāb al-Shifāʾ* (natural philosophy), al-Dīnawarī
+*Kitāb al-Nabāt* (botany), Ibn al-Bayṭār *al-Jāmiʿ*, al-Rāzī *al-Ḥāwī*, and *ʿUyūn al-Anbāʾ*.
+
+**Tibetan / SE Asian:** rGyud-bzhi, Tibetan materia medica (where openly licensed), Thai and
+Vietnamese royal pharmacopoeias if public domain.
+
+Each still needs: PD licence or open licence + evidence URL, or `unverified` and excluded.
+
+## 11.3 New structured artefacts (extend §10.4)
+
+- **`properties.csv`** — TCM/Asian property vectors per drug:
+  `drug_name,plant_binomial,nature(寒/熱/溫/涼/平),flavors(辛/甘/酸/苦/鹹/淡/澀),channels(歸經),
+  direction(升/降/浮/沉),toxicity(有毒/無毒),grade(上/中/下品),source_id`
+- **`ayurveda_properties.csv`** — `drug_name,plant_binomial,rasa,guṇa,vīrya,vipāka,prabhāva,doṣa_effect,source_id`
+- **`relations_seven.csv`** — the 七情 combination relations: `drug_a,drug_b,relation` where relation ∈
+  {xiangxu 相須, xiangshi 相使, xiangwei 相畏, xiangsha 相殺, xiange 相惡, xiangfan 相反}, `source_id`
+- **`compounds.csv` must carry SMILES** — this is now on the critical path, because drug candidates are
+  molecular. Source SMILES from PubChem PUG-REST by name (batch, cached, rate-limited); where a
+  compound has no structure, leave it null rather than inventing one.
+
+## 11.4 New discovery class (the top of the pyramid)
+
+**`drug_candidate` — lead → candidate molecule → development path.** For each promising lead:
+```
+classical lead (drug, part, 炮制, formula role, Asian property vector)
+   → chemotype (compound classes with measured/known structures)
+   → candidate molecule(s) with SMILES + calculated properties (MW, logP, HBD/HBA, TPSA, rings,
+     rotatable bonds, Lipinski/Veber flags)
+   → novelty vs modern chemistry (not present / not annotated for this target in ChEMBL-type data)
+   → proposed mechanism (target class, pathway) + Asian-theory justification (why 性味歸經 predicts it)
+   → development path (which assay, which model organism, what would make it a real lead)
+   → residual risk (toxicity class, PAINS/assay-interference liability, solubility)
+```
+This is what the judges should see first: **a shortlist of new drug leads derived from Asian classical
+texts.** Emit `artifacts/drug_candidates.json` + `artifacts/drug_candidates.md` (top 10–20).
+
+## 11.5 Evaluation changes (the experiments become central, not "controls")
+
+Promote the theory tests from "negative controls" to **the central scientific experiment**:
+
+1. **`theory_predictivity`** — do Asian property vectors predict modern molecular/target properties
+   above chance? Test at least: does 四氣五味 predict compound polarity/volatility/thermolability?
+   Does 歸經 (channel tropism) predict target organ or receptor family? Does Ayurvedic vīrya
+   (hot/cold) predict thermolability or logP? Does tridoṣa effect predict inflammatory vs metabolic
+   action? Report ρ / AUC / p with n, plus a permutation null. **A positive result is the headline
+   finding; a null result is an honest and still publishable negative.**
+2. **`candidate_novelty`** — fraction of proposed candidates not already in the modern drug/literature
+   space; explicit method for computing it.
+3. **`candidate_plausibility`** — expert-style rubric scored by explicit criteria (structure validity,
+   target plausibility, synthetic accessibility, toxicity risk), with the rubric published.
+4. Retain the null-model edge-shuffle check and the refusal/hallucination benchmark.
+
+`eval/report.json` gains a `drug_discovery` block:
+```json
+"drug_discovery":{"candidates":0,"mean_novelty":0.0,
+  "theory_predictivity":{"tcm_nature":{"metric":"auc","value":0.0,"n":0,"p":0.0},
+                         "tcm_channel":{"metric":"auc","value":0.0,"n":0,"p":0.0},
+                         "ayurveda_virya":{"metric":"rho","value":0.0,"n":0,"p":0.0}},
+  "lipinski_pass_rate":0.0}
+```
+
+## 11.6 Pitch changes
+
+The deck and Devpost now lead with: **"We read 2,000 years of Asian medical and scientific literature
+and produced N new drug candidates, grounded in Asian pharmacological theory — and we tested whether
+that theory actually predicts chemistry."** That is a drug-discovery story with a falsifiable core,
+which is exactly the EthnoHack track-01/02 intersection.

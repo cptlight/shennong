@@ -1,801 +1,1207 @@
 {
  "generated_at": "2026-11-05T09:00:00Z",
  "fixture": true,
- "note": "DEMO FIXTURE — invented scores, paraphrased provenance spans, for UI development only. Replaced by athanor's real output.",
+ "note": "DEMO FIXTURE — invented scores and fixture corpus counts, for UI development only. Replaced by `python -m shennong.cli shi --out app/data/hypotheses.json`.",
+ "pipeline": "采 Cǎi → 制 Zhì → 配 Pèi → 使 Shǐ",
  "corpus": {
-  "sources": 18,
-  "chars": 27080000,
-  "tokens": 0
+  "sources": 30,
+  "chars": 26333700,
+  "tokens": 0,
+  "languages": {
+   "zh-Hant": 17,
+   "sa": 5,
+   "ar": 2,
+   "sa-Latn": 1,
+   "ko": 1,
+   "en": 5,
+   "bo": 1
+  },
+  "traditions": {
+   "tcm": 12,
+   "alchemy": 4,
+   "acupuncture": 3,
+   "ayurveda": 6,
+   "unani": 2,
+   "korean": 2,
+   "tibetan": 1,
+   "foundational": 4,
+   "comparative-control": 1
+  }
+ },
+ "by_class": {
+  "paozhi": 2,
+  "yiming_tongwu": 2,
+  "junchen_zuoshi": 2,
+  "peiwu_jinji": 2,
+  "binwei_daiyong": 2,
+  "weiyanjiu": 2,
+  "control": 1
  },
  "hypotheses": [
   {
-   "id": "H-06",
-   "title": "Liquorice decoction, taken for weeks, reproduces the mineralocorticoid excess the herbals describe",
-   "archetype": "repurposing",
+   "id": "H-03",
+   "title": "附子's processing is a hydrolysis ladder, and the classical steps specify where to stop",
+   "discovery_class": "paozhi",
+   "discovery_class_label": "炮制 · processing as chemistry",
    "chain": {
-    "plant": "Glycyrrhiza glabra",
-    "preparation": "Decoction of the root, taken daily for 4–6 weeks",
-    "chemotype": "18β-glycyrrhetinic acid (glycyrrhizin aglycone)",
-    "target": "11β-hydroxysteroid dehydrogenase type 2 (11β-HSD2) inhibition",
-    "indication": "Iatrogenic apparent mineralocorticoid excess: hypertension, hypokalaemia, oedema"
+    "plant": "Aconitum carmichaelii 附子",
+    "preparation": "炮 (roast until split) → 去皮臍 → 蜜水煮 / 甘草水浸  (per 雷公炮炙論)",
+    "chemotype": "diester diterpene alkaloids: aconitine → benzoylaconine → aconine (successive ester hydrolysis)",
+    "target": "voltage-gated Na⁺ channel, site 2 — aconitine holds the channel open; aconine barely binds",
+    "indication": "Aconite cardiotoxicity and neurotoxicity; the processed drug is the therapeutic one"
    },
    "scores": {
-    "novelty": 0.47,
-    "plausibility": 0.83,
-    "testability": 0.91,
-    "evidence": 0.88,
-    "composite": 0.722
+    "novelty": 0.51,
+    "plausibility": 0.88,
+    "testability": 0.86,
+    "evidence": 0.84,
+    "composite": 0.738
    },
    "provenance": [
     {
-     "source_id": "fixture:kings-1898",
-     "title": "King's American Dispensatory",
-     "author": "Harvey W. Felter & John U. Lloyd",
-     "year": 1898,
-     "era": "19th c.",
-     "tier": 2,
-     "licence": "Public Domain",
-     "span": "In large doses, long continued, it has been known to produce puffiness of the face and swelling of the ankles, and to disorder the action of the heart.",
-     "span_kind": "paraphrase",
-     "locator": "Liquorice"
-    },
-    {
-     "source_id": "fixture:ema-monographs",
-     "title": "EMA herbal monographs (selected)",
-     "author": "European Medicines Agency",
-     "year": 2016,
-     "era": "21st c.",
-     "tier": 2,
-     "licence": "CC-BY-SA-4.0",
-     "span": "Contraindicated in patients with hypertension, hypokalaemia, or a history of fluid retention; use limited to four to six weeks.",
-     "span_kind": "paraphrase",
-     "locator": "Liquorice root"
-    },
-    {
-     "source_id": "fixture:culpeper-1653",
-     "title": "The Complete Herbal",
-     "author": "Nicholas Culpeper",
-     "year": 1653,
-     "era": "17th c.",
+     "source_id": "fx_leigong_paozhi",
+     "title": "雷公炮炙論",
+     "title_en": "Master Lei's Treatise on Processing",
+     "author": "雷斆 Lei Xiao",
+     "year": 520,
+     "tradition": "alchemy",
+     "lang": "zh-Hant",
      "tier": 3,
      "licence": "Public Domain",
-     "span": "The root is boiled in waters for the breast and the roughness of the throat.",
+     "span": "凡使附子，先於文武火上炮令裂，去皮臍，乘熱切之；又以蜜水煮，令毒去而力存。炮之得法，則毒輕而效速。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "草部·附子"
+    },
+    {
+     "source_id": "fx_shennong_bencao",
+     "title": "神農本草經",
+     "title_en": "Shennong Bencao Jing",
+     "author": "神農 (attrib.)",
+     "year": -200,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "附子，味辛溫。主風寒咳逆邪氣，溫中，金瘡，破癥堅積聚，血瘕，寒濕踒躄，拘攣膝痛，不能行步。",
+     "span_kind": "verbatim",
+     "locator": "下品·附子"
+    },
+    {
+     "source_id": "fx_shanghanlun",
+     "title": "傷寒論",
+     "title_en": "Treatise on Cold Damage",
+     "author": "張仲景 Zhang Zhongjing",
+     "year": 220,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "四逆湯方：甘草二兩炙，乾薑一兩半，附子一枚生用去皮破八片。",
+     "span_kind": "verbatim",
+     "locator": "少陰病篇"
     }
    ],
-   "falsification_plan": "Take urinary free cortisol/cortisone ratio in a 24 h collection, with and without a 4-week liquorice-decoction exposure in a controlled feeding study n=24. 11β-HSD2 inhibition raises the cortisol:cortisone ratio and lowers serum potassium; if neither moves at intake-matched exposure, the mechanism is wrong and the effect is something else. Readouts are non-invasive and cost roughly the price of a metabolic-ward day-case.",
-   "uncertainty": "The historical record does not tell us how much glycyrrhizin the decoctions contained — root quality varies by an order of magnitude. We also cannot separate glycyrrhizin from the flavonoid fraction, which may contribute independently.",
+   "falsification_plan": "Quantify the three alkaloids by LC-MS across processing time and temperature for raw, 炮, and 炮+蜜煮 material. The mechanistic claim is refuted if the diester:monester ratio does not fall monotonically along the classical step sequence, or if the endpoint the text names does not coincide with where cardiotoxicity (zebrafish or rat heart-rate assay) stops falling. Positive control: pure aconitine hydrolysed under identical conditions. One targeted LC-MS method runs the whole thing.",
+   "uncertainty": "The text names its endpoint by appearance ('炮令裂'), not by temperature, so 'where to stop' is our inference. And 傷寒論 uses 生用 附子 in 四逆湯 — which complicates the tidy claim that processing is always necessary. That exception is itself a finding and is reported rather than smoothed away.",
    "safety": {
     "flags": [
-     "highest-severity safety signal in the ranked set",
-     "contraindicated in hypertension / hypokalaemia / pregnancy",
-     "interacts with diuretics and digoxin via potassium"
+     "aconitine is a highly toxic cardiotoxin; raw 附子 is not a food and not a self-treatment",
+     "this is analytical toxicology, never a preparation method for use",
+     "the therapeutic window is narrow and clinician-supervised in every legitimate context"
     ],
     "severity": "high"
    },
    "dossier": {
-    "rationale": "This is the ranked list doing its job in the direction nobody advertises. King's American Dispensatory (1898) already describes the oedema; the EMA monograph turns that observation into a contraindication. The corpus contains both ends of the chain. Nothing in the output is new pharmacology — the new thing is that a system reconstructed a hazard from a 17th-century comfort remedy and surfaced it beside the therapeutic hypotheses, where a person could actually read it.",
+    "rationale": "The cleanest 'what was hidden between the lines' in the whole corpus. 雷公炮炙論 does not say 'processing reduces toxicity'. It says: roast until it splits, peel, cut while hot, then boil in honey water, and then the poison is light and the effect is fast. That is a hydrolysis protocol with an endpoint, performed for fifteen centuries before it was described.",
     "mechanistic_chain": [
-     "Glycyrrhizin is hydrolysed in the gut to 18β-glycyrrhetinic acid.",
-     "18β-glycyrrhetinic acid competitively inhibits 11β-HSD2 in the distal nephron.",
-     "Cortisol is no longer inactivated to cortisone, so it occupies the mineralocorticoid receptor.",
-     "Sodium retention, potassium loss, hypertension, suppression of renin and aldosterone.",
-     "The same enzyme inhibition explains the hypokalaemic muscle weakness reported in the older dispensatories."
+     "Aconitine is a diester — an acetate at C8 and a benzoate at C14 on a norditerpene scaffold.",
+     "Heating in aqueous media hydrolyses the C8 acetate first → benzoylaconine (roughly 100× less toxic).",
+     "Further hydrolysis removes the C14 benzoate → aconine, effectively inactive at Na⁺ channels.",
+     "The classical endpoint ('split, peel, honey-water boil') sits at the monester stage — activity retained, cardiotoxicity largely gone.",
+     "The 傷寒論 '生用' exception for 四逆湯 is a deliberate high-potency choice inside a controlled decoction — exactly the distinction modern granule products lose."
     ],
     "prior_art_refs": [
-     "Conn, Rovner & Cohen (1968) — liquorice-induced pseudoaldosteronism",
-     "Stewart et al. (1987) — 11β-HSD2 and the cortisol/cortisone shuttle",
-     "EMA herbal monograph, Glycyrrhiza glabra root"
+     "雷斆 Lei Xiao — 雷公炮炙論 (5th–6th c.)",
+     "Singhuber et al. (2009) — Aconitum in traditional Chinese medicine: a review",
+     "diester diterpene alkaloid hydrolysis kinetics literature"
     ],
-    "cost_estimate": "Low — no new compounds, no animal work; a clinical-metabolism collaborator and one IRB amendment.",
+    "cost_estimate": "Low — one LC-MS/MS method, three processing arms, no synthesis.",
     "next_steps": [
-     "Add a dose-duration field to the Preparation entity so the graph can reason about exposure.",
-     "Check whether the corpus records the same warning for other glycyrrhizin-containing formulas.",
-     "Ship as a safety annotation on every hypothesis that proposes a liquorice preparation."
+     "Model 炮制 as a Process entity with (temperature, medium, duration, target-metabolite).",
+     "Flag every modern dosage form that omits a classical processing step the corpus calls necessary.",
+     "Report the 生用 exception — it is the test of whether we read the text or paraphrase it."
     ]
    },
+   "is_control": false,
    "rank": 1
   },
   {
-   "id": "H-03",
-   "title": "Wormwood's sesquiterpene lactones alkylate NF-κB p65 — a colitis rationale hiding in a bitter digestive",
-   "archetype": "repurposing",
+   "id": "H-01",
+   "title": "The name 木通 covers a harmless vine and a carcinogenic one — and the corpus already says which is which",
+   "discovery_class": "yiming_tongwu",
+   "discovery_class_label": "异名同物 · name collision & adulteration",
    "chain": {
-    "plant": "Artemisia absinthium",
-    "preparation": "Ethanolic tincture of the flowering tops (1:5, 45% EtOH)",
-    "chemotype": "absinthin, artabsin, artemolin (guaianolide sesquiterpene lactones; α-methylene-γ-butyrolactone)",
-    "target": "NF-κB p65 (RelA) — irreversible Michael addition at Cys38",
-    "indication": "Ulcerative colitis, mucosal inflammatory signalling"
+    "plant": "Akebia quinata / A. trifoliata  (vs. Aristolochia manshuriensis 關木通)",
+    "preparation": "Decoction of the stem — 木通 as dispensed c.1600–2000",
+    "chemotype": "akeboside triterpenoid saponins  VS  aristolochic acid I/II (nitro-phenanthrene carboxylic acids)",
+    "target": "proximal-tubule organic anion transporters OAT1/OAT3 (AA uptake); covalent DNA adducts at adenine N6",
+    "indication": "Aristolochic acid nephropathy → interstitial fibrosis, upper-tract urothelial carcinoma"
    },
    "scores": {
-    "novelty": 0.62,
-    "plausibility": 0.64,
-    "testability": 0.79,
-    "evidence": 0.48,
-    "composite": 0.64
+    "novelty": 0.58,
+    "plausibility": 0.79,
+    "testability": 0.84,
+    "evidence": 0.81,
+    "composite": 0.734
    },
    "provenance": [
     {
-     "source_id": "fixture:culpeper-1653",
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "木通：古方所用木通，即今之通草；後世以有細孔者可通氣，故謂之木通。今有一種關木通，色黃味苦，與木通形似而性不同，不可不辨。",
+     "span_kind": "paraphrase",
+     "locator": "草部·木通"
+    },
+    {
+     "source_id": "fx_powo",
+     "title": "Plants of the World Online / WCVP",
+     "title_en": "Kew POWO",
+     "author": "Royal Botanic Gardens Kew",
+     "year": 2024,
+     "tradition": "foundational",
+     "lang": "en",
+     "tier": 5,
+     "licence": "CC-BY-4.0",
+     "span": "Akebia quinata — Lardizabalaceae. Aristolochia manshuriensis — Aristolochiaceae.",
+     "span_kind": "verbatim",
+     "locator": "taxonomy"
+    },
+    {
+     "source_id": "fx_duke",
+     "title": "Dr Duke's Phytochemical & Ethnobotanical Databases",
+     "title_en": "Dr Duke's Phytochemical and Ethnobotanical Databases",
+     "author": "James A. Duke (USDA ARS)",
+     "year": 2003,
+     "tradition": "foundational",
+     "lang": "en",
+     "tier": 5,
+     "licence": "Public Domain",
+     "span": "Aristolochia manshuriensis: aristolochic acid I and II; nephrotoxicity and carcinogenicity records.",
+     "span_kind": "verbatim",
+     "locator": "A. manshuriensis"
+    },
+    {
+     "source_id": "fx_culpeper_control",
      "title": "The Complete Herbal",
+     "title_en": "Culpeper's Complete Herbal",
      "author": "Nicholas Culpeper",
      "year": 1653,
-     "era": "17th c.",
-     "tier": 3,
-     "licence": "Public Domain",
-     "span": "Wormwood is bitter and warming; it strengthens the stomach, kills worms, and is good for a weak digestion.",
-     "span_kind": "paraphrase",
-     "locator": ""
-    },
-    {
-     "source_id": "fixture:gerard-1633",
-     "title": "The Herball or Generall Historie of Plantes",
-     "author": "John Gerard",
-     "year": 1633,
-     "era": "17th c.",
+     "tradition": "comparative-control",
+     "lang": "en",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "The herb is used in bitter drinks and conserves for the stomach and the obstructions of the liver and the spleen.",
+     "span": "Comparative control only: the Western corpus is ≤3% of tokens, used to test whether this signal is an artefact of any large botanical corpus. Contributes no evidence here.",
      "span_kind": "paraphrase",
-     "locator": ""
-    },
-    {
-     "source_id": "fixture:grieve-1931",
-     "title": "A Modern Herbal",
-     "author": "Maud Grieve",
-     "year": 1931,
-     "era": "20th c.",
-     "tier": 2,
-     "licence": "Public Domain",
-     "span": "Wormwood is one of the most bitter plants; the infusion is a stomachic and a tonic, and the powdered herb has been used as a vermifuge.",
-     "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "registry: comparative-control"
     }
    ],
-   "falsification_plan": "The claim is mechanism-specific. Treat DSS-colitis mice with an absinthin-enriched fraction and a lactone-depleted fraction at matched bitterness; if p65 Cys38 adducts are absent by click-probe and the lactone-depleted fraction is equally protective, the NF-κB mechanism is dead. Positive control: parthenolide. If IL-10-/- spontaneous colitis is unaffected, the effect is DSS-model-specific and does not generalise.",
-   "uncertainty": "Bitterness itself drives gut hormone release (GLP-1, CCK), which could produce an anti-inflammatory readout with no direct NF-κB involvement. The guaianolide content of commercial wormwood varies enormously and is rarely specified.",
+   "falsification_plan": "The claim is a toxicity divergence, so it dies if the divergence is small. Compute compound-set distance between every taxon historically named 木通/通草 in the corpus; if the Aristolochia taxa are not the outliers on aristolochic-acid presence, the ranking is wrong. Second kill: if the corpus never presents 關木通 as a 木通 variant before 1900, the risk is modern substitution, not an inherited encoding — a different, equally publishable finding. Cheapest confirmation: LC-MS/MS for AA-I on retail 木通 decoction pieces, n=30, with the AA-DNA adduct (7-(deoxyadenosin-N6-yl)aristolactam I) as exposure biomarker.",
+   "uncertainty": "We cannot know what was in the bottle in 1600. The name collision is documented; the dispensing substitution is inferred from later commentary. Rank order inside the colliding set is sensitive to how we weight toxicity against therapeutic divergence — EVALUATION.md reports that sensitivity.",
    "safety": {
     "flags": [
-     "thujone content limits oral use and is itself a regulatory concern",
-     "absinthe-associated neurotoxicity is historically contested; do not conflate",
-     "no dosing conclusion is implied — this is a preclinical rationale"
+     "aristolochic acid is an IARC Group 1 carcinogen and a documented cause of nephropathy",
+     "no preparation, dose or substitution recipe appears anywhere in this output",
+     "regulatory ground truth: 2003 PRC ban on 關木通; 2001 FDA warning"
     ],
-    "severity": "caution"
+    "severity": "high"
    },
    "dossier": {
-    "rationale": "Bitter European digestives are a pharmacological family, not a list of folk claims. The α-methylene-γ-butyrolactone pharmacophore is the best-characterised covalent NF-κB warhead in natural products — parthenolide is the reference compound. Wormwood carries the same warhead on guaianolide scaffolds. The tradition recorded the use (weak digestion, 'obstructions'); the modern literature supplies the chemistry; nobody appears to have put the two together for colitis specifically.",
+    "rationale": "The strongest thing this corpus can do for public health is not discover a new drug. It is to notice that one name has been standing for two different plants. 《本草綱目》 writes the warning already, as a marginal note about colour and taste — four centuries before the Belgian slimming-clinic outbreak and the Taiwanese nephropathy cohort made it undeniable. The encoded layer was there. Nobody had a machine that read marginal notes as data.",
     "mechanistic_chain": [
-     "Absinthin/artabsin bear an exocyclic methylene on the lactone ring.",
-     "The β-carbon is electrophilic and is attacked by the Cys38 thiol of p65 — covalent, irreversible.",
-     "Loss of p65 DNA binding reduces transcription of IL-6, TNF-α and ICAM-1.",
-     "In intestinal epithelium this maps onto the documented mucosal inflammatory cascade.",
-     "Bitterness additionally recruits TAS2R signalling in enteroendocrine cells — a second, independent axis."
+     "木通 in pre-modern formularies denotes Akebia species — triterpenoid saponins, no nitroaromatics.",
+     "From roughly the late Qing, 關木通 (Aristolochia manshuriensis) is dispensed under the same name as a cheaper, more bitter stem.",
+     "Aristolochic acid I is taken up by proximal-tubule OAT1/OAT3 and bioactivated by nitroreduction.",
+     "The aristolactam forms covalent DNA adducts at adenine N6 — mutagenic and stable for decades.",
+     "Chronic interstitial nephritis and upper-tract urothelial carcinoma follow years later, which is why the signal was missed for so long."
     ],
     "prior_art_refs": [
-     "García-Piñeres et al. — sesquiterpene lactones as NF-κB inhibitors",
-     "Mathema et al. (2012) — parthenolide and NF-κB in inflammation",
-     "Bork et al. (1997) — guaianolides of Artemisia absinthium"
+     "Vanherweghem et al. (1993) — rapidly progressive interstitial renal fibrosis in a slimming regimen",
+     "IARC Monographs Vol. 100A (2012) — aristolochic acid, Group 1",
+     "Nortier et al. (2000) — urothelial carcinoma associated with aristolochic acid"
     ],
-    "cost_estimate": "Medium — one fractionation campaign plus a 4-week DSS study.",
+    "cost_estimate": "Low for the corpus arm (already in the KG); medium for the LC-MS confirmation.",
     "next_steps": [
-     "Resolve 'absinthium' vs 'absinthium album' historical naming to one taxon with confidence scores.",
-     "Ask whether the corpus's 'obstructions' language co-occurs with intestinal terms more than chance.",
-     "Specify the chemotype requirement explicitly in the falsification plan before any wet work."
+     "Promote 异名同物 to a first-class edge type: drug_name → {(taxon, era, confidence)}.",
+     "Rank colliding sets by maximum toxicity divergence, not by frequency.",
+     "Publish the ranking as a public list — this is a deliverable a regulator can use."
     ]
    },
+   "is_control": false,
    "rank": 2
   },
   {
    "id": "H-02",
-   "title": "Danshen's tanshinones activate Nrf2 — a vascular oxidative-stress rationale for a heart herb",
-   "archetype": "chemotype_bridge",
+   "title": "三七 and 菊三七 share a name and a use for bleeding, and nothing else",
+   "discovery_class": "yiming_tongwu",
+   "discovery_class_label": "异名同物 · name collision & adulteration",
    "chain": {
-    "plant": "Salvia miltiorrhiza",
-    "preparation": "Wine decoction of the root (traditional 'jiu jian')",
-    "chemotype": "tanshinone IIA, cryptotanshinone, salvianolic acid B",
-    "target": "KEAP1/Nrf2 (cytoprotective response element induction)",
-    "indication": "Endothelial oxidative stress in early hypertension"
+    "plant": "Panax notoginseng  (vs. Gynura pseudochina 菊三七)",
+    "preparation": "Powdered root, taken orally for bleeding and trauma",
+    "chemotype": "notoginsenosides R1/Rg1/Rb1 (dammarane saponins)  VS  pyrrolizidine alkaloids (senecionine type)",
+    "target": "no shared target; PA bioactivation by CYP3A4 → dehydropyrrolizine esters → hepatocyte DNA adducts",
+    "indication": "Hepatic sinusoidal obstruction syndrome (veno-occlusive disease) from the substitute"
    },
    "scores": {
-    "novelty": 0.55,
-    "plausibility": 0.61,
-    "testability": 0.72,
-    "evidence": 0.58,
-    "composite": 0.612
+    "novelty": 0.54,
+    "plausibility": 0.74,
+    "testability": 0.77,
+    "evidence": 0.66,
+    "composite": 0.668
    },
    "provenance": [
     {
-     "source_id": "fixture:bencao-gangmu",
-     "title": "Bencao Gangmu (Compendium of Materia Medica, trans.)",
-     "author": "Li Shizhen",
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
      "year": 1596,
-     "era": "16th c.",
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "Dan shen invigorates the blood, cools the heart and quiets the spirit; it is given when the blood is stasis and the chest is oppressed.",
+     "span": "三七：味甘微苦，性溫，無毒。止血散血定痛，金刃箭傷跌撲杖瘡血出不止者，嚼爛罨之即止。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "草部·三七"
     },
     {
-     "source_id": "fixture:grieve-1931",
-     "title": "A Modern Herbal",
-     "author": "Maud Grieve",
-     "year": 1931,
-     "era": "20th c.",
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "The red-rooted sage of the Chinese is used for the blood, and the decoction is taken warm with wine where the circulation is sluggish.",
+     "span": "菊三七：葉似菊，根如三七而大，南人亦呼為三七，以之治血。其力大而性猛，久服令人腹痛。按此非真三七也。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "草部·菊三七"
+    },
+    {
+     "source_id": "fx_powo",
+     "title": "Plants of the World Online / WCVP",
+     "title_en": "Kew POWO",
+     "author": "Royal Botanic Gardens Kew",
+     "year": 2024,
+     "tradition": "foundational",
+     "lang": "en",
+     "tier": 5,
+     "licence": "CC-BY-4.0",
+     "span": "Panax notoginseng — Araliaceae. Gynura pseudochina — Asteraceae; pyrrolizidine alkaloid occurrence recorded.",
+     "span_kind": "verbatim",
+     "locator": "taxonomy"
     }
    ],
-   "falsification_plan": "Human aortic endothelial cells under H2O2: if tanshinone IIA does not raise NQO1/HO-1 transcripts and nuclear Nrf2, and if ML385 (Nrf2 inhibitor) does not ablate the protective effect, the pathway claim fails. In vivo: Nrf2-/- mice should lose the vascular protection completely.",
-   "uncertainty": "'Blood stasis' is a process category, not a molecular one — the mapping to oxidative stress is our inference, and a plausible alternative reading is that the TCM category is closer to rheology.",
+   "falsification_plan": "Case series of herbal-product users with a hepatic adverse event: if no PAs are detectable in the implicated product and no Gynura DNA barcode is found, the substitution route is unsupported for that series. For the corpus claim alone: if 菊三七 is never presented as a 三七 substitute in any pre-1900 text, the collision is industrial-age rather than inherited.",
+   "uncertainty": "The 菊三七 note in 《本草綱目》 is a caution about potency, not a modern toxicity warning. Reading our knowledge of PA hepatotoxicity back into it would be anachronism. The honest formulation is 'the name was already known to be loose', not 'the ancients knew about pyrrolizidine alkaloids'.",
    "safety": {
     "flags": [
-     "Danshen is a recognised warfarin interaction — bleeding risk",
-     "no dosing or co-administration guidance is implied"
+     "pyrrolizidine alkaloids cause dose-dependent, sometimes irreversible hepatic injury",
+     "adulteration in the supplement supply chain is the modern risk vector",
+     "no dosage or product guidance is given"
     ],
-    "severity": "caution"
+    "severity": "high"
    },
    "dossier": {
-    "rationale": "Tanshinones are lipophilic quinones with a well-documented electrophilic response element signature; salvianolic acid B is a parallel antioxidant axis in the same root. The tradition's 'blood stasis' category and the modern oxidative-stress literature describe the same organ-level problem at two different resolutions.",
+    "rationale": "Same structural failure, second instance: two roots, one name, one use. It is worse than 木通 in a specific way — 菊三七 was already flagged in the classical text as 'not the real 三七, its force is violent, long use causes abdominal pain'. The corpus contains the safety note. The job is to turn a sixteenth-century aside into a ranked adulteration risk.",
     "mechanistic_chain": [
-     "Tanshinone IIA modifies KEAP1 cysteines.",
-     "Nrf2 escapes ubiquitination and translocates.",
-     "NQO1, HO-1, GCLM induced.",
-     "Endothelial ROS burden falls; adhesion molecule expression drops."
+     "Both roots are bitter-astringent and used for bleeding and stasis, so substitution is clinically invisible.",
+     "Panax notoginseng acts via ginsenoside saponins; no PA exposure.",
+     "Gynura carries senecionine-type pyrrolizidine alkaloids.",
+     "CYP3A4 oxidises PAs to dehydropyrrolizine esters, which alkylate hepatocyte DNA and protein.",
+     "Sinusoidal endothelial injury → veno-occlusive disease, often presenting late."
     ],
     "prior_art_refs": [
-     "Xu & Liu — tanshinones and Nrf2 signalling",
-     "EMA/WHO monographs on Salvia miltiorrhiza"
+     "Zuckerman et al. (2016) — pyrrolizidine alkaloids and hepatic sinusoidal obstruction syndrome",
+     "WHO/IPCS pyrrolizidine alkaloid risk assessment"
     ],
-    "cost_estimate": "Medium — cell work is cheap; the in vivo arm needs a breeding colony.",
+    "cost_estimate": "Low — barcoding plus targeted PA analysis on a retail panel.",
     "next_steps": [
-     "Separate the quinone and the phenolic-acid arms in the fractionation plan.",
-     "Check the corpus for 'blood stasis' co-occurrence with pulse-quality terms."
+     "Add DNA-barcode evidence as an edge attribute on every 异名同物 pair.",
+     "Rank colliding pairs that differ in severity class — that is the actionable list."
     ]
    },
+   "is_control": false,
    "rank": 3
   },
   {
-   "id": "H-01",
-   "title": "The water-bath distillation the alchemists insisted on yields a linalool chemotype that modulates the benzodiazepine site",
-   "archetype": "process_translation",
+   "id": "H-04",
+   "title": "九蒸九曬 is a detoxification protocol: 生首烏 and 制首烏 are different drugs",
+   "discovery_class": "paozhi",
+   "discovery_class_label": "炮制 · processing as chemistry",
    "chain": {
-    "plant": "Lavandula angustifolia",
-    "preparation": "Hydrodistillation in balneum Mariae, 3 h (the alchemical 'bath of Mary')",
-    "chemotype": "linalool 28–44%, linalyl acetate 25–38%, terpinen-4-ol",
-    "target": "GABA_A receptor complex, benzodiazepine site (positive allosteric modulation)",
-    "indication": "Generalised anxiety — inhaled and oral routes are not interchangeable"
+    "plant": "Polygonum multiflorum 何首烏",
+    "preparation": "生用 (raw) vs 制 — nine steam-and-sun cycles with black bean decoction",
+    "chemotype": "raw: stilbene glycosides (TSG) + emodin anthraquinones; processed: hydrolysed aglycones, altered anthraquinone profile",
+    "target": "hepatocyte — mitochondrial injury and CYP/UGT-mediated bioactivation (candidate); TSG is the suspect fraction",
+    "indication": "Herb-induced liver injury from unprocessed 生首烏 in 'hair-blackening' supplements"
    },
    "scores": {
-    "novelty": 0.41,
-    "plausibility": 0.68,
-    "testability": 0.86,
-    "evidence": 0.62,
-    "composite": 0.611
+    "novelty": 0.46,
+    "plausibility": 0.76,
+    "testability": 0.81,
+    "evidence": 0.72,
+    "composite": 0.659
    },
    "provenance": [
     {
-     "source_id": "fixture:rosarium",
-     "title": "Rosarium Philosophorum",
-     "author": "anon. (Pseudo-Arnaldus)",
-     "year": 1550,
-     "era": "16th c.",
-     "tier": 3,
-     "licence": "Public Domain",
-     "span": "In the bath of Mary the vessel is warmed with the heat of water only, so that the gentle heat may draw the spirit without burning it; this is the distillation that admitteth no violence.",
-     "span_kind": "paraphrase",
-     "locator": ""
-    },
-    {
-     "source_id": "fixture:gerard-1633",
-     "title": "The Herball or Generall Historie of Plantes",
-     "author": "John Gerard",
-     "year": 1633,
-     "era": "17th c.",
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "The distilled water of Lavender drawn in a bath of warm water, that the fire touch it not, is of all the waters the most comfortable to the head and to the sinews.",
+     "span": "何首烏：味苦澀微溫。生者有毒，制者無毒。九蒸九曬，黑豆同蒸，則補益之功成而毒去。生用則令人發熱、腹瀉。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "草部·何首烏"
     },
     {
-     "source_id": "fixture:culpeper-1653",
-     "title": "The Complete Herbal",
-     "author": "Nicholas Culpeper",
-     "year": 1653,
-     "era": "17th c.",
+     "source_id": "fx_leigong_paozhi",
+     "title": "雷公炮炙論",
+     "title_en": "Master Lei's Treatise on Processing",
+     "author": "雷斆 Lei Xiao",
+     "year": 520,
+     "tradition": "alchemy",
+     "lang": "zh-Hant",
      "tier": 3,
      "licence": "Public Domain",
-     "span": "It comforteth the brain and the nerves, and is good against the trembling of the joints and the palsy.",
+     "span": "凡藥有毒者，皆先以炮製減其毒，此制方之要也。",
      "span_kind": "paraphrase",
-     "locator": ""
-    },
-    {
-     "source_id": "fixture:ema-monographs",
-     "title": "EMA herbal monographs (selected)",
-     "author": "European Medicines Agency",
-     "year": 2016,
-     "era": "21st c.",
-     "tier": 2,
-     "licence": "CC-BY-SA-4.0",
-     "span": "Traditional herbal medicinal product for the relief of mild symptoms of mental stress and exhaustion, and mild sleep disorders.",
-     "span_kind": "paraphrase",
-     "locator": "Lavender flower"
+     "locator": "凡例"
     }
    ],
-   "falsification_plan": "Elevated plus maze in C57BL/6J, inhaled linalool at a fixed chamber concentration. If flumazenil (3 mg/kg i.p.) fails to reverse the anxiolytic effect, the benzodiazepine-site mechanism is falsified and a 5-HT1A or olfactory route remains. Second kill: β2/β3-subunit knockouts should abolish the effect if the GABA_A site is truly involved. Preclinical design only — not a dosing recommendation for any human.",
-   "uncertainty": "Route is the confounder that decides the whole hypothesis: inhaled linalool reaches plasma at a fraction of the oral dose, and the human trial literature mixes both. 'Anxiolytic' also spans acute sedation and chronic trait anxiety, which are different claims.",
+   "falsification_plan": "Compare 生 vs 制 extract cytotoxicity in HepG2 and primary human hepatocytes at matched dry mass, with TSG and emodin by HPLC. Refuted if the processed extract is not less cytotoxic, or if the TSG fraction is not the dose-limiting toxic component. The clinical pattern to reproduce: unprocessed product, weeks of exposure, cholestatic or mixed injury.",
+   "uncertainty": "Commercial cycle counts vary from 4 to 9 and are rarely declared; the dose-response for cycle count is not in the corpus. Attribution to TSG is a candidate, not a conclusion.",
    "safety": {
     "flags": [
-     "essential oils are not benign by default — oral linalool has a documented paediatric toxicity literature",
-     "no dosing guidance is offered or implied"
+     "documented herb-induced liver injury; regulatory warnings in several jurisdictions",
+     "no product, dose or duration guidance is given",
+     "toxicology analysis, not a recommendation about any supplement"
     ],
     "severity": "caution"
    },
    "dossier": {
-    "rationale": "The alchemists were emphatic about the water bath, and they were right for a reason they did not articulate: hydrodistillation at ~100 °C in a sealed gentle-heat regime preserves the acetate esters that a naked flame destroys. Gerard's 'that the fire touch it not' is an extraction parameter wearing a liturgical costume. The chemistry of the resulting oil points at a specific receptor site, and that site has a selective antagonist, which makes the whole hypothesis cheap to kill.",
+    "rationale": "《本草綱目》 says it plainly: raw is toxic, processed is not, and it names the process. The modern failure mode is that 'hair-blackening' products are made from cheap raw root and sold without the processing claim. The corpus holds both the warning and the protocol — exactly the pair you need to build a product-risk test.",
     "mechanistic_chain": [
-     "Balneum Mariae holds the still below the thermal degradation threshold of linalyl acetate.",
-     "The condensate is a monoterpene-rich oil rather than a sesquiterpene-heavy one.",
-     "Linalool reaches the GABA_A complex and potentiates GABA-evoked currents at the benzodiazepine site.",
-     "Flumazenil reverses the potentiation — the discriminating experiment.",
-     "Chronic exposure additionally down-regulates 5-HT1A in some models — a second axis."
+     "Raw root carries high TSG and emodin glycoside loads.",
+     "Nine steam cycles with black bean progressively hydrolyse glycosides and shift the anthraquinone profile.",
+     "The processed material is the one the text calls 無毒.",
+     "Unprocessed material retains the fraction implicated in hepatocyte injury.",
+     "Therefore the processing step is a safety control, not a preference."
     ],
     "prior_art_refs": [
-     "Russo (2011) — linalool and the GABA_A / 5-HT1A framework",
-     "Hritcu et al. — inhaled linalool and anxiety behaviour",
-     "EMA monograph, Lavandula angustifolia flower"
+     "Lin et al. — Polygonum multiflorum hepatotoxicity reviews",
+     "NMPA and MHRA safety communications on 何首烏"
     ],
-    "cost_estimate": "Low — one still, one GC-MS run, one behavioural cohort.",
+    "cost_estimate": "Low — two extracts, one cell model, one HPLC method.",
     "next_steps": [
-     "Encode the distillation temperature as a Process entity attribute, not free text.",
-     "Check whether the corpus's water-bath insistence correlates with ester-rich plants.",
-     "Run the flumazenil arm before committing to any larger study."
+     "Encode cycle-count as a numeric Process attribute so the KG can ask 'how many cycles?'.",
+     "Attach a processing-omitted risk flag to finished-product classes."
     ]
    },
+   "is_control": false,
    "rank": 4
   },
   {
-   "id": "H-10",
-   "title": "Horehound's bitterness may be a bronchodilator, not just an expectorant",
-   "archetype": "chemotype_bridge",
+   "id": "H-07",
+   "title": "The 使 courier is a pharmacokineticist: formula role predicts CYP/P-gp modulation",
+   "discovery_class": "junchen_zuoshi",
+   "discovery_class_label": "君臣佐使 · formula roles",
    "chain": {
-    "plant": "Marrubium vulgare",
-    "preparation": "Infusion of the dried herb",
-    "chemotype": "marrubiin, premarrubiin (labdane diterpenoid bitter)",
-    "target": "TAS2R bitter receptors on airway smooth muscle (bronchodilation)",
-    "indication": "Cough and bronchospasm in obstructive airway disease"
+    "plant": "Role-annotated formulas across the corpus — 胡椒/蓽茇 (Piper), 甘草 (Glycyrrhiza), 生薑 (Zingiber)",
+    "preparation": "Whole-formula decoction; the courier herb in the 使 position",
+    "chemotype": "piperine, glycyrrhizin, 6-gingerol — a chemically diverse set with one shared activity",
+    "target": "CYP3A4 inhibition and P-glycoprotein modulation — i.e. oral bioavailability of the 君 herb",
+    "indication": "Systematic enrichment test: do 使 herbs inhibit CYP3A4/P-gp more often than 君 herbs?"
    },
    "scores": {
     "novelty": 0.66,
-    "plausibility": 0.52,
-    "testability": 0.71,
-    "evidence": 0.35,
-    "composite": 0.569
+    "plausibility": 0.58,
+    "testability": 0.88,
+    "evidence": 0.41,
+    "composite": 0.635
    },
    "provenance": [
     {
-     "source_id": "fixture:grieve-1931",
-     "title": "A Modern Herbal",
-     "author": "Maud Grieve",
-     "year": 1931,
-     "era": "20th c.",
+     "source_id": "fx_taiping_huimin",
+     "title": "太平惠民和劑局方",
+     "title_en": "Imperial Pharmacy Formulary",
+     "author": "陳師文 Chen Shiwen et al.",
+     "year": 1151,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "Horehound is esteemed for its bitter tonic action and for coughs; it gently promotes expectoration. Its bitterness is very great.",
+     "span": "君臣佐使者，制方之要也。君為主，臣為輔，佐為制，使為引。主病之謂君，佐君之謂臣，應臣之謂使。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "卷首·論方"
     },
     {
-     "source_id": "fixture:kings-1898",
-     "title": "King's American Dispensatory",
-     "author": "Harvey W. Felter & John U. Lloyd",
-     "year": 1898,
-     "era": "19th c.",
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "Horehound is tonic, expectorant and gently laxative; it is much used in cough mixtures and in the form of a syrup.",
+     "span": "胡椒：味辛大溫，無毒。主下氣溫中，去痰，除臟腑中風冷。近世食品多賴此以行藥力。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "果部·胡椒"
+    },
+    {
+     "source_id": "fx_duke",
+     "title": "Dr Duke's Phytochemical & Ethnobotanical Databases",
+     "title_en": "Dr Duke's Phytochemical and Ethnobotanical Databases",
+     "author": "James A. Duke (USDA ARS)",
+     "year": 2003,
+     "tradition": "foundational",
+     "lang": "en",
+     "tier": 5,
+     "licence": "Public Domain",
+     "span": "Piper longum: piperine — bioavailability enhancement, CYP3A4 inhibition and P-glycoprotein interaction records.",
+     "span_kind": "verbatim",
+     "locator": "P. longum"
     }
    ],
-   "falsification_plan": "Isolated human airway smooth-muscle strips, pre-contracted with carbachol: if marrubiin does not relax them and if the effect is not lost in TAS2R-specific knockdown, the bitter-bronchodilator hypothesis fails. Chloroquine (known TAS2R agonist) is the positive control.",
-   "uncertainty": "The expectorant tradition and the bronchodilator hypothesis can both be true; a cough outcome cannot distinguish them. Marrubiin's bitterness is on a different receptor class from the canonical horehound mucilage effect, so the fraction matters.",
+   "falsification_plan": "Computed, not wet. Take every formula in `formulas.csv` with role annotations; take every ingredient with a ChEMBL CYP3A4 or P-gp record; compute enrichment of 'inhibitor' among 使-role herbs versus 君-role herbs, with a permutation null over role labels (10⁴ shuffles). Refuted if observed enrichment sits inside the null distribution. Then confirm one untested courier experimentally — piperine is already known, so pick a null one.",
+   "uncertainty": "Role labels are edition-specific and sometimes contested. The confound is sharp: courier herbs are often aromatic and small-dose, and small aromatics are over-represented among CYP modulators for unrelated reasons. We cannot yet separate 'courier because it is a PK modulator' from 'both follow from being a volatile aromatic'.",
    "safety": {
     "flags": [
-     "animal toxicity signal for marrubiin at high parenteral doses — route matters"
+     "the practical consequence is herb–drug interaction risk — a warning, not a recommendation"
     ],
-    "severity": "none"
+    "severity": "caution"
    },
    "dossier": {
-    "rationale": "Bitter taste receptors are expressed in airway smooth muscle, where agonists cause relaxation that is independent of β2-adrenoceptors. Horehound is one of the bitterest herbs in the European materia medica and its indication is literally the airway. The tradition had the right organ and the wrong mechanism; the receptor was only characterised in the 2010s.",
+    "rationale": "君臣佐使 is a four-way classification that every classical formulary carries and no modern database encodes. If 使 is not decoration but a functional prediction about absorption, then the canon contains a pharmacokinetic annotation layer — labelled, centuries old, and computable tomorrow. That is the strongest version of 'what was hidden'.",
     "mechanistic_chain": [
-     "Marrubiin binds TAS2R isoforms on airway smooth muscle.",
-     "Gβγ and PLCβ signalling raises local Ca²⁺ in a compartmentalised way.",
-     "BK_Ca channel opening hyperpolarises the cell.",
-     "Smooth muscle relaxes — bronchodilation without β2 involvement."
+     "君 bears the primary therapeutic action.",
+     "使 is defined by direction and guidance — 應臣之謂使, the one that responds to the minister.",
+     "In the piperine case the 'guidance' is literal: intestinal CYP3A4 and P-gp inhibition raises the 君 herb's exposure.",
+     "If the role label is predictive, that relationship should hold beyond the famous examples.",
+     "Test: role enrichment against bioactivity databases, against a permutation null."
     ],
     "prior_art_refs": [
-     "Deshpande et al. (2010) — TAS2R agonists relax human airway smooth muscle",
-     "Ligresti et al. — marrubiin and TRP channel modulation"
+     "《太平惠民和劑局方》 — role annotations",
+     "Atal et al. (1981) — piperine as a bioavailability enhancer",
+     "Srinivasan — piperine and drug metabolism"
     ],
-    "cost_estimate": "Low — isolated-tissue pharmacology is the cheapest honest test in the set.",
+    "cost_estimate": "Very low for the computational arm; one confirmatory PK arm afterwards.",
     "next_steps": [
-     "Check whether the corpus pairs horehound with 'wheeze' rather than 'cough'.",
-     "Add TAS2R to the Target ontology with a receptor-family parent."
+     "Parse role annotations into `formula_ingredients.csv` (role ∈ jun/chen/zuo/shi) — the enabling step.",
+     "Run the permutation null before any biological claim.",
+     "Pre-register the enrichment threshold in EVALUATION.md."
     ]
    },
+   "is_control": false,
    "rank": 5
   },
   {
-   "id": "H-08",
-   "title": "Peony–liquorice may act on muscle chloride handling — and we are the least sure of this one",
-   "archetype": "repurposing",
+   "id": "H-06",
+   "title": "十九畏 says mercury fears arsenic — a toxicology dataset wearing the costume of a taboo",
+   "discovery_class": "peiwu_jinji",
+   "discovery_class_label": "配伍禁忌 · encoded incompatibility",
    "chain": {
-    "plant": "Paeonia lactiflora / Glycyrrhiza uralensis",
-    "preparation": "Combined decoction (kampo shakuyaku-kanzo-tō proportions)",
-    "chemotype": "paeoniflorin + glycyrrhizin, co-extracted",
-    "target": "NKCC1 / KCC2 chloride homeostasis in skeletal muscle (candidate)",
-    "indication": "Muscle cramp and spasm"
+    "plant": "水銀 mercury sulphide HgS + 砒霜 arsenic tri/sulphide As₂O₃ / As₂S₃  (十九畏 pair)",
+    "preparation": "Mineral drugs in 丹 formulas; 輕粉 Hg₂Cl₂; 雄黃 As₄S₄",
+    "chemotype": "Hg²⁺/HgS + As³⁺/As⁵⁺ — speciation-dependent soft-metal thiol chemistry",
+    "target": "thiol binding: GSH depletion, thioredoxin reductase inhibition, mitochondrial permeability transition",
+    "indication": "Documented heavy-metal toxicity from mineral-drug formulas; the pair is a speciation and clearance problem"
    },
    "scores": {
-    "novelty": 0.58,
-    "plausibility": 0.49,
-    "testability": 0.68,
-    "evidence": 0.55,
-    "composite": 0.569
+    "novelty": 0.57,
+    "plausibility": 0.61,
+    "testability": 0.69,
+    "evidence": 0.52,
+    "composite": 0.602
    },
    "provenance": [
     {
-     "source_id": "fixture:ema-monographs",
-     "title": "EMA herbal monographs (selected)",
-     "author": "European Medicines Agency",
-     "year": 2016,
-     "era": "21st c.",
-     "tier": 2,
-     "licence": "CC-BY-SA-4.0",
-     "span": "Peony root: traditional use for mild spasms and cramping in the lower abdomen; combinations with liquorice root are traditional in Japanese kampo medicine for muscle cramp.",
-     "span_kind": "paraphrase",
-     "locator": ""
-    },
-    {
-     "source_id": "fixture:kings-1898",
-     "title": "King's American Dispensatory",
-     "author": "Harvey W. Felter & John U. Lloyd",
-     "year": 1898,
-     "era": "19th c.",
+     "source_id": "fx_ru-men-shi-qin",
+     "title": "儒門事親",
+     "title_en": "Confucians' Duties to Their Parents",
+     "author": "張從正 Zhang Congzheng",
+     "year": 1228,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "Peony is antispasmodic and tonic; it has been recommended in spasms of the muscles and in the convulsive affections of childhood.",
-     "span_kind": "paraphrase",
-     "locator": ""
+     "span": "十九畏：硫黃原是火中精，朴硝一見便相爭；水銀莫與砒霜見，狼毒最怕密陀僧。",
+     "span_kind": "verbatim",
+     "locator": "十九畏"
     },
     {
-     "source_id": "fixture:dioscorides",
-     "title": "De Materia Medica",
-     "author": "Pedanius Dioscorides",
-     "year": 70,
-     "era": "1st c. CE",
-     "tier": 2,
+     "source_id": "fx_baopuzi",
+     "title": "抱朴子內篇",
+     "title_en": "Baopuzi, Inner Chapters",
+     "author": "葛洪 Ge Hong",
+     "year": 320,
+     "tradition": "alchemy",
+     "lang": "zh-Hant",
+     "tier": 3,
      "licence": "Public Domain",
-     "span": "The root dried helpeth the falling sickness, and the seed taken in wine appeaseth the pains of the belly.",
+     "span": "夫金丹之為物，燒之愈久，變化愈妙。",
+     "span_kind": "verbatim",
+     "locator": "內篇·金丹"
+    },
+    {
+     "source_id": "fx_rasa_ratna",
+     "title": "Rasa Ratna Samuccaya",
+     "title_en": "Rasa Ratna Samuccaya (rasaśāstra)",
+     "author": "Vāgbhaṭa (attr.)",
+     "year": 1200,
+     "tradition": "alchemy",
+     "lang": "sa",
+     "tier": 3,
+     "licence": "Public Domain",
+     "span": "bhasma: a metal or mineral is repeatedly incinerated with herbal media until toxicity has been removed and the power made subtle.",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "Rasa Ratna Samuccaya"
     }
    ],
-   "falsification_plan": "Intracellular chloride imaging in isolated muscle fibres with and without the formula: if the NKCC1/KCC2 ratio does not shift, or if bumetanide (NKCC1 inhibitor) occludes the whole effect rather than adding to it, the chloride hypothesis is unsupported. The honest alternative is that the effect is glycyrrhizin-driven mineralocorticoid action, which H-06 already covers.",
-   "uncertainty": "This is the weakest hypothesis in the ranked set and it is presented as such. The formula is a combination, so attribution to a single compound is not available. The mechanism is a candidate, not a finding — the composite score reflects that.",
+   "falsification_plan": "Speciation and thiol-binding study: does co-present Hg and As change aqueous speciation and the cellular thiol response relative to either alone? Refuted if the two act purely additively on GSH depletion and cytotoxicity in a hepatocyte model. Positive control: known Hg–Se antagonism. **This is toxicology; the only deliverable is a hazard ranking, never a preparation.**",
+   "uncertainty": "The taboo may encode observation of acute toxicity (a co-ingestion accident) rather than a chemical interaction. Separating 'people who took both died' from 'the combination is chemically worse' is precisely the distinction the corpus does not make. We say so.",
    "safety": {
     "flags": [
-     "contains liquorice — inherits every H-06 contraindication",
-     "combination products make dose attribution impossible"
+     "mercury and arsenic compounds are severely toxic; hazard analysis only",
+     "no 丹 formula, mineral preparation, route or dose appears in any output — by design",
+     "the safety layer blocks the Ask panel from answering preparation questions in this area"
     ],
-    "severity": "caution"
+    "severity": "high"
    },
    "dossier": {
-    "rationale": "Two independent traditions converge on spasm and cramp with the same pair of roots, which is the kind of convergence the pipeline is built to notice. The mechanism, however, is genuinely unknown; we surface the hypothesis with a deliberately low plausibility score rather than dressing it up.",
+    "rationale": "This hypothesis exists to draw a line. Asian materia medica genuinely includes mercury, arsenic and lead drugs — 丹, 輕粉, 雄黃, bhasma — and pretending otherwise would be dishonest history. They are in the corpus as data. They never appear in the output as advice. A system that mines this canon must be able to say which of its own sources are poison, and refuse to help with them.",
     "mechanistic_chain": [
-     "Unexplained at the molecular level.",
-     "Candidate: altered NKCC1/KCC2 balance changes intracellular Cl⁻.",
-     "Candidate: glycyrrhizin-mediated mineralocorticoid effect on the muscle membrane.",
-     "Distinguishing experiment: chloride imaging plus bumetanide occlusion."
+     "Hg and As both act through soft-metal thiol chemistry.",
+     "The 十九畏 pairing asserts an interaction beyond either alone.",
+     "Speciation (HgS vs Hg²⁺; As₂S₃ vs As³⁺) dominates the actual hazard.",
+     "The transferable insight is about delivery form, not combination: the same element in a different speciation is a different drug."
     ],
     "prior_art_refs": [
-     "Kampo clinical literature on shakuyaku-kanzo-tō and muscle cramp",
-     "EMA monograph, Paeonia lactiflora root"
+     "WHO monographs on arsenic and mercury exposure",
+     "Liu et al. — speciation and bioavailability of mineral drugs in 丹 formulas",
+     "bhasma literature — processing as a particle-size and speciation intervention"
     ],
-    "cost_estimate": "Medium — needs electrophysiology or chloride-sensitive dye work.",
+    "cost_estimate": "Medium — speciation analytics and a thiol-depletion cell assay.",
     "next_steps": [
-     "Mark this as 'mechanism open' in the UI rather than shipping a fake chain.",
-     "Search the corpus for the two plants named together — that is the real signal."
+     "Every heavy-metal-adjacent hypothesis carries a hard safety annotation, always rendered.",
+     "Verify the Ask panel refuses 'how do I prepare' questions in this class.",
+     "Frame the deliverable as a hazard ranking for regulators, never as a remedy."
     ]
    },
+   "is_control": false,
    "rank": 6
   },
   {
-   "id": "H-09",
-   "title": "Feverfew's parthenolide is the reference NF-κB warhead — and that is exactly why its novelty score is low",
-   "archetype": "repurposing",
+   "id": "H-05",
+   "title": "十八反 is a pharmacokinetic rule, not a pharmacological one",
+   "discovery_class": "peiwu_jinji",
+   "discovery_class_label": "配伍禁忌 · encoded incompatibility",
    "chain": {
-    "plant": "Tanacetum parthenium",
-    "preparation": "Freeze-dried leaf capsules (traditional prophylactic)",
-    "chemotype": "parthenolide (germacranolide sesquiterpene lactone)",
-    "target": "NF-κB p65 Cys38 alkylation; also IKKβ",
-    "indication": "Migraine prophylaxis"
+    "plant": "Glycyrrhiza uralensis 甘草 + Euphorbia kansui 甘遂  (十八反 pair)",
+    "preparation": "Co-decoction in a single formula",
+    "chemotype": "glycyrrhizin / 18β-glycyrrhetinic acid  +  kansuinin A, ingenol-type diterpene esters",
+    "target": "efflux and clearance: P-gp / BCRP transport and CYP3A4 (candidate), raising systemic exposure to the Euphorbia diterpenes",
+    "indication": "The rule predicts increased toxicity of the combined decoction"
    },
    "scores": {
-    "novelty": 0.18,
-    "plausibility": 0.78,
+    "novelty": 0.63,
+    "plausibility": 0.55,
     "testability": 0.74,
-    "evidence": 0.83,
-    "composite": 0.5
+    "evidence": 0.44,
+    "composite": 0.597
    },
    "provenance": [
     {
-     "source_id": "fixture:gerard-1633",
-     "title": "The Herball or Generall Historie of Plantes",
-     "author": "John Gerard",
-     "year": 1633,
-     "era": "17th c.",
+     "source_id": "fx_ru-men-shi-qin",
+     "title": "儒門事親",
+     "title_en": "Confucians' Duties to Their Parents",
+     "author": "張從正 Zhang Congzheng",
+     "year": 1228,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "Featherfew is used for the megrim and for the giddiness of the head, and the herb is worn about the person by some for that purpose.",
-     "span_kind": "paraphrase",
-     "locator": ""
+     "span": "本草明言十八反：半蔞貝蘞及攻烏，藻戟遂芫俱戰草，諸參辛芍叛藜蘆。",
+     "span_kind": "verbatim",
+     "locator": "十八反"
     },
     {
-     "source_id": "fixture:grieve-1931",
-     "title": "A Modern Herbal",
-     "author": "Maud Grieve",
-     "year": 1931,
-     "era": "20th c.",
+     "source_id": "fx_shennong_bencao",
+     "title": "神農本草經",
+     "title_en": "Shennong Bencao Jing",
+     "author": "神農 (attrib.)",
+     "year": -200,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "Feverfew has been used for many years for the relief of migraine, and the leaves are eaten fresh in some country districts for that complaint.",
-     "span_kind": "paraphrase",
-     "locator": ""
+     "span": "甘草，味甘平。主五臟六腑寒熱邪氣，堅筋骨，長肌肉，倍力，金瘡腫，解毒。",
+     "span_kind": "verbatim",
+     "locator": "上品·甘草"
+    },
+    {
+     "source_id": "fx_duke",
+     "title": "Dr Duke's Phytochemical & Ethnobotanical Databases",
+     "title_en": "Dr Duke's Phytochemical and Ethnobotanical Databases",
+     "author": "James A. Duke (USDA ARS)",
+     "year": 2003,
+     "tradition": "foundational",
+     "lang": "en",
+     "tier": 5,
+     "licence": "Public Domain",
+     "span": "Glycyrrhiza uralensis: glycyrrhizin, glycyrrhetinic acid; anti-inflammatory and mineralocorticoid activity records.",
+     "span_kind": "verbatim",
+     "locator": "G. uralensis"
     }
    ],
-   "falsification_plan": "Already substantially tested — the falsifying experiment is the literature itself. A novelty score of 0.18 is the system reporting that this idea is in the modern literature, which is the correct answer, not a failure.",
-   "uncertainty": "The clinical trial literature is mixed and the parthenolide content of commercial preparations is wildly variable. We cite this as a calibration point for the novelty axis.",
+   "falsification_plan": "Four-arm rat PK study: 甘遂 alone; 甘遂+甘草; 甘遂 + a P-gp inhibitor positive control; vehicle. The claim dies if kansuinin A AUC is unchanged by co-administration and intestinal permeability is unchanged; it also dies if the toxicity difference is purely additive, since an interaction must be non-additive. The eighteen pairs give eighteen independent tests — which makes this a statistical question: if the rule is real, PK-interaction enrichment across the 18 pairs must exceed the shuffled-pair null.",
+   "uncertainty": "The mnemonic is a list, not an explanation: it may encode several mechanisms at once (PK, PD, chemical reaction on co-decoction, plain dose-escalation accidents). Our single-mechanism claim is the weakest part and is scored accordingly.",
    "safety": {
     "flags": [
-     "Asteraceae allergy",
-     "traditional contraindication in pregnancy"
+     "Euphorbia kansui diterpenes are violently purgative and toxic",
+     "the pair is a controlled dispensing contraindication in Chinese pharmacy practice",
+     "no formula, ratio or preparation is given — this is a mechanism question"
     ],
-    "severity": "caution"
+    "severity": "high"
    },
    "dossier": {
-    "rationale": "A deliberately included low-novelty control at the *scientific* level (as distinct from the negative control at the statistical level). If our novelty score could not recognise parthenolide/NF-κB as well-trodden, it would not be measuring novelty at all.",
+    "rationale": "Every TCM student memorises 十八反 as a rhyme. Almost nobody can tell you why. The rhyme is a compressed, high-confidence dataset: eighteen negative interactions asserted for a millennium and never systematically tested. If even a third are pharmacokinetic, then herb–drug interaction screening exists inside a 13th-century mnemonic.",
     "mechanistic_chain": [
-     "Parthenolide alkylates p65 Cys38 and inhibits IKKβ.",
-     "NF-κB-dependent cytokine transcription falls.",
-     "Downstream effect on trigeminal CGRP release is the migraine link (inferred)."
+     "甘草 is a near-universal 'harmonising' herb and a known modulator of glucuronidation and efflux transport.",
+     "Euphorbia diterpene esters are P-gp substrates with a narrow margin.",
+     "Co-administration could raise systemic exposure with no receptor-level interaction at all.",
+     "That is a PK interaction — the same class as a modern DDI, not a mystical antagonism.",
+     "The enriched-null test across all 18 pairs is what turns this from anecdote into evidence."
     ],
     "prior_art_refs": [
-     "Mathema et al. (2012)",
-     "Palevitch & Earon — feverfew migraine trials",
-     "EMA monograph, Tanacetum parthenium"
+     "Zhang Congzheng — 儒門事親 (1228), the 十八反 mnemonic",
+     "Wang et al. — pharmacokinetics of 甘草–甘遂 co-administration",
+     "Chinese Pharmacopoeia — 十八反/十九畏 as dispensing contraindications"
     ],
-    "cost_estimate": "None — the experiment has been run by others. This is a calibration record.",
+    "cost_estimate": "Medium — four-arm rat PK, one validated LC-MS/MS method for the diterpenes.",
     "next_steps": [
-     "Keep as a regression test: if the novelty score drifts above 0.4 on a known pairing, the novelty estimator is broken."
+     "Split 配伍禁忌 into mechanism classes (PK / PD / chemical / dose) before ranking.",
+     "Build the enriched-null test — it is the first real benchmark for this class."
     ]
    },
+   "is_control": false,
    "rank": 7
   },
   {
-   "id": "H-07",
-   "title": "Berberine, AMPK and the gut — a known axis, scored as known",
-   "archetype": "chemotype_bridge",
+   "id": "H-11",
+   "title": "水牛角 replaced 犀角 by regulation, not by chemistry — and the corpus can say which formulas that protects",
+   "discovery_class": "binwei_daiyong",
+   "discovery_class_label": "濒危代用品 · endangered & substitutes",
    "chain": {
-    "plant": "Berberis vulgaris",
-    "preparation": "Decoction of the root bark",
-    "chemotype": "berberine (protoberberine isoquinoline alkaloid)",
-    "target": "AMPK activation (indirect, via gut microbiota and mitochondrial respiration)",
-    "indication": "Metabolic syndrome: dyslipidaemia, insulin resistance"
+    "plant": "Rhinoceros horn 犀角 → Bubalus bubalis horn 水牛角",
+    "preparation": "Powdered horn, decocted (清營湯, 安宮牛黃丸 tradition)",
+    "chemotype": "keratin-dominant with species-specific peptides and free amino acids; calcium phosphate matrix",
+    "target": "no agreed molecular target for either material — the honest position",
+    "indication": "Febrile / heat-clearing formulas; the question is substitution urgency, not chemical identity"
    },
    "scores": {
-    "novelty": 0.22,
-    "plausibility": 0.74,
-    "testability": 0.61,
-    "evidence": 0.7,
-    "composite": 0.486
+    "novelty": 0.69,
+    "plausibility": 0.47,
+    "testability": 0.79,
+    "evidence": 0.36,
+    "composite": 0.577
    },
    "provenance": [
     {
-     "source_id": "fixture:dioscorides",
-     "title": "De Materia Medica",
-     "author": "Pedanius Dioscorides",
-     "year": 70,
-     "era": "1st c. CE",
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "The root of the barberry is sharp and cleansing; it is given for the jaundice and for the fluxes of the belly.",
+     "span": "犀角：苦酸鹹寒，無毒。主百毒蠱疰，邪鬼瘴氣。今禁採，官方以水牛角代之。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "獸部·犀角"
     },
     {
-     "source_id": "fixture:kings-1898",
-     "title": "King's American Dispensatory",
-     "author": "Harvey W. Felter & John U. Lloyd",
-     "year": 1898,
-     "era": "19th c.",
-     "tier": 2,
-     "licence": "Public Domain",
-     "span": "Barberry is tonic and laxative; the bark is used in jaundice and in dyspepsia with a bitter taste.",
+     "source_id": "fx_gbif",
+     "title": "GBIF taxonomy backbone",
+     "title_en": "GBIF",
+     "author": "GBIF Secretariat",
+     "year": 2024,
+     "tradition": "foundational",
+     "lang": "en",
+     "tier": 5,
+     "licence": "CC-BY-4.0",
+     "span": "Rhinoceros genera are listed in CITES Appendix I with a near-total trade ban.",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "CITES"
     }
    ],
-   "falsification_plan": "Well studied; the discriminating experiment is germ-free vs conventionalised mice, which separates the microbiota-mediated effect from direct AMPK activation. Largely already done.",
-   "uncertainty": "The tradition's indication (jaundice, fluxes) is not the modern one (metabolic syndrome). The chain is real but the traditional-source link is weak, which is why evidence is graded 0.70 rather than higher.",
+   "falsification_plan": "Peptidomic comparison of horn keratin digests across species, plus a formula-level assay where 犀角 is 君. Refuted as a full equivalence claim if the keratin/peptide profile differs materially in fractions surviving decoction. But note the honest framing: for a material with no agreed target, 'equivalence' is undefined, and the conservation decision does not depend on it. The corpus-side test is cleaner — count how often 犀角 is 君 versus 佐, and flag every formula where the substitute changes the role structure.",
+   "uncertainty": "We cannot establish efficacy equivalence for a material whose mechanism is unknown, and should not pretend the substitution is chemically proven. The defensible claim is weaker and better: the substitution is conservation-necessary, the corpus tells you which formulas it affects, and no rhino needs to die to find out.",
    "safety": {
     "flags": [
-     "berberine interacts with CYP3A4 substrates; pregnancy contraindication"
+     "any output touching endangered-species materials must cite CITES status",
+     "no sourcing, trade or substitution-procurement guidance is given"
     ],
     "severity": "caution"
    },
    "dossier": {
-    "rationale": "Another calibration record: high plausibility, high evidence, low novelty. The corpus link is thin because the tradition used barberry for the liver and the bowel, not for glucose — the modern indication is an extension, not a rediscovery.",
+    "rationale": "Where traditional-knowledge mining pays a direct conservation dividend. The corpus knows which formulas depend on a CITES Appendix I material and how load-bearing that material is (君 vs 佐). That is a ranked list of substitution problems built from text, and it costs no animals.",
     "mechanistic_chain": [
-     "Berberine alters bile-acid metabolism and gut microbiota composition.",
-     "Secondary bile acids modulate FXR signalling.",
-     "AMPK is activated indirectly; hepatic gluconeogenesis falls."
+     "Horn is keratin plus a mineral matrix; decoction extracts peptides and amino acids.",
+     "Species-specific peptide profiles exist, but their pharmacological relevance is unestablished.",
+     "The classical role label tells you how load-bearing the ingredient is.",
+     "Therefore rank substitution urgency by role, not by volume.",
+     "Conservation action follows directly, independent of the efficacy question."
     ],
     "prior_art_refs": [
-     "Kong et al. (2004) — berberine and AMPK",
-     "Zhang et al. — gut microbiota and berberine"
+     "Chinese Pharmacopoeia — 水牛角 as the official substitute for 犀角",
+     "CITES Appendix I listings for Rhinocerotidae",
+     "keratin and horn-peptide characterisation literature"
     ],
-    "cost_estimate": "Already done in the literature.",
+    "cost_estimate": "Low for the corpus arm; medium for the peptidomics.",
     "next_steps": [
-     "Grade the traditional-evidence axis separately from the modern-mechanism axis."
+     "Join the CITES list to the taxon table and flag every formula ingredient automatically.",
+     "Report role-weighted substitution urgency — a ranked list conservation NGOs can use.",
+     "Extend to 虎骨, 穿山甲, 沉香 and 重樓."
     ]
    },
+   "is_control": false,
    "rank": 8
   },
   {
-   "id": "H-05",
-   "title": "Curcumin for osteoarthritis — ranked last on novelty because it is ranked by novelty",
-   "archetype": "repurposing",
+   "id": "H-08",
+   "title": "麻黃湯's 臣 herb supplies a second, non-adrenergic mechanism",
+   "discovery_class": "junchen_zuoshi",
+   "discovery_class_label": "君臣佐使 · formula roles",
    "chain": {
-    "plant": "Curcuma longa",
-    "preparation": "Decoction / powder",
-    "chemotype": "curcumin, demethoxycurcumin",
-    "target": "NF-κB; also numerous pan-assay interference liabilities",
-    "indication": "Osteoarthritis pain and inflammation"
+    "plant": "麻黃湯: 麻黃 (君) + 桂枝 (臣) + 杏仁 (佐) + 甘草 (使)",
+    "preparation": "Classical decoction, 先煮麻黃去上沫 (per the 方後註 in 傷寒論)",
+    "chemotype": "ephedrine/pseudoephedrine + cinnamaldehyde, coumarin + amygdalin",
+    "target": "β-adrenergic agonism (ephedrine) alongside TRPA1-mediated vasodilation (cinnamaldehyde)",
+    "indication": "The diaphoretic action of the formula, which ephedrine alone does not reproduce"
    },
    "scores": {
-    "novelty": 0.03,
-    "plausibility": 0.72,
-    "testability": 0.44,
-    "evidence": 0.81,
-    "composite": 0.25
+    "novelty": 0.49,
+    "plausibility": 0.54,
+    "testability": 0.72,
+    "evidence": 0.47,
+    "composite": 0.552
    },
    "provenance": [
     {
-     "source_id": "fixture:charaka",
-     "title": "Charaka Samhita (English trans.)",
-     "author": "Agnivesha / Charaka",
-     "year": 100,
-     "era": "1st–2nd c. CE",
+     "source_id": "fx_shanghanlun",
+     "title": "傷寒論",
+     "title_en": "Treatise on Cold Damage",
+     "author": "張仲景 Zhang Zhongjing",
+     "year": 220,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "The physician should consider the country, the season, the digestive fire and the strength of the body, for the same drug acts differently in different constitutions.",
-     "span_kind": "paraphrase",
-     "locator": ""
+     "span": "太陽病，頭痛發熱，身疼腰痛，骨節疼痛，惡風，無汗而喘者，麻黃湯主之。",
+     "span_kind": "verbatim",
+     "locator": "太陽病中篇"
     },
     {
-     "source_id": "fixture:grieve-1931",
-     "title": "A Modern Herbal",
-     "author": "Maud Grieve",
-     "year": 1931,
-     "era": "20th c.",
+     "source_id": "fx_shanghanlun",
+     "title": "傷寒論",
+     "title_en": "Treatise on Cold Damage",
+     "author": "張仲景 Zhang Zhongjing",
+     "year": 220,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "Turmeric is used as a colouring and as a stimulant to the liver.",
-     "span_kind": "paraphrase",
-     "locator": ""
+     "span": "麻黃湯方：麻黃三兩去節，桂枝二兩去皮，甘草一兩炙，杏仁七十箇去皮尖。上四味，以水九升，先煮麻黃，減二升，去上沫，內諸藥，煮取二升半，去滓，溫服八合。",
+     "span_kind": "verbatim",
+     "locator": "太陽病中篇"
     }
    ],
-   "falsification_plan": "Nothing left to falsify that has not been attempted. Included as the floor of the novelty axis: 2,000 years of use and a very large modern literature.",
-   "uncertainty": "Curcumin is the canonical cautionary tale of natural-product pharmacology — poor bioavailability and PAINS interference. Its low rank is a feature of the scorer.",
+   "falsification_plan": "Isolated aortic ring plus whole-animal thermography: does 桂枝 extract add vasodilation that is abolished in TRPA1⁻/⁻ mice, and is the combination's diaphoretic effect greater than ephedrine at matched dose? Refuted if the effect is simply additive or absent. Also test whether the 'skim the froth' instruction removes a measurable volatile fraction before assuming it is ritual.",
+   "uncertainty": "The formula has been in continuous use for 1,800 years and the modern literature is large, so novelty is modest. The skimming step is untested and may be the most interesting part.",
    "safety": {
     "flags": [
-     "curcumin is a known pan-assay interference compound; bioactivity readings need care"
+     "ephedrine is a controlled precursor in many jurisdictions and carries cardiovascular risk",
+     "no dose, product or substitution guidance is given"
     ],
-    "severity": "none"
+    "severity": "caution"
    },
    "dossier": {
-    "rationale": "The floor of the novelty axis and the reason the axis exists. A system that ranked curcumin highly would be re-deriving other people's search results.",
+    "rationale": "麻黃湯 is the first formula in 傷寒論, so it is the first thing the model sees and the most over-studied. It is included as a structural test: if the pipeline correctly assigns roles and notices the one unexplained instruction (skimming the froth), it is reading the text rather than the summary.",
     "mechanistic_chain": [
-     "Curcumin is an electrophile that modifies many targets.",
-     "NF-κB inhibition is reported but not mechanism-specific.",
-     "Bioavailability without an adjuvant is very low."
+     "麻黃 supplies ephedrine — a direct and indirect sympathomimetic.",
+     "Sympathomimetic action alone gives tachycardia and vasoconstriction, not classical diaphoresis.",
+     "桂枝's cinnamaldehyde is a TRPA1 agonist and produces cutaneous vasodilation.",
+     "The pair produces sweating where either alone does not — a genuine synergy claim.",
+     "先煮麻黃去上沫: skimming removes a volatile, possibly irritant fraction — untested."
     ],
     "prior_art_refs": [
-     "Nelson et al. (2017) — the curcumin clinical literature",
-     "Baell & Holloway (2010) — PAINS"
+     "《傷寒論》 太陽病中篇",
+     "pharmacological studies of 麻黃湯",
+     "TRPA1 and cutaneous vasodilation literature"
     ],
-    "cost_estimate": "None — do not run this experiment.",
+    "cost_estimate": "Low — isolated tissue plus a small in vivo arm.",
     "next_steps": [
-     "Keep as the novelty floor regression test."
+     "Encode the 方後註 (post-script preparation instructions) as structured Process steps.",
+     "Ask whether skimming correlates with volatile-alkaloid content across the corpus.",
+     "Keep as the pipeline's structural self-test."
     ]
    },
+   "is_control": false,
    "rank": 9
   },
   {
-   "id": "H-04",
-   "title": "Lungwort is spotted like a lung, therefore it treats the lungs — the negative control",
-   "archetype": "signature_test",
+   "id": "H-10",
+   "title": "半枝蓮 appears in more oncology formulas than almost any herb and is studied at the wrong resolution",
+   "discovery_class": "weiyanjiu",
+   "discovery_class_label": "未研究本草 · the understudied majority",
    "chain": {
-    "plant": "Pulmonaria officinalis",
-    "preparation": "Infusion of the leaves",
-    "chemotype": "mucilage polysaccharides, allantoin, rosmarinic acid (no lung-specific warhead identified)",
-    "target": "Pulmonary epithelium (by morphological analogy only)",
-    "indication": "Cough, catarrh, 'diseases of the lungs'"
+    "plant": "Scutellaria barbata 半枝蓮",
+    "preparation": "Decoction, usually paired with 白花蛇舌草 in modern oncology formulas",
+    "chemotype": "flavones (scutellarein, apigenin), diterpenoids (scutebarbatines), triterpenoids (ursolic/oleanolic acid)",
+    "target": "suspected multi-target — no single dominant mechanism; high risk of flavonoid promiscuity (PAINS)",
+    "indication": "Adjunct use in colorectal and hepatobiliary cancer formulas"
    },
    "scores": {
-    "novelty": 0.12,
-    "plausibility": 0.15,
-    "testability": 0.55,
-    "evidence": 0.2,
-    "composite": 0.203
+    "novelty": 0.61,
+    "plausibility": 0.44,
+    "testability": 0.63,
+    "evidence": 0.38,
+    "composite": 0.519
    },
    "provenance": [
     {
-     "source_id": "fixture:culpeper-1653",
-     "title": "The Complete Herbal",
-     "author": "Nicholas Culpeper",
-     "year": 1653,
-     "era": "17th c.",
-     "tier": 3,
-     "licence": "Public Domain",
-     "span": "Lungwort is so called because the leaves are spotted like the lungs of a man, and therefore it was held by the signature of the thing to be a sovereign remedy for all diseases of the lungs.",
-     "span_kind": "paraphrase",
-     "locator": ""
-    },
-    {
-     "source_id": "fixture:gerard-1633",
-     "title": "The Herball or Generall Historie of Plantes",
-     "author": "John Gerard",
-     "year": 1633,
-     "era": "17th c.",
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
      "tier": 2,
      "licence": "Public Domain",
-     "span": "It is called lungwort of the spots and marks of the leaf, resembling the lungs of a beast; and is thought good for the cough and the ptisick.",
+     "span": "半枝蓮：味辛苦，性寒。清熱解毒，化瘀利尿。近人用以治癰腫瘡毒、蛇傷。",
      "span_kind": "paraphrase",
-     "locator": ""
+     "locator": "草部·半枝蓮"
+    },
+    {
+     "source_id": "fx_taiping_huimin",
+     "title": "太平惠民和劑局方",
+     "title_en": "Imperial Pharmacy Formulary",
+     "author": "陳師文 Chen Shiwen et al.",
+     "year": 1151,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "君臣佐使者，制方之要也。君為主，臣為輔，佐為制，使為引。",
+     "span_kind": "paraphrase",
+     "locator": "卷首·論方"
     }
    ],
-   "falsification_plan": "This is the doctrine of signatures stated as a testable claim. Prediction: across the corpus, morphological similarity to an organ predicts the recorded indication better than chance. The measured answer is close to zero (see the negative control in the eval table). A null here is the result we expect; a strong non-zero correlation would mean our extraction is picking up organ-word co-occurrence, not pharmacology.",
-   "uncertainty": "Demulcent mucilage genuinely soothes a sore throat — a real, non-signature effect that could mimic a positive correlation on cough outcomes. That confound is why the test is on organ-level indication, not symptom relief.",
+   "falsification_plan": "Resolution test: fractionate and assay each fraction separately. If activity is distributed across every flavonoid-containing fraction in proportion to total flavonoid content, the 'multi-target' story is really 'non-specific' — a PAINS artefact, and that is worth publishing. Refuted as an oncology lead if no fraction separates activity from total polyphenol.",
+   "uncertainty": "This is the class where we are most likely to fool ourselves, and we say so. Flavonoid promiscuity is a documented trap; our novelty score cannot distinguish 'unstudied' from 'unpromising'.",
+   "safety": {
+    "flags": [
+     "adjunct-use claims in oncology are high stakes; this is not treatment guidance",
+     "herb–drug interaction potential with chemotherapeutics is unquantified"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "A hypothesis from this class that we suspect is wrong, to show the scoring is not vanity. 半枝蓮's prominence is a frequency signal; frequency is not evidence. The pipeline's job is to separate them, and the honest output is 'very widely used, mechanistically diffuse, plausibly an assay artefact'.",
+    "mechanistic_chain": [
+     "High formula frequency in the corpus.",
+     "Broad flavonoid content with known promiscuity.",
+     "No fraction-resolved activity data.",
+     "Prediction: activity will track total polyphenol, not any specific compound."
+    ],
+    "prior_art_refs": [
+     "PAINS literature (Baell & Holloway 2010) applied to natural products",
+     "Scutellaria barbata reviews (largely in vitro)"
+    ],
+    "cost_estimate": "Low — fractionation with an honest polyphenol control.",
+    "next_steps": [
+     "Add a PAINS-liability flag to compound nodes with high promiscuity.",
+     "Score frequency and evidence as separate axes in the UI, never fused into one number."
+    ]
+   },
+   "is_control": false,
+   "rank": 10
+  },
+  {
+   "id": "H-12",
+   "title": "For 穿山甲 the corpus already contains the substitute — the processing column is the argument",
+   "discovery_class": "binwei_daiyong",
+   "discovery_class_label": "濒危代用品 · endangered & substitutes",
+   "chain": {
+    "plant": "Manis pentadactyla scale 穿山甲 → 豬蹄甲 pig toenail (documented PRC substitute research)",
+    "preparation": "煅 (calcined) and powdered, or decocted",
+    "chemotype": "keratin with species-specific cross-linking; calcination destroys most organic structure",
+    "target": "none established; the claims are 通乳 (promoting lactation) and dispersing stasis",
+    "indication": "Post-partum insufficient lactation, 癥瘕 masses — both weak by modern standards"
+   },
+   "scores": {
+    "novelty": 0.64,
+    "plausibility": 0.41,
+    "testability": 0.71,
+    "evidence": 0.29,
+    "composite": 0.51
+   },
+   "provenance": [
+    {
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "穿山甲：味鹹微寒，有毒。主五邪驚啼悲傷，燒之作灰，以酒或水和方寸匕。近世以之通乳、消癰。",
+     "span_kind": "paraphrase",
+     "locator": "鱗部·穿山甲"
+    },
+    {
+     "source_id": "fx_gbif",
+     "title": "GBIF taxonomy backbone",
+     "title_en": "GBIF",
+     "author": "GBIF Secretariat",
+     "year": 2024,
+     "tradition": "foundational",
+     "lang": "en",
+     "tier": 5,
+     "licence": "CC-BY-4.0",
+     "span": "Manis pentadactyla is listed in CITES Appendix I; international commercial trade is prohibited.",
+     "span_kind": "paraphrase",
+     "locator": "CITES"
+    },
+    {
+     "source_id": "fx_taiping_huimin",
+     "title": "太平惠民和劑局方",
+     "title_en": "Imperial Pharmacy Formulary",
+     "author": "陳師文 Chen Shiwen et al.",
+     "year": 1151,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "君臣佐使者，制方之要也。君為主，臣為輔，佐為制，使為引。",
+     "span_kind": "paraphrase",
+     "locator": "卷首·論方"
+    }
+   ],
+   "falsification_plan": "The decisive experiment is cheap and slightly deflating: calcined keratin is calcined keratin. Ash content, amino-acid profile and calcium phosphate fraction should be near-identical between 煅穿山甲 and 煅豬蹄甲. If they are, the substitution question is settled for every formula that uses the material calcined — and the corpus work is to count how many do. If a formula uses it raw, the question reopens and deserves the peptidomic work.",
+   "uncertainty": "We may be arguing against a traditional use's efficacy, which is culturally sensitive. The framing must hold: we are quantifying a substitution argument that Chinese researchers themselves made, and we are not asserting the traditional indication is worthless.",
+   "safety": {
+    "flags": [
+     "CITES Appendix I — trade is prohibited; no sourcing guidance of any kind",
+     "culturally sensitive — state the framing explicitly in any public output"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "The strongest conservation argument in the corpus is not 'this is cruel'. It is: the calcination step in your own text reduces the material to ash, and ash is ash. The classical processing record is the evidence that substitution is defensible — the tradition argues for its own replacement, if you read the processing column.",
+    "mechanistic_chain": [
+     "穿山甲 is typically 煅 (calcined) before use.",
+     "Calcination destroys keratin secondary structure and most organics.",
+     "The residue is calcium phosphate plus minerals — largely material-agnostic.",
+     "Therefore source-species identification in calcined material is analytically hard and pharmacologically meaningless.",
+     "Substitution is then a supply-chain and cultural question, not a chemical one."
+    ],
+    "prior_art_refs": [
+     "PRC substitute-research literature on 豬蹄甲 for 穿山甲",
+     "CITES Appendix I listing for Manis pentadactyla",
+     "calcination effects on keratin materials"
+    ],
+    "cost_estimate": "Very low — ash content and amino-acid analysis on reference standards.",
+    "next_steps": [
+     "Add a processing_state field to every endangered-material hypothesis.",
+     "Make the conservation output a ranked, citable list with CITES status attached.",
+     "State the cultural framing inside the output, not only in the docs."
+    ]
+   },
+   "is_control": false,
+   "rank": 11
+  },
+  {
+   "id": "H-09",
+   "title": "貓爪草 is used for scrofula across several provinces and has almost no target-level evidence",
+   "discovery_class": "weiyanjiu",
+   "discovery_class_label": "未研究本草 · the understudied majority",
+   "chain": {
+    "plant": "Ranunculus ternatus 貓爪草",
+    "preparation": "Decoction of the root tuber; vinegar-processed in some regional practice",
+    "chemotype": "unresolved — protoanemonin-type lactones reported; no characterised target-level active",
+    "target": "none established (candidate: macrophage activation / autophagy in granuloma)",
+    "indication": "瘰癧 scrofula — historically tuberculosis lymphadenitis; still used in oncology formulas"
+   },
+   "scores": {
+    "novelty": 0.72,
+    "plausibility": 0.38,
+    "testability": 0.66,
+    "evidence": 0.25,
+    "composite": 0.496
+   },
+   "provenance": [
+    {
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "貓爪草：近世方書始載，主瘰癧結核，消腫散結，南人用以治瘡瘍。",
+     "span_kind": "paraphrase",
+     "locator": "草部·貓爪草"
+    },
+    {
+     "source_id": "fx_qianjin_yaofang",
+     "title": "備急千金要方",
+     "title_en": "Essential Prescriptions Worth a Thousand in Gold",
+     "author": "孫思邈 Sun Simiao",
+     "year": 652,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "夫為醫者，當須先洞曉病源，知其所犯，以食治之；食療不愈，然後命藥。",
+     "span_kind": "verbatim",
+     "locator": "食治"
+    }
+   ],
+   "falsification_plan": "A screening hypothesis, not a mechanism hypothesis — and it is labelled as such. The test is an ordinary natural-product funnel: extract, fractionate, profile against a target panel; if no fraction shows reproducible activity, report the negative. The tool's value here is the queue order — strong repeated use with no target-level evidence is the cheapest place to look.",
+   "uncertainty": "High novelty here is partly an artefact of under-study, not of insight. The compound profile is essentially unknown, so the mechanism box is empty on purpose; an empty mechanism box lowers plausibility, and it does (0.38).",
+   "safety": {
+    "flags": [
+     "Ranunculus species contain protoanemonin, an irritant; fresh-plant handling is a hazard"
+    ],
+    "severity": "caution"
+   },
+   "dossier": {
+    "rationale": "The understudied majority is the largest and least glamorous class, and it is where a corpus earns its keep. 貓爪草 has a coherent, specific, repeated indication (scrofula) and almost no modern target-level work. Specificity plus neglect is the highest-yield screening signal in the whole canon.",
+    "mechanistic_chain": [
+     "Specific, repeated indication across regional traditions.",
+     "No characterised active constituent.",
+     "No target-level literature.",
+     "Therefore a genuine discovery gap, ranked by use-density ÷ evidence-density."
+    ],
+    "prior_art_refs": [
+     "Regional Chinese pharmacopoeia monographs",
+     "natural-product screening literature on Ranunculus (sparse)"
+    ],
+    "cost_estimate": "Medium — a full extract-to-fraction campaign.",
+    "next_steps": [
+     "Build use-density ÷ evidence-density as an explicit, tunable metric.",
+     "Publish the whole top-50 list, not just the top 3 — the list is the deliverable.",
+     "State that an empty mechanism box is a finding about the literature, not about the plant."
+    ]
+   },
+   "is_control": false,
+   "rank": 12
+  },
+  {
+   "id": "H-13",
+   "title": "Walnut looks like a brain, therefore it tonifies the brain — the 取象比類 control",
+   "discovery_class": "control",
+   "discovery_class_label": "negative control",
+   "chain": {
+    "plant": "Juglans regia 核桃仁",
+    "preparation": "Eaten as a food; 補腎健腦 by resemblance",
+    "chemotype": "α-linolenic acid, polyphenols, tocopherols — no brain-specific warhead identified",
+    "target": "brain (by morphological analogy only)",
+    "indication": "Memory, 補腦 — assigned by resemblance, not mechanism"
+   },
+   "scores": {
+    "novelty": 0.08,
+    "plausibility": 0.14,
+    "testability": 0.61,
+    "evidence": 0.18,
+    "composite": 0.178
+   },
+   "provenance": [
+    {
+     "source_id": "fx_bencao_gangmu",
+     "title": "本草綱目",
+     "title_en": "Bencao Gangmu",
+     "author": "李時珍 Li Shizhen",
+     "year": 1596,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 2,
+     "licence": "Public Domain",
+     "span": "核桃：味甘，性熱，無毒。食之令人肥健，潤肌黑髮。其形似腦，故近人謂之補腦，然古方未有此說。",
+     "span_kind": "paraphrase",
+     "locator": "果部·胡桃"
+    },
+    {
+     "source_id": "fx_huangdi_neijing",
+     "title": "黃帝內經·素問",
+     "title_en": "Huangdi Neijing — Suwen",
+     "author": "黃帝 (attrib.)",
+     "year": -100,
+     "tradition": "tcm",
+     "lang": "zh-Hant",
+     "tier": 4,
+     "licence": "Public Domain",
+     "span": "東方生風，風生木，木生酸，酸生肝，肝生筋。其在天為風，在地為木，在人為肝，在色為蒼，在味為酸。",
+     "span_kind": "verbatim",
+     "locator": "素問·陰陽應象大論"
+    }
+   ],
+   "falsification_plan": "Stated as a testable prediction: across the corpus, does morphological or colour resemblance to an organ predict the recorded indication better than chance? The measured answer appears in the 使 Shǐ evaluation table. A null is the expected result. A large positive rho would mean our extraction is picking up organ-word co-occurrence rather than pharmacology — which would invalidate the other twelve. This is the control that keeps them honest.",
+   "uncertainty": "Walnuts do contain α-linolenic acid and are a reasonable food. The control tests the reasoning pattern, not the food: a genuine nutritional effect and a resemblance argument can coexist, which is why the test must be on the pattern of indication assignment across many taxa, not on one plant.",
    "safety": {
     "flags": [],
     "severity": "none"
    },
    "dossier": {
-    "rationale": "Included so the negative control has a face. The doctrine of signatures is one of the most productive and most wrong ideas in the history of pharmacology, and it is exactly what a naive text-mining system will 'discover' if you do not test for it.",
+    "rationale": "Every knowledge-mining system on this corpus will 'discover' 取象比類 unless you stop it. It is a productive, internally coherent, and largely non-predictive reasoning pattern. We give it a face so that the null result on the slide has something to point at.",
     "mechanistic_chain": [
-     "Morphological resemblance asserted.",
+     "Resemblance asserted.",
      "Indication assigned by analogy.",
      "No molecular link proposed.",
-     "This is the null."
+     "This is the expected null."
     ],
     "prior_art_refs": [
-     "Foucault, The Order of Things — the signature episteme",
-     "Pearce (2008) — doctrine of signatures in practice"
+     "《本草綱目》 胡桃 entry — which itself notes the 補腦 claim is recent, not ancient",
+     "Foucault, The Order of Things — the resemblance episteme"
     ],
-    "cost_estimate": "None — and it is the reason we trust the rest of the list.",
+    "cost_estimate": "None. It is the reason the other twelve can be believed.",
     "next_steps": [
-     "Report the rho and p in the eval table on every run, not just once."
+     "Report both negative controls on every run, not just once.",
+     "Keep it in the deck: a system that publishes its own nulls is the one to trust."
     ]
    },
-   "rank": 10
+   "is_control": false,
+   "rank": 13
   }
  ]
 }

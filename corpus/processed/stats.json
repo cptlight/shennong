@@ -1,0 +1,307 @@
+{
+ "generated_at": "2026-11-05T10:31:46+00:00",
+ "sources_total": 38,
+ "records": 18382,
+ "duplicate_chunks_dropped": 46,
+ "chars_total": 29305995,
+ "chars_cjk": 3168359,
+ "chars_non_cjk": 26137636,
+ "tokens_estimate": 9141438,
+ "chars_by_tier": {
+  "1": 16322419,
+  "2": 12904421,
+  "3": 25317,
+  "4": 53838
+ },
+ "chars_by_tradition": {
+  "foundational": 16322419,
+  "ayurveda": 5274048,
+  "tcm": 4445135,
+  "unani": 3185238,
+  "acupuncture": 53838,
+  "alchemy": 25317
+ },
+ "chars_by_lang": {
+  "en": 23349823,
+  "zh-Hant": 3168359,
+  "la": 2787813
+ },
+ "per_source": {
+  "ia_abderhalden_physiological_chemistry": {
+   "chunks": 1316,
+   "chars": 1965280,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "ia_avicenna_canon_latin_1593": {
+   "chunks": 1809,
+   "chars": 2787813,
+   "tradition": "unani",
+   "lang": "la",
+   "tier": 2
+  },
+  "ia_bhishagratna_sushruta": {
+   "chunks": 880,
+   "chars": 1368118,
+   "tradition": "ayurveda",
+   "lang": "en",
+   "tier": 2
+  },
+  "ia_cushny_pharmacology": {
+   "chunks": 1517,
+   "chars": 2246224,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "ia_dutt_materia_medica_hindus": {
+   "chunks": 378,
+   "chars": 599238,
+   "tradition": "ayurveda",
+   "lang": "en",
+   "tier": 2
+  },
+  "ia_fluckiger_principles_pharmacognosy": {
+   "chunks": 312,
+   "chars": 492288,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "ia_hanbury_chinese_materia_medica": {
+   "chunks": 79,
+   "chars": 125345,
+   "tradition": "tcm",
+   "lang": "en",
+   "tier": 2
+  },
+  "ia_kirtikar_indian_medicinal_plants_2": {
+   "chunks": 944,
+   "chars": 1449868,
+   "tradition": "ayurveda",
+   "lang": "en",
+   "tier": 2
+  },
+  "ia_kirtikar_indian_medicinal_plants_b": {
+   "chunks": 928,
+   "chars": 1429728,
+   "tradition": "ayurveda",
+   "lang": "en",
+   "tier": 2
+  },
+  "ia_sayre_organic_materia_medica": {
+   "chunks": 967,
+   "chars": 1509993,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "ia_stuart_chinese_materia_medica": {
+   "chunks": 818,
+   "chars": 1176748,
+   "tradition": "tcm",
+   "lang": "en",
+   "tier": 2
+  },
+  "pg_atkinson_elementary_botany": {
+   "chunks": 597,
+   "chars": 888061,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_campbell_structural_botany": {
+   "chunks": 310,
+   "chars": 466569,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_churchill_acupuncturation": {
+   "chunks": 35,
+   "chars": 53838,
+   "tradition": "acupuncture",
+   "lang": "en",
+   "tier": 4
+  },
+  "pg_cutter_anatomy_physiology": {
+   "chunks": 527,
+   "chars": 833050,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_evolution_modern_medicine": {
+   "chunks": 251,
+   "chars": 390232,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_fundamentals_bacteriology": {
+   "chunks": 333,
+   "chars": 515198,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_gray_elements_botany": {
+   "chunks": 338,
+   "chars": 522477,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_histology_blood": {
+   "chunks": 246,
+   "chars": 361609,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_histology_medicinal_plants": {
+   "chunks": 203,
+   "chars": 329868,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_mendel_heredity": {
+   "chunks": 262,
+   "chars": 380697,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_micrographia": {
+   "chunks": 572,
+   "chars": 866169,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_organic_syntheses_v1": {
+   "chunks": 92,
+   "chars": 136298,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_origin_of_species": {
+   "chunks": 614,
+   "chars": 928137,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_pharmacographia": {
+   "chunks": 1675,
+   "chars": 2566407,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_story_germ_life": {
+   "chunks": 195,
+   "chars": 295391,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_structure_functions_body": {
+   "chunks": 249,
+   "chars": 359168,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "pg_taleef_shereef": {
+   "chunks": 257,
+   "chars": 397425,
+   "tradition": "unani",
+   "lang": "en",
+   "tier": 2
+  },
+  "pg_waring_bazaar_medicines": {
+   "chunks": 289,
+   "chars": 427096,
+   "tradition": "ayurveda",
+   "lang": "en",
+   "tier": 2
+  },
+  "pg_withering_foxglove": {
+   "chunks": 177,
+   "chars": 269303,
+   "tradition": "foundational",
+   "lang": "en",
+   "tier": 1
+  },
+  "ws_zh_bencao_beiyao": {
+   "chunks": 46,
+   "chars": 134560,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_congxin": {
+   "chunks": 107,
+   "chars": 171954,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_gangmu": {
+   "chunks": 621,
+   "chars": 1763519,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_bencao_jingjizhu": {
+   "chunks": 43,
+   "chars": 107730,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_leigong_paozhi": {
+   "chunks": 15,
+   "chars": 25317,
+   "tradition": "alchemy",
+   "lang": "zh-Hant",
+   "tier": 3
+  },
+  "ws_zh_shennong_bencaojing": {
+   "chunks": 6,
+   "chars": 17380,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_xinxiu_bencao": {
+   "chunks": 97,
+   "chars": 164134,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  },
+  "ws_zh_zhenglei_bencao": {
+   "chunks": 277,
+   "chars": 783765,
+   "tradition": "tcm",
+   "lang": "zh-Hant",
+   "tier": 2
+  }
+ },
+ "corpus_sha256": "2c4941d2c4f095396f77437d659ac5e95ca5d7eb77230947035e02089ba644c1",
+ "corpus_bytes": 41374648,
+ "params": {
+  "target_chars": 1800,
+  "hard_max_chars": 3000,
+  "shingle_n": 13,
+  "dedupe_overlap": 0.8,
+  "min_chars_cjk": 100,
+  "min_chars_alpha": 200
+ }
+}

@@ -27,3 +27,8 @@ training/runs/*/checkpoint*/
 !artifacts/*.json
 !artifacts/*.png
 !artifacts/*.svg
+
+# ---- processed corpus: regenerate with `make corpus`; the compressed copy is committed so the
+# ---- exact training text is recorded and hash-verifiable without a 40 MB blob in git history.
+corpus/processed/corpus.jsonl
+corpus/processed/text/

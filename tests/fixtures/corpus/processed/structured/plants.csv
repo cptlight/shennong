@@ -1,26 +1,129 @@
-binomial,family,synonyms,habitat,source_id
-Artemisia absinthium,Asteraceae,absinthium;wormwood;common wormwood,dry waste ground,fixture_duke_ethnobotany
-Pulmonaria officinalis,Boraginaceae,lungwort;pulmonaria;lungwort,woods,fixture_duke_ethnobotany
-Crocus sativus,Iridaceae,saffron;crocus,cultivated,fixture_duke_ethnobotany
-Symphytum officinale,Boraginaceae,comfrey;knitbone;symphytum,damp meadows,fixture_duke_ethnobotany
-Stachys officinalis,Lamiaceae,betony;betonica;stachys,hedgerows,fixture_duke_ethnobotany
-Foeniculum vulgare,Apiaceae,fennel;feniculum,dry soil,fixture_duke_ethnobotany
-Salix alba,Salicaceae,white willow;willow;salix,river banks,fixture_duke_ethnobotany
-Papaver somniferum,Papaveraceae,opium poppy;poppy;papaver,cultivated,fixture_duke_ethnobotany
-Allium sativum,Amaryllidaceae,garlic;allium,cultivated,fixture_duke_ethnobotany
-Mentha x piperita,Lamiaceae,peppermint;mint;mentha,damp soil,fixture_duke_ethnobotany
-Glycyrrhiza glabra,Fabaceae,liquorice;licorice;glycyrrhiza,dry soil,fixture_duke_ethnobotany
-Matricaria chamomilla,Asteraceae,chamomile;chamomilla,cultivated,fixture_duke_ethnobotany
-Lavandula angustifolia,Lamiaceae,lavender;lavandula,dry slopes,fixture_duke_ethnobotany
-Curcuma longa,Zingiberaceae,turmeric;curcuma,cultivated,fixture_duke_ethnobotany
-Zingiber officinale,Zingiberaceae,ginger;zingiber,cultivated,fixture_duke_ethnobotany
-Ginkgo biloba,Ginkgoaceae,ginkgo,cultivated,fixture_duke_ethnobotany
-Panax ginseng,Araliaceae,ginseng;panax,woods,fixture_duke_ethnobotany
-Cinchona officinalis,Rubiaceae,cinchona;peruvian bark,Andes,fixture_duke_ethnobotany
-Digitalis purpurea,Plantaginaceae,foxglove;digitalis,woods,fixture_duke_ethnobotany
-Atropa belladonna,Solanaceae,belladonna;deadly nightshade;atropa,woods,fixture_duke_ethnobotany
-Cannabis sativa,Cannabaceae,cannabis;hemp,cultivated,fixture_duke_ethnobotany
-Hypericum perforatum,Hypericaceae,st johns wort;hypericum,dry soil,fixture_duke_ethnobotany
-Thymus vulgaris,Lamiaceae,thyme;thymus,dry slopes,fixture_duke_ethnobotany
-Achillea millefolium,Asteraceae,yarrow;achillea;milfoil,meadows,fixture_duke_ethnobotany
-Aloe vera,Asphodelaceae,aloe,cultivated,fixture_duke_ethnobotany
+binomial,family,synonyms,tradition,source_id
+Glycyrrhiza uralensis,Fabaceae,甘草;gancao;licorice;yashtimadhu;liquorice,tcm,fixture_duke_ethnobotany
+Panax ginseng,Araliaceae,人參;renshen;ginseng,tcm,fixture_duke_ethnobotany
+Astragalus membranaceus,Fabaceae,黃芪;huangqi;astragalus,tcm,fixture_duke_ethnobotany
+Rheum palmatum,Polygonaceae,大黃;dahuang;rhubarb,tcm,fixture_duke_ethnobotany
+Ephedra sinica,Ephedraceae,麻黃;mahuang;ephedra,tcm,fixture_duke_ethnobotany
+Cinnamomum cassia,Lauraceae,桂枝;guizhi;cinnamon twig;官桂;guangui,tcm,fixture_duke_ethnobotany
+Paeonia lactiflora,Paeoniaceae,芍藥;shaoyao;白芍;baishao;white peony,tcm,fixture_duke_ethnobotany
+Zingiber officinale,Zingiberaceae,生薑;shengjiang;乾薑;ganjiang;ginger;shunthi;الزنجبيل,tcm,fixture_duke_ethnobotany
+Ziziphus jujuba,Rhamnaceae,大棗;dazao;jujube,tcm,fixture_duke_ethnobotany
+Prunus armeniaca,Rosaceae,杏仁;xingren;apricot kernel,tcm,fixture_duke_ethnobotany
+Pinellia ternata,Araceae,半夏;banxia;pinellia,tcm,fixture_duke_ethnobotany
+Aconitum carmichaelii,Ranunculaceae,附子;fuzi;川烏;chuanwu;aconite,tcm,fixture_duke_ethnobotany
+Aconitum kusnezoffii,Ranunculaceae,草烏;caowu;wild aconite,tcm,fixture_duke_ethnobotany
+Aconitum ferox,Ranunculaceae,vatsanabha;aconite,ayurveda,fixture_duke_ethnobotany
+Fritillaria cirrhosa,Liliaceae,貝母;beimu;fritillary,tcm,fixture_duke_ethnobotany
+Trichosanthes kirilowii,Cucurbitaceae,瓜蔞;gualou;trichosanthes,tcm,fixture_duke_ethnobotany
+Ampelopsis japonica,Vitaceae,白蘞;bailian;ampelopsis,tcm,fixture_duke_ethnobotany
+Bletilla striata,Orchidaceae,白及;baiji;bletilla,tcm,fixture_duke_ethnobotany
+Euphorbia kansui,Euphorbiaceae,甘遂;gansui;kansui,tcm,fixture_duke_ethnobotany
+Euphorbia pekinensis,Euphorbiaceae,大戟;daji;euphorbia,tcm,fixture_duke_ethnobotany
+Sargassum fusiforme,Sargassaceae,海藻;haizao;sargassum,tcm,fixture_duke_ethnobotany
+Daphne genkwa,Thymelaeaceae,芫花;yuanhua;daphne,tcm,fixture_duke_ethnobotany
+Veratrum nigrum,Melanthiaceae,藜蘆;lilu;veratrum,tcm,fixture_duke_ethnobotany
+Asarum heterotropoides,Aristolochiaceae,細辛;xixin;asarum,tcm,fixture_duke_ethnobotany
+Salvia miltiorrhiza,Lamiaceae,丹參;danshen;salvia,tcm,fixture_duke_ethnobotany
+Scrophularia ningpoensis,Scrophulariaceae,玄參;xuanshen;scrophularia,tcm,fixture_duke_ethnobotany
+Sophora flavescens,Fabaceae,苦參;kushen;sophora,tcm,fixture_duke_ethnobotany
+Adenophora stricta,Campanulaceae,沙參;shashen;adenophora,tcm,fixture_duke_ethnobotany
+Croton tiglium,Euphorbiaceae,巴豆;badou;croton,tcm,fixture_duke_ethnobotany
+Pharbitis nil,Convolvulaceae,牽牛;qianniu;pharbitis,tcm,fixture_duke_ethnobotany
+Syzygium aromaticum,Myrtaceae,丁香;dingxiang;clove,tcm,fixture_duke_ethnobotany
+Curcuma longa,Zingiberaceae,薑黃;鬱金;yujin;turmeric;haridra;الكركم,tcm,fixture_duke_ethnobotany
+Sparganium stoloniferum,Typhaceae,三稜;sanleng;sparganium,tcm,fixture_duke_ethnobotany
+Rhinoceros,Rhinocerotidae,犀角;xijiao;rhinoceros horn,tcm,fixture_duke_ethnobotany
+Trogopterus,Sciuridae,五靈脂;wulingzhi;trogopterus dung,tcm,fixture_duke_ethnobotany
+Poria cocos,Polyporaceae,茯苓;fuling;poria,tcm,fixture_duke_ethnobotany
+Atractylodes macrocephala,Asteraceae,白朮;baizhu;atractylodes,tcm,fixture_duke_ethnobotany
+Angelica sinensis,Apiaceae,當歸;danggui;angelica,tcm,fixture_duke_ethnobotany
+Ligusticum chuanxiong,Apiaceae,川芎;chuanxiong;ligusticum,tcm,fixture_duke_ethnobotany
+Rehmannia glutinosa,Orobanchaceae,地黃;dihuang;熟地黃;shudihuang;rehmannia,tcm,fixture_duke_ethnobotany
+Citrus reticulata,Rutaceae,陳皮;chenpi;tangerine peel,tcm,fixture_duke_ethnobotany
+Bupleurum chinense,Apiaceae,柴胡;chaihu;bupleurum,tcm,fixture_duke_ethnobotany
+Coptis chinensis,Ranunculaceae,黃連;huanglian;coptis,tcm,fixture_duke_ethnobotany
+Scutellaria baicalensis,Lamiaceae,黃芩;huangqin;scutellaria,tcm,fixture_duke_ethnobotany
+Phellodendron amurense,Rutaceae,黃柏;huangbo;phellodendron,tcm,fixture_duke_ethnobotany
+Gardenia jasminoides,Rubiaceae,梔子;zhizi;gardenia,tcm,fixture_duke_ethnobotany
+Platycodon grandiflorus,Campanulaceae,桔梗;jiegeng;platycodon,tcm,fixture_duke_ethnobotany
+Mentha haplocalyx,Lamiaceae,薄荷;bohe;mint,tcm,fixture_duke_ethnobotany
+Schisandra chinensis,Schisandraceae,五味子;wuweizi;schisandra,tcm,fixture_duke_ethnobotany
+Ophiopogon japonicus,Asparagaceae,麥冬;maidong;ophiopogon,tcm,fixture_duke_ethnobotany
+Eucommia ulmoides,Eucommiaceae,杜仲;duzhong;eucommia,tcm,fixture_duke_ethnobotany
+Dipsacus asper,Caprifoliaceae,續斷;xuduan;dipsacus,tcm,fixture_duke_ethnobotany
+Lycium barbarum,Solanaceae,枸杞;gouqi;goji;lycium,tcm,fixture_duke_ethnobotany
+Lilium brownii,Liliaceae,百合;baihe;lily bulb,tcm,fixture_duke_ethnobotany
+Dioscorea opposita,Dioscoreaceae,山藥;shanyao;yam,tcm,fixture_duke_ethnobotany
+Cornus officinalis,Cornaceae,山茱萸;shanzhuyu;cornus,tcm,fixture_duke_ethnobotany
+Alisma plantago-aquatica,Alismataceae,澤瀉;zexie;alisma,tcm,fixture_duke_ethnobotany
+Paeonia suffruticosa,Paeoniaceae,牡丹皮;mudanpi;moutan,tcm,fixture_duke_ethnobotany
+Akebia quinata,Lardizabalaceae,木通;mutong;akebia,tcm,fixture_duke_ethnobotany
+Clematis armandii,Ranunculaceae,川木通;chuanmutong;clematis stem,tcm,fixture_duke_ethnobotany
+Aristolochia manshuriensis,Aristolochiaceae,關木通;guanmutong;aristolochia stem,tcm,fixture_duke_ethnobotany
+Stephania tetrandra,Menispermaceae,防己;fangji;粉防己;fenfangji;stephania,tcm,fixture_duke_ethnobotany
+Aristolochia fangchi,Aristolochiaceae,廣防己;guangfangji,tcm,fixture_duke_ethnobotany
+Panax notoginseng,Araliaceae,三七;sanqi;notoginseng,tcm,fixture_duke_ethnobotany
+Gynura segetum,Asteraceae,土三七;tusanqi;gynura,tcm,fixture_duke_ethnobotany
+Eleutherococcus gracilistylus,Araliaceae,五加皮;wujiapi;南五加,tcm,fixture_duke_ethnobotany
+Periploca sepium,Apocynaceae,香加皮;xiangjiapi;北五加皮,tcm,fixture_duke_ethnobotany
+Sophora tonkinensis,Fabaceae,山豆根;shandougen,tcm,fixture_duke_ethnobotany
+Menispermum dauricum,Menispermaceae,北豆根;beidougen,tcm,fixture_duke_ethnobotany
+Gastrodia elata,Orchidaceae,天麻;tianma;gastrodia,tcm,fixture_duke_ethnobotany
+Dendrobium nobile,Orchidaceae,石斛;shihu;dendrobium,tcm,fixture_duke_ethnobotany
+Cibotium barometz,Cibotiaceae,狗脊;gouji;cibotium,tcm,fixture_duke_ethnobotany
+Paris polyphylla,Melanthiaceae,七葉一枝花;qiyeyizhihua;paris,tcm,fixture_duke_ethnobotany
+Moschus,Moschidae,麝香;shexiang;musk,tcm,fixture_duke_ethnobotany
+Ursus,Ursidae,熊膽;xiongdan;bear bile,tcm,fixture_duke_ethnobotany
+Manis,Manidae,穿山甲;chuanshanjia;pangolin scales,tcm,fixture_duke_ethnobotany
+Panthera tigris,Felidae,虎骨;hugu;tiger bone,tcm,fixture_duke_ethnobotany
+Aquilaria agallocha,Thymelaeaceae,沉香;chenxiang;agaru;agarwood,tcm,fixture_duke_ethnobotany
+Saposhnikovia divaricata,Apiaceae,防風;fangfeng;saposhnikovia,korean,fixture_duke_ethnobotany
+Angelica dahurica,Apiaceae,白芷;baizhi;angelica dahurica,korean,fixture_duke_ethnobotany
+Artemisia annua,Asteraceae,青蒿;qinghao;artemisinin source,tcm,fixture_duke_ethnobotany
+Oryza sativa,Poaceae,粳米;jingmi;rice,tcm,fixture_duke_ethnobotany
+Laurus nobilis,Lauraceae,الغار;laurel,unani,fixture_duke_ethnobotany
+Cinnamomum verum,Lauraceae,القرفة;cinnamon,unani,fixture_duke_ethnobotany
+Piper nigrum,Piperaceae,胡椒;huhu;maricha;black pepper;الفلفل,ayurveda,fixture_duke_ethnobotany
+Piper longum,Piperaceae,蓽茇;biba;pippali;long pepper,ayurveda,fixture_duke_ethnobotany
+Withania somnifera,Solanaceae,ashwagandha;withania,ayurveda,fixture_duke_ethnobotany
+Tinospora cordifolia,Menispermaceae,guduchi;giloy,ayurveda,fixture_duke_ethnobotany
+Azadirachta indica,Meliaceae,nimba;neem,ayurveda,fixture_duke_ethnobotany
+Terminalia chebula,Combretaceae,haritaki;訶子;hezi,tcm,fixture_duke_ethnobotany
+Terminalia bellirica,Combretaceae,bibhitaki,ayurveda,fixture_duke_ethnobotany
+Phyllanthus emblica,Phyllanthaceae,amalaki;amla,ayurveda,fixture_duke_ethnobotany
+Bacopa monnieri,Plantaginaceae,brahmi;bacopa,ayurveda,fixture_duke_ethnobotany
+Centella asiatica,Apiaceae,mandukaparni;gotu kola,ayurveda,fixture_duke_ethnobotany
+Asparagus racemosus,Asparagaceae,shatavari,ayurveda,fixture_duke_ethnobotany
+Boswellia serrata,Burseraceae,shallaki;boswellia,ayurveda,fixture_duke_ethnobotany
+Commiphora mukul,Burseraceae,guggulu;guggul,ayurveda,fixture_duke_ethnobotany
+Saussurea lappa,Asteraceae,kushtha;costus,ayurveda,fixture_duke_ethnobotany
+Holarrhena antidysenterica,Apocynaceae,kutaja,ayurveda,fixture_duke_ethnobotany
+Picrorhiza kurroa,Plantaginaceae,kutki,ayurveda,fixture_duke_ethnobotany
+Berberis aristata,Berberidaceae,daruharidra;barberry,ayurveda,fixture_duke_ethnobotany
+Rubia cordifolia,Rubiaceae,manjistha;madder,ayurveda,fixture_duke_ethnobotany
+Nardostachys jatamansi,Caprifoliaceae,jatamansi;甘松;gansong,tcm,fixture_duke_ethnobotany
+Santalum album,Santalaceae,chandana;sandalwood;檀香;tanxiang,tcm,fixture_duke_ethnobotany
+Cannabis sativa,Cannabaceae,bhanga;cannabis;hemp,ayurveda,fixture_duke_ethnobotany
+Datura metel,Solanaceae,dhattura;datura,ayurveda,fixture_duke_ethnobotany
+Papaver somniferum,Papaveraceae,ahiphena;opium;poppy;الأفيون,tcm,fixture_duke_ethnobotany
+Acorus calamus,Acoraceae,vacha;calamus;石菖蒲;shichangpu,tcm,fixture_duke_ethnobotany
+Cyperus rotundus,Cyperaceae,musta;nutgrass;香附;xiangfu,tcm,fixture_duke_ethnobotany
+Boerhavia diffusa,Nyctaginaceae,punarnava,ayurveda,fixture_duke_ethnobotany
+Citrullus colocynthis,Cucurbitaceae,الحنظل;colocynth,unani,fixture_duke_ethnobotany
+sulfur,mineral,硫黃;liuhuang,alchemy,fixture_duke_ethnobotany
+sodium sulfate,mineral,朴硝;puxiao;芒硝;mangxiao,alchemy,fixture_duke_ethnobotany
+mercury,mineral,水銀;shuiyin;الزئبق,alchemy,fixture_duke_ethnobotany
+arsenic trioxide,mineral,砒霜;pishuang,alchemy,fixture_duke_ethnobotany
+realgar,mineral,雄黃;xionghuang,alchemy,fixture_duke_ethnobotany
+cinnabar,mineral,朱砂;zhusha,alchemy,fixture_duke_ethnobotany
+calomel,mineral,輕粉;qingfen,alchemy,fixture_duke_ethnobotany
+lead oxide,mineral,鉛丹;qiandan,alchemy,fixture_duke_ethnobotany
+alum,mineral,白礬;baifan,alchemy,fixture_duke_ethnobotany
+halloysite,mineral,赤石脂;chishizhi,alchemy,fixture_duke_ethnobotany
+litharge,mineral,密陀僧;mituoseng,alchemy,fixture_duke_ethnobotany
+Euphorbia fischeriana,Euphorbiaceae,狼毒;langdu,tcm,fixture_duke_ethnobotany
+Cimicifuga foetida,Ranunculaceae,升麻;shengma;cimicifuga,tcm,fixture_duke_ethnobotany
+Citrus aurantium,Rutaceae,枳實;zhishi;枳殼;zhike;bitter orange,tcm,fixture_duke_ethnobotany
+Magnolia officinalis,Magnoliaceae,厚朴;houpo;magnolia bark,tcm,fixture_duke_ethnobotany
+gypsum,mineral,石膏;shigao,alchemy,fixture_duke_ethnobotany
+Anemarrhena asphodeloides,Asparagaceae,知母;zhimu;anemarrhena,tcm,fixture_duke_ethnobotany

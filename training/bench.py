@@ -1,4 +1,4 @@
-"""Step 0 for ATHANOR: measure CPU throughput *before* choosing the training config.
+"""Step 0 for SHENNONG: measure CPU throughput *before* choosing the training config.
 
 Everything downstream (token budget, wall-clock, whether bf16 autocast is worth it,
 how many threads to use) is decided from this measurement, not from assumptions.
@@ -25,7 +25,7 @@ import torch
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "model"))
 
-from athanor_mini import AthanorMini, ModelConfig  # noqa: E402
+from shennong_mini import ShennongMini, ModelConfig  # noqa: E402
 
 OUT = ROOT / "training" / "runs" / "bench.json"
 
@@ -45,7 +45,7 @@ def matmul_gflops(n: int = 2048, iters: int = 5) -> float:
 def bench_config(cfg: ModelConfig, batch: int, dtype: str, timed: int = 5, warmup: int = 2) -> dict:
     """Time forward+backward+optimizer step at a fixed seq length."""
     torch.manual_seed(0)
-    model = AthanorMini(cfg)
+    model = ShennongMini(cfg)
     model.train()
     n_params = model.num_parameters()
     opt = torch.optim.AdamW(model.parameters(), lr=1e-4)

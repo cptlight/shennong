@@ -1,36 +1,38 @@
 {
-  "generated_at": "2026-11-05T10:31:53-0800",
+  "generated_at": "2026-11-05T10:36:08-0800",
   "ordering": [
     "ancient record (GATE)",
     "Asian theory (GATE)",
     "Asian pharmacy (score)",
     "modern corroboration (score, cannot rescue)"
   ],
-  "rule": "a claim failing either gate is excluded regardless of modern evidence; modern data may strengthen a tradition-grounded hypothesis but may never substitute for one",
+  "rule": "a claim failing a gate is excluded. First principles (physics/chemistry/biology) are the ARBITER. Western literature is recorded as an observation and is NEVER consulted as a judge: if it agrees that is a consistent dataset; if it disagrees that is a problem to explain (species, preparation, dose, endpoint, or untested).",
   "honest_caveats": [
     "Stage 4 currently draws on the Wikidata-derived compound table and our own 毒 markings. It does NOT yet include measured ChEMBL bioactivity or Open Targets genetics, so 'modern-corroborated' here means 'structure/class evidence', not 'assayed evidence'.",
     "Because both stage-4 signals are cheap and correlated, the 'awaiting corroboration' class is empty in this run. That will change when ChEMBL is wired in and can disagree.",
     "Expert scores are coarse (0.15-1.0 in a few steps), so top scores cluster near 1.0; the ranking is driven by the gates, not by the last decimals."
   ],
   "weights": {
-    "ancient_record": 0.35,
-    "asian_theory": 0.25,
-    "asian_pharmacy": 0.2,
-    "modern": 0.2
+    "ancient_record": 0.28,
+    "asian_theory": 0.2,
+    "asian_pharmacy": 0.16,
+    "first_principles_ARBITER": 0.36,
+    "western_literature": 0.0
   },
   "n_candidates": 203,
-  "n_passed_gates": 28,
+  "n_passed_gates": 18,
   "n_failed_ancient_gate": 151,
   "n_failed_theory_gate": 24,
-  "n_strongest_class": 28,
+  "n_failed_first_principles": 10,
+  "n_strongest_class": 18,
   "results": [
     {
       "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its alkaloid content",
-      "tradition_first_score": 1.0,
+      "tradition_first_score": 0.952,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -78,7 +80,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -96,157 +98,27 @@
                 "菖蒲 有毒",
                 "alkaloid"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content",
-      "tradition_first_score": 1.0,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "52 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 心/脾/膀胱, 無毒",
-              "evidence": [
-                "菖蒲: 溫/心/脾/膀胱"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
-              "evidence": [
-                "蒸: hydrolysis, decarboxylation, removal of irritants"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "138 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Acorus calamus: 138 × terpenoid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 菖蒲 marked 有毒",
-              "evidence": [
-                "菖蒲"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its terpenoid content",
-      "tradition_first_score": 1.0,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "49 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu",
-                "source ws_zh_bencao_chongyuan"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 大腸/脾/胃/肺, 無毒",
-              "evidence": [
-                "升麻: 平/大腸/脾/胃/肺"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
+              "domain": "first_principles",
               "score": 0.7,
-              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "蒸: hydrolysis, decarboxylation, removal of irritants"
+                "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse."
               ]
             }
           ]
         },
         {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
           "proposals": [
             {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "16 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
               "evidence": [
-                "Actaea cimicifuga: 16 × terpenoid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 升麻 marked 有毒",
-              "evidence": [
-                "升麻"
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -255,11 +127,11 @@
     },
     {
       "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
-      "tradition_first_score": 1.0,
+      "tradition_first_score": 0.952,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -307,7 +179,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -325,81 +197,27 @@
                 "附子 有毒",
                 "alkaloid"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
-      "tradition_first_score": 1.0,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "59 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 肝/腎/肺, 大毒",
-              "evidence": [
-                "附子: 溫/肝/腎/肺"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
-              "evidence": [
-                "炮: detoxification, reduction of irritant volatiles"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "17 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Aconitum carmichaelii: 17 × terpenoid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 附子 marked 有毒",
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "附子"
+                "alkaloid is consistent with 炮 (~250 °C, hot ash/sand): mostly thermostable; some esters hydrolyse."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -408,11 +226,11 @@
     },
     {
       "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
-      "tradition_first_score": 1.0,
+      "tradition_first_score": 0.952,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -460,7 +278,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -478,6 +296,28 @@
                 "附子 有毒",
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -485,11 +325,11 @@
     },
     {
       "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
-      "tradition_first_score": 1.0,
+      "tradition_first_score": 0.952,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -537,7 +377,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -554,81 +394,27 @@
               "evidence": [
                 "附子"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
-      "tradition_first_score": 1.0,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 0.99,
-              "rationale": "53 independent sources, 3 traditions",
-              "evidence": [
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu",
-                "source ws_zh_bencao_chongyuan"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 溫, channels 脾/胃/大腸, 有毒",
-              "evidence": [
-                "巴豆: 溫/脾/胃/大腸"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "煮 = boiling in water or an excipient liquor",
-              "evidence": [
-                "煮: hydrolysis, extraction, detoxification"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 1.0,
-              "rationale": "21 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
-              "evidence": [
-                "Croton tiglium: 21 × terpenoid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 巴豆 marked 有毒",
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "巴豆"
+                "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -637,11 +423,11 @@
     },
     {
       "claim": "研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
-      "tradition_first_score": 1.0,
+      "tradition_first_score": 0.9492,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -689,7 +475,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -706,6 +492,28 @@
               "evidence": [
                 "巴豆"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "terpenoid is consistent with 研 (~25 °C, mechanical): mono/sesquiterpenes volatile; heat degrades them."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -713,11 +521,11 @@
     },
     {
       "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its alkaloid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -765,7 +573,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -783,6 +591,28 @@
                 "升麻 有毒",
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -790,11 +620,11 @@
     },
     {
       "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -842,7 +672,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -858,6 +688,28 @@
               "rationale": "safety signal: 甘草 marked 有毒",
               "evidence": [
                 "甘草"
+              ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.75,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "flavonoid is thermally labile at ~250 °C (炮) — degradation products are expected and should be the measured endpoint, not the parent compound."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -866,11 +718,11 @@
     },
     {
       "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -918,7 +770,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -935,81 +787,27 @@
               "evidence": [
                 "甘草"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
-      "tradition_first_score": 0.9828,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "57 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 心/脾, 無毒",
-              "evidence": [
-                "甘草: 平/心/脾"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
-              "evidence": [
-                "炮: detoxification, reduction of irritant volatiles"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "88 documented terpenoid compounds; 4 classes total",
-              "evidence": [
-                "Glycyrrhiza uralensis: 88 × terpenoid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 甘草 marked 有毒",
+              "domain": "first_principles",
+              "score": 0.5,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "甘草"
+                "no stability data for chemotype 'steroid'"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -1018,11 +816,11 @@
     },
     {
       "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1070,7 +868,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1086,6 +884,28 @@
               "rationale": "safety signal: 甘草 marked 有毒",
               "evidence": [
                 "甘草"
+              ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "flavonoid is consistent with 炙 (~120 °C, with honey/vinegar/wine): glycosides hydrolyse; aglycones oxidise with heat."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -1094,11 +914,11 @@
     },
     {
       "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1146,7 +966,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1163,81 +983,27 @@
               "evidence": [
                 "甘草"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
-      "tradition_first_score": 0.9828,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "57 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 心/脾, 無毒",
-              "evidence": [
-                "甘草: 平/心/脾"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
-              "evidence": [
-                "炙: modify drug property, reduce toxicity, target organ"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "88 documented terpenoid compounds; 4 classes total",
-              "evidence": [
-                "Glycyrrhiza uralensis: 88 × terpenoid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 甘草 marked 有毒",
+              "domain": "first_principles",
+              "score": 0.5,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "甘草"
+                "no stability data for chemotype 'steroid'"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -1246,11 +1012,11 @@
     },
     {
       "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1298,7 +1064,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1315,6 +1081,28 @@
               "evidence": [
                 "甘草"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "flavonoid is consistent with 蒸 (~100 °C, steam): glycosides hydrolyse; aglycones oxidise with heat."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -1322,11 +1110,11 @@
     },
     {
       "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1374,7 +1162,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1391,81 +1179,27 @@
               "evidence": [
                 "甘草"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its terpenoid content",
-      "tradition_first_score": 0.9828,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "57 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 心/脾, 無毒",
-              "evidence": [
-                "甘草: 平/心/脾"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
-              "evidence": [
-                "蒸: hydrolysis, decarboxylation, removal of irritants"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.85,
-              "rationale": "88 documented terpenoid compounds; 4 classes total",
-              "evidence": [
-                "Glycyrrhiza uralensis: 88 × terpenoid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 甘草 marked 有毒",
+              "domain": "first_principles",
+              "score": 0.5,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "甘草"
+                "no stability data for chemotype 'steroid'"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -1474,11 +1208,11 @@
     },
     {
       "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its alkaloid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1526,7 +1260,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1544,6 +1278,28 @@
                 "知母 有毒",
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -1551,11 +1307,11 @@
     },
     {
       "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its steroid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1603,7 +1359,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1620,6 +1376,28 @@
               "evidence": [
                 "知母"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.5,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "no stability data for chemotype 'steroid'"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -1627,11 +1405,11 @@
     },
     {
       "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid content",
-      "tradition_first_score": 0.9828,
+      "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1679,7 +1457,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1696,6 +1474,28 @@
               "evidence": [
                 "知母"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -1703,11 +1503,11 @@
     },
     {
       "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
-      "tradition_first_score": 0.979,
+      "tradition_first_score": 0.8952,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1755,7 +1555,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1773,6 +1573,28 @@
                 "巴豆 有毒",
                 "alkaloid"
               ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "alkaloid is consistent with 煮 (~100 °C, water or excipient liquor): mostly thermostable; some esters hydrolyse."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
+              ]
             }
           ]
         }
@@ -1780,11 +1602,11 @@
     },
     {
       "claim": "研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
-      "tradition_first_score": 0.979,
+      "tradition_first_score": 0.8952,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -1832,7 +1654,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -1850,233 +1672,27 @@
                 "巴豆 有毒",
                 "alkaloid"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
-      "tradition_first_score": 0.9396,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "57 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 心/脾, 無毒",
-              "evidence": [
-                "甘草: 平/心/脾"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "炮 = high-temperature dry roasting (often in ash/sand), 160–250 °",
-              "evidence": [
-                "炮: detoxification, reduction of irritant volatiles"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
-              "evidence": [
-                "Glycyrrhiza uralensis: 4 × phenylpropanoid"
-              ]
             },
             {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 甘草 marked 有毒",
-              "evidence": [
-                "甘草"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
-      "tradition_first_score": 0.9396,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "57 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 心/脾, 無毒",
-              "evidence": [
-                "甘草: 平/心/脾"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
+              "domain": "first_principles",
               "score": 0.7,
-              "rationale": "炙 = frying with an excipient (honey, vinegar, wine, ginger juice",
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
-                "炙: modify drug property, reduce toxicity, target organ"
+                "alkaloid is consistent with 研 (~25 °C, mechanical): mostly thermostable; some esters hydrolyse."
               ]
             }
           ]
         },
         {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
           "proposals": [
             {
-              "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
               "evidence": [
-                "Glycyrrhiza uralensis: 4 × phenylpropanoid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 甘草 marked 有毒",
-              "evidence": [
-                "甘草"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its phenylpropanoid content",
-      "tradition_first_score": 0.9396,
-      "gates_passed": true,
-      "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
-      "stages": [
-        {
-          "stage": 1,
-          "name": "ancient record (corpus attestation)",
-          "proposals": [
-            {
-              "domain": "ethnobotany",
-              "score": 1.0,
-              "rationale": "57 independent sources, 4 traditions",
-              "evidence": [
-                "source ws_zh_baopuzi",
-                "source ws_zh_bencao_beiyao",
-                "source ws_zh_bencao_biandu"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 2,
-          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
-          "proposals": [
-            {
-              "domain": "theory",
-              "score": 1.0,
-              "rationale": "nature 平, channels 心/脾, 無毒",
-              "evidence": [
-                "甘草: 平/心/脾"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 3,
-          "name": "Asian pharmacy (炮制 / formula layer)",
-          "proposals": [
-            {
-              "domain": "operator",
-              "score": 0.7,
-              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
-              "evidence": [
-                "蒸: hydrolysis, decarboxylation, removal of irritants"
-              ]
-            }
-          ]
-        },
-        {
-          "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
-          "proposals": [
-            {
-              "domain": "phytochemistry",
-              "score": 0.65,
-              "rationale": "4 documented phenylpropanoid compounds; 4 classes total",
-              "evidence": [
-                "Glycyrrhiza uralensis: 4 × phenylpropanoid"
-              ]
-            },
-            {
-              "domain": "toxicology",
-              "score": 0.6,
-              "rationale": "safety signal: 甘草 marked 有毒",
-              "evidence": [
-                "甘草"
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -2085,11 +1701,11 @@
     },
     {
       "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its phenylpropanoid content",
-      "tradition_first_score": 0.9288,
+      "tradition_first_score": 0.844,
       "gates_passed": true,
       "failed_gate": null,
-      "verdict": "tradition-grounded AND modern-corroborated — strongest class available",
-      "note": "classical attestation + Asian theory, with independent modern chemistry/tox signals",
+      "verdict": "TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and the arbiter; the burden is now experimental, not bibliographic",
+      "note": "first principles are the arbiter; Western literature is recorded but not consulted",
       "stages": [
         {
           "stage": 1,
@@ -2137,7 +1753,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2153,6 +1769,28 @@
               "rationale": "safety signal: 知母 marked 有毒",
               "evidence": [
                 "知母"
+              ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.7,
+              "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
+              "evidence": [
+                "phenylpropanoid is consistent with 焙 (~70 °C, dry air): volatile; heat-sensitive."
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "name": "Western literature — recorded as observation, NOT consulted as judge",
+          "proposals": [
+            {
+              "domain": "western_literature",
+              "score": 0.0,
+              "rationale": "not consulted as an arbiter — recorded as an observation only. If it later agrees, that is a consistent dataset; if it disagrees, that is a problem to explain (species / preparation / dose / endpoint / untested), not a verdict.",
+              "evidence": [
+                "ChEMBL / Open Targets / clinical literature are deliberately not wired into the decision path"
               ]
             }
           ]
@@ -2211,7 +1849,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2283,7 +1921,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2355,7 +1993,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2427,7 +2065,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2501,7 +2139,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2571,7 +2209,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2639,7 +2277,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2707,7 +2345,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2775,7 +2413,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2845,7 +2483,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2860,6 +2498,90 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 4,
+      "verdict": "OUT — violates first principles: terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violat",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "52 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_baopuzi",
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 溫, channels 心/脾/膀胱, 無毒",
+              "evidence": [
+                "菖蒲: 溫/心/脾/膀胱"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "138 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Acorus calamus: 138 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 菖蒲 marked 有毒",
+              "evidence": [
+                "菖蒲"
+              ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.25,
+              "rationale": "VIOLATES FIRST PRINCIPLES — the claimed mechanism is physically impossible as stated",
+              "evidence": [
+                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing."
+              ]
             }
           ]
         }
@@ -2913,7 +2635,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -2983,7 +2705,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3051,7 +2773,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3121,7 +2843,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3189,7 +2911,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3259,7 +2981,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3274,6 +2996,90 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 4,
+      "verdict": "OUT — violates first principles: terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violat",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 1.0,
+              "rationale": "49 independent sources, 4 traditions",
+              "evidence": [
+                "source ws_zh_bencao_beiyao",
+                "source ws_zh_bencao_biandu",
+                "source ws_zh_bencao_chongyuan"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 平, channels 大腸/脾/胃/肺, 無毒",
+              "evidence": [
+                "升麻: 平/大腸/脾/胃/肺"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "16 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Actaea cimicifuga: 16 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 升麻 marked 有毒",
+              "evidence": [
+                "升麻"
+              ]
+            },
+            {
+              "domain": "first_principles",
+              "score": 0.25,
+              "rationale": "VIOLATES FIRST PRINCIPLES — the claimed mechanism is physically impossible as stated",
+              "evidence": [
+                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing."
+              ]
             }
           ]
         }
@@ -3331,7 +3137,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3405,7 +3211,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3477,7 +3283,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3551,7 +3357,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3619,7 +3425,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3687,7 +3493,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3755,7 +3561,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3823,7 +3629,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3891,7 +3697,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -3959,7 +3765,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -4027,7 +3833,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -4095,7 +3901,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -4163,7 +3969,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -4231,7 +4037,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -4299,7 +4105,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -4367,7 +4173,7 @@
         },
         {
           "stage": 4,
-          "name": "modern corroboration (Wikidata chemistry + our toxicity marks; ChEMBL/Open Targets NOT yet wired)",
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
           "proposals": [
             {
               "domain": "phytochemistry",
@@ -4382,6 +4188,572 @@
               "score": 0.35,
               "rationale": "no safety signal recorded",
               "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 恶实 (Arctium lappa) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Arctium lappa: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "蒸 of 恶实 (Arctium lappa) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "蒸 = steaming (often repeated, 九蒸九曬)",
+              "evidence": [
+                "蒸: hydrolysis, decarboxylation, removal of irritants"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "60 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Arctium lappa: 60 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 恶实 (Arctium lappa) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Arctium lappa: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: class alkaloid",
+              "evidence": [
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 恶实 (Arctium lappa) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 0.2,
+              "rationale": "no classical property vector recorded",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 1.0,
+              "rationale": "60 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Arctium lappa: 60 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.35,
+              "rationale": "no safety signal recorded",
+              "evidence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "煮 of 昆布 (Saccharina japonica) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 胃, 無毒",
+              "evidence": [
+                "昆布: 寒/胃"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "煮 = boiling in water or an excipient liquor",
+              "evidence": [
+                "煮: hydrolysis, extraction, detoxification"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Saccharina japonica: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "昆布 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "煮 of 昆布 (Saccharina japonica) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 胃, 無毒",
+              "evidence": [
+                "昆布: 寒/胃"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "煮 = boiling in water or an excipient liquor",
+              "evidence": [
+                "煮: hydrolysis, extraction, detoxification"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Saccharina japonica: 1 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 昆布 marked 有毒",
+              "evidence": [
+                "昆布"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 昆布 (Saccharina japonica) should measurably change its alkaloid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 胃, 無毒",
+              "evidence": [
+                "昆布: 寒/胃"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented alkaloid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Saccharina japonica: 1 × alkaloid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.85,
+              "rationale": "alkaloid carries structural liability and the drug is marked 有毒 — processing claims are safety-relevant",
+              "evidence": [
+                "昆布 有毒",
+                "alkaloid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "焙 of 昆布 (Saccharina japonica) should measurably change its terpenoid content",
+      "tradition_first_score": 0.0,
+      "gates_passed": false,
+      "failed_gate": 1,
+      "verdict": "OUT — not attested in the classical record (no Western evidence may rescue this)",
+      "note": "",
+      "stages": [
+        {
+          "stage": 1,
+          "name": "ancient record (corpus attestation)",
+          "proposals": [
+            {
+              "domain": "ethnobotany",
+              "score": 0.2,
+              "rationale": "drug surface not in the attested set",
+              "evidence": []
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "name": "Asian theory (四氣/五味/歸經, rasa/vīrya)",
+          "proposals": [
+            {
+              "domain": "theory",
+              "score": 1.0,
+              "rationale": "nature 寒, channels 胃, 無毒",
+              "evidence": [
+                "昆布: 寒/胃"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "name": "Asian pharmacy (炮制 / formula layer)",
+          "proposals": [
+            {
+              "domain": "operator",
+              "score": 0.7,
+              "rationale": "焙 = gentle drying over fire (焙)",
+              "evidence": [
+                "焙: dehydration, enzyme inactivation"
+              ]
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "name": "first principles — physics / chemistry / biology (THE ARBITER)",
+          "proposals": [
+            {
+              "domain": "phytochemistry",
+              "score": 0.65,
+              "rationale": "1 documented terpenoid compounds; 2 classes total (narrow chemotype → sharp prediction)",
+              "evidence": [
+                "Saccharina japonica: 1 × terpenoid"
+              ]
+            },
+            {
+              "domain": "toxicology",
+              "score": 0.6,
+              "rationale": "safety signal: 昆布 marked 有毒",
+              "evidence": [
+                "昆布"
+              ]
             }
           ]
         }

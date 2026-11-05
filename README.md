@@ -277,9 +277,27 @@ find a plant that might contain the compound, then cite a traditional use as col
 tradition a marketing layer. Here **a claim failing either gate is out, however strong the Western
 evidence is** — modern data may strengthen a tradition-grounded hypothesis, never substitute for one.
 
-**Measured over 203 candidates: 28 pass both gates; 151 fail at the ancient-record gate; 24 fail at the
-Asian-theory gate.** Under a Western-first pipeline the 151 would have been *priorities*. Here they are
-non-hypotheses, because a molecule the record does not attest is a Western screen with a footnote.
+**And first principles are the arbiter — not Western literature.** Stage 4 is physics, chemistry and
+biology: mass conservation, the thermodynamics of the attested preparation, biophysics of delivery. A
+claim that violates them is out. Western literature is **recorded as an observation and never
+consulted as a judge**: if it agrees, that is a consistent dataset; if it disagrees, that is a problem
+to explain — wrong species, wrong preparation, wrong dose, wrong endpoint, or untested.
+
+**Measured over 203 candidates:**
+
+| | n | |
+|---|---|---|
+| candidates | 203 | |
+| excluded at the ancient-record gate | **151** | never attested — a Western screen with a footnote |
+| excluded at the Asian-theory gate | 24 | attested, but the tradition's framework does not frame it |
+| **excluded by first principles** | **10** | physically impossible *as stated* |
+| **survive everything** | **18** | tradition-grounded **and** physically consistent |
+
+The 10 physics exclusions are the most interesting number in the repo: they include claims that scored
+**5/5 in the expert panel**, e.g. *"蒸 of 菖蒲 should enrich its terpenoids"* — terpenoids are volatile
+and 蒸 runs at 100 °C, so the claim is physically backwards. The arbiter overruled the panel's own
+consensus, which is what an arbiter is for. (The *tradition* may still be right; our *formulation* was
+wrong — steaming may serve a different purpose.)
 
 The 28 that survive are split into **tradition-grounded + modern-corroborated** (the strongest class) and
 **tradition-grounded, awaiting corroboration** (the pre-clinical class a pharmacognosist would want

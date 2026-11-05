@@ -9,9 +9,15 @@
 > **2. Asian medicine (the interpretive frame).** TCMSP / HERB / IMPPAT / SymMap, and the theory layer
 > (四氣五味歸經, rasa/guṇa/vīrya) — the tradition's own way of organising what the texts say.
 >
-> **3. Western medicine (the last, validating layer).** PubChem, ChEMBL, Open Targets, Dr Duke's.
-> These arrive **last** and may only corroborate or falsify. They may never supply the hypothesis,
-> and they may never rescue a claim the classical record does not attest.
+> **3. First principles (the arbiter).** Physics, chemistry, biology — mass conservation,
+> thermodynamics, reaction chemistry, permeability. These decide whether a claim is *physically
+> possible*. They are not a literature and cannot be wrong in the way a paper can.
+>
+> **4. Western medicine (observation only — NOT a judge).** PubChem, ChEMBL, Open Targets, Dr Duke's.
+> These are **recorded, never consulted as an arbiter.** If Western data agrees, that is a consistent
+> dataset. If it disagrees, that is **a problem to explain** — wrong species, wrong preparation, wrong
+> dose, wrong endpoint, or simply untested. It is never a verdict on the tradition, and it can neither
+> rescue nor condemn a claim that first principles have already judged.
 >
 > This ordering is enforced in code (`shennong/experts/stages.py`): a candidate failing the ancient-record
 > or Asian-theory gate is excluded **regardless of how strong the Western evidence is**.
@@ -101,9 +107,11 @@ So the operational answer is: **texts from ctext, chemistry from PubChem, bioact
 genetics from Open Targets, taxonomy from POWO.** Everything Asian-specific arrives as bulk tables and
 is joined locally.
 
-Our corpus already holds the *text* side offline (106 sources, 45.6 M chars). The missing on-demand
-pieces are the four APIs above — and they are what turn "we read the texts" into "we can check what
-the world knows about the molecule the text implies".
+Our corpus already holds the *text* side offline (106 sources, 45.6 M chars). The four APIs above are
+useful, but note **what they are for**: they let us *observe* what the Western literature says, so we can
+find the disagreements worth explaining. They do not adjudicate. The adjudicator is `shennong/experts/
+first_principles.py` — mass conservation, thermodynamics of the attested preparation, and the biophysics
+of delivery.
 
 ---
 

@@ -43,22 +43,23 @@ class Stage(IntEnum):
     ANCIENT_RECORD = 1
     ASIAN_THEORY = 2
     ASIAN_PHARMACY = 3
-    MODERN = 4
+    FIRST_PRINCIPLES = 4      # THE ARBITER
+    WESTERN_LITERATURE = 5    # observation only — never a judge
 
 
 STAGE_OF_DOMAIN = {
     "ethnobotany": Stage.ANCIENT_RECORD,
     "theory": Stage.ASIAN_THEORY,
     "operator": Stage.ASIAN_PHARMACY,
-    "phytochemistry": Stage.MODERN,
-    "toxicology": Stage.MODERN,
+    "phytochemistry": Stage.FIRST_PRINCIPLES,   # class identity is a chemical fact
+    "toxicology": Stage.FIRST_PRINCIPLES,       # toxicity is a biological fact
 }
 STAGE_NAME = {
     Stage.ANCIENT_RECORD: "ancient record (corpus attestation)",
     Stage.ASIAN_THEORY: "Asian theory (四氣/五味/歸經, rasa/vīrya)",
     Stage.ASIAN_PHARMACY: "Asian pharmacy (炮制 / formula layer)",
-    Stage.MODERN: "modern corroboration (Wikidata chemistry + our toxicity marks; "
-                  "ChEMBL/Open Targets NOT yet wired)",
+    Stage.FIRST_PRINCIPLES: "first principles — physics / chemistry / biology (THE ARBITER)",
+    Stage.WESTERN_LITERATURE: "Western literature — recorded as observation, NOT consulted as judge",
 }
 GATE_THRESHOLD = 0.45
 
@@ -90,8 +91,9 @@ class StagedResult:
 
 
 # Stage weights: the tradition carries the hypothesis, modern data corroborates it.
-WEIGHTS = {Stage.ANCIENT_RECORD: 0.35, Stage.ASIAN_THEORY: 0.25,
-           Stage.ASIAN_PHARMACY: 0.20, Stage.MODERN: 0.20}
+# The arbiter carries the largest single weight: physics outranks consensus.
+WEIGHTS = {Stage.ANCIENT_RECORD: 0.28, Stage.ASIAN_THEORY: 0.20,
+           Stage.ASIAN_PHARMACY: 0.16, Stage.FIRST_PRINCIPLES: 0.36}
 
 
 def stage_score(item: dict, world: World) -> StagedResult:
@@ -119,24 +121,39 @@ def stage_score(item: dict, world: World) -> StagedResult:
 
     res.gates_passed = True
 
+    # ---- STAGE 4: first principles arbitrate (not Western literature) --------------
+    from shennong.experts.first_principles import arbitrate, PrincipleCheck
+    fp = arbitrate(item.get("process") or "", item.get("chemotype") or "", None)
+    fp_score = fp["score"]
+    res.stages.setdefault(int(Stage.FIRST_PRINCIPLES), []).append(
+        Proposal("first_principles", fp_score, fp["verdict"], [
+            c["reasoning"] for c in fp["checks"]][:2]))
+    if fp["violations"]:
+        res.gates_passed = False
+        res.failed_gate = int(Stage.FIRST_PRINCIPLES)
+        res.verdict = ("OUT — violates first principles: " + fp["violations"][0]["reasoning"][:120])
+        res.score = 0.0
+        return res
+
+    # ---- STAGE 5: Western literature is recorded, never consulted as a judge -------
+    res.stages.setdefault(int(Stage.WESTERN_LITERATURE), []).append(
+        Proposal("western_literature", 0.0,
+                 "not consulted as an arbiter — recorded as an observation only. If it later "
+                 "agrees, that is a consistent dataset; if it disagrees, that is a problem to "
+                 "explain (species / preparation / dose / endpoint / untested), not a verdict.",
+                 ["ChEMBL / Open Targets / clinical literature are deliberately not wired into "
+                  "the decision path"]))
+
     # ---- weighted score over all stages ------------------------------------------
     total = 0.0
     for stage_id, weight in WEIGHTS.items():
         props = res.stages.get(int(stage_id), [])
         best = max((p.score for p in props), default=0.0)
         total += weight * best
-    # bonus for independent modern corroboration, but small: it cannot outrank a gated claim
-    modern = res.stages.get(int(Stage.MODERN), [])
-    n_modern_support = sum(1 for p in modern if p.score >= GATE_THRESHOLD)
-    total *= (1.0 + 0.08 * max(0, n_modern_support - 1))
     res.score = min(1.0, total)
-
-    if n_modern_support >= 2:
-        res.verdict = "tradition-grounded AND modern-corroborated — strongest class available"
-        res.note = "classical attestation + Asian theory, with independent modern chemistry/tox signals"
-    else:
-        res.verdict = "tradition-grounded, awaiting modern corroboration — a genuine classical lead"
-        res.note = "passes both gates but only one modern domain supports it; this is the pre-clinical class"
+    res.verdict = ("TRADITION-GROUNDED AND PHYSICALLY CONSISTENT — the claim survives every gate and "
+                   "the arbiter; the burden is now experimental, not bibliographic")
+    res.note = ("first principles are the arbiter; Western literature is recorded but not consulted")
     return res
 
 
@@ -148,15 +165,17 @@ def run(items: list[dict]) -> dict:
     passed = [r for r in results if r.gates_passed]
     failed_1 = [r for r in results if r.failed_gate == int(Stage.ANCIENT_RECORD)]
     failed_2 = [r for r in results if r.failed_gate == int(Stage.ASIAN_THEORY)]
-    strongest = [r for r in passed
-                 if sum(1 for p in r.stages.get(int(Stage.MODERN), []) if p.score >= GATE_THRESHOLD) >= 2]
+    failed_fp = [r for r in results if r.failed_gate == int(Stage.FIRST_PRINCIPLES)]
+    strongest = passed
 
     payload = {
         "generated_at": __import__("time").strftime("%Y-%m-%dT%H:%M:%S%z"),
         "ordering": ["ancient record (GATE)", "Asian theory (GATE)",
                      "Asian pharmacy (score)", "modern corroboration (score, cannot rescue)"],
-        "rule": ("a claim failing either gate is excluded regardless of modern evidence; modern data "
-                 "may strengthen a tradition-grounded hypothesis but may never substitute for one"),
+        "rule": ("a claim failing a gate is excluded. First principles (physics/chemistry/biology) are "
+                 "the ARBITER. Western literature is recorded as an observation and is NEVER consulted "
+                 "as a judge: if it agrees that is a consistent dataset; if it disagrees that is a "
+                 "problem to explain (species, preparation, dose, endpoint, or untested)."),
         "honest_caveats": [
             "Stage 4 currently draws on the Wikidata-derived compound table and our own 毒 markings. "
             "It does NOT yet include measured ChEMBL bioactivity or Open Targets genetics, so "
@@ -166,12 +185,13 @@ def run(items: list[dict]) -> dict:
             "Expert scores are coarse (0.15-1.0 in a few steps), so top scores cluster near 1.0; the "
             "ranking is driven by the gates, not by the last decimals.",
         ],
-        "weights": {"ancient_record": 0.35, "asian_theory": 0.25, "asian_pharmacy": 0.20,
-                    "modern": 0.20},
+        "weights": {"ancient_record": 0.28, "asian_theory": 0.20, "asian_pharmacy": 0.16,
+                    "first_principles_ARBITER": 0.36, "western_literature": 0.0},
         "n_candidates": len(results),
         "n_passed_gates": len(passed),
         "n_failed_ancient_gate": len(failed_1),
         "n_failed_theory_gate": len(failed_2),
+        "n_failed_first_principles": len(failed_fp),
         "n_strongest_class": len(strongest),
         "results": [r.to_dict() for r in results[:60]],
     }
@@ -192,10 +212,10 @@ def run(items: list[dict]) -> dict:
          "**A claim failing either gate is out regardless of how strong the modern evidence is.** Modern",
          "data may strengthen a tradition-grounded hypothesis; it may never substitute for one.", "",
          f"## Results over {len(results)} candidates", "",
-         f"- **passed both gates:** {len(passed)}",
+         f"- **survive everything (tradition-grounded + physically consistent):** {len(passed)}",
          f"- excluded at the ancient-record gate: {len(failed_1)}",
          f"- excluded at the Asian-theory gate: {len(failed_2)}",
-         f"- **strongest class (tradition-grounded *and* modern-corroborated):** {len(strongest)}",
+         f"- **excluded by first principles — physically impossible as stated:** {len(failed_fp)}",
          "", "> **What stage 4 actually is, in this run.** The two stage-4 experts draw on the",
          "> Wikidata-derived compound table and our own 毒 markings — **not** measured ChEMBL bioactivity",
          "> or Open Targets genetics. So \"modern-corroborated\" here means *structure/class evidence*,",

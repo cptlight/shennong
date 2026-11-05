@@ -111,6 +111,42 @@ Published whether or not we like the answer.
 | Vocab | 16,384 (en · la · zh-Hant; Devanagari present but **not** in vocab) | 151,936 (Qwen) |
 | Trained on | **1,638,400 tokens** (0.19 tok/param · **0.9 % of compute-optimal** — deliberately undertrained) | recipe only — **not run at this scale** |
 
+### Sparse MoE vs dense — measured, not assumed
+
+We trained both at **identical token budget (1,638,400 tokens)** on the same CPU:
+
+| | dense | **sparse MoE** |
+|---|---|---|
+| Parameters | 8,719,616 | **19,342,616 total / 12,264,728 active** (4 experts, top-2) |
+| Held-out val loss | 6.3901 | **5.4828** (−0.91 nats) |
+| Throughput | 604 tok/s | **769 tok/s (+27 %)** |
+| Wall clock | 45.2 min | **35.5 min** |
+| Weights | 18.05 MB f16 GGUF | **47.1 MB f16 safetensors** |
+
+**Why it wins:** 2.2× the capacity for only 1.4× the active compute per token — the FFN is where the
+knowledge sits, and routing lets four specialists cover Chinese, Latin, Sanskrit and English
+pharmaceutical text without every token paying for all of them.
+
+**And the router independently rediscovered the script structure.** Mean gate weight per expert, then
+Jensen–Shannon distance between the routing distributions per language (0 = identical, 1 = disjoint):
+
+| pair | JS distance |
+|---|---|
+| la ↔ zh-Hant | **0.709** |
+| en ↔ zh-Hant | **0.605** |
+| la ↔ sa | 0.462 |
+| sa ↔ zh-Hant | 0.332 |
+| en ↔ sa | 0.330 |
+| en ↔ la | 0.179 |
+
+No dead experts (usage share 0.29 / 0.04 / 0.23 / 0.44). Classical Chinese routes almost disjointly from
+Latin and English — nobody told the router which script was which. That is a small, genuine result: the
+traditions are separable in representation space, not just in the corpus manifest.
+
+*Caveat, stated plainly:* this is a single seed, and the two runs used different corpus snapshots (the
+MoE on the frozen 45.6 M-char corpus, the dense run on the 38.24 M snapshot), so it is strong evidence
+but not a clean controlled ablation. A 3-seed paired run is the next experiment.
+
 **Why a tiny model is the right answer, not a compromise:** knowledge lives in the **index**, structure
 in the **graph**, reasoning in a **small model**, provenance **everywhere**. A <1 GB quantised model
 runs offline on a laptop in a clinic in Yunnan or Kerala — that is a different product from a hosted

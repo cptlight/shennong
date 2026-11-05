@@ -39,15 +39,15 @@
   "torch_version": "2.2.2",
   "platform": "darwin",
   "seed": 1337,
-  "steps_completed": 151,
-  "tokens_seen": 1236992,
-  "epochs": 0.041,
-  "wall_clock_s": 1666.2,
-  "tokens_per_s": 742.4,
-  "final_train_loss": 5.1445934772491455,
-  "final_val_loss": 5.554085373878479,
-  "best_val_loss": 5.554085373878479,
-  "val_ppl": 258.29,
+  "steps_completed": 200,
+  "tokens_seen": 1638400,
+  "epochs": 0.055,
+  "wall_clock_s": 2131.3,
+  "tokens_per_s": 768.7,
+  "final_train_loss": 4.194369912147522,
+  "final_val_loss": 5.482813835144043,
+  "best_val_loss": 5.482813835144043,
+  "val_ppl": 240.52,
   "loss_curve": [
     {
       "step": 0,
@@ -104,8 +104,24 @@
       "lr": 0.00015645,
       "tokens_seen": 1236992,
       "tokens_per_s": 933.2
+    },
+    {
+      "step": 175,
+      "loss": 5.7273,
+      "val_loss": null,
+      "lr": 8.53e-05,
+      "tokens_seen": 1441792,
+      "tokens_per_s": 908.6
+    },
+    {
+      "step": 199,
+      "loss": 4.1944,
+      "val_loss": 5.4828,
+      "lr": 6.004e-05,
+      "tokens_seen": 1638400,
+      "tokens_per_s": 910.6
     }
   ],
-  "completed": false,
+  "completed": true,
   "checkpoint": "/Users/tom/Documents/ETHno/training/runs/shennong-moe-r1/ckpt.pt"
 }

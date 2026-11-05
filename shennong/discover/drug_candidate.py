@@ -26,6 +26,7 @@ For each promising classical lead we emit a *molecule-level* candidate:
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -64,6 +65,29 @@ from shennong.score import (
 )
 
 ARTIFACTS_DIR = REPO_ROOT / "artifacts"
+
+#: Primary metabolites and buffer/solvent artefacts — not drug candidates.
+_PRIMARY_METABOLITES = (
+    "alanine", "arginine", "asparagine", "aspart", "cysteine", "glutamine", "glutam",
+    "glycine", "histidine", "isoleucine", "leucine", "lysine", "methionine",
+    "phenylalanine", "proline", "serine", "threonine", "tryptophan", "tyrosine",
+    "valine", "glucose", "fructose", "sucrose", "maltose", "lactose", "ribose",
+    "mannitol", "sorbitol", "inositol", "glycerol", "citric", "malic", "succinic",
+    "fumaric", "lactic", "oxalic", "urea", "uric", "choline", "betaine", "taurine",
+    "adenine", "guanine", "cytosine", "uracil", "thymine", "adenosine", "guanosine",
+    "water", "ethanol", "methanol",
+)
+
+
+def _is_primary_metabolite(name: str) -> bool:
+    lowered = name.lower().replace("_", " ").replace("-", " ")
+    return any(token in lowered for token in _PRIMARY_METABOLITES)
+
+
+def artifacts_dir() -> Path:
+    """Where candidate artefacts are written (env-overridable for tests)."""
+    override = os.environ.get("SHENNONG_ARTIFACTS_DIR")
+    return Path(override) if override else ARTIFACTS_DIR
 
 #: Assay and model system per target family (BSL-1 / cell-free only — no pathogen work).
 ASSAY_BY_TARGET: dict[str, dict[str, str]] = {
@@ -184,7 +208,11 @@ def _select_indication(graph: Graph, binomial: str, spans: SpanIndex):
     tid = node_id("taxon", binomial)
     for edge in graph.out_edges(tid, "treats"):
         indication = graph.nodes[edge.dst].label
-        bridge = sorted(classes & ontology.classes_for_indication(indication))
+        spec = ontology.indication_spec(indication)
+        if spec is not None:
+            bridge = sorted(classes & ontology.classes_for_indication(indication))
+        else:
+            bridge = sorted(classes & ontology.classes_for_action_class(ontology.infer_action_class(indication)))
         if not bridge:
             continue
         evidence = None
@@ -244,14 +272,33 @@ def discover_candidates(graph: Graph, spans: SpanIndex, paths: CorpusPaths | Non
             continue
         _, indication, bridge, evidence, use_edge = selected
         lead_evidence = [evidence]
-        # every candidate compound with a real structure
-        for compound in compounds:
+        # prefer compounds whose class bridges the indication; scan until 8 accepted
+        ranked_compounds = sorted(
+            compounds,
+            key=lambda c: (
+                c.get("compound_class") in bridge,
+                c.get("compound_class") != "unclassified",
+                bool(c.get("smiles")),
+            ),
+            reverse=True,
+        )
+        accepted_compounds = 0
+        for compound in ranked_compounds:
+            if accepted_compounds >= 8:
+                break
+            if compound.get("compound_class") == "unclassified":
+                continue
             if not compound.get("smiles"):
                 diagnostics["compounds_without_smiles"] += 1
                 continue
             descriptors = describe_smiles(compound["smiles"])
             if not descriptors.valid:
                 diagnostics["invalid_smiles"].append(compound["name"])
+                continue
+            # drop primary metabolites and implausibly small/large molecules
+            if _is_primary_metabolite(compound["name"]):
+                continue
+            if not (150.0 <= descriptors.mw <= 800.0):
                 continue
             cls_profile = ontology.compound_class_profile(compound.get("compound_class", ""))
             target, target_prior = _best_target(compound.get("compound_class", ""), indication)
@@ -449,22 +496,60 @@ def discover_candidates(graph: Graph, spans: SpanIndex, paths: CorpusPaths | Non
                 "verified": _normalise(name_cn) in _normalise(evidence.quote),
             }
             candidates.append(candidate)
+            accepted_compounds += 1
     candidates.sort(key=lambda c: c["scores"]["composite"], reverse=True)
     # one row per molecule: keep the best lead, record the alternatives
     deduped: list[dict] = []
     seen_molecules: dict[str, dict] = {}
+    seen_smiles: set[str] = set()
+
+    def _skeleton(smiles: str) -> str:
+        import re as _re
+
+        return _re.sub(r"[@/\\]", "", smiles or "")
+
     for candidate in candidates:
         molecule = candidate["candidate_molecule"]["name"]
+        skeleton = _skeleton(candidate["candidate_molecule"].get("smiles", ""))
         if molecule in seen_molecules:
             seen_molecules[molecule].setdefault("alternative_leads", []).append(
                 candidate["lead"]["drug_modern"]
             )
             continue
+        if skeleton and skeleton in seen_smiles:
+            continue  # stereoisomer of an already-selected molecule
+        if skeleton:
+            seen_smiles.add(skeleton)
         seen_molecules[molecule] = candidate
         deduped.append(candidate)
+    composites = [c["scores"]["composite"] for c in deduped]
+    deduped = deduped[:60]  # shortlist cap; diagnostics records the full count
+    diagnostics["candidates_before_cap"] = len(seen_molecules)
     for i, candidate in enumerate(deduped, start=1):
         candidate["id"] = f"C-2026-{i:04d}"
         candidate["rank"] = i
+        # display-scale: percentile within this shortlist (raw composite is kept)
+        if len(composites) > 1:
+            below = sum(1 for value in composites if value < candidate["scores"]["composite"])
+            percentile = below / (len(composites) - 1)
+        else:
+            percentile = 1.0
+        candidate["scores"]["composite_percentile"] = round(percentile, 4)
+        candidate["scores"]["composite_note"] = (
+            "composite is the raw product novelty^a·plausibility^b·testability^c·evidence^d "
+            "(exponents 1,1,1,1); composite_percentile is the within-shortlist display rank. "
+            "Raw composites are only comparable within a run."
+        )
+        lead = candidate["lead"]
+        target = candidate["mechanism"]["target_class"]
+        candidate["association_claim"] = (
+            f"{candidate['candidate_molecule']['name']} from {lead['drug_modern']} "
+            f"({candidate.get('name_cn', '')}) is proposed to act on {target} for "
+            f"{lead['indication']}; this molecule→target→indication association is not annotated "
+            f"in our modern-evidence layer (curated exclusion list + graph modern evidence), "
+            f"which is the novelty claim — not that the molecule itself is unknown."
+        )
+        candidate["novelty"]["claim"] = candidate["association_claim"]
     diagnostics["candidates"] = len(deduped)
     diagnostics["duplicate_molecules_collapsed"] = len(candidates) - len(deduped)
     return deduped, diagnostics
@@ -472,7 +557,7 @@ def discover_candidates(graph: Graph, spans: SpanIndex, paths: CorpusPaths | Non
 
 def write_candidates(candidates: list[dict], diagnostics: dict, out_dir: str | Path | None = None, *, fixture: bool | None = None) -> tuple[Path, Path]:
     """Write ``artifacts/drug_candidates.json`` and ``.md``."""
-    out = Path(out_dir) if out_dir else ARTIFACTS_DIR
+    out = Path(out_dir) if out_dir else artifacts_dir()
     out.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": _now(),
@@ -498,8 +583,8 @@ def write_candidates(candidates: list[dict], diagnostics: dict, out_dir: str | P
         "",
         f"**Novelty method.** {NOVELTY_METHOD}",
         "",
-        "| # | Lead (drug) | Candidate | Class | MW | logP* | TPSA* | Target | Indication | Composite |",
-        "|---|---|---|---|---|---|---|---|---|---|",
+        "| # | Lead (drug) | Candidate | Class | MW | logP* | TPSA* | Target | Indication | Composite (raw) | Percentile |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for c in candidates[:20]:
         d = c["descriptors"]
@@ -507,7 +592,7 @@ def write_candidates(candidates: list[dict], diagnostics: dict, out_dir: str | P
             f"| {c['id']} | {c['lead']['drug_modern']} | {c['candidate_molecule']['name']} | "
             f"{c['candidate_molecule']['compound_class']} | {d['mw']:.1f} | {d['logp_estimate']:.2f} | "
             f"{d['tpsa']:.1f} | {c['mechanism']['target_class']} | {c['lead']['indication']} | "
-            f"{c['scores']['composite']:.4f} |"
+            f"{c['scores']['composite']:.4f} | {c['scores'].get('composite_percentile', 0.0):.2f} |"
         )
     lines += [
         "",

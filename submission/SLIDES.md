@@ -106,7 +106,7 @@ bottom.
 - Vocabulary is budgeted for **Classical Chinese (繁/简) and Sanskrit (Devanagari + IAST)** — because the point
   is reading untranslated originals, not English summaries. That is the whole novelty of the model layer.
 - **8,719,616 parameters** (4,525,312 non-embedding) · 16,384-token vocab · `d_model` 256 · 6 layers · 512-token
-  context · **900 steps × 8,192 = 7.37 M tokens**. Final train loss **[[PENDING: model.final_train_loss]]**,
+  context · **[[PENDING: model.steps]] steps × 8,192 = [[PENDING: model.tokens]] tokens**. Final train loss **[[PENDING: model.final_train_loss]]**,
   val loss **[[PENDING: model.final_val_loss]]** ([[PENDING: model.val_ppl]] ppl).
 - **Deliberately undertrained at ≈0.85 tokens per parameter** — a real run with real logs inside a hackathon week,
   not a converged model. We say so in the deck, the Devpost and the model card.
@@ -131,9 +131,9 @@ bilingual vocabulary highlighted; right, the real loss curve, train and val, axe
   compiled into a **chemistry operator** (炮/煅/淬/九蒸九曬 → hydrolysis, oxidation, volatilisation, complexation).
   We print the split we are least sure of: which steps are **load-bearing** (附子 炮制: diester → monester
   alkaloids) and which are **plausibly ritual**. → `lexicon_drugs.json`, `processing.csv`
-- **配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula roles **君臣佐使**; and the **complete**
-  interaction rule set — [[PENDING: rules.eighteen_fan]]/18 十八反 and [[PENDING: rules.nineteen_wei]]/19 十九畏
-  pairs enumerated, mechanistically bridged, assay-annotated. → `kg.json`
+- **配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula roles **君臣佐使**; and the **complete,
+  faithful** interaction rule set — **16** canonical 相反 pairs + **11** 相畏 relations, which are what 十八反 and
+  十九畏 actually enumerate (the mnemonics count *drugs*, not pairs). Bridged, assay-annotated, verse-tagged. → `kg.json`
 - **使 Shǐ — deploy:** ranking, falsification plans, uncertainty, **drug candidates**, and the
   theory-predictivity experiment. → `drug_candidates.json`, `eval/report.json`
 - **One command per stage.** `make setup · corpus · tokenizer · train-mini · eval · app-data · workbench` runs

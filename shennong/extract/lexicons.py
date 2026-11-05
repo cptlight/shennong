@@ -93,6 +93,10 @@ class Lexicons:
                     ind = (row.get("indication") or "").strip()
                     modern_key = (row.get("indication_modern") or "").strip()
                     canon = ontology.canonical_indication(modern_key) or ontology.canonical_indication(ind)
+                    if not canon:
+                        # keep the raw attested indication as its own canonical key so the
+                        # extractor can still find it in text; the graph infers its organ
+                        canon = ind
                     if canon and ind:
                         lex.indications.setdefault(normalise(ind), canon)
 
@@ -176,3 +180,13 @@ def _lang_of(text: str) -> str:
 
 def build_lexicons(paths: CorpusPaths | None = None) -> Lexicons:
     return Lexicons.build(paths)
+
+
+def drug_surface_regex(lex: Lexicons):
+    """Compiled alternation of all drug surfaces, for fast whole-corpus prefiltering."""
+    import re
+
+    surfaces = sorted({entry.surface for entry in lex.drugs if entry.surface}, key=len, reverse=True)
+    if not surfaces:
+        return None
+    return re.compile("|".join(re.escape(surface) for surface in surfaces))

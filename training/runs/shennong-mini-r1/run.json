@@ -1,6 +1,6 @@
 {
   "run_id": "shennong-mini-r1",
-  "created_at": "2026-11-05T02:47:44-0800",
+  "created_at": "2026-11-05T05:14:48-0800",
   "config": {
     "vocab_size": 16384,
     "d_model": 256,
@@ -22,19 +22,19 @@
     "corpus": "corpus/processed/corpus.jsonl",
     "tokenizer": "tokenizer/shennong-bpe/tokenizer.json",
     "run_name": "shennong-mini-r1",
-    "steps": 900,
+    "steps": 200,
     "batch": 8,
     "accum": 2,
     "seq": 512,
     "lr": 0.0006,
-    "warmup": 60,
-    "eval_steps": 100,
+    "warmup": 40,
+    "eval_steps": 50,
     "eval_iters": 8,
-    "ckpt_steps": 100,
+    "ckpt_steps": 25,
     "log_steps": 25,
     "seed": 1337,
-    "threads": 4,
-    "resume": "",
+    "threads": 1,
+    "resume": "training/runs/shennong-mini-r1/ckpt.pt",
     "train_frac": 1.0
   },
   "corpus": {
@@ -48,7 +48,7 @@
     "eos_id": 2,
     "build_seconds": 21.7
   },
-  "threads": 4,
+  "threads": 1,
   "torch_version": "2.2.2",
   "platform": "darwin",
   "seed": 1337

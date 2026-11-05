@@ -77,10 +77,31 @@ class DiscoveryRun:
         return float(sum(h.score.novelty.value for h in self.hypotheses if h.score) / len(self.hypotheses))
 
 
+def _load_or_build_graph(paths: CorpusPaths) -> Graph:
+    """Reuse the persisted graph when it is newer than every corpus input.
+
+    The real corpus is ~45M chars and a full build is ~2 minutes; the cache makes
+    re-running discovery/eval cheap while staying honest about staleness.
+    """
+    # cache per corpus: the fixture graph must never load the real 114 MB graph (and vice versa)
+    graph_path = paths.build_dir / ("graph.fixture.json" if paths.is_fixture() else "graph.json")
+    inputs = [paths.corpus_jsonl, paths.lexicon_drugs]
+    inputs += sorted(paths.structured_dir.glob("*.csv"))
+    try:
+        newest_input = max(p.stat().st_mtime_ns for p in inputs if p.exists())
+        if graph_path.exists() and graph_path.stat().st_mtime_ns >= newest_input:
+            return Graph.load(graph_path)
+    except (OSError, ValueError):
+        pass
+    graph = build_graph(paths)
+    graph.save(graph_path)
+    return graph
+
+
 def run_discovery(paths: CorpusPaths | None = None) -> DiscoveryRun:
     """Generate every hypothesis and candidate, with span verification."""
     paths = (paths or CorpusPaths.resolve()).require()
-    graph = build_graph(paths)
+    graph = _load_or_build_graph(paths)
     spans = SpanIndex.from_paths(paths)
     warnings: list[str] = []
     hypotheses: list[Hypothesis] = []

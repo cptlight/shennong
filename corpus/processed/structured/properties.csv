@@ -1,2017 +1,1403 @@
-drug_name,plant_binomial,nature,flavors,channels,direction,toxicity,grade,source_id
-辛夷,,溫,辛,肺/胃,,無毒,上品,ws_zh_bencao_gangmu
-沉香,,溫,辛,膽/肺,,無毒,上品,ws_zh_bencao_gangmu
-秦皮,,寒,苦,肝/腎,,無毒,中品,ws_zh_bencao_gangmu
-巴豆,,溫,辛,脾/胃/大腸,沉/降,有毒,下品,ws_zh_bencao_gangmu
-琥珀,,平,甘,心/脾/小腸,,無毒,上品,ws_zh_bencao_gangmu
-雷丸,,寒,苦,肺/脾/胃,,小毒,下品,ws_zh_bencao_gangmu
-木瓜,,溫,酸,肺/脾/肝,,無毒,中品,ws_zh_bencao_gangmu
-瓜蒂,,寒,苦,胃,,有毒,上品,ws_zh_bencao_gangmu
-甘蔗,,平,甘,肺/脾/胃,,無毒,中品,ws_zh_bencao_gangmu
-石蜜,,寒,甘,肺/脾,,無毒,上品,ws_zh_bencao_gangmu
-犀角,,寒,苦/酸/鹹,心/肝,,無毒,中品,ws_zh_bencao_gangmu
-鹿茸,,溫,鹹,腎,,無毒,中品,ws_zh_bencao_gangmu
-甘草,,平,甘,心/脾,升/浮,無毒,上品,ws_zh_bencao_gangmu
-桔梗,,溫,辛,肺,,小毒,下品,ws_zh_bencao_gangmu
-知母,,寒,苦,腎,沉/降,無毒,中品,ws_zh_bencao_gangmu
-狗脊,,平,苦,腎/膀胱,,無毒,中品,ws_zh_bencao_gangmu
-地榆,,寒,苦,大腸/肝,沉/降,無毒,中品,ws_zh_bencao_gangmu
-紫草,,寒,苦,心/小腸,,無毒,中品,ws_zh_bencao_gangmu
-白芨,,平,苦,肺,,無毒,下品,ws_zh_bencao_gangmu
-紫葳,,寒,酸,脾/肝,,無毒,中品,ws_zh_bencao_gangmu
-葛根,,平,甘/辛,胃/大腸,,無毒,中品,ws_zh_bencao_gangmu
-百部,,溫,甘,肺,,無毒,中品,ws_zh_bencao_gangmu
-茜草,,寒,苦,胃/脾,,無毒,上品,ws_zh_bencao_gangmu
-防己,,平,辛,肺,,無毒,中品,ws_zh_bencao_gangmu
-通草,,寒,甘,肺/胃,,無毒,中品,ws_zh_bencao_gangmu
-木香,,溫,辛,肝/胃,沉/降,無毒,上品,ws_zh_bencao_gangmu
-香薷,,溫,辛,肺/胃,,無毒,中品,ws_zh_bencao_gangmu
-秦艽,,平,苦,胃/大腸/肝/膽,,無毒,中品,ws_zh_bencao_gangmu
-柴胡,,平,苦,肝/膽,,無毒,上品,ws_zh_bencao_gangmu
-前胡,,寒,苦,肺/肝/脾/膀胱,,無毒,中品,ws_zh_bencao_gangmu
-升麻,,平,甘/苦,大腸/脾/胃/肺,浮/升,無毒,上品,ws_zh_bencao_gangmu
-茅根,,溫,甘,胃/小腸,,無毒,中品,ws_zh_bencao_gangmu
-細辛,,溫,辛,心/小腸,,無毒,上品,ws_zh_bencao_gangmu
-白薇,,平,苦/鹹,心/腎,,無毒,中品,ws_zh_bencao_gangmu
-白前,,溫,甘,肺,,無毒,中品,ws_zh_bencao_gangmu
-牛膝,,平,苦/酸,腎,,無毒,上品,ws_zh_bencao_gangmu
-紫菀,,溫,苦,心/肺,,無毒,中品,ws_zh_bencao_gangmu
-菖蒲,,溫,辛,心/脾/膀胱,,無毒,上品,ws_zh_bencao_gangmu
-水萍,,寒,甘,肺/小腸,,無毒,中品,ws_zh_bencao_gangmu
-海藻,,寒,苦/鹹,胃,,無毒,中品,ws_zh_bencao_gangmu
-昆布,,寒,鹹,胃,,無毒,中品,ws_zh_bencao_gangmu
-大戟,,寒,苦,肝/脾/腎,,小毒,下品,ws_zh_bencao_gangmu
-甘遂,,寒,苦,腎,,有毒,下品,ws_zh_bencao_gangmu
-附子,,溫,辛,肝/腎/肺,,大毒,下品,ws_zh_bencao_gangmu
-半夏,,平,辛,肺/脾/胃,沉/降,有毒,下品,ws_zh_bencao_gangmu
-蚤休,,寒,苦,心,,有毒,下品,ws_zh_bencao_gangmu
-射干,,平,苦,肺/肝/脾,,有毒,下品,ws_zh_bencao_gangmu
-馬勃,,平,苦,肺,,無毒,上品,ws_zh_bencao_gangmu
-薤白,,溫,辛,大腸,,小毒,下品,ws_zh_bencao_gangmu
-百合,,平,甘,肺/脾,,無毒,中品,ws_zh_bencao_gangmu
-水蛭,,平,鹹/苦,肝/膀胱,,有毒,下品,ws_zh_bencao_gangmu
-蜈蚣,,溫,辛,肝,,有毒,下品,ws_zh_bencao_gangmu
-石膏,,寒,辛,肺/胃,,無毒,中品,ws_zh_bencao_gangmu
-滑石,,寒,甘,胃/膀胱,,無毒,上品,ws_zh_bencao_gangmu
-磁石,,寒,辛,腎,,無毒,中品,ws_zh_bencao_gangmu
-伏龍肝,,溫,辛,肝,,無毒,下品,ws_zh_bencao_gangmu
-降真香,,溫,辛,肝/肺,,無毒,下品,ws_zh_bencao_gangmu
-山茱萸,,平,酸,肝/腎,,無毒,中品,ws_zh_bencao_gangmu
-羚羊角,,寒,苦,腎,,無毒,中品,ws_zh_bencao_gangmu
-巴戟天,,溫,辛/甘,脾/腎,,無毒,上品,ws_zh_bencao_gangmu
-白頭翁,,溫,苦,胃/大腸,,無毒,下品,ws_zh_bencao_gangmu
-五味子,,溫,酸,肺/腎,,無毒,上品,ws_zh_bencao_gangmu
-覆盆子,,平,酸/鹹,肝/腎,,無毒,上品,ws_zh_bencao_gangmu
-冬葵子,,寒,甘,小腸/膀胱,,無毒,上品,ws_zh_bencao_gangmu
-款冬花,,溫,辛,心/肺,,無毒,中品,ws_zh_bencao_gangmu
-白附子,,溫,辛/甘,肺/脾,,小毒,下品,ws_zh_bencao_gangmu
-旋覆花,,溫,鹹,肝/腎,,小毒,下品,ws_zh_bencao_gangmu
-露蜂房,,平,苦,胃,,有毒,中品,ws_zh_bencao_gangmu
-桑螵蛸,,平,鹹/甘,腎,,無毒,中品,ws_zh_bencao_gangmu
-白石英,,溫,甘,肺/大腸,,無毒,上品,ws_zh_bencao_gangmu
-紫石英,,溫,甘,心,,無毒,上品,ws_zh_bencao_gangmu
-代赭石,,寒,苦,肝/心包,,無毒,下品,ws_zh_bencao_gangmu
-王不留行,,平,苦,心/肝,,無毒,上品,ws_zh_bencao_gangmu
-秋石,,溫,鹹,肺/腎,,無毒,,ws_zh_bencao_gangmu
-乳汁,,平,甘/鹹,心/肝/脾,,無毒,,ws_zh_bencao_gangmu
-人血,,平,鹹,肝/腎,,有毒,,ws_zh_bencao_gangmu
-龜甲,,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-秦龜,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu
-珠鱉,,寒,鹹,,,小毒,中品,ws_zh_bencao_gangmu
-馬刀,,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu
-真珠,,寒,鹹/甘,心/肝,,無毒,,ws_zh_bencao_gangmu
-海蛤,,平,苦/鹹,,,無毒,上品,ws_zh_bencao_gangmu
-文蛤,,平,鹹,,,無毒,上品,ws_zh_bencao_gangmu
-魁蛤,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-貝子,,平,鹹,,,有毒,下品,ws_zh_bencao_gangmu
-紫貝,,平,甘/鹹,,,無毒,下品,ws_zh_bencao_gangmu
-田螺,,平,甘,,,無毒,下品,ws_zh_bencao_gangmu
-冬灰,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-柏實,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-松脂,,溫,苦/甘,,,無毒,上品,ws_zh_bencao_gangmu
-松花,,溫,甘,肝/脾,,無毒,,ws_zh_bencao_gangmu
-杉材,,熱,甘/辛,,,小毒,上品,ws_zh_bencao_gangmu
-牡桂,,溫,辛,,浮/升,無毒,上品,ws_zh_bencao_gangmu
-菌桂,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-木蘭,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-丁香,,溫,辛,肺/脾/胃/腎,,無毒,,ws_zh_bencao_gangmu
-根皮,,溫,辛,,沉/降,無毒,上品,ws_zh_bencao_gangmu
-木皮,,平,辛,,,小毒,下品,ws_zh_bencao_gangmu
-阿魏,,平,辛,胃,,無毒,,ws_zh_bencao_gangmu
-枳實,,寒,苦,,浮/升,無毒,中品,ws_zh_bencao_gangmu
-梔子,,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu
-酸棗,,平,酸,,,無毒,上品,ws_zh_bencao_gangmu
-白棘,,平,苦,,,無毒,下品,ws_zh_bencao_gangmu
-蕤核,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-鼠李,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-女貞,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu
-溲疏,,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu
-石南,,平,辛/苦,,,有毒,下品,ws_zh_bencao_gangmu
-牡荊,,平,甘/苦,,,無毒,上品,ws_zh_bencao_gangmu
-蔓荊,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-濃朴,,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu
-桐葉,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-合歡,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-皂莢,,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu
-欒華,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-蕪荑,,平,辛,,,無毒,中品,ws_zh_bencao_gangmu
-竹葉,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-鬼齒,,平,苦,,,無毒,下品,ws_zh_bencao_gangmu
-茯神,,平,甘,心/肝,,無毒,,ws_zh_bencao_gangmu
-豬苓,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-松蘿,,平,苦/甘,,,無毒,中品,ws_zh_bencao_gangmu
-占斯,,溫,苦,,,無毒,下品,ws_zh_bencao_gangmu
-樹膠,,熱,酸,,,小毒,下品,ws_zh_bencao_gangmu
-大棗,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-龍眼,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-枇杷,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-櫻桃,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-刺蜜,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-芰實,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-烏芋,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-蔓椒,,溫,苦,,,無毒,下品,ws_zh_bencao_gangmu
-胡椒,,溫,辛,肺/胃,,無毒,,ws_zh_bencao_gangmu
-地漿,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-豚卵,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu
-羊肉,,平,甘,脾/肺,,無毒,,ws_zh_bencao_gangmu
-黃羊,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-頭骨,,寒,甘,,,小毒,中品,ws_zh_bencao_gangmu
-陰莖,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-驢槽,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-阿膠,,平,甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu
-牛黃,,平,苦,,,小毒,上品,ws_zh_bencao_gangmu
-鼴鼠,,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-虎骨,,平,酸,腎,,無毒,,ws_zh_bencao_gangmu
-山羊,,熱,甘,,,無毒,中品,ws_zh_bencao_gangmu
-白膠,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-麋脂,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu
-髓腦,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-皮毛,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-風貍,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu
-水獺,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-毛皮,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-雁肪,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-絨毛,,涼,甘,,,無毒,上品,ws_zh_bencao_gangmu
-鸚肉,,溫,甘/鹹,,,無毒,上品,ws_zh_bencao_gangmu
-雞湯,,寒,酸,,,無毒,中品,ws_zh_bencao_gangmu
-伏翼,,平,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-青蘘,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-麻蕡,,平,辛,,,有毒,上品,ws_zh_bencao_gangmu
-大麥,,溫,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-穬麥,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-禾稈,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-腐婢,,平,辛,,,無毒,下品,ws_zh_bencao_gangmu
-黎豆,,溫,甘/苦,,,小毒,下品,ws_zh_bencao_gangmu
-稷米,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-粟米,,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-粟糗,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-神曲,,溫,甘/辛,脾/胃,,無毒,,ws_zh_bencao_gangmu
-紅曲,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-米醋,,溫,酸/苦,,,無毒,中品,ws_zh_bencao_gangmu
-黃耆,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-人參,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu
-沙參,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-薺苨,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-黃精,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-萎蕤,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-赤箭,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-貫眾,,寒,苦,,,有毒,下品,ws_zh_bencao_gangmu
-遠志,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu
-仙茅,,溫,辛,肝/腎,,有毒,,ws_zh_bencao_gangmu
-玄參,,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu
-丹參,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-紫參,,寒,苦/辛,,,無毒,中品,ws_zh_bencao_gangmu
-王孫,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-三七,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-蓬蘽,,平,酸,,,無毒,上品,ws_zh_bencao_gangmu
-蛇莓,,寒,甘/酸,,,有毒,下品,ws_zh_bencao_gangmu
-莖葉,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-營實,,溫,苦/澀,,,無毒,下品,ws_zh_bencao_gangmu
-栝蔞,,寒,酸,,,無毒,中品,ws_zh_bencao_gangmu
-王瓜,,平,酸/苦,,,無毒,中品,ws_zh_bencao_gangmu
-黃環,,平,苦,,,有毒,下品,ws_zh_bencao_gangmu
-萆薢,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-菝葜,,平,甘/酸,,,無毒,中品,ws_zh_bencao_gangmu
-白蘞,,平,苦,,,無毒,下品,ws_zh_bencao_gangmu
-赭魁,,平,甘,,,無毒,下品,ws_zh_bencao_gangmu
-剪草,,涼,苦,心/肝,,無毒,,ws_zh_bencao_gangmu
-釣藤,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-白英,,溫,甘/辛,,,無毒,上品,ws_zh_bencao_gangmu
-千歲,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-忍冬,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-芎藭,,溫,辛,,浮/升,無毒,上品,ws_zh_bencao_gangmu
-蘼蕪,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-蛇牀,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu
-藁本,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-芍藥,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-杜若,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-豆蔻,,熱,辛,,,無毒,上品,ws_zh_bencao_gangmu
-薰草,,平,辛,,,無毒,中品,ws_zh_bencao_gangmu
-蘭草,,平,辛,,,無毒,上品,ws_zh_bencao_gangmu
-澤蘭,,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu
-石韋,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-景天,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu
-黃芩,,平,苦,,浮/升,無毒,中品,ws_zh_bencao_gangmu
-防風,,溫,甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu
-龍膽,,寒,苦/澀,,,無毒,上品,ws_zh_bencao_gangmu
-杜衡,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-及己,,平,苦,,,有毒,下品,ws_zh_bencao_gangmu
-女菀,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-酸漿,,平,酸,,,無毒,中品,ws_zh_bencao_gangmu
-敗醬,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-決明,,平,鹹,,,無毒,上品,ws_zh_bencao_gangmu
-地膚,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-瞿麥,,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu
-葶藶,,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu
-車前,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-蛇含,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-女青,,平,辛,,,有毒,下品,ws_zh_bencao_gangmu
-連翹,,平,苦,,浮/升,無毒,下品,ws_zh_bencao_gangmu
-翹根,,寒,甘,,,小毒,下品,ws_zh_bencao_gangmu
-陸英,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-蒴藋,,溫,酸,,,有毒,下品,ws_zh_bencao_gangmu
-水英,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-藍實,,寒,苦/甘,,,無毒,上品,ws_zh_bencao_gangmu
-青黛,,寒,鹹,肝/脾,,無毒,,ws_zh_bencao_gangmu
-甘藍,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-葒草,,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-虎杖,,平,苦,,,無毒,下品,ws_zh_bencao_gangmu
-藎草,,平,苦,,,無毒,下品,ws_zh_bencao_gangmu
-蒺藜,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu
-羊蹄,,平,苦/澀,,,無毒,下品,ws_zh_bencao_gangmu
-蒲黃,,平,甘,,,無毒,下品,ws_zh_bencao_gangmu
-莕菜,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-水松,,寒,酸,,,無毒,下品,ws_zh_bencao_gangmu
-商陸,,平,辛,,,有毒,下品,ws_zh_bencao_gangmu
-防葵,,寒,辛,,,無毒,上品,ws_zh_bencao_gangmu
-雲實,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-常山,,寒,苦,肝,,有毒,,ws_zh_bencao_gangmu
-蜀漆,,平,辛,,,有毒,下品,ws_zh_bencao_gangmu
-藜蘆,,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu
-天雄,,溫,辛,,,大毒,下品,ws_zh_bencao_gangmu
-側子,,熱,辛,,,大毒,下品,ws_zh_bencao_gangmu
-烏頭,,溫,辛,,,大毒,下品,ws_zh_bencao_gangmu
-由跋,,溫,辛/苦,,,有毒,下品,ws_zh_bencao_gangmu
-鬼臼,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-鳶尾,,平,苦,,,有毒,下品,ws_zh_bencao_gangmu
-蕘花,,寒,苦,,,有毒,下品,ws_zh_bencao_gangmu
-莽草,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-茵芋,,溫,苦,,,有毒,下品,ws_zh_bencao_gangmu
-牛扁,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-鉤吻,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-屋游,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-烏韭,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-卷柏,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-菴䕡,,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu
-青蒿,,,甘,心,,無毒,下品,ws_zh_bencao_gangmu
-牡蒿,,溫,苦/甘,,,無毒,下品,ws_zh_bencao_gangmu
-燕脂,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-續斷,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu
-苦芺,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-蠡實,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-惡實,,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu
-葈耳,,溫,甘,,,小毒,中品,ws_zh_bencao_gangmu
-蘘荷,,寒,苦/甘,,,無毒,中品,ws_zh_bencao_gangmu
-麻黃,,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu
-韭子,,溫,辛/甘,肝/腎,,無毒,,ws_zh_bencao_gangmu
-山韭,,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-胡蔥,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-山蒜,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-生薑,,溫,辛,,浮/升,無毒,中品,ws_zh_bencao_gangmu
-乾薑,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-水斳,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-茴香,,平,辛,心/脾/膀胱,,無毒,,ws_zh_bencao_gangmu
-睡菜,,寒,甘/苦,,,無毒,上品,ws_zh_bencao_gangmu
-木耳,,平,甘,,,小毒,中品,ws_zh_bencao_gangmu
-雚菌,,平,鹹,,,小毒,下品,ws_zh_bencao_gangmu
-菾菜,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-菥蓂,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-蘩縷,,平,酸,,,無毒,下品,ws_zh_bencao_gangmu
-雞腸,,平,辛/苦,,,無毒,下品,ws_zh_bencao_gangmu
-莧實,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-苦菜,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-落葵,,寒,酸,,,無毒,下品,ws_zh_bencao_gangmu
-蕺菜,,溫,辛,,,小毒,下品,ws_zh_bencao_gangmu
-鹿藿,,平,苦,,,無毒,下品,ws_zh_bencao_gangmu
-薯蕷,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-酸筍,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-蜜蠟,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-蜂子,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-雀瓮,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-石蠶,,寒,鹹,,,有毒,下品,ws_zh_bencao_gangmu
-香蟲,,溫,鹹,,,有毒,中品,ws_zh_bencao_gangmu
-蚱蟬,,寒,鹹/甘,,,無毒,中品,ws_zh_bencao_gangmu
-蜣螂,,寒,鹹,,,有毒,下品,ws_zh_bencao_gangmu
-螻蛄,,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-螢火,,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu
-衣魚,,溫,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-鼠婦,,溫,酸,,,無毒,下品,ws_zh_bencao_gangmu
-蟅蟲,,寒,鹹,,,有毒,中品,ws_zh_bencao_gangmu
-蜚蠊,,寒,鹹,,,有毒,中品,ws_zh_bencao_gangmu
-木虻,,平,苦,,,有毒,中品,ws_zh_bencao_gangmu
-蜚虻,,寒,苦,,,有毒,中品,ws_zh_bencao_gangmu
-樗雞,,平,苦,,,小毒,中品,ws_zh_bencao_gangmu
-斑蝥,,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu
-芫青,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-地膽,,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu
-人虱,,溫,甘/辛,,,有毒,下品,ws_zh_bencao_gangmu
-蛤蟆,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-馬陸,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-粉鉛,,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu
-鉛丹,,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu
-鋼鐵,,平,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-鐵落,,平,辛,,,無毒,中品,ws_zh_bencao_gangmu
-馬鐙,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-水銀,,寒,辛,,,有毒,中品,ws_zh_bencao_gangmu
-雄黃,,平,苦,,,有毒,中品,ws_zh_bencao_gangmu
-雌黃,,平,辛,,,有毒,中品,ws_zh_bencao_gangmu
-理石,,寒,辛,,,無毒,中品,ws_zh_bencao_gangmu
-長石,,寒,辛/苦,,,無毒,中品,ws_zh_bencao_gangmu
-殷孼,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-土殷,,平,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-鍛石,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-玉屑,,平,甘,肺,,無毒,,ws_zh_bencao_gangmu
-雲母,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-戎鹽,,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-鹵鹼,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-朴硝,,寒,辛/苦,,,無毒,上品,ws_zh_bencao_gangmu
-硝石,,寒,苦,心/脾,,無毒,,ws_zh_bencao_gangmu
-煙藥,,溫,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-空青,,寒,甘/酸,,,無毒,上品,ws_zh_bencao_gangmu
-曾青,,寒,酸,,,無毒,上品,ws_zh_bencao_gangmu
-綠青,,寒,酸,,,無毒,上品,ws_zh_bencao_gangmu
-扁青,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-白青,,平,甘/酸/鹹,,,無毒,上品,ws_zh_bencao_gangmu
-石膽,,寒,酸/辛,,,有毒,上品,ws_zh_bencao_gangmu
-礜石,,熱,辛,,,有毒,下品,ws_zh_bencao_gangmu
-龍骨,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-龍齒,,涼,澀,心/肝,,無毒,,ws_zh_bencao_gangmu
-鯪鯉,,溫,甘/澀,,,有毒,下品,ws_zh_bencao_gangmu
-蛤蚧,,平,鹹,肺/腎,,小毒,,ws_zh_bencao_gangmu
-鹽龍,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-鯽魚,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu
-金魚,,平,鹹/甘,,,無毒,下品,ws_zh_bencao_gangmu
-蚺蛇,,平,甘,,,小毒,下品,ws_zh_bencao_gangmu
-諸蛇,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-鮧魚,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-鮫魚,,平,甘/鹹,,,無毒,下品,ws_zh_bencao_gangmu
-海䖳,,溫,甘,,,小毒,下品,ws_zh_bencao_gangmu
-鮑魚,,溫,鹹,,,無毒,上品,ws_zh_bencao_gangmu
-丹砂,,寒,甘,心,,,上品,ws_zh_leigong_paozhi_yaoxing
-白芷,,溫,辛,肺/脾/胃,,,中品,ws_zh_leigong_paozhi_yaoxing
-石斛,,平,甘,胃/腎,,,上品,ws_zh_leigong_paozhi_yaoxing
-杜仲,,平,辛,腎,,,上品,ws_zh_leigong_paozhi_yaoxing
-厚朴,,溫,苦,脾/胃,,,中品,ws_zh_leigong_paozhi_yaoxing
-蜀椒,,溫,辛,肺/脾,,,下品,ws_zh_leigong_paozhi_yaoxing
-茯苓,,平,甘,肺/脾,,,上品,ws_zh_bencao_jingjie
-牡丹,,寒,辛,肺/脾,,,下品,ws_zh_bencao_xinbian
-石決明,,平,鹹,,,無毒,上品,ws_zh_bencao_gangmu
-東壁土,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu
-根白皮,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu
-安息香,,平,辛/苦,心/脾,,無毒,,ws_zh_bencao_gangmu
-蘇合香,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-詹糖香,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu
-桑柴灰,,涼,甘,,,無毒,上品,ws_zh_bencao_gangmu
-密蒙花,,平,甘,肝,,無毒,,ws_zh_bencao_gangmu
-梓白皮,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-刺桐花,,寒,苦,,,小毒,下品,ws_zh_bencao_gangmu
-白馬骨,,平,甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu
-巴旦杏,,平,酸,,,無毒,中品,ws_zh_bencao_gangmu
-天師栗,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-大腹皮,,溫,辛,肺/脾,,無毒,,ws_zh_bencao_gangmu
-庵羅果,,寒,苦,,,小毒,下品,ws_zh_bencao_gangmu
-山嬰桃,,平,辛,,,無毒,上品,ws_zh_bencao_gangmu
-吳茱萸,,熱,辛/苦,,,無毒,中品,ws_zh_bencao_gangmu
-半天河,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-縛豬繩,,溫,鹹/酸,,,無毒,中品,ws_zh_bencao_gangmu
-屎中骨,,平,酸,,,無毒,中品,ws_zh_bencao_gangmu
-肚及屎,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-突厥雀,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-巧婦鳥,,平,酸,,,有毒,中品,ws_zh_bencao_gangmu
-苦蕎麥,,溫,甘/苦,,,小毒,下品,ws_zh_bencao_gangmu
-赤小豆,,平,甘/酸,心,,無毒,,ws_zh_bencao_gangmu
-白扁豆,,溫,甘,脾,,無毒,,ws_zh_bencao_gangmu
-丹黍米,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-黃粱米,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-白粱米,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-青粱米,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-薏苡仁,,寒,甘,肺/脾,,無毒,,ws_zh_bencao_gangmu
-陳廩米,,溫,鹹/酸,,,無毒,下品,ws_zh_bencao_gangmu
-蕪荑醬,,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu
-肉蓯蓉,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-使君子,,溫,甘,脾/胃,,無毒,,ws_zh_bencao_gangmu
-牽牛子,,寒,苦,,,有毒,下品,ws_zh_bencao_gangmu
-天門冬,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu
-土茯苓,,平,甘/淡,胃/大腸,,無毒,,ws_zh_bencao_gangmu
-山豆根,,寒,甘,心/肺,,無毒,,ws_zh_bencao_gangmu
-白兔藿,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu
-石合草,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-白芷香,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-高良薑,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-白豆蔻,,溫,辛,肺/脾/胃,,無毒,,ws_zh_bencao_gangmu
-益智子,,溫,辛,肝/肺,,無毒,,ws_zh_bencao_gangmu
-肉豆蔻,,溫,辛,肺/胃,,無毒,,ws_zh_bencao_gangmu
-荊三稜,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-石長生,,寒,鹹,,,有毒,下品,ws_zh_bencao_gangmu
-白龍鬚,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-延胡索,,溫,辛,肝/肺,,無毒,,ws_zh_bencao_gangmu
-徐長卿,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-金絲草,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-乾地黃,,寒,甘,,沉/降,無毒,上品,ws_zh_bencao_gangmu
-鴨跖草,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-蜀羊泉,,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu
-鼠尾草,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu
-白蒺藜,,溫,甘,肝/心,,無毒,,ws_zh_bencao_gangmu
-水甘草,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-野狼毒,,平,辛,,,大毒,下品,ws_zh_bencao_gangmu
-野狼牙,,寒,辛,,,小毒,下品,ws_zh_bencao_gangmu
-天南星,,溫,苦,肺,,大毒,,ws_zh_bencao_gangmu
-羊躑躅,,溫,辛,,,大毒,下品,ws_zh_bencao_gangmu
-石龍芮,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-井中苔,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-馬先蒿,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu
-天名精,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-羊屎柴,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-石龍芻,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu
-燈花燼,,溫,辛/酸,,,無毒,中品,ws_zh_bencao_gangmu
-東風菜,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-蒲公英,,平,甘,脾/胃,,無毒,,ws_zh_bencao_gangmu
-醍醐菜,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu
-五倍子,,平,酸,大腸,,無毒,,ws_zh_bencao_gangmu
-白僵蠶,,平,鹹/辛,,,無毒,中品,ws_zh_bencao_gangmu
-方解石,,寒,苦/辛,,,無毒,下品,ws_zh_bencao_gangmu
-白石脂,,平,甘/酸,肺/大腸,,無毒,,ws_zh_bencao_gangmu
-赤石脂,,溫,甘/酸/辛,心,,無毒,,ws_zh_bencao_gangmu
-爐甘石,,溫,甘,胃,,無毒,,ws_zh_bencao_gangmu
-石鐘乳,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu
-孔公孼,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu
-青琅玕,,平,辛,,,無毒,下品,ws_zh_bencao_gangmu
-凝水石,,寒,辛,,,無毒,中品,ws_zh_bencao_gangmu
-石硫黃,,溫,酸,,,有毒,中品,ws_zh_bencao_gangmu
-禹余糧,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu
-金牙石,,平,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-石龍子,,寒,鹹,,,小毒,中品,ws_zh_bencao_gangmu
-鰻鱺魚,,平,甘,,,有毒,中品,ws_zh_bencao_gangmu
-海鰻鱺,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-烏賊魚,,溫,鹹,,,無毒,中品,ws_zh_bencao_gangmu
-淫羊藿,,寒,辛,腎,,,中品,ws_zh_leigong_paozhi_yaoxing
-蛇床子,,平,苦,肺/腎,,,上品,ws_zh_leigong_paozhi_yaoxing
-夏枯草,,寒,苦/辛,肝,,,下品,ws_zh_leigong_paozhi_yaoxing
-奴哥撒兒,,溫,苦,,,無毒,下品,ws_zh_bencao_gangmu
-桑根白皮,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu
-皮間白汁,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-桑上寄生,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-諸鳥有毒,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-大豆黃卷,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu
-獨活羌活,,平,苦/甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu
-紫花地丁,,寒,苦/辛,肝/脾,,無毒,,ws_zh_bencao_gangmu
-腸風下血,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu
-葛上亭長,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu
-白頸蚯蚓,,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-太一余糧,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu
-特生礜石,,溫,甘,,,有毒,下品,ws_zh_bencao_gangmu
-白皮及根皮,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu
-曰︰婆羅得,,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu
-六畜毛蹄甲,,平,鹹,,,有毒,下品,ws_zh_bencao_gangmu
-肫中砂石子,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu
-草川,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-亂髮,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-頭垢,,溫,鹹/苦,,,有毒,,ws_zh_bencao_gangmu
-耳塞,,溫,鹹/苦,,,有毒,,ws_zh_bencao_gangmu
-爪甲,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-牙齒,,熱,甘/鹹,,,有毒,,ws_zh_bencao_gangmu
-人屎,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-人尿,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-淋石,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-人胞,,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-人膽,,涼,苦,,,有毒,,ws_zh_bencao_gangmu
-膽汁,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-龜筒,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-瑇瑁,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-攝龜,,寒,甘,,,有毒,,ws_zh_bencao_gangmu
-蝤蛑,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-鱟魚,,,甘/鹹,,,無毒,上品,ws_zh_bencao_gangmu
-蚌粉,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-爛殼,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-擔羅,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-車渠,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-淡菜,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-甲香,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-甲煎,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-蝸螺,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-蓼螺,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-海月,,平,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-海燕,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-赤土,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-黃土,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-煙膠,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-柏葉,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-松節,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-松葉,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-桂心,,,苦/辛,心/心包,,無毒,,ws_zh_bencao_gangmu
-月桂,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-蜜香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-丁皮,,熱,辛,,,有毒,,ws_zh_bencao_gangmu
-紫檀,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-楠材,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-樟材,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-烏藥,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-櫰香,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-根葉,,寒,辛,,,有毒,,ws_zh_bencao_gangmu
-沒藥,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-騏竭,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-質汗,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-樟腦,,熱,辛,,,無毒,,ws_zh_bencao_gangmu
-蘆薈,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-枳殼,,寒,苦/酸,,升/降,無毒,,ws_zh_bencao_gangmu
-枸橘,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-核仁,,涼,酸,,,無毒,,ws_zh_bencao_gangmu
-人家,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-山礬,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-枝葉,,平,酸/甘,,浮/升,無毒,,ws_zh_bencao_gangmu
-追風,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-楊櫨,,寒,苦,,,有毒,,ws_zh_bencao_gangmu
-荊瀝,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-欒荊,,溫,辛/苦,,,小毒,,ws_zh_bencao_gangmu
-蠟梅,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-白皮,,平,辛,,,小毒,,ws_zh_bencao_gangmu
-木麻,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-檀桓,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-小柏,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-黃櫨,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-逐折,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-椿樗,,溫,苦,,,小毒,,ws_zh_bencao_gangmu
-干漆,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-槐實,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-瀉後,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-槐膠,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-樹如,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-檉柳,,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-松楊,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-莢仁,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-朗榆,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-烏木,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-櫚木,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-木灰,,溫,甘,,,小毒,,ws_zh_bencao_gangmu
-石瓜,,平,苦,,,,中品,ws_zh_bencao_gangmu
-竹黃,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-楓柳,,熱,辛,,,有毒,,ws_zh_bencao_gangmu
-烏梅,,溫,酸,,,無毒,,ws_zh_bencao_gangmu
-白梅,,平,酸/鹹,,,無毒,,ws_zh_bencao_gangmu
-榔梅,,熱,辛/酸/甘,,,,下品,ws_zh_bencao_gangmu
-桃梟,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-桃膠,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-生棗,,熱,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-木心,,溫,甘/澀,,,小毒,,ws_zh_bencao_gangmu
-苦棗,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-橄欖,,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-欖仁,,溫,甘/澀,,,無毒,,ws_zh_bencao_gangmu
-棎子,,平,甘/澀,,,無毒,,ws_zh_bencao_gangmu
-韶子,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-枳椇,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鹿梨,,寒,酸/澀,,,無毒,,ws_zh_bencao_gangmu
-棠梨,,寒,酸/甘/澀,,,無毒,,ws_zh_bencao_gangmu
-海紅,,平,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-楂子,,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-山楂,,,酸,脾,,無毒,,ws_zh_bencao_gangmu
-林檎,,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-柿蒂,,平,澀,,,無毒,,ws_zh_bencao_gangmu
-橘實,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-橘核,,平,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-金橘,,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-楊梅,,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-樹皮,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-櫧子,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-鉤栗,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-橡實,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-斗殼,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-槲實,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-瓜瓤,,寒,甘,,,小毒,,ws_zh_bencao_gangmu
-沙糖,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-蓮實,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-藕節,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-蓮花,,溫,苦/甘,,,無毒,,ws_zh_bencao_gangmu
-蓮房,,溫,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-荷葉,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-慈菇,,寒,苦/甘,,,無毒,,ws_zh_bencao_gangmu
-椒紅,,溫,辛,,,有毒,,ws_zh_bencao_gangmu
-椒目,,熱,辛,脾/膀胱,,,,ws_zh_bencao_gangmu
-地椒,,溫,辛,,,小毒,,ws_zh_bencao_gangmu
-茶子,,寒,苦,,,有毒,,ws_zh_bencao_gangmu
-皋蘆,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-潦水,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-露水,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-甘露,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-明水,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-冬霜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-神水,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-醴泉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-熱湯,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-漿水,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-脂膏,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-尾血,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-膽皮,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-鼻唇,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-蹄肉,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-心血,,平,苦,,,小毒,,ws_zh_bencao_gangmu
-脊骨,,熱,甘,,,無毒,,ws_zh_bencao_gangmu
-牛角,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鼻津,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-頭肉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-懸蹄,,寒,辛,,,小毒,,ws_zh_bencao_gangmu
-牛酥,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-乳腐,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-鮓答,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-狗寶,,平,甘/鹹,,,小毒,,ws_zh_bencao_gangmu
-竹䶉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-貂鼠,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-黃鼠,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-象牙,,寒,苦,,,,中品,ws_zh_bencao_gangmu
-野馬,,平,甘,,,小毒,,ws_zh_bencao_gangmu
-野豬,,平,辛/甘,,,無毒,,ws_zh_bencao_gangmu
-豪豬,,寒,甘,,,有毒,,ws_zh_bencao_gangmu
-麋茸,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-麋角,,熱,甘,,,無毒,,ws_zh_bencao_gangmu
-靈貓,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-原系,,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-果然,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-猩猩,,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-彭侯,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-陽烏,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-脂油,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-鷿鷉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鴛鴦,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-魚狗,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-鳩肉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-青鷦,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鳲鳩,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-桑鳸,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鸜鵒,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-練鵲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-慈烏,,平,酸/鹹,,,無毒,,ws_zh_bencao_gangmu
-烏鴉,,平,酸/澀,,,無毒,,ws_zh_bencao_gangmu
-山鵲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鶻嘲,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-杜鵑,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-尾毛,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-卵白,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-卵黃,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鸐雉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-白鷴,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鷓鴣,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-竹雞,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-英雞,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-秧雞,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-雀卵,,溫,酸,,,無毒,,ws_zh_bencao_gangmu
-蒿雀,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-石燕,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-麻勃,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-浮麥,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-麥粉,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-麵筋,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-麥麨,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-麥苗,,寒,辛,,,無毒,,ws_zh_bencao_gangmu
-雀麥,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蕎麥,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-稻米,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-米泔,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-稻穰,,熱,辛/甘,,,無毒,,ws_zh_bencao_gangmu
-粳米,,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-綠豆,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-豆皮,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-豆芽,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-白豆,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-穭豆,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-豌豆,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-豇豆,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-刀豆,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蜀黍,,溫,甘/澀,,,無毒,,ws_zh_bencao_gangmu
-稗米,,寒,辛/甘/苦,,,無毒,,ws_zh_bencao_gangmu
-嫩苗,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-淡豉,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-豆黃,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-豆腐,,寒,甘/鹹,,,小毒,,ws_zh_bencao_gangmu
-寒具,,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-蒸餅,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-女曲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-粟櫱,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-稻櫱,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-飴糖,,,鹹,,,無毒,下品,ws_zh_bencao_gangmu
-米酒,,熱,苦/甘/辛,,,有毒,,ws_zh_bencao_gangmu
-燒酒,,熱,辛/甘,,,大毒,,ws_zh_bencao_gangmu
-米秕,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-長松,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-列當,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-瑣陽,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-白朮,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-蒼朮,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-子仁,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-葛谷,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-女萎,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-鵝抱,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-黃藤,,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-律草,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-莖根,,寒,苦,,,有毒,,ws_zh_bencao_gangmu
-木蓮,,平,酸,,,無毒,,ws_zh_bencao_gangmu
-甘藤,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-南藤,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-省藤,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-紫藤,,溫,甘,,,小毒,,ws_zh_bencao_gangmu
-山柰,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-廉薑,,熱,辛,,,無毒,,ws_zh_bencao_gangmu
-山薑,,熱,辛,,,無毒,,ws_zh_bencao_gangmu
-蓽茇,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-蒟醬,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-薑黃,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-鬱金,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-茅香,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-線香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-地筍,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-馬蘭,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-莖穗,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-地錦,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-崖㯶,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-誤服,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-石蒜,,溫,辛/甘,,,小毒,,ws_zh_bencao_gangmu
-地筋,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-草犀,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-苗花,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-蜀葵,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-菟葵,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-苗葉,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-鱧腸,,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-藍澱,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-海根,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-蔛草,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-酸模,,寒,酸,,,無毒,,ws_zh_bencao_gangmu
-蒲蒻,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-菰根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-水藻,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-海蘊,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-海帶,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-石帆,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-莨菪,,,苦/辛,,,有毒,下品,ws_zh_bencao_gangmu
-蓖麻,,平,甘/辛,,,小毒,,ws_zh_bencao_gangmu
-局箬,,寒,辛,,,有毒,,ws_zh_bencao_gangmu
-水堇,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-蕁麻,,寒,辛/苦,,,大毒,,ws_zh_bencao_gangmu
-乾苔,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-石蕊,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-垣衣,,,酸,,,無毒,中品,ws_zh_bencao_gangmu
-玉柏,,溫,酸,,,無毒,,ws_zh_bencao_gangmu
-石松,,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-白菊,,平,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-野菊,,溫,苦/辛,,,小毒,,ws_zh_bencao_gangmu
-角蒿,,平,辛/苦,,,小毒,,ws_zh_bencao_gangmu
-䕲蒿,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-根苗,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-鏨菜,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-𦯶麻,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-鶴虱,,平,苦,,,小毒,,ws_zh_bencao_gangmu
-豨薟,,寒,苦,,,小毒,,ws_zh_bencao_gangmu
-甘蕉,,,甘,,,無毒,下品,ws_zh_bencao_gangmu
-根節,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-萊菔,,平,辛/甘,,,無毒,,ws_zh_bencao_gangmu
-薑皮,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-茼蒿,,平,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-邪蒿,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-紫堇,,溫,酸,,,無毒,,ws_zh_bencao_gangmu
-馬蘄,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-蒔蘿,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-草豉,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-茄子,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-壺瓠,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-敗瓢,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-南瓜,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-越瓜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-胡瓜,,平,苦,,,小毒,,ws_zh_bencao_gangmu
-絲瓜,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-苦瓜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-石蒪,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-桑耳,,平,甘,,,有毒,,ws_zh_bencao_gangmu
-槐耳,,平,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-杉菌,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-香蕈,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-雞㙡,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-舵菜,,寒,鹹/甘,,,無毒,,ws_zh_bencao_gangmu
-土菌,,寒,甘,,,有毒,,ws_zh_bencao_gangmu
-竹蓐,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-地耳,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-石耳,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蕹菜,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-苜蓿,,,甘,,,無毒,上品,ws_zh_bencao_gangmu
-白苣,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-水蕨,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-翹搖,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-土芋,,寒,甘/辛,,,小毒,,ws_zh_bencao_gangmu
-甘藷,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蠶蛻,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-海蠶,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-雪蠶,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-乳蟲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-蟬蛻,,寒,鹹/甘,,,無毒,,ws_zh_bencao_gangmu
-蟬花,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-行夜,,溫,辛,,,小毒,,ws_zh_bencao_gangmu
-竹虱,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-蜻蛉,,寒,,,,無毒,下品,ws_zh_bencao_gangmu
-蜘蛛,,寒,,,,小毒,下品,ws_zh_bencao_gangmu
-窠幕,,平,甘/辛,,,有毒,,ws_zh_bencao_gangmu
-蝸牛,,寒,鹹,,,小毒,,ws_zh_bencao_gangmu
-銀屑,,寒,辛,,,無毒,,ws_zh_bencao_gangmu
-銀膏,,寒,辛,,,有毒,,ws_zh_bencao_gangmu
-銅青,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-古鏡,,平,酸,,,無毒,,ws_zh_bencao_gangmu
-鐵漿,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-鐵刀,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-粉霜,,溫,辛,,,有毒,,ws_zh_bencao_gangmu
-銀朱,,溫,辛,,,有毒,,ws_zh_bencao_gangmu
-靈砂,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-石腦,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-石髓,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-石炭,,溫,甘/辛,,,有毒,,ws_zh_bencao_gangmu
-石面,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-浮石,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-玉泉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-青玉,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-珊瑚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-馬腦,,寒,辛,,,無毒,,ws_zh_bencao_gangmu
-玻瓈,,寒,辛,,,無毒,,ws_zh_bencao_gangmu
-水精,,寒,辛,,,無毒,,ws_zh_bencao_gangmu
-大鹽,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-綠鹽,,平,鹹/苦/辛,,,無毒,,ws_zh_bencao_gangmu
-生硝,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-硵砂,,溫,鹹/苦/辛,,,有毒,,ws_zh_bencao_gangmu
-綠礬,,涼,酸,,,無毒,,ws_zh_bencao_gangmu
-玄石,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-土黃,,熱,辛/酸,,,有毒,,ws_zh_bencao_gangmu
-礞石,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-薑石,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-石蟹,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-石蛇,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-石鱉,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-龍角,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鱮魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鱅魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鱒魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鯇魚,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-竹魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鯔魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-白魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鯼魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鱤魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-勒魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鱭魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鰣魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-嘉魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鯧魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-魴魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鱸魚,,平,甘,,,小毒,,ws_zh_bencao_gangmu
-鱖魚,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-鯊魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鰷魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鱊魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鱗蛇,,寒,苦,,,小毒,,ws_zh_bencao_gangmu
-烏蛇,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-金蛇,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-水蛇,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-蛇婆,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-鰌魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鱘魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鮠魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-河豚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鮹魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-章魚,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-海鰕,,平,甘,,,小毒,,ws_zh_bencao_gangmu
-海馬,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鱁鮧,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-鰾膠,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-魚鱠,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-魚鮓,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-魚脂,,溫,甘,,,小毒,,ws_zh_bencao_gangmu
-溺白垽,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-口津唾,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-天靈蓋,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-胞衣水,,涼,辛,,,無毒,,ws_zh_bencao_gangmu
-綠毛龜,,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-蛤蜊粉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-土蜂窠,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蚯蚓泥,,寒,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-烏爹泥,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-烏古瓦,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-釜臍墨,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-百草霜,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-梁上塵,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-弓弩弦,,平,,,,無毒,下品,ws_zh_bencao_gangmu
-木犀花,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-曰︰天,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-白旃檀,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-必栗香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-薰陸香,,溫,,,,無毒,上品,ws_zh_bencao_gangmu
-龍腦香,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-胡桐淚,,寒,鹹/苦,,,無毒,,ws_zh_bencao_gangmu
-樹白皮,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-地骨皮,,寒,苦,肺/腎,,,,ws_zh_bencao_gangmu
-枸杞子,,寒,苦,肝/腎,,,,ws_zh_bencao_gangmu
-木並皮,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-葉及花,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-葉並花,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-伏牛花,,平,苦/甘,,,無毒,,ws_zh_bencao_gangmu
-黃楊木,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-不凋木,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-賣子木,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-小天蓼,,熱,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-放杖木,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-接骨木,,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-木白皮,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-桐子油,,寒,甘/辛,,,大毒,,ws_zh_bencao_gangmu
-肥皂莢,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-無患子,,平,苦,,,小毒,,ws_zh_bencao_gangmu
-子中仁,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-訶黎勒,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-蘇方木,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-大風子,,熱,辛,,,有毒,,ws_zh_bencao_gangmu
-相思子,,平,苦,,,小毒,,ws_zh_bencao_gangmu
-淡竹葉,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-淡竹茹,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-仙人杖,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-柳寄生,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-仲思棗,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-庵摩勒,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-毗梨勒,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-五斂子,,平,酸/甘/澀,,,無毒,,ws_zh_bencao_gangmu
-五子實,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-海松子,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-檳榔子,,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-大腹子,,溫,辛/澀,,,無毒,,ws_zh_bencao_gangmu
-椰子瓤,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-椰子漿,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-椰子皮,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-無漏子,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-桄榔子,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-䔋木面,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-波羅蜜,,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-阿勒勃,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-沙棠果,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-都桷子,,平,酸/澀,,,無毒,,ws_zh_bencao_gangmu
-都念子,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-都咸子,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-德慶果,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-馬檳榔,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-木瓜核,,溫,酸/澀,,,無毒,,ws_zh_bencao_gangmu
-赤爪木,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-君遷子,,平,甘/澀,,,無毒,,ws_zh_bencao_gangmu
-甘石榴,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-酸石榴,,溫,酸,,,無毒,,ws_zh_bencao_gangmu
-黃橘皮,,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-青橘皮,,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-油胡桃,,熱,辛,,,有毒,,ws_zh_bencao_gangmu
-瓜子仁,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-獼猴桃,,寒,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-藤中汁,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-蓮蕊須,,溫,甘/澀,,,無毒,,ws_zh_bencao_gangmu
-畢澄茄,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-食茱萸,,熱,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-鹽麩子,,寒,酸/鹹,,,無毒,,ws_zh_bencao_gangmu
-醋林子,,寒,苦/甘,,,無毒,,ws_zh_bencao_gangmu
-甘露蜜,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-屋漏水,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-井華水,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-玉井水,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-乳穴水,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-碧海水,,溫,鹹,,,小毒,,ws_zh_bencao_gangmu
-阿井水,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-磨刀水,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-浸藍水,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-懸蹄毛,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-黃牛肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-水牛肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-白馬溺,,寒,辛,,,有毒,,ws_zh_bencao_gangmu
-馬絆繩,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-黃明膠,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-底野迦,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-敗鼓皮,,平,,,,無毒,下品,ws_zh_bencao_gangmu
-土撥鼠,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-胎中屎,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-麝臍香,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-野狼筋,,熱,鹹,,,無毒,,ws_zh_bencao_gangmu
-膃肭獸,,平,酸,,,無毒,,ws_zh_bencao_gangmu
-白鶴血,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-啄木鳥,,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-雄鵲肉,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-烏骨雞,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-秦燕毛,,平,辛,,,有毒,,ws_zh_bencao_gangmu
-寒號蟲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-五靈脂,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鳳凰台,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-白油麻,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-胡麻油,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-亞麻子,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-淅二泔,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-黑大豆,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-黃大豆,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-綠豆粉,,涼,甘,,,無毒,,ws_zh_bencao_gangmu
-玉蜀黍,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蓬草子,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-罌子粟,,寒,酸/澀,,,無毒,,ws_zh_bencao_gangmu
-阿芙蓉,,溫,酸/澀,,,,中品,ws_zh_bencao_gangmu
-蒲州豉,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu
-小麥粥,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-米麥麨,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-小麥曲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-穬麥櫱,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-榆仁醬,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-乾餳糟,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-隱忍葉,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-百脈根,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-懸鉤子,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-木鱉子,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-番木鱉,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-馬兜鈴,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-榼藤子,,平,澀/甘,,,無毒,,ws_zh_bencao_gangmu
-月季花,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-何首烏,,溫,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-九仙子,,涼,苦,,,無毒,,ws_zh_bencao_gangmu
-黃藥子,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-解毒子,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-白藥子,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-威靈仙,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-通脫木,,寒,甘/淡,,,無毒,,ws_zh_bencao_gangmu
-白花藤,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-赤地利,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-烏蘞莓,,寒,酸/苦,,,無毒,,ws_zh_bencao_gangmu
-扶芳藤,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-常春藤,,溫,苦/甘,,,無毒,,ws_zh_bencao_gangmu
-藤中水,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-天仙藤,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-風延母,,平,苦,,,小毒,,ws_zh_bencao_gangmu
-蜘蛛香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-甘松香,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-花及子,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-縮砂蔤,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-蓽勃沒,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-補骨脂,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-蓬莪荗,,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-鬱金香,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-白茅香,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-排草香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-迷迭香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-䔾車香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-艾納香,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-石香葇,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-骨碎補,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-金星草,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-虎耳草,,寒,苦/辛,,,小毒,,ws_zh_bencao_gangmu
-石胡荽,,寒,辛,,,無毒,,ws_zh_bencao_gangmu
-酢漿草,,寒,酸,,,無毒,,ws_zh_bencao_gangmu
-離鬲草,,寒,辛,,,小毒,,ws_zh_bencao_gangmu
-胡黃連,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-土當歸,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-都管草,,寒,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-鬼督郵,,平,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-釵子股,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-吉利草,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-硃砂根,,涼,苦,,,無毒,,ws_zh_bencao_gangmu
-辟虺雷,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-錦地羅,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-紫金牛,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-鐵線草,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-熟地黃,,溫,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-階前草,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-捶胡根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-黃蜀葵,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-子及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-迎春花,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-鼠麴草,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-剪春羅,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-金盞草,,寒,酸,,,無毒,,ws_zh_bencao_gangmu
-草及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-狗舌草,,寒,苦,,,小毒,,ws_zh_bencao_gangmu
-狼把草,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-三白草,,寒,甘/辛,,,小毒,,ws_zh_bencao_gangmu
-蠶網草,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-穀精草,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-海金沙,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-地楊梅,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-水楊梅,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-半邊蓮,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-鬼針草,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-攀倒甑,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-龍舌草,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-萍蓬草,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-續隨子,,溫,辛,,,有毒,,ws_zh_bencao_gangmu
-木藜蘆,,溫,苦/辛,,,有毒,,ws_zh_bencao_gangmu
-坐拿草,,熱,辛,,,有毒,,ws_zh_bencao_gangmu
-醉魚草,,溫,辛/苦,,,小毒,,ws_zh_bencao_gangmu
-葉及子,,溫,辛,,,有毒,,ws_zh_bencao_gangmu
-格注草,,溫,辛/苦,,,大毒,,ws_zh_bencao_gangmu
-土馬鬃,,寒,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-千年艾,,溫,辛/苦,,,無毒,,ws_zh_bencao_gangmu
-黃花蒿,,涼,辛,,,無毒,,ws_zh_bencao_gangmu
-花及根,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-紅藍花,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-番紅花,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-根及花,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-葫蘆巴,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-龍常草,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-莖及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-五辛菜,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-胡蘿蔔,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-白花菜,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-瓤及子,,寒,苦,,,有毒,,ws_zh_bencao_gangmu
-白冬瓜,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-白瓜子,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-石花菜,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-鹿角菜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-龍鬚菜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-天花蕈,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蘑菰蕈,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-馬齒莧,,寒,酸,,,無毒,,ws_zh_bencao_gangmu
-水苦蕒,,寒,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-翻白草,,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-黃瓜菜,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-生瓜菜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-萁及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-秦荻藜,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-零餘子,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-草石蠶,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-諸竹筍,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-留師蜜,,寒,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-蟲白蠟,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-百藥煎,,,酸/鹹/甘,心/肺,,無毒,,ws_zh_bencao_gangmu
-繭鹵汁,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-原蠶砂,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-九香蟲,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-枸杞蟲,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-木蠹蟲,,平,辛,,,小毒,,ws_zh_bencao_gangmu
-桑蠹蟲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-柳蠹蟲,,平,甘/辛,,,小毒,,ws_zh_bencao_gangmu
-桃蠹蟲,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-桂蠹蟲,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-蘆蠹蟲,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-自然銅,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-銅礦石,,寒,酸,,,小毒,,ws_zh_bencao_gangmu
-密陀僧,,寒,甘,肝,,,,ws_zh_bencao_gangmu
-古文錢,,平,辛,,,有毒,,ws_zh_bencao_gangmu
-諸銅器,,寒,辛,,,,中品,ws_zh_bencao_gangmu
-鐵華粉,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-諸鐵器,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-不灰木,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-青石脂,,平,酸,,,無毒,,ws_zh_bencao_gangmu
-黃石脂,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-黑石脂,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-桃花石,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-井泉石,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-無名異,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-白玉髓,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-菩薩石,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-光明鹽,,平,鹹/甘,,,無毒,,ws_zh_bencao_gangmu
-玄精石,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-馬牙硝,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-石硫赤,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-石硫青,,溫,酸,,,無毒,,ws_zh_bencao_gangmu
-磁石毛,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-金星石,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-婆娑石,,寒,甘/淡,,,無毒,,ws_zh_bencao_gangmu
-花乳石,,平,酸/澀,,,無毒,,ws_zh_bencao_gangmu
-白羊石,,涼,淡,,,無毒,,ws_zh_bencao_gangmu
-麥飯石,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-紫梢花,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-眼睛汁,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-石首魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-杜父魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-石鮅魚,,平,甘,,,小毒,,ws_zh_bencao_gangmu
-黃鯝魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-鱠殘魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-黃頷蛇,,溫,甘,,,小毒,,ws_zh_bencao_gangmu
-比目魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-海鷂魚,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-婦人月水,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-頌曰︰今,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-蜣螂轉丸,,寒,鹹/苦,,,無毒,,ws_zh_bencao_gangmu
-死人枕席,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-子及木皮,,涼,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-根及木皮,,寒,苦,,,,上品,ws_zh_bencao_gangmu
-皮及根皮,,平,辛,,,小毒,,ws_zh_bencao_gangmu
-城東腐木,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-莖及白皮,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-胡名鎮頭,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-阿月渾子,,溫,辛,,,無毒,,ws_zh_bencao_gangmu
-紅白蓮花,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-山岩泉水,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-糧罌中水,,平,辛,,,小毒,,ws_zh_bencao_gangmu
-牡狗陰莖,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-白馬陰莖,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-四足及尾,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-鼫鼠鼫鼠,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-腳骨及嘴,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-丹雄雞肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-白雄雞肉,,溫,酸,,,無毒,,ws_zh_bencao_gangmu
-烏雄雞肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-黑雌雞肉,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-黃雌雞肉,,平,甘/酸/鹹,,,無毒,,ws_zh_bencao_gangmu
-泰和老雞,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-穰莖並根,,熱,辛,,,小毒,,ws_zh_bencao_gangmu
-野狼尾草,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-大麥醋糟,,寒,酸,,,無毒,,ws_zh_bencao_gangmu
-野狼跋子,,寒,苦,,,小毒,,ws_zh_bencao_gangmu
-伏雞子根,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-赤車使者,,溫,辛/苦,,,有毒,,ws_zh_bencao_gangmu
-仙人掌草,,寒,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-紫背金盤,,熱,辛/澀,,,無毒,,ws_zh_bencao_gangmu
-屋上敗茅,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-火炭母草,,平,酸,,,有毒,,ws_zh_bencao_gangmu
-地蜈蚣草,,寒,苦,,,無毒,,ws_zh_bencao_gangmu
-越王餘算,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu
-曼陀羅花,,溫,辛,,,有毒,,ws_zh_bencao_gangmu
-昨葉何草,,平,酸,,,無毒,,ws_zh_bencao_gangmu
-劉寄奴草,,溫,苦,,,無毒,,ws_zh_bencao_gangmu
-仙人杖草,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-雄原蠶蛾,,溫,鹹,,,小毒,,ws_zh_bencao_gangmu
-五色石脂,,平,甘,,,,上品,ws_zh_bencao_gangmu
-石中黃子,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-握雪礜石,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-十二時蟲,,寒,鹹,,,小毒,,ws_zh_bencao_gangmu
-枸杞地骨皮,,寒,苦,,,,上品,ws_zh_bencao_gangmu
-即廣中所謂,,平,甘/辛,,,小毒,,ws_zh_bencao_gangmu
-五臟及腸肚,,寒,苦,,,有毒,,ws_zh_bencao_gangmu
-糟筍節中酒,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-舂杵頭細糠,,熱,辛/甘,,,,中品,ws_zh_bencao_gangmu
-青精乾石𩛓飯,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-作乾石斛法︰,,平,甘,,,無毒,,ws_zh_bencao_gangmu
-青芝一名龍芝,,平,酸,,,無毒,,ws_zh_bencao_gangmu
-赤芝一名丹芝,,平,苦,,,無毒,,ws_zh_bencao_gangmu
-黃芝一名金芝,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-黑芝一名玄芝,,平,鹹,,,無毒,,ws_zh_bencao_gangmu
-紫芝一名木芝,,溫,甘,,,無毒,,ws_zh_bencao_gangmu
-祝之曰︰類我,,平,辛,,,無毒,,ws_zh_bencao_gangmu
-時珍曰︰按毛萇,,寒,甘,,,無毒,,ws_zh_bencao_gangmu
-時珍曰︰梗是矣,,平,甘/鹹,,,小毒,,ws_zh_bencao_gangmu
-人精,,溫,甘,,,,,ws_zh_bencao_gangmu
-人汗,,,鹹,,,有毒,,ws_zh_bencao_gangmu
-眼淚,,,鹹,,,有毒,,ws_zh_bencao_gangmu
-蠵龜,,平,鹹,,,,,ws_zh_bencao_gangmu
-納鱉,,寒,,,,有毒,,ws_zh_bencao_gangmu
-蟛蜞,,,鹹,,,有毒,,ws_zh_bencao_gangmu
-蛤蜊,,,鹹,,,無毒,,ws_zh_bencao_gangmu
-海螺,,,甘,,,無毒,,ws_zh_bencao_gangmu
-石鹼,,溫,辛/苦,,,,,ws_zh_bencao_gangmu
-車脂,,,辛,,,無毒,,ws_zh_bencao_gangmu
-榧實,,,苦,,,,下品,ws_zh_bencao_gangmu
-麂目,,,酸/甘,,,無毒,,ws_zh_bencao_gangmu
-皮瓤,,,辛/酸,,,無毒,,ws_zh_bencao_gangmu
-槲若,,,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-臘雪,,,鹹,,,有毒,,ws_zh_bencao_gangmu
-夏冰,,,甘,,,無毒,,ws_zh_bencao_gangmu
-溫湯,,熱,辛,,,,,ws_zh_bencao_gangmu
-齏水,,,酸/鹹,,,無毒,,ws_zh_bencao_gangmu
-癭氣,,平,甘,,,,,ws_zh_bencao_gangmu
-陰卵,,熱,,,,小毒,,ws_zh_bencao_gangmu
-醍醐,,,甘,,,無毒,,ws_zh_bencao_gangmu
-諸血,,平,甘,,,,,ws_zh_bencao_gangmu
-鷑鳩,,平,,,,有毒,,ws_zh_bencao_gangmu
-孔雀,,,,,,有毒,下品,ws_zh_bencao_gangmu
-鴟鵂,,,,,,大毒,下品,ws_zh_bencao_gangmu
-麻仁,,,辛,,,有毒,,ws_zh_bencao_gangmu
-麥麩,,溫,甘,,,,,ws_zh_bencao_gangmu
-豆油,,熱,辛/甘,,,,,ws_zh_bencao_gangmu
-蠶豆,,溫,苦/甘,,,,,ws_zh_bencao_gangmu
-參子,,,甘/澀,,,無毒,,ws_zh_bencao_gangmu
-菰米,,,甘,,,無毒,,ws_zh_bencao_gangmu
-釀酒,,熱,甘/辛,,,,,ws_zh_bencao_gangmu
-酒糟,,,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-旋花,,,甘,,,,上品,ws_zh_bencao_gangmu
-藤黃,,,酸/澀,,,有毒,,ws_zh_bencao_gangmu
-瑞香,,,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-茉莉,,熱,,,,有毒,,ws_zh_bencao_gangmu
-石莧,,,辛/苦,,,小毒,,ws_zh_bencao_gangmu
-根莖,,,甘,,,無毒,,ws_zh_bencao_gangmu
-吳藍,,,苦/甘,,,無毒,,ws_zh_bencao_gangmu
-天蓼,,,辛,,,有毒,,ws_zh_bencao_gangmu
-白菖,,,甘,,,無毒,,ws_zh_bencao_gangmu
-菰筍,,,甘,,,無毒,,ws_zh_bencao_gangmu
-菰手,,,甘,,,無毒,,ws_zh_bencao_gangmu
-膠投,,,,,,有毒,下品,ws_zh_bencao_gangmu
-射罔,,,苦,,,大毒,,ws_zh_bencao_gangmu
-鳳仙,,,苦/甘/辛,,,小毒,,ws_zh_bencao_gangmu
-音像,,,辛,,,大毒,,ws_zh_bencao_gangmu
-桑花,,,苦,,,無毒,,ws_zh_bencao_gangmu
-茺蔚,,寒,,,,,上品,ws_zh_bencao_gangmu
-小青,,溫,,,,無毒,,ws_zh_bencao_gangmu
-木賊,,,甘/苦,,,無毒,,ws_zh_bencao_gangmu
-羅勒,,溫,辛,,,,,ws_zh_bencao_gangmu
-芋子,,,辛,,,無毒,,ws_zh_bencao_gangmu
-灶馬,,,辛,,,有毒,,ws_zh_bencao_gangmu
-鉛霜,,,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-鐵精,,平,,,,,中品,ws_zh_bencao_gangmu
-鐵釘,,平,,,,無毒,,ws_zh_bencao_gangmu
-鹽藥,,,鹹,,,無毒,,ws_zh_bencao_gangmu
-硼砂,,,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-黃礬,,,酸/澀/鹹,,,有毒,,ws_zh_bencao_gangmu
-砒石,,,苦/酸,,,有毒,,ws_zh_bencao_gangmu
-越砥,,,甘,,,無毒,,ws_zh_bencao_gangmu
-鼉甲,,,甘,,,小毒,,ws_zh_bencao_gangmu
-䱱魚,,,甘,,,有毒,,ws_zh_bencao_gangmu
-鯢魚,,,甘,,,有毒,,ws_zh_bencao_gangmu
-白瓷器,,平,,,,無毒,,ws_zh_bencao_gangmu
-燈盞油,,,辛/苦,,,有毒,,ws_zh_bencao_gangmu
-海紅豆,,寒,,,,小毒,,ws_zh_bencao_gangmu
-豬腰子,,,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-苦竹葉,,,苦,,,無毒,,ws_zh_bencao_gangmu
-桃寄生,,,苦/辛,,,無毒,,ws_zh_bencao_gangmu
-木威子,,,酸/辛,,,無毒,,ws_zh_bencao_gangmu
-鹽膽水,,,鹹/苦,,,大毒,,ws_zh_bencao_gangmu
-生熟湯,,,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-母豬乳,,寒,,,,無毒,,ws_zh_bencao_gangmu
-水四碗,,,,,,大毒,中品,ws_zh_bencao_gangmu
-白馬通,,溫,,,,無毒,,ws_zh_bencao_gangmu
-筆頭灰,,寒,,,,無毒,,ws_zh_bencao_gangmu
-毛及屎,,寒,,,,,下品,ws_zh_bencao_gangmu
-白鴿肉,,溫,辛,,,,,ws_zh_bencao_gangmu
-血及膽,,溫,,,,有毒,,ws_zh_bencao_gangmu
-東陽酒,,,甘/辛,,,無毒,,ws_zh_bencao_gangmu
-獨行根,,,辛/苦,,,有毒,,ws_zh_bencao_gangmu
-佛甲草,,寒,甘,,,,,ws_zh_bencao_gangmu
-山慈菇,,,甘/辛,,,小毒,,ws_zh_bencao_gangmu
-漏籃子,,,苦/辛,,,有毒,,ws_zh_bencao_gangmu
-舩底苔,,,甘,,,無毒,,ws_zh_bencao_gangmu
-九牛草,,,苦,,,小毒,,ws_zh_bencao_gangmu
-楊櫨耳,,平,,,,無毒,,ws_zh_bencao_gangmu
-皂角蕈,,,辛,,,有毒,,ws_zh_bencao_gangmu
-葛花菜,,,苦/甘,,,無毒,,ws_zh_bencao_gangmu
-菜及根,,,甘,,,無毒,,ws_zh_bencao_gangmu
-苦竹筍,,寒,苦/甘,,,,,ws_zh_bencao_gangmu
-淡竹筍,,,苦,,,小毒,,ws_zh_bencao_gangmu
-刺竹筍,,,甘/苦,,,小毒,,ws_zh_bencao_gangmu
-青腰蟲,,寒,,,,無毒,,ws_zh_bencao_gangmu
-赤銅屑,,平,苦,,,,,ws_zh_bencao_gangmu
-銅弩牙,,平,,,,,下品,ws_zh_bencao_gangmu
-水銀粉,,,辛,,,無毒,,ws_zh_bencao_gangmu
-石腦油,,,辛/苦,,,有毒,,ws_zh_bencao_gangmu
-玄明粉,,,辛/甘,,,無毒,,ws_zh_bencao_gangmu
-白花蛇,,,,肺/肝,,有毒,,ws_zh_bencao_gangmu
-腸及肝,,平,甘,,,,,ws_zh_bencao_gangmu
-黃顙魚,,平,甘,,,,,ws_zh_bencao_gangmu
-海豚魚,,,鹹,,,無毒,,ws_zh_bencao_gangmu
-文鰩魚,,,甘/酸,,,無毒,,ws_zh_bencao_gangmu
-婆律香膏,,溫,辛,,,,,ws_zh_bencao_gangmu
-皮中白汁,,平,苦,,,,,ws_zh_bencao_gangmu
-白綿及布,,熱,辛,,,,,ws_zh_bencao_gangmu
-胡桃青皮,,,苦/澀,,,無毒,,ws_zh_bencao_gangmu
-獨用將軍,,,辛,,,無毒,,ws_zh_bencao_gangmu
-喙及腳脛骨,,溫,苦,,,,,ws_zh_bencao_gangmu
-藏器曰︰𧍧䗯,,,甘/鹹,,,無毒,,ws_zh_bencao_gangmu
-三歲陳棗核中仁,,溫,甘,,,,,ws_zh_bencao_gangmu
-瘧龜,,,,,,無毒,,ws_zh_bencao_gangmu
-鶚龜,,,,,,無毒,,ws_zh_bencao_gangmu
-甘土,,,,,,無毒,,ws_zh_bencao_gangmu
-甑帶,,,,,,無毒,,ws_zh_bencao_gangmu
-芰花,,,澀,,,,,ws_zh_bencao_gangmu
-脛骨,,,,,,大毒,,ws_zh_bencao_gangmu
-烏氈,,,,,,無毒,,ws_zh_bencao_gangmu
-牡鼠,,,,,,有毒,,ws_zh_bencao_gangmu
-木狗,,熱,,,,,,ws_zh_bencao_gangmu
-狒狒,,,,,,無毒,,ws_zh_bencao_gangmu
-烏目,,,,,,無毒,,ws_zh_bencao_gangmu
-頭血,,平,,,,,,ws_zh_bencao_gangmu
-萵苣,,,苦,,,,,ws_zh_bencao_gangmu
-天牛,,,,,,有毒,,ws_zh_bencao_gangmu
-壁錢,,,,,,無毒,,ws_zh_bencao_gangmu
-溪狗,,,,,,小毒,,ws_zh_bencao_gangmu
-水黽,,,,,,有毒,,ws_zh_bencao_gangmu
-豉蟲,,,,,,有毒,,ws_zh_bencao_gangmu
-砂子,,,,,,有毒,,ws_zh_bencao_gangmu
-故鋸,,,,,,無毒,,ws_zh_bencao_gangmu
-蛇黃,,,,,,無毒,,ws_zh_bencao_gangmu
-龍涎,,,,,,有毒,,ws_zh_bencao_gangmu
-蛇頭,,,,,,大毒,,ws_zh_bencao_gangmu
-蛇角,,,,,,有毒,,ws_zh_bencao_gangmu
-鱣魚,,,,,,無毒,,ws_zh_bencao_gangmu
-魚虎,,,,,,有毒,,ws_zh_bencao_gangmu
-铁浆,,,,心/肺,,,,ws_zh_leigong_paozhi_yaoxing
-钟乳,,,,肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-矾石,,,,肺/肝,,,,ws_zh_leigong_paozhi_yaoxing
-青盐,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-食盐,,,,腎/肺/肝,,,,ws_zh_leigong_paozhi_yaoxing
-蓬砂,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-陈皮,,,,肺/肝/脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-青皮,,,,肝/脾,,,,ws_zh_leigong_paozhi_yaoxing
-枳壳,,,,肺/肝/胃/大腸,,,,ws_zh_leigong_paozhi_yaoxing
-枳实,,,,心/脾,,,,ws_zh_leigong_paozhi_yaoxing
-杏仁,,,,肺/大腸,,,,ws_zh_leigong_paozhi_yaoxing
-桃仁,,,,肝/大腸,,,,ws_zh_leigong_paozhi_yaoxing
-大枣,,,,心/脾,,,,ws_zh_leigong_paozhi_yaoxing
-乌梅,,,,肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-芡实,,,,心/腎/脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-胡桃,,,,肺/肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-龙眼,,,,心/脾,,,,ws_zh_leigong_paozhi_yaoxing
-橄榄,,,,脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-麦芽,,,,脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-饴糖,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-豆豉,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-绿豆,,,,心/胃,,,,ws_zh_leigong_paozhi_yaoxing
-人参,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-当归,,,,心/肝/肺,,,,ws_zh_leigong_paozhi_yaoxing
-川芎,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-山药,,,,脾/肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-白术,,,,脾,,,,ws_zh_leigong_paozhi_yaoxing
-苍术,,,,脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-贝母,,,,心/肺,,,,ws_zh_leigong_paozhi_yaoxing
-黄芩,,,,肺/大腸/膀胱/膽,,,,ws_zh_leigong_paozhi_yaoxing
-黄连,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-紫苏,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-防风,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-独活,,,,肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-羌活,,,,小腸/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-香附,,,,肺/肝/脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-麻黄,,,,肺/心/大腸/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-细辛,,,,心/肝/膽/脾,,,,ws_zh_leigong_paozhi_yaoxing
-泽泻,,,,膀胱/腎/三焦/小腸,,,,ws_zh_leigong_paozhi_yaoxing
-玄参,,,,心/肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-丹参,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-苦参,,,,胃/大腸/肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-红花,,,,心/肝,,,,ws_zh_leigong_paozhi_yaoxing
-三棱,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-天麻,,,,肝/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-南星,,,,脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-远志,,,,心/腎,,,,ws_zh_leigong_paozhi_yaoxing
-黄精,,,,脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-蒲黄,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-续断,,,,肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-锁阳,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-甘菊,,,,肺/脾/肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-草果,,,,脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-商陆,,,,脾/膀胱/小腸,,,,ws_zh_leigong_paozhi_yaoxing
-葶苈,,,,肺/心/脾/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-木通,,,,小腸,,,,ws_zh_leigong_paozhi_yaoxing
-灯心,,,,心/小腸,,,,ws_zh_leigong_paozhi_yaoxing
-石苇,,,,肺/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-木贼,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-郁金,,,,心/肺,,,,ws_zh_leigong_paozhi_yaoxing
-芦荟,,,,心/肝,,,,ws_zh_leigong_paozhi_yaoxing
-泽兰,,,,小腸,,,,ws_zh_leigong_paozhi_yaoxing
-荜茇,,,,肺/脾/胃/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-兰叶,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-芦根,,,,肺/胃,,,,ws_zh_leigong_paozhi_yaoxing
-艾叶,,,,肝/脾,,,,ws_zh_leigong_paozhi_yaoxing
-薄荷,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-藿香,,,,肺/脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-荆芥,,,,肺/肝,,,,ws_zh_leigong_paozhi_yaoxing
-松香,,,,脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-槐实,,,,心/肝/大腸,,,,ws_zh_leigong_paozhi_yaoxing
-乌药,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-黄柏,,,,腎/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-益智,,,,脾/胃/腎,,,,ws_zh_leigong_paozhi_yaoxing
-槟榔,,,,胃/大腸,,,,ws_zh_leigong_paozhi_yaoxing
-冰片,,,,肺/肝,,,,ws_zh_leigong_paozhi_yaoxing
-猪苓,,,,膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-苏木,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-竹叶,,,,心/肺/胃,,,,ws_zh_leigong_paozhi_yaoxing
-芜荑,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-楮实,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-蕤仁,,,,心/肝/脾,,,,ws_zh_leigong_paozhi_yaoxing
-牙皂,,,,肝/胃,,,,ws_zh_leigong_paozhi_yaoxing
-枫香,,,,脾/肝,,,,ws_zh_leigong_paozhi_yaoxing
-生姜,,,,肺/心/脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-莱菔,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-胡荽,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-葱白,,,,肺/胃/肝,,,,ws_zh_leigong_paozhi_yaoxing
-金汁,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-屎蛆,,,,脾,,,,ws_zh_leigong_paozhi_yaoxing
-人溺,,,,心/肺,,,,ws_zh_leigong_paozhi_yaoxing
-龙骨,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-牛黄,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-阿胶,,,,肺/肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-熊胆,,,,膽,,,,ws_zh_leigong_paozhi_yaoxing
-猪肉,,,,脾,,,,ws_zh_leigong_paozhi_yaoxing
-蜂蜜,,,,脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-牡蛎,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-珍珠,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-龟甲,,,,心/脾/肝,,,,ws_zh_leigong_paozhi_yaoxing
-鳖甲,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-虾蟆,,,,脾,,,,ws_zh_leigong_paozhi_yaoxing
-鲫鱼,,,,脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-鲤鱼,,,,脾/肺/肝,,,,ws_zh_leigong_paozhi_yaoxing
-鳝鱼,,,,脾,,,,ws_zh_leigong_paozhi_yaoxing
-大青,,,,心/肝/胃,,,,ws_zh_bencao_biandu
-钩藤,,,,肝,,,,ws_zh_bencao_biandu
-浮萍,,,,肺,,,,ws_zh_bencao_biandu
-芫花,,,,脾/肺/腎,,,,ws_zh_bencao_biandu
-藜芦,,,,肝,,,,ws_zh_bencao_biandu
-浮麦,,,,心,,,,ws_zh_bencao_biandu
-韭菜,,,,肝,,,,ws_zh_bencao_biandu
-茶叶,,,,心/肺/脾/胃,,,,ws_zh_bencao_biandu
-朱砂,,,,心,,,,ws_zh_bencao_biandu
-龟板,,,,腎,,,,ws_zh_bencao_biandu
-甲片,,,,肝/胃,,,,ws_zh_bencao_biandu
-蛤壳,,,,腎,,,,ws_zh_bencao_biandu
-地龙,,,,脾/胃,,,,ws_zh_bencao_biandu
-虻虫,,,,肝,,,,ws_zh_bencao_biandu
-胁痛,,,,肝/大腸/三焦,,,,ws_zh_yaoyao_fenji
-落胎,,,,肝/肺/脾/腎/心包,,,,ws_zh_yaoyao_fenji
-止烦,,,,心/肺,,,,ws_zh_yaoyao_fenji
-面上,,,,肝/心包/膽,,,,ws_zh_yaoyao_fenji
-面身,,,,膀胱,,,,ws_zh_yaoyao_fenji
-瀉痢,,,,三焦,,,,ws_zh_yaoyao_fenji
-破冷,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-寒熱,,,,肺/胃,,,,ws_zh_yaoyao_fenji
-上焦,,,,肺/脾/胃,,,,ws_zh_yaoyao_fenji
-兰草,,,,肺/胃,,,,ws_zh_yaoyao_fenji
-清頭,,,,肝/膽/胃,,,,ws_zh_yaoyao_fenji
-取吐,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-恶寒,,,,肺/心/肝,,,,ws_zh_yaoyao_fenji
-產後,,,,心/肝/腎/心包,,,,ws_zh_yaoyao_fenji
-大人,,,,肝/心包,,,,ws_zh_yaoyao_fenji
-檀香,,,,肺/腎/胃,,,,ws_zh_yaoyao_fenji
-乳香,,,,心/脾/肝,,,,ws_zh_yaoyao_fenji
-并入,,,,肝,,,,ws_zh_yaoyao_fenji
-諸筋,,,,肝,,,,ws_zh_yaoyao_fenji
-除肤,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-凉諸,,,,肝/膀胱/胃,,,,ws_zh_yaoyao_fenji
-明怕,,,,肝,,,,ws_zh_yaoyao_fenji
-郁结,,,,脾/肺,,,,ws_zh_yaoyao_fenji
-谷芽,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-秫米,,,,肺,,,,ws_zh_yaoyao_fenji
-風氣,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-消痰,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-症结,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-红曲,,,,脾/胃/大腸,,,,ws_zh_yaoyao_fenji
-盗汗,,,,肺/胃,,,,ws_zh_yaoyao_fenji
-肿痛,,,,肝,,,,ws_zh_yaoyao_fenji
-铜青,,,,肝/膽,,,,ws_zh_yaoyao_fenji
-白鸽,,,,腎/肺,,,,ws_zh_yaoyao_fenji
-发寒,,,,肝,,,,ws_zh_yaoyao_fenji
-骨毒,,,,腎/肝,,,,ws_zh_yaoyao_fenji
-通經,,,,肝/胃/大腸,,,,ws_zh_yaoyao_fenji
-蛇蜕,,,,肝,,,,ws_zh_yaoyao_fenji
-与白,,,,肺/肝,,,,ws_zh_yaoyao_fenji
-補五,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-积聚,,,,肝,,,,ws_zh_yaoyao_fenji
-三虫,,,,心/腎/膀胱/小腸,,,,ws_zh_yaoyao_fenji
-消扑,,,,肝/脾,,,,ws_zh_yaoyao_fenji
-補女,,,,腎/膀胱,,,,ws_zh_yaoyao_fenji
-其子,,,,肝/心包,,,,ws_zh_yaoyao_fenji
-堪作,,,,肝,,,,ws_zh_yaoyao_fenji
-大蓟,,,,肝,,,,ws_zh_yaoyao_fenji
-小蓟,,,,肝,,,,ws_zh_yaoyao_fenji
-肾氣,,,,小腸/心,,,,ws_zh_yaoyao_fenji
-通血,,,,肝/胃,,,,ws_zh_yaoyao_fenji
-养肺,,,,腎/肝/小腸,,,,ws_zh_yaoyao_fenji
-茎痛,,,,小腸/膀胱,,,,ws_zh_yaoyao_fenji
-腰痛,,,,肺/脾/腎,,,,ws_zh_yaoyao_fenji
-膀胱,,,,膀胱,,,,ws_zh_yaoyao_fenji
-利小,,,,心/肝/小腸,,,,ws_zh_yaoyao_fenji
-能食,,,,心/小腸,,,,ws_zh_yaoyao_fenji
-下氣,,,,肝/脾,,,,ws_zh_yaoyao_fenji
-养肝,,,,肺/脾/腎,,,,ws_zh_yaoyao_fenji
-痿等,,,,腎/心,,,,ws_zh_yaoyao_fenji
-游風,,,,腎,,,,ws_zh_yaoyao_fenji
-中年,,,,肝/胃/大腸/三焦,,,,ws_zh_yaoyao_fenji
-故治,,,,腎,,,,ws_zh_yaoyao_fenji
-伤中,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-熱妄,,,,心/肺/胃,,,,ws_zh_yaoyao_fenji
-益髓,,,,肝/腎/脾,,,,ws_zh_yaoyao_fenji
-服长,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-陰干,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-虚損,,,,心/肝/腎,,,,ws_zh_yaoyao_fenji
-血竭,,,,肝/心包,,,,ws_zh_yaoyao_fenji
-後余,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-下痛,,,,腎/三焦,,,,ws_zh_yaoyao_fenji
-消熱,,,,心/肺/脾/腎,,,,ws_zh_yaoyao_fenji
-小麥,,,,心,,,,ws_zh_yaoyao_fenji
-黑豆,,,,腎,,,,ws_zh_yaoyao_fenji
-疼痛,,,,肝/大腸/心,,,,ws_zh_yaoyao_fenji
-除腸,,,,心/脾,,,,ws_zh_yaoyao_fenji
-血痢,,,,肺/肝/腎,,,,ws_zh_yaoyao_fenji
-健忘,,,,心/脾,,,,ws_zh_yaoyao_fenji
-泥者,,,,心/腎/脾/胃,,,,ws_zh_yaoyao_fenji
-莲须,,,,腎/心,,,,ws_zh_yaoyao_fenji
-椒毒,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-人乳,,,,心/脾/肝/腎,,,,ws_zh_yaoyao_fenji
-近丈,,,,腎/心/肝/心包,,,,ws_zh_yaoyao_fenji
-丈夫,,,,腎,,,,ws_zh_yaoyao_fenji
-五劳,,,,脾/肺,,,,ws_zh_yaoyao_fenji
-風搐,,,,腎,,,,ws_zh_yaoyao_fenji
-益大,,,,腎/心/肝/脾,,,,ws_zh_yaoyao_fenji
-痢脓,,,,心/脾,,,,ws_zh_yaoyao_fenji
-小腹,,,,肝/脾/胃/心包/大腸,,,,ws_zh_yaoyao_fenji
-熱而,,,,脾,,,,ws_zh_yaoyao_fenji
-凉心,,,,肺/腎,,,,ws_zh_yaoyao_fenji
-熱支,,,,腎,,,,ws_zh_yaoyao_fenji
-其血,,,,肝/胃,,,,ws_zh_yaoyao_fenji
-猪肚,,,,心,,,,ws_zh_yaoyao_fenji
-以官,,,,心,,,,ws_zh_yaoyao_fenji
-陰汗,,,,肺/胃,,,,ws_zh_yaoyao_fenji
-积血,,,,膽,,,,ws_zh_yaoyao_fenji
-灼熱,,,,胃,,,,ws_zh_yaoyao_fenji
-续筋,,,,心/肝/腎/心包,,,,ws_zh_yaoyao_fenji
-腹内,,,,肝/膽,,,,ws_zh_yaoyao_fenji
-服金,,,,肝,,,,ws_zh_yaoyao_fenji
-破症,,,,心/心包/三焦/肺/肝/脾,,,,ws_zh_yaoyao_fenji
-润降,,,,肺,,,,ws_zh_yaoyao_fenji
-止血,,,,肝,,,,ws_zh_yaoyao_fenji
-水氣,,,,肺,,,,ws_zh_yaoyao_fenji
-瘴疟,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-主風,,,,心/胃/肺/肝,,,,ws_zh_yaoyao_fenji
-中風,,,,心,,,,ws_zh_yaoyao_fenji
-心頭,,,,胃/心,,,,ws_zh_yaoyao_fenji
-胸中,,,,心/肺/肝/胃,,,,ws_zh_yaoyao_fenji
-消乳,,,,肝/膽,,,,ws_zh_yaoyao_fenji
-西瓜,,,,脾,,,,ws_zh_yaoyao_fenji
-食鹽,,,,腎/心/肺/胃,,,,ws_zh_yaoyao_fenji
-青鹽,,,,腎/心,,,,ws_zh_yaoyao_fenji
-五脏,,,,腎,,,,ws_zh_yaoyao_fenji
-一名,,,,胃,,,,ws_zh_yaoyao_fenji
-不通,,,,心/肝/肺,,,,ws_zh_yaoyao_fenji
-恶疮,,,,心/胃/心包/膽/脾/大腸,,,,ws_zh_yaoyao_fenji
-烧灰,,,,胃,,,,ws_zh_yaoyao_fenji
-主肤,,,,心/肝,,,,ws_zh_yaoyao_fenji
-利大,,,,胃/膀胱/脾,,,,ws_zh_yaoyao_fenji
-连翘,,,,膽/大腸/三焦/心/心包,,,,ws_zh_yaoyao_fenji
-諸病,,,,肝/肺/胃,,,,ws_zh_yaoyao_fenji
-兒客,,,,心/肝,,,,ws_zh_yaoyao_fenji
-上熱,,,,脾/胃/腎/心/肝,,,,ws_zh_yaoyao_fenji
-敷一,,,,肝,,,,ws_zh_yaoyao_fenji
-金箔,,,,心/肝,,,,ws_zh_yaoyao_fenji
-銀箔,,,,心/肝,,,,ws_zh_yaoyao_fenji
-散瘿,,,,脾/大腸,,,,ws_zh_yaoyao_fenji
-久积,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-雄黄,,,,肝/胃,,,,ws_zh_yaoyao_fenji
-心腹,,,,肝,,,,ws_zh_yaoyao_fenji
-锁陽,,,,腎,,,,ws_zh_yaoyao_fenji
-疗金,,,,脾/肝/腎/肺,,,,ws_zh_yaoyao_fenji
-麻油,,,,大腸,,,,ws_zh_yaoyao_fenji
-又木,,,,脾/胃/大腸,,,,ws_zh_yaoyao_fenji
-主清,,,,肺/脾,,,,ws_zh_yaoyao_fenji
-榧子,,,,肺,,,,ws_zh_yaoyao_fenji
-润皮,,,,肺/大腸,,,,ws_zh_yaoyao_fenji
-津液,,,,膀胱,,,,ws_zh_yaoyao_fenji
-血崩,,,,肝/腎/大腸/胃,,,,ws_zh_yaoyao_fenji
-惊邪,,,,肺,,,,ws_zh_yaoyao_fenji
-煎水,,,,肝/膽/腎,,,,ws_zh_yaoyao_fenji
-并產,,,,肝,,,,ws_zh_yaoyao_fenji
-水利,,,,脾/胃/肺/肝,,,,ws_zh_yaoyao_fenji
-益肾,,,,脾/胃/心/腎,,,,ws_zh_yaoyao_fenji
-明矾,,,,脾,,,,ws_zh_yaoyao_fenji
-風瀉,,,,脾,,,,ws_zh_yaoyao_fenji
-膽矾,,,,膽,,,,ws_zh_yaoyao_fenji
-疗泄,,,,肝/膽/腎,,,,ws_zh_yaoyao_fenji
-小兒,,,,肺,,,,ws_zh_yaoyao_fenji
-外络,,,,脾/胃/大腸,,,,ws_zh_yaoyao_fenji
-淫腹,,,,脾/腎/膀胱,,,,ws_zh_yaoyao_fenji
-風痰,,,,胃,,,,ws_zh_yaoyao_fenji
-柳桂,,,,肺,,,,ws_zh_yaoyao_fenji
-作痛,,,,胃/大腸,,,,ws_zh_yaoyao_fenji
-氣痰,,,,脾/胃/腎/膀胱,,,,ws_zh_yaoyao_fenji
-遍身,,,,肝/腎/脾/胃,,,,ws_zh_yaoyao_fenji
-止呕,,,,心/脾/膀胱,,,,ws_zh_yaoyao_fenji
-中食,,,,胃/大腸/三焦,,,,ws_zh_yaoyao_fenji
-故不,,,,肺,,,,ws_zh_bencao_qiuzhen
-平补,,,,肝,,,,ws_zh_bencao_qiuzhen
-补火,,,,腎,,,,ws_zh_bencao_qiuzhen
-滋水,,,,腎,,,,ws_zh_bencao_qiuzhen
-明确,,,,腎,,,,ws_zh_bencao_qiuzhen
-温肾,,,,肝,,,,ws_zh_bencao_qiuzhen
-温涩,,,,心/脾/腎,,,,ws_zh_bencao_qiuzhen
-收敛,,,,肝/脾,,,,ws_zh_bencao_qiuzhen
-镇虚,,,,心/肝,,,,ws_zh_bencao_qiuzhen
-肺经,,,,肺/脾,,,,ws_zh_bencao_qiuzhen
-散寒,,,,肺,,,,ws_zh_bencao_qiuzhen
-驱风,,,,肝,,,,ws_zh_bencao_qiuzhen
-脊痛,,,,脾/胃,,,,ws_zh_bencao_qiuzhen
-散热,,,,脾/肺,,,,ws_zh_bencao_qiuzhen
-温散,,,,肝/膽,,,,ws_zh_bencao_qiuzhen
-而成,,,,心/肝,,,,ws_zh_bencao_qiuzhen
-凡四,,,,膀胱/腎,,,,ws_zh_bencao_qiuzhen
-泻热,,,,肝,,,,ws_zh_bencao_qiuzhen
-藉醋,,,,肝/膽,,,,ws_zh_bencao_qiuzhen
-火寄,,,,膀胱/腎,,,,ws_zh_bencao_qiuzhen
-泻火,,,,心/肺/肝,,,,ws_zh_bencao_qiuzhen
-顺之,,,,心/肝,,,,ws_zh_bencao_qiuzhen
-温血,,,,肝,,,,ws_zh_bencao_qiuzhen
-逾年,,,,肝/腎,,,,ws_zh_bencao_qiuzhen
-故能,,,,肝,,,,ws_zh_bencao_qiuzhen
-故须,,,,腎,,,,ws_zh_bencao_qiuzhen
-解毒,,,,胃,,,,ws_zh_bencao_qiuzhen
-出入,,,,肝/膽,,,,ws_zh_bencao_qiuzhen
-地黄,,,,腎/脾,,,,ws_zh_bencao_jingjie
-葳蕤,,,,肺/脾,,,,ws_zh_bencao_jingjie
-沙参,,,,腎/心,,,,ws_zh_bencao_jingjie
-芍药,,,,肺/心,,,,ws_zh_bencao_jingjie
-姜黄,,,,腎/肺,,,,ws_zh_bencao_jingjie
-茵陈,,,,肺/心,,,,ws_zh_bencao_jingjie
-元参,,,,腎/心,,,,ws_zh_bencao_jingjie
-丹皮,,,,肺,,,,ws_zh_bencao_jingjie
-大黄,,,,心/胃,,,,ws_zh_bencao_jingjie
-肉桂,,,,腎/脾,,,,ws_zh_bencao_jingjie
-桂枝,,,,肝/肺,,,,ws_zh_bencao_jingjie
-桑皮,,,,腎/脾,,,,ws_zh_bencao_jingjie
-桑叶,,,,心,,,,ws_zh_bencao_jingjie
-槐花,,,,肺/心,,,,ws_zh_bencao_jingjie
-浓朴,,,,肝/心,,,,ws_zh_bencao_jingjie
-竹茹,,,,脾,,,,ws_zh_bencao_jingjie
-竹沥,,,,腎/脾,,,,ws_zh_bencao_jingjie
-小麦,,,,腎/脾,,,,ws_zh_bencao_jingjie
-扁豆,,,,膽/脾,,,,ws_zh_bencao_jingjie
-干姜,,,,肝/肺/腎,,,,ws_zh_bencao_jingjie
-白胶,,,,肺/脾,,,,ws_zh_bencao_jingjie
-小便,,,,腎,,,,ws_zh_bencao_jingjie
-人之,,,,肝/腎,,,,ws_zh_bencao_xinbian
-熟地,,,,肝/腎,,,,ws_zh_bencao_xinbian
-北者,,,,肺/腎,,,,ws_zh_bencao_xinbian
-行血,,,,肝,,,,ws_zh_bencao_xinbian
-者宜,,,,肺/胃,,,,ws_zh_bencao_xinbian
-心中,,,,肺/胃/脾/心,,,,ws_zh_bencao_xinbian
-热者,,,,心/肺,,,,ws_zh_bencao_xinbian
-莪术,,,,肝/脾,,,,ws_zh_bencao_xinbian
-九牛,,,,脾/腎/肺,,,,ws_zh_bencao_xinbian
-目之,,,,心,,,,ws_zh_bencao_xinbian
-血凝,,,,肺/肝/脾,,,,ws_zh_bencao_xinbian
-人不,,,,腎/肝,,,,ws_zh_bencao_xinbian
-贯众,,,,胃,,,,ws_zh_bencao_xinbian
-虚实,,,,肺,,,,ws_zh_bencao_xinbian
-明眼,,,,心/肝/腎/膀胱,,,,ws_zh_bencao_xinbian
-者耳,,,,腎/肝,,,,ws_zh_bencao_xinbian
-没药,,,,脾/腎,,,,ws_zh_bencao_xinbian
-五谷,,,,脾/胃,,,,ws_zh_bencao_xinbian
-脘之,,,,胃/脾,,,,ws_zh_bencao_xinbian
-白果,,,,心,,,,ws_zh_bencao_xinbian
-熟食,,,,心,,,,ws_zh_bencao_xinbian
-鱼鳔,,,,腎,,,,ws_zh_bencao_xinbian
-海马,,,,腎,,,,ws_zh_bencao_xinbian
-雌黄,,,,肝,,,,ws_zh_depi_bencao
-狗实,,,,脾/肺,,,,ws_zh_depi_bencao
-天冬,,,,肺,,,,ws_zh_bencao_fenjing
-胆矾,,,,膽,,,,ws_zh_bencao_fenjing
-炮姜,,,,腎,,,,ws_zh_bencao_fenjing
-市門土,,,,,,無毒,,ws_zh_bencao_gangmu
-柱下土,,,,,,無毒,,ws_zh_bencao_gangmu
-螺螄泥,,涼,,,,,,ws_zh_bencao_gangmu
-繳腳布,,,,,,無毒,,ws_zh_bencao_gangmu
-豭豬肉,,,,,,有毒,,ws_zh_bencao_gangmu
-駒胞衣,,,,,,有毒,,ws_zh_bencao_gangmu
-螺厴草,,,辛,,,,,ws_zh_bencao_gangmu
-生地黃,,寒,,,,,,ws_zh_bencao_gangmu
-見腫消,,,酸/澀,,,,,ws_zh_bencao_gangmu
-地衣草,,,苦,,,,,ws_zh_bencao_gangmu
-山蛩蟲,,,,,,大毒,,ws_zh_bencao_gangmu
-硃砂銀,,,,,,無毒,,ws_zh_bencao_gangmu
-霹靂砧,,,,,,無毒,,ws_zh_bencao_gangmu
-腹中子,,,,,,有毒,,ws_zh_bencao_gangmu
-子及腸,,,,,,有毒,,ws_zh_bencao_gangmu
-兩頭蛇,,,,,,無毒,,ws_zh_bencao_gangmu
-肝及子,,,,,,大毒,,ws_zh_bencao_gangmu
-金银箔,,,,心/肺,,,,ws_zh_leigong_paozhi_yaoxing
-阳起石,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-青礞石,,,,肺/大腸/胃,,,,ws_zh_leigong_paozhi_yaoxing
-枇杷叶,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-石榴皮,,,,大腸/腎,,,,ws_zh_leigong_paozhi_yaoxing
-胡麻子,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-白芍药,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-生地黄,,,,心/肝/脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-熟地黄,,,,心/肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-麦门冬,,,,肺/心,,,,ws_zh_leigong_paozhi_yaoxing
-天门冬,,,,肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-玄胡索,,,,心/肺/脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-草龙胆,,,,肝/膽/腎/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-蓬莪术,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-破故纸,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-葫芦巴,,,,腎/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-骨碎补,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-车前子,,,,肝/膀胱/小腸,,,,ws_zh_leigong_paozhi_yaoxing
-马兜铃,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-牡丹皮,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-菟丝子,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-草豆蔻,,,,脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-旋复花,,,,肺/肝/大腸/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-青葙子,,,,心/肝,,,,ws_zh_leigong_paozhi_yaoxing
-白头翁,,,,心/腎,,,,ws_zh_leigong_paozhi_yaoxing
-白藓皮,,,,肺/小腸,,,,ws_zh_leigong_paozhi_yaoxing
-胡黄连,,,,肝/膽/胃,,,,ws_zh_leigong_paozhi_yaoxing
-决明子,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-蓖麻子,,,,脾/大腸,,,,ws_zh_leigong_paozhi_yaoxing
-马鞭草,,,,肝/脾,,,,ws_zh_leigong_paozhi_yaoxing
-金银花,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-草部下,,,,肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-佛耳草,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-苍耳子,,,,肺,,,,ws_zh_leigong_paozhi_yaoxing
-茵陈蒿,,,,膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-高良姜,,,,脾/胃,,,,ws_zh_leigong_paozhi_yaoxing
-石莲子,,,,心/胃/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-合欢皮,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-白茯苓,,,,肺/脾/小腸,,,,ws_zh_leigong_paozhi_yaoxing
-柏子仁,,,,肺/脾/腎,,,,ws_zh_leigong_paozhi_yaoxing
-蔓荆子,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-桑白皮,,,,脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-酸枣仁,,,,心/脾/肝/膽,,,,ws_zh_leigong_paozhi_yaoxing
-天竺黄,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-金樱子,,,,脾/肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-郁李仁,,,,大腸,,,,ws_zh_leigong_paozhi_yaoxing
-五加皮,,,,肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-樗白皮,,,,心/肝/脾,,,,ws_zh_leigong_paozhi_yaoxing
-女贞实,,,,心/肝,,,,ws_zh_leigong_paozhi_yaoxing
-金铃子,,,,心/小腸,,,,ws_zh_leigong_paozhi_yaoxing
-白芥子,,,,肺/胃,,,,ws_zh_leigong_paozhi_yaoxing
-紫河车,,,,心/脾/腎,,,,ws_zh_leigong_paozhi_yaoxing
-黄牛肉,,,,脾,,,,ws_zh_leigong_paozhi_yaoxing
-石决明,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-五灵脂,,,,心/肝,,,,ws_zh_leigong_paozhi_yaoxing
-白僵蚕,,,,心/肝/脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-土鳖虫,,,,心/肝/脾,,,,ws_zh_leigong_paozhi_yaoxing
-乌贼骨,,,,腎,,,,ws_zh_leigong_paozhi_yaoxing
-刘寄奴,,,,肝/脾,,,,ws_zh_bencao_biandu
-续随子,,,,肝/肺,,,,ws_zh_bencao_biandu
-木芙蓉,,,,肺,,,,ws_zh_bencao_biandu
-苏合香,,,,心/脾,,,,ws_zh_bencao_biandu
-海狗肾,,,,腎,,,,ws_zh_bencao_biandu
-猪脊髓,,,,胃,,,,ws_zh_bencao_biandu
-雄鼠屎,,,,肝/腎,,,,ws_zh_bencao_biandu
-寒哕逆,,,,心/脾/胃,,,,ws_zh_yaoyao_fenji
-通滞氣,,,,肝/腎/脾/胃/肺/大腸/心包,,,,ws_zh_yaoyao_fenji
-候不调,,,,肝/肺/三焦,,,,ws_zh_yaoyao_fenji
-钱微焙,,,,肝,,,,ws_zh_yaoyao_fenji
-小兒風,,,,心/肺,,,,ws_zh_yaoyao_fenji
-寸白虫,,,,肺,,,,ws_zh_yaoyao_fenji
-腸風邪,,,,膀胱,,,,ws_zh_yaoyao_fenji
-小便频,,,,胃/腎/肺,,,,ws_zh_yaoyao_fenji
-龍脑香,,,,肺/心/脾,,,,ws_zh_yaoyao_fenji
-風口噤,,,,肺/大腸,,,,ws_zh_yaoyao_fenji
-西河柳,,,,心/肺/胃,,,,ws_zh_yaoyao_fenji
-紫荆皮,,,,肝,,,,ws_zh_yaoyao_fenji
-莱菔子,,,,肺/脾,,,,ws_zh_yaoyao_fenji
-治脑寒,,,,肺/脾/胃,,,,ws_zh_yaoyao_fenji
-秋露水,,,,肺,,,,ws_zh_yaoyao_fenji
-陰陽水,,,,三焦,,,,ws_zh_yaoyao_fenji
-治妇人,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-切熱毒,,,,脾/胃/膀胱/小腸,,,,ws_zh_yaoyao_fenji
-止心腹,,,,心/脾,,,,ws_zh_yaoyao_fenji
-除膀胱,,,,腎/膀胱,,,,ws_zh_yaoyao_fenji
-刺蒺藜,,,,肝,,,,ws_zh_yaoyao_fenji
-膀胱宿,,,,肝/胃/腎,,,,ws_zh_yaoyao_fenji
-及諸經,,,,肺/大腸,,,,ws_zh_yaoyao_fenji
-节疼痛,,,,心/肝/腎,,,,ws_zh_yaoyao_fenji
-及劳疟,,,,心/肺,,,,ws_zh_yaoyao_fenji
-肾氣虚,,,,腎/肝,,,,ws_zh_yaoyao_fenji
-人不迷,,,,心/腎,,,,ws_zh_yaoyao_fenji
-人產前,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-坐而欲,,,,心/肝/腎,,,,ws_zh_yaoyao_fenji
-旱莲草,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-腰不利,,,,腎/肝,,,,ws_zh_yaoyao_fenji
-开心孔,,,,肺/脾/心/腎,,,,ws_zh_yaoyao_fenji
-主除寒,,,,肺/肝/脾/胃,,,,ws_zh_yaoyao_fenji
-能消瘀,,,,心/肝/脾/胃,,,,ws_zh_yaoyao_fenji
-肉消瘀,,,,心/肝/腎,,,,ws_zh_yaoyao_fenji
-切虚損,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-乌骨鸡,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-鸡肫皮,,,,肝/脾/大腸/膀胱,,,,ws_zh_yaoyao_fenji
-鸡屎白,,,,胃/大腸,,,,ws_zh_yaoyao_fenji
-酒服一,,,,腎/心/肝/心包,,,,ws_zh_yaoyao_fenji
-鹿角胶,,,,腎/心/肝/心包,,,,ws_zh_yaoyao_fenji
-益劳損,,,,心/肺,,,,ws_zh_yaoyao_fenji
-肢节痿,,,,肺/肝/腎,,,,ws_zh_yaoyao_fenji
-腽肭脐,,,,腎,,,,ws_zh_yaoyao_fenji
-复食复,,,,肝/肺/脾,,,,ws_zh_yaoyao_fenji
-去目中,,,,肝/膽/胃,,,,ws_zh_yaoyao_fenji
-後败血,,,,脾/肝,,,,ws_zh_yaoyao_fenji
-饮食不,,,,肝/脾,,,,ws_zh_yaoyao_fenji
-主水肿,,,,肺/大腸,,,,ws_zh_yaoyao_fenji
-牛蒡子,,,,肺/胃,,,,ws_zh_yaoyao_fenji
-渴疾口,,,,心/胃,,,,ws_zh_yaoyao_fenji
-馬兜铃,,,,肺,,,,ws_zh_yaoyao_fenji
-心腹中,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-失心躁,,,,肝/心包/小腸/膀胱/肺/脾/胃,,,,ws_zh_yaoyao_fenji
-伤寒结,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-熱厥心,,,,心/肺/胃,,,,ws_zh_yaoyao_fenji
-熱燥痒,,,,肝/心包,,,,ws_zh_yaoyao_fenji
-瘴疠疟,,,,胃/大腸,,,,ws_zh_yaoyao_fenji
-海浮石,,,,肺,,,,ws_zh_yaoyao_fenji
-陰降火,,,,肝/腎/三焦/膀胱,,,,ws_zh_yaoyao_fenji
-酒服方,,,,肝,,,,ws_zh_yaoyao_fenji
-海蛤粉,,,,心/腎,,,,ws_zh_yaoyao_fenji
-瓦楞子,,,,肝/肺/脾,,,,ws_zh_yaoyao_fenji
-五谷虫,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-捣汁服,,,,胃,,,,ws_zh_yaoyao_fenji
-木贼草,,,,肝/膽,,,,ws_zh_yaoyao_fenji
-谷精草,,,,肝/胃,,,,ws_zh_yaoyao_fenji
-痘疹作,,,,肝,,,,ws_zh_yaoyao_fenji
-自然铜,,,,肝,,,,ws_zh_yaoyao_fenji
-血凉血,,,,肝/腎,,,,ws_zh_yaoyao_fenji
-诃黎勒,,,,肺/大腸,,,,ws_zh_yaoyao_fenji
-棕榈皮,,,,肝/脾,,,,ws_zh_yaoyao_fenji
-南烛子,,,,心/脾/腎,,,,ws_zh_yaoyao_fenji
-罂粟壳,,,,腎,,,,ws_zh_yaoyao_fenji
-消酒毒,,,,肺/脾,,,,ws_zh_yaoyao_fenji
-浓腸胃,,,,心/腎/大腸,,,,ws_zh_yaoyao_fenji
-禹余粮,,,,胃/大腸,,,,ws_zh_yaoyao_fenji
-乌爹泥,,,,肺,,,,ws_zh_yaoyao_fenji
-腸痈内,,,,肝/膽/腎/心/大腸,,,,ws_zh_yaoyao_fenji
-益智仁,,,,脾/心/腎,,,,ws_zh_yaoyao_fenji
-草乌頭,,,,脾,,,,ws_zh_yaoyao_fenji
-邪从汗,,,,肺/膀胱,,,,ws_zh_yaoyao_fenji
-虽一物,,,,肺/脾/胃,,,,ws_zh_yaoyao_fenji
-元明粉,,,,胃/大腸/三焦,,,,ws_zh_yaoyao_fenji
-盖以血,,,,肝/腎,,,,ws_zh_bencao_qiuzhen
-小便赤,,,,腎,,,,ws_zh_bencao_qiuzhen
-膈痞硬,,,,心/肝,,,,ws_zh_bencao_qiuzhen
-在于皮,,,,肝,,,,ws_zh_bencao_qiuzhen
-一种清,,,,肺,,,,ws_zh_bencao_qiuzhen
-蚌即无,,,,心,,,,ws_zh_bencao_qiuzhen
-甘主补,,,,肝,,,,ws_zh_bencao_qiuzhen
-何首乌,,,,膽/心,,,,ws_zh_bencao_jingjie
-肉苁蓉,,,,肝/脾/腎,,,,ws_zh_bencao_jingjie
-小茴香,,,,肝/肺,,,,ws_zh_bencao_jingjie
-补骨脂,,,,胃/肺/腎,,,,ws_zh_bencao_jingjie
-缩砂仁,,,,肝/肺,,,,ws_zh_bencao_jingjie
-益母子,,,,肝/肺,,,,ws_zh_bencao_jingjie
-葶苈子,,,,肺,,,,ws_zh_bencao_jingjie
-天花粉,,,,腎/心,,,,ws_zh_bencao_jingjie
-甘菊花,,,,肺/心,,,,ws_zh_bencao_jingjie
-灯心草,,,,脾,,,,ws_zh_bencao_jingjie
-女贞子,,,,肺/心,,,,ws_zh_bencao_jingjie
-吴茱萸,,,,肝/肺,,,,ws_zh_bencao_jingjie
-苏方木,,,,肺/脾,,,,ws_zh_bencao_jingjie
-山栀仁,,,,心,,,,ws_zh_bencao_jingjie
-龙眼肉,,,,肺/脾,,,,ws_zh_bencao_jingjie
-山楂子,,,,肺/肝,,,,ws_zh_bencao_jingjie
-马料豆,,,,肺/脾,,,,ws_zh_bencao_jingjie
-脂麻仁,,,,肺/脾/心,,,,ws_zh_bencao_jingjie
-万年青,,,,腎,,,,ws_zh_bencao_xinbian
-羊踯躅,,,,脾,,,,ws_zh_bencao_xinbian
-楮实子,,,,腎/肝,,,,ws_zh_bencao_xinbian
-乌芝麻,,,,腎,,,,ws_zh_bencao_xinbian
-巨胜子,,,,心/腎,,,,ws_zh_bencao_xinbian
-火麻子,,,,大腸,,,,ws_zh_bencao_xinbian
-胡桃肉,,,,腎,,,,ws_zh_bencao_xinbian
-寒水石,,,,胃,,,,ws_zh_bencao_xinbian
-九香虫,,,,腎,,,,ws_zh_bencao_xinbian
-川牛膝,,,,肝,,,,ws_zh_depi_bencao
-山草類,,,,肝/腎/肺/膀胱,,,,ws_zh_bencao_congxin
-川贝母,,,,肺,,,,ws_zh_bencao_fenjing
-花芷石,,,,肝,,,,ws_zh_bencao_fenjing
-穿山甲,,,,肝,,,,ws_zh_bencao_fenjing
-龙胆草,,,,膀胱/腎,,,,ws_zh_bencao_fenjing
-戶限下土,,,,,,無毒,,ws_zh_bencao_gangmu
-胡燕窠土,,,,,,無毒,,ws_zh_bencao_gangmu
-赤龍浴水,,,,,,小毒,,ws_zh_bencao_gangmu
-豬槽中水,,,,,,無毒,,ws_zh_bencao_gangmu
-烏爛死蠶,,,,,,小毒,,ws_zh_bencao_gangmu
-皂莢蠹蟲,,,辛,,,,,ws_zh_bencao_gangmu
-白蒺藜子,,,,肺/肝/腎,,,,ws_zh_leigong_paozhi_yaoxing
-刘寄奴草,,,,心/肺,,,,ws_zh_leigong_paozhi_yaoxing
-黑嘴白鸭,,,,肺/腎,,,,ws_zh_leigong_paozhi_yaoxing
-蕲州乌蛇,,,,脾/肺,,,,ws_zh_leigong_paozhi_yaoxing
-痉痫溼痹,,,,腎,,,,ws_zh_yaoyao_fenji
-血風眩暈,,,,肺/胃/大腸,,,,ws_zh_yaoyao_fenji
-心癫狂蛊,,,,心/肝/胃,,,,ws_zh_yaoyao_fenji
-消痰止嗽,,,,心/肺/胃,,,,ws_zh_yaoyao_fenji
-諸血諸痛,,,,脾,,,,ws_zh_yaoyao_fenji
-脚氣寒熱,,,,心/脾/胃,,,,ws_zh_yaoyao_fenji
-痰迷癫痫,,,,肺/脾/腎,,,,ws_zh_yaoyao_fenji
-大豆黄卷,,,,胃,,,,ws_zh_yaoyao_fenji
-胎前產後,,,,肺,,,,ws_zh_yaoyao_fenji
-治发熱自,,,,胃/腎/心/脾,,,,ws_zh_yaoyao_fenji
-沙苑蒺藜,,,,腎/肝,,,,ws_zh_yaoyao_fenji
-去風熱烦,,,,肺/腎,,,,ws_zh_yaoyao_fenji
-白扁豆子,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-雄原蚕蛾,,,,腎,,,,ws_zh_yaoyao_fenji
-龈肿齒痛,,,,心/肺/大腸,,,,ws_zh_yaoyao_fenji
-治飞尸伏,,,,肺,,,,ws_zh_yaoyao_fenji
-杀腸中虫,,,,脾/胃,,,,ws_zh_yaoyao_fenji
-女陰疮溼,,,,肝/大腸,,,,ws_zh_yaoyao_fenji
-產後败血,,,,肝/脾/腎/心/胃,,,,ws_zh_yaoyao_fenji
-金疮脓血,,,,胃/大腸,,,,ws_zh_yaoyao_fenji
-两胁胀痛,,,,肺/胃,,,,ws_zh_yaoyao_fenji
-椿樗白皮,,,,胃/大腸,,,,ws_zh_yaoyao_fenji
-万年松者,,,,肝,,,,ws_zh_bencao_qiuzhen
-乌贼鱼骨,,,,肝/腎,,,,ws_zh_bencao_jingjie
-南烛枝叶,,,,腎/肝,,,,ws_zh_bencao_xinbian
-即白明矾,,,,肝/肺,,,,ws_zh_depi_bencao
-俗呼香附,,,,肝,,,,ws_zh_depi_bencao
-市門溺坑水,,,,,,無毒,,ws_zh_bencao_gangmu
-卷一\果部,,,,脾,,,,ws_zh_leigong_paozhi_yaoxing
-卷一\谷部,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-卷五\木部,,,,心/脾/肺/腎/肝,,,,ws_zh_leigong_paozhi_yaoxing
-卷六\菜部,,,,肺/脾/腎,,,,ws_zh_leigong_paozhi_yaoxing
-卷六\人部,,,,心,,,,ws_zh_leigong_paozhi_yaoxing
-石草类石斛,,,,肺/胃/腎,,,,ws_zh_bencao_biandu
-香木类肉桂,,,,心/肝/脾/腎,,,,ws_zh_bencao_biandu
-卷三\通劑,,,,心/肝/腎,,,,ws_zh_yaoyao_fenji
-溶溶如坐水,,,,心/肝/脾,,,,ws_zh_yaoyao_fenji
-一名黄金石,,,,肝,,,,ws_zh_depi_bencao
-一名莲蓬壳,,,,肝,,,,ws_zh_depi_bencao
-卷二\草部上,,,,肺/脾,,,,ws_zh_leigong_paozhi_yaoxing
-卷三\草部中,,,,脾/腎/膀胱,,,,ws_zh_leigong_paozhi_yaoxing
-卷六\虫鱼部,,,,肝,,,,ws_zh_leigong_paozhi_yaoxing
-蔓草类天门冬,,,,腎,,,,ws_zh_bencao_biandu
-卷二\宣劑下,,,,肝,,,,ws_zh_yaoyao_fenji
-卷五\補劑下,,,,肺/腎,,,,ws_zh_yaoyao_fenji
-卷六\瀉劑上,,,,胃/膀胱,,,,ws_zh_yaoyao_fenji
-卷三\竹部竹叶,,,,腎,,,,ws_zh_bencao_jingjie
-卷三\果部莲子,,,,肺/脾/心,,,,ws_zh_bencao_jingjie
-卷四\人部人乳,,,,肺/脾/腎,,,,ws_zh_bencao_jingjie
-卷二草部芳草類,,,,肺/肝/大腸/脾,,,,ws_zh_bencao_congxin
-卷四草部毒草類,,,,肺/胃/大腸/脾,,,,ws_zh_bencao_congxin
-卷一\草部上人参,,,,肺/脾/膽/胃,,,,ws_zh_bencao_jingjie
-卷三\木部枸杞子,,,,腎/心,,,,ws_zh_bencao_jingjie
-卷四\金石部铁衣,,,,肺,,,,ws_zh_bencao_jingjie
-卷四\谷菜部粳米,,,,肺/脾,,,,ws_zh_bencao_jingjie
-天子藉田三推犁下土,,,,,,無毒,,ws_zh_bencao_gangmu
+drug_name,plant_binomial,nature,flavors,channels,direction,toxicity,grade,source_id,join_status
+辛夷,Yulania denudata,溫,辛,肺/胃,,無毒,上品,ws_zh_bencao_gangmu,joined
+沉香,Aquilaria agallocha,溫,辛,膽/肺,,無毒,上品,ws_zh_bencao_gangmu,joined
+秦皮,Fraxinus stylosa,寒,苦,肝/腎,,無毒,中品,ws_zh_bencao_gangmu,joined
+巴豆,Croton tiglium,溫,辛,脾/胃/大腸,沉/降,有毒,下品,ws_zh_bencao_gangmu,joined
+琥珀,,平,甘,心/脾/小腸,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+雷丸,Laccocephalum mylittae,寒,苦,肺/脾/胃,,小毒,下品,ws_zh_bencao_gangmu,joined
+木瓜,Carica papaya,溫,酸,肺/脾/肝,,無毒,中品,ws_zh_bencao_gangmu,joined
+瓜蒂,,寒,苦,胃,,有毒,上品,ws_zh_bencao_gangmu,unresolved
+甘蔗,Saccharum officinarum,平,甘,肺/脾/胃,,無毒,中品,ws_zh_bencao_gangmu,joined
+石蜜,,寒,甘,肺/脾,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+犀角,Rhinoceros unicornis,寒,苦/酸/鹹,心/肝,,無毒,中品,ws_zh_bencao_gangmu,joined
+鹿茸,Cervus nippon,溫,鹹,腎,,無毒,中品,ws_zh_bencao_gangmu,joined
+甘草,Glycyrrhiza uralensis,平,甘,心/脾,升/浮,無毒,上品,ws_zh_bencao_gangmu,joined
+桔梗,Platycodon grandiflorus,溫,辛,肺,,小毒,下品,ws_zh_bencao_gangmu,joined
+知母,Anemarrhena asphodeloides,寒,苦,腎,沉/降,無毒,中品,ws_zh_bencao_gangmu,joined
+狗脊,Cibotium barometz,平,苦,腎/膀胱,,無毒,中品,ws_zh_bencao_gangmu,joined
+地榆,Sanguisorba officinalis,寒,苦,大腸/肝,沉/降,無毒,中品,ws_zh_bencao_gangmu,joined
+紫草,Buglossoides purpurocaerulea,寒,苦,心/小腸,,無毒,中品,ws_zh_bencao_gangmu,joined
+白芨,Bletilla striata,平,苦,肺,,無毒,下品,ws_zh_bencao_gangmu,joined
+紫葳,Campsis grandiflora,寒,酸,脾/肝,,無毒,中品,ws_zh_bencao_gangmu,joined
+葛根,Pueraria montana var. lobata,平,甘/辛,胃/大腸,,無毒,中品,ws_zh_bencao_gangmu,joined
+百部,Stemona japonica,溫,甘,肺,,無毒,中品,ws_zh_bencao_gangmu,joined
+茜草,Rubia cordifolia,寒,苦,胃/脾,,無毒,上品,ws_zh_bencao_gangmu,joined
+防己,Stephania tetrandra,平,辛,肺,,無毒,中品,ws_zh_bencao_gangmu,joined
+通草,Akebia quinata,寒,甘,肺/胃,,無毒,中品,ws_zh_bencao_gangmu,joined
+木香,Aucklandia lappa,溫,辛,肝/胃,沉/降,無毒,上品,ws_zh_bencao_gangmu,joined
+香薷,Elsholtzia ciliata,溫,辛,肺/胃,,無毒,中品,ws_zh_bencao_gangmu,joined
+秦艽,Gentiana macrophylla,平,苦,胃/大腸/肝/膽,,無毒,中品,ws_zh_bencao_gangmu,joined
+柴胡,Bupleurum chinense,平,苦,肝/膽,,無毒,上品,ws_zh_bencao_gangmu,joined
+前胡,Kitagawia praeruptora,寒,苦,肺/肝/脾/膀胱,,無毒,中品,ws_zh_bencao_gangmu,joined
+升麻,Actaea cimicifuga,平,甘/苦,大腸/脾/胃/肺,浮/升,無毒,上品,ws_zh_bencao_gangmu,joined
+茅根,Perotis indica,溫,甘,胃/小腸,,無毒,中品,ws_zh_bencao_gangmu,joined
+細辛,Asarum sieboldii,溫,辛,心/小腸,,無毒,上品,ws_zh_bencao_gangmu,joined
+白薇,Vincetoxicum atratum,平,苦/鹹,心/腎,,無毒,中品,ws_zh_bencao_gangmu,joined
+白前,Vincetoxicum glaucescens,溫,甘,肺,,無毒,中品,ws_zh_bencao_gangmu,joined
+牛膝,Achyranthes bidentata,平,苦/酸,腎,,無毒,上品,ws_zh_bencao_gangmu,joined
+紫菀,Aster tataricus,溫,苦,心/肺,,無毒,中品,ws_zh_bencao_gangmu,joined
+菖蒲,Acorus calamus,溫,辛,心/脾/膀胱,,無毒,上品,ws_zh_bencao_gangmu,joined
+水萍,Lemna minor,寒,甘,肺/小腸,,無毒,中品,ws_zh_bencao_gangmu,joined
+海藻,,寒,苦/鹹,胃,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+昆布,Saccharina japonica,寒,鹹,胃,,無毒,中品,ws_zh_bencao_gangmu,joined
+大戟,Euphorbia pekinensis,寒,苦,肝/脾/腎,,小毒,下品,ws_zh_bencao_gangmu,joined
+甘遂,Euphorbia kansui,寒,苦,腎,,有毒,下品,ws_zh_bencao_gangmu,joined
+附子,Aconitum carmichaelii,溫,辛,肝/腎/肺,,大毒,下品,ws_zh_bencao_gangmu,joined
+半夏,Pinellia ternata,平,辛,肺/脾/胃,沉/降,有毒,下品,ws_zh_bencao_gangmu,joined
+蚤休,Paris polyphylla,寒,苦,心,,有毒,下品,ws_zh_bencao_gangmu,joined
+射干,Iris domestica,平,苦,肺/肝/脾,,有毒,下品,ws_zh_bencao_gangmu,joined
+馬勃,Asterophora lycoperdoides,平,苦,肺,,無毒,上品,ws_zh_bencao_gangmu,joined
+薤白,Allium macrostemon,溫,辛,大腸,,小毒,下品,ws_zh_bencao_gangmu,joined
+百合,Lilium longiflorum,平,甘,肺/脾,,無毒,中品,ws_zh_bencao_gangmu,joined
+水蛭,Hirudo nipponia,平,鹹/苦,肝/膀胱,,有毒,下品,ws_zh_bencao_gangmu,joined
+蜈蚣,Scolopendra subspinipes,溫,辛,肝,,有毒,下品,ws_zh_bencao_gangmu,joined
+石膏,Gypsum,寒,辛,肺/胃,,無毒,中品,ws_zh_bencao_gangmu,joined
+滑石,Talc,寒,甘,胃/膀胱,,無毒,上品,ws_zh_bencao_gangmu,joined
+磁石,Magnetite,寒,辛,腎,,無毒,中品,ws_zh_bencao_gangmu,joined
+伏龍肝,,溫,辛,肝,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+降真香,Acronychia pedunculata,溫,辛,肝/肺,,無毒,下品,ws_zh_bencao_gangmu,joined
+山茱萸,Cornus officinalis,平,酸,肝/腎,,無毒,中品,ws_zh_bencao_gangmu,joined
+羚羊角,Saiga tatarica,寒,苦,腎,,無毒,中品,ws_zh_bencao_gangmu,joined
+巴戟天,Morinda officinalis,溫,辛/甘,脾/腎,,無毒,上品,ws_zh_bencao_gangmu,joined
+白頭翁,Pycnonotus sinensis formosae,溫,苦,胃/大腸,,無毒,下品,ws_zh_bencao_gangmu,joined
+五味子,Schisandra chinensis,溫,酸,肺/腎,,無毒,上品,ws_zh_bencao_gangmu,joined
+覆盆子,Rubus idaeus,平,酸/鹹,肝/腎,,無毒,上品,ws_zh_bencao_gangmu,joined
+冬葵子,Malva verticillata,寒,甘,小腸/膀胱,,無毒,上品,ws_zh_bencao_gangmu,joined
+款冬花,Tussilago farfara,溫,辛,心/肺,,無毒,中品,ws_zh_bencao_gangmu,joined
+白附子,Aconitum coreanum,溫,辛/甘,肺/脾,,小毒,下品,ws_zh_bencao_gangmu,joined
+旋覆花,Inula britannica,溫,鹹,肝/腎,,小毒,下品,ws_zh_bencao_gangmu,joined
+露蜂房,,平,苦,胃,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+桑螵蛸,Tephroseris kirilowii,平,鹹/甘,腎,,無毒,中品,ws_zh_bencao_gangmu,joined
+白石英,,溫,甘,肺/大腸,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+紫石英,,溫,甘,心,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+代赭石,Hematite,寒,苦,肝/心包,,無毒,下品,ws_zh_bencao_gangmu,joined
+王不留行,Gypsophila vaccaria,平,苦,心/肝,,無毒,上品,ws_zh_bencao_gangmu,joined
+秋石,,溫,鹹,肺/腎,,無毒,,ws_zh_bencao_gangmu,unresolved
+乳汁,,平,甘/鹹,心/肝/脾,,無毒,,ws_zh_bencao_gangmu,unresolved
+人血,,平,鹹,肝/腎,,有毒,,ws_zh_bencao_gangmu,unresolved
+龜甲,Chinemys reevesii,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu,joined
+秦龜,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+珠鱉,,寒,鹹,,,小毒,中品,ws_zh_bencao_gangmu,unresolved
+馬刀,Coilia grayii,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+真珠,Ferocactus latispinus,寒,鹹/甘,心/肝,,無毒,,ws_zh_bencao_gangmu,joined
+海蛤,,平,苦/鹹,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+文蛤,Meretrix meretrix,平,鹹,,,無毒,上品,ws_zh_bencao_gangmu,joined
+魁蛤,Anadara broughtonii,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+貝子,,平,鹹,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+紫貝,Sanguinolaria diphos,平,甘/鹹,,,無毒,下品,ws_zh_bencao_gangmu,joined
+田螺,Viviparidae,平,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+冬灰,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+柏實,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+松脂,Ischnoderma resinosum,溫,苦/甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+松花,Pinus densiflora,溫,甘,肝/脾,,無毒,,ws_zh_bencao_gangmu,joined
+杉材,Cunninghamia lanceolata,熱,甘/辛,,,小毒,上品,ws_zh_bencao_gangmu,joined
+牡桂,,溫,辛,,浮/升,無毒,上品,ws_zh_bencao_gangmu,unresolved
+菌桂,Cinnamomum cassia,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+木蘭,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+丁香,Syzygium aromaticum,溫,辛,肺/脾/胃/腎,,無毒,,ws_zh_bencao_gangmu,joined
+根皮,Rhizomarasmius,溫,辛,,沉/降,無毒,上品,ws_zh_bencao_gangmu,joined
+木皮,Artocarpus styracifolius,平,辛,,,小毒,下品,ws_zh_bencao_gangmu,joined
+阿魏,Ferula assa-foetida,平,辛,胃,,無毒,,ws_zh_bencao_gangmu,joined
+枳實,,寒,苦,,浮/升,無毒,中品,ws_zh_bencao_gangmu,unresolved
+梔子,Gardenia jasminoides,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+酸棗,Ziziphus jujuba var. spinosa,平,酸,,,無毒,上品,ws_zh_bencao_gangmu,joined
+白棘,Paliurus ramosissimus,平,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蕤核,Prinsepia uniflora,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+鼠李,Rhamnus davurica,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+女貞,Ligustrum lucidum,平,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+溲疏,Deutzia scabra,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu,joined
+石南,Photinia serratifolia,平,辛/苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+牡荊,Ramularia viticis,平,甘/苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蔓荊,Vitex rotundifolia,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+濃朴,,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+桐葉,Stephania japonica var. discolor,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+合歡,Albizia julibrissin,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+皂莢,Gleditsia sinensis,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu,joined
+欒華,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+蕪荑,,平,辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+竹葉,Puccinia flaccida,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+鬼齒,,平,苦,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+茯神,,平,甘,心/肝,,無毒,,ws_zh_bencao_gangmu,unresolved
+豬苓,Polyporus umbellatus,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+松蘿,Usnea florida,平,苦/甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+占斯,,溫,苦,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+樹膠,,熱,酸,,,小毒,下品,ws_zh_bencao_gangmu,unresolved
+大棗,Ziziphus jujuba,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+龍眼,Dimocarpus longan,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+枇杷,Eriobotrya japonica,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+櫻桃,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+刺蜜,Alhagi sparsifolia,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+芰實,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+烏芋,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+蔓椒,,溫,苦,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+胡椒,Piper nigrum,溫,辛,肺/胃,,無毒,,ws_zh_bencao_gangmu,joined
+地漿,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+豚卵,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+羊肉,,平,甘,脾/肺,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃羊,Procapra gutturosa,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+頭骨,,寒,甘,,,小毒,中品,ws_zh_bencao_gangmu,unresolved
+陰莖,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+驢槽,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+阿膠,Equus asinus,平,甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu,joined
+牛黃,Kummerowia striata,平,苦,,,小毒,上品,ws_zh_bencao_gangmu,joined
+鼴鼠,Talpidae,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu,joined
+虎骨,Panthera tigris,平,酸,腎,,無毒,,ws_zh_bencao_gangmu,joined
+山羊,Capra hircus,熱,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+白膠,Rhus chinensis,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+麋脂,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+髓腦,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+皮毛,Phaeophyscia hirtella,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+風貍,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+水獺,Lutra lutra,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+毛皮,Attagenus,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+雁肪,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+絨毛,Brachyteles arachnoides,涼,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+鸚肉,,溫,甘/鹹,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+雞湯,,寒,酸,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+伏翼,Pipistrellus bat coronavirus HKU5,平,鹹,,,無毒,中品,ws_zh_bencao_gangmu,joined
+青蘘,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+麻蕡,,平,辛,,,有毒,上品,ws_zh_bencao_gangmu,unresolved
+大麥,Hordeum vulgare,溫,鹹,,,無毒,中品,ws_zh_bencao_gangmu,joined
+穬麥,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+禾稈,Fusarium culmorum,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+腐婢,Premna microphylla,平,辛,,,無毒,下品,ws_zh_bencao_gangmu,joined
+黎豆,Acampe papillosa,溫,甘/苦,,,小毒,下品,ws_zh_bencao_gangmu,joined
+稷米,Panicum miliaceum,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+粟米,Setaria italica,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu,joined
+粟糗,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+神曲,Matricaria matricarioides,溫,甘/辛,脾/胃,,無毒,,ws_zh_bencao_gangmu,joined
+紅曲,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+米醋,,溫,酸/苦,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+黃耆,Astragalus membranaceus,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+人參,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+沙參,Puccinia adenophorae,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+薺苨,Adenophora trachelioides,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+黃精,Polygonatum sibiricum,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+萎蕤,Polygonatum odoratum,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+赤箭,Gastrodia elata,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+貫眾,Cyrtomium fortunei,寒,苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+遠志,Polygala tenuifolia,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+仙茅,Curculigo orchioides,溫,辛,肝/腎,,有毒,,ws_zh_bencao_gangmu,joined
+玄參,Scrophularia buergeriana,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+丹參,Salvia miltiorrhiza,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+紫參,Notosinister pusillus,寒,苦/辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+王孫,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+三七,Panax pseudoginseng var. notoginseng,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蓬蘽,Rubus hirsutus,平,酸,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蛇莓,Potentilla indica,寒,甘/酸,,,有毒,下品,ws_zh_bencao_gangmu,joined
+莖葉,,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+營實,Rosa multiflora,溫,苦/澀,,,無毒,下品,ws_zh_bencao_gangmu,joined
+栝蔞,,寒,酸,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+王瓜,Trichosanthes cucumeroides,平,酸/苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+黃環,Boiga dendrophila,平,苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+萆薢,Dioscorea collettii,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+菝葜,Smilax china,平,甘/酸,,,無毒,中品,ws_zh_bencao_gangmu,joined
+白蘞,Ampelopsis japonica,平,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+赭魁,Dioscorea cirrhosa,平,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+剪草,Chloranthus fortunei,涼,苦,心/肝,,無毒,,ws_zh_bencao_gangmu,joined
+釣藤,Uncaria rhynchophylla,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+白英,Solanum lyratum,溫,甘/辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+千歲,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+忍冬,Lonicera japonica,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+芎藭,Cnidium officinale,溫,辛,,浮/升,無毒,上品,ws_zh_bencao_gangmu,joined
+蘼蕪,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+蛇牀,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+藁本,Ligusticum tachiroei,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+芍藥,Paeonia lactiflora,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+杜若,Pollia japonica,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+豆蔻,Alpinia katsumadai,熱,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+薰草,Ocimum basilicum,平,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+蘭草,Chlorophytum comosum,平,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+澤蘭,Eupatorium japonicum,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+石韋,Pyrrosia lingua,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+景天,Hylotelephium erythrostictum,平,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+黃芩,Scutellaria baicalensis,平,苦,,浮/升,無毒,中品,ws_zh_bencao_gangmu,joined
+防風,,溫,甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu,unresolved
+龍膽,Gentiana scabra,寒,苦/澀,,,無毒,上品,ws_zh_bencao_gangmu,joined
+杜衡,Asarum forbesii,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+及己,Chloranthus serratus,平,苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+女菀,Turczaninowia fastigiata,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+酸漿,Alkekengi officinarum,平,酸,,,無毒,中品,ws_zh_bencao_gangmu,joined
+敗醬,Patrinia scabiosifolia,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+決明,Senna obtusifolia,平,鹹,,,無毒,上品,ws_zh_bencao_gangmu,joined
+地膚,Bassia scoparia,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+瞿麥,Dianthus superbus,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+葶藶,Draba nemorosa,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu,joined
+車前,Plantago asiatica,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蛇含,Potentilla kleiniana,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+女青,Paederia foetida,平,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+連翹,Forsythia suspensa,平,苦,,浮/升,無毒,下品,ws_zh_bencao_gangmu,joined
+翹根,,寒,甘,,,小毒,下品,ws_zh_bencao_gangmu,unresolved
+陸英,Sambucus javanica,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蒴藋,Sambucus chinensis,溫,酸,,,有毒,下品,ws_zh_bencao_gangmu,joined
+水英,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+藍實,,寒,苦/甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+青黛,Isatis tinctoria,寒,鹹,肝/脾,,無毒,,ws_zh_bencao_gangmu,joined
+甘藍,Brassica oleracea,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+葒草,,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+虎杖,Reynoutria japonica,平,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+藎草,Arthraxon hispidus,平,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蒺藜,Tribulus terrestris,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+羊蹄,Rumex japonicus,平,苦/澀,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蒲黃,Typha latifolia,平,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+莕菜,Nymphoides peltatum,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+水松,Glyptostrobus pensilis,寒,酸,,,無毒,下品,ws_zh_bencao_gangmu,joined
+商陸,Phytolacca acinosa,平,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+防葵,Peucedanum japonicum,寒,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+雲實,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+常山,Dichroa febrifuga,寒,苦,肝,,有毒,,ws_zh_bencao_gangmu,joined
+蜀漆,Dichroa febrifuga,平,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+藜蘆,Veratrum nigrum,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+天雄,Aconitum carmichaelii,溫,辛,,,大毒,下品,ws_zh_bencao_gangmu,joined
+側子,,熱,辛,,,大毒,下品,ws_zh_bencao_gangmu,unresolved
+烏頭,Aconitum carmichaelii,溫,辛,,,大毒,下品,ws_zh_bencao_gangmu,joined
+由跋,,溫,辛/苦,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+鬼臼,Sinopodophyllum hexandrum,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+鳶尾,Iris tectorum,平,苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+蕘花,Laplacea canescens,寒,苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+莽草,Thysanolaena latifolia,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+茵芋,Skimmia reevesiana,溫,苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+牛扁,Aconitum barbatum var. puberulum,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+鉤吻,Gelsemium elegans,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+屋游,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+烏韭,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+卷柏,Selaginella tamariscina,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+菴䕡,,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+青蒿,Artemisia carvifolia,,甘,心,,無毒,下品,ws_zh_bencao_gangmu,joined
+牡蒿,Artemisia japonica,溫,苦/甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+燕脂,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+續斷,Dipsacus asper,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+苦芺,Lactuca tatarica,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蠡實,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+惡實,,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+葈耳,Xanthium strumarium,溫,甘,,,小毒,中品,ws_zh_bencao_gangmu,joined
+蘘荷,Zingiber mioga,寒,苦/甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+麻黃,Ephedra sinica,溫,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+韭子,Allium tuberosum,溫,辛/甘,肝/腎,,無毒,,ws_zh_bencao_gangmu,joined
+山韭,Allium senescens,寒,鹹,,,無毒,中品,ws_zh_bencao_gangmu,joined
+胡蔥,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+山蒜,Allium grayi,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+生薑,Zingiber officinale,溫,辛,,浮/升,無毒,中品,ws_zh_bencao_gangmu,joined
+乾薑,Zingiber officinale,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+水斳,Pyrrhidivalva sordida,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+茴香,Foeniculum vulgare,平,辛,心/脾/膀胱,,無毒,,ws_zh_bencao_gangmu,joined
+睡菜,Menyanthaceae,寒,甘/苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+木耳,Auricularia auricularis,平,甘,,,小毒,中品,ws_zh_bencao_gangmu,joined
+雚菌,,平,鹹,,,小毒,下品,ws_zh_bencao_gangmu,unresolved
+菾菜,Beta vulgaris,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+菥蓂,Thlaspi arvense,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蘩縷,,平,酸,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+雞腸,Myzus stellariae,平,辛/苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+莧實,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+苦菜,Lactuca sativa,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+落葵,Basella alba,寒,酸,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蕺菜,Houttuynia cordata,溫,辛,,,小毒,下品,ws_zh_bencao_gangmu,joined
+鹿藿,Rhynchosia volubilis,平,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+薯蕷,Dioscorea oppositifolia,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+酸筍,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+蜜蠟,Cerinthe,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蜂子,Schnabelia terniflora,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+雀瓮,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+石蠶,Spiraea chamaedryfolia,寒,鹹,,,有毒,下品,ws_zh_bencao_gangmu,joined
+香蟲,,溫,鹹,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+蚱蟬,,寒,鹹/甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+蜣螂,Scarabaeus sacer,寒,鹹,,,有毒,下品,ws_zh_bencao_gangmu,joined
+螻蛄,Gryllotalpidae,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu,joined
+螢火,Lampyridae,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu,joined
+衣魚,Lepisma saccharina,溫,鹹,,,無毒,下品,ws_zh_bencao_gangmu,joined
+鼠婦,Armadillidium vulgare,溫,酸,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蟅蟲,,寒,鹹,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+蜚蠊,Blattodea,寒,鹹,,,有毒,中品,ws_zh_bencao_gangmu,joined
+木虻,Xylomyidae,平,苦,,,有毒,中品,ws_zh_bencao_gangmu,joined
+蜚虻,,寒,苦,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+樗雞,,平,苦,,,小毒,中品,ws_zh_bencao_gangmu,unresolved
+斑蝥,Mylabris phalerata,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+芫青,Meloidae,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+地膽,Sonerila maculata,寒,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+人虱,,溫,甘/辛,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+蛤蟆,Amanita muscaria,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+馬陸,Diplopoda,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+粉鉛,,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+鉛丹,,寒,辛,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+鋼鐵,,平,鹹,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+鐵落,,平,辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+馬鐙,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+水銀,,寒,辛,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+雄黃,Realgar,平,苦,,,有毒,中品,ws_zh_bencao_gangmu,joined
+雌黃,,平,辛,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+理石,Pteria marmorata,寒,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+長石,Euchiloglanis longus,寒,辛/苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+殷孼,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+土殷,,平,鹹,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+鍛石,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+玉屑,,平,甘,肺,,無毒,,ws_zh_bencao_gangmu,unresolved
+雲母,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+戎鹽,,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+鹵鹼,,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+朴硝,,寒,辛/苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+硝石,,寒,苦,心/脾,,無毒,,ws_zh_bencao_gangmu,unresolved
+煙藥,,溫,鹹,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+空青,,寒,甘/酸,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+曾青,,寒,酸,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+綠青,Synchiropus splendidus,寒,酸,,,無毒,上品,ws_zh_bencao_gangmu,joined
+扁青,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+白青,Artemisia scoparia,平,甘/酸/鹹,,,無毒,上品,ws_zh_bencao_gangmu,joined
+石膽,,寒,酸/辛,,,有毒,上品,ws_zh_bencao_gangmu,unresolved
+礜石,,熱,辛,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+龍骨,Fossilia Ossis Mastodi,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+龍齒,,涼,澀,心/肝,,無毒,,ws_zh_bencao_gangmu,unresolved
+鯪鯉,Pholidota,溫,甘/澀,,,有毒,下品,ws_zh_bencao_gangmu,joined
+蛤蚧,Gekko gecko,平,鹹,肺/腎,,小毒,,ws_zh_bencao_gangmu,joined
+鹽龍,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+鯽魚,Carassius auratus,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+金魚,Carassius auratus,平,鹹/甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蚺蛇,Boidae,平,甘,,,小毒,下品,ws_zh_bencao_gangmu,joined
+諸蛇,,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+鮧魚,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+鮫魚,Scomberomorus,平,甘/鹹,,,無毒,下品,ws_zh_bencao_gangmu,joined
+海䖳,,溫,甘,,,小毒,下品,ws_zh_bencao_gangmu,unresolved
+鮑魚,Pleurotus cystidiosus,溫,鹹,,,無毒,上品,ws_zh_bencao_gangmu,joined
+石決明,,平,鹹,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+東壁土,,溫,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+根白皮,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+安息香,Commiphora wightii,平,辛/苦,心/脾,,無毒,,ws_zh_bencao_gangmu,joined
+蘇合香,Liquidambar orientalis,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+詹糖香,Lindera erythrocarpa,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+桑柴灰,Morus alba,涼,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+密蒙花,Buddleja officinalis,平,甘,肝,,無毒,,ws_zh_bencao_gangmu,joined
+梓白皮,Catalpa ovata,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+刺桐花,Erythrina variegata,寒,苦,,,小毒,下品,ws_zh_bencao_gangmu,joined
+白馬骨,Serissa,平,甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu,joined
+巴旦杏,Prunus dulcis,平,酸,,,無毒,中品,ws_zh_bencao_gangmu,joined
+天師栗,Aesculus chinensis var. wilsonii,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+大腹皮,Areca catechu,溫,辛,肺/脾,,無毒,,ws_zh_bencao_gangmu,joined
+庵羅果,,寒,苦,,,小毒,下品,ws_zh_bencao_gangmu,unresolved
+山嬰桃,,平,辛,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+吳茱萸,Tetradium ruticarpum,熱,辛/苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+半天河,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+縛豬繩,,溫,鹹/酸,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+屎中骨,,平,酸,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+肚及屎,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+突厥雀,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+巧婦鳥,,平,酸,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+苦蕎麥,,溫,甘/苦,,,小毒,下品,ws_zh_bencao_gangmu,unresolved
+赤小豆,Vigna umbellata,平,甘/酸,心,,無毒,,ws_zh_bencao_gangmu,joined
+白扁豆,Lablab purpureus,溫,甘,脾,,無毒,,ws_zh_bencao_gangmu,joined
+丹黍米,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+黃粱米,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+白粱米,Setaria italica,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+青粱米,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+薏苡仁,Coix lacryma-jobi,寒,甘,肺/脾,,無毒,,ws_zh_bencao_gangmu,joined
+陳廩米,,溫,鹹/酸,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+蕪荑醬,,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+肉蓯蓉,Cistanche deserticola,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+使君子,Quisqualis indica,溫,甘,脾/胃,,無毒,,ws_zh_bencao_gangmu,joined
+牽牛子,Ipomoea nil,寒,苦,,,有毒,下品,ws_zh_bencao_gangmu,joined
+天門冬,Asparagus cochinchinensis,平,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+土茯苓,Smilax glabra,平,甘/淡,胃/大腸,,無毒,,ws_zh_bencao_gangmu,joined
+山豆根,Euchresta japonica,寒,甘,心/肺,,無毒,,ws_zh_bencao_gangmu,joined
+白兔藿,,平,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+石合草,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+白芷香,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+高良薑,Alpinia officinarum,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,joined
+白豆蔻,Wurfbainia vera,溫,辛,肺/脾/胃,,無毒,,ws_zh_bencao_gangmu,joined
+益智子,Alpinia oxyphylla,溫,辛,肝/肺,,無毒,,ws_zh_bencao_gangmu,joined
+肉豆蔻,Myristica fragrans,溫,辛,肺/胃,,無毒,,ws_zh_bencao_gangmu,joined
+荊三稜,Scirpus yagara,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,joined
+石長生,Adiantum monochlamys,寒,鹹,,,有毒,下品,ws_zh_bencao_gangmu,joined
+白龍鬚,,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+延胡索,Corydalis yanhusuo,溫,辛,肝/肺,,無毒,,ws_zh_bencao_gangmu,joined
+徐長卿,Vincetoxicum mukdenense,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,joined
+金絲草,Pogonatherum crinitum,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+乾地黃,,寒,甘,,沉/降,無毒,上品,ws_zh_bencao_gangmu,unresolved
+鴨跖草,Commelina communis,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蜀羊泉,Solanum lyratum,寒,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+鼠尾草,Salvia officinalis,寒,苦,,,無毒,下品,ws_zh_bencao_gangmu,joined
+白蒺藜,,溫,甘,肝/心,,無毒,,ws_zh_bencao_gangmu,unresolved
+水甘草,Amsonia elliptica,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+野狼毒,,平,辛,,,大毒,下品,ws_zh_bencao_gangmu,unresolved
+野狼牙,,寒,辛,,,小毒,下品,ws_zh_bencao_gangmu,unresolved
+天南星,Arisaema heterophyllum,溫,苦,肺,,大毒,,ws_zh_bencao_gangmu,joined
+羊躑躅,Rhododendron molle,溫,辛,,,大毒,下品,ws_zh_bencao_gangmu,joined
+石龍芮,Ranunculus sceleratus,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+井中苔,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+馬先蒿,Pedicularis verticillata,平,苦,,,無毒,中品,ws_zh_bencao_gangmu,joined
+天名精,Carpesium abrotanoides,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+羊屎柴,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+石龍芻,Lepironia articulata,寒,苦,,,無毒,上品,ws_zh_bencao_gangmu,joined
+燈花燼,,溫,辛/酸,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+東風菜,Aster scaber,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+蒲公英,Taraxacum officinale,平,甘,脾/胃,,無毒,,ws_zh_bencao_gangmu,joined
+醍醐菜,,溫,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+五倍子,Rhus chinensis,平,酸,大腸,,無毒,,ws_zh_bencao_gangmu,joined
+白僵蠶,,平,鹹/辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+方解石,,寒,苦/辛,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+白石脂,,平,甘/酸,肺/大腸,,無毒,,ws_zh_bencao_gangmu,unresolved
+赤石脂,,溫,甘/酸/辛,心,,無毒,,ws_zh_bencao_gangmu,unresolved
+爐甘石,Smithsonite,溫,甘,胃,,無毒,,ws_zh_bencao_gangmu,joined
+石鐘乳,,溫,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+孔公孼,,溫,辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+青琅玕,,平,辛,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+凝水石,,寒,辛,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+石硫黃,,溫,酸,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+禹余糧,Limonite,寒,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+金牙石,,平,鹹,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+石龍子,Scincidae,寒,鹹,,,小毒,中品,ws_zh_bencao_gangmu,joined
+鰻鱺魚,,平,甘,,,有毒,中品,ws_zh_bencao_gangmu,unresolved
+海鰻鱺,Congridae,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+烏賊魚,Decapodiformes,溫,鹹,,,無毒,中品,ws_zh_bencao_gangmu,joined
+奴哥撒兒,,溫,苦,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+桑根白皮,,寒,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+皮間白汁,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+桑上寄生,Taxillus chinensis,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+諸鳥有毒,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+大豆黃卷,,平,甘,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+獨活羌活,,平,苦/甘,,浮/升,無毒,上品,ws_zh_bencao_gangmu,unresolved
+紫花地丁,Viola philippica,寒,苦/辛,肝/脾,,無毒,,ws_zh_bencao_gangmu,joined
+腸風下血,,溫,辛,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+葛上亭長,,溫,辛,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+白頸蚯蚓,,寒,鹹,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+太一余糧,,平,甘,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+特生礜石,,溫,甘,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+白皮及根皮,,溫,苦,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+曰︰婆羅得,,溫,辛,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+六畜毛蹄甲,,平,鹹,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+肫中砂石子,,寒,甘,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+草川,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+亂髮,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+頭垢,,溫,鹹/苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+耳塞,,溫,鹹/苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+爪甲,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+牙齒,,熱,甘/鹹,,,有毒,,ws_zh_bencao_gangmu,unresolved
+人屎,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+人尿,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+淋石,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+人胞,,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+人膽,,涼,苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+膽汁,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+龜筒,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+瑇瑁,Eretmochelys imbricata,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+攝龜,Cyclemys,寒,甘,,,有毒,,ws_zh_bencao_gangmu,joined
+蝤蛑,Scylla serrata,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+鱟魚,,,甘/鹹,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+蚌粉,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+爛殼,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+擔羅,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+車渠,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+淡菜,Machilus viridis,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+甲香,Aeoliscus strigatus,平,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+甲煎,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蝸螺,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蓼螺,Pycreus sanguinolentus,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+海月,Placuna placenta,平,甘/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+海燕,Patiria pectinifera,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+赤土,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃土,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+煙膠,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+柏葉,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+松節,Rhodomelaceae,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+松葉,Diprionidae,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+桂心,,,苦/辛,心/心包,,無毒,,ws_zh_bencao_gangmu,unresolved
+月桂,Laurus nobilis,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+蜜香,Aquilaria sinensis,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+丁皮,,熱,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+紫檀,Pterocarpus santalinus,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+楠材,Phoebe zhennan,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+樟材,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏藥,Lindera aggregata,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+櫰香,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+根葉,Anoecia corni,寒,辛,,,有毒,,ws_zh_bencao_gangmu,joined
+沒藥,Commiphora myrrha,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+騏竭,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+質汗,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+樟腦,,熱,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蘆薈,Aloe,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+枳殼,Citrus aurantium,寒,苦/酸,,升/降,無毒,,ws_zh_bencao_gangmu,joined
+枸橘,Citrus trifoliata,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+核仁,,涼,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+人家,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+山礬,Saissetia bobuae,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+枝葉,Phycodurus eques,平,酸/甘,,浮/升,無毒,,ws_zh_bencao_gangmu,joined
+追風,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+楊櫨,,寒,苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+荊瀝,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+欒荊,,溫,辛/苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+蠟梅,Chimonanthus praecox,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+白皮,Aralia chinensis,平,辛,,,小毒,,ws_zh_bencao_gangmu,joined
+木麻,Casuarina equisetifolia,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+檀桓,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+小柏,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃櫨,Cotinus coggygria,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+逐折,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+椿樗,,溫,苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+干漆,Toxicodendron vernicifluum,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+槐實,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+瀉後,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+槐膠,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+樹如,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+檉柳,Tamarix chinensis,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+松楊,Ehretia taiwaniana,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+莢仁,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+朗榆,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏木,Diospyros melanoxylon,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+櫚木,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+木灰,,溫,甘,,,小毒,,ws_zh_bencao_gangmu,unresolved
+石瓜,Vaccinium chengiae,平,苦,,,,中品,ws_zh_bencao_gangmu,joined
+竹黃,Shiraia bambusicola,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+楓柳,,熱,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+烏梅,,溫,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白梅,Melocactus glaucescens,平,酸/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+榔梅,Hibiscus macrophyllus,熱,辛/酸/甘,,,,下品,ws_zh_bencao_gangmu,joined
+桃梟,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+桃膠,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+生棗,,熱,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+木心,,溫,甘/澀,,,小毒,,ws_zh_bencao_gangmu,unresolved
+苦棗,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+橄欖,Olea europaea,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+欖仁,Terminalia catappa,溫,甘/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+棎子,,平,甘/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+韶子,Nephelium lappaceum var. pallens,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+枳椇,Hovenia acerba,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鹿梨,Pyrus calleryana,寒,酸/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+棠梨,Pyrus pashia,寒,酸/甘/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+海紅,Adenanthera pavonina,平,酸/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+楂子,,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+山楂,Crataegus pinnatifida,,酸,脾,,無毒,,ws_zh_bencao_gangmu,joined
+林檎,Annona squamosa,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+柿蒂,,平,澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+橘實,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+橘核,Citrus reticulata,平,甘/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+金橘,citrus fruit,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+楊梅,Myrica rubra,溫,酸/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+樹皮,Theopompa ophthalmica,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+櫧子,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鉤栗,Castanopsis hystrix,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+橡實,Quercus mongolica,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+斗殼,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+槲實,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+瓜瓤,,寒,甘,,,小毒,,ws_zh_bencao_gangmu,unresolved
+沙糖,Viburnum odoratissimum,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蓮實,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+藕節,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蓮花,Nelumbo nucifera,溫,苦/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蓮房,,溫,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+荷葉,Neofelis nebulosa,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+慈菇,Sagittaria sagittifolia,寒,苦/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+椒紅,,溫,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+椒目,,熱,辛,脾/膀胱,,,,ws_zh_bencao_gangmu,unresolved
+地椒,Thymus quinquecostatus,溫,辛,,,小毒,,ws_zh_bencao_gangmu,joined
+茶子,Camellia sinensis,寒,苦,,,有毒,,ws_zh_bencao_gangmu,joined
+皋蘆,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+潦水,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+露水,Cyanotis cristata,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+甘露,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+明水,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+冬霜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+神水,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+醴泉,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+熱湯,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+漿水,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+脂膏,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+尾血,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+膽皮,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鼻唇,Oxyscelio nasolabii,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+蹄肉,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+心血,,平,苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+脊骨,,熱,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+牛角,Orbea variegata,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鼻津,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+頭肉,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+懸蹄,,寒,辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+牛酥,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+乳腐,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鮓答,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+狗寶,,平,甘/鹹,,,小毒,,ws_zh_bencao_gangmu,unresolved
+竹䶉,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+貂鼠,Martes zibellina,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+黃鼠,Mustela sibirica,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+象牙,,寒,苦,,,,中品,ws_zh_bencao_gangmu,unresolved
+野馬,Equus ferus,平,甘,,,小毒,,ws_zh_bencao_gangmu,joined
+野豬,Sus scrofa,平,辛/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+豪豬,Haemaphysalis hystricis,寒,甘,,,有毒,,ws_zh_bencao_gangmu,joined
+麋茸,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+麋角,Acropora palmata,熱,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+靈貓,Viverridae,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu,joined
+原系,,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+果然,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+猩猩,Pongo pygmaeus,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+彭侯,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+陽烏,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+脂油,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鷿鷉,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鴛鴦,Aix galericulata,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+魚狗,Rhinolophus alcyone,平,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+鳩肉,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+青鷦,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鳲鳩,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+桑鳸,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鸜鵒,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+練鵲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+慈烏,,平,酸/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏鴉,Corvus,平,酸/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+山鵲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鶻嘲,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+杜鵑,Rhododendron,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+尾毛,Sphaerocionium pilosissimum,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+卵白,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+卵黃,Bolbitius vitellinus,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鸐雉,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白鷴,Lophura nycthemera,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鷓鴣,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+竹雞,Bambusicola thoracicus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+英雞,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+秧雞,Rallus aquaticus,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+雀卵,Lithops bromfieldii,溫,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+蒿雀,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石燕,Serinus mozambicus,涼,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+麻勃,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+浮麥,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+麥粉,,涼,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+麵筋,,涼,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+麥麨,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+麥苗,,寒,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+雀麥,Bromus japonicus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蕎麥,Fagopyrum esculentum,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+稻米,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+米泔,,涼,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+稻穰,,熱,辛/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+粳米,Oryza sativa,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+綠豆,Vigna radiata,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+豆皮,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+豆芽,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白豆,Pseudotaxus chienii,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+穭豆,Glycine soja,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+豌豆,Pisum sativum,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+豇豆,Vigna unguiculata,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+刀豆,Canavalia gladiata,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蜀黍,Sorghum bicolor,溫,甘/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+稗米,Echinochloa crus-galli,寒,辛/甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+嫩苗,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+淡豉,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+豆黃,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+豆腐,Glycine max,寒,甘/鹹,,,小毒,,ws_zh_bencao_gangmu,joined
+寒具,,溫,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蒸餅,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+女曲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+粟櫱,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+稻櫱,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+飴糖,,,鹹,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+米酒,,熱,苦/甘/辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+燒酒,Batillaria zonalis,熱,辛/甘,,,大毒,,ws_zh_bencao_gangmu,joined
+米秕,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+長松,Usnea longissima,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+列當,Orobanche coerulescens,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+瑣陽,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白朮,Atractylodes macrocephala,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蒼朮,Atractylodes lancea,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+子仁,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+葛谷,Pueraria montana var. lobata,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+女萎,Clematis apiifolia,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+鵝抱,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃藤,Calamus jenkinsianus,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+律草,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+莖根,Lycianthes lysimachioides var. caulorhiza,寒,苦,,,有毒,,ws_zh_bencao_gangmu,joined
+木蓮,Ficus pumila,平,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+甘藤,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+南藤,Piper wallichii,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+省藤,Calamus rotang,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+紫藤,Wisteria sinensis,溫,甘,,,小毒,,ws_zh_bencao_gangmu,joined
+山柰,Kaempferia galanga,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+廉薑,Alpinia galanga,熱,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+山薑,Alpinia japonica,熱,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+蓽茇,Piper longum,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+蒟醬,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+薑黃,Curcuma longa,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+鬱金,Curcuma longa,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+茅香,Hierochloë odorata,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+線香,Bryanthus,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+地筍,Lycopus lucidus,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+馬蘭,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+莖穗,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+地錦,Parthenocissus tricuspidata,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+崖㯶,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+誤服,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石蒜,Lycoris radiata,溫,辛/甘,,,小毒,,ws_zh_bencao_gangmu,joined
+地筋,Heteropogon contortus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+草犀,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+苗花,,涼,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蜀葵,Alcea rosea,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+菟葵,Eranthis stellata,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+苗葉,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱧腸,Eclipta prostrata,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu,joined
+藍澱,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+海根,Kinyongia vanheygeni,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+蔛草,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+酸模,Rumex acetosa,寒,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+蒲蒻,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+菰根,Zizania latifolia,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+水藻,Sedum griseum,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+海蘊,Nemacystus decipiens,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+海帶,Larus dominicanus,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+石帆,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+莨菪,Hyoscyamus niger,,苦/辛,,,有毒,下品,ws_zh_bencao_gangmu,joined
+蓖麻,Samia cynthia,平,甘/辛,,,小毒,,ws_zh_bencao_gangmu,joined
+局箬,,寒,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+水堇,Hottonia palustris,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蕁麻,Aglais urticae,寒,辛/苦,,,大毒,,ws_zh_bencao_gangmu,joined
+乾苔,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石蕊,Cladonia rangiferina,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+垣衣,,,酸,,,無毒,中品,ws_zh_bencao_gangmu,unresolved
+玉柏,Lycopodium obscurum,溫,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+石松,Lycopodium japonicum,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+白菊,Leucomeris decora,平,苦/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+野菊,Chrysanthemum indicum,溫,苦/辛,,,小毒,,ws_zh_bencao_gangmu,joined
+角蒿,Incarvillea sinensis,平,辛/苦,,,小毒,,ws_zh_bencao_gangmu,joined
+䕲蒿,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+根苗,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鏨菜,Leonurus pseudomacranthus,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+𦯶麻,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鶴虱,Lappula,平,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+豨薟,Sigesbeckia orientalis,寒,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+甘蕉,Musa basjoo,,甘,,,無毒,下品,ws_zh_bencao_gangmu,joined
+根節,Calanthe,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+萊菔,,平,辛/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+薑皮,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+茼蒿,Glebionis coronaria,平,甘/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+邪蒿,Artemisia caruifolia,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+紫堇,Corydalis edulis,溫,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+馬蘄,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蒔蘿,Anethum graveolens,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+草豉,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+茄子,Solanum melongena,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+壺瓠,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+敗瓢,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+南瓜,Cucurbita moschata,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+越瓜,Cucumis melo Conomon Group,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+胡瓜,Cucumis sativus,平,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+絲瓜,Luffa aegyptiaca,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+苦瓜,Momordica charantia,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+石蒪,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+桑耳,,平,甘,,,有毒,,ws_zh_bencao_gangmu,unresolved
+槐耳,Trametes robiniophila,平,苦/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+杉菌,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+香蕈,Lentinula edodes,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+雞㙡,Macrolepiota albuminosa,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+舵菜,,寒,鹹/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+土菌,Balanophora henryi,寒,甘,,,有毒,,ws_zh_bencao_gangmu,joined
+竹蓐,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+地耳,Nostoc commune,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+石耳,Umbilicaria esculenta,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蕹菜,Ipomoea aquatica,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+苜蓿,Medicago sativa var. sativa,,甘,,,無毒,上品,ws_zh_bencao_gangmu,joined
+白苣,Lactuca sativa,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+水蕨,Ceratopteris thalictroides,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+翹搖,Astragalus sinicus,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+土芋,,寒,甘/辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+甘藷,Ipomoea batatas,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蠶蛻,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+海蠶,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+雪蠶,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+乳蟲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蟬蛻,Cryptotympana atrata,寒,鹹/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蟬花,Cordyceps cicadae,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+行夜,,溫,辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+竹虱,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蜻蛉,Odonata,寒,,,,無毒,下品,ws_zh_bencao_gangmu,joined
+蜘蛛,Araneae,寒,,,,小毒,下品,ws_zh_bencao_gangmu,joined
+窠幕,,平,甘/辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+蝸牛,,寒,鹹,,,小毒,,ws_zh_bencao_gangmu,unresolved
+銀屑,,寒,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+銀膏,,寒,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+銅青,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+古鏡,,平,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鐵漿,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鐵刀,Senna siamea,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+粉霜,Botryobasidium pruinatum,溫,辛,,,有毒,,ws_zh_bencao_gangmu,joined
+銀朱,,溫,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+靈砂,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石腦,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石髓,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石炭,Larrea tridentata,溫,甘/辛,,,有毒,,ws_zh_bencao_gangmu,joined
+石面,Paraboea rufescens,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+浮石,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+玉泉,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+青玉,Echinopsis pentlandii,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+珊瑚,Sarcostemma acidum,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+馬腦,,寒,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+玻瓈,,寒,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+水精,,寒,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+大鹽,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+綠鹽,,平,鹹/苦/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+生硝,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+硵砂,,溫,鹹/苦/辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+綠礬,,涼,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+玄石,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+土黃,Nematalosa japonica,熱,辛/酸,,,有毒,,ws_zh_bencao_gangmu,joined
+礞石,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+薑石,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石蟹,Leptodius sanguineus,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+石蛇,Rhaphidophora decursiva,平,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+石鱉,Acanthopleuribacteraceae,涼,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+龍角,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱮魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱅魚,Hypophthalmichthys nobilis,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鱒魚,Oncorhynchus mykiss,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鯇魚,Ctenopharyngodon idella,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+竹魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鯔魚,Mugil cephalus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+白魚,Chanodichthys erythropterus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鯼魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱤魚,Elopichthys bambusa,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+勒魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱭魚,Mugilidae,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鰣魚,Tenualosa reevesii,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+嘉魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鯧魚,Pampus argenteus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+魴魚,Zeus faber,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鱸魚,Perca fluviatilis,平,甘,,,小毒,,ws_zh_bencao_gangmu,joined
+鱖魚,Siniperca chuatsi,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+鯊魚,Selachimorpha,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鰷魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱊魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱗蛇,,寒,苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+烏蛇,Diospyros eriantha,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+金蛇,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+水蛇,Homalopsidae,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+蛇婆,Waltheria indica,平,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+鰌魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱘魚,Acipenseriformes,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鮠魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+河豚,Crassula humbertii,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鮹魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+章魚,Octopoda,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+海鰕,,平,甘,,,小毒,,ws_zh_bencao_gangmu,unresolved
+海馬,Hippocampus,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+鱁鮧,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鰾膠,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+魚鱠,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+魚鮓,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+魚脂,,溫,甘,,,小毒,,ws_zh_bencao_gangmu,unresolved
+溺白垽,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+口津唾,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+天靈蓋,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+胞衣水,,涼,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+綠毛龜,,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蛤蜊粉,Madhuca pasquieri,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+土蜂窠,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蚯蚓泥,,寒,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏爹泥,,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏古瓦,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+釜臍墨,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+百草霜,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+梁上塵,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+弓弩弦,,平,,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+木犀花,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+曰︰天,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白旃檀,Santalum album,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+必栗香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+薰陸香,,溫,,,,無毒,上品,ws_zh_bencao_gangmu,unresolved
+龍腦香,Dryobalanops aromatica,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+胡桐淚,,寒,鹹/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+樹白皮,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+地骨皮,Lycium barbarum,寒,苦,肺/腎,,,,ws_zh_bencao_gangmu,joined
+枸杞子,Lycium barbarum,寒,苦,肝/腎,,,,ws_zh_bencao_gangmu,joined
+木並皮,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+葉及花,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+葉並花,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+伏牛花,Damnacanthus indicus,平,苦/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+黃楊木,Cydalima perspectalis,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+不凋木,Osteomeles schwerinae var. microphylla,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+賣子木,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+小天蓼,,熱,苦/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+放杖木,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+接骨木,Sambucus williamsii,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+木白皮,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+桐子油,,寒,甘/辛,,,大毒,,ws_zh_bencao_gangmu,unresolved
+肥皂莢,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+無患子,Sapindus saponaria,平,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+子中仁,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+訶黎勒,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蘇方木,Biancaea sappan,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+大風子,Hydnocarpus wightiana,熱,辛,,,有毒,,ws_zh_bencao_gangmu,joined
+相思子,Abrus precatorius,平,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+淡竹葉,Lophatherum gracile,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+淡竹茹,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+仙人杖,Nyctocereus serpentinus,平,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+柳寄生,Taxillus delavayi,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+仲思棗,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+庵摩勒,Phyllanthus emblica,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+毗梨勒,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+五斂子,Averrhoa carambola,平,酸/甘/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+五子實,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+海松子,Pinus koraiensis,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+檳榔子,Areca catechu,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+大腹子,Areca catechu,溫,辛/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+椰子瓤,Cocos nucifera,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+椰子漿,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+椰子皮,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+無漏子,Phoenix dactylifera,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+桄榔子,Arenga pinnata,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+䔋木面,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+波羅蜜,Artocarpus heterophyllus,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu,joined
+阿勒勃,Cassia fistula,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+沙棠果,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+都桷子,,平,酸/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+都念子,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+都咸子,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+德慶果,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+馬檳榔,Capparis masaikai,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+木瓜核,Chaenomeles cathayensis,溫,酸/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+赤爪木,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+君遷子,Diospyros lotus,平,甘/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+甘石榴,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+酸石榴,Punica granatum,溫,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+黃橘皮,,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+青橘皮,,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+油胡桃,Juglans regia,熱,辛,,,有毒,,ws_zh_bencao_gangmu,joined
+瓜子仁,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+獼猴桃,Aulacaspis actinidiae,寒,酸/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+藤中汁,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蓮蕊須,,溫,甘/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+畢澄茄,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+食茱萸,Zanthoxylum ailanthoides,熱,辛/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+鹽麩子,,寒,酸/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+醋林子,Photinia glabra,寒,苦/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+甘露蜜,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+屋漏水,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+井華水,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+玉井水,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+乳穴水,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+碧海水,,溫,鹹,,,小毒,,ws_zh_bencao_gangmu,unresolved
+阿井水,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+磨刀水,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+浸藍水,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+懸蹄毛,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃牛肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+水牛肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白馬溺,,寒,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+馬絆繩,,涼,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃明膠,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+底野迦,,寒,辛/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+敗鼓皮,,平,,,,無毒,下品,ws_zh_bencao_gangmu,unresolved
+土撥鼠,Marmota,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+胎中屎,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+麝臍香,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+野狼筋,,熱,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+膃肭獸,,平,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白鶴血,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+啄木鳥,Picidae,平,甘/酸,,,無毒,,ws_zh_bencao_gangmu,joined
+雄鵲肉,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏骨雞,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+秦燕毛,,平,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+寒號蟲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+五靈脂,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鳳凰台,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白油麻,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+胡麻油,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+亞麻子,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+淅二泔,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黑大豆,Glycine max,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+黃大豆,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+綠豆粉,Vigna radiata,涼,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+玉蜀黍,Zea mays,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+蓬草子,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+罌子粟,,寒,酸/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+阿芙蓉,Papaver somniferum,溫,酸/澀,,,,中品,ws_zh_bencao_gangmu,joined
+蒲州豉,,寒,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+小麥粥,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+米麥麨,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+小麥曲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+穬麥櫱,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+榆仁醬,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+乾餳糟,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+隱忍葉,,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+百脈根,Lotus corniculatus,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+懸鉤子,Eretmocerus eremicus,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+木鱉子,Momordica cochinchinensis,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+番木鱉,Strychnos nux-vomica,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+馬兜鈴,Aristolochia debilis,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+榼藤子,Entada phaseoloides,平,澀/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+月季花,Rosa sinica,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+何首烏,Polygonum multiflorum,溫,苦/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+九仙子,,涼,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃藥子,Reynoutria japonica,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+解毒子,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白藥子,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+威靈仙,Clematis recta,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+通脫木,Tetrapanax papyrifer,寒,甘/淡,,,無毒,,ws_zh_bencao_gangmu,joined
+白花藤,Convolvulus arvensis,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+赤地利,Fagopyrum cymosum,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+烏蘞莓,Causonis japonica,寒,酸/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+扶芳藤,Euonymus fortunei,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+常春藤,Hedera helix,溫,苦/甘,,,無毒,,ws_zh_bencao_gangmu,joined
+藤中水,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+天仙藤,Fibraurea recisa,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+風延母,,平,苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+蜘蛛香,Valeriana jatamansi,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+甘松香,Nardostachys jatamansi,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+花及子,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+縮砂蔤,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蓽勃沒,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+補骨脂,Cullen corylifolium,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+蓬莪荗,Curcuma phaeocaulis,溫,苦/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+鬱金香,Crocus sativus,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+白茅香,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+排草香,Anisochilus carnosus,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+迷迭香,Rosmarinus officinalis,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+䔾車香,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+艾納香,Blumea balsamifera,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+石香葇,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+骨碎補,Drynaria fortunei,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+金星草,Selliguea griffithiana,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+虎耳草,Saxifraga stolonifera,寒,苦/辛,,,小毒,,ws_zh_bencao_gangmu,joined
+石胡荽,Centipeda minima,寒,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+酢漿草,Oxalis corniculata,寒,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+離鬲草,,寒,辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+胡黃連,Neopicrorhiza,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+土當歸,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+都管草,Angelica keiskei,寒,苦/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+鬼督郵,Chloranthus japonicus,平,辛/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+釵子股,Luisia morsei,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+吉利草,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+硃砂根,Ardisia crenata,涼,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+辟虺雷,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+錦地羅,Drosera burmanni,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+紫金牛,Ardisia japonica,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+鐵線草,Lindsaea orbiculata,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+熟地黃,Rehmannia glutinosa,溫,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+階前草,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+捶胡根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃蜀葵,Abelmoschus manihot,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+子及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+迎春花,Jasminum nudiflorum,平,苦/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+鼠麴草,Gnaphalium affine,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+剪春羅,Silene sinensis,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+金盞草,,寒,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+草及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+狗舌草,Tephroseris kirilowii,寒,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+狼把草,Bidens tripartita,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+三白草,Saururus chinensis,寒,甘/辛,,,小毒,,ws_zh_bencao_gangmu,joined
+蠶網草,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+穀精草,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+海金沙,Lygodium japonicum,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+地楊梅,Luzula campestris,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+水楊梅,Geum urbanum,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+半邊蓮,Lobelia chinensis,平,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+鬼針草,Uromyces bidenticola,平,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+攀倒甑,Patrinia villosa,寒,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+龍舌草,,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+萍蓬草,Nuphar pumila,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+續隨子,Euphorbia lathyris,溫,辛,,,有毒,,ws_zh_bencao_gangmu,joined
+木藜蘆,Leucothoe,溫,苦/辛,,,有毒,,ws_zh_bencao_gangmu,joined
+坐拿草,,熱,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+醉魚草,Buddleja axillaris,溫,辛/苦,,,小毒,,ws_zh_bencao_gangmu,joined
+葉及子,,溫,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+格注草,,溫,辛/苦,,,大毒,,ws_zh_bencao_gangmu,unresolved
+土馬鬃,,寒,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+千年艾,Crossostephium chinense,溫,辛/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+黃花蒿,Artemisia annua,涼,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+花及根,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+紅藍花,Crocus sativus,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+番紅花,Crocus sativus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+根及花,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+葫蘆巴,Trigonella foenum-graecum,溫,苦,,,無毒,,ws_zh_bencao_gangmu,joined
+龍常草,Diarrhena,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+莖及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+五辛菜,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+胡蘿蔔,Daucus carota subsp. sativus,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+白花菜,Cleome gynandra,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+瓤及子,,寒,苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+白冬瓜,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白瓜子,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石花菜,Gelidium amansii,寒,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+鹿角菜,Silvetia siliquosa,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+龍鬚菜,Nostoc flagelliforme,寒,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+天花蕈,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蘑菰蕈,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+馬齒莧,Portulaca oleracea,寒,酸,,,無毒,,ws_zh_bencao_gangmu,joined
+水苦蕒,Veronica undulata,寒,苦/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+翻白草,Potentilla discolor,平,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+黃瓜菜,Paraixeris denticulata,寒,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+生瓜菜,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+萁及根,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+秦荻藜,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+零餘子,Herminium,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+草石蠶,Stachys affinis,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+諸竹筍,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+留師蜜,,寒,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蟲白蠟,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+百藥煎,,,酸/鹹/甘,心/肺,,無毒,,ws_zh_bencao_gangmu,unresolved
+繭鹵汁,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+原蠶砂,,溫,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+九香蟲,Coridius chinensis,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+枸杞蟲,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+木蠹蟲,,平,辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+桑蠹蟲,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+柳蠹蟲,,平,甘/辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+桃蠹蟲,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+桂蠹蟲,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蘆蠹蟲,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+自然銅,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+銅礦石,,寒,酸,,,小毒,,ws_zh_bencao_gangmu,unresolved
+密陀僧,,寒,甘,肝,,,,ws_zh_bencao_gangmu,unresolved
+古文錢,,平,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+諸銅器,,寒,辛,,,,中品,ws_zh_bencao_gangmu,unresolved
+鐵華粉,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+諸鐵器,,溫,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+不灰木,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+青石脂,,平,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃石脂,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黑石脂,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+桃花石,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+井泉石,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+無名異,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白玉髓,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+菩薩石,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+光明鹽,,平,鹹/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+玄精石,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+馬牙硝,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石硫赤,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石硫青,,溫,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+磁石毛,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+金星石,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+婆娑石,,寒,甘/淡,,,無毒,,ws_zh_bencao_gangmu,unresolved
+花乳石,,平,酸/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白羊石,Arietites,涼,淡,,,無毒,,ws_zh_bencao_gangmu,joined
+麥飯石,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+紫梢花,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+眼睛汁,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石首魚,Sciaenidae,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+杜父魚,Psychrolutes phrictus,溫,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+石鮅魚,,平,甘,,,小毒,,ws_zh_bencao_gangmu,unresolved
+黃鯝魚,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鱠殘魚,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃頷蛇,Colubridae,溫,甘,,,小毒,,ws_zh_bencao_gangmu,joined
+比目魚,Paralichthys olivaceus,平,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+海鷂魚,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+婦人月水,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+頌曰︰今,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蜣螂轉丸,,寒,鹹/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+死人枕席,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+子及木皮,,涼,甘/苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+根及木皮,,寒,苦,,,,上品,ws_zh_bencao_gangmu,unresolved
+皮及根皮,,平,辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+城東腐木,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+莖及白皮,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+胡名鎮頭,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+阿月渾子,Pistacia vera,溫,辛,,,無毒,,ws_zh_bencao_gangmu,joined
+紅白蓮花,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+山岩泉水,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+糧罌中水,,平,辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+牡狗陰莖,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白馬陰莖,,平,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+四足及尾,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鼫鼠鼫鼠,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+腳骨及嘴,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+丹雄雞肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白雄雞肉,,溫,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏雄雞肉,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黑雌雞肉,,溫,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃雌雞肉,,平,甘/酸/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+泰和老雞,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+穰莖並根,,熱,辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+野狼尾草,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+大麥醋糟,,寒,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+野狼跋子,,寒,苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+伏雞子根,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+赤車使者,,溫,辛/苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+仙人掌草,,寒,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+紫背金盤,Ajuga nipponensis,熱,辛/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+屋上敗茅,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+火炭母草,Persicaria chinensis,平,酸,,,有毒,,ws_zh_bencao_gangmu,joined
+地蜈蚣草,,寒,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+越王餘算,,溫,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+曼陀羅花,,溫,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+昨葉何草,,平,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+劉寄奴草,,溫,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+仙人杖草,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+雄原蠶蛾,,溫,鹹,,,小毒,,ws_zh_bencao_gangmu,unresolved
+五色石脂,,平,甘,,,,上品,ws_zh_bencao_gangmu,unresolved
+石中黃子,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+握雪礜石,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+十二時蟲,,寒,鹹,,,小毒,,ws_zh_bencao_gangmu,unresolved
+枸杞地骨皮,,寒,苦,,,,上品,ws_zh_bencao_gangmu,unresolved
+即廣中所謂,,平,甘/辛,,,小毒,,ws_zh_bencao_gangmu,unresolved
+五臟及腸肚,,寒,苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+糟筍節中酒,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+舂杵頭細糠,,熱,辛/甘,,,,中品,ws_zh_bencao_gangmu,unresolved
+青精乾石𩛓飯,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+作乾石斛法︰,,平,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+青芝一名龍芝,,平,酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+赤芝一名丹芝,,平,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃芝一名金芝,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黑芝一名玄芝,,平,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+紫芝一名木芝,,溫,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+祝之曰︰類我,,平,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+時珍曰︰按毛萇,,寒,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+時珍曰︰梗是矣,,平,甘/鹹,,,小毒,,ws_zh_bencao_gangmu,unresolved
+人精,,溫,甘,,,,,ws_zh_bencao_gangmu,unresolved
+人汗,,,鹹,,,有毒,,ws_zh_bencao_gangmu,unresolved
+眼淚,,,鹹,,,有毒,,ws_zh_bencao_gangmu,unresolved
+蠵龜,Caretta caretta,平,鹹,,,,,ws_zh_bencao_gangmu,joined
+納鱉,,寒,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+蟛蜞,Wedelia,,鹹,,,有毒,,ws_zh_bencao_gangmu,joined
+蛤蜊,Madhuca pasquieri,,鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+海螺,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石鹼,,溫,辛/苦,,,,,ws_zh_bencao_gangmu,unresolved
+車脂,,,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+榧實,,,苦,,,,下品,ws_zh_bencao_gangmu,unresolved
+麂目,,,酸/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+皮瓤,,,辛/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+槲若,,,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+臘雪,,,鹹,,,有毒,,ws_zh_bencao_gangmu,unresolved
+夏冰,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+溫湯,,熱,辛,,,,,ws_zh_bencao_gangmu,unresolved
+齏水,,,酸/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+癭氣,,平,甘,,,,,ws_zh_bencao_gangmu,unresolved
+陰卵,,熱,,,,小毒,,ws_zh_bencao_gangmu,unresolved
+醍醐,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+諸血,,平,甘,,,,,ws_zh_bencao_gangmu,unresolved
+鷑鳩,,平,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+孔雀,Pavo,,,,,有毒,下品,ws_zh_bencao_gangmu,joined
+鴟鵂,,,,,,大毒,下品,ws_zh_bencao_gangmu,unresolved
+麻仁,,,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+麥麩,,溫,甘,,,,,ws_zh_bencao_gangmu,unresolved
+豆油,,熱,辛/甘,,,,,ws_zh_bencao_gangmu,unresolved
+蠶豆,Vicia faba,溫,苦/甘,,,,,ws_zh_bencao_gangmu,joined
+參子,Echinochloa frumentacea,,甘/澀,,,無毒,,ws_zh_bencao_gangmu,joined
+菰米,Zizania latifolia,,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+釀酒,Saccharomyces cerevisiae,熱,甘/辛,,,,,ws_zh_bencao_gangmu,joined
+酒糟,,,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+旋花,Calystegia sepium,,甘,,,,上品,ws_zh_bencao_gangmu,joined
+藤黃,Garcinia hanburyi,,酸/澀,,,有毒,,ws_zh_bencao_gangmu,joined
+瑞香,Daphne odora,,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,joined
+茉莉,Jasminum sambac,熱,,,,有毒,,ws_zh_bencao_gangmu,joined
+石莧,,,辛/苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+根莖,Rhizocaulus,,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+吳藍,,,苦/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+天蓼,,,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+白菖,Acorus calamus,,甘,,,無毒,,ws_zh_bencao_gangmu,joined
+菰筍,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+菰手,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+膠投,,,,,,有毒,下品,ws_zh_bencao_gangmu,unresolved
+射罔,Aconitum carmichaelii,,苦,,,大毒,,ws_zh_bencao_gangmu,joined
+鳳仙,Impatiens balsamina,,苦/甘/辛,,,小毒,,ws_zh_bencao_gangmu,joined
+音像,,,辛,,,大毒,,ws_zh_bencao_gangmu,unresolved
+桑花,,,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+茺蔚,Leonurus japonicus,寒,,,,,上品,ws_zh_bencao_gangmu,joined
+小青,Indigofera tinctoria,溫,,,,無毒,,ws_zh_bencao_gangmu,joined
+木賊,Equisetum hyemale,,甘/苦,,,無毒,,ws_zh_bencao_gangmu,joined
+羅勒,Ocimum basilicum,溫,辛,,,,,ws_zh_bencao_gangmu,joined
+芋子,,,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+灶馬,Rhaphidophoridae,,辛,,,有毒,,ws_zh_bencao_gangmu,joined
+鉛霜,,,甘/酸,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鐵精,,平,,,,,中品,ws_zh_bencao_gangmu,unresolved
+鐵釘,Lindera erythrocarpa,平,,,,無毒,,ws_zh_bencao_gangmu,joined
+鹽藥,,,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+硼砂,,,苦/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+黃礬,,,酸/澀/鹹,,,有毒,,ws_zh_bencao_gangmu,unresolved
+砒石,,,苦/酸,,,有毒,,ws_zh_bencao_gangmu,unresolved
+越砥,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鼉甲,,,甘,,,小毒,,ws_zh_bencao_gangmu,unresolved
+䱱魚,,,甘,,,有毒,,ws_zh_bencao_gangmu,unresolved
+鯢魚,Andrias davidianus,,甘,,,有毒,,ws_zh_bencao_gangmu,joined
+白瓷器,,平,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+燈盞油,,,辛/苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+海紅豆,Adenanthera pavonina,寒,,,,小毒,,ws_zh_bencao_gangmu,joined
+豬腰子,,,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+苦竹葉,,,苦,,,無毒,,ws_zh_bencao_gangmu,unresolved
+桃寄生,,,苦/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+木威子,Canarium pimela,,酸/辛,,,無毒,,ws_zh_bencao_gangmu,joined
+鹽膽水,,,鹹/苦,,,大毒,,ws_zh_bencao_gangmu,unresolved
+生熟湯,,,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+母豬乳,,寒,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+水四碗,,,,,,大毒,中品,ws_zh_bencao_gangmu,unresolved
+白馬通,,溫,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+筆頭灰,,寒,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+毛及屎,,寒,,,,,下品,ws_zh_bencao_gangmu,unresolved
+白鴿肉,,溫,辛,,,,,ws_zh_bencao_gangmu,unresolved
+血及膽,,溫,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+東陽酒,,,甘/辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+獨行根,,,辛/苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+佛甲草,Sedum lineare,寒,甘,,,,,ws_zh_bencao_gangmu,joined
+山慈菇,Pleione bulbocodioides,,甘/辛,,,小毒,,ws_zh_bencao_gangmu,joined
+漏籃子,,,苦/辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+舩底苔,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+九牛草,Artemisia integrifolia,,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+楊櫨耳,,平,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+皂角蕈,,,辛,,,有毒,,ws_zh_bencao_gangmu,unresolved
+葛花菜,,,苦/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+菜及根,,,甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+苦竹筍,,寒,苦/甘,,,,,ws_zh_bencao_gangmu,unresolved
+淡竹筍,Apamea kumaso,,苦,,,小毒,,ws_zh_bencao_gangmu,joined
+刺竹筍,,,甘/苦,,,小毒,,ws_zh_bencao_gangmu,unresolved
+青腰蟲,,寒,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+赤銅屑,,平,苦,,,,,ws_zh_bencao_gangmu,unresolved
+銅弩牙,,平,,,,,下品,ws_zh_bencao_gangmu,unresolved
+水銀粉,,,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+石腦油,,,辛/苦,,,有毒,,ws_zh_bencao_gangmu,unresolved
+玄明粉,,,辛/甘,,,無毒,,ws_zh_bencao_gangmu,unresolved
+白花蛇,Scleromitrion diffusum,,,肺/肝,,有毒,,ws_zh_bencao_gangmu,joined
+腸及肝,,平,甘,,,,,ws_zh_bencao_gangmu,unresolved
+黃顙魚,Tachysurus fulvidraco,平,甘,,,,,ws_zh_bencao_gangmu,joined
+海豚魚,,,鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+文鰩魚,Exocoetidae,,甘/酸,,,無毒,,ws_zh_bencao_gangmu,joined
+婆律香膏,,溫,辛,,,,,ws_zh_bencao_gangmu,unresolved
+皮中白汁,,平,苦,,,,,ws_zh_bencao_gangmu,unresolved
+白綿及布,,熱,辛,,,,,ws_zh_bencao_gangmu,unresolved
+胡桃青皮,,,苦/澀,,,無毒,,ws_zh_bencao_gangmu,unresolved
+獨用將軍,,,辛,,,無毒,,ws_zh_bencao_gangmu,unresolved
+喙及腳脛骨,,溫,苦,,,,,ws_zh_bencao_gangmu,unresolved
+藏器曰︰𧍧䗯,,,甘/鹹,,,無毒,,ws_zh_bencao_gangmu,unresolved
+三歲陳棗核中仁,,溫,甘,,,,,ws_zh_bencao_gangmu,unresolved
+瘧龜,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+鶚龜,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+甘土,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+甑帶,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+芰花,,,澀,,,,,ws_zh_bencao_gangmu,unresolved
+脛骨,,,,,,大毒,,ws_zh_bencao_gangmu,unresolved
+烏氈,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+牡鼠,,,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+木狗,,熱,,,,,,ws_zh_bencao_gangmu,unresolved
+狒狒,Balamuthia mandrillaris,,,,,無毒,,ws_zh_bencao_gangmu,joined
+烏目,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+頭血,,平,,,,,,ws_zh_bencao_gangmu,unresolved
+萵苣,Lactuca sativa,,苦,,,,,ws_zh_bencao_gangmu,joined
+天牛,Chloridolum promissum,,,,,有毒,,ws_zh_bencao_gangmu,joined
+壁錢,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+溪狗,,,,,,小毒,,ws_zh_bencao_gangmu,unresolved
+水黽,Gerridae,,,,,有毒,,ws_zh_bencao_gangmu,joined
+豉蟲,Gyrinidae,,,,,有毒,,ws_zh_bencao_gangmu,joined
+砂子,,,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+故鋸,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+蛇黃,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+龍涎,Ambergrisichnus,,,,,有毒,,ws_zh_bencao_gangmu,joined
+蛇頭,Fritillaria meleagris,,,,,大毒,,ws_zh_bencao_gangmu,joined
+蛇角,,,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+鱣魚,Parapales sturmioides,,,,,無毒,,ws_zh_bencao_gangmu,joined
+魚虎,Channa micropeltes,,,,,有毒,,ws_zh_bencao_gangmu,joined
+市門土,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+柱下土,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+螺螄泥,,涼,,,,,,ws_zh_bencao_gangmu,unresolved
+繳腳布,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+豭豬肉,,,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+駒胞衣,,,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+螺厴草,,,辛,,,,,ws_zh_bencao_gangmu,unresolved
+生地黃,,寒,,,,,,ws_zh_bencao_gangmu,unresolved
+見腫消,Lindera angustifolia,,酸/澀,,,,,ws_zh_bencao_gangmu,joined
+地衣草,,,苦,,,,,ws_zh_bencao_gangmu,unresolved
+山蛩蟲,,,,,,大毒,,ws_zh_bencao_gangmu,unresolved
+硃砂銀,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+霹靂砧,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+腹中子,,,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+子及腸,,,,,,有毒,,ws_zh_bencao_gangmu,unresolved
+兩頭蛇,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+肝及子,,,,,,大毒,,ws_zh_bencao_gangmu,unresolved
+戶限下土,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+胡燕窠土,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+赤龍浴水,,,,,,小毒,,ws_zh_bencao_gangmu,unresolved
+豬槽中水,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+烏爛死蠶,,,,,,小毒,,ws_zh_bencao_gangmu,unresolved
+皂莢蠹蟲,,,辛,,,,,ws_zh_bencao_gangmu,unresolved
+市門溺坑水,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved
+天子藉田三推犁下土,,,,,,無毒,,ws_zh_bencao_gangmu,unresolved

@@ -63,7 +63,7 @@ Every panel carries a `LIVE DATA` or `DEMO FIXTURE` badge, individually. Panels 
 - Score bars carry `role="img"` with the numeric value in the label, so a bar is never the only encoding.
 - `prefers-reduced-motion` disables all transitions.
 - Contrast: body ink on parchment ≈ 15:1, cinnabar accent ≥ 5.3:1, verdigris ≥ 6.5:1.
-- Payload: **98 KB total** (`app/static/` = 101,107 bytes across HTML, CSS, JS and one SVG favicon). No
+- Payload: **102 KB total** (`app/static/` = 101,107 bytes across HTML, CSS, JS and one SVG favicon). No
   framework, no bundler, no webfont.
 
 ---

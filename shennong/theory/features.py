@@ -19,7 +19,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from shennong.config import CorpusPaths
-from shennong.normalize import normalise
+from shennong.normalize import fold_iast, normalise
 
 #: 四氣 → ordinal "warmth" used only as a feature for a correlation test.
 NATURE_WARMTH: dict[str, int] = {"寒": -2, "凉": -1, "涼": -1, "平": 0, "温": 1, "溫": 1, "热": 2, "熱": 2}
@@ -191,13 +191,35 @@ def _read_csv(path: Path) -> list[dict[str, str]]:
         return [row for row in csv.DictReader(fh)]
 
 
-def load_features(paths: CorpusPaths | None = None) -> TheoryFeatures:
-    """Load the Asian property vectors; missing files yield an empty (honest) feature set."""
+def load_features(paths: CorpusPaths | None = None, lex=None) -> TheoryFeatures:
+    """Load the Asian property vectors; missing files yield an empty (honest) feature set.
+
+    Where ``plant_binomial`` is blank (a real-data join gap) the Chinese/IAST drug name is
+    resolved through ``lexicon_drugs.json``.  Unresolvable rows are skipped and counted.
+    """
     paths = (paths or CorpusPaths.resolve())
     features = TheoryFeatures()
+    if lex is None:
+        try:
+            from shennong.extract.lexicons import build_lexicons
+
+            lex = build_lexicons(paths)
+        except Exception:
+            lex = None
+    name_to_binomial: dict[str, str] = {}
+    if lex is not None:
+        for entry in lex.drugs:
+            name_to_binomial.setdefault(entry.surface, entry.canonical)
+
+    def _resolve(row_binomial: str, drug_name: str) -> str:
+        if row_binomial:
+            return row_binomial
+        return name_to_binomial.get(normalise(drug_name), "")
+    unresolved = 0
     for row in _read_csv(paths.structured_dir / "properties.csv"):
-        binomial = (row.get("plant_binomial") or "").strip()
+        binomial = _resolve((row.get("plant_binomial") or "").strip(), (row.get("drug_name") or "").strip())
         if not binomial:
+            unresolved += 1
             continue
         features.tcm[binomial] = TCMProperties(
             drug_name=(row.get("drug_name") or "").strip(),
@@ -211,18 +233,19 @@ def load_features(paths: CorpusPaths | None = None) -> TheoryFeatures:
             source_id=(row.get("source_id") or "").strip(),
         )
     for row in _read_csv(paths.structured_dir / "ayurveda_properties.csv"):
-        binomial = (row.get("plant_binomial") or "").strip()
+        binomial = _resolve((row.get("plant_binomial") or "").strip(), (row.get("drug_name") or "").strip())
         if not binomial:
+            unresolved += 1
             continue
         features.ayurveda[binomial] = AyurvedaProperties(
             drug_name=(row.get("drug_name") or "").strip(),
             binomial=binomial,
-            rasa=tuple(r.lower() for r in _split_multi(_get(row, "rasa"))),
-            guna=_split_multi(_get(row, "guna", "guṇa")),
-            virya=_get(row, "virya", "vīrya").strip().lower(),
-            vipaka=_get(row, "vipaka", "vipāka").strip().lower(),
+            rasa=tuple(fold_iast(r).lower() for r in _split_multi(_get(row, "rasa"))),
+            guna=_split_multi(fold_iast(_get(row, "guna", "guṇa"))),
+            virya=fold_iast(_get(row, "virya", "vīrya")).strip().lower(),
+            vipaka=fold_iast(_get(row, "vipaka", "vipāka")).strip().lower(),
             prabhava=_get(row, "prabhava", "prabhāva").strip(),
-            dosha_effect=_parse_dosha(_get(row, "dosha_effect", "doṣa_effect")),
+            dosha_effect=_parse_dosha(fold_iast(_get(row, "dosha_effect", "doṣa_effect"))),
             source_id=(row.get("source_id") or "").strip(),
         )
     for row in _read_csv(paths.structured_dir / "relations_seven.csv"):
@@ -233,6 +256,11 @@ def load_features(paths: CorpusPaths | None = None) -> TheoryFeatures:
             features.seven_relations.append(
                 SevenRelation(drug_a, drug_b, relation, (row.get("source_id") or "").strip())
             )
+    if unresolved:
+        features.warnings.append(
+            f"{unresolved} property row(s) could not be resolved to a modern binomial "
+            "(blank plant_binomial and drug name absent from lexicon_drugs.json)"
+        )
     if not features.tcm:
         features.warnings.append("properties.csv missing or empty: TCM theory tests will report n=0")
     if not features.ayurveda:

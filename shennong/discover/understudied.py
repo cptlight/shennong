@@ -56,6 +56,7 @@ def discover(graph: Graph, spans: SpanIndex) -> list[Hypothesis]:
         for edge in graph.out_edges(taxon.id, "treats"):
             by_indication[graph.nodes[edge.dst].label].append(edge)
         for indication, edges in by_indication.items():
+            _ = edges
             modern = any(
                 e.props.get("modern")
                 or ontology.is_modern_evidence(
@@ -65,7 +66,12 @@ def discover(graph: Graph, spans: SpanIndex) -> list[Hypothesis]:
             )
             if modern:
                 continue
-            bridge = sorted(classes & ontology.classes_for_indication(indication))
+            spec = ontology.indication_spec(indication)
+            if spec is not None:
+                bridge = sorted(classes & ontology.classes_for_indication(indication))
+            else:
+                action = ontology.infer_action_class(indication)
+                bridge = sorted(classes & ontology.classes_for_action_class(action))
             if not bridge:
                 continue
             # require a citable span for this pair

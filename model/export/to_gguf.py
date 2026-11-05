@@ -43,7 +43,12 @@ _TENSOR_MAP = {
     "lm_head.weight": "output.weight",
 }
 _LAYER_TENSOR_MAP = {
+    # Qwen2 / Qwen2.5 carry q/k/v projection biases; llama.cpp's llama arch accepts
+    # blk.N.attn_{q,k,v}.bias, so the flagship recipe converts without surgery.
     "input_layernorm.weight": "attn_norm.weight",
+    "self_attn.q_proj.bias": "attn_q.bias",
+    "self_attn.k_proj.bias": "attn_k.bias",
+    "self_attn.v_proj.bias": "attn_v.bias",
     "self_attn.q_proj.weight": "attn_q.weight",
     "self_attn.k_proj.weight": "attn_k.weight",
     "self_attn.v_proj.weight": "attn_v.weight",
@@ -132,7 +137,7 @@ def gguf_token_normal() -> int:
 # Conversion
 # ---------------------------------------------------------------------------------------
 def convert(hf_dir: Path, out_path: Path, outtype: str = "f16", name: str = "shennong-mini",
-            license: str = "apache-2.0", quantize_config: dict | None = None) -> dict:
+            license: str = "apache-2.0", pre: str = "gpt-2") -> dict:
     from safetensors import safe_open
     import gguf
     from gguf.constants import GGMLQuantizationType
@@ -345,6 +350,8 @@ def main() -> int:
     ap.add_argument("--out", required=True, help="output .gguf path")
     ap.add_argument("--outtype", default="f16", choices=["f16", "f32"])
     ap.add_argument("--name", default="shennong-mini")
+    ap.add_argument("--pre", default="gpt-2", choices=["gpt-2", "qwen2", "default", "llama3"],
+                    help="llama.cpp tokenizer.ggml.pre pre-tokenizer name")
     ap.add_argument("--verify", action="store_true", help="re-read the GGUF and validate it")
     args = ap.parse_args()
 
@@ -357,7 +364,7 @@ def main() -> int:
 
     expected = ModelConfig.from_dict(cfg).n_params_estimate
 
-    info = convert(Path(args.hf_dir), Path(args.out), args.outtype, name=args.name)
+    info = convert(Path(args.hf_dir), Path(args.out), args.outtype, name=args.name, pre=args.pre)
     print(f"wrote {info['out_path']}: {info['bytes']:,} bytes  sha256={info['sha256']}")
     print(f"tensors={info['tensors']}  vocab={info['vocab_size']}  params(expected)={expected:,}")
 

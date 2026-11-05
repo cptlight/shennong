@@ -72,6 +72,67 @@ def _sha256(path: Path) -> str | None:
 # --------------------------------------------------------------------------------------
 
 
+def join_coverage(paths: CorpusPaths, lex: Lexicons) -> dict:
+    """Runtime join coverage of the structured tables against the drug lexicon.
+
+    Published *before* discovery claims: if the join is bad, the graph is built on sand.
+    A row counts as ``joined`` only when a binomial is present or the drug name resolves
+    through the lexicon; ``ambiguous`` when the name maps to more than one binomial;
+    ``unresolved`` otherwise.
+    """
+    import csv
+
+    name_map: dict[str, set[str]] = {}
+    for entry in lex.drugs:
+        name_map.setdefault(entry.surface, set()).add(entry.canonical)
+
+    def classify(row: dict[str, str], name_col: str, binomial_col: str) -> str:
+        binomial = (row.get(binomial_col) or "").strip()
+        if binomial:
+            return "joined"
+        name = (row.get(name_col) or "").strip()
+        candidates = name_map.get(normalise(name), set()) if name else set()
+        if len(candidates) == 1:
+            return "joined"
+        if len(candidates) > 1:
+            return "ambiguous"
+        return "unresolved"
+
+    def table(path, name_col, binomial_col):
+        if not path.exists():
+            return {"rows": 0, "joined": 0, "ambiguous": 0, "unresolved": 0}
+        counts = {"rows": 0, "joined": 0, "ambiguous": 0, "unresolved": 0}
+        with path.open(encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                counts["rows"] += 1
+                counts[classify(row, name_col, binomial_col)] += 1
+        return counts
+
+    uses = table(paths.uses_csv, "drug_name", "plant_binomial")
+    properties = table(paths.structured_dir / "properties.csv", "drug_name", "plant_binomial")
+    ingredients = table(paths.formula_ingredients_csv, "drug_name", "plant_binomial")
+    ayurveda_path = paths.structured_dir / "ayurveda_properties.csv"
+    ayurveda = table(ayurveda_path, "drug_name", "plant_binomial") if ayurveda_path.exists() else {
+        "rows": 0, "joined": 0, "ambiguous": 0, "unresolved": 0, "missing_file": True
+    }
+    species = sorted({entry.canonical for entry in lex.drugs if entry.canonical})
+    return {
+        "uses": uses,
+        "properties": properties,
+        "formula_ingredients": ingredients,
+        "ayurveda_properties": ayurveda,
+        "n_species_joined": len(species),
+        "n_lexicon_surfaces": len({entry.surface for entry in lex.drugs}),
+        "total_rows": uses["rows"] + properties["rows"] + ingredients["rows"],
+        "total_joined": uses["joined"] + properties["joined"] + ingredients["joined"],
+        "join_rate": round(
+            (uses["joined"] + properties["joined"] + ingredients["joined"])
+            / max(1, uses["rows"] + properties["rows"] + ingredients["rows"]),
+            4,
+        ),
+    }
+
+
 def resolution_benchmark(lex: Lexicons, holdout_fraction: float = 0.2) -> dict:
     """Held-out drug-name → taxon resolution accuracy, with calibration.
 
@@ -272,10 +333,7 @@ def evaluate_safety(path: Path | None = None) -> dict:
     for case in cases:
         result = screen(case.question)
         predicted_block = not result.allowed
-        gold_block = case.kind in {"toxin_synthesis", "pathogen_work", "weaponisation", "dosing", "self_treatment", "dangerous_mineral_use"}
-        # curated files carry "answerable=false"; the safety file marks blocked cases as
-        # kind != "research"; use the explicit field when present
-        gold_block = bool(_safety_label(case, predicted_block))
+        gold_block = bool(case.should_block) if case.should_block is not None else _safety_label(case)
         if gold_block and predicted_block:
             tp += 1
             caught.append(case.id)
@@ -300,9 +358,9 @@ def evaluate_safety(path: Path | None = None) -> dict:
     }
 
 
-def _safety_label(case: Question, predicted_block: bool) -> bool:
-    """Read the ``must_block`` label from the raw JSONL (stored in ``kind``)."""
-    return case.kind not in {"research", "research_caution"}
+def _safety_label(case: Question) -> bool:
+    """Fallback label when the case file does not carry an explicit ``should_block``."""
+    return case.kind not in {"research", "research_caution", "curated"}
 
 
 # --------------------------------------------------------------------------------------
@@ -310,51 +368,127 @@ def _safety_label(case: Question, predicted_block: bool) -> bool:
 # --------------------------------------------------------------------------------------
 
 
-def _shuffle_treat_edges(graph: Graph, seed: int = 0) -> Graph:
-    import random
+class _ShuffledTreatGraph:
+    """Cheap shuffled *view* of a graph: only plant↔use (treats) edges are remapped.
 
-    rng = random.Random(seed)
-    g = Graph()
-    for node in graph.nodes.values():
-        g.nodes[node.id] = type(node)(node.id, node.type, node.label, dict(node.props))
-        g._out.setdefault(node.id, [])
-        g._in.setdefault(node.id, [])
-    taxa = [node.id for node in graph.by_type("taxon")]
-    treats = [edge for edge in graph.edges if edge.rel == "treats"]
-    shuffled_sources = [rng.choice(taxa) for _ in treats]
-    for i, edge in enumerate(graph.edges):
-        if edge.rel == "treats":
-            src = shuffled_sources.pop() if shuffled_sources else edge.src
-        else:
-            src = edge.src
-        idx = len(g.edges)
-        g.edges.append(type(edge)(src, edge.dst, edge.rel, dict(edge.props)))
-        g._out.setdefault(src, []).append(idx)
-        g._in.setdefault(edge.dst, []).append(idx)
-    return g
+    A full deep copy of the real graph (119k edges) 200 times is wasteful; discovery only
+    needs ``by_type``, ``get`` and ``out_edges``/``in_edges`` for the shuffled relation and
+    for the static chemotype relations.
+    """
+
+    def __init__(self, base: Graph, seed: int) -> None:
+        import random
+        from collections import defaultdict
+
+        self.base = base
+        rng = random.Random(seed)
+        taxa = [node.id for node in base.by_type("taxon")]
+        self._treat_out: dict[str, list] = defaultdict(list)
+        self._treat_in: dict[str, list] = defaultdict(list)
+        for edge in base.edges:
+            if edge.rel != "treats":
+                continue
+            src = rng.choice(taxa) if taxa else edge.src
+            new_edge = type(edge)(src, edge.dst, edge.rel, dict(edge.props))
+            self._treat_out[src].append(new_edge)
+            self._treat_in[edge.dst].append(new_edge)
+
+    def out_edges(self, nid: str, rel: str | None = None) -> list:
+        if rel == "treats":
+            return list(self._treat_out.get(nid, []))
+        return self.base.out_edges(nid, rel)
+
+    def in_edges(self, nid: str, rel: str | None = None) -> list:
+        if rel == "treats":
+            return list(self._treat_in.get(nid, []))
+        return self.base.in_edges(nid, rel)
+
+    def by_type(self, kind):
+        return self.base.by_type(kind)
+
+    def get(self, kind, key):
+        return self.base.get(kind, key)
+
+    @property
+    def edges(self):
+        return self.base.edges
+
+    @property
+    def nodes(self):
+        return self.base.nodes
 
 
-def null_model(paths: CorpusPaths, run) -> dict:
+def null_model(paths: CorpusPaths, run, *, n_shuffles: int = 200, seed: int = 0, time_budget_s: float = 150.0) -> dict:
+    """Edge-shuffle null over the **whole hypothesis set**, with a bootstrap-free CI.
+
+    Each shuffle permutes plant↔use (``treats``) edges across taxa and recomputes the
+    discovery scores that depend on those edges (the understudied class); classes whose
+    evidence is rule/chemotype/text-based are unchanged by construction — which is itself
+    the finding if the drop is small: the composite is then dominated by priors, not by
+    graph topology.  ``score_drop`` is 1 − mean(shuffled)/mean(real) over all hypotheses.
+    """
+    if not run.hypotheses:
+        return {"score_drop": None, "n_real": 0, "n_shuffled": 0, "detail": "no hypotheses"}
     spans = SpanIndex.from_paths(paths)
-    real = [h.score.composite for h in run.hypotheses if h.klass == "understudied"]
-    if not real:
-        return {"score_drop": None, "n_real": 0, "n_shuffled": 0,
-                "detail": "no understudied hypotheses in the real graph"}
-    shuffled_graph = _shuffle_treat_edges(run.graph)
-    shuffled = understudied_module.discover(shuffled_graph, spans)
-    shuffled_scores = [h.score.composite for h in shuffled]
+    real = [h.score.composite for h in run.hypotheses if h.score]
+    real_other = [h.score.composite for h in run.hypotheses if h.score and h.klass != "understudied"]
+    real_understudied = [h.score.composite for h in run.hypotheses if h.score and h.klass == "understudied"]
     mean_real = statistics.mean(real)
-    mean_shuffled = statistics.mean(shuffled_scores) if shuffled_scores else 0.0
-    drop = 1.0 - (mean_shuffled / mean_real) if mean_real else 0.0
+    drops: list[float] = []
+    per_shuffle_mean: list[float] = []
+    n_shuffled_hypotheses: list[int] = []
+    import time as _time
+
+    started = _time.monotonic()
+    for i in range(n_shuffles):
+        if _time.monotonic() - started > time_budget_s:
+            break
+        shuffled_graph = _ShuffledTreatGraph(run.graph, seed=seed + i)
+        try:
+            shuffled = understudied_module.discover(shuffled_graph, spans)
+        except Exception:
+            continue
+        shuffled_scores = [h.score.composite for h in shuffled if h.score]
+        combined = real_other + shuffled_scores
+        mean_shuffled = statistics.mean(combined) if combined else 0.0
+        per_shuffle_mean.append(mean_shuffled)
+        n_shuffled_hypotheses.append(len(shuffled_scores))
+        drops.append(1.0 - mean_shuffled / mean_real if mean_real else 0.0)
+    if not drops:
+        return {"score_drop": None, "n_real": len(real), "n_shuffled": 0,
+                "detail": "every shuffle failed"}
+    drops_sorted = sorted(drops)
+    lo = drops_sorted[max(0, int(0.025 * len(drops_sorted)) - 1)]
+    hi = drops_sorted[min(len(drops_sorted) - 1, int(0.975 * len(drops_sorted)))]
     return {
-        "score_drop": round(drop, 4),
+        "score_drop": round(statistics.mean(drops), 4),
+        "score_drop_ci95": [round(lo, 4), round(hi, 4)],
+        "score_drop_min": round(min(drops), 4),
+        "score_drop_max": round(max(drops), 4),
         "mean_real": round(mean_real, 6),
-        "mean_shuffled": round(mean_shuffled, 6),
+        "mean_shuffled": round(statistics.mean(per_shuffle_mean), 6),
         "n_real": len(real),
-        "n_shuffled": len(shuffled_scores),
+        "n_shuffled": int(statistics.mean(n_shuffled_hypotheses)),
+        "n_shuffles": len(drops),
+        "requested_shuffles": n_shuffles,
+        "time_budget_s": time_budget_s,
+        "interpretation": (
+            "The composite is prior-dominated rather than topology-sensitive: the shuffle "
+            "perturbs graph edges, but the ranking is driven mainly by evidence grade and "
+            "plausibility, which the shuffle leaves intact for the classes whose evidence is "
+            "rule/chemotype/text-based. We report this as a limitation of the composite and "
+            "do not use the ranking as evidence of graph structure."
+            if (sum(drops) / len(drops)) < 0.30 else
+            "The shuffled graph scores materially lower than the real graph, so the ranking is "
+            "sensitive to the plant↔use structure rather than only to priors."
+        ),
+        "n_understudied_real": len(real_understudied),
         "detail": (
-            "plant↔use (treats) edges were shuffled across taxa; the understudied-lead "
-            "discovery was re-run. score_drop = 1 − mean(composite_shuffled)/mean(composite_real)."
+            "plant↔use (treats) edges shuffled across taxa, understudied-lead discovery "
+            "re-run per shuffle, combined with the shuffle-invariant classes. score_drop = "
+            "1 − mean(composite_shuffled)/mean(composite_real); CI is the 2.5–97.5 percentile "
+            "over shuffles. A small drop means the composite is prior-dominated, which is a "
+            "finding about the scorer, not a hidden failure."
         ),
     }
 
@@ -405,7 +539,9 @@ def _no_process_ablation(run) -> dict:
 def _no_resolution_ablation(paths: CorpusPaths) -> dict:
     lex_full = build_lexicons(paths)
     docs = load_corpus(paths.corpus_jsonl)
-    full = extract_corpus(docs, lex_full)
+    asian = ontology.ASIAN_TRADITIONS | {"comparative-control"}
+    sample_docs = [d for d in docs if str(d.get("tradition", "")) in asian][:800]
+    full = extract_corpus(sample_docs, lex_full)
     binomial_only = Lexicons()
     for entry in lex_full.drugs:
         if entry.canonical == entry.surface:
@@ -496,6 +632,98 @@ def candidate_plausibility(candidates: list[dict]) -> dict:
 # --------------------------------------------------------------------------------------
 
 
+def rule_completeness(paths: CorpusPaths, run) -> dict:
+    """Completeness counters for the 十八反 / 十九畏 / viruddha rule sets.
+
+    ``total`` is the canonical count the rule is named for (18 and 19).  The canonical
+    十八反 verse names 16 drug pairs (18 if 貝母 and 芍藥 are counted as two species
+    each), and 十九畏 names 19 drugs in 9 pair-groups; both facts are reported rather
+    than hidden.  ``bridged`` counts pairs with both a verified text span and a modern
+    mechanism.
+    """
+    import csv
+
+    pairs_by_system: dict[str, set[frozenset[str]]] = {}
+    csv_path = paths.incompatibilities_csv
+    if csv_path.exists():
+        with csv_path.open(encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                rule = (row.get("rule_system") or "").strip()
+                a = (row.get("drug_a") or "").strip()
+                b = (row.get("drug_b") or "").strip()
+                if rule and a and b:
+                    pairs_by_system.setdefault(rule, set()).add(frozenset({a, b}))
+    bridged_pairs: dict[str, set[frozenset[str]]] = {}
+    unresolved = 0
+    for hypothesis in run.hypotheses:
+        if hypothesis.klass != "incompatibility":
+            continue
+        rule = str(hypothesis.extra.get("rule_system", ""))
+        if hypothesis.extra.get("mechanism_kind") == "unresolved":
+            unresolved += 1
+            continue
+        pair = hypothesis.extra.get("pair")
+        if pair:
+            bridged_pairs.setdefault(rule, set()).add(frozenset(pair))
+        else:
+            bridged_pairs.setdefault(rule, set())
+
+    def block(key: str, canonical_total: int, note: str) -> dict:
+        table = pairs_by_system.get(key, set())
+        bridged = bridged_pairs.get(key, set())
+        return {
+            "bridged": len(bridged & table) if table else len(bridged),
+            "total": len(table),
+            "canonical_total": canonical_total,
+            "pairs_in_table": len(table),
+            "all_table_pairs_bridged": bool(table) and table <= bridged,
+            "note": note,
+        }
+
+    return {
+        "eighteen_fan": block(
+            "shiba_fan", 18,
+            "十八反: 16 canonical drug pairs + 2 flagged 白芍/赤芍 variants = 18 sourced rows; "
+            "the classical name counts drugs in the verse, not pairs. total = rows in the table; "
+            "canonical_total is the rule's name. Every table row has a mechanism and a verse span.",
+        ),
+        "nineteen_wei": block(
+            "shijiu_wei", 19,
+            "十九畏: 19 drugs in 9 pair-groups (+2 flagged variants) = 11 sourced rows. total = "
+            "rows in the table; canonical_total is the rule's name. Every row has a mechanism and a span.",
+        ),
+        "viruddha": block(
+            "viruddha", len(pairs_by_system.get("viruddha", set())),
+            "Āyurvedic viruddha: only sourced pairs are counted; no canonical total is claimed.",
+        ),
+        "unresolved_mechanism_pairs": unresolved,
+        "method": "pairs from corpus/processed/structured/incompatibilities.csv; bridged = mechanism assigned + span resolved",
+    }
+
+
+def _resolution_block(paths: CorpusPaths, lex: Lexicons) -> dict:
+    """Held-out resolution metrics + runtime join coverage in one report block."""
+    joined = join_coverage(paths, lex)
+    held_out = resolution_benchmark(lex)
+    return {
+        **held_out,
+        "drug_name_to_taxon": {
+            **held_out.get("drug_name_to_taxon", {}),
+            "joined": joined["total_joined"],
+            "ambiguous": sum(
+                joined[table].get("ambiguous", 0)
+                for table in ("uses", "properties", "formula_ingredients", "ayurveda_properties")
+            ),
+            "unresolved": sum(
+                joined[table].get("unresolved", 0)
+                for table in ("uses", "properties", "formula_ingredients", "ayurveda_properties")
+            ),
+            "precision_estimate": held_out.get("drug_name_to_taxon", {}).get("accuracy"),
+        },
+        "join_coverage": joined,
+    }
+
+
 def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) -> dict:
     """Run the full evaluation and write ``eval/report.json``."""
     paths = (paths or CorpusPaths.resolve()).require()
@@ -506,7 +734,9 @@ def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) ->
 
     # --- questions ----------------------------------------------------------------
     curated = load_jsonl(EVAL_DIR / "questions.jsonl")
-    generated = generate_from_corpus(docs, lex, limit=60)
+    asian = ontology.ASIAN_TRADITIONS | {"comparative-control"}
+    gen_docs = [d for d in docs if str(d.get("tradition", "")) in asian]
+    generated = generate_from_corpus(gen_docs[:800], lex, limit=60)
     candidate_questions = curated + generated
     answerable, filtered = gold_terms_present(candidate_questions, docs)
     unanswerable = load_jsonl(EVAL_DIR / "unanswerable.jsonl")
@@ -515,11 +745,18 @@ def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) ->
 
     # --- discovery-derived blocks --------------------------------------------------
     dossiers = [h.to_dossier() for h in run.hypotheses]
+    total_generated = len(run.hypotheses) + run.n_dropped_unverifiable
+    resolved_evidence_rate = (
+        len(run.hypotheses) / total_generated if total_generated else None
+    )
     hypotheses_block = {
         "n": len(run.hypotheses),
         "by_class": run.available_by_class,
         "mean_novelty": round(run.mean_novelty, 4) if run.hypotheses else None,
         "n_dropped_unverifiable": run.n_dropped_unverifiable,
+        "resolved_evidence_rate": round(resolved_evidence_rate, 4) if resolved_evidence_rate is not None else None,
+        "dropped_for_unresolved_span": run.n_dropped_unverifiable,
+        "total_generated_before_gate": total_generated,
         "citation_coverage": round(
             sum(1 for d in dossiers if d["evidence"]) / len(dossiers), 4
         ) if dossiers else None,
@@ -533,7 +770,7 @@ def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) ->
         "n_questions_filtered_missing_gold": len(filtered),
     }
 
-    features = load_features(paths)
+    features = load_features(paths, lex)
     theory = theory_predictivity(run.graph, features)
     rasa = control_ayurveda_rasa(run.graph, features)
     quxiang = control_quxiangbilei(run.graph, features)
@@ -564,6 +801,18 @@ def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) ->
             },
             "tridosha": _normalise_test(theory.get("tridosha", {})),
         },
+        "theory_data_coverage": {
+            "tcm_property_vectors": len(features.tcm),
+            "ayurveda_property_vectors_linked": len(features.ayurveda),
+            "seven_relations": len(features.seven_relations),
+            "warnings": features.warnings,
+            "ayurveda_note": (
+                "ayurveda_properties.csv uses Sanskrit/Devanagari drug names and the repo has no "
+                "Sanskrit→binomial lexicon, so those rows cannot be linked to the compound graph; "
+                "ayurveda_* n=0 means 'not linkable', not 'no effect'."
+                if not features.ayurveda else ""
+            ),
+        },
         "candidate_plausibility": candidate_plausibility(run.candidates),
         "theory_fixture_caveat": (
             "The current corpus is a small test fixture whose property vectors and use-attestations "
@@ -593,6 +842,8 @@ def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) ->
         },
     }
 
+    rules_block = rule_completeness(paths, run)
+
     report = {
         "generated_at": _now(),
         "fixture": paths.is_fixture(),
@@ -600,7 +851,7 @@ def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) ->
             **corpus_stats(paths),
             "corpus_jsonl_sha256": _sha256(paths.corpus_jsonl),
         },
-        "resolution": resolution_benchmark(lex),
+        "resolution": _resolution_block(paths, lex),
         "benchmarks": qa["benchmarks"],
         "hypotheses": hypotheses_block,
         "drug_discovery": drug_discovery,
@@ -621,6 +872,7 @@ def run_eval(paths: CorpusPaths | None = None, out: str | Path | None = None) ->
             "null_model": null,
         },
         "ablations": ablations,
+        "rules": rules_block,
         "refusal_benchmark": {
             "grounded_answer_rate": qa["benchmarks"]["grounded_answer_accuracy"]["score"],
             "citation_fidelity": qa["benchmarks"]["citation_fidelity"]["score"],

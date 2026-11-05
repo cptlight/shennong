@@ -21,7 +21,7 @@ from dataclasses import dataclass, field
 from typing import Iterable, Sequence
 
 from shennong.extract.lexicons import Lexicons, build_lexicons
-from shennong.extract.match import Match, build_drug_trie, scan_drugs, scan_terms
+from shennong.extract.match import Match, Trie, build_drug_trie, scan_drugs, scan_trie
 from shennong.normalize import normalise_offsets
 
 _CLAUSE_RE = re.compile(r"[^。；！？;.\n]+")
@@ -108,11 +108,11 @@ def extract_document(doc: dict, lex: Lexicons) -> DocExtraction:
     norm = normalise_offsets(text)
 
     drugs = scan_drugs(_drug_trie(lex), norm)
-    indications = scan_terms(lex.indications, norm)
-    processes = scan_terms(lex.processes, norm)
-    roles = scan_terms(lex.roles, norm)
-    formulas = scan_terms(lex.formula_names, norm)
-    incomp = scan_terms(lex.incompat_markers, norm)
+    indications = scan_trie(_term_trie(lex, "indications"), norm)
+    processes = scan_trie(_term_trie(lex, "processes"), norm)
+    roles = scan_trie(_term_trie(lex, "roles"), norm)
+    formulas = scan_trie(_term_trie(lex, "formula_names"), norm)
+    incomp = scan_trie(_term_trie(lex, "incompat_markers"), norm)
 
     # -- entities -------------------------------------------------------------------
     for group, kind in (
@@ -252,6 +252,19 @@ def _drug_trie(lex: Lexicons):
     if cache is None:
         cache = build_drug_trie(lex.drugs)
         object.__setattr__(lex, "_trie", cache)
+    return cache
+
+
+def _term_trie(lex: Lexicons, attribute: str) -> Trie:
+    """Build each lexicon trie at most once per Lexicons instance."""
+    cache_key = f"_trie_{attribute}"
+    cache = getattr(lex, cache_key, None)
+    if cache is None:
+        mapping = getattr(lex, attribute)
+        cache = Trie()
+        for surface, canonical in mapping.items():
+            cache.add(surface, (canonical, 1.0))
+        object.__setattr__(lex, cache_key, cache)
     return cache
 
 

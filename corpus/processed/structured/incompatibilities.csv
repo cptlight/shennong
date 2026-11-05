@@ -1,26 +1,30 @@
-drug_a,drug_b,rule_system,source_id
-烏頭,半夏,shiba_fan,ws_zh_yaoxing_fu
-烏頭,瓜蔞,shiba_fan,ws_zh_yaoxing_fu
-烏頭,貝母,shiba_fan,ws_zh_yaoxing_fu
-烏頭,白蘞,shiba_fan,ws_zh_yaoxing_fu
-烏頭,白芨,shiba_fan,ws_zh_yaoxing_fu
-甘草,海藻,shiba_fan,ws_zh_yaoxing_fu
-甘草,大戟,shiba_fan,ws_zh_yaoxing_fu
-甘草,甘遂,shiba_fan,ws_zh_yaoxing_fu
-甘草,芫花,shiba_fan,ws_zh_yaoxing_fu
-藜蘆,人參,shiba_fan,ws_zh_yaoxing_fu
-藜蘆,沙參,shiba_fan,ws_zh_yaoxing_fu
-藜蘆,丹參,shiba_fan,ws_zh_yaoxing_fu
-藜蘆,玄參,shiba_fan,ws_zh_yaoxing_fu
-藜蘆,苦參,shiba_fan,ws_zh_yaoxing_fu
-藜蘆,細辛,shiba_fan,ws_zh_yaoxing_fu
-藜蘆,芍藥,shiba_fan,ws_zh_yaoxing_fu
-硫黃,朴硝,shijiu_wei,ws_zh_yaoxing_fu
-水銀,砒霜,shijiu_wei,ws_zh_yaoxing_fu
-狼毒,密陀僧,shijiu_wei,ws_zh_yaoxing_fu
-巴豆,牽牛,shijiu_wei,ws_zh_yaoxing_fu
-丁香,鬱金,shijiu_wei,ws_zh_yaoxing_fu
-牙硝,三稜,shijiu_wei,ws_zh_yaoxing_fu
-川烏,草烏,shijiu_wei,ws_zh_yaoxing_fu
-官桂,石脂,shijiu_wei,ws_zh_yaoxing_fu
-人參,五靈脂,shijiu_wei,ws_zh_yaoxing_fu
+drug_a,drug_b,rule_system,classical_label,variant_of,source_id,span
+烏頭,半夏,shiba_fan,十八反·烏頭組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：烏頭反半夏
+烏頭,瓜蔞,shiba_fan,十八反·烏頭組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：烏頭反瓜蔞
+烏頭,貝母,shiba_fan,十八反·烏頭組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：烏頭反貝母
+烏頭,白蘞,shiba_fan,十八反·烏頭組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：烏頭反白蘞
+烏頭,白芨,shiba_fan,十八反·烏頭組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：烏頭反白芨
+甘草,海藻,shiba_fan,十八反·甘草組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：甘草反海藻
+甘草,大戟,shiba_fan,十八反·甘草組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：甘草反大戟
+甘草,甘遂,shiba_fan,十八反·甘草組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：甘草反甘遂
+甘草,芫花,shiba_fan,十八反·甘草組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：甘草反芫花
+藜蘆,人參,shiba_fan,十八反·藜蘆組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：藜蘆反人參
+藜蘆,沙參,shiba_fan,十八反·藜蘆組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：藜蘆反沙參
+藜蘆,丹參,shiba_fan,十八反·藜蘆組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：藜蘆反丹參
+藜蘆,玄參,shiba_fan,十八反·藜蘆組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：藜蘆反玄參
+藜蘆,苦參,shiba_fan,十八反·藜蘆組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：藜蘆反苦參
+藜蘆,細辛,shiba_fan,十八反·藜蘆組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：藜蘆反細辛
+藜蘆,芍藥,shiba_fan,十八反·藜蘆組,,ws_zh_yaoxing_fu,諸藥相反例 / 十八反歌：藜蘆反芍藥
+藜蘆,白芍,shiba_fan,十八反·藜蘆組,modern split of 芍藥 (白芍),ws_zh_yaoxing_fu,十八反歌：諸參辛芍叛藜蘆（白芍）
+藜蘆,赤芍,shiba_fan,十八反·藜蘆組,modern split of 芍藥 (赤芍),ws_zh_yaoxing_fu,十八反歌：諸參辛芍叛藜蘆（赤芍）
+硫黃,朴硝,shijiu_wei,十九畏·硫黃畏朴硝,,ws_zh_yaoxing_fu,十九畏歌：硫黃…朴硝
+水銀,砒霜,shijiu_wei,十九畏·水銀畏砒霜,,ws_zh_yaoxing_fu,十九畏歌：水銀…砒霜
+狼毒,密陀僧,shijiu_wei,十九畏·狼毒畏密陀僧,,ws_zh_yaoxing_fu,十九畏歌：狼毒…密陀僧
+巴豆,牽牛,shijiu_wei,十九畏·巴豆畏牽牛,,ws_zh_yaoxing_fu,十九畏歌：巴豆…牽牛
+丁香,鬱金,shijiu_wei,十九畏·丁香畏鬱金,,ws_zh_yaoxing_fu,十九畏歌：丁香…鬱金
+牙硝,三稜,shijiu_wei,十九畏·牙硝畏三稜,,ws_zh_yaoxing_fu,十九畏歌：牙硝…三稜
+川烏,草烏,shijiu_wei,十九畏·川烏畏草烏,,ws_zh_yaoxing_fu,十九畏歌：川烏…草烏
+官桂,石脂,shijiu_wei,十九畏·官桂畏石脂,,ws_zh_yaoxing_fu,十九畏歌：官桂…石脂
+人參,五靈脂,shijiu_wei,十九畏·人參畏五靈脂,,ws_zh_yaoxing_fu,十九畏歌：人參…五靈脂
+川烏,犀角,shijiu_wei,十九畏·川烏畏犀角,from 川烏草烏不順犀,ws_zh_yaoxing_fu,十九畏歌：川烏草烏不順犀（川烏）
+草烏,犀角,shijiu_wei,十九畏·草烏畏犀角,from 川烏草烏不順犀,ws_zh_yaoxing_fu,十九畏歌：川烏草烏不順犀（草烏）

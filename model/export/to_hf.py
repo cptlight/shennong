@@ -79,6 +79,56 @@ def hf_state_dict(model: ShennongMini) -> OrderedDict[str, torch.Tensor]:
     return sd
 
 
+_HF_TO_NATIVE_LAYER = {
+    "input_layernorm.weight": "attn_norm.weight",
+    "self_attn.q_proj.weight": "attn.q_proj.weight",
+    "self_attn.k_proj.weight": "attn.k_proj.weight",
+    "self_attn.v_proj.weight": "attn.v_proj.weight",
+    "self_attn.o_proj.weight": "attn.o_proj.weight",
+    "post_attention_layernorm.weight": "mlp_norm.weight",
+    "mlp.gate_proj.weight": "mlp.gate_proj.weight",
+    "mlp.up_proj.weight": "mlp.up_proj.weight",
+    "mlp.down_proj.weight": "mlp.down_proj.weight",
+}
+
+
+def hf_to_native_name(hf_name: str) -> str | None:
+    """Inverse of hf_state_dict(): HF Llama key -> ShennongMini state-dict key."""
+    if hf_name == "model.embed_tokens.weight":
+        return "tok_emb.weight"
+    if hf_name == "model.norm.weight":
+        return "norm.weight"
+    if hf_name == "lm_head.weight":
+        return "lm_head.weight"
+    if hf_name.startswith("model.layers."):
+        _, _, idx, rest = hf_name.split(".", 3)
+        native = _HF_TO_NATIVE_LAYER.get(rest)
+        return f"layers.{idx}.{native}" if native else None
+    return None
+
+
+def load_hf_model(hf_dir: str | Path, dtype: torch.dtype = torch.float32) -> ShennongMini:
+    """Load a HF-format directory written by write_hf() back into a ShennongMini."""
+    from safetensors import safe_open
+
+    hf_dir = Path(hf_dir)
+    cfg = ModelConfig.from_dict(json.loads((hf_dir / "config.json").read_text(encoding="utf-8")))
+    model = ShennongMini(cfg)
+    sd = {}
+    with safe_open(str(hf_dir / "model.safetensors"), framework="pt") as f:
+        for name in f.keys():
+            native = hf_to_native_name(name)
+            if native is None:
+                raise SystemExit(f"unmapped HF tensor {name!r}")
+            sd[native] = f.get_tensor(name).to(dtype)
+    missing, unexpected = model.load_state_dict(sd, strict=False)
+    missing = [m for m in missing if m not in ("lm_head.weight", "tok_emb.weight")]
+    if missing or unexpected:
+        raise RuntimeError(f"HF load mismatch: missing={missing} unexpected={unexpected}")
+    model.eval()
+    return model
+
+
 def hf_config_dict(model: ShennongMini, tokenizer_dir: Path | None, dtype: str = "float32") -> dict:
     cfg = model.cfg
     bos_id, eos_id, pad_id = 1, 2, 0

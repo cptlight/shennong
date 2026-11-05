@@ -1,0 +1,25 @@
+{
+ "generated_by": "data/build_structured.py",
+ "source_id": "ws_zh_yaoxing_fu",
+ "source_note": "《珍珠囊補遺藥性賦》 contains 諸藥相反例, 十八反歌 and 十九畏歌; every row cites that text.",
+ "shiba_fan": {
+  "pairs": 18,
+  "pairs_canonical": 16,
+  "drugs_named": 19,
+  "verse": "十八反歌",
+  "note": "The classical name 十八反 counts the DRUGS named in the verse (19 surfaces in 3 groups), not the number of pairs. The verse yields 16 canonical pair relations. Two documented modern variants (白芍/赤芍 for 芍藥) are included and flagged in variant_of.",
+  "verse_text": "本草明言十八反，半蔞貝蘞芨攻烏；藻戟遂芫俱戰草，諸參辛芍叛藜蘆。"
+ },
+ "shijiu_wei": {
+  "pairs": 11,
+  "pairs_canonical": 9,
+  "drugs_named": 19,
+  "verse": "十九畏歌",
+  "note": "十九畏 names 19 drugs. The verse yields 9 canonical pair relations; the line 川烏草烏不順犀 names 犀角 and adds 2 genuine relations, giving 11. Nothing is padded.",
+  "verse_text": "硫黃原是火中精，朴硝一見便相爭。水銀莫與砒霜見，野狼毒最怕密佗僧。巴豆性烈最為上，偏與牽牛不順情。丁香莫與鬱金見，牙硝難合京三稜。川烏草烏不順犀，人參最怕五靈脂。官桂善能調冷氣，若逢石脂便相欺。"
+ },
+ "viruddha": {
+  "pairs": 0,
+  "note": "Ayurvedic viruddha (incompatible) pairings are discussed in the Sanskrit corpus but a machine-readable classical *list* equivalent to the 十八反 verse was not located in an openly licensed source within the project window, so no rows are claimed. Recorded as a gap rather than invented."
+ }
+}

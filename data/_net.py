@@ -52,6 +52,7 @@ MIN_INTERVAL = {
     "api.gbif.org": 0.3,
     "powo.science.kew.org": 0.5,
     "query.wikidata.org": 1.0,
+    "www.wikidata.org": 0.05,
     "api.iseg-ethno.example": 1.0,
 }
 _DEFAULT_INTERVAL = 0.5

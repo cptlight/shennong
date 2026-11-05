@@ -2,41 +2,51 @@
   "tokenizer": "tokenizer/shennong-bpe/tokenizer.json",
   "vocab_size": 16384,
   "seed": 1337,
-  "per_lang_docs": 200,
+  "per_lang_docs": 150,
   "baselines": {
     "utf8_byte": "1 token per UTF-8 byte (naive; no merges, no unknown tokens)",
     "bytelevel_bpe": "BPE over ByteLevel GPT-2 pretokenizer, same vocab budget, trained on the same corpus prefix"
   },
   "per_language": {
     "en": {
-      "docs": 200,
-      "chars": 295688,
-      "utf8_bytes": 297020,
-      "tokens": 82799,
-      "chars_per_token": 3.571,
-      "bytes_per_token": 3.587,
-      "tokens_per_doc": 414.0,
-      "utf8_byte_baseline_chars_per_token": 0.996
+      "docs": 150,
+      "chars": 223934,
+      "utf8_bytes": 224967,
+      "tokens": 63334,
+      "chars_per_token": 3.536,
+      "bytes_per_token": 3.552,
+      "tokens_per_doc": 422.2,
+      "utf8_byte_baseline_chars_per_token": 0.995
     },
     "la": {
-      "docs": 161,
-      "chars": 249217,
-      "utf8_bytes": 251556,
-      "tokens": 113736,
-      "chars_per_token": 2.191,
-      "bytes_per_token": 2.212,
-      "tokens_per_doc": 706.4,
+      "docs": 150,
+      "chars": 233115,
+      "utf8_bytes": 235225,
+      "tokens": 106270,
+      "chars_per_token": 2.194,
+      "bytes_per_token": 2.213,
+      "tokens_per_doc": 708.5,
       "utf8_byte_baseline_chars_per_token": 0.991
     },
+    "sa": {
+      "docs": 132,
+      "chars": 349593,
+      "utf8_bytes": 954976,
+      "tokens": 954749,
+      "chars_per_token": 0.366,
+      "bytes_per_token": 1.0,
+      "tokens_per_doc": 7232.9,
+      "utf8_byte_baseline_chars_per_token": 0.366
+    },
     "zh-Hant": {
-      "docs": 200,
-      "chars": 339100,
-      "utf8_bytes": 986942,
-      "tokens": 259384,
-      "chars_per_token": 1.307,
-      "bytes_per_token": 3.805,
-      "tokens_per_doc": 1296.9,
-      "utf8_byte_baseline_chars_per_token": 0.344
+      "docs": 150,
+      "chars": 261833,
+      "utf8_bytes": 768270,
+      "tokens": 217861,
+      "chars_per_token": 1.202,
+      "bytes_per_token": 3.526,
+      "tokens_per_doc": 1452.4,
+      "utf8_byte_baseline_chars_per_token": 0.341
     }
   },
   "theory_coverage": {

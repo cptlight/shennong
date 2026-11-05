@@ -1,0 +1,24 @@
+{
+  "baselines": {
+    "uniform_over_vocab": {
+      "bits_per_token": 14.0,
+      "bits_per_byte": 3.8347,
+      "note": "uniform distribution over the 16384-token vocabulary"
+    },
+    "unigram_token_model": {
+      "bits_per_token": 11.2287,
+      "bits_per_byte": 3.0756,
+      "note": "add-one-smoothed unigram over the training split, evaluated on the same held-out token stream; no context is used"
+    },
+    "utf8_bytes": {
+      "bits_per_byte": 8.0,
+      "note": "no model: 8 bits per byte by definition"
+    }
+  },
+  "val_tokens": 339639,
+  "val_utf8_bytes": 1239972,
+  "vocab_size": 16384,
+  "cache_key": "shennong-bpe-6f23fd9d1d",
+  "train_tokens": 16687735,
+  "tokenizer": "/Users/tom/Documents/ETHno/tokenizer/shennong-bpe/tokenizer.json"
+}

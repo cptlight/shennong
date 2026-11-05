@@ -88,13 +88,17 @@ with the assay that would advance or kill it → its residual risks. Where a str
 **null** and say so. We do not invent SMILES, and we do not round "one of four Lipinski rules evaluated" up to
 "Lipinski-compliant".
 
-**3. It enumerates the complete interaction rule set.** 十八反 (18 antagonisms) and 十九畏 (19 mutual fears), plus
-Ayurvedic *viruddha* — a closed list of roughly forty interaction claims compressed by a pre-modern tradition and
+**3. It enumerates the complete interaction rule set — faithfully, which is not the same as roundly.** 十八反 and
+十九畏, plus Ayurvedic *viruddha*, are a closed list of interaction claims compressed by a pre-modern tradition and
 almost never tested as a set. We enumerate every pair with a citation to the text, bridge each to a plausible
 modern mechanism (CYP450 induction or inhibition, P-gp transport, chelation, precipitation, shared toxic
 constituents, additive cardiotoxicity), and attach the cheap assay that would confirm or kill it.
-**Completeness is the contribution** — a count without a denominator is an anecdote. [[PENDING: rules.eighteen_fan]]
-of 18 and [[PENDING: rules.nineteen_wei]] of 19 pairs are enumerated, bridged and assay-annotated.
+
+**Completeness is the contribution.** **16 canonical 相反 pairs** (19 drugs named in the verse, graded by the 烏頭 / 甘草 / 藜蘆 groups) **+ 11 相畏 relations** across 19 drugs — **complete, faithful to the mnemonic, and nothing padded.**
+
+*The classical mnemonics count **drugs, not pairs** — 十八反 is named for the eighteen-ish drugs in the verse, not for eighteen pairings — so we report both denominators: pairs enumerated, and drugs named. Padding the list to 18 and 19 rows would have meant inventing pairs, so we did not. Two documented 芍藥 variants (白芍 / 赤芍) and the 川烏/草烏不順犀 doublet are carried as provenance, not counted as new pairs.*
+Every row carries its verse tag, so a reader can trace it back to the mnemonic (`incompatibilities.csv`
+→ `classical_count` / `variant_of`).
 
 **4. It compiles process language into a chemistry operator.** Classical pharmacy does not only say *what* to use;
 it says *how to prepare it* — 炮, 煅, 煨, 淬, 蒸, 炒, 醋炙, 蜜炙, 酒炙, 發酵, 水飛, 昇/飛/伏; on the Indian side
@@ -199,7 +203,7 @@ material is used.
 **The model.** `shennong-mini` is a Llama-style transformer trained from scratch on this machine — an Intel
 i7-4790K with **no GPU** — in PyTorch 2.2.2 on CPU. It has **8,719,616 parameters** (4,525,312 of them
 non-embedding) with a 16,384-token vocabulary, `d_model` 256, 6 layers, 4 heads (1 KV head), `d_ff` 768 and a
-512-token context. Round `shennong-mini-r1` is **900 steps × 8,192 tokens = 7.37 M tokens seen**, against a
+512-token context. Round `shennong-mini-r1` is **[[PENDING: model.steps]] steps × 8,192 tokens = [[PENDING: model.tokens]] tokens seen**, against a
 training split of 16.7 M available tokens across 23,652 documents. The loss curve in the Workbench is the logged
 curve from `training/runs/<id>/metrics.json` — not a render, and not an illustration.
 
@@ -274,12 +278,13 @@ preparation or dosing guidance is ever emitted, and a distinction the output has
   number, including the tests that came back null.
 - **[[PENDING: hypotheses.count]]** ranked, provenance-cited, falsifiable hypotheses across all six discovery
   classes, including the 取象比類 control that is published at the bottom of the list where it belongs.
-- **[[PENDING: rules.eighteen_fan]]/18** 十八反 and **[[PENDING: rules.nineteen_wei]]/19** 十九畏 pairs enumerated
-  with textual citations, bridged to a modern mechanism and annotated with an assay — a closed, checkable
-  interaction hypothesis set rather than a list of anecdotes.
-- The licence audit itself: **[[PENDING: corpus.sources_ok]]** sources accepted, **[[PENDING: corpus.excluded]]**
+- **16 canonical 相反 pairs and 11 相畏 relations**, covering 19 named drugs each, enumerated with textual
+  citations and verse provenance, bridged to a modern mechanism and annotated with an assay — a closed, checkable
+  interaction hypothesis set rather than a list of anecdotes. Reported against the **faithful** denominator
+  (pairs), not the mnemonic's drug count.
+- The licence audit itself: **38** sources accepted, **1**
   rejected and documented, zero sources with an unclear licence entering training.
-- A workbench that runs on any machine with Python and no network: **98 KB of HTML/CSS/JS**,
+- A workbench that runs on any machine with Python and no network: **102 KB of HTML/CSS/JS**,
   zero dependencies, keyboard-navigable, honest about which panels are fixture and which are measured.
 
 ---

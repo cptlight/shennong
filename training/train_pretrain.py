@@ -170,7 +170,15 @@ def main() -> int:
     tok_path = ROOT / args.tokenizer
     if not tok_path.exists():
         raise SystemExit(f"tokenizer missing: {tok_path} — run `make tokenizer` first")
-    cache_key = tok_path.parent.name + "-" + hashlib.sha256(tok_path.read_bytes()).hexdigest()[:10]
+    # Cache key must cover the CORPUS too: keying only on the tokenizer means a re-emitted corpus
+    # silently reuses tokens built from an older snapshot, which breaks exact reproducibility of a run.
+    corpus_path = ROOT / args.corpus
+    corpus_stat = corpus_path.stat()
+    cache_key = "-".join([
+        tok_path.parent.name,
+        hashlib.sha256(tok_path.read_bytes()).hexdigest()[:10],
+        f"{corpus_stat.st_size:x}",
+    ])
     meta = build_token_file(ROOT / args.corpus, tok_path, cache_key)
     if cfg.vocab_size != meta.get("vocab_size", cfg.vocab_size):
         pass  # tokenizer vocab is authoritative; assert below against the tokenizer file

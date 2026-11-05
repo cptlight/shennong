@@ -36,6 +36,7 @@ class Question:
     source_ids: list[str] = field(default_factory=list)
     kind: str = "generated"
     origin: str = "generated"
+    should_block: bool | None = None
 
 
 def load_jsonl(path: str | Path) -> list[Question]:
@@ -52,13 +53,14 @@ def load_jsonl(path: str | Path) -> list[Question]:
             out.append(
                 Question(
                     id=str(data.get("id", "")),
-                    question=str(data.get("question", "")),
+                    question=str(data.get("question") or data.get("text") or ""),
                     answerable=bool(data.get("answerable", True)),
                     gold_terms=list(data.get("gold_terms", [])),
                     expected_terms=list(data.get("expected_terms", [])),
                     source_ids=list(data.get("source_ids", [])),
-                    kind=str(data.get("kind", "curated")),
+                    kind=str(data.get("kind") or data.get("category") or "curated"),
                     origin=str(data.get("origin", "curated")),
+                    should_block=data.get("should_block"),
                 )
             )
     return out

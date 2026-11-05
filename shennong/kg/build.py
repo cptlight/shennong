@@ -221,10 +221,13 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
     # -- uses.csv (structured evidence) ---------------------------------------------
     uses = _read_csv(paths.uses_csv)
     for row in uses:
-        binomial = _s(row, "plant_binomial")
+        binomial = _s(row, "plant_binomial") or _resolve_taxon(_s(row, "drug_name"), binomials_in_graph, name_map) or ""
+        join_status = _s(row, "join_status")
+        if join_status and join_status != "joined" and not binomial:
+            continue
         ind = _s(row, "indication_modern") or _s(row, "indication")
         spec = ontology.indication_spec(ind) or ontology.indication_spec(_s(row, "indication"))
-        if not binomial or spec is None:
+        if not binomial:
             continue
         if binomial not in binomials_in_graph:
             g.add_node("taxon", binomial, binomial)
@@ -233,17 +236,49 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
         grade = (_s(row, "evidence_grade") or "D").upper()
         preparation = _s(row, "preparation")
         modern = ontology.is_modern_evidence(tradition, grade)
-        g.add_node("indication", spec.indication, spec.indication, organ=spec.organ, action_class=spec.action_class)
+        if spec is not None:
+            indication_key, organ, action = spec.indication, spec.organ, spec.action_class
+        else:
+            indication_key = ind
+            organ = ontology.infer_organ(ind)
+            action = ontology.infer_action_class(ind)
+            if not indication_key:
+                continue
+        g.add_node("indication", indication_key, indication_key, organ=organ, action_class=action)
         g.add_node("tradition", tradition, tradition)
         g.add_edge(
-            node_id("taxon", binomial), node_id("indication", spec.indication), "treats",
+            node_id("taxon", binomial), node_id("indication", indication_key), "treats",
             tradition=tradition, preparation=preparation, evidence_grade=grade,
             modern=modern, source_id=_s(row, "source_id"), origin="structured",
         )
         g.add_edge(node_id("taxon", binomial), node_id("tradition", tradition), "used_in_tradition")
 
     # -- corpus-extracted observations (span-carrying evidence) ---------------------
-    extraction = extract_corpus(docs, lex)
+    # Performance: the real corpus is ~28k records / 45M chars.  Running the span-faithful
+    # extractor on every record is minutes of CPU for little signal (most records are
+    # foundational textbooks with no drug name).  Pre-screen with a cheap raw-substring
+    # test for any known drug surface; only surviving documents are normalised/scanned.
+    # Only Asian-medicine documents can carry drug attestations; the foundational
+    # Tier-1 biology corpus (~16M chars, 10.7k English records) is the first-principles
+    # substrate, not materia medica, so excluding it is both correct and much faster.
+    asian = ontology.ASIAN_TRADITIONS | {"comparative-control"}
+    # Cap the span-extraction corpus for a bounded run: prefer canonical Asian medicine
+    # (tcm/alchemy/ayurveda/unani) and lower tiers, then other Asian documents.
+    priority = {"tcm": 0, "alchemy": 0, "ayurveda": 1, "unani": 1, "acupuncture": 2, "korean": 2}
+    asian_docs = [d for d in docs if str(d.get("tradition", "")) in asian]
+    asian_docs.sort(key=lambda d: (priority.get(str(d.get("tradition", "")), 3), int(d.get("tier", 9) or 9)))
+    extraction_docs = asian_docs[:10000]
+    extraction = extract_corpus(extraction_docs, lex)
+    edge_counts: dict[tuple[str, str], int] = {}
+
+    def _ensure_taxon(binomial: str) -> bool:
+        if not binomial:
+            return False
+        if binomial not in binomials_in_graph:
+            g.add_node("taxon", binomial, binomial)
+            binomials_in_graph.add(binomial)
+        return True
+
     for obs in extraction.observations:
         payload = obs.payload
         if obs.kind == "treats":
@@ -254,6 +289,10 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
             if spec is None:
                 continue
             g.add_node("indication", spec.indication, spec.indication, organ=spec.organ, action_class=spec.action_class)
+            count_key = ("treats", f"{binomial}|{spec.indication}")
+            edge_counts[count_key] = edge_counts.get(count_key, 0) + 1
+            if edge_counts[count_key] > 30:
+                continue
             g.add_edge(
                 node_id("taxon", binomial), node_id("indication", spec.indication), "treats",
                 tradition=payload.get("tradition", "unknown"),
@@ -266,12 +305,16 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
         elif obs.kind == "processed_by":
             binomial = payload.get("drug")
             proc = payload.get("process")
-            if binomial not in binomials_in_graph or not proc:
+            if not _ensure_taxon(binomial) or not proc:
                 continue
             sem = ontology.ALL_PROCESSES.get(proc)
             g.add_node("process", proc, sem.name_zh if sem else proc, process_key=proc,
                        modern=sem.modern if sem else "", mechanism=sem.mechanism if sem else "",
                        citation=sem.citation if sem else "")
+            count_key = ("processed_by", f"{binomial}|{proc}")
+            edge_counts[count_key] = edge_counts.get(count_key, 0) + 1
+            if edge_counts[count_key] > 3:
+                continue
             g.add_edge(
                 node_id("taxon", binomial), node_id("process", proc), "processed_by",
                 source_id=obs.source_id, char_start=obs.char_start, char_end=obs.char_end,
@@ -299,6 +342,30 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
 
     # -- incompatibilities.csv (rule lists are authoritative even without extracted text)
     incompat_rows = _read_csv(paths.incompatibilities_csv)
+    # index documents by source for rule-verse span lookup
+    docs_by_source: dict[str, list[str]] = {}
+    for doc in docs:
+        docs_by_source.setdefault(str(doc.get("source_id", "")), []).append(str(doc.get("text", "")))
+
+    def _rule_span(row: dict[str, str]) -> dict[str, Any]:
+        """Locate the CSV ``span`` (the classical verse line) in the corpus text."""
+        span = _s(row, "span")
+        if not span:
+            return {}
+        source = _s(row, "source_id")
+        candidates = docs_by_source.get(source, []) or [str(d.get("text", "")) for d in docs]
+        for text in candidates:
+            idx = text.find(span)
+            if idx >= 0:
+                return {"char_start": idx, "char_end": idx + len(span), "quote": span, "confidence": 0.9}
+            # the compiled label may wrap the verse; try the segment after the last colon
+            verse = span.split("：")[-1].strip()
+            if verse and verse != span:
+                idx = text.find(verse)
+                if idx >= 0:
+                    return {"char_start": idx, "char_end": idx + len(verse), "quote": verse, "confidence": 0.8}
+        return {}
+
     for row in incompat_rows:
         raw_a = _s(row, "drug_a")
         raw_b = _s(row, "drug_b")
@@ -327,6 +394,8 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
             rule_system=rule, mechanism_kind=mech.kind, mechanism_prior=mech.prior,
             mechanism=mech.evidence, source_id=_s(row, "source_id"), origin="rule_list",
             drug_a_raw=raw_a, drug_b_raw=raw_b,
+            classical_label=_s(row, "classical_label"), variant_of=_s(row, "variant_of"),
+            **_rule_span(row),
         )
 
     # -- formulas + ingredients -----------------------------------------------------
@@ -339,7 +408,7 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
     for row in _read_csv(paths.formula_ingredients_csv):
         fid = _s(row, "formula_id")
         drug = _s(row, "drug_name")
-        binomial = _s(row, "plant_binomial")
+        binomial = _s(row, "plant_binomial") or _resolve_taxon(drug, binomials_in_graph, name_map) or ""
         role = _s(row, "role")
         if not fid or not binomial:
             continue
@@ -375,6 +444,11 @@ def build_graph(paths: CorpusPaths | None = None, lex: Lexicons | None = None) -
     }
     g._build_stats = stats  # type: ignore[attr-defined]
     return g
+
+
+def _mentions_any(text: str, surfaces: list[str]) -> bool:
+    """Cheap prefilter: does the raw text contain any known drug surface?"""
+    return any(surface in text for surface in surfaces)
 
 
 def _mechanism_for(a: str | None, b: str | None, rule: str, class_by_taxon: dict[str, set[str]]):

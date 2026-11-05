@@ -796,6 +796,31 @@ def _p(*args, **kwargs) -> CompoundClassProfile:  # compact constructor
 
 
 COMPOUND_CLASSES: Mapping[str, CompoundClassProfile] = {
+    "terpenoid": _p(
+        "terpenoid", 0.35, 0.30, 0.55,
+        ("NF-kB", "Nrf2"),
+        ("inflammatory signalling (NF-kB)",),
+        ("inflammation", "pain", "skin_disease"),
+        "Generic terpenoid annotation from the structural database: a class-level prior "
+        "only; the specific terpenoid subclass determines the real target.",
+        "canonical natural-products pharmacology (generic terpenoid)",
+    ),
+    "steroid": _p(
+        "steroid", 0.30, 0.01, 0.40,
+        ("steroid receptors", "NF-kB"),
+        ("endocrine modulation", "inflammatory signalling (NF-kB)"),
+        ("inflammation", "menstrual_disorders", "pain"),
+        "Generic steroid annotation; receptor selectivity depends on the exact skeleton.",
+        "canonical natural-products pharmacology (generic steroid)",
+    ),
+    "polyketide": _p(
+        "polyketide", 0.50, 0.10, 0.45,
+        ("bacterial membrane", "NF-kB"),
+        ("inflammatory signalling (NF-kB)",),
+        ("inflammation", "skin_disease"),
+        "Generic polyketide annotation; includes macrolides and aromatic polyketides.",
+        "canonical natural-products pharmacology (generic polyketide)",
+    ),
     "sesquiterpene_lactone": _p(
         "sesquiterpene_lactone", 0.60, 0.10, 0.60,
         ("NF-kB", "IL-6", "Na+/K+-ATPase"),
@@ -1286,6 +1311,58 @@ def classes_for_indication(indication: str) -> frozenset[str]:
     for cls, prof in COMPOUND_CLASSES.items():
         if want_ind & set(prof.indications) or want_path & set(prof.pathways):
             out.add(cls)
+    return frozenset(out)
+
+
+_ORGAN_KEYWORDS: tuple[tuple[str, str], ...] = (
+    ("肝", "liver"), ("heart", "heart"), ("心", "heart"), ("spleen", "spleen"), ("脾", "spleen"),
+    ("肺", "lungs"), ("lung", "lungs"), ("肾", "kidney"), ("腎", "kidney"), ("kidney", "kidney"),
+    ("胃", "stomach"), ("stomach", "stomach"), ("肠", "intestine"), ("腸", "intestine"),
+    ("intestin", "intestine"), ("胆", "gallbladder"), ("膽", "gallbladder"), ("gall", "gallbladder"),
+    ("膀胱", "bladder"), ("bladder", "bladder"), ("三焦", "systemic"), ("brain", "brain"),
+    ("脑", "brain"), ("腦", "brain"), ("头", "head"), ("頭", "head"), ("head", "head"),
+    ("目", "eyes"), ("眼", "eyes"), ("eye", "eyes"), ("耳", "ears"), ("ear", "ears"),
+    ("鼻", "nose"), ("nose", "nose"), ("咽喉", "throat"), ("喉", "throat"), ("throat", "throat"),
+    ("牙", "mouth"), ("齿", "mouth"), ("齒", "mouth"), ("tooth", "mouth"), ("mouth", "mouth"),
+    ("皮肤", "skin"), ("皮膚", "skin"), ("疮", "skin"), ("瘡", "skin"), ("skin", "skin"),
+    ("骨", "bone"), ("bone", "bone"), ("关节", "joints"), ("關節", "joints"), ("joint", "joints"),
+    ("腰", "back"), ("back", "back"), ("血", "blood"), ("blood", "blood"),
+    ("乳", "reproductive"), ("精", "reproductive"), ("胞", "reproductive"),
+    ("子宫", "reproductive"), ("子宮", "reproductive"), ("reproductive", "reproductive"),
+    ("月經", "reproductive"), ("月经", "reproductive"), ("menstrual", "reproductive"),
+    ("全身", "systemic"), ("systemic", "systemic"),
+)
+
+_ORGAN_ACTION: Mapping[str, str] = {
+    "liver": "hepatobiliary", "gallbladder": "hepatobiliary", "heart": "cardiovascular",
+    "lungs": "respiratory", "stomach": "digestive", "intestine": "digestive",
+    "spleen": "digestive", "brain": "neuro", "head": "neuro", "eyes": "sensory",
+    "ears": "sensory", "nose": "respiratory", "throat": "respiratory", "mouth": "sensory",
+    "skin": "dermatologic", "bone": "musculoskeletal", "joints": "musculoskeletal",
+    "back": "musculoskeletal", "blood": "haematologic", "reproductive": "reproductive",
+    "bladder": "cardiovascular", "kidney": "cardiovascular", "systemic": "metabolic",
+}
+
+
+def infer_organ(text: str) -> str:
+    """Infer an organ from a free-text indication (Chinese or English keywords)."""
+    lowered = (text or "").lower()
+    for keyword, organ in _ORGAN_KEYWORDS:
+        if keyword in lowered or keyword in (text or ""):
+            return organ
+    return "systemic"
+
+
+def infer_action_class(text: str) -> str:
+    return _ORGAN_ACTION.get(infer_organ(text), "systemic")
+
+
+def classes_for_action_class(action_class: str) -> frozenset[str]:
+    """Compound classes whose prior touches any indication in an action class."""
+    indications = ACTION_CLASSES.get(action_class, ())
+    out: set[str] = set()
+    for indication in indications:
+        out |= set(classes_for_indication(indication))
     return frozenset(out)
 
 

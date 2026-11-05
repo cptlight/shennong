@@ -91,35 +91,50 @@ def reproduce_split(docs: list[dict], val_frac: float = 0.02, seed: int = 0):
 # ---------------------------------------------------------------------------------------
 # Metrics
 # ---------------------------------------------------------------------------------------
-@torch.no_grad()
-def eval_language(model: ShennongMini, tok, docs: list[dict], lang: str, seq_len: int,
-                  max_docs: int, batch: int = 4) -> dict:
-    """Token-level CE on whole held-out chunks (concatenated with <|eos|>), then ppl + bpb."""
-    eos = tok.token_to_id("<|eos|>")
-    selected = [d for d in docs if d.get("lang") == lang][:max_docs]
-    if not selected:
-        return {}
-    ids_list = []
-    for d in selected:
-        ids = tok.encode(d["text"]).ids
-        ids.append(eos if eos is not None else 0)
-        ids_list.append(ids)
-    n_bytes = sum(len(d["text"].encode("utf-8")) for d in selected)
+def cache_key_for(run_meta: dict) -> str:
+    """Recompute the token-cache key exactly as train_pretrain.py built it."""
+    import hashlib
 
+    tok_rel = (run_meta.get("args") or {}).get("tokenizer") or "tokenizer/shennong-bpe/tokenizer.json"
+    tok_path = ROOT / tok_rel
+    if not tok_path.exists():
+        return ""
+    return tok_path.parent.name + "-" + hashlib.sha256(tok_path.read_bytes()).hexdigest()[:10]
+
+
+@torch.no_grad()
+def eval_pooled_from_cache(model: ShennongMini, tok, run_dir: Path, run_meta: dict,
+                           seq_len: int, batch: int = 4) -> dict:
+    """Exact held-out evaluation on the cached validation token stream used during training.
+
+    This is the *same* array `train_pretrain.evaluate()` scored, so it is leakage-free by
+    construction. Every held-out token is scored once (non-overlapping windows).
+    """
+    key = cache_key_for(run_meta)
+    val_p = ROOT / "training" / "cache" / f"val_{key}.npy"
+    if not key or not val_p.exists():
+        return {}
+    data = np.load(val_p, mmap_mode="r")
+    windows, n_bytes_total = [], 0
+    for start in range(0, len(data) - 1, seq_len):
+        w = np.asarray(data[start:start + seq_len], dtype=np.int64).tolist()
+        if len(w) < 2:
+            break
+        # bytes actually covered by this window (decode is exact for byte-level BPE)
+        n_bytes = len(tok.decode(w).encode("utf-8"))
+        windows.append((w, n_bytes))
+        n_bytes_total += n_bytes
     total_nats, total_tokens = 0.0, 0
     model.eval()
-    for i in range(0, len(ids_list), batch):
-        chunk = ids_list[i:i + batch]
-        # pad to the longest item in the batch; ignore_index skips the pad positions
-        maxlen = min(seq_len, max(len(c) for c in chunk))
-        x = torch.full((len(chunk), maxlen), 0, dtype=torch.long)
+    for i in range(0, len(windows), batch):
+        chunk = windows[i:i + batch]
+        maxlen = max(len(w) for w, _ in chunk)
+        x = torch.zeros((len(chunk), maxlen), dtype=torch.long)
         y = torch.full((len(chunk), maxlen), -100, dtype=torch.long)
-        for j, c in enumerate(chunk):
-            c = c[:maxlen]
-            x[j, :len(c)] = torch.tensor(c, dtype=torch.long)
-            y[j, :len(c) - 1] = torch.tensor(c[1:], dtype=torch.long)
+        for j, (w, _) in enumerate(chunk):
+            x[j, :len(w)] = torch.tensor(w, dtype=torch.long)
+            y[j, :len(w) - 1] = torch.tensor(w[1:], dtype=torch.long)
         logits, _ = model(x)
-        # manual CE so we can count non-ignored targets exactly
         loss = torch.nn.functional.cross_entropy(
             logits.view(-1, logits.size(-1)).float(), y.reshape(-1), ignore_index=-100,
             reduction="sum")
@@ -128,13 +143,76 @@ def eval_language(model: ShennongMini, tok, docs: list[dict], lang: str, seq_len
     model.train()
     mean_nats = total_nats / max(total_tokens, 1)
     return {
-        "lang": lang,
-        "docs": len(selected),
+        "source": str(val_p),
+        "cache_key": key,
+        "windows": len(windows),
         "tokens": total_tokens,
-        "utf8_bytes": n_bytes,
+        "utf8_bytes": n_bytes_total,
         "mean_nats_per_token": round(mean_nats, 4),
         "perplexity": round(math.exp(mean_nats), 2) if mean_nats < 20 else None,
-        "bits_per_byte": round(total_nats / (LN2 * max(n_bytes, 1)), 4),
+        "bits_per_byte": round(total_nats / (LN2 * max(n_bytes_total, 1)), 4),
+    }
+
+
+@torch.no_grad()
+def eval_language(model: ShennongMini, tok, docs: list[dict], lang: str, seq_len: int,
+                  max_docs: int, batch: int = 4, max_windows: int = 120) -> dict:
+    """Token-level CE on held-out chunks; ppl and bits-per-byte over the *scored* bytes.
+
+    Documents are split into full ``seq_len`` windows so nothing is silently truncated: a
+    Classical-Chinese chunk is ~1,300 tokens, i.e. two and a half windows. Bytes are counted
+    by decoding exactly the scored token ids, so the bpb denominator matches the numerator.
+    """
+    eos = tok.token_to_id("<|eos|>")
+    selected = [d for d in docs if d.get("lang") == lang][:max_docs]
+    if not selected:
+        return {}
+    windows: list[tuple[list[int], int]] = []
+    for d in selected:
+        ids = tok.encode(d["text"]).ids
+        if eos is not None:
+            ids = ids + [eos]
+        for s in range(0, max(1, len(ids) - 1), seq_len):
+            w = ids[s:s + seq_len]
+            if len(w) < 2:
+                break
+            n_bytes = len(tok.decode(w).encode("utf-8"))
+            windows.append((w, n_bytes))
+            if len(windows) >= max_windows:
+                break
+        if len(windows) >= max_windows:
+            break
+    if not windows:
+        return {}
+
+    total_nats, total_tokens, total_bytes = 0.0, 0, 0
+    model.eval()
+    for i in range(0, len(windows), batch):
+        chunk = windows[i:i + batch]
+        maxlen = max(len(w) for w, _ in chunk)
+        x = torch.zeros((len(chunk), maxlen), dtype=torch.long)      # 0 == <|pad|>
+        y = torch.full((len(chunk), maxlen), -100, dtype=torch.long)
+        for j, (w, _) in enumerate(chunk):
+            x[j, :len(w)] = torch.tensor(w, dtype=torch.long)
+            y[j, :len(w) - 1] = torch.tensor(w[1:], dtype=torch.long)
+        logits, _ = model(x)
+        loss = torch.nn.functional.cross_entropy(
+            logits.view(-1, logits.size(-1)).float(), y.reshape(-1), ignore_index=-100,
+            reduction="sum")
+        total_nats += float(loss)
+        total_tokens += int((y != -100).sum())
+        total_bytes += sum(nb for _, nb in chunk)
+    model.train()
+    mean_nats = total_nats / max(total_tokens, 1)
+    return {
+        "lang": lang,
+        "docs": len(selected),
+        "windows": len(windows),
+        "tokens": total_tokens,
+        "utf8_bytes": total_bytes,
+        "mean_nats_per_token": round(mean_nats, 4),
+        "perplexity": round(math.exp(mean_nats), 2) if mean_nats < 20 else None,
+        "bits_per_byte": round(total_nats / (LN2 * max(total_bytes, 1)), 4),
         "bits_per_token": round(mean_nats / LN2, 4),
     }
 
@@ -210,6 +288,8 @@ def main() -> int:
     ap.add_argument("--corpus", default="corpus/processed/corpus.jsonl")
     ap.add_argument("--out-dir", default="artifacts")
     ap.add_argument("--per-lang", type=int, default=40, help="held-out docs scored per language")
+    ap.add_argument("--max-windows", type=int, default=120,
+                    help="cap scored 512-token windows per language (CPU budget)")
     ap.add_argument("--threads", type=int, default=4)
     ap.add_argument("--no-samples", action="store_true", help="skip generation (fast metrics only)")
     args = ap.parse_args()
@@ -231,14 +311,32 @@ def main() -> int:
         raise SystemExit(f"tokenizer vocab {tok.get_vocab_size()} != model vocab {cfg.vocab_size}")
 
     docs = load_docs(Path(args.corpus))
-    val_docs, train_idx = reproduce_split(docs)
-    print(f"corpus docs={len(docs):,}  held-out docs={len(val_docs):,} (~2%)")
+    run_meta = {}
+    if (run_dir / "run.json").exists():
+        run_meta = json.loads((run_dir / "run.json").read_text(encoding="utf-8"))
 
-    # --- per-language held-out metrics --------------------------------------------
-    langs = sorted({d.get("lang", "?") for d in val_docs})
+    # --- pooled: exact training validation split, read from the token cache -------
+    pooled_cache = eval_pooled_from_cache(model, tok, run_dir, run_meta, cfg.seq_len)
+    if pooled_cache:
+        print(f"pooled (exact training val split, {pooled_cache['tokens']:,} tokens): "
+              f"CE={pooled_cache['mean_nats_per_token']:.4f} "
+              f"ppl={pooled_cache['perplexity']} bpb={pooled_cache['bits_per_byte']:.4f}")
+    else:
+        print("WARNING: token cache for this run not found — pooled held-out number unavailable")
+
+    # --- per-language diagnostic on the final corpus ------------------------------
+    # NOTE: the corpus was re-chunked after training started, so the exact per-language
+    # membership of the training val split cannot be reconstructed. These numbers are a
+    # language-balanced diagnostic on the *final* corpus and may include text seen in training.
+    _, train_idx = reproduce_split(docs)
+    per_lang_docs = docs
+    print(f"corpus docs={len(docs):,} (final corpus; per-language diagnostic)")
+
+    langs = sorted({d.get("lang", "?") for d in per_lang_docs})
     per_lang = {}
     for lang in langs:
-        m = eval_language(model, tok, val_docs, lang, cfg.seq_len, args.per_lang)
+        m = eval_language(model, tok, per_lang_docs, lang, cfg.seq_len, args.per_lang,
+                          max_windows=args.max_windows)
         if m:
             per_lang[lang] = m
             print(f"  {lang:8s} docs={m['docs']:3d} tok={m['tokens']:6d} "
@@ -250,15 +348,16 @@ def main() -> int:
     tot_nats = sum(m["mean_nats_per_token"] * m["tokens"] for m in per_lang.values())
     tot_tok = sum(m["tokens"] for m in per_lang.values())
     tot_bytes = sum(m["utf8_bytes"] for m in per_lang.values())
-    pooled = {
+    pooled_diag = {
         "tokens": tot_tok,
         "utf8_bytes": tot_bytes,
         "mean_nats_per_token": round(tot_nats / max(tot_tok, 1), 4),
         "perplexity": round(math.exp(tot_nats / max(tot_tok, 1)), 2) if tot_nats / max(tot_tok, 1) < 20 else None,
         "bits_per_byte": round(tot_nats / (LN2 * max(tot_bytes, 1)), 4),
     }
-    print(f"  POOLED   tok={pooled['tokens']} CE={pooled['mean_nats_per_token']:.4f} "
-          f"ppl={pooled['perplexity']} bpb={pooled['bits_per_byte']:.4f}")
+    pooled = pooled_cache or pooled_diag
+    print(f"  per-language diagnostic pooled: CE={pooled_diag['mean_nats_per_token']:.4f} "
+          f"bpb={pooled_diag['bits_per_byte']:.4f}")
 
     # --- memorisation -------------------------------------------------------------
     train_docs = [docs[i] for i in train_idx]
@@ -284,10 +383,15 @@ def main() -> int:
         "checkpoint": str(ckpt_path),
         "params": model.num_parameters(),
         "config": cfg.to_dict(),
-        "val_docs_total": len(val_docs),
+        "per_language_note": "language-balanced diagnostic on the FINAL corpus; the corpus was "
+                             "re-chunked after training started, so this is not guaranteed to be "
+                             "disjoint from training text. The pooled number comes from the exact "
+                             "training validation token cache and is leakage-free.",
+        "held_out_pooled": pooled,
+        "per_language_diagnostic": per_lang,
+        "per_language_diagnostic_pooled": pooled_diag,
+        "val_docs_total": len(docs),
         "per_lang_doc_cap": args.per_lang,
-        "per_language": per_lang,
-        "pooled": pooled,
         "memorisation": {
             "method": "generate 60 tokens from a verbatim 40-token training prefix "
                       "(temperature 0.7, top-k 40, top-p 0.9); longest common token run vs the "

@@ -1018,11 +1018,17 @@ function evalBlock(ev, hypCounts) {
     const metric = (v.metric || '').toLowerCase();
     const val = typeof v.value === 'number' ? v.value : null;
     const p = typeof v.p === 'number' ? v.p : null;
-    const above = val !== null && (metric === 'auc' ? val > 0.55 : Math.abs(val) > 0.1);
+    // Thresholds mirror docs/EVALUATION.md §2.2: AUC >= 0.60 or |rho| >= 0.15, and permutation p < 0.05.
+    // A result can be *significant but small*; collapsing that into "no signal" would misreport a p-value
+    // in front of a judge, so it gets its own verdict.
+    const above = val !== null && (metric === 'auc' ? val >= 0.60 : Math.abs(val) >= 0.15);
     const sig = p !== null && p < 0.05;
     const strong = above && sig;
+    const small = !strong && sig;
     const cls = strong ? 'is-strong' : 'is-null';
-    const verdict = strong ? 'predicts above chance' : (above ? 'trend, not significant' : 'no predictive signal');
+    const verdict = strong ? 'predicts above chance'
+      : small ? 'detectable, below our effect-size threshold'
+      : (above ? 'trend, not significant' : 'no predictive signal');
     return `<div class="theory ${cls}">
       <div class="k" style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">
         ${esc(key)}${v.fixture ? ' · <span style="color:var(--cinnabar-d);font-weight:700">DEMO FIXTURE</span>' : ''}</div>

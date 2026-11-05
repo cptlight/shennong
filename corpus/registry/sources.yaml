@@ -462,13 +462,109 @@
   chars_raw: 462047
   sha256: e4bd479dda3885deab99c11a7f1743daba7f45a01efd35ae71ef196623e46c95
   status: ok
+- id: ws_sa_ashtangahridaya
+  title: अष्टाङ्गहृदयम्
+  title_en: Aṣṭāṅgahṛdaya
+  author: Vāgbhaṭa
+  year: 650
+  tradition: ayurveda
+  lang: sa
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 918482
+  chars_raw: 918481
+  sha256: 6206123e7b41b125de9920b931d27065d85fc6d33bf563f3afdd4d7be5c9a595
+  status: ok
+- id: ws_sa_bhavaprakasha
+  title: भावप्रकाशः
+  title_en: Bhāvaprakāśa
+  author: Bhāvamiśra
+  year: 1600
+  tradition: ayurveda
+  lang: sa
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 921523
+  chars_raw: 921522
+  sha256: 4db8071b0809ca2991ddb2d9a79ca63a1cd2d28d1cc68fe1be6acbf0eb53f66e
+  status: ok
+- id: ws_sa_carakasamhita
+  title: चरकसंहिता
+  title_en: Caraka Saṃhitā
+  author: Agniveśa / Caraka
+  year: 200
+  tradition: ayurveda
+  lang: sa
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 201829
+  chars_raw: 201828
+  sha256: 645dccf54423ba513ea73fc2edf9bfda1152e94b4257fd748316160755fe2e9d
+  status: ok
+- id: ws_sa_madhavanidana
+  title: माधवनिदानम्
+  title_en: Mādhava Nidāna (Rugvinischaya)
+  author: Mādhavakara
+  year: 700
+  tradition: ayurveda
+  lang: sa
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 151132
+  chars_raw: 151131
+  sha256: e3b95a249edb47261967846ff36aa1b312ef359a54e4ab7e4cc19897f7a7b946
+  status: ok
+- id: ws_sa_sharngadharasamhita
+  title: शार्ङ्गधरसंहिता
+  title_en: Śārṅgadhara Saṃhitā
+  author: Śārṅgadhara
+  year: 1350
+  tradition: ayurveda
+  lang: sa
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 321849
+  chars_raw: 321848
+  sha256: e49d376b7609366f897bf8511951b7d8761bc1f477f78b22e4fc051f5e1eb88a
+  status: ok
+- id: ws_sa_sushrutasamhita
+  title: सुश्रुतसंहिता
+  title_en: Suśruta Saṃhitā
+  author: Suśruta
+  year: 400
+  tradition: ayurveda
+  lang: sa
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 1113363
+  chars_raw: 1113362
+  sha256: e34b8be2d9de38bb64393e033df2154570c79e6472d5363bb684a38f70ef7637
+  status: ok
 - id: ws_zh_bencao_beiyao
   title: 本草備要
   title_en: Bencao Beiyao (Essentials of Materia Medica)
   author: 汪昂 Wang Ang
   year: 1694
   tradition: tcm
-  lang: zh-Hant
+  lang: zh-Hans
   tier: 2
   url: ''
   licence: CC-BY-SA-4.0
@@ -477,6 +573,38 @@
   chars: 134941
   chars_raw: 137223
   sha256: f2e1c9453481990c324fc4d60b3e982241c40e14763b32c8b1546d8df08dbaf4
+  status: ok
+- id: ws_zh_bencao_biandu
+  title: 本草便讀
+  title_en: Bencao Biandu (Materia Medica for Easy Reading)
+  author: 張秉成 Zhang Bingcheng
+  year: 1887
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 81901
+  chars_raw: 80664
+  sha256: 1e86289078ac4a135e5c996148adcf781aa6c1fbf04222987fa9e20247758111
+  status: ok
+- id: ws_zh_bencao_chongyuan
+  title: 本草崇原
+  title_en: Bencao Chongyuan (Reverting to the Source of Materia Medica)
+  author: 張志聰 Zhang Zhicong
+  year: 1674
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 95721
+  chars_raw: 96483
+  sha256: d6a30e7af998f3a55a019b2ac0b06821d98c86f4f57b2567682af655a74d86a2
   status: ok
 - id: ws_zh_bencao_congxin
   title: 本草從新
@@ -494,6 +622,22 @@
   chars_raw: 175957
   sha256: f09984baded64dae523eb894c9972ccbe7e27589e90a0904d166e3f664195f86
   status: ok
+- id: ws_zh_bencao_fenjing
+  title: 本草分經
+  title_en: Bencao Fenjing (Materia Medica Arranged by Channel)
+  author: 姚瀾 Yao Lan
+  year: 1840
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 65455
+  chars_raw: 76268
+  sha256: 60c1b9d4086300f9ccf27d2b222f7d6fa5df6a13b8d4a900fa25dbb5aa8db790
+  status: ok
 - id: ws_zh_bencao_gangmu
   title: 本草綱目
   title_en: Bencao Gangmu (Compendium of Materia Medica)
@@ -506,9 +650,73 @@
   licence: CC-BY-SA-4.0
   licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
   licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
-  chars: 1877894
+  chars: 1937446
   chars_raw: 1926467
   sha256: df4c492fa33c7ac364d37e54378706925086933b28217721de78e61e647e6c87
+  status: ok
+- id: ws_zh_bencao_gangmu_bieninglu
+  title: 本草綱目別名錄
+  title_en: Bencao Gangmu Bieshi Lu (Register of Synonyms from the Compendium)
+  author: 李時珍 Li Shizhen (extract)
+  year: 1596
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 21092
+  chars_raw: 20392
+  sha256: a9036aa57415beebd780f8337e2ac0d5c116e684ce7406446fad4ec56ead7d00
+  status: ok
+- id: ws_zh_bencao_gangmu_shiyi
+  title: 本草綱目拾遺
+  title_en: Bencao Gangmu Shiyi (Supplement to the Compendium)
+  author: 趙學敏 Zhao Xuemin
+  year: 1765
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 267572
+  chars_raw: 268370
+  sha256: af2e0e4d0abfef1ef8b3bb6bbc442d3df79063c00fbefea13adeb78359aa1592
+  status: ok
+- id: ws_zh_bencao_haili
+  title: 本草害利
+  title_en: Bencao Haili (Benefits and Harms of Materia Medica)
+  author: 凌奐 Ling Huan
+  year: 1882
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 63739
+  chars_raw: 67305
+  sha256: ab12f2ff2940611289b8043ea26c49b43dd6b43f625833c1493afd0306b74727
+  status: ok
+- id: ws_zh_bencao_jingjie
+  title: 本草經解
+  title_en: Bencao Jingjie (Explanation of the Materia Medica Classic)
+  author: 葉桂 Ye Gui
+  year: 1745
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 72835
+  chars_raw: 72159
+  sha256: 8b4259e1ab2fc489152c6b9a3ff1be6bf7dd18828828e866a7560c85ff5e4ef9
   status: ok
 - id: ws_zh_bencao_jingjizhu
   title: 本草經集注
@@ -526,6 +734,358 @@
   chars_raw: 130169
   sha256: 2c3f7dfafacda23b78c0f809a54b61e292df9d8f7aa79314b352d2c55b7d9b6e
   status: ok
+- id: ws_zh_bencao_qiuzhen
+  title: 本草求真
+  title_en: Bencao Qiuzhen (Seeking the Truth of Materia Medica)
+  author: 黃宮繡 Huang Gongxiu
+  year: 1769
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 274878
+  chars_raw: 282476
+  sha256: 57f1b5603f44088ce2b3dc2d56c2c2218c33312aa3c4d719863282cb626938c2
+  status: ok
+- id: ws_zh_bencao_sibian
+  title: 本草思辨錄
+  title_en: Bencao Sibian Lu (Critical Discourses on Materia Medica)
+  author: 周巖 Zhou Yan
+  year: 1904
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 102318
+  chars_raw: 105711
+  sha256: ad9f1cb8bd4cfdf8824994a030adefb80565a48e63ee7734f20428736c1b90e9
+  status: ok
+- id: ws_zh_bencao_tujing
+  title: 本草圖經
+  title_en: Bencao Tujing (Illustrated Classic of Materia Medica)
+  author: 蘇頌 Su Song
+  year: 1061
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 116827
+  chars_raw: 115843
+  sha256: 5346661ce875729aeb877547aee70a9d7ab4926c20e03ea8fde289ce68c097db
+  status: ok
+- id: ws_zh_bencao_xinbian
+  title: 本草新編
+  title_en: Bencao Xinbian (New Compilation of Materia Medica)
+  author: 陳士鐸 Chen Shiduo
+  year: 1687
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 203791
+  chars_raw: 208426
+  sha256: 6209e75deef9e200fdd4696350c5d9f5dcf419a48fb0baa84f61d0bb110f2f7d
+  status: ok
+- id: ws_zh_bencao_yanyi
+  title: 本草衍義
+  title_en: Bencao Yanyi (Elaboration of Materia Medica)
+  author: 寇宗奭 Kou Zongshi
+  year: 1116
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 62524
+  chars_raw: 62159
+  sha256: 8f352346fe46d6c909e34ef5260202d122aa293a658719b30e197e687870ea42
+  status: ok
+- id: ws_zh_benjing_fengyuan
+  title: 本經逢原
+  title_en: Benjing Fengyuan (Encountering the Source of the Classic)
+  author: 張璐 Zhang Lu
+  year: 1695
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 181785
+  chars_raw: 184596
+  sha256: 5d80a0635210872edf79893069275c102c9b14a3f5555e64859ce9f89bf415c1
+  status: ok
+- id: ws_zh_benjing_shuzheng
+  title: 本經疏證
+  title_en: Benjing Shuzheng (Evidential Commentary on the Classic of Materia Medica)
+  author: 鄒澍 Zou Shu
+  year: 1832
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 23380
+  chars_raw: 23433
+  sha256: e3c59db4c1877ec624982634916cd26998b59c31bfbe0d9910f967669539e80e
+  status: ok
+- id: ws_zh_changsha_yaojie
+  title: 長沙藥解
+  title_en: Changsha Yaojie (Explanation of the Drugs of Changsha)
+  author: 黃元御 Huang Yuanyu
+  year: 1753
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 89705
+  chars_raw: 89908
+  sha256: d95caaa97d66ca82ad6a71e50a6ff32bb2dd2eac33ef1a2403bcd8feed43e23e
+  status: ok
+- id: ws_zh_danxi_xinfa
+  title: 丹溪心法
+  title_en: Danxi Xinfa (Danxi's Heart Method)
+  author: 朱震亨 Zhu Zhenheng
+  year: 1481
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 152025
+  chars_raw: 152522
+  sha256: 18dd54173c415a338c981a888c041f0566d4f270d890e9b0c13030ee25bbf2b2
+  status: ok
+- id: ws_zh_depi_bencao
+  title: 得配本草
+  title_en: Depi Bencao (Materia Medica of Compatible Combinations)
+  author: 嚴西亭 Yan Xiting et al.
+  year: 1761
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 107562
+  chars_raw: 106720
+  sha256: fda72636c7d705c5ed15855b6bf17b4b4a4953d1b8a634f358f594dd56422a94
+  status: ok
+- id: ws_zh_dongui_bogam
+  title: 東醫寶鑑
+  title_en: Dongui Bogam (Mirror of Eastern Medicine)
+  author: 許浚 Heo Jun
+  year: 1613
+  tradition: korean
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 30241
+  chars_raw: 29881
+  sha256: 5ac50517fbf78bed622383efa38609dc358b534a41d62935cc9b632a45c99861
+  status: ok
+- id: ws_zh_guangqunfangpu
+  title: 廣群芳譜
+  title_en: Guang Qunfang Pu (Expanded Register of Flowers and Plants)
+  author: 汪灝 Wang Hao et al.
+  year: 1708
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 890774
+  chars_raw: 888961
+  sha256: dd3b1fc1249a6c34f4f84efbfc3d59f5591f03a6df08d2d76dc41f2c5fc588a6
+  status: ok
+- id: ws_zh_haiyao_bencao
+  title: 海藥本草
+  title_en: Haiyao Bencao (Materia Medica of Overseas Drugs)
+  author: 李珣 Li Xun
+  year: 800
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 14555
+  chars_raw: 14305
+  sha256: fb5aaaa28d25910073992db6e93edd733a4d8b5df0b2fd20ab2a1e6621293484
+  status: ok
+- id: ws_zh_jingui_yaolue
+  title: 金匱要略
+  title_en: Jingui Yaolue (Essential Prescriptions of the Golden Coffer)
+  author: 張仲景 Zhang Zhongjing
+  year: 220
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 29748
+  chars_raw: 30476
+  sha256: 03b439761ce1fabf14c7395c61ff65316a46dcadd33cbdd88d4a3849e9fc76de
+  status: ok
+- id: ws_zh_jingyue_quanshu
+  title: 景岳全書
+  title_en: Jingyue Quanshu (Complete Works of Jingyue)
+  author: 張介賓 Zhang Jiebin
+  year: 1624
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 4435
+  chars_raw: 4367
+  sha256: 484ab4d3801b737330ad38b852335a62ce628ad71d8e58a39b6f3f388c35ba82
+  status: ok
+- id: ws_zh_maijing
+  title: 脈經
+  title_en: Maijing (Classic of the Pulse)
+  author: 王叔和 Wang Shuhe
+  year: 280
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 94205
+  chars_raw: 95435
+  sha256: a995d5498c65a27b07b0a0613f0d39865a141f0768a073b4214d05bbfa1b28f2
+  status: ok
+- id: ws_zh_nongzheng_quanshu
+  title: 農政全書
+  title_en: Nongzheng Quanshu (Complete Treatise on Agricultural Administration)
+  author: 徐光啟 Xu Guangqi
+  year: 1639
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 986738
+  chars_raw: 986858
+  sha256: 019749f2db690c2fd3082eb08c9bf4e49473c77fab8ed6c55e2038a752f6916e
+  status: ok
+- id: ws_zh_pujifang
+  title: 普濟方
+  title_en: Pujifang (Formulas for Universal Relief)
+  author: 朱橚 Zhu Su
+  year: 1406
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 5246126
+  chars_raw: 5209811
+  sha256: c402b469474a85e577843d61b5d0f4b98e41b27047f40ef484f8a4ef75c7bd6d
+  status: ok
+- id: ws_zh_qianjin_yifang
+  title: 千金翼方
+  title_en: Qianjin Yifang (Supplement to the Thousand Ducat Formulas)
+  author: 孫思邈 Sun Simiao
+  year: 682
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 427108
+  chars_raw: 448524
+  sha256: 2d4ea082b4c81760cdb7331ffac6cd1750b994d2518be083b039d545df199e36
+  status: ok
+- id: ws_zh_qimin_yaoshu
+  title: 齊民要術
+  title_en: Qimin Yaoshu (Essential Techniques for the Peasantry)
+  author: 賈思勰 Jia Sixie
+  year: 540
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 143388
+  chars_raw: 144106
+  sha256: 5e3f2e238e5f16f8bb27cca2b9048446b7d0b6092d7960a72869dbd94f30c01b
+  status: ok
+- id: ws_zh_shanghanlun
+  title: 傷寒論
+  title_en: Shanghan Lun (Treatise on Cold Damage)
+  author: 張仲景 Zhang Zhongjing
+  year: 220
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 42506
+  chars_raw: 42930
+  sha256: f8b7bd2fef014f4b21cfeb4d24daa3ff67618833d7a940e62a292920edb4c708
+  status: ok
+- id: ws_zh_shennong_bencao_baihzong
+  title: 神農本草經百種錄
+  title_en: Shennong Bencao Jing Baizhong Lu (Hundred Drugs of the Divine Farmer's Classic)
+  author: 徐大椿 Xu Dachun
+  year: 1736
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 22708
+  chars_raw: 22617
+  sha256: d660ce02296eca39e0148ce8b38cc24af9a722a9d26e8b9460b2cc5d889d9635
+  status: ok
 - id: ws_zh_shennong_bencaojing
   title: 神農本草經
   title_en: Shennong Bencao Jing (Divine Farmer's Materia Medica)
@@ -541,6 +1101,86 @@
   chars: 17743
   chars_raw: 18131
   sha256: a3e544d413cb9751d917c459bc62711481553e1d995f6d822f19197570f33af4
+  status: ok
+- id: ws_zh_shiliao_bencao
+  title: 食療本草
+  title_en: Shiliao Bencao (Dietetic Materia Medica)
+  author: 孟詵 Meng Shen
+  year: 700
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 38966
+  chars_raw: 39201
+  sha256: 2127cd5ec1be8888b6f3fbcd22b7787779faf0f31033ab2448e52cf094a035c2
+  status: ok
+- id: ws_zh_taiping_huimin_ju
+  title: 太平惠民和劑局方
+  title_en: Taiping Huimin Heji Ju Fang (Imperial Pharmacy Formulas)
+  author: 陳師文 Chen Shiwen et al.
+  year: 1078
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 174776
+  chars_raw: 175815
+  sha256: 3af4358802333053ee37fa27428b9f6021c9f6c40a0bcbbdb4d3d682d2db35dd
+  status: ok
+- id: ws_zh_tangye_bencao
+  title: 湯液本草
+  title_en: Tangye Bencao (Decoction Materia Medica)
+  author: 王好古 Wang Haogu
+  year: 1289
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 57477
+  chars_raw: 58017
+  sha256: d14221934272914719a9c3ef32a125a541a5ed806cdd65facd08c7c3f57df8f0
+  status: ok
+- id: ws_zh_waitai_miyao
+  title: 外臺秘要
+  title_en: Waitai Miyao (Secret Essentials from the Imperial Library)
+  author: 王燾 Wang Tao
+  year: 752
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 71992
+  chars_raw: 71569
+  sha256: 0cbf83fb758ae6631a9a78b0eaef584457e4e638c6cbed3635799e6b9e7fc46b
+  status: ok
+- id: ws_zh_wenbing_tiaobian
+  title: 溫病條辨
+  title_en: Wenbing Tiaobian (Systematic Differentiation of Warm Diseases)
+  author: 吳鞠通 Wu Jutong
+  year: 1798
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 119698
+  chars_raw: 119703
+  sha256: e55c64af27018d924d74ecacb2c21257659d954bc0a6451605b2669ba9792361
   status: ok
 - id: ws_zh_xinxiu_bencao
   title: 新修本草
@@ -558,13 +1198,125 @@
   chars_raw: 178063
   sha256: f9d7715254a619aefcf5283be36365da1cb697ed20626c52ece0b5618f915698
   status: ok
+- id: ws_zh_yanglao_fengqin_shu
+  title: 養老奉親書
+  title_en: Yanglao Fengqin Shu (Book on Caring for the Aged)
+  author: 陳直 Chen Zhi
+  year: 1085
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 31187
+  chars_raw: 31679
+  sha256: 15c0a182f42b8576c359ce0d3bbca0d448d4c1e5bdcd6e11db0e2c40a6640797
+  status: ok
+- id: ws_zh_yaoxing_fu
+  title: 珍珠囊補遺藥性賦
+  title_en: Yaoxing Fu (Rhapsody on Drug Properties)
+  author: 李杲 Li Gao (attrib.)
+  year: 1300
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 33687
+  chars_raw: 33893
+  sha256: 4d3cfdfd070e1aee9961bc84671a94a7212fe04afc8b7212cf132ba7533aba95
+  status: ok
+- id: ws_zh_yaoyao_fenji
+  title: 要藥分劑
+  title_en: Yaoyao Fenji (Essential Drugs by Category)
+  author: 沈金鰲 Shen Jin'ao
+  year: 1773
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 90561
+  chars_raw: 86513
+  sha256: 9d7b8a0f456e5912dc45ef6559b43700863c2b102dfb3e1af8b338fcf575b8b7
+  status: ok
+- id: ws_zh_yifang_jijie
+  title: 醫方集解
+  title_en: Yifang Jijie (Collected Explanations of Formulas)
+  author: 汪昂 Wang Ang
+  year: 1682
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 177765
+  chars_raw: 178408
+  sha256: 651baadb9e317a7fa18357e10117195f593df6a09858f886f0d1a2f57eb3fcb0
+  status: ok
+- id: ws_zh_yinshan_zhengyao
+  title: 飲膳正要
+  title_en: Yinshan Zhengyao (Principles of Correct Diet)
+  author: 忽思慧 Hu Sihui
+  year: 1330
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 38807
+  chars_raw: 38234
+  sha256: cfa598aca474c652ab4459eacaee55b62c39bcbd9d1b3dd72d9f8ac87bd757a9
+  status: ok
+- id: ws_zh_yishuo
+  title: 醫說
+  title_en: Yishuo (Collected Discourses on Medicine)
+  author: 張杲 Zhang Gao
+  year: 1224
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 125859
+  chars_raw: 123897
+  sha256: 13572986beaf2a08c2eabc8816b36d59a731d4268e5f8190b5d84cf146a01af9
+  status: ok
+- id: ws_zh_yixue_zhongzhong_canxi
+  title: 醫學衷中參西錄
+  title_en: Yixue Zhongzhong Canxi Lu (Records of Medicine, Chinese and Western)
+  author: 張錫純 Zhang Xichun
+  year: 1918
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 550796
+  chars_raw: 553141
+  sha256: 6e6d222fed1cc5fc5948c81c29a366a857e0921b1a378c74da33322ff31b4697
+  status: ok
 - id: ws_zh_zhenglei_bencao
   title: 證類本草
   title_en: Zhenglei Bencao (Classified Materia Medica)
   author: 唐慎微 Tang Shenwei
   year: 1082
   tradition: tcm
-  lang: zh-Hant
+  lang: zh-Hans
   tier: 2
   url: ''
   licence: CC-BY-SA-4.0
@@ -573,6 +1325,54 @@
   chars: 789819
   chars_raw: 800662
   sha256: 68d76690df31ea55281f1d2b4dd1e487f173949f83e28a36a6ec52c44f4efb9d
+  status: ok
+- id: ws_zh_zhiwu_mingshi_tukao
+  title: 植物名實圖考
+  title_en: Zhiwu Mingshi Tukao (Illustrated Study of Plant Names and Reality)
+  author: 吳其濬 Wu Qijun
+  year: 1848
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 5375
+  chars_raw: 5275
+  sha256: f8804f7f8435372631157fe508a77fc3af7f1339f0e4f8bad59fb6cc5bae12b2
+  status: ok
+- id: ws_zh_zhouhou_beiji
+  title: 肘後備急方
+  title_en: Zhouhou Beiji Fang (Emergency Formulas Kept in the Sleeve)
+  author: 葛洪 Ge Hong
+  year: 340
+  tradition: tcm
+  lang: zh-Hant
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 102786
+  chars_raw: 105484
+  sha256: a45bbc2cd6b07331f94d67e45abccfb81efcd5db272e87fd2ecbbf2b09acbc14
+  status: ok
+- id: ws_zh_zhu_bing_yuanhou
+  title: 諸病源候論
+  title_en: Zhubing Yuanhou Lun (Treatise on the Origins and Symptoms of Diseases)
+  author: 巢元方 Chao Yuanfang
+  year: 610
+  tradition: tcm
+  lang: zh-Hans
+  tier: 2
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 215401
+  chars_raw: 220069
+  sha256: 1f67dbd8dd441d43cd9119adfd51740bab260b6392be0586781c3d291be07583
   status: ok
 - id: gretil_rasaratnasamuccaya
   title: Rasaratnasamuccaya (Vāgbhaṭa)
@@ -589,13 +1389,95 @@
   sha256: ''
   status: unverified
   status_note: 'Non-commercial licence: cannot be used for training, may be cited as reference.'
+- id: ws_sa_rasahridaya
+  title: रसहृदयतन्त्रम्
+  title_en: Rasa Hṛdaya Tantra
+  author: Govindabhagavatpāda
+  year: 1300
+  tradition: alchemy
+  lang: sa
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 1
+  chars_raw: 1
+  sha256: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+  status: excluded
+  status_note: 'excluded from training: failed script/quality gate at cleaning (script_ok=False, replacement_ratio=0.0)'
+- id: ws_sa_rasarnava
+  title: रसार्णवः
+  title_en: Rasārṇava
+  author: attrib.
+  year: 1100
+  tradition: alchemy
+  lang: sa
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://creativecommons.org/licenses/by-sa/4.0/
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 555
+  chars_raw: 554
+  sha256: b52d1843b85bef1fbf2dbe77bf4c1845b0c86f280f9a93d14de9fed8c49515ff
+  status: excluded
+  status_note: 'excluded from training: failed script/quality gate at cleaning (script_ok=True, replacement_ratio=0.0)'
+- id: ws_zh_baopuzi
+  title: 抱朴子
+  title_en: Baopuzi (Master Who Embraces Simplicity)
+  author: 葛洪 Ge Hong
+  year: 320
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 197991
+  chars_raw: 198833
+  sha256: 6ca12a447c525409c51945106860e06039ce625386f6a99ed8c317eab5f4054d
+  status: ok
+- id: ws_zh_cantong_qi
+  title: 周易參同契
+  title_en: Zhouyi Cantong qi (Seal of the Unity of the Three)
+  author: 魏伯陽 Wei Boyang
+  year: 142
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 16133
+  chars_raw: 16038
+  sha256: 9ab943aa3287c7b1f6704f51be9c866c9d9b657d418afc520bb21b3ddf59d9bd
+  status: ok
+- id: ws_zh_huangdi_jiuding_shendan
+  title: 黃帝九鼎神丹經訣
+  title_en: Huangdi Jiuding Shendan Jingjue (Yellow Emperor's Nine Cauldrons Divine Elixir)
+  author: attrib. 黃帝 Yellow Emperor
+  year: 700
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 64970
+  chars_raw: 64672
+  sha256: 9a2c94ea30ae193d8e23ce466d40ef7cb5ba963229a26bd8d7a07c6f81629bdd
+  status: ok
 - id: ws_zh_leigong_paozhi
   title: 雷公炮炙論
   title_en: Leigong Paozhi Lun (Master Lei's Treatise on Processing)
   author: 雷斅 Lei Xiao
   year: 470
   tradition: alchemy
-  lang: zh-Hant
+  lang: zh-Hans
   tier: 3
   url: ''
   licence: CC-BY-SA-4.0
@@ -604,6 +1486,182 @@
   chars: 25959
   chars_raw: 30107
   sha256: 4f4b39b263a22a7621b76b270e66b7615da6d5ed3f72967879c22dcf8b6fc4ef
+  status: ok
+- id: ws_zh_leigong_paozhi_yaoxing
+  title: 雷公炮製藥性解
+  title_en: Leigong Paozhi Yaoxing Jie (Master Lei on Processing and Drug Properties)
+  author: 李中梓 Li Zhongzi
+  year: 1640
+  tradition: alchemy
+  lang: zh-Hans
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 66375
+  chars_raw: 70874
+  sha256: 205dba96f41ca9c9a8d516b065564c36033226bc66f3230f8905af56fdf02704
+  status: ok
+- id: ws_zh_longhu_huandan_jue
+  title: 龍虎還丹訣
+  title_en: Longhu Huandan Jue (Dragon-Tiger Reverted Elixir)
+  author: 金陵子 Jin Lingzi
+  year: 700
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 5209
+  chars_raw: 5269
+  sha256: 21efa6473594be9f50444a785b15b3bbaac139683dfbf87c084b8a5ee7e08b9a
+  status: ok
+- id: ws_zh_mengxi_bitan
+  title: 夢溪筆談
+  title_en: Mengxi Bitan (Dream Pool Essays)
+  author: 沈括 Shen Kuo
+  year: 1088
+  tradition: tcm
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 127190
+  chars_raw: 127692
+  sha256: f35ada8a4619d7854e315319c234d67813db5b2a993b9f51f33788834d92b646
+  status: ok
+- id: ws_zh_paozhi_dafa
+  title: 炮炙大法
+  title_en: Paozhi Dafa (Great Method of Processing)
+  author: 繆希雍 Miao Xiyong
+  year: 1622
+  tradition: alchemy
+  lang: zh-Hans
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 28659
+  chars_raw: 32702
+  sha256: 0853408c077d2d5a931f2a6963068b241427b38436e17a2c0b6a286fb62c43d2
+  status: ok
+- id: ws_zh_shiyao_erya
+  title: 石藥爾雅
+  title_en: Shiyao Erya (Synonymic Glossary of Mineral Drugs)
+  author: 梅彪 Mei Biao
+  year: 800
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 7304
+  chars_raw: 7479
+  sha256: bc80ec5f51940da8f0c3b57a341913d6ea9d1487eda08b9d2a7f22715becdde2
+  status: ok
+- id: ws_zh_taiqing_shibi_ji
+  title: 太清石壁記
+  title_en: Taiqing Shibi Ji (Record from the Stone Wall of Great Clarity)
+  author: 楚澤先生 Chu Ze
+  year: 700
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 14503
+  chars_raw: 14355
+  sha256: 4c8d3577221b53c5d1516d98458ed66866a4a3cc4e83f0b2412cdd58fb9a0049
+  status: ok
+- id: ws_zh_taiyi_jinhua
+  title: 太乙金華宗旨
+  title_en: Taiyi Jinhua Zongzhi (Secret of the Golden Flower)
+  author: attrib. 呂洞賓 Lü Dongbin
+  year: 1670
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 10040
+  chars_raw: 10054
+  sha256: 97c2913884839ce05a252489ab1b62c33887933623226d11ca80641728fb8b49
+  status: ok
+- id: ws_zh_tiangong_kaiwu
+  title: 天工開物
+  title_en: Tiangong Kaiwu (The Exploitation of the Works of Nature)
+  author: 宋應星 Song Yingxing
+  year: 1637
+  tradition: tcm
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 58266
+  chars_raw: 58396
+  sha256: cefd2972c95f1de63de7eb49ea7f28e2a01ff42b6e882b86000d4dd0f9dab96d
+  status: ok
+- id: ws_zh_wuzhen_pian
+  title: 悟真篇
+  title_en: Wuzhen Pian (Chapters on Awakening to Truth)
+  author: 張伯端 Zhang Boduan
+  year: 1075
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 7819
+  chars_raw: 7727
+  sha256: f582a72619252bf86720563c089d9d641cf7f21ad4860b8f60aaea6af70cfd44
+  status: ok
+- id: ws_zh_xuanyuan_shuijing_yaofa
+  title: 軒轅黃帝水經藥法
+  title_en: Xuanyuan Huangdi Shuijing Yaofa (Yellow Emperor's Water Classic Drug Methods)
+  author: attrib. 黃帝 Yellow Emperor
+  year: 700
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 4586
+  chars_raw: 4612
+  sha256: 117f4276f1c9f78fb38930d4bce66d699719559ac1c8b6cfd7dd4b2174a9ddd3
+  status: ok
+- id: ws_zh_yunji_qiqian
+  title: 雲笈七籤
+  title_en: Yunji Qiqian (Seven Lots from the Bookbag of the Clouds)
+  author: 張君房 Zhang Junfang
+  year: 1029
+  tradition: alchemy
+  lang: zh-Hant
+  tier: 3
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 933164
+  chars_raw: 933836
+  sha256: 96c65fc58500300c1f321bf09a7aebf3e219ba9d4b9cc2cec6c06fb0202bf4e3
   status: ok
 - id: pg_churchill_acupuncturation
   title: A Treatise on Acupuncturation
@@ -620,4 +1678,68 @@
   chars: 53997
   chars_raw: 75723
   sha256: 910dab98e89d24f7a4b1f7aa8300256840c4895173f3676e1cc648a88b83762f
+  status: ok
+- id: ws_zh_huangdi_neijing
+  title: 黃帝內經
+  title_en: Huangdi Neijing (Inner Canon of the Yellow Emperor)
+  author: attrib. 黃帝 Yellow Emperor
+  year: -200
+  tradition: acupuncture
+  lang: zh-Hant
+  tier: 4
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 190095
+  chars_raw: 193852
+  sha256: 9fa3e3ede60a387fbbeff4333a9fdf9dc42863024860a5f67b74694af209a6ac
+  status: ok
+- id: ws_zh_nanjing
+  title: 難經
+  title_en: Nanjing (Classic of Difficult Issues)
+  author: attrib. 扁鵲 Bian Que
+  year: 200
+  tradition: acupuncture
+  lang: zh-Hant
+  tier: 4
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 15386
+  chars_raw: 15375
+  sha256: 69d00fd44ab40e9cc0265959c9ead41f3a3f608e61aa52e7c9c098209b3d5d49
+  status: ok
+- id: ws_zh_zhenjiu_dacheng
+  title: 針灸大成
+  title_en: Zhenjiu Dacheng (Great Compendium of Acupuncture and Moxibustion)
+  author: 楊繼洲 Yang Jizhou
+  year: 1601
+  tradition: acupuncture
+  lang: zh-Hant
+  tier: 4
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 247369
+  chars_raw: 253680
+  sha256: 60271c5c03ff4527e34d79e86644fdb890e828df5ee766c987c1aeac4ea37855
+  status: ok
+- id: ws_zh_zhenjiu_jiayi
+  title: 針灸甲乙經
+  title_en: Zhenjiu Jiayi Jing (Systematic Classic of Acupuncture and Moxibustion)
+  author: 皇甫謐 Huangfu Mi
+  year: 282
+  tradition: acupuncture
+  lang: zh-Hant
+  tier: 4
+  url: ''
+  licence: CC-BY-SA-4.0
+  licence_evidence: https://zh.wikisource.org/wiki/Wikisource:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF
+  licence_note: Underlying work is PD-old (author dead >100 y); the Wikisource transcription is released CC BY-SA 4.0 and is attributed here.
+  chars: 137596
+  chars_raw: 138213
+  sha256: 7475745535cf5c545485082f6e7707ce594dcf3717836b235f59675b27f7e893
   status: ok

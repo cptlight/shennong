@@ -137,6 +137,20 @@ MANUAL_OVERRIDES = {
     "鱉甲": "Pelodiscus sinensis",
 }
 
+# Surfaces that must NEVER be mapped to a binomial: human-derived materia medica (no taxon),
+# and body-part / mineral terms that Wikidata has mislabelled with a taxon (e.g. 爪甲 ->
+# Aspergillus unguis, which is a Wikidata label error). Leaving them unresolved is correct.
+MANUAL_UNRESOLVED = {
+    # human-derived
+    "爪甲", "人髮", "亂髮", "髮髲", "頭垢", "耳垢", "人乳", "乳汁", "人中白", "童便",
+    "人尿", "糞清", "紫河車", "人胞", "天靈蓋", "人牙", "人骨", "月水", "血餘",
+    # mineral / inorganic single substances with no organism binomial
+    "石膏", "芒硝", "朴硝", "玄明粉", "滑石", "磁石", "代赭石", "禹餘糧", "爐甘石",
+    "無名異", "食鹽", "光明鹽", "硝石", "硼砂", "硇砂", "白礬", "綠礬", "膽礬",
+    "硫黃", "雄黃", "雌黃", "硃砂", "朱砂", "水銀", "輕粉", "鉛丹", "密陀僧",
+    "白堊", "赤石脂", "白石脂", "黃土", "伏龍肝", "百草霜", "墨", "鐵", "銅", "鉛",
+}
+
 # Natural products whose structures anchor the discovery engine. PubChem supplies the
 # SMILES; Wikidata P703 supplies the "found in taxon" association.
 COMPOUND_SEEDS = [
@@ -352,34 +366,144 @@ def _candidate_drug_names() -> list[str]:
             n = r.get("drug_name", "")
             if n and n != "*":
                 names[n] += 1
-    # only names that look like real 1-4 character drug names
-    return [n for n, _ in names.most_common() if 2 <= len(n) <= 6]
+    # only names that look like real drug surfaces -- drop prose fragments that the
+    # commentary parser occasionally emits ("一名…", "…者", sentence tails)
+    procedure = {"煮取", "溫服", "去滓", "上味", "溫酒", "以水", "水煮", "研末", "為末",
+                 "搗汁", "煎服", "空心", "食前", "食後", "日三", "分服", "取汁", "微火",
+                 "更煎", "再服", "頓服", "少許", "不拘", "時服", "湯調", "酒調", "米飲",
+                 "白湯", "生用", "炒用", "蜜丸", "糊丸", "醋丸", "粥飲", "相須", "相使",
+                 "相畏", "相殺", "相惡", "相反", "單行", "有毒", "無毒", "一名", "方中"}
+    bad = ("一名", "一种", "一種", "者", "云", "曰", "按", "此", "其", "之", "而",
+           "上焦", "下焦", "中焦", "丈夫", "婦人", "小兒", "孕婦", "人", "病", "痛",
+           "氣", "血", "陰", "陽", "虛", "實", "寒", "熱", "風", "濕")
+    out = []
+    for n, c in names.most_common():
+        if not (2 <= len(n) <= 6):
+            continue
+        if n in procedure:
+            continue
+        if any(n.startswith(b) or n.endswith(b) for b in bad):
+            continue
+        if any(ch in n for ch in "。，、；：（）()"):
+            continue
+        out.append(n)
+    return out
 
 
 def build_lexicon(limit: int | None = None) -> dict:
+    """Resolve drug names, batching the wbgetentities calls to keep requests reasonable.
+
+    ``wbsearchentities`` handles Chinese script variants (人參 / 人参) server-side, so the
+    search is done for every name; the (much cheaper) entity fetch is batched 50 ids at a time.
+    """
     cands = _candidate_drug_names()
     if limit:
         cands = cands[:limit]
     print(f"lexicon: resolving {len(cands)} candidate drug names via Wikidata ...")
+
+    hits: dict[str, list[str]] = {}
+    todo = [n for n in cands if n not in MANUAL_OVERRIDES]
+    from concurrent.futures import ThreadPoolExecutor, as_completed  # noqa: F401
+    done = 0
+    # Wikimedia tolerates a handful of parallel reads; stay polite with a small pool.
+    for name in todo:
+        ids = _wd_search(name)
+        if ids:
+            hits[name] = ids
+        done += 1
+        if done % 250 == 0:
+            print(f"  search {done}/{len(todo)} (found {len(hits)})")
+
+    all_ids = sorted({q for ids in hits.values() for q in ids})
+    ents: dict = {}
+    for i in range(0, len(all_ids), 50):
+        ents.update(_wd_entities(all_ids[i:i + 50]))
+        print(f"  entities {min(i + 50, len(all_ids))}/{len(all_ids)}")
+
     entries = []
-    for i, name in enumerate(cands, 1):
-        binomial, method, conf, qid = resolve_taxon(name)
-        if not binomial:
+    unresolved = []
+    # manual overrides first -- highest confidence
+    for name in cands:
+        if name in MANUAL_OVERRIDES:
+            entries.append({
+                "name": name, "lang": "zh-Hant",
+                "readings": [MANUAL_OVERRIDES[name]],
+                "modern": MANUAL_OVERRIDES[name],
+                "method": "manual", "confidence": 0.95,
+                "source_id": "manual_override",
+            })
+    for name, ids in hits.items():
+        if name in MANUAL_UNRESOLVED:
+            unresolved.append(name)
             continue
-        item = {
-            "name": name,
-            "lang": "zh-Hant",
-            "readings": [binomial],
-            "modern": binomial,
-            "method": method,
-            "confidence": conf,
-            "source_id": "wikidata" if method.startswith("wikidata") else "manual_override",
-        }
-        if qid:
-            item["wikidata"] = qid
-        entries.append(item)
-        if i % 100 == 0:
-            print(f"  {i}/{len(cands)} ... resolved={len(entries)}")
+        best = None
+        for qid in ids:
+            ent = ents.get(qid)
+            if not ent:
+                continue
+            taxon = _taxon_of(ent)
+            if not taxon:
+                continue
+            zh = (ent.get("labels", {}).get("zh", {}) or {}).get("value", "")
+            exact = (zh == name) or (zh.replace(" ", "") == name)
+            score = (2 if exact else 0) + (1 if " " in taxon else 0)
+            if best is None or score > best[0]:
+                best = (score, taxon, qid, exact)
+        if not best:
+            unresolved.append(name)
+            continue
+        _score, taxon, qid, exact = best
+        if exact and " " in taxon:
+            method, conf = "wikidata", 0.90
+        elif " " in taxon:
+            method, conf = "wikidata", 0.70
+        else:
+            method, conf = "wikidata-genus", 0.55
+        entries.append({
+            "name": name, "lang": "zh-Hant",
+            "readings": [taxon], "modern": taxon, "method": method,
+            "confidence": conf, "source_id": "wikidata", "wikidata": qid,
+        })
+
+    # ---- alias heuristics: processing prefixes/suffixes and compound names ----
+    # "炙甘草"/"炒白芍"/"生薑" are the same drug as their base name; 川烏頭 contains 烏頭.
+    resolved = {e["name"]: e for e in entries}
+    def _base_variants(name: str) -> list[str]:
+        out = []
+        for pre in ("生", "炒", "炙", "酒", "醋", "鹽", "盐", "蜜", "煅", "煆", "薑",
+                    "姜", "製", "制", "焦", "熟", "乾", "干", "鮮", "鲜", "炮", "煨"):
+            if name.startswith(pre) and len(name) > len(pre) + 1:
+                out.append(name[len(pre):])
+        for suf in ("炭", "炒", "片", "末", "粉", "霜", "汁", "汁子"):
+            if name.endswith(suf) and len(name) > len(suf) + 1:
+                out.append(name[: -len(suf)])
+        return out
+
+    added = 0
+    for name in cands:
+        if name in resolved or name in MANUAL_OVERRIDES or name in MANUAL_UNRESOLVED:
+            continue
+        src = None
+        for v in _base_variants(name):
+            if v in resolved:
+                src = resolved[v]
+                break
+        # NOTE: no substring/containment matching. It produced false joins (body-part surfaces
+        # matched to unrelated taxa), and a wrong binomial is worse than a null one.
+        if src is None:
+            continue
+        entries.append({
+            "name": name, "lang": "zh-Hant", "readings": [src["modern"]],
+            "modern": src["modern"], "method": "alias",
+            "confidence": round(max(0.55, src["confidence"] - 0.25), 2),
+            "source_id": src.get("source_id", "wikidata"),
+            "alias_of": src["name"],
+        })
+        resolved[name] = entries[-1]
+        added += 1
+    print(f"  alias additions: {added}")
+
+    entries.sort(key=lambda e: (-e["confidence"], e["name"]))
     doc = {
         "generated_by": "data/build_lexicon.py",
         "note": ("Classical Chinese drug name -> modern binomial. method=manual is a "
@@ -387,10 +511,12 @@ def build_lexicon(limit: int | None = None) -> dict:
                  "Wikidata P225 (taxon name), citable by Q-id. confidence is a heuristic, "
                  "not a calibrated probability."),
         "count": len(entries),
+        "unresolved_count": len(unresolved),
+        "unresolved": sorted(unresolved)[:200],
         "historical": entries,
     }
     OUT_JSON.write_text(json.dumps(doc, indent=1, ensure_ascii=False), encoding="utf-8")
-    print(f"  wrote {OUT_JSON} ({len(entries)} entries)")
+    print(f"  wrote {OUT_JSON} ({len(entries)} entries, {len(unresolved)} unresolved)")
     return doc
 
 

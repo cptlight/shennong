@@ -10974,6 +10974,7 @@
    "type": "process",
    "label": "去節",
    "props": {
+    "process_key": "remove_nodes",
     "modern": "removal of stem nodes",
     "mechanism": "Standardises ephedrine content across stem segments.",
     "citation": "炮製 compendia"
@@ -10984,6 +10985,7 @@
    "type": "process",
    "label": "蜜炙",
    "props": {
+    "process_key": "honey_fry",
     "modern": "honey-frying",
     "mechanism": "Sugars complex/modify phenolics and saponins, reduce surface irritation, and produce Maillard products; classical 'tonifying' claims are not mechanistically established.",
     "citation": "雷公炮炙論; 炮製 compendia"
@@ -10994,6 +10996,7 @@
    "type": "process",
    "label": "炮",
    "props": {
+    "process_key": "pao",
     "modern": "roast / steam treatment (often with 甘草 or 黑豆)",
     "mechanism": "Prolonged heating hydrolyses ester bonds. In Aconitum the C8-acetyl and C14-benzoyl esters of aconitine/mesaconitine/hypaconitine are cleaved to monoesters (benzoylaconine) and then lipo-alkaloids, which are far less potent at voltage-gated Na+ channels.",
     "citation": "雷公炮炙論 (Lei Gong, c. 500 CE); 本草綱目 (1596)"
@@ -11004,6 +11007,7 @@
    "type": "process",
    "label": "湯洗",
    "props": {
+    "process_key": "washed",
     "modern": "hot-water washing",
     "mechanism": "Removes surface mucilage, calcium-oxalate raphides and irritant lectins (Pinellia); a physical purification, not a chemical detox.",
     "citation": "雷公炮炙論"
@@ -11014,6 +11018,7 @@
    "type": "process",
    "label": "蒸",
    "props": {
+    "process_key": "zheng",
     "modern": "steam heating",
     "mechanism": "Glycoside hydrolysis and starch gelatinisation; ester hydrolysis for Aconitum; Maillard chemistry for 熟地黃 (nine蒸nine曬 → 5-HMF).",
     "citation": "雷公炮炙論; 本草綱目"
@@ -11024,6 +11029,7 @@
    "type": "process",
    "label": "酒炙",
    "props": {
+    "process_key": "wine_fry",
     "modern": "wine-frying",
     "mechanism": "Ethanol improves extraction of medium-polar alkaloids and alters the anthraquinone/tannin balance (酒大黃 softer purgation).",
     "citation": "雷公炮炙論; 本草綱目"
@@ -11034,6 +11040,7 @@
    "type": "process",
    "label": "昇",
    "props": {
+    "process_key": "sublimation",
     "modern": "sublimation (昇/飛)",
     "mechanism": "Volatile solids (sal ammoniac, calomel, sulphur) vaporise and re-condense. In mercury pharmacy this concentrates the toxic species.",
     "citation": "抱朴子; 丹方 texts"
@@ -11044,6 +11051,7 @@
    "type": "process",
    "label": "煮",
    "props": {
+    "process_key": "zhu",
     "modern": "boiling in water or an auxiliary decoction",
     "mechanism": "Aqueous hydrolysis/extraction; the classical 甘草+黑豆 co-decoction of Aconitum adds a pH/co-solvent effect and further ester hydrolysis.",
     "citation": "傷寒論 (220 CE); 本草綱目"
@@ -11054,6 +11062,7 @@
    "type": "process",
    "label": "炒",
    "props": {
+    "process_key": "chao",
     "modern": "dry-fry",
     "mechanism": "Volatilisation and partial thermal decomposition; enzyme inactivation; short dry-fry does NOT hydrolyse diterpene diesters — a testable limitation.",
     "citation": "雷公炮炙論; 炮製 compendia"
@@ -11064,19 +11073,10 @@
    "type": "process",
    "label": "麩炒",
    "props": {
+    "process_key": "bran_fry",
     "modern": "bran-frying",
     "mechanism": "Mild heat absorption and partial volatilisation; mostly a dose/irritancy control.",
     "citation": "雷公炮炙論"
-   }
-  },
-  {
-   "id": "process:duan",
-   "type": "process",
-   "label": "煅",
-   "props": {
-    "modern": "calcination of mineral/animal drugs",
-    "mechanism": "Carbonates and sulfides decompose to oxides; crystal water is lost; the product becomes more reactive/alkaline. Heavy metals remain heavy metals.",
-    "citation": "雷公炮炙論; later 炮製 compendia"
    }
   },
   {
@@ -11084,6 +11084,7 @@
    "type": "process",
    "label": "蜜丸",
    "props": {
+    "process_key": "honey_pill",
     "modern": "honeyed pill",
     "mechanism": "Slow-release sugar matrix; masks irritancy.",
     "citation": "傷寒論; 東醫寶鑑"
@@ -11293,9 +11294,21 @@
    "type": "process",
    "label": "先煎",
    "props": {
+    "process_key": "xianjian",
     "modern": "decoct-first instruction",
     "mechanism": "Extended boiling of the dangerous drug before the rest are added: an operational hydrolysis protocol for diterpene diesters.",
     "citation": "傷寒論 (220 CE)"
+   }
+  },
+  {
+   "id": "process:duan",
+   "type": "process",
+   "label": "煅",
+   "props": {
+    "process_key": "duan",
+    "modern": "calcination of mineral/animal drugs",
+    "mechanism": "Carbonates and sulfides decompose to oxides; crystal water is lost; the product becomes more reactive/alkaline. Heavy metals remain heavy metals.",
+    "citation": "雷公炮炙論; later 炮製 compendia"
    }
   }
  ],
@@ -25952,32 +25965,6 @@
    }
   },
   {
-   "src": "taxon:mercury",
-   "dst": "process:duan",
-   "rel": "processed_by",
-   "props": {
-    "source_id": "fixture_wikisource_baopuzi",
-    "char_start": 0,
-    "char_end": 15,
-    "quote": "丹砂燒之成水銀，積變又還成丹砂",
-    "confidence": 0.9,
-    "origin": "corpus"
-   }
-  },
-  {
-   "src": "taxon:realgar",
-   "dst": "process:duan",
-   "rel": "processed_by",
-   "props": {
-    "source_id": "fixture_wikisource_baopuzi",
-    "char_start": 40,
-    "char_end": 49,
-    "quote": "雄黃燒之，其色如金",
-    "confidence": 0.9,
-    "origin": "corpus"
-   }
-  },
-  {
    "src": "taxon:glycyrrhiza-uralensis",
    "dst": "indication:insanity",
    "rel": "treats",
@@ -27928,7 +27915,7 @@
  ],
  "stats": {
   "nodes": 1131,
-  "edges": 1810,
+  "edges": 1808,
   "types": {
    "compound": 150,
    "compound_class": 39,
@@ -27953,7 +27940,7 @@
    "has_ingredient": 59,
    "incompatible": 62,
    "member_of": 148,
-   "processed_by": 39,
+   "processed_by": 37,
    "treats": 177,
    "used_in_tradition": 165
   }

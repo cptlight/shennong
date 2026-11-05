@@ -1,0 +1,79 @@
+{
+ "lexicon": {
+  "file": "corpus/processed/lexicon_drugs.json",
+  "entries": 827,
+  "distinct_binomials": 691,
+  "by_method": {
+   "manual": 62,
+   "wikidata": 692,
+   "alias": 4,
+   "wikidata-genus": 69
+  },
+  "mean_confidence": 0.754,
+  "unresolved_surfaces": 241
+ },
+ "files": {
+  "properties.csv": {
+   "present": true,
+   "rows": 1402,
+   "has_join_key": true,
+   "join_key": "drug_name",
+   "plant_binomial_filled": 658,
+   "join_rate": 0.4693,
+   "by_status": {
+    "joined": 658,
+    "unresolved": 744
+   },
+   "distinct_join_keys": 1402
+  },
+  "uses.csv": {
+   "present": true,
+   "rows": 11819,
+   "has_join_key": true,
+   "join_key": "drug_name",
+   "plant_binomial_filled": 5084,
+   "join_rate": 0.4302,
+   "by_status": {
+    "unresolved": 6735,
+    "joined": 5084
+   },
+   "distinct_join_keys": 1792
+  },
+  "formula_ingredients.csv": {
+   "present": true,
+   "rows": 847,
+   "has_join_key": true,
+   "join_key": "drug_name",
+   "plant_binomial_filled": 451,
+   "join_rate": 0.5325,
+   "by_status": {
+    "joined": 451,
+    "unresolved": 396
+   },
+   "distinct_join_keys": 159
+  },
+  "ayurveda_properties.csv": {
+   "present": true,
+   "rows": 322,
+   "has_join_key": true,
+   "join_key": "drug_name",
+   "plant_binomial_filled": 0,
+   "join_rate": 0.0,
+   "by_status": {
+    "unresolved": 322
+   },
+   "distinct_join_keys": 322
+  },
+  "compounds.csv": {
+   "present": true,
+   "rows": 23177,
+   "has_join_key": false,
+   "join_key": "",
+   "plant_binomial_filled": 23004,
+   "join_rate": 0.9925,
+   "by_status": {},
+   "distinct_join_keys": 0
+  }
+ },
+ "note": "join_status values: joined = drug_name resolved to a binomial via lexicon_drugs.json; unresolved = no verified binomial, left null rather than guessed. drug_name is the stable join key in every file."
+}

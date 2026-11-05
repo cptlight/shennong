@@ -71,5 +71,7 @@
       "tokens_per_step": 4096,
       "torch_threads": 4
     }
-  ]
+  ],
+  "partial": true,
+  "note": "Stopped after the thread sweep: the dtype / batch / candidate-config sweeps were cut short to free the CPU for the training run (the original sweep was reaped and re-launched in trimmed form). Every number present was measured on this machine; the plan for the full sweep is in training/bench.py."
 }

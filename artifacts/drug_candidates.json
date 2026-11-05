@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-05T10:50:34+00:00",
+ "generated_at": "2026-11-05T13:24:22+00:00",
  "fixture": true,
- "n": 0,
+ "n": 5,
  "method": "curated modern exclusion list: approved-drug compounds (n=30), extensively-studied natural-product leads (n=38), graph-level modern evidence (grade A/B or modern-tradition use), and a curated literature-familiarity prior (n=113 species). No offline ChEMBL target-annotation check is available, so novelty scores are upper bounds.",
  "candidate_schema": "lead → chemotype → molecule → mechanism → development path → risk",
  "diagnostics": {
@@ -93,11 +93,1050 @@
     ]
    }
   ],
-  "compounds_without_smiles": 7,
+  "compounds_without_smiles": 19,
   "invalid_smiles": [],
   "theory_features_available": true,
-  "candidates": 0,
+  "candidates_before_cap": 5,
+  "candidates": 5,
   "duplicate_molecules_collapsed": 0
  },
- "candidates": []
+ "candidates": [
+  {
+   "id": "C-2026-0001",
+   "class": "drug_candidate",
+   "lead": {
+    "drug": "Mentha haplocalyx",
+    "drug_modern": "Mentha haplocalyx",
+    "part": "not specified in source",
+    "process": "none attested",
+    "formula_role": "",
+    "indication": "headache",
+    "asian_properties": {
+     "tcm": {
+      "drug_name": "薄荷",
+      "binomial": "Mentha haplocalyx",
+      "nature": "凉",
+      "flavors": [
+       "辛"
+      ],
+      "channels": [
+       "肺",
+       "肝"
+      ],
+      "direction": "浮",
+      "toxicity": "无毒",
+      "grade": "中品"
+     },
+     "ayurveda": null
+    }
+   },
+   "candidate_molecule": {
+    "name": "menthol",
+    "compound_class": "monoterpenoid",
+    "smiles": "CC(C)C1CCC(C)CC1O",
+    "cid": null,
+    "structure_status": "provided",
+    "resolution_method": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem"
+   },
+   "descriptors": {
+    "smiles": "CC(C)C1CCC(C)CC1O",
+    "valid": true,
+    "formula": "C10H20O",
+    "mw": 156.27,
+    "logp_estimate": 3.6,
+    "hbd": 1,
+    "hba": 1,
+    "tpsa": 20.23,
+    "rings": 1,
+    "rotatable_bonds": 1,
+    "aromatic_atoms": 0,
+    "stereocentres": 0,
+    "lipinski_pass": true,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "sa_score_heuristic": 1.0,
+    "flags": {
+     "michael_acceptor": false,
+     "catechol": false,
+     "quinone": false,
+     "nitro": false,
+     "polyunsaturated": false,
+     "high_logp": false
+    },
+    "note": "logP and TPSA are transparent fragment approximations; SA score is a heuristic."
+   },
+   "novelty": {
+    "score": 0.1005,
+    "method": "curated modern exclusion list: approved-drug compounds (n=30), extensively-studied natural-product leads (n=38), graph-level modern evidence (grade A/B or modern-tradition use), and a curated literature-familiarity prior (n=113 species). No offline ChEMBL target-annotation check is available, so novelty scores are upper bounds.",
+    "known_compound": true,
+    "modern_evidence_for_pair": false,
+    "literature_prior": 0.55,
+    "basis": "curated exclusion list + graph modern evidence",
+    "prior_art": "known approved/lead compound",
+    "claim": "menthol from Mentha haplocalyx (薄荷) is proposed to act on GABA_A for headache; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+   },
+   "mechanism": {
+    "target_class": "GABA_A",
+    "pathway": "neurotransmission, gastrointestinal motility",
+    "rationale": "Volatile, steam-distillable, lipophilic. Menthol/thymol act on TRP channels; many are weak GABA_A modulators.",
+    "class_citation": "canonical natural-products pharmacology",
+    "evidence_level": "class-level prior (textbook pharmacology)"
+   },
+   "asian_theory_justification": "四氣五味: 凉, 辛. 歸經: 肺/肝. The classical prediction is that a 凉 辛 drug entering the 肺/肝 channel reaches head-related patterns. Chemotype monoterpenoid. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "development_path": [
+    {
+     "step": "assay",
+     "kind": "membrane-potential dye assay on GABA_A-expressing cells"
+    },
+    {
+     "step": "model system",
+     "kind": "recombinant cell line"
+    },
+    {
+     "step": "go/no-go",
+     "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+    }
+   ],
+   "residual_risk": [
+    "no structural red flag from the heuristic filter; safety data still pending"
+   ],
+   "scores": {
+    "novelty": 0.1005,
+    "plausibility": 0.7825,
+    "testability": 1.0,
+    "evidence": 0.4337,
+    "composite": 0.034111,
+    "composite_percentile": 1.0,
+    "composite_note": "composite is the raw product novelty^a·plausibility^b·testability^c·evidence^d (exponents 1,1,1,1); composite_percentile is the within-shortlist display rank. Raw composites are only comparable within a run."
+   },
+   "uncertainty": {
+    "composite_ci": [
+     0.008751,
+     0.074817
+    ],
+    "drivers": [
+     "plausibility 0.78 ± 0.18 is the largest uncertainty driver",
+     "evidence 0.43 ± 0.15 is the largest uncertainty driver"
+    ],
+    "factor_uncertainty": {
+     "novelty": 0.145,
+     "plausibility": 0.18,
+     "testability": 0.1,
+     "evidence": 0.15
+    },
+    "exponents": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "notes": "composite_ci is a 95% interval from Monte-Carlo propagation of the factor uncertainties (triangular distribution, seed 0); it is not an experimental confidence interval."
+   },
+   "evidence": [
+    {
+     "source_id": "fixture_wikisource_bencaogangmu",
+     "title": "本草綱目",
+     "year": 1596,
+     "quote": "薄荷，味辛，涼，無毒。主賊風傷寒發汗，惡氣腹脹，霍亂，宿食不消。生薑，味辛，微溫，無毒。主傷寒頭痛鼻塞，咳逆上氣，止嘔吐，散風寒。當歸，味甘辛，溫，無毒。主咳逆上氣，溫瘧寒熱，補五臟，生肌肉，治頭痛。川芎，味辛，溫，無毒。主中風入腦頭痛，寒痹筋攣，婦人血閉無子。地黃，味甘苦，寒，無毒。主折跌絕筋，傷中，逐血痹，填骨髓，長肌肉。茯苓，味甘淡，平，無毒。",
+     "char_start": 31,
+     "char_end": 207,
+     "confidence": 0.7,
+     "span_kind": "verbatim"
+    }
+   ],
+   "falsification": {
+    "experiment": "Enzyme- or cell-based dose–response for GABA_A with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+    "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+    "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+   },
+   "safety": {
+    "flags": [],
+    "severity": "none",
+    "notes": "Research use only. Not medical advice; no dose or human-use protocol is given. The lead plant is excluded from the toxicological class list for this candidate."
+   },
+   "name": "menthol",
+   "name_cn": "薄荷",
+   "discovery_class": "drug_candidate",
+   "classical_lead": {
+    "drug": "Mentha haplocalyx",
+    "drug_en": "Mentha haplocalyx",
+    "part": "not specified in source",
+    "processing": "none attested",
+    "formula_role": "",
+    "source": "fixture_wikisource_bencaogangmu"
+   },
+   "formula": null,
+   "mw": 156.27,
+   "smiles": "CC(C)C1CCC(C)CC1O",
+   "structure_status": "provided",
+   "structure_note": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem",
+   "theory": {
+    "nature": "凉",
+    "flavors": [
+     "辛"
+    ],
+    "channels": [
+     "肺",
+     "肝"
+    ],
+    "direction": "浮",
+    "grade": "中品",
+    "rasa": [],
+    "virya": null
+   },
+   "theory_justification": "四氣五味: 凉, 辛. 歸經: 肺/肝. The classical prediction is that a 凉 辛 drug entering the 肺/肝 channel reaches head-related patterns. Chemotype monoterpenoid. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "status": "proposed",
+   "classical_line": {
+    "source": "本草綱目",
+    "year": 1596,
+    "locator": "fixture_wikisource_bencaogangmu:31-207",
+    "text": "薄荷，味辛，涼，無毒。主賊風傷寒發汗，惡氣腹脹，霍亂，宿食不消。生薑，味辛，微溫，無毒。主傷寒頭痛鼻塞，咳逆上氣，止嘔吐，散風寒。當歸，味甘辛，溫，無毒。主咳逆上氣，溫瘧寒熱，補五臟，生肌肉，治頭痛。川芎，味辛，溫，無毒。主中風入腦頭痛，寒痹筋攣，婦人血閉無子。地黃，味甘苦，寒，無毒。主折跌絕筋，傷中，逐血痹，填骨髓，長肌肉。茯苓，味甘淡，平，無毒。",
+    "translation": "",
+    "span_kind": "verbatim",
+    "names_drug": "薄荷",
+    "verified": true
+   },
+   "rank": 1,
+   "association_claim": "menthol from Mentha haplocalyx (薄荷) is proposed to act on GABA_A for headache; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+  },
+  {
+   "id": "C-2026-0002",
+   "class": "drug_candidate",
+   "lead": {
+    "drug": "Rheum palmatum",
+    "drug_modern": "Rheum palmatum",
+    "part": "not specified in source",
+    "process": "",
+    "formula_role": "jun",
+    "indication": "dyspepsia",
+    "asian_properties": {
+     "tcm": {
+      "drug_name": "大黃",
+      "binomial": "Rheum palmatum",
+      "nature": "寒",
+      "flavors": [
+       "苦"
+      ],
+      "channels": [
+       "脾",
+       "胃",
+       "大肠",
+       "肝",
+       "心包"
+      ],
+      "direction": "降",
+      "toxicity": "无毒",
+      "grade": "下品"
+     },
+     "ayurveda": null
+    }
+   },
+   "candidate_molecule": {
+    "name": "emodin",
+    "compound_class": "anthraquinone",
+    "smiles": "Cc1cc(O)c2c(c1)C(=O)c1cc(O)cc(O)c1C2=O",
+    "cid": null,
+    "structure_status": "provided",
+    "resolution_method": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem"
+   },
+   "descriptors": {
+    "smiles": "Cc1cc(O)c2c(c1)C(=O)c1cc(O)cc(O)c1C2=O",
+    "valid": true,
+    "formula": "C15H10O5",
+    "mw": 270.24,
+    "logp_estimate": 1.05,
+    "hbd": 3,
+    "hba": 5,
+    "tpsa": 79.15,
+    "rings": 3,
+    "rotatable_bonds": 0,
+    "aromatic_atoms": 12,
+    "stereocentres": 0,
+    "lipinski_pass": true,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "sa_score_heuristic": 1.4,
+    "flags": {
+     "michael_acceptor": false,
+     "catechol": false,
+     "quinone": true,
+     "nitro": false,
+     "polyunsaturated": false,
+     "high_logp": false
+    },
+    "note": "logP and TPSA are transparent fragment approximations; SA score is a heuristic."
+   },
+   "novelty": {
+    "score": 0.087,
+    "method": "curated modern exclusion list: approved-drug compounds (n=30), extensively-studied natural-product leads (n=38), graph-level modern evidence (grade A/B or modern-tradition use), and a curated literature-familiarity prior (n=113 species). No offline ChEMBL target-annotation check is available, so novelty scores are upper bounds.",
+    "known_compound": true,
+    "modern_evidence_for_pair": false,
+    "literature_prior": 0.7,
+    "basis": "curated exclusion list + graph modern evidence",
+    "prior_art": "known approved/lead compound",
+    "claim": "emodin from Rheum palmatum (大黃) is proposed to act on bacterial membrane for dyspepsia; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+   },
+   "mechanism": {
+    "target_class": "bacterial membrane",
+    "pathway": "gastrointestinal motility",
+    "rationale": "Emodin, rhein, alizarin: laxative or antimicrobial depending on structure; chronic anthraquinone use causes melanosis coli.",
+    "class_citation": "canonical natural-products pharmacology",
+    "evidence_level": "class-level prior (textbook pharmacology)"
+   },
+   "asian_theory_justification": "四氣五味: 寒, 苦. 歸經: 脾/胃/大肠/肝/心包. The classical prediction is that a 寒 苦 drug entering the 脾/胃/大肠/肝/心包 channel reaches stomach-related patterns. Chemotype anthraquinone. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "development_path": [
+    {
+     "step": "assay",
+     "kind": "cell-free membrane-permeability assay (no pathogen culture)"
+    },
+    {
+     "step": "model system",
+     "kind": "liposome model"
+    },
+    {
+     "step": "go/no-go",
+     "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+    }
+   ],
+   "residual_risk": [
+    "structural alerts: quinone"
+   ],
+   "scores": {
+    "novelty": 0.087,
+    "plausibility": 0.7825,
+    "testability": 1.0,
+    "evidence": 0.4337,
+    "composite": 0.029529,
+    "composite_percentile": 0.5,
+    "composite_note": "composite is the raw product novelty^a·plausibility^b·testability^c·evidence^d (exponents 1,1,1,1); composite_percentile is the within-shortlist display rank. Raw composites are only comparable within a run."
+   },
+   "uncertainty": {
+    "composite_ci": [
+     0.007934,
+     0.070405
+    ],
+    "drivers": [
+     "plausibility 0.78 ± 0.18 is the largest uncertainty driver",
+     "evidence 0.43 ± 0.15 is the largest uncertainty driver"
+    ],
+    "factor_uncertainty": {
+     "novelty": 0.145,
+     "plausibility": 0.18,
+     "testability": 0.1,
+     "evidence": 0.15
+    },
+    "exponents": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "notes": "composite_ci is a 95% interval from Monte-Carlo propagation of the factor uncertainties (triangular distribution, seed 0); it is not an experimental confidence interval."
+   },
+   "evidence": [
+    {
+     "source_id": "fixture_wikisource_bencaogangmu",
+     "title": "本草綱目",
+     "year": 1596,
+     "quote": "大黃，味苦寒，無毒。主下瘀血，破癥瘕積聚，蕩滌腸胃，推陳致新。凡用大黃，酒浸蒸熟，則瀉下之力緩。黃連，味苦寒。主熱氣，目痛眥傷泣出，明目，腸澼腹痛下痢。黃芩，味苦平。主諸熱黃疸，腸澼泄痢，逐水，下血閉。柴胡，味苦平。主心腹腸胃中結氣，飲食積聚，寒熱邪氣，推陳致新。",
+     "char_start": 0,
+     "char_end": 132,
+     "confidence": 0.7,
+     "span_kind": "verbatim"
+    }
+   ],
+   "falsification": {
+    "experiment": "Enzyme- or cell-based dose–response for bacterial membrane with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+    "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+    "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+   },
+   "safety": {
+    "flags": [
+     "quinone"
+    ],
+    "severity": "caution",
+    "notes": "Research use only. Not medical advice; no dose or human-use protocol is given. The lead plant is excluded from the toxicological class list for this candidate."
+   },
+   "name": "emodin",
+   "name_cn": "大黃",
+   "discovery_class": "drug_candidate",
+   "classical_lead": {
+    "drug": "Rheum palmatum",
+    "drug_en": "Rheum palmatum",
+    "part": "not specified in source",
+    "processing": "",
+    "formula_role": "jun",
+    "source": "fixture_wikisource_bencaogangmu"
+   },
+   "formula": null,
+   "mw": 270.24,
+   "smiles": "Cc1cc(O)c2c(c1)C(=O)c1cc(O)cc(O)c1C2=O",
+   "structure_status": "provided",
+   "structure_note": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦"
+    ],
+    "channels": [
+     "脾",
+     "胃",
+     "大肠",
+     "肝",
+     "心包"
+    ],
+    "direction": "降",
+    "grade": "下品",
+    "rasa": [],
+    "virya": null
+   },
+   "theory_justification": "四氣五味: 寒, 苦. 歸經: 脾/胃/大肠/肝/心包. The classical prediction is that a 寒 苦 drug entering the 脾/胃/大肠/肝/心包 channel reaches stomach-related patterns. Chemotype anthraquinone. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "status": "proposed",
+   "classical_line": {
+    "source": "本草綱目",
+    "year": 1596,
+    "locator": "fixture_wikisource_bencaogangmu:0-132",
+    "text": "大黃，味苦寒，無毒。主下瘀血，破癥瘕積聚，蕩滌腸胃，推陳致新。凡用大黃，酒浸蒸熟，則瀉下之力緩。黃連，味苦寒。主熱氣，目痛眥傷泣出，明目，腸澼腹痛下痢。黃芩，味苦平。主諸熱黃疸，腸澼泄痢，逐水，下血閉。柴胡，味苦平。主心腹腸胃中結氣，飲食積聚，寒熱邪氣，推陳致新。",
+    "translation": "",
+    "span_kind": "verbatim",
+    "names_drug": "大黃",
+    "verified": true
+   },
+   "rank": 2,
+   "association_claim": "emodin from Rheum palmatum (大黃) is proposed to act on bacterial membrane for dyspepsia; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+  },
+  {
+   "id": "C-2026-0003",
+   "class": "drug_candidate",
+   "lead": {
+    "drug": "Rheum palmatum",
+    "drug_modern": "Rheum palmatum",
+    "part": "not specified in source",
+    "process": "",
+    "formula_role": "jun",
+    "indication": "dyspepsia",
+    "asian_properties": {
+     "tcm": {
+      "drug_name": "大黃",
+      "binomial": "Rheum palmatum",
+      "nature": "寒",
+      "flavors": [
+       "苦"
+      ],
+      "channels": [
+       "脾",
+       "胃",
+       "大肠",
+       "肝",
+       "心包"
+      ],
+      "direction": "降",
+      "toxicity": "无毒",
+      "grade": "下品"
+     },
+     "ayurveda": null
+    }
+   },
+   "candidate_molecule": {
+    "name": "rhein",
+    "compound_class": "anthraquinone",
+    "smiles": "O=C(O)c1cc(O)c2c(c1)C(=O)c1cc(O)ccc1C2=O",
+    "cid": null,
+    "structure_status": "provided",
+    "resolution_method": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem"
+   },
+   "descriptors": {
+    "smiles": "O=C(O)c1cc(O)c2c(c1)C(=O)c1cc(O)ccc1C2=O",
+    "valid": true,
+    "formula": "C15H8O6",
+    "mw": 284.22,
+    "logp_estimate": 0.4,
+    "hbd": 3,
+    "hba": 6,
+    "tpsa": 88.38,
+    "rings": 3,
+    "rotatable_bonds": 1,
+    "aromatic_atoms": 12,
+    "stereocentres": 0,
+    "lipinski_pass": true,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "sa_score_heuristic": 1.4,
+    "flags": {
+     "michael_acceptor": false,
+     "catechol": false,
+     "quinone": true,
+     "nitro": false,
+     "polyunsaturated": false,
+     "high_logp": false
+    },
+    "note": "logP and TPSA are transparent fragment approximations; SA score is a heuristic."
+   },
+   "novelty": {
+    "score": 0.087,
+    "method": "curated modern exclusion list: approved-drug compounds (n=30), extensively-studied natural-product leads (n=38), graph-level modern evidence (grade A/B or modern-tradition use), and a curated literature-familiarity prior (n=113 species). No offline ChEMBL target-annotation check is available, so novelty scores are upper bounds.",
+    "known_compound": true,
+    "modern_evidence_for_pair": false,
+    "literature_prior": 0.7,
+    "basis": "curated exclusion list + graph modern evidence",
+    "prior_art": "known approved/lead compound",
+    "claim": "rhein from Rheum palmatum (大黃) is proposed to act on bacterial membrane for dyspepsia; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+   },
+   "mechanism": {
+    "target_class": "bacterial membrane",
+    "pathway": "gastrointestinal motility",
+    "rationale": "Emodin, rhein, alizarin: laxative or antimicrobial depending on structure; chronic anthraquinone use causes melanosis coli.",
+    "class_citation": "canonical natural-products pharmacology",
+    "evidence_level": "class-level prior (textbook pharmacology)"
+   },
+   "asian_theory_justification": "四氣五味: 寒, 苦. 歸經: 脾/胃/大肠/肝/心包. The classical prediction is that a 寒 苦 drug entering the 脾/胃/大肠/肝/心包 channel reaches stomach-related patterns. Chemotype anthraquinone. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "development_path": [
+    {
+     "step": "assay",
+     "kind": "cell-free membrane-permeability assay (no pathogen culture)"
+    },
+    {
+     "step": "model system",
+     "kind": "liposome model"
+    },
+    {
+     "step": "go/no-go",
+     "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+    }
+   ],
+   "residual_risk": [
+    "structural alerts: quinone"
+   ],
+   "scores": {
+    "novelty": 0.087,
+    "plausibility": 0.7825,
+    "testability": 1.0,
+    "evidence": 0.4337,
+    "composite": 0.029529,
+    "composite_percentile": 0.5,
+    "composite_note": "composite is the raw product novelty^a·plausibility^b·testability^c·evidence^d (exponents 1,1,1,1); composite_percentile is the within-shortlist display rank. Raw composites are only comparable within a run."
+   },
+   "uncertainty": {
+    "composite_ci": [
+     0.007934,
+     0.070405
+    ],
+    "drivers": [
+     "plausibility 0.78 ± 0.18 is the largest uncertainty driver",
+     "evidence 0.43 ± 0.15 is the largest uncertainty driver"
+    ],
+    "factor_uncertainty": {
+     "novelty": 0.145,
+     "plausibility": 0.18,
+     "testability": 0.1,
+     "evidence": 0.15
+    },
+    "exponents": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "notes": "composite_ci is a 95% interval from Monte-Carlo propagation of the factor uncertainties (triangular distribution, seed 0); it is not an experimental confidence interval."
+   },
+   "evidence": [
+    {
+     "source_id": "fixture_wikisource_bencaogangmu",
+     "title": "本草綱目",
+     "year": 1596,
+     "quote": "大黃，味苦寒，無毒。主下瘀血，破癥瘕積聚，蕩滌腸胃，推陳致新。凡用大黃，酒浸蒸熟，則瀉下之力緩。黃連，味苦寒。主熱氣，目痛眥傷泣出，明目，腸澼腹痛下痢。黃芩，味苦平。主諸熱黃疸，腸澼泄痢，逐水，下血閉。柴胡，味苦平。主心腹腸胃中結氣，飲食積聚，寒熱邪氣，推陳致新。",
+     "char_start": 0,
+     "char_end": 132,
+     "confidence": 0.7,
+     "span_kind": "verbatim"
+    }
+   ],
+   "falsification": {
+    "experiment": "Enzyme- or cell-based dose–response for bacterial membrane with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+    "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+    "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+   },
+   "safety": {
+    "flags": [
+     "quinone"
+    ],
+    "severity": "caution",
+    "notes": "Research use only. Not medical advice; no dose or human-use protocol is given. The lead plant is excluded from the toxicological class list for this candidate."
+   },
+   "name": "rhein",
+   "name_cn": "大黃",
+   "discovery_class": "drug_candidate",
+   "classical_lead": {
+    "drug": "Rheum palmatum",
+    "drug_en": "Rheum palmatum",
+    "part": "not specified in source",
+    "processing": "",
+    "formula_role": "jun",
+    "source": "fixture_wikisource_bencaogangmu"
+   },
+   "formula": null,
+   "mw": 284.22,
+   "smiles": "O=C(O)c1cc(O)c2c(c1)C(=O)c1cc(O)ccc1C2=O",
+   "structure_status": "provided",
+   "structure_note": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦"
+    ],
+    "channels": [
+     "脾",
+     "胃",
+     "大肠",
+     "肝",
+     "心包"
+    ],
+    "direction": "降",
+    "grade": "下品",
+    "rasa": [],
+    "virya": null
+   },
+   "theory_justification": "四氣五味: 寒, 苦. 歸經: 脾/胃/大肠/肝/心包. The classical prediction is that a 寒 苦 drug entering the 脾/胃/大肠/肝/心包 channel reaches stomach-related patterns. Chemotype anthraquinone. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "status": "proposed",
+   "classical_line": {
+    "source": "本草綱目",
+    "year": 1596,
+    "locator": "fixture_wikisource_bencaogangmu:0-132",
+    "text": "大黃，味苦寒，無毒。主下瘀血，破癥瘕積聚，蕩滌腸胃，推陳致新。凡用大黃，酒浸蒸熟，則瀉下之力緩。黃連，味苦寒。主熱氣，目痛眥傷泣出，明目，腸澼腹痛下痢。黃芩，味苦平。主諸熱黃疸，腸澼泄痢，逐水，下血閉。柴胡，味苦平。主心腹腸胃中結氣，飲食積聚，寒熱邪氣，推陳致新。",
+    "translation": "",
+    "span_kind": "verbatim",
+    "names_drug": "大黃",
+    "verified": true
+   },
+   "rank": 3,
+   "association_claim": "rhein from Rheum palmatum (大黃) is proposed to act on bacterial membrane for dyspepsia; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+  },
+  {
+   "id": "C-2026-0004",
+   "class": "drug_candidate",
+   "lead": {
+    "drug": "Zingiber officinale",
+    "drug_modern": "Zingiber officinale",
+    "part": "not specified in source",
+    "process": "none attested",
+    "formula_role": "zuo",
+    "indication": "vomiting",
+    "asian_properties": {
+     "tcm": {
+      "drug_name": "生薑",
+      "binomial": "Zingiber officinale",
+      "nature": "微温",
+      "flavors": [
+       "辛"
+      ],
+      "channels": [
+       "肺",
+       "脾",
+       "胃"
+      ],
+      "direction": "升",
+      "toxicity": "无毒",
+      "grade": "中品"
+     },
+     "ayurveda": {
+      "drug_name": "shunthi",
+      "binomial": "Zingiber officinale",
+      "rasa": [
+       "katu",
+       "madhura"
+      ],
+      "guna": [
+       "laghu",
+       "snigdha"
+      ],
+      "virya": "usna",
+      "vipaka": "madhura",
+      "prabhava": "",
+      "dosha_effect": {
+       "vata": -1,
+       "kapha": -1
+      }
+     }
+    }
+   },
+   "candidate_molecule": {
+    "name": "gingerol",
+    "compound_class": "gingerol",
+    "smiles": "CCCCCC(O)CC(=O)CCc1ccc(O)c(OC)c1",
+    "cid": null,
+    "structure_status": "provided",
+    "resolution_method": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem"
+   },
+   "descriptors": {
+    "smiles": "CCCCCC(O)CC(=O)CCc1ccc(O)c(OC)c1",
+    "valid": true,
+    "formula": "C17H26O4",
+    "mw": 294.39,
+    "logp_estimate": 4.3,
+    "hbd": 2,
+    "hba": 4,
+    "tpsa": 58.92,
+    "rings": 1,
+    "rotatable_bonds": 10,
+    "aromatic_atoms": 6,
+    "stereocentres": 0,
+    "lipinski_pass": true,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "sa_score_heuristic": 1.0,
+    "flags": {
+     "michael_acceptor": false,
+     "catechol": false,
+     "quinone": false,
+     "nitro": false,
+     "polyunsaturated": false,
+     "high_logp": false
+    },
+    "note": "logP and TPSA are transparent fragment approximations; SA score is a heuristic."
+   },
+   "novelty": {
+    "score": 0.069,
+    "method": "curated modern exclusion list: approved-drug compounds (n=30), extensively-studied natural-product leads (n=38), graph-level modern evidence (grade A/B or modern-tradition use), and a curated literature-familiarity prior (n=113 species). No offline ChEMBL target-annotation check is available, so novelty scores are upper bounds.",
+    "known_compound": true,
+    "modern_evidence_for_pair": false,
+    "literature_prior": 0.9,
+    "basis": "curated exclusion list + graph modern evidence",
+    "prior_art": "known approved/lead compound",
+    "claim": "gingerol from Zingiber officinale (生薑) is proposed to act on TRPV1 for vomiting; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+   },
+   "mechanism": {
+    "target_class": "TRPV1",
+    "pathway": "gastrointestinal motility",
+    "rationale": "Gingerols are TRPV1 agonists; antiemetic evidence is moderate.",
+    "class_citation": "canonical natural-products pharmacology (gingerols)",
+    "evidence_level": "class-level prior (textbook pharmacology)"
+   },
+   "asian_theory_justification": "四氣五味: 微温, 辛. 歸經: 肺/脾/胃. The classical prediction is that a 微温 辛 drug entering the 肺/脾/胃 channel reaches stomach-related patterns. Āyurveda: rasa katu/madhura, vīrya usna, vipāka madhura, doṣa effect {'vata': -1, 'kapha': -1}. Chemotype gingerol/phenolic_acid. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "development_path": [
+    {
+     "step": "assay",
+     "kind": "Ca2+ flux (FLIPR) with capsaicin positive control"
+    },
+    {
+     "step": "model system",
+     "kind": "recombinant cell line"
+    },
+    {
+     "step": "go/no-go",
+     "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+    }
+   ],
+   "residual_risk": [
+    "no structural red flag from the heuristic filter; safety data still pending"
+   ],
+   "scores": {
+    "novelty": 0.069,
+    "plausibility": 0.835,
+    "testability": 1.0,
+    "evidence": 0.4337,
+    "composite": 0.024991,
+    "composite_percentile": 0.25,
+    "composite_note": "composite is the raw product novelty^a·plausibility^b·testability^c·evidence^d (exponents 1,1,1,1); composite_percentile is the within-shortlist display rank. Raw composites are only comparable within a run."
+   },
+   "uncertainty": {
+    "composite_ci": [
+     0.007141,
+     0.068356
+    ],
+    "drivers": [
+     "plausibility 0.83 ± 0.18 is the largest uncertainty driver",
+     "evidence 0.43 ± 0.15 is the largest uncertainty driver"
+    ],
+    "factor_uncertainty": {
+     "novelty": 0.145,
+     "plausibility": 0.18,
+     "testability": 0.1,
+     "evidence": 0.15
+    },
+    "exponents": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "notes": "composite_ci is a 95% interval from Monte-Carlo propagation of the factor uncertainties (triangular distribution, seed 0); it is not an experimental confidence interval."
+   },
+   "evidence": [
+    {
+     "source_id": "fixture_wikisource_bencaogangmu",
+     "title": "本草綱目",
+     "year": 1596,
+     "quote": "生薑，味辛，微溫，無毒。主傷寒頭痛鼻塞，咳逆上氣，止嘔吐，散風寒。當歸，味甘辛，溫，無毒。主咳逆上氣，溫瘧寒熱，補五臟，生肌肉，治頭痛。川芎，味辛，溫，無毒。主中風入腦頭痛，寒痹筋攣，婦人血閉無子。地黃，味甘苦，寒，無毒。主折跌絕筋，傷中，逐血痹，填骨髓，長肌肉。茯苓，味甘淡，平，無毒。主胸脅逆氣，憂恚驚邪恐悸，利小便，止消渴。白朮，味苦甘，溫，無毒。",
+     "char_start": 63,
+     "char_end": 240,
+     "confidence": 0.7,
+     "span_kind": "verbatim"
+    }
+   ],
+   "falsification": {
+    "experiment": "Enzyme- or cell-based dose–response for TRPV1 with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+    "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+    "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+   },
+   "safety": {
+    "flags": [],
+    "severity": "none",
+    "notes": "Research use only. Not medical advice; no dose or human-use protocol is given. The lead plant is excluded from the toxicological class list for this candidate."
+   },
+   "name": "gingerol",
+   "name_cn": "生薑",
+   "discovery_class": "drug_candidate",
+   "classical_lead": {
+    "drug": "Zingiber officinale",
+    "drug_en": "Zingiber officinale",
+    "part": "not specified in source",
+    "processing": "none attested",
+    "formula_role": "zuo",
+    "source": "fixture_wikisource_bencaogangmu"
+   },
+   "formula": null,
+   "mw": 294.39,
+   "smiles": "CCCCCC(O)CC(=O)CCc1ccc(O)c(OC)c1",
+   "structure_status": "provided",
+   "structure_note": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem",
+   "theory": {
+    "nature": "微温",
+    "flavors": [
+     "辛"
+    ],
+    "channels": [
+     "肺",
+     "脾",
+     "胃"
+    ],
+    "direction": "升",
+    "grade": "中品",
+    "rasa": [
+     "katu",
+     "madhura"
+    ],
+    "virya": "usna"
+   },
+   "theory_justification": "四氣五味: 微温, 辛. 歸經: 肺/脾/胃. The classical prediction is that a 微温 辛 drug entering the 肺/脾/胃 channel reaches stomach-related patterns. Āyurveda: rasa katu/madhura, vīrya usna, vipāka madhura, doṣa effect {'vata': -1, 'kapha': -1}. Chemotype gingerol/phenolic_acid. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "status": "proposed",
+   "classical_line": {
+    "source": "本草綱目",
+    "year": 1596,
+    "locator": "fixture_wikisource_bencaogangmu:63-240",
+    "text": "生薑，味辛，微溫，無毒。主傷寒頭痛鼻塞，咳逆上氣，止嘔吐，散風寒。當歸，味甘辛，溫，無毒。主咳逆上氣，溫瘧寒熱，補五臟，生肌肉，治頭痛。川芎，味辛，溫，無毒。主中風入腦頭痛，寒痹筋攣，婦人血閉無子。地黃，味甘苦，寒，無毒。主折跌絕筋，傷中，逐血痹，填骨髓，長肌肉。茯苓，味甘淡，平，無毒。主胸脅逆氣，憂恚驚邪恐悸，利小便，止消渴。白朮，味苦甘，溫，無毒。",
+    "translation": "",
+    "span_kind": "verbatim",
+    "names_drug": "生薑",
+    "verified": true
+   },
+   "rank": 4,
+   "association_claim": "gingerol from Zingiber officinale (生薑) is proposed to act on TRPV1 for vomiting; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+  },
+  {
+   "id": "C-2026-0005",
+   "class": "drug_candidate",
+   "lead": {
+    "drug": "Coptis chinensis",
+    "drug_modern": "Coptis chinensis",
+    "part": "not specified in source",
+    "process": "",
+    "formula_role": "jun",
+    "indication": "diarrhoea",
+    "asian_properties": {
+     "tcm": {
+      "drug_name": "黃連",
+      "binomial": "Coptis chinensis",
+      "nature": "寒",
+      "flavors": [
+       "苦"
+      ],
+      "channels": [
+       "心",
+       "脾",
+       "胃",
+       "肝",
+       "胆",
+       "大肠"
+      ],
+      "direction": "降",
+      "toxicity": "无毒",
+      "grade": "上品"
+     },
+     "ayurveda": null
+    }
+   },
+   "candidate_molecule": {
+    "name": "berberine",
+    "compound_class": "alkaloid",
+    "smiles": "COc1ccc2cc3[n+](C)ccc4cc5OCOc5cc4c3cc2c1",
+    "cid": null,
+    "structure_status": "provided",
+    "resolution_method": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem"
+   },
+   "descriptors": {
+    "smiles": "COc1ccc2cc3[n+](C)ccc4cc5OCOc5cc4c3cc2c1",
+    "valid": true,
+    "formula": "C21H17NO3",
+    "mw": 331.37,
+    "logp_estimate": 3.75,
+    "hbd": 0,
+    "hba": 4,
+    "tpsa": 40.58,
+    "rings": 5,
+    "rotatable_bonds": 1,
+    "aromatic_atoms": 19,
+    "stereocentres": 0,
+    "lipinski_pass": true,
+    "lipinski_violations": 0,
+    "veber_pass": true,
+    "sa_score_heuristic": 2.2,
+    "flags": {
+     "michael_acceptor": false,
+     "catechol": false,
+     "quinone": false,
+     "nitro": false,
+     "polyunsaturated": false,
+     "high_logp": false
+    },
+    "note": "logP and TPSA are transparent fragment approximations; SA score is a heuristic."
+   },
+   "novelty": {
+    "score": 0.0261,
+    "method": "curated modern exclusion list: approved-drug compounds (n=30), extensively-studied natural-product leads (n=38), graph-level modern evidence (grade A/B or modern-tradition use), and a curated literature-familiarity prior (n=113 species). No offline ChEMBL target-annotation check is available, so novelty scores are upper bounds.",
+    "known_compound": true,
+    "modern_evidence_for_pair": true,
+    "literature_prior": 0.7,
+    "basis": "curated exclusion list + graph modern evidence",
+    "prior_art": "known approved/lead compound",
+    "claim": "berberine from Coptis chinensis (黃連) is proposed to act on opioid receptor for diarrhoea; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+   },
+   "mechanism": {
+    "target_class": "opioid receptor",
+    "pathway": "neurotransmission, cholinergic, opioidergic, cardiac contractility",
+    "rationale": "A heterogeneous class — receptor prediction is class-level only. Many are potently toxic (Aconitum, Veratrum, Datura, Papaver) and dose-critical; this system never proposes dosing.",
+    "class_citation": "canonical natural-products pharmacology",
+    "evidence_level": "class-level prior (textbook pharmacology)"
+   },
+   "asian_theory_justification": "四氣五味: 寒, 苦. 歸經: 心/脾/胃/肝/胆/大肠. The classical prediction is that a 寒 苦 drug entering the 心/脾/胃/肝/胆/大肠 channel reaches intestine-related patterns. Chemotype alkaloid. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "development_path": [
+    {
+     "step": "assay",
+     "kind": "GTPγS binding at μ-opioid receptor"
+    },
+    {
+     "step": "model system",
+     "kind": "membrane preparation"
+    },
+    {
+     "step": "go/no-go",
+     "kind": "reproducible sub-micromolar target engagement in two orthogonal assays, selectivity over the closest paralogue, and measurable exposure without the structural alerts above"
+    }
+   ],
+   "residual_risk": [
+    "no structural red flag from the heuristic filter; safety data still pending"
+   ],
+   "scores": {
+    "novelty": 0.0261,
+    "plausibility": 0.835,
+    "testability": 1.0,
+    "evidence": 0.4337,
+    "composite": 0.009453,
+    "composite_percentile": 0.0,
+    "composite_note": "composite is the raw product novelty^a·plausibility^b·testability^c·evidence^d (exponents 1,1,1,1); composite_percentile is the within-shortlist display rank. Raw composites are only comparable within a run."
+   },
+   "uncertainty": {
+    "composite_ci": [
+     0.004006,
+     0.052727
+    ],
+    "drivers": [
+     "plausibility 0.83 ± 0.18 is the largest uncertainty driver",
+     "evidence 0.43 ± 0.15 is the largest uncertainty driver"
+    ],
+    "factor_uncertainty": {
+     "novelty": 0.145,
+     "plausibility": 0.18,
+     "testability": 0.1,
+     "evidence": 0.15
+    },
+    "exponents": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "notes": "composite_ci is a 95% interval from Monte-Carlo propagation of the factor uncertainties (triangular distribution, seed 0); it is not an experimental confidence interval."
+   },
+   "evidence": [
+    {
+     "source_id": "fixture_wikisource_bencaogangmu",
+     "title": "本草綱目",
+     "year": 1596,
+     "quote": "黃連，味苦寒。主熱氣，目痛眥傷泣出，明目，腸澼腹痛下痢。黃芩，味苦平。主諸熱黃疸，腸澼泄痢，逐水，下血閉。柴胡，味苦平。主心腹腸胃中結氣，飲食積聚，寒熱邪氣，推陳致新。",
+     "char_start": 48,
+     "char_end": 132,
+     "confidence": 0.7,
+     "span_kind": "verbatim"
+    }
+   ],
+   "falsification": {
+    "experiment": "Enzyme- or cell-based dose–response for opioid receptor with the candidate compound and a reference inhibitor; confirm target engagement by a second orthogonal assay.",
+    "expected_if_true": "Reproducible, concentration-dependent target engagement in two orthogonal assays.",
+    "kill_criteria": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead."
+   },
+   "safety": {
+    "flags": [],
+    "severity": "none",
+    "notes": "Research use only. Not medical advice; no dose or human-use protocol is given. The lead plant is excluded from the toxicological class list for this candidate."
+   },
+   "name": "berberine",
+   "name_cn": "黃連",
+   "discovery_class": "drug_candidate",
+   "classical_lead": {
+    "drug": "Coptis chinensis",
+    "drug_en": "Coptis chinensis",
+    "part": "not specified in source",
+    "processing": "",
+    "formula_role": "jun",
+    "source": "fixture_wikisource_bencaogangmu"
+   },
+   "formula": null,
+   "mw": 331.37,
+   "smiles": "COc1ccc2cc3[n+](C)ccc4cc5OCOc5cc4c3cc2c1",
+   "structure_status": "provided",
+   "structure_note": "SMILES supplied in corpus/processed/structured/compounds.csv (source_id: fixture_duke_ethnobotany); descriptors computed by shennong.chem",
+   "theory": {
+    "nature": "寒",
+    "flavors": [
+     "苦"
+    ],
+    "channels": [
+     "心",
+     "脾",
+     "胃",
+     "肝",
+     "胆",
+     "大肠"
+    ],
+    "direction": "降",
+    "grade": "上品",
+    "rasa": [],
+    "virya": null
+   },
+   "theory_justification": "四氣五味: 寒, 苦. 歸經: 心/脾/胃/肝/胆/大肠. The classical prediction is that a 寒 苦 drug entering the 心/脾/胃/肝/胆/大肠 channel reaches intestine-related patterns. Chemotype alkaloid. This is a theory-generated prediction, not evidence: it is tested against chemistry and target biology in eval/report.json → drug_discovery.theory_predictivity.",
+   "status": "proposed",
+   "classical_line": {
+    "source": "本草綱目",
+    "year": 1596,
+    "locator": "fixture_wikisource_bencaogangmu:48-132",
+    "text": "黃連，味苦寒。主熱氣，目痛眥傷泣出，明目，腸澼腹痛下痢。黃芩，味苦平。主諸熱黃疸，腸澼泄痢，逐水，下血閉。柴胡，味苦平。主心腹腸胃中結氣，飲食積聚，寒熱邪氣，推陳致新。",
+    "translation": "",
+    "span_kind": "verbatim",
+    "names_drug": "黃連",
+    "verified": true
+   },
+   "rank": 5,
+   "association_claim": "berberine from Coptis chinensis (黃連) is proposed to act on opioid receptor for diarrhoea; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown."
+  }
+ ]
 }

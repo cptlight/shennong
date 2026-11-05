@@ -162,6 +162,7 @@ def discover(graph: Graph, spans: SpanIndex) -> list[Hypothesis]:
                 f"{len(sources)} rule source(s)."
             ),
             extra={
+                "pair": sorted((raw_a, raw_b)),
                 "rule_system": rule_system,
                 "mechanism_kind": mechanism_kind,
                 "mechanism_prior": mechanism_prior,

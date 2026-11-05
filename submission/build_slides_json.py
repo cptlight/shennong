@@ -41,9 +41,29 @@ def parse(md: str):
         if m:
             headline = m.group(1).strip()
 
-        bullets = [b.strip() for b in re.findall(r"^-\s+(.+)$", body, flags=re.MULTILINE)]
-        # bullets that wrap onto continuation lines are joined below
-        bullets = [re.sub(r"\s+", " ", b) for b in bullets]
+        # Bullets wrap onto continuation lines in the markdown; a naive line-grep truncates them mid-sentence
+        # (and then a placeholder on a continuation line silently escapes validation). Join properly:
+        #   "- text" starts a bullet; any following indented, non-bullet line is a continuation;
+        #   an indented "- " is a sub-bullet and is folded into its parent with a separator.
+        bullets, cur, sub_started = [], None, False
+        for raw in body.splitlines():
+            if not raw.strip():
+                continue
+            stripped = raw.lstrip()
+            if stripped.startswith("- ") and not raw.startswith("  - "):
+                if cur is not None:
+                    bullets.append(cur)
+                cur, sub_started = stripped[2:].strip(), False
+            elif stripped.startswith("- ") and raw.startswith("  - ") and cur is not None:
+                cur += "  · " + stripped[2:].strip()
+                sub_started = True
+            elif cur is not None and raw.startswith(" "):
+                cur += " " + stripped.strip()
+            elif cur is not None and not raw.startswith(("**", "#", "|", ">")):
+                cur += " " + stripped.strip()
+        if cur is not None:
+            bullets.append(cur)
+        bullets = [re.sub(r"\s+", " ", b).strip() for b in bullets if b.strip()]
 
         visual = ""
         m = re.search(r"^\*\*Visual:\*\*\s*(.+?)(?:\n\n|\Z)", body, flags=re.MULTILINE | re.DOTALL)

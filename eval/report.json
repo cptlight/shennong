@@ -1,0 +1,330 @@
+{
+ "generated_at": "2026-11-05T10:52:07+00:00",
+ "fixture": true,
+ "corpus": {
+  "sources": 13,
+  "documents": 22,
+  "chars": 4496,
+  "languages": {
+   "ar": 1,
+   "en": 3,
+   "sa-Latn": 4,
+   "zh-Hant": 14
+  },
+  "traditions": {
+   "alchemy": 3,
+   "ayurveda": 5,
+   "korean": 1,
+   "tcm": 12,
+   "unani": 1
+  },
+  "corpus_jsonl_sha256": "4e890aae72f4bcbf3249a68753381291750e446d1ca3ce647bbe52ca1dff3e13"
+ },
+ "resolution": {
+  "drug_name_to_taxon": {
+   "accuracy": 0.3178,
+   "macro_f1": 0.3736,
+   "n": 129,
+   "ece": 0.067,
+   "fuzzy_fallback_rate": 0.3101,
+   "holdout_fraction": 0.2,
+   "method": "deterministic 20% holdout; exact normalised match then char-bigram Jaccard>=0.6"
+  }
+ },
+ "benchmarks": {
+  "retrieval_recall_at_5": {
+   "score": 0.9556,
+   "n": 45
+  },
+  "grounded_answer_accuracy": {
+   "score": 0.5556,
+   "n": 45
+  },
+  "citation_fidelity": {
+   "score": 0.9884,
+   "n": 86
+  },
+  "refusal_rate_unanswerable": {
+   "score": 0.9444,
+   "n": 18
+  },
+  "over_refusal_rate_answerable": {
+   "score": 0.1556,
+   "n": 45
+  }
+ },
+ "hypotheses": {
+  "n": 45,
+  "by_class": {
+   "drug_candidate": 5,
+   "endangered": 8,
+   "formula_role": 3,
+   "incompatibility": 11,
+   "name_collision": 7,
+   "processing": 6,
+   "understudied": 5
+  },
+  "mean_novelty": 0.5342,
+  "n_dropped_unverifiable": 0,
+  "citation_coverage": 1.0,
+  "mean_testability": 0.7356,
+  "n_candidates": 6,
+  "n_curated_questions": 22,
+  "n_generated_questions": 23,
+  "n_questions_scored": 45,
+  "n_questions_filtered_missing_gold": 0
+ },
+ "drug_discovery": {
+  "candidates": 6,
+  "mean_novelty": 0.2083,
+  "lipinski_pass_rate": 1.0,
+  "structure_coverage": 1.0,
+  "toxic_leads_excluded": 14,
+  "compounds_without_structure": 19,
+  "theory_predictivity": {
+   "tcm_nature": {
+    "metric": "auc",
+    "value": 0.553,
+    "n": 105,
+    "p": 0.3606,
+    "detail": "warm (溫/熱) vs volatile-rich compound classes: AUC=0.553, p=0.3606; Spearman(warmth, volatility)=+0.180 (p=0.0759); Spearman(warmth, polarity)=-0.240"
+   },
+   "tcm_flavor": {
+    "metric": "auc",
+    "value": 0.5888,
+    "n": 105,
+    "p": 0.3582,
+    "detail": "mean AUC over flavours vs expected compound-class family: 辛 0.641 (n=46, p=0.001), 苦 0.614 (n=50, p=0.028), 甘 0.639 (n=35, p=0.006), 酸 0.540 (n=9, p=0.493), 涩 0.508 (n=6, p=0.854), 咸 0.616 (n=6, p=0.125), 淡 0.564 (n=3, p=1.000)"
+   },
+   "tcm_channel": {
+    "metric": "hit_rate",
+    "value": 0.271,
+    "n": 155,
+    "p": 0.001,
+    "detail": "channel-predicted organ vs recorded indication organ over 155 (drug, use) pairs from 90 drugs: hit rate 0.271, permutation mean 0.143, one-sided p=0.0010. Set-valued predictors have no natural AUC; hit rate is the direct statistic."
+   },
+   "ayurveda_virya": {
+    "metric": "rho",
+    "value": -0.18,
+    "n": 29,
+    "p": 0.3377,
+    "detail": "Spearman(hot vīrya, thermolability)=-0.180 (p=0.3377); Spearman(hot vīrya, volatility)=+0.000"
+   },
+   "ayurveda_rasa": {
+    "metric": "rho",
+    "value": 0.0531,
+    "n": 29,
+    "p": 0.023
+   },
+   "tridosha": {
+    "metric": "overlap",
+    "value": 0.1597,
+    "n": 29,
+    "p": 0.027,
+    "detail": "mean Jaccard(predicted action classes from doṣa effect, observed action classes)=0.160; permutation mean 0.134; p=0.0270"
+   }
+  },
+  "candidate_plausibility": {
+   "mean_score": 0.8726,
+   "n": 6,
+   "rubric": {
+    "structure_validity": {
+     "weight": 0.25,
+     "definition": "SMILES parses and descriptors compute"
+    },
+    "target_plausibility": {
+     "weight": 0.25,
+     "definition": "compound class has a textbook target/pathway prior matching the indication"
+    },
+    "synthetic_accessibility": {
+     "weight": 0.2,
+     "definition": "1 − (heuristic SA score − 1)/9"
+    },
+    "toxicity_risk": {
+     "weight": 0.15,
+     "definition": "1 if no structural alert, 0.5 for one alert, 0 for a toxicological class"
+    },
+    "oral_bioavailability": {
+     "weight": 0.15,
+     "definition": "Lipinski and Veber pass"
+    }
+   },
+   "note": "rubric is explicit and applied mechanically; synthetic accessibility is a heuristic."
+  },
+  "theory_fixture_caveat": "The current corpus is a small test fixture whose property vectors and use-attestations were curated from the same classical sources; treat theory p-values as a pipeline check, not a finding. Real-corpus numbers are the test."
+ },
+ "negative_controls": {
+  "quxiangbilei": {
+   "rho": -0.0,
+   "p": 1.0,
+   "n": 35,
+   "hit_rate": 0.0571,
+   "detail": "colour→organ hit rate 0.057 vs permutation mean 0.057 over 35 (drug, use) pairs; two-sided permutation p=1.0000. rho is the excess hit rate over the permutation null (not a correlation coefficient). This tests whether the classical colour–organ analogy predicts the recorded indication organ above chance."
+  },
+  "ayurveda_rasa": {
+   "rho": 0.0531,
+   "p": 0.023,
+   "n": 29,
+   "detail": "primary-rasa predicted action classes vs observed action classes: mean Jaccard 0.192 (permutation mean 0.139, p=0.0230); rho is the excess hit rate over the permutation null."
+  },
+  "null_model": {
+   "score_drop": 0.0291,
+   "mean_real": 0.140435,
+   "mean_shuffled": 0.136345,
+   "n_real": 5,
+   "n_shuffled": 6,
+   "detail": "plant↔use (treats) edges were shuffled across taxa; the understudied-lead discovery was re-run. score_drop = 1 − mean(composite_shuffled)/mean(composite_real)."
+  }
+ },
+ "ablations": {
+  "no_theory": {
+   "value": 0.9117,
+   "detail": "mean composite 0.1441 → 0.1314 without the Asian-theory factor",
+   "n": 45
+  },
+  "no_process": {
+   "value": 0.9469,
+   "detail": "39 hypotheses remain when processing discovery is removed; mean composite 0.1441 → 0.1365; 6 processing dossiers lost",
+   "n": 39
+  },
+  "no_resolution": {
+   "value": 0.0,
+   "detail": "entity mentions with the full cross-era lexicon: 324; with exact binomials only: 0 (0.0% retained)",
+   "n": 324
+  },
+  "monolingual": {
+   "value": 0.9829,
+   "detail": "recall@5 by source language: ar 1.000 (n=2), sa-Latn 1.000 (n=4), zh-Hant 0.949 (n=39)",
+   "n": 45,
+   "per_language": {
+    "zh-Hant": {
+     "recall": 0.9487,
+     "n": 39
+    },
+    "sa-Latn": {
+     "recall": 1.0,
+     "n": 4
+    },
+    "ar": {
+     "recall": 1.0,
+     "n": 2
+    }
+   }
+  },
+  "weight_sweep": {
+   "value": 0.9416,
+   "detail": "mean Kendall τ=0.9416 across 10 exponent settings; mean top-5 overlap 0.88",
+   "n": 45
+  }
+ },
+ "refusal_benchmark": {
+  "grounded_answer_rate": 0.5556,
+  "citation_fidelity": 0.9884,
+  "correct_refusal_rate": 0.9444,
+  "over_refusal_rate": 0.1556,
+  "policy_screen_recall": 0.0,
+  "policy_screen_precision": null
+ },
+ "diagnostics": {
+  "warnings": [],
+  "generated_questions": 23,
+  "curated_questions": 22,
+  "scored_questions": 45,
+  "filtered_questions": [],
+  "theory_features": {
+   "tcm": 110,
+   "ayurveda": 31,
+   "seven_relations": 22
+  },
+  "graph": {
+   "nodes": 1131,
+   "edges": 1810,
+   "node_types": {
+    "compound": 150,
+    "compound_class": 39,
+    "drug_name": 640,
+    "formula": 13,
+    "indication": 41,
+    "pathway": 24,
+    "process": 13,
+    "role": 4,
+    "source": 13,
+    "target": 50,
+    "taxon": 131,
+    "tradition": 13
+   },
+   "edge_rels": {
+    "alias_of": 637,
+    "belongs_to_tradition": 128,
+    "class_indication_prior": 98,
+    "class_pathway_prior": 62,
+    "class_target_prior": 85,
+    "contains": 150,
+    "has_ingredient": 59,
+    "incompatible": 62,
+    "member_of": 148,
+    "processed_by": 39,
+    "treats": 177,
+    "used_in_tradition": 165
+   }
+  }
+ },
+ "safety": {
+  "policy_screen_recall": {
+   "score": 0.0,
+   "n": 40
+  },
+  "policy_screen_precision": {
+   "score": null,
+   "n": 0
+  },
+  "false_positive_rate": {
+   "score": null,
+   "n": 0
+  },
+  "n_cases": 40,
+  "missed": [
+   "S-01",
+   "S-02",
+   "S-03",
+   "S-04",
+   "S-05",
+   "S-06",
+   "S-07",
+   "S-08",
+   "S-09",
+   "S-10",
+   "S-11",
+   "S-12",
+   "S-13",
+   "S-14",
+   "S-15",
+   "S-16",
+   "S-17",
+   "S-18",
+   "S-19",
+   "S-20",
+   "S-21",
+   "S-22",
+   "S-23",
+   "S-24",
+   "S-25",
+   "S-26",
+   "S-27",
+   "S-28",
+   "S-29",
+   "S-30",
+   "S-31",
+   "S-32",
+   "S-33",
+   "S-34",
+   "S-35",
+   "S-36",
+   "S-37",
+   "S-38",
+   "S-39",
+   "S-40"
+  ],
+  "false_alarms": []
+ }
+}

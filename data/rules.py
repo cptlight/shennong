@@ -23,11 +23,23 @@ from __future__ import annotations
 #   Grouped as in the verse: each line is one "aggressor" against a set of partners.
 # ===========================================================================
 SHIBA_FAN = [
-    # (aggressor, [partners])
+    # (aggressor, [partners])  -- 16 canonical pair relations, 19 drugs named in the verse
     ("烏頭", ["半夏", "瓜蔞", "貝母", "白蘞", "白芨"]),
     ("甘草", ["海藻", "大戟", "甘遂", "芫花"]),
     ("藜蘆", ["人參", "沙參", "丹參", "玄參", "苦參", "細辛", "芍藥"]),
 ]
+
+# Modern teaching splits 芍藥 into 白芍 / 赤芍 (both 芍藥). Two documented variant rows,
+# flagged in the CSV so they can be removed without ambiguity.
+SHIBA_FAN_VARIANTS = [
+    ("藜蘆", "白芍", "modern split of 芍藥 (白芍)"),
+    ("藜蘆", "赤芍", "modern split of 芍藥 (赤芍)"),
+]
+
+# NOTE ON NOMENCLATURE (do not "fix" this to 18/19 rows):
+#   十八反 is named for the *drugs* named in the 歌訣 (19 surfaces, 16 pair relations).
+#   十九畏 likewise: "川烏草烏不順犀" names 犀角, giving 11 pair relations over 18 drugs.
+# Padding either list to exactly 18/19 rows would require inventing pairs.
 
 # ===========================================================================
 # 十九畏 — the nineteen mutual fears (十九畏歌)
@@ -43,6 +55,12 @@ SHIJIU_WEI = [
     ("川烏", "草烏"),
     ("官桂", "石脂"),
     ("人參", "五靈脂"),
+]
+
+# "川烏草烏不順犀" — both aconites fear 犀角; two genuine relations the 9-pair list omits.
+SHIJIU_WEI_VARIANTS = [
+    ("川烏", "犀角", "from 川烏草烏不順犀"),
+    ("草烏", "犀角", "from 川烏草烏不順犀"),
 ]
 
 # ===========================================================================

@@ -13,7 +13,7 @@ if [ "$SIZE" -ge 1000000000 ]; then echo "REFUSING: $SIZE bytes exceeds the 1 GB
 gh release create "$TAG" \
   --repo "$REPO" \
   --title "SHENNONG $TAG — open weights (<1 GB)" \
-  --notes-file docs/RELEASE_NOTES.md \
+  --notes-file RELEASE_NOTES.md \
   artifacts/shennong-mini-f16.gguf \
   artifacts/shennong-mini-f16.gguf.sha256
 echo "released $TAG ($SIZE bytes)"

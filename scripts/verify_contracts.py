@@ -248,14 +248,18 @@ def check_metrics(rep: Report, strict: bool) -> None:
     if not runs:
         (rep.fail if strict else rep.warn)("training.metrics", "no training/runs/*/metrics.json")
         return
-    required = {"run_id", "params", "tokens_seen", "steps", "final_val_loss", "loss_curve"}
+    required = {"run_id", "params", "tokens_seen", "final_val_loss", "loss_curve"}
+    # the trainer writes `steps_completed`; accept the shorter `steps` spelling too
+    step_keys = {"steps", "steps_completed"}
     for p in runs:
         try:
             m = json.loads(p.read_text(encoding="utf-8"))
         except Exception as exc:  # noqa: BLE001
             rep.fail(f"metrics.{p.parent.name}", f"unparseable: {exc}")
             continue
-        missing = required - set(m)
+        missing = (required - set(m))
+        if not (step_keys & set(m)):
+            missing = missing | {"steps_completed"}
         if missing:
             rep.fail(f"metrics.{p.parent.name}", f"missing keys {sorted(missing)}")
             continue

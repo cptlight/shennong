@@ -41,6 +41,11 @@ def collect() -> list[dict]:
         raw_path = d / raw_file
         cs = (meta.get("clean_stats") or {})
 
+        # correct the script label from the text itself (some Wikisource editions are
+        # simplified even though the work is classical)
+        if cs.get("detected_script") and str(meta.get("lang", "")).startswith("zh"):
+            meta["lang"] = cs["detected_script"]
+
         status = meta.get("status", "ok")
         note = None
         if status == "ok" and cs and not cs.get("clean", False):

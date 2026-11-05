@@ -418,8 +418,13 @@ def load_candidates():
     """
     real = os.path.join(ROOT, "artifacts", "drug_candidates.json")
     d = _read_json(real)
-    source, fixture = "artifacts/drug_candidates.json", False
-    if not (isinstance(d, dict) and isinstance(d.get("candidates"), list) and d["candidates"]):
+    source = "artifacts/drug_candidates.json"
+    # The producer may ship a fixture-flagged artefact at the real path. A file that says it is a fixture is
+    # a fixture, whatever directory it lives in — otherwise a panel could claim LIVE while showing test data.
+    fixture = True
+    if isinstance(d, dict) and isinstance(d.get("candidates"), list) and d["candidates"]:
+        fixture = bool(d.get("fixture"))
+    else:
         d = _read_json(os.path.join(DATA_DIR, "drug_candidates.json"))
         source, fixture = "app/data/drug_candidates.json", True
     if not (isinstance(d, dict) and isinstance(d.get("candidates"), list)):
@@ -447,6 +452,8 @@ def load_candidates():
         line = c.get("classical_line") or {}
         text = (line.get("text") or "").strip()
         integrity, integrity_note = provenance_integrity(drug_cjk, text)
+        if len(integrity_note) == 0 and line.get("names_drug"):
+            integrity_note = f"the producer records this span as naming {line['names_drug']}"
 
         # --- descriptors / drug-likeness ----------------------------------------------------
         ro5 = dict(
@@ -584,7 +591,10 @@ def load_eval():
     real = os.path.join(ROOT, "eval", "report.json")
     d = _read_json(real)
     if isinstance(d, dict) and d.get("benchmarks") is not None:
-        return dict(report=d, fixture=False, source="eval/report.json",
+        # Same rule as the candidate artefact: a report that says it is a fixture is a fixture, whatever
+        # path it sits at. Showing preliminary numbers as LIVE would be the exact failure this project
+        # claims to design against.
+        return dict(report=d, fixture=bool(d.get("fixture")), source="eval/report.json",
                     generated_at=d.get("generated_at"))
     # No measured evaluation yet. Use the clearly-labelled fixture twin so the panel's structure is
     # visible — every value in it is chipped DEMO FIXTURE in the UI, and the banner says so too.

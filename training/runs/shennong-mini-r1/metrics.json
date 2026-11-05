@@ -1,6 +1,6 @@
 {
   "run_id": "shennong-mini-r1",
-  "created_at": "2026-11-05T02:47:44-0800",
+  "created_at": "2026-11-05T05:14:48-0800",
   "config": {
     "vocab_size": 16384,
     "d_model": 256,
@@ -28,29 +28,101 @@
     "eos_id": 2,
     "build_seconds": 21.7
   },
-  "threads": 4,
+  "threads": 1,
   "torch_version": "2.2.2",
   "platform": "darwin",
   "seed": 1337,
-  "steps_completed": 1,
-  "tokens_seen": 8192,
-  "epochs": 0.0,
-  "wall_clock_s": 32.0,
-  "tokens_per_s": 255.7,
-  "final_train_loss": 9.754074573516846,
-  "final_val_loss": 9.74012839794159,
-  "best_val_loss": 9.74012839794159,
-  "val_ppl": 16985.72,
+  "steps_completed": 200,
+  "tokens_seen": 1638400,
+  "epochs": 0.098,
+  "wall_clock_s": 2711.0,
+  "tokens_per_s": 604.3,
+  "final_train_loss": 6.366177558898926,
+  "final_val_loss": 6.390119135379791,
+  "best_val_loss": 6.390119135379791,
+  "val_ppl": 595.93,
   "loss_curve": [
     {
       "step": 0,
       "loss": 9.7541,
-      "val_loss": 9.7401,
-      "lr": 1e-05,
+      "val_loss": 9.7353,
+      "lr": 1.5e-05,
       "tokens_seen": 8192,
-      "tokens_per_s": 598.3
+      "tokens_per_s": 332.1
+    },
+    {
+      "step": 25,
+      "loss": 8.6881,
+      "val_loss": null,
+      "lr": 0.00039,
+      "tokens_seen": 212992,
+      "tokens_per_s": 663.4
+    },
+    {
+      "step": 50,
+      "loss": 7.4068,
+      "val_loss": 7.3356,
+      "lr": 0.00059897,
+      "tokens_seen": 417792,
+      "tokens_per_s": 782.0
+    },
+    {
+      "step": 50,
+      "loss": 7.3902,
+      "val_loss": 7.3321,
+      "lr": 0.00059481,
+      "tokens_seen": 417792,
+      "tokens_per_s": 381.4
+    },
+    {
+      "step": 75,
+      "loss": 6.9862,
+      "val_loss": null,
+      "lr": 0.00053871,
+      "tokens_seen": 622592,
+      "tokens_per_s": 736.2
+    },
+    {
+      "step": 100,
+      "loss": 6.8165,
+      "val_loss": 6.7168,
+      "lr": 0.00043332,
+      "tokens_seen": 827392,
+      "tokens_per_s": 770.5
+    },
+    {
+      "step": 125,
+      "loss": 6.5104,
+      "val_loss": null,
+      "lr": 0.00030354,
+      "tokens_seen": 1032192,
+      "tokens_per_s": 806.5
+    },
+    {
+      "step": 150,
+      "loss": 6.4478,
+      "val_loss": 6.4805,
+      "lr": 0.00018,
+      "tokens_seen": 1236992,
+      "tokens_per_s": 607.9
+    },
+    {
+      "step": 175,
+      "loss": 6.2792,
+      "val_loss": null,
+      "lr": 9.188e-05,
+      "tokens_seen": 1441792,
+      "tokens_per_s": 720.4
+    },
+    {
+      "step": 199,
+      "loss": 6.3662,
+      "val_loss": 6.3901,
+      "lr": 6.005e-05,
+      "tokens_seen": 1638400,
+      "tokens_per_s": 804.7
     }
   ],
-  "completed": false,
-  "checkpoint": null
+  "completed": true,
+  "checkpoint": "/Users/tom/Documents/ETHno/training/runs/shennong-mini-r1/ckpt.pt"
 }

@@ -114,6 +114,17 @@ def scan_drugs(trie: Trie, text: str) -> list[Match]:
     return out
 
 
+def scan_trie(trie: Trie, text: str) -> list[Match]:
+    """Scan a pre-built trie (cached by the caller) with the same boundary rules."""
+    out: list[Match] = []
+    for start, end, surface, (canonical, conf) in trie.find_all(text, boundary=False):
+        cjk = any("\u4e00" <= ch <= "\u9fff" for ch in surface)
+        if not cjk and not _is_boundary(text, start, end):
+            continue
+        out.append(Match(surface, start, end, canonical, conf))
+    return out
+
+
 def scan_terms(terms: Mapping[str, str], text: str) -> list[Match]:
     """Scan a simple surface→canonical mapping with longest-first semantics."""
     trie = Trie()

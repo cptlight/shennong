@@ -37,10 +37,23 @@ make this one experiment possible.
 | # | Theory vector | Prediction | Metric | n |
 |---|---|---|---|---|
 | T1 | **四氣** (four natures: 寒/涼/平/溫/熱) | hotter drugs → more lipophilic, more volatile, less thermolabile; colder drugs → the reverse | AUC (ordinal nature vs. polarity/volatility class) | [[PENDING: eval.n_tcm_nature]] |
-| T2 | **歸經** (channel tropism) | channel assignment predicts target organ or receptor family above chance | AUC (multi-class, macro) | [[PENDING: eval.n_tcm_channel]] |
+| T2 | **歸經** (channel tropism) | channel assignment predicts target organ or receptor family above chance | **hit rate** vs permutation (§2.1a) | [[PENDING: eval.n_tcm_channel]] |
 | T3 | **五味** (five flavours) | flavour profile predicts receptor/action class (e.g. 苦 → GPCR-rich; 辛 → ion-channel/TRP-rich) | AUC (multi-label macro) | [[PENDING: eval.n_tcm_flavor]] |
 | T4 | **vīrya** (Ayurvedic hot/cold potency) | uṣṇa → higher logP, lower thermolability; śīta → the reverse | Spearman ρ | [[PENDING: eval.n_ayurveda_virya]] |
 | T5 | **ṣaḍrasa** (six tastes) | taste profile predicts pharmacological action class | AUC (multi-class, macro) | [[PENDING: eval.n_ayurveda_rasa]] |
+
+### 2.1a The one deviation from the pre-registered plan — disclosed
+
+T2 (歸經) was pre-registered with **macro-AUC**. When the harness was built it became apparent that the
+predictor is **set-valued** — a drug enters several channels, and the target is an organ class — so there is no
+natural negative class and macro-AUC would have to be manufactured by an arbitrary one-vs-rest choice. The
+statistic was therefore changed to a **hit rate against a permutation null**: "does the channel-predicted organ
+contain the recorded indication organ more often than a shuffled assignment?" That is the direct statistic for a
+set-valued predictor, and it is harder to game than a synthesised AUC.
+
+This change was made **before** the real-corpus run, it is the only metric substitution in the set, and it is
+recorded here rather than absorbed silently. If a reviewer prefers the pre-registered macro-AUC, the harness can
+produce it, and we will report both.
 
 ### 2.2 How a test is constructed
 

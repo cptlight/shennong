@@ -121,7 +121,15 @@ def answer(
         for hit in hits
     ]
     best = hits[0]
-    cov = coverage(best.doc.text, question)
+    # Coverage is measured over the passage *including its title* and over the
+    # corpus-known part of the query, so a title word absent from the body cannot force
+    # a refusal, while an unsupported content word still can.
+    from shennong.rag.bm25 import query_tokens
+
+    known = [t for t in query_tokens(question) if t in idx.idf]
+    passage_all = str(best.doc.meta.get("title", "")) + " " + best.doc.text
+    passage_tokens = set(query_tokens(passage_all))
+    cov = (len([t for t in known if t in passage_tokens]) / len(known)) if known else 0.0
     if best.score < MIN_SCORE or cov < MIN_COVERAGE:
         return _refusal(
             question,
@@ -136,12 +144,14 @@ def answer(
 
     # 3) grounded answer: a verbatim sentence from the best passage
     sentence, start, end, sentence_cov = best_sentence(best.doc.text, question)
-    if sentence_cov < MIN_COVERAGE:
+    # the sentence must carry at least one query content token, otherwise the passage
+    # matched only on title/vocabulary and cannot ground an answer
+    if len(set(query_tokens(sentence)) & set(query_tokens(question))) == 0:
         return _refusal(
             question,
             (
-                f"The best passage scores {best.score:.2f} but no single sentence supports the "
-                f"question (sentence coverage {sentence_cov:.2f})."
+                f"The best passage scores {best.score:.2f} but no single sentence contains a "
+                f"content term from the question, so no grounded answer can be quoted."
             ),
             safety=safety.to_dict(),
             retrieval=retrieval,
@@ -157,7 +167,7 @@ def answer(
             "tier": best.doc.meta.get("tier", 0),
             "licence": best.doc.meta.get("licence", ""),
             "passage_id": best.doc.id,
-            "span": sentence.strip(),
+            "span": sentence,
             "char_start": start,
             "char_end": end,
             "score": best.score,

@@ -1,4 +1,14 @@
-tokenised in 21.7s: train=16,687,735 val=339,639
+using cached tokens: train=16,687,735 val=339,639
+resumed from training/runs/shennong-mini-r1/ckpt.pt at step 50
 
-shennong-mini-r1: 8.72M params | 900 steps x 8,192 tok = 7.37M tokens | corpus 16,687,735 tokens
-step     0 | loss 9.7541 | val 9.7401 | lr 1.00e-05 | 598.3 tok/s | eta 480m
+shennong-mini-r1: 8.72M params | 200 steps x 8,192 tok = 1.64M tokens | corpus 16,687,735 tokens
+step    50 | loss 7.3902 | val 7.3321 | lr 5.95e-04 | 381.4 tok/s | eta 115m
+step    75 | loss 6.9862 | lr 5.39e-04 | 736.2 tok/s | eta 33m
+step   100 | loss 6.8165 | val 6.7168 | lr 4.33e-04 | 770.5 tok/s | eta 22m
+step   125 | loss 6.5104 | lr 3.04e-04 | 806.5 tok/s | eta 15m
+step   150 | loss 6.4478 | val 6.4805 | lr 1.80e-04 | 607.9 tok/s | eta 17m
+step   175 | loss 6.2792 | lr 9.19e-05 | 720.4 tok/s | eta 8m
+step   199 | loss 6.3662 | val 6.3901 | lr 6.01e-05 | 804.7 tok/s | eta 0m
+wrote /Users/tom/Documents/ETHno/artifacts/loss_curve.png
+
+DONE shennong-mini-r1: 200 steps, 1,638,400 tokens, val 6.390119135379791, 45.2 min

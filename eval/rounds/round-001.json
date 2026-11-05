@@ -1,0 +1,247 @@
+{
+ "round": 1,
+ "generated_at": "2026-11-05T11:53:12+00:00",
+ "fixture": true,
+ "corpus_sha256": "4e890aae72f4bcbf3249a68753381291750e446d1ca3ce647bbe52ca1dff3e13",
+ "protocol": {
+  "accept_if": "target metric improves by > 0.005 and no other metric regresses by > 0.01",
+  "evaluated_on": "held-out split only (deterministic 1-in-3 by question id hash)"
+ },
+ "baseline": {
+  "recall_at_k": 0.8889,
+  "answer_accuracy": 0.5556,
+  "answered_rate": 0.7778,
+  "n": 18
+ },
+ "candidates": [
+  {
+   "name": "bm25_k1_2.0",
+   "description": "increase BM25 k1 from 1.5 to 2.0 (term-frequency saturation)",
+   "target_metric": "recall_at_k",
+   "config": {
+    "k1": 2.0,
+    "b": 0.75,
+    "k": 5,
+    "min_coverage": 0.34,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {},
+   "decision": "reject",
+   "reason": "target recall_at_k 0.8889 → 0.8889 (gain +0.0000); gain below threshold"
+  },
+  {
+   "name": "bm25_b_0.5",
+   "description": "reduce BM25 b from 0.75 to 0.5 (less length normalisation)",
+   "target_metric": "recall_at_k",
+   "config": {
+    "k1": 1.5,
+    "b": 0.5,
+    "k": 5,
+    "min_coverage": 0.34,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {},
+   "decision": "reject",
+   "reason": "target recall_at_k 0.8889 → 0.8889 (gain +0.0000); gain below threshold"
+  },
+  {
+   "name": "retrieve_k10",
+   "description": "retrieve 10 passages instead of 5",
+   "target_metric": "recall_at_k",
+   "config": {
+    "k1": 1.5,
+    "b": 0.75,
+    "k": 10,
+    "min_coverage": 0.34,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.9444,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0555,
+   "regressions": {},
+   "decision": "accept",
+   "reason": "target recall_at_k 0.8889 → 0.9444 (gain +0.0555); no regression on other metrics"
+  },
+  {
+   "name": "coverage_0.25",
+   "description": "relax refusal coverage threshold 0.34 → 0.25",
+   "target_metric": "answered_rate",
+   "config": {
+    "k1": 1.5,
+    "b": 0.75,
+    "k": 5,
+    "min_coverage": 0.25,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {},
+   "decision": "reject",
+   "reason": "target answered_rate 0.7778 → 0.7778 (gain +0.0000); gain below threshold"
+  },
+  {
+   "name": "coverage_0.45",
+   "description": "tighten refusal coverage threshold 0.34 → 0.45",
+   "target_metric": "answer_accuracy",
+   "config": {
+    "k1": 1.5,
+    "b": 0.75,
+    "k": 5,
+    "min_coverage": 0.45,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7222,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {
+    "answered_rate": -0.0556
+   },
+   "decision": "reject",
+   "reason": "target answer_accuracy 0.5556 → 0.5556 (gain +0.0000); regression: {'answered_rate': -0.0556}"
+  }
+ ],
+ "accepted": [
+  {
+   "name": "retrieve_k10",
+   "description": "retrieve 10 passages instead of 5",
+   "target_metric": "recall_at_k",
+   "config": {
+    "k1": 1.5,
+    "b": 0.75,
+    "k": 10,
+    "min_coverage": 0.34,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.9444,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0555,
+   "regressions": {},
+   "decision": "accept",
+   "reason": "target recall_at_k 0.8889 → 0.9444 (gain +0.0555); no regression on other metrics"
+  }
+ ],
+ "rejected": [
+  {
+   "name": "bm25_k1_2.0",
+   "description": "increase BM25 k1 from 1.5 to 2.0 (term-frequency saturation)",
+   "target_metric": "recall_at_k",
+   "config": {
+    "k1": 2.0,
+    "b": 0.75,
+    "k": 5,
+    "min_coverage": 0.34,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {},
+   "decision": "reject",
+   "reason": "target recall_at_k 0.8889 → 0.8889 (gain +0.0000); gain below threshold"
+  },
+  {
+   "name": "bm25_b_0.5",
+   "description": "reduce BM25 b from 0.75 to 0.5 (less length normalisation)",
+   "target_metric": "recall_at_k",
+   "config": {
+    "k1": 1.5,
+    "b": 0.5,
+    "k": 5,
+    "min_coverage": 0.34,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {},
+   "decision": "reject",
+   "reason": "target recall_at_k 0.8889 → 0.8889 (gain +0.0000); gain below threshold"
+  },
+  {
+   "name": "coverage_0.25",
+   "description": "relax refusal coverage threshold 0.34 → 0.25",
+   "target_metric": "answered_rate",
+   "config": {
+    "k1": 1.5,
+    "b": 0.75,
+    "k": 5,
+    "min_coverage": 0.25,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7778,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {},
+   "decision": "reject",
+   "reason": "target answered_rate 0.7778 → 0.7778 (gain +0.0000); gain below threshold"
+  },
+  {
+   "name": "coverage_0.45",
+   "description": "tighten refusal coverage threshold 0.34 → 0.45",
+   "target_metric": "answer_accuracy",
+   "config": {
+    "k1": 1.5,
+    "b": 0.75,
+    "k": 5,
+    "min_coverage": 0.45,
+    "min_score": 1.0
+   },
+   "scores": {
+    "recall_at_k": 0.8889,
+    "answer_accuracy": 0.5556,
+    "answered_rate": 0.7222,
+    "n": 18
+   },
+   "target_gain": 0.0,
+   "regressions": {
+    "answered_rate": -0.0556
+   },
+   "decision": "reject",
+   "reason": "target answer_accuracy 0.5556 → 0.5556 (gain +0.0000); regression: {'answered_rate': -0.0556}"
+  }
+ ],
+ "outcome": "1 change(s) accepted"
+}

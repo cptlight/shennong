@@ -1,1 +1,10 @@
-{"step": 0, "loss": 9.7541, "val_loss": 9.7401, "lr": 1e-05, "tokens_seen": 8192, "tokens_per_s": 598.3}
+{"step": 0, "loss": 9.7541, "val_loss": 9.7353, "lr": 1.5e-05, "tokens_seen": 8192, "tokens_per_s": 332.1}
+{"step": 25, "loss": 8.6881, "val_loss": null, "lr": 0.00039, "tokens_seen": 212992, "tokens_per_s": 663.4}
+{"step": 50, "loss": 7.4068, "val_loss": 7.3356, "lr": 0.00059897, "tokens_seen": 417792, "tokens_per_s": 782.0}
+{"step": 50, "loss": 7.3902, "val_loss": 7.3321, "lr": 0.00059481, "tokens_seen": 417792, "tokens_per_s": 381.4}
+{"step": 75, "loss": 6.9862, "val_loss": null, "lr": 0.00053871, "tokens_seen": 622592, "tokens_per_s": 736.2}
+{"step": 100, "loss": 6.8165, "val_loss": 6.7168, "lr": 0.00043332, "tokens_seen": 827392, "tokens_per_s": 770.5}
+{"step": 125, "loss": 6.5104, "val_loss": null, "lr": 0.00030354, "tokens_seen": 1032192, "tokens_per_s": 806.5}
+{"step": 150, "loss": 6.4478, "val_loss": 6.4805, "lr": 0.00018, "tokens_seen": 1236992, "tokens_per_s": 607.9}
+{"step": 175, "loss": 6.2792, "val_loss": null, "lr": 9.188e-05, "tokens_seen": 1441792, "tokens_per_s": 720.4}
+{"step": 199, "loss": 6.3662, "val_loss": 6.3901, "lr": 6.005e-05, "tokens_seen": 1638400, "tokens_per_s": 804.7}

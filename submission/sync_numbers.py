@@ -76,13 +76,26 @@ def load_corpus_stats():
 
 
 def load_eval():
-    return _json(os.path.join(ROOT, "eval", "report.json"))
+    d = _json(os.path.join(ROOT, "eval", "report.json"))
+    # A fixture-flagged report is preliminary by its own admission; never publish its numbers.
+    if isinstance(d, dict) and d.get("fixture"):
+        return None
+    return d
 
 
 def load_metrics():
     paths = sorted(glob.glob(os.path.join(ROOT, "training", "runs", "*", "metrics.json")),
                    key=os.path.getmtime, reverse=True)
-    return _json(paths[0]) if paths else None
+    if not paths:
+        return None
+    m = _json(paths[0])
+    # An unfinished run's final_* fields are the loss at initialisation, not a result.
+    if isinstance(m, dict) and not m.get("completed"):
+        # An unfinished run has no final losses and its tokens_seen is one step's worth — quoting either
+        # would be a fabricated result. Only the architecture counts are safe from an incomplete run.
+        for k in ("final_train_loss", "final_val_loss", "val_ppl", "bits_per_byte", "tokens_seen"):
+            m.pop(k, None)
+    return m
 
 
 def load_candidates():
@@ -106,14 +119,21 @@ def load_hypotheses():
 # formatting
 # --------------------------------------------------------------------------------------------
 def n(x):
+    """Format an integer, or propagate None — a missing number must never render as the string "None"."""
+    if x is None:
+        return None
     return f"{x:,}" if isinstance(x, int) else str(x)
 
 
 def pct(x):
+    if x is None:
+        return None
     return f"{x * 100:.0f}%" if isinstance(x, (int, float)) else str(x)
 
 
 def f3(x):
+    if x is None:
+        return None
     return f"{x:.3f}" if isinstance(x, (int, float)) else str(x)
 
 
@@ -148,7 +168,7 @@ def resolve():
 
     if mx:
         out["model.mini_params"] = n(mx.get("params"))
-        out["model.steps"] = n(mx.get("steps"))
+        out["model.steps"] = n(mx.get("steps_completed", mx.get("steps")))
         out["model.tokens"] = n(mx.get("tokens_seen"))
         out["model.final_train_loss"] = f3(mx.get("final_train_loss"))
         out["model.final_val_loss"] = f3(mx.get("final_val_loss"))
@@ -222,8 +242,11 @@ def resolve():
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Fill [[PENDING: name]] placeholders from repository artefacts")
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--check", action="store_true", help="exit 1 if anything remains unresolved")
+    ap.add_argument("--check", action="store_true",
+                    help="exit 1 if anything remains unresolved (read-only: implies --dry-run)")
     args = ap.parse_args(argv)
+    if args.check:
+        args.dry_run = True  # --check is a query, not a mutation
 
     values = resolve()
     filled_total, remaining_total = 0, 0

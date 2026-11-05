@@ -1,51 +1,285 @@
 binomial,family,synonyms,tradition,source_id
-Glycyrrhiza uralensis,Fabaceae,Glycyrrhiza uralensis Fisch. ex DC.,tcm,gbif+wikidata
-Ziziphus jujuba,Rhamnaceae,Ziziphus jujuba Mill.,tcm,gbif+wikidata
-Cinnamomum cassia,Lauraceae,Lauraceae,tcm,gbif+wikidata
+Salvia miltiorrhiza,Lamiaceae,Salvia miltiorrhiza Bunge,tcm,gbif+wikidata
 Zingiber officinale,Zingiberaceae,Zingiber officinale Roscoe,tcm,gbif+wikidata
-Paeonia lactiflora,Paeoniaceae,Paeonia lactiflora Pall.,tcm,gbif+wikidata
-Aconitum carmichaelii,Ranunculaceae,Aconitum carmichaelii Debeaux,tcm,gbif+wikidata
+Schisandra chinensis,Schisandraceae,Schisandra chinensis (Turcz.) Baill.,tcm,gbif+wikidata
 Panax ginseng,Araliaceae,Panax ginseng C.A.Mey.,tcm,gbif+wikidata
+Curculigo orchioides,Hypoxidaceae,Curculigo orchioides Gaertn.,tcm,gbif+wikidata
+Hematite,,Hematite,tcm,gbif+wikidata
 Pinellia ternata,Araceae,Pinellia ternata (Thunb.) Makino,tcm,gbif+wikidata
+Ziziphus jujuba,Rhamnaceae,Ziziphus jujuba Mill.,tcm,gbif+wikidata
 Rheum palmatum,Polygonaceae,Rheum palmatum L.,tcm,gbif+wikidata
-Ephedra sinica,Ephedraceae,Ephedra sinica Stapf,tcm,gbif+wikidata
-Scutellaria baicalensis,Lamiaceae,Scutellaria baicalensis Georgi,tcm,gbif+wikidata
-Atractylodes macrocephala,Asteraceae,Atractylodes macrocephala Koidz.,tcm,gbif+wikidata
-Wolfiporia cocos,Fomitopsidaceae,Wolfiporia cocos (F.A.Wolf) Ryvarden & Gilb.,tcm,gbif+wikidata
-Armeniaca vulgaris,Rosaceae,Armeniaca vulgaris Lam.,tcm,gbif+wikidata
-Gypsum,,Gypsum,tcm,gbif+wikidata
-Houpoea officinalis,Magnoliaceae,Houpoea officinalis (Rehder & E.H.Wilson) N.H.Xia & C.Y.Wu,tcm,gbif+wikidata
-Coptis chinensis,Ranunculaceae,Coptis chinensis Franch.,tcm,gbif+wikidata
+Morinda officinalis,Rubiaceae,Morinda officinalis F.C.How,tcm,gbif+wikidata
+Mylabris phalerata,Meloidae,"Mylabris phalerata (Pallas, 1781)",tcm,gbif+wikidata
+Cinnabar,,Cinnabar,tcm,gbif+wikidata
+Eucommia ulmoides,Eucommiaceae,Eucommia ulmoides Oliv.,tcm,gbif+wikidata
 Citrus aurantium,Rutaceae,Citrus × aurantium L.,tcm,gbif+wikidata
 Bupleurum chinense,Apiaceae,Bupleurum chinense DC.,tcm,gbif+wikidata
-Pueraria montana var. lobata,Fabaceae,Pueraria montana lobata,tcm,gbif+wikidata
-Schisandra chinensis,Schisandraceae,Schisandra chinensis (Turcz.) Baill.,tcm,gbif+wikidata
-Oryza sativa,Poaceae,Oryza sativa L.,tcm,gbif+wikidata
-Sodium sulfate,,Sodium sulfate,tcm,gbif+wikidata
+Cinnamomum cassia,Lauraceae,Lauraceae,tcm,gbif+wikidata
 Platycodon grandiflorus,Campanulaceae,Platycodon grandiflorus (Jacq.) A.DC.,tcm,gbif+wikidata
-Anemarrhena asphodeloides,Asparagaceae,Anemarrhena asphodeloides Bunge,tcm,gbif+wikidata
-Asarum sieboldii,Aristolochiaceae,Asarum sieboldii Miq.,tcm,gbif+wikidata
-Cladococcus stalactites,Actinommidae,Cladococcus,tcm,gbif+wikidata
-Pteriomorphia,,Pteriomorphia,tcm,gbif+wikidata
-Croton tiglium,Euphorbiaceae,Croton tiglium L.,tcm,gbif+wikidata
-Akebia quinata,Lardizabalaceae,Akebia quinata (Houtt.) Decne.,tcm,gbif+wikidata
+Hirudo nipponia,Hirudinidae,"Hirudo nipponia Whitman, 1886",tcm,gbif+wikidata
+Epimedium brevicornu,Berberidaceae,Epimedium brevicornu Maxim.,tcm,gbif+wikidata
 Talc,,Talc,tcm,gbif+wikidata
-Gastrodia elata,Orchidaceae,Gastrodia elata Blume,tcm,gbif+wikidata
-Broussonetia papyrifera,Moraceae,Broussonetia papyrifera (L.) L'Hér. ex Vent.,tcm,gbif+wikidata
-Prinsepia uniflora,Rosaceae,Prinsepia uniflora Batalin,tcm,gbif+wikidata
-Cinnabar,,Cinnabar,tcm,gbif+wikidata
-Chelidonium majus,Papaveraceae,Chelidonium majus L.,tcm,gbif+wikidata
-Diplopterygium giganteum,Gleicheniaceae,Diplopterygium giganteum (Wall. ex Hook.) Nakai,tcm,gbif+wikidata
-Terminalia chebula var. chebula,Combretaceae,Terminalia chebula chebula,tcm,gbif+wikidata
-Yulania denudata,Magnoliaceae,Yulania denudata (Desr.) D.L.Fu,tcm,gbif+wikidata
-Chaenomeles sinensis,Rosaceae,Chaenomeles sinensis (Dum.Cours.) Koehne,tcm,gbif+wikidata
-Cervus nippon,Cervidae,"Cervus nippon Temminck, 1838",tcm,gbif+wikidata
-Stephania tetrandra,Menispermaceae,Stephania tetrandra S.Moore,tcm,gbif+wikidata
-Actaea cimicifuga,Ranunculaceae,Actaea cimicifuga L.,tcm,gbif+wikidata
-Vincetoxicum glaucescens,Apocynaceae,Vincetoxicum glaucescens (Decne.) C.Y.Wu & D.Z.Li,tcm,gbif+wikidata
-Saccharina japonica,Laminariaceae,"Saccharina japonica (Aresch.) C.E.Lane, C.Mayes, Druehl & G.W.Saunders, 2006",tcm,gbif+wikidata
+Aconitum carmichaelii,Ranunculaceae,Aconitum carmichaelii Debeaux,tcm,gbif+wikidata
+Achyranthes bidentata,Amaranthaceae,Achyranthes bidentata Blume,tcm,gbif+wikidata
+Rhinoceros unicornis,Rhinocerotidae,"Rhinoceros unicornis Linnaeus, 1758",tcm,gbif+wikidata
+Glycyrrhiza uralensis,Fabaceae,Glycyrrhiza uralensis Fisch. ex DC.,tcm,gbif+wikidata
+Angelica sinensis,Apiaceae,Angelica sinensis (Oliv.) Diels,tcm,gbif+wikidata
+Atractylodes macrocephala,Asteraceae,Atractylodes macrocephala Koidz.,tcm,gbif+wikidata
+Anemarrhena asphodeloides,Asparagaceae,Anemarrhena asphodeloides Bunge,tcm,gbif+wikidata
+Gypsum,,Gypsum,tcm,gbif+wikidata
 Magnetite,,Magnetite,tcm,gbif+wikidata
-Gypsophila vaccaria,Caryophyllaceae,Gypsophila vaccaria (L.) Sm.,tcm,gbif+wikidata
-Ferocactus latispinus,Cactaceae,Ferocactus latispinus (Haw.) Britton & Rose,tcm,gbif+wikidata
+Dipsacus asper,Caprifoliaceae,Dipsacus asper Wall. ex DC.,tcm,gbif+wikidata
+Saiga tatarica,Bovidae,"Saiga tatarica (Linnaeus, 1766)",tcm,gbif+wikidata
+Paeonia lactiflora,Paeoniaceae,Paeonia lactiflora Pall.,tcm,gbif+wikidata
+Sodium sulfate,,Sodium sulfate,tcm,gbif+wikidata
+Wolfiporia cocos,Fomitopsidaceae,Wolfiporia cocos (F.A.Wolf) Ryvarden & Gilb.,tcm,gbif+wikidata
+Panthera tigris,Felidae,"Panthera tigris (Linnaeus, 1758)",tcm,gbif+wikidata
+Scolopendra subspinipes,Scolopendridae,"Scolopendra subspinipes Leach, 1815",tcm,gbif+wikidata
+Polyporus umbellatus,Polyporaceae,Polyporus umbellatus (Pers.) Fr.,tcm,gbif+wikidata
+Forsythia suspensa,Oleaceae,Forsythia suspensa (Thunb.) Vahl,tcm,gbif+wikidata
+Saposhnikovia divaricata,Apiaceae,Saposhnikovia divaricata (Turcz.) Schischk.,tcm,gbif+wikidata
 Equus asinus,Equidae,"Equus asinus Linnaeus, 1758",tcm,gbif+wikidata
+Cervus nippon,Cervidae,"Cervus nippon Temminck, 1838",tcm,gbif+wikidata
+Ephedra sinica,Ephedraceae,Ephedra sinica Stapf,tcm,gbif+wikidata
+Astragalus membranaceus,Fabaceae,Astragalus,tcm,gbif+wikidata
+Scutellaria baicalensis,Lamiaceae,Scutellaria baicalensis Georgi,tcm,gbif+wikidata
+Coptis chinensis,Ranunculaceae,Coptis chinensis Franch.,tcm,gbif+wikidata
+Fossilia Ossis Mastodi,,Fossilia Ossis Mastodi,tcm,gbif+wikidata
+Chinemys reevesii,Geoemydidae,"Chinemys reevesii (Gray, 1831)",tcm,gbif+wikidata
+Syzygium aromaticum,Myrtaceae,Syzygium aromaticum (L.) Merr. & L.M.Perry,tcm,gbif+wikidata
+Panax notoginseng,Araliaceae,Panax notoginseng (Burkill) F.H.Chen ex C.H.Chow,tcm,gbif+wikidata
+Kitagawia praeruptora,Apiaceae,Kitagawia praeruptora (Dunn) Pimenov,tcm,gbif+wikidata
+Actaea cimicifuga,Ranunculaceae,Actaea cimicifuga L.,tcm,gbif+wikidata
+Selaginella tamariscina,Selaginellaceae,Selaginella tamariscina (P.Beauv.) Spring,tcm,gbif+wikidata
+Houpoea officinalis,Magnoliaceae,Houpoea officinalis (Rehder & E.H.Wilson) N.H.Xia & C.Y.Wu,tcm,gbif+wikidata
+Chloranthus serratus,Chloranthaceae,Chloranthus serratus (Thunb.) Roem. & Schult.,tcm,gbif+wikidata
+Phytolacca acinosa,Phytolaccaceae,Phytolacca acinosa Roxb.,tcm,gbif+wikidata
+Sanguisorba officinalis,Rosaceae,Sanguisorba officinalis L.,tcm,gbif+wikidata
+Euphorbia pekinensis,Euphorbiaceae,Euphorbia pekinensis Rupr.,tcm,gbif+wikidata
+Rheum rhaponticum,Polygonaceae,Rheum rhaponticum L.,tcm,gbif+wikidata
+Asparagus cochinchinensis,Asparagaceae,Asparagus cochinchinensis (Lour.) Merr.,tcm,gbif+wikidata
+Gastrodia elata,Orchidaceae,Gastrodia elata Blume,tcm,gbif+wikidata
+Turczaninowia fastigiata,Asteraceae,Turczaninowia fastigiata (Fisch.) DC.,tcm,gbif+wikidata
+Ligustrum lucidum,Oleaceae,Ligustrum lucidum W.T.Aiton,tcm,gbif+wikidata
+Buddleja officinalis,Scrophulariaceae,Buddleja officinalis Maxim.,tcm,gbif+wikidata
+Iris domestica,Iridaceae,Iris domestica (L.) Goldblatt & Mabb.,tcm,gbif+wikidata
+Capra hircus,Bovidae,"Capra hircus Linnaeus, 1758",tcm,gbif+wikidata
+Cornus officinalis,Cornaceae,Cornus officinalis Siebold & Zucc.,tcm,gbif+wikidata
+Allium grayi,Amaryllidaceae,Allium grayi Regel,tcm,gbif+wikidata
+Allium senescens,Amaryllidaceae,Allium senescens L.,tcm,gbif+wikidata
+Croton tiglium,Euphorbiaceae,Croton tiglium L.,tcm,gbif+wikidata
+Dichroa febrifuga,Hydrangeaceae,Dichroa febrifuga Lour.,tcm,gbif+wikidata
+Meretrix meretrix,Veneridae,"Meretrix meretrix (Linnaeus, 1758)",tcm,gbif+wikidata
+Chaenomeles sinensis,Rosaceae,Chaenomeles sinensis (Dum.Cours.) Koehne,tcm,gbif+wikidata
+Auricularia auricularis,Auriculariaceae,Auricularia auricularis (Gray) G.W.Martin,tcm,gbif+wikidata
+Aucklandia lappa,Asteraceae,Aucklandia lappa DC.,tcm,gbif+wikidata
+Pollia japonica,Commelinaceae,Pollia japonica Thunb.,tcm,gbif+wikidata
+Asarum forbesii,Aristolochiaceae,Asarum forbesii Maxim.,tcm,gbif+wikidata
+Usnea florida,Parmeliaceae,Usnea florida (L.) F.H.Wigg.,tcm,gbif+wikidata
+Eriobotrya japonica,Rosaceae,Eriobotrya japonica (Thunb.) Lindl.,tcm,gbif+wikidata
+Glyptostrobus pensilis,Cupressaceae,Glyptostrobus pensilis (Staunton ex D.Don) K.Koch,tcm,gbif+wikidata
+Aquilaria agallocha,Thymelaeaceae,Aquilaria agallocha (Lour.) Roxb. ex Finl.,tcm,gbif+wikidata
+Deutzia scabra,Hydrangeaceae,Deutzia scabra Thunb.,tcm,gbif+wikidata
+Aconitum barbatum var. puberulum,Ranunculaceae,Aconitum barbatum puberulum,tcm,gbif+wikidata
+Paeonia suffruticosa,Paeoniaceae,Paeonia × suffruticosa Andrews,tcm,gbif+wikidata
+Artemisia japonica,Asteraceae,Artemisia japonica Thunb.,tcm,gbif+wikidata
+Trichosanthes cucumeroides,Cucurbitaceae,Trichosanthes cucumeroides (Ser.) Maxim. ex Franch. & Sav.,tcm,gbif+wikidata
+Brassica oleracea,Brassicaceae,Brassica oleracea L.,tcm,gbif+wikidata
+Euphorbia kansui,Euphorbiaceae,Euphorbia kansui S.L.Liou ex S.B.Ho,tcm,gbif+wikidata
+Vincetoxicum glaucescens,Apocynaceae,Vincetoxicum glaucescens (Decne.) C.Y.Wu & D.Z.Li,tcm,gbif+wikidata
+Bletilla striata,Orchidaceae,Bletilla striata (Thunb.) Rchb.f.,tcm,gbif+wikidata
+Angelica dahurica,Apiaceae,Angelica dahurica (Hoffm.) Benth. & Hook.fil. ex Franch. & Sav.,tcm,gbif+wikidata
+Vincetoxicum atratum,Apocynaceae,Vincetoxicum atratum (Bunge) C.Morren & Decne.,tcm,gbif+wikidata
+Pycnonotus sinensis formosae,Pycnonotidae,"Pycnonotus sinensis formosae Hartert, 1910",tcm,gbif+wikidata
+Stemona japonica,Stemonaceae,Stemona japonica (Blume) Miq.,tcm,gbif+wikidata
+Menyanthes trifoliata,Menyanthaceae,Menyanthes trifoliata L.,tcm,gbif+wikidata
+Dendrobium nobile,Orchidaceae,Dendrobium nobile Lindl.,tcm,gbif+wikidata
+Gentiana macrophylla,Gentianaceae,Gentiana macrophylla Pall.,tcm,gbif+wikidata
+Lithospermum erythrorhizon,Boraginaceae,Lithospermum erythrorhizon Siebold & Zucc.,tcm,gbif+wikidata
+Aster tataricus,Asteraceae,Aster tataricus L.fil.,tcm,gbif+wikidata
+Rumex japonicus,Polygonaceae,Rumex japonicus Houtt.,tcm,gbif+wikidata
+Piper nigrum,Piperaceae,Piper nigrum L.,tcm,gbif+wikidata
+Cnidium officinale,Apiaceae,Cnidium officinale Makino,tcm,gbif+wikidata
+Sophora flavescens,Fabaceae,Sophora flavescens Aiton,tcm,gbif+wikidata
+Perotis indica,Poaceae,Perotis indica (L.) Kuntze,tcm,gbif+wikidata
+Foeniculum vulgare,Apiaceae,Foeniculum vulgare Mill.,tcm,gbif+wikidata
+Alpinia katsumadai,Zingiberaceae,"Alpinia katsumadai Hayata, 1915",tcm,gbif+wikidata
+Nymphoides peltatum,Menyanthaceae,Nymphoides peltatum (S.G.Gmel.) Britten & Rendle,tcm,gbif+wikidata
+Acorus calamus,Acoraceae,Acorus calamus L.,tcm,gbif+wikidata
+Smilax china,Smilacaceae,Smilax china L.,tcm,gbif+wikidata
+Thlaspi arvense,Brassicaceae,Thlaspi arvense L.,tcm,gbif+wikidata
+Basella alba,Basellaceae,Basella alba L.,tcm,gbif+wikidata
+Tribulus terrestris,Zygophyllaceae,Tribulus terrestris L.,tcm,gbif+wikidata
+Rubus hirsutus,Rosaceae,Rubus hirsutus Thunb.,tcm,gbif+wikidata
+Prinsepia uniflora,Rosaceae,Prinsepia uniflora Batalin,tcm,gbif+wikidata
+Allium macrostemon,Amaryllidaceae,Allium macrostemon Bunge,tcm,gbif+wikidata
+Dioscorea oppositifolia,Dioscoreaceae,Dioscorea oppositifolia L.,tcm,gbif+wikidata
+Conioselinum anthriscoides,Apiaceae,Conioselinum anthriscoides (H.Boissieu) Pimenov & Kljuykov,tcm,gbif+wikidata
+Veratrum nigrum,Melanthiaceae,Veratrum nigrum L.,tcm,gbif+wikidata
+Zingiber mioga,Zingiberaceae,Zingiber mioga (Thunb.) Roscoe,tcm,gbif+wikidata
+Reynoutria japonica,Polygonaceae,Reynoutria japonica Houtt.,tcm,gbif+wikidata
+Potentilla indica,Rosaceae,Potentilla indica (Andrews) Th.Wolf,tcm,gbif+wikidata
+Cullen corylifolium,Fabaceae,Cullen corylifolium (L.) Medik.,tcm,gbif+wikidata
+Terminalia chebula var. chebula,Combretaceae,Terminalia chebula chebula,tcm,gbif+wikidata
+Fagopyrum cymosum,Polygonaceae,Fagopyrum cymosum (Trevir.) Meisn.,tcm,gbif+wikidata
+Vigna umbellata,Fabaceae,Vigna umbellata (Thunb.) Ohwi & H.Ohashi,tcm,gbif+wikidata
+Gelsemium elegans,Gelsemiaceae,Gelsemium elegans (Gardner & Champion) Benth.,tcm,gbif+wikidata
+Ferula foetida,Apiaceae,Ferula foetida (Bunge) Regel,tcm,gbif+wikidata
+Acronychia pedunculata,Rutaceae,Acronychia pedunculata (L.) Miq.,tcm,gbif+wikidata
+Laccocephalum mylittae,Polyporaceae,Laccocephalum mylittae (Cooke & Massee) Núñez & Ryvarden,tcm,gbif+wikidata
+Artemisia carvifolia,Asteraceae,Artemisia carvifolia Buch.-Ham. ex Roxb.,tcm,gbif+wikidata
+Elsholtzia ciliata,Lamiaceae,Elsholtzia ciliata (Thunb.) Hyl.,tcm,gbif+wikidata
+Davallia mariesii,Davalliaceae,Davallia mariesii H.J.Veitch,tcm,gbif+wikidata
+Anadara broughtonii,Arcidae,"Anadara broughtonii (Schrenck, 1867)",tcm,gbif+wikidata
+Rhynchosia volubilis,Fabaceae,Rhynchosia volubilis Lour.,tcm,gbif+wikidata
+Polygonatum sibiricum,Asparagaceae,Polygonatum sibiricum Redouté,tcm,gbif+wikidata
+Rhamnus davurica,Rhamnaceae,Rhamnus davurica P.Lawson,tcm,gbif+wikidata
+Dimocarpus longan,Sapindaceae,Dimocarpus longan Lour.,tcm,gbif+wikidata
+Pottsia laxiflora,Apocynaceae,Pottsia laxiflora (Blume) Kuntze,tcm,gbif+wikidata
+Stylophorum lasiocarpum,Papaveraceae,Stylophorum lasiocarpum (Oliv.) Fedde,tcm,gbif+wikidata
 Pipistrellus bat coronavirus HKU5,Coronaviridae,Pipistrellus bat coronavirus HKU5,tcm,gbif+wikidata
+Malva verticillata,Malvaceae,Malva verticillata L.,tcm,gbif+wikidata
+Artemisia anomala,Asteraceae,Artemisia anomala S.Moore,tcm,gbif+wikidata
+Alhagi sparsifolia,Fabaceae,Alhagi sparsifolium,tcm,gbif+wikidata
+Chloranthus fortunei,Chloranthaceae,Chloranthus fortunei (A.Gray) Solms,tcm,gbif+wikidata
+Albizia julibrissin,Fabaceae,Albizia julibrissin Durazz.,tcm,gbif+wikidata
+Tetradium ruticarpum,Rutaceae,Tetradium ruticarpum (A.Juss.) T.G.Hartley,tcm,gbif+wikidata
+Bassia scoparia,Amaranthaceae,Bassia scoparia (L.) A.J.Scott,tcm,gbif+wikidata
+Hordeum vulgare,Poaceae,Hordeum vulgare L.,tcm,gbif+wikidata
+Clematis apiifolia,Ranunculaceae,Clematis apiifolia DC.,tcm,gbif+wikidata
+Paederia foetida,Rubiaceae,Paederia foetida L.,tcm,gbif+wikidata
+Lonicera japonica,Caprifoliaceae,Lonicera japonica Thunb.,tcm,gbif+wikidata
+Arctium lappa,Asteraceae,Arctium lappa L.,tcm,gbif+wikidata
+Patrinia scabiosifolia,Caprifoliaceae,Patrinia scabiosifolia Fisch. ex Trevir.,tcm,gbif+wikidata
+Inula britannica,Asteraceae,"Inula britannica M.Bieb., 1808",tcm,gbif+wikidata
+Saccharina japonica,Laminariaceae,"Saccharina japonica (Aresch.) C.E.Lane, C.Mayes, Druehl & G.W.Saunders, 2006",tcm,gbif+wikidata
+Hylotelephium erythrostictum,Crassulaceae,Hylotelephium erythrostictum (Miq.) H.Ohba,tcm,gbif+wikidata
+Artocarpus styracifolius,Moraceae,Artocarpus styracifolius Pierre,tcm,gbif+wikidata
+Cunninghamia lanceolata,Cupressaceae,Cunninghamia lanceolata (Lamb.) Hook.,tcm,gbif+wikidata
+Armeniaca vulgaris,Rosaceae,Armeniaca vulgaris Lam.,tcm,gbif+wikidata
+Ischnoderma resinosum,Ischnodermataceae,Ischnoderma resinosum (Schrad.) P.Karst.,tcm,gbif+wikidata
+Pinus densiflora,Pinaceae,Pinus densiflora Siebold & Zucc.,tcm,gbif+wikidata
+Callicarpa kochiana,Lamiaceae,Callicarpa kochiana Makino,tcm,gbif+wikidata
+Citrus reticulata,Rutaceae,Citrus reticulata Blanco,tcm,gbif+wikidata
+Platycladus orientalis,Cupressaceae,Platycladus orientalis (L.) Franco,tcm,gbif+wikidata
+Amygdalus davidiana,Rosaceae,Amygdalus davidiana (Carrière) T.T.Yu,tcm,gbif+wikidata
+Stephania japonica var. discolor,Menispermaceae,Stephania japonica discolor,tcm,gbif+wikidata
+Tephroseris flammea,Asteraceae,Tephroseris flammea (DC.) Holub,tcm,gbif+wikidata
+Gardenia jasminoides,Rubiaceae,Gardenia jasminoides J.Ellis,tcm,gbif+wikidata
+Broussonetia papyrifera,Moraceae,Broussonetia papyrifera (L.) L'Hér. ex Vent.,tcm,gbif+wikidata
+Tussilago farfara,Asteraceae,Tussilago farfara L.,tcm,gbif+wikidata
+Pyrrhidivalva sordida,Noctuidae,"Pyrrhidivalva sordida (Butler, 1881)",tcm,gbif+wikidata
+Lutra lutra,Mustelidae,"Lutra lutra (Linnaeus, 1758)",tcm,gbif+wikidata
+Lemna minor,Araceae,Lemna minor L.,tcm,gbif+wikidata
+Senna obtusifolia,Fabaceae,Senna obtusifolia (L.) H.S.Irwin & Barneby,tcm,gbif+wikidata
+Puccinia adenophorae,Pucciniaceae,Puccinia adenophorae Dietel,tcm,gbif+wikidata
+Eupatorium japonicum,Asteraceae,Eupatorium japonicum Thunb.,tcm,gbif+wikidata
+Kummerowia striata,Fabaceae,Kummerowia striata (Thunb.) Schindl.,tcm,gbif+wikidata
+Ramularia viticis,,Ramularia viticis Syd.,tcm,gbif+wikidata
+Cibotium barometz,Cibotiaceae,Cibotium barometz (L.) J.Sm.,tcm,gbif+wikidata
+Polygonatum macropodum,Asparagaceae,Polygonatum macropodum Turcz.,tcm,gbif+wikidata
+Scrophularia buergeriana,Scrophulariaceae,Scrophularia buergeriana Miq.,tcm,gbif+wikidata
+Scrophularia ningpoensis,Scrophulariaceae,Scrophularia ningpoensis Hemsl.,tcm,gbif+wikidata
+Gypsophila vaccaria,Caryophyllaceae,Gypsophila vaccaria (L.) Sm.,tcm,gbif+wikidata
+Saccharum officinarum,Poaceae,Saccharum officinarum L.,tcm,gbif+wikidata
+Aeoliscus strigatus,Centriscidae,"Aeoliscus strigatus (Günther, 1861)",tcm,gbif+wikidata
+Paliurus ramosissimus,Rhamnaceae,Paliurus ramosissimus (Lour.) Poir.,tcm,gbif+wikidata
+Rhus chinensis,Anacardiaceae,Rhus chinensis Mill.,tcm,gbif+wikidata
+Solanum lyratum,Solanaceae,Solanum lyratum Thunb.,tcm,gbif+wikidata
+Ampelopsis japonica,Vitaceae,Ampelopsis japonica (Thunb.) Makino,tcm,gbif+wikidata
+Aconitum coreanum,Ranunculaceae,Aconitum coreanum (H.Lév.) Rapaics,tcm,gbif+wikidata
+Lilium longiflorum,Liliaceae,Lilium longiflorum Thunb.,tcm,gbif+wikidata
+Gleditsia sinensis,Fabaceae,Gleditsia sinensis Lam.,tcm,gbif+wikidata
+Phaeophyscia hirtella,Physciaceae,Phaeophyscia hirtella Essl.,tcm,gbif+wikidata
+Ferocactus latispinus,Cactaceae,Ferocactus latispinus (Haw.) Britton & Rose,tcm,gbif+wikidata
+Dianthus superbus,Caryophyllaceae,Dianthus superbus L.,tcm,gbif+wikidata
+Diplopterygium giganteum,Gleicheniaceae,Diplopterygium giganteum (Wall. ex Hook.) Nakai,tcm,gbif+wikidata
+Photinia serratifolia,Rosaceae,Photinia serratifolia (Desf.) Kalkman,tcm,gbif+wikidata
+Spiraea chamaedryfolia,Rosaceae,Spiraea chamaedryfolia L.,tcm,gbif+wikidata
+Pyrrosia lingua,Polypodiaceae,Pyrrosia lingua (Thunb.) Farw.,tcm,gbif+wikidata
+Matricaria matricarioides,Asteraceae,"Matricaria matricarioides (Less.) Porter, 1894",tcm,gbif+wikidata
+Fusarium culmorum,Nectriaceae,Fusarium culmorum (Wm.G.Sm.) Sacc.,tcm,gbif+wikidata
+Fraxinus stylosa,Oleaceae,Fraxinus stylosa Lingelsh.,tcm,gbif+wikidata
+Panicum miliaceum,Poaceae,Panicum miliaceum L.,tcm,gbif+wikidata
+Puccinia flaccida,Pucciniaceae,Puccinia flaccida Berk. & Broome,tcm,gbif+wikidata
+Setaria italica,Poaceae,Setaria italica (L.) P.Beauv.,tcm,gbif+wikidata
+Oryza sativa,Poaceae,Oryza sativa L.,tcm,gbif+wikidata
+Notosinister pusillus,Triphoridae,"Notosinister pusillus Kosuge, 1962",tcm,gbif+wikidata
+Campsis grandiflora,Bignoniaceae,Campsis grandiflora (Thunb.) K.Schum.,tcm,gbif+wikidata
+Sanguinolaria diphos,Psammobiidae,"Sanguinolaria diphos (Linnaeus, 1771)",tcm,gbif+wikidata
+Asarum sieboldii,Aristolochiaceae,Asarum sieboldii Miq.,tcm,gbif+wikidata
+Brachyteles arachnoides,Atelidae,"Brachyteles arachnoides (É.Geoffroy Saint-Hilaire, 1806)",tcm,gbif+wikidata
+Cistanche salsa,Orobanchaceae,Cistanche salsa (C.A.Mey.) Beck,tcm,gbif+wikidata
+Premna microphylla,Lamiaceae,Premna microphylla Turcz.,tcm,gbif+wikidata
+Biancaea sappan,Fabaceae,Biancaea sappan (L.) Tod.,tcm,gbif+wikidata
+Lactuca tatarica,Asteraceae,Lactuca tatarica (L.) C.A.Mey.,tcm,gbif+wikidata
+Lactuca sativa,Asteraceae,Lactuca sativa L.,tcm,gbif+wikidata
+Rubia cordifolia,Rubiaceae,Rubia cordifolia L.,tcm,gbif+wikidata
+Skimmia reevesiana,Rutaceae,Skimmia reevesiana (Fortune) Fortune,tcm,gbif+wikidata
+Piper longum,Piperaceae,Piper longum L.,tcm,gbif+wikidata
+Thysanolaena latifolia,Poaceae,Thysanolaena latifolia (Roxb. ex Hornem.) Honda,tcm,gbif+wikidata
+Beta vulgaris,Amaranthaceae,Beta vulgaris L.,tcm,gbif+wikidata
+Dioscorea collettii,Dioscoreaceae,Dioscorea collettii Hook.f.,tcm,gbif+wikidata
+Polygonatum odoratum,Asparagaceae,Polygonatum odoratum (Mill.) Druce,tcm,gbif+wikidata
+Xanthium strumarium,Asteraceae,Xanthium strumarium L.,tcm,gbif+wikidata
+Pueraria montana var. lobata,Fabaceae,Pueraria montana lobata,tcm,gbif+wikidata
+Descurainia sophia,Brassicaceae,Descurainia sophia (L.) Webb ex Prantl,tcm,gbif+wikidata
+Draba nemorosa,Brassicaceae,Draba nemorosa L.,tcm,gbif+wikidata
+Typha latifolia,Typhaceae,Typha latifolia L.,tcm,gbif+wikidata
+Sambucus chinensis,Viburnaceae,Sambucus chinensis Lindl.,tcm,gbif+wikidata
+Ricinus communis,Euphorbiaceae,Ricinus communis L.,tcm,gbif+wikidata
+Vitex rotundifolia,Lamiaceae,Vitex rotundifolia L.f.,tcm,gbif+wikidata
+Laplacea canescens,Theaceae,Laplacea,tcm,gbif+wikidata
+Houttuynia cordata,Saururaceae,Houttuynia cordata Thunb.,tcm,gbif+wikidata
+Coix lacryma-jobi,Poaceae,Coix lacryma-jobi L.,tcm,gbif+wikidata
+Ocimum basilicum,Lamiaceae,Ocimum basilicum L.,tcm,gbif+wikidata
+Adenophora trachelioides,Campanulaceae,Adenophora trachelioides Maxim.,tcm,gbif+wikidata
+Arthraxon hispidus,Poaceae,Arthraxon hispidus (Thunb.) Makino,tcm,gbif+wikidata
+Chlorophytum comosum,Asparagaceae,Chlorophytum comosum (Thunb.) Jacques,tcm,gbif+wikidata
+Acanthus mollis,Acanthaceae,Acanthus mollis L.,tcm,gbif+wikidata
+Paris polyphylla,Melanthiaceae,Paris polyphylla Sm.,tcm,gbif+wikidata
+Potentilla kleiniana,Rosaceae,Potentilla kleiniana Wight & Arn.,tcm,gbif+wikidata
+Cnidium monnieri,Apiaceae,Cnidium monnieri (L.) Cusson,tcm,gbif+wikidata
+Gekko gecko,Gekkonidae,"Gekko gecko (Linnaeus, 1758)",tcm,gbif+wikidata
+Zanthoxylum piperitum,Rutaceae,Zanthoxylum piperitum (L.) DC.,tcm,gbif+wikidata
+Schnabelia terniflora,Lamiaceae,Schnabelia terniflora (Maxim.) P.D.Cantino,tcm,gbif+wikidata
+Scarabaeus sacer,Scarabaeidae,"Scarabaeus sacer Linnaeus, 1758",tcm,gbif+wikidata
+Rubus idaeus,Rosaceae,Rubus idaeus L.,tcm,gbif+wikidata
+Cyrtomium fortunei,Dryopteridaceae,Cyrtomium fortunei J.Sm.,tcm,gbif+wikidata
+Fritillaria cirrhosa,Liliaceae,Fritillaria cirrhosa D.Don,tcm,gbif+wikidata
+Dioscorea cirrhosa,Dioscoreaceae,Dioscorea cirrhosa Lour.,tcm,gbif+wikidata
+Plantago asiatica,Plantaginaceae,Plantago asiatica L.,tcm,gbif+wikidata
+Yulania denudata,Magnoliaceae,Yulania denudata (Desr.) D.L.Fu,tcm,gbif+wikidata
+Akebia quinata,Lardizabalaceae,Akebia quinata (Houtt.) Decne.,tcm,gbif+wikidata
+Polygala tenuifolia,Polygalaceae,Polygala tenuifolia Willd.,tcm,gbif+wikidata
+Cerasus maximowiczii,Rosaceae,Cerasus maximowiczii (Rupr.) Kom.,tcm,gbif+wikidata
+Ziziphus jujuba var. spinosa,Rhamnaceae,Ziziphus jujuba spinosa,tcm,gbif+wikidata
+Alkekengi officinarum,Solanaceae,Alkekengi officinarum Moench,tcm,gbif+wikidata
+Uncaria rhynchophylla,Rubiaceae,Uncaria rhynchophylla (Miq.) Miq.,tcm,gbif+wikidata
+Cladococcus stalactites,Actinommidae,Cladococcus,tcm,gbif+wikidata
+Stephania tetrandra,Menispermaceae,Stephania tetrandra S.Moore,tcm,gbif+wikidata
+Peucedanum japonicum,Apiaceae,Peucedanum japonicum Thunb.,tcm,gbif+wikidata
+Urechis unicinctus,Urechidae,"Urechis unicinctus (Drasche, 1880)",tcm,gbif+wikidata
+Sambucus javanica,Viburnaceae,Sambucus javanica Reinw. ex Blume,tcm,gbif+wikidata
+Chelidonium majus,Papaveraceae,Chelidonium majus L.,tcm,gbif+wikidata
+Myzus stellariae,Aphididae,"Myzus stellariae Strand, 1929",tcm,gbif+wikidata
+Biancaea decapetala,Fabaceae,Biancaea decapetala (Roth) O.Deg.,tcm,gbif+wikidata
+Isatis tinctoria,Brassicaceae,Isatis tinctoria L.,tcm,gbif+wikidata
+Allium tuberosum,Amaryllidaceae,Allium tuberosum Rottler ex Spreng.,tcm,gbif+wikidata
+Coilia grayii,Engraulidae,"Coilia grayii Richardson, 1845",tcm,gbif+wikidata
+Asterophora lycoperdoides,Lyophyllaceae,Asterophora lycoperdoides (Bull.) Ditmar,tcm,gbif+wikidata
+Sinopodophyllum hexandrum,Berberidaceae,Sinopodophyllum hexandrum (Royle) T.S.Ying,tcm,gbif+wikidata
+Tanna sayurie,Cicadidae,"Tanna sayurie Kato, 1926",tcm,gbif+wikidata
+Iris tectorum,Iridaceae,Iris tectorum Maxim.,tcm,gbif+wikidata
+Boiga dendrophila,Colubridae,"Boiga dendrophila (Boie, 1827)",tcm,gbif+wikidata
+Procapra gutturosa,Bovidae,"Procapra gutturosa (Pallas, 1777)",tcm,gbif+wikidata
+Acampe papillosa,Orchidaceae,Acampe papillosa (Lindl.) Lindl.,tcm,gbif+wikidata
+Gentiana scabra,Gentianaceae,Gentiana scabra Bunge,tcm,gbif+wikidata
+Rhizomarasmius,Physalacriaceae,"Rhizomarasmius R.H.Petersen, 2000",tcm,gbif+wikidata
+Attagenus,Dermestidae,"Attagenus Latreille, 1802",tcm,gbif+wikidata
+Pteriomorphia,,Pteriomorphia,tcm,gbif+wikidata
+Viviparidae,Viviparidae,Viviparidae,tcm,gbif+wikidata
+Araneae,,Araneae,tcm,gbif+wikidata
+Cerinthe,Boraginaceae,Cerinthe L.,tcm,gbif+wikidata
+Talpidae,Talpidae,Talpidae,tcm,gbif+wikidata
+Cyatheales,,Cyatheales,tcm,gbif+wikidata

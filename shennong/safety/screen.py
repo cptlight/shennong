@@ -47,7 +47,7 @@ TOXINS = (
 DANGEROUS_MINERAL_DRUGS = (
     "朱砂", "硃砂", "雄黃", "雄黄", "輕粉", "轻粉", "鉛丹", "铅丹", "密陀僧", "砒霜",
     "水銀", "水银", "bhasma", "cinnabar", "realgar", "calomel", "litharge", "lead oxide",
-    "mercury sulfide", "arsenic sulfide",
+    "mercury sulfide", "arsenic sulfide", "mercury", "lead", "arsenic",
 )
 
 #: Dosing / self-treatment language.
@@ -61,17 +61,27 @@ _DOSE_PATTERNS = (
     r"\bself[- ]treat\b",
     r"\bfor my (pain|anxiety|insomnia|diabetes|infection|cancer)\b",
     r"\bhow to take\b",
+    r"\bhow much\b.*\b(ingest|take|use|drink|eat|apply)\b",
+    r"\bis it safe to (give|administer|apply)\b",
+    r"\b(give|administer)\b.*\b(child|kid|baby|patient|my)\b",
 )
 
 _SYNTH_PATTERNS = (
-    r"\b(synth\w*|manufactur\w*|produce|production of|isolat\w*|purif\w*|extract\w*)\b",
+    r"\b(synth\w*|manufactur\w*|produce|production of|isolat\w*|purif\w*|extract\w*|"
+    r"make|making|route to|prepare)\b",
 )
 
 _PATHOGEN_ACTION = (
     r"\b(cultur\w*|isolat\w*|enhanc\w*|weaponi\w*|aerosoli\w*|amplif\w*|propagat\w*)\b",
 )
 
-_WEAPON_PATTERNS = (r"\bweaponi\w*\b", r"\bbioterror\w*\b", r"\bdeliver\w* system\b")
+_WEAPON_PATTERNS = (
+    r"\bweaponi\w*\b",
+    r"\bbioterror\w*\b",
+    r"\bdeliver\w* system\b",
+    r"\bpoison\s+(someone|a person|him|her|people|my)\b",
+    r"\bkill\s+(someone|a person|him|her|people)\b",
+)
 
 DISCLAIMER = (
     "SHENNONG is a research tool for computational ethnopharmacology. Outputs are "
@@ -162,7 +172,8 @@ def screen(text: str) -> ScreeningResult:
     dangerous = _match_terms(text, DANGEROUS_MINERAL_DRUGS)
     if dangerous:
         operational = re.search(
-            r"\b(consume|ingest|take|drink|eat|prepare|make|boil|decoct|dose|dosage|how much)\b"
+            r"\b(consume|ingest|take|drink|eat|prepare|make|boil|decoct|dose|dosage|how much|"
+            r"concentrate|extract|isolate|distill|refine)\b"
             r"|服用|食用|吞服|怎麼吃|怎么吃|劑量|剂量",
             low,
         )

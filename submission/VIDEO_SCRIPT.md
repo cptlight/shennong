@@ -119,7 +119,7 @@ Cut to `corpus/registry/sources.yaml` in the editor; scroll to a `status: unveri
 > process chemistry actually lives.
 >
 > Now — the part that took the longest and won't make a demo. Every source carries its licence *and the
-> evidence for that licence*. [[PENDING: corpus.sources_ok]] we kept. [[PENDING: corpus.excluded]] we rejected.
+> evidence for that licence*. 38 we kept. 1 we rejected.
 >
 > One of those rejections was a Sanskrit *rasaśāstra* text under a **NonCommercial** licence. It would have
 > been easy to include. A NonCommercial dependency would have poisoned an Apache-2.0 release, so we excluded
@@ -137,7 +137,7 @@ panel with the loss curve animating in. Zoom the axes so the train and val lines
 
 **VO:**
 > The model is `shennong-mini`: 8.72 million parameters, trained from scratch on this machine. An Intel i7 —
-> no GPU at all. 900 steps, 7.37 million tokens, on a 16,384-token vocabulary built for Classical Chinese and
+> no GPU at all. [[PENDING: model.steps]] steps, [[PENDING: model.tokens]] tokens, on a 16,384-token vocabulary for Classical Chinese and
 > Sanskrit.
 >
 > The vocabulary is budgeted for Classical Chinese and Sanskrit, because the entire point is reading the
@@ -173,8 +173,12 @@ python -m shennong.cli shi  --n 12 --out app/data/hypotheses.json   # deploy
 > **制 Zhì** — prepare. This is 炮制 applied to text: resolve 異名 across eras and scripts into modern taxa, and
 > translate process words — 炮, 煅, 淬, 九蒸九曬 — into modern extraction chemistry.
 >
-> **配 Pèi** — combine. Build the graph. And crucially, encode the incompatibility rules: 十八反, 十九畏,
-> *viruddha*. Those are pre-modern drug-interaction datasets that nobody has systematically tested.
+> **配 Pèi** — combine. Build the graph. And encode the incompatibility rules: 十八反, 十九畏, *viruddha* — a
+> pre-modern drug-interaction dataset that nobody has systematically tested.
+>
+> One detail worth saying out loud. 十八反 does not contain eighteen pairs. The mnemonic counts drugs, not
+> pairings: sixteen canonical antagonisms cover nineteen named drugs. We report both denominators, because
+> padding the list to look round would mean inventing pairs.
 >
 > **使 Shǐ** — deploy. Rank. Attach a falsification plan to every single thing we emit. And run the theory
 > experiment.

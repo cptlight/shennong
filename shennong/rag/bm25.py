@@ -16,7 +16,9 @@ from shennong.normalize import normalise, tokenize
 
 _EN_STOPWORDS = frozenset(
     "a an and are as at be by did do does for from had has have how in is it its of on "
-    "or that the their there these this to was were what when which who why with".split()
+    "or that the their there these this to was were what when which who why with say says "
+    "said according used use about tell give list mention called named describe explain "
+    "text chapter book works work pass passage".split()
 )
 
 
@@ -64,11 +66,21 @@ class Hit:
 class BM25Index:
     """Okapi BM25 with an inverted index."""
 
+    INDEX_CHARS = 1800
+
     def __init__(self, documents: Sequence[Document], *, k1: float = 1.5, b: float = 0.75) -> None:
         self.documents = list(documents)
         self.k1 = k1
         self.b = b
-        self.doc_tokens: list[list[str]] = [index_tokens(d.text) for d in self.documents]
+        # title tokens are indexed too (they never affect citation offsets, only ranking)
+        # index only the first INDEX_CHARS of each document (full text is still used for
+        # citation offsets); this bounds CPU/memory on the 45M-char real corpus
+        self.doc_tokens: list[list[str]] = [
+            index_tokens(d.text[: self.INDEX_CHARS])
+            + index_tokens(str(d.meta.get("title", "")))
+            + index_tokens(str(d.meta.get("title_en", "")))
+            for d in self.documents
+        ]
         self.doc_len = [len(toks) for toks in self.doc_tokens]
         self.avg_len = (sum(self.doc_len) / len(self.doc_len)) if self.doc_len else 0.0
         self.term_freqs: list[dict[str, int]] = []
@@ -122,6 +134,7 @@ def build_index(passages: Iterable[dict]) -> BM25Index:
                 meta={
                     "source_id": passage.get("source_id", ""),
                     "title": passage.get("title", ""),
+                    "title_en": passage.get("title_en", ""),
                     "year": passage.get("year", 0),
                     "tier": passage.get("tier", 0),
                     "licence": passage.get("licence", ""),
@@ -146,9 +159,9 @@ def best_sentence(text: str, query: str) -> tuple[str, int, int, float]:
             continue
         toks = set(query_tokens(sentence))
         overlap = len(q & toks)
-        coverage = overlap / len(q)
-        if coverage > best[3]:
-            best = (sentence, match.start(), match.end(), coverage)
+        score = overlap / len(q)
+        if score > best[3]:
+            best = (sentence, match.start(), match.end(), score)
     return best
 
 

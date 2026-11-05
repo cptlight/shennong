@@ -81,7 +81,7 @@ Each row names the placeholder exactly as it appears, the artefact that resolves
 | `eval.grounded_answer_rate`, `eval.citation_fidelity`, `eval.correct_refusal_rate`, `eval.over_refusal_rate`, `eval.policy_screen_recall`, `eval.policy_screen_precision` | `report.json → refusal_benchmark` |
 | `ablation.no_theory`, `ablation.no_process`, `ablation.no_resolution`, `ablation.monolingual`, `ablation.weight_sweep` | `report.json → ablations` |
 | `hypotheses.count` | `app/data/hypotheses.json → counts.total` |
-| `rules.eighteen_fan`, `rules.nineteen_wei` | `eval/report.json → interaction_rules` (enumerated pairs with a textual citation, a bridged mechanism and an assay). **Reported as `n/18` and `n/19` — a count without a denominator is not a claim.** |
+| ~~`rules.eighteen_fan`, `rules.nineteen_wei`~~ **RESOLVED** | Counted directly from `corpus/processed/structured/incompatibilities.csv`: **16** canonical 相反 pairs (+2 documented 芍藥 variants = 18 rows) over **19** named drugs; **11** 相畏 relations over **19** drugs (+2 rows from the 川烏/草烏不順犀 doublet). The mnemonics count *drugs*, not pairs — so both denominators are reported and nothing is padded to reach 18/19. |
 | `candidates.count`, `candidates.resolved` | `artifacts/drug_candidates.json` |
 | `limitations.theory_sentence` | written from the resolved theory values (video segment 10) |
 | `app.bytes` | `wc -c app/static/*` |

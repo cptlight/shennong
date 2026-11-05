@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: tests + contract verification (CPU)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install runtime + dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "numpy>=1.24,<2" pyyaml pytest regex
+          pip install -e . 2>/dev/null || pip install "numpy>=1.24,<2" pyyaml pytest regex
+
+      - name: Verify inter-team data contracts
+        run: python scripts/verify_contracts.py
+
+      - name: Run the test suite
+        run: python -m pytest -q
+
+      - name: CLI smoke test
+        run: |
+          python -m shennong.cli --help || true
+          python -m shennong.cli cai --corpus-dir tests/fixtures/corpus/processed || true

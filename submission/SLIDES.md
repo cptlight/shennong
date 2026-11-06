@@ -8,8 +8,9 @@ Speaker notes are one line each. Full speaking text lives in `submission/VIDEO_S
 
 ---
 
-## Slide 1 — A pre-experimental filter for natural-product discovery
+---
 
+## Slide 1 — A pre-experimental filter for natural-product discovery
 **Title:** 2,000 years of processing instructions, filtered by physics before anyone buys a reagent
 
 - **1972, one line, one Nobel.** 葛洪's 4th-century text said *soak in water and wring out the juice* — a
@@ -32,7 +33,6 @@ arithmetic so it can be checked.
 ---
 
 ## Slide 2 — Asian theory is the hypothesis, not the decoration
-
 **Title:** We treat 四氣五味, 歸經 and rasa as a **predictive prior** — and we test it
 
 - "Cold, bitter, enters the Liver channel" is a **claim about chemistry and compartment** — polarity,
@@ -56,7 +56,6 @@ arithmetic so it can be checked.
 ---
 
 ## Slide 3 — First principles → data (the derivation)
-
 **Title:** We derived the corpus from axioms instead of collecting it
 
 - We wrote down the **axioms of ethnopharmacology and Asian pharmacology** first, then derived which data
@@ -78,7 +77,6 @@ bottom.
 ---
 
 ## Slide 4 — The corpus: Asian medicine *and* Asian science
-
 **Title:** 106 sources · 45,604,249 characters ·
 5 languages
 
@@ -100,7 +98,6 @@ bottom.
 ---
 
 ## Slide 5 — The model: 8.72 M parameters, 45 minutes, 18 MB
-
 **Title:** Trained from scratch on a laptop CPU in 45 minutes — and the weights are published
 
 - **8,719,616 parameters** (4,525,312 non-embedding) · 16,384-token vocabulary built for Classical Chinese and
@@ -124,8 +121,9 @@ logged loss curve (train solid, held-out dashed) from `training/runs/shennong-mi
 **Speaker note:** 1.8 % of the budget we were given, on a CPU, with public weights — and we will not pretend it
 is more model than it is.
 
-## Slide 6 — The pipeline: 采 → 制 → 配 → 使
+---
 
+## Slide 6 — The pipeline: 采 → 制 → 配 → 使
 **Title:** Four classical operations of Chinese pharmacy, used as the engineering vocabulary
 
 - **采 Cǎi — collect:** licence-audited acquisition, 繁/简 + IAST/Devanagari normalisation, 13-gram dedupe,
@@ -150,7 +148,6 @@ the specification.
 ---
 
 ## Slide 7 — 60 drug candidates across 15 taxa — one worked end-to-end
-
 **Title:** A prescription line from a 1406 formulary becomes a molecule with a name, a number and an assay
 
 The chain, in order. This is the demo screen:
@@ -179,8 +176,28 @@ a human — it is the pipeline's output, and the provenance locator points into 
 
 ---
 
-## Slide 8 — Does the classical theory predict chemistry?
+## Slide 8 — The arbiter refutes the panel's own consensus
+**Title:** A claim can win 5/5 in the panel and still be physically backwards
 
+- **The claim:** *蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content.* Our five
+  tradition experts scored it **5/5** — well attested, theory-consistent, and a plausible process.
+- **The arbiter:** Clausius–Clapeyron at 100 °C steam. A monoterpene's vapour pressure at that temperature
+  means **98.5 % of it is stripped** in 30 minutes. The claim is not merely wrong — it is backwards.
+- **Scale of it:** **78 of 203** candidates are refuted by the physics alone, and **6 of those 78 had
+  unanimous 5/5 panel agreement.** The system overruled its own consensus with arithmetic.
+- **Why the arbiter is credible:** it is validated before it is trusted — Joback boiling points against known
+  constants, **mean 4.5 % error, 6/6 within 10 %**. A refutation is only as good as that number.
+- **What it is not:** a *validated lumped model*, not ab initio. Quantum chemistry arbitrates fragments today
+  (Koopmans ionisation potentials within 0.82 eV); individual natural products is the next layer.
+
+**Visual:** the 菖蒲 card — 5/5 support chips on the left, the retention bar collapsing to 1.5 % on the right.
+
+**Speaker note:** This is the property a chatbot cannot have. The achievement is not that we generate claims; it
+is that we can kill our own.
+
+---
+
+## Slide 9 — Does the classical theory predict chemistry?
 **Title:** One of five pre-registered axes survived its own test — and it is the mechanistic one
 
 - **Pre-registered.** Thresholds and the permutation construction were written into `docs/EVALUATION.md` *before*
@@ -215,67 +232,22 @@ about it. Both outcomes are the result.
 
 ---
 
-## Slide 9 — Safety, Traditional Knowledge, conservation
-
-**Title:** This corpus contains poisons, living heritage, and endangered species
+## Slide 10 — Safety, living heritage, and the ask
+**Title:** A system that mines this canon must be able to say which of its sources are poison — and what it needs next
 
 - **Medical safety is architecture, not a disclaimer.** No dosing, no diagnosis, no self-treatment, no
-  preparation methods. The Ask surface **refuses by policy** — the dual-use screen is a hard gate in front of
-  the generative surface, not a filter after it.
-- **Toxic materia medica, handled honestly.** Mercury, arsenic and lead drugs (丹, 輕粉, 雄黃, *bhasma*) are in
-  the corpus as **toxicology data**. They appear in the output only as hazard analyses, with the safety
-  annotation rendered on every view of them. We never help with them.
-- **Traditional Knowledge is living heritage, not ore.** Attribution to text, edition and where possible named
-  author is in the data model. **Nagoya-Protocol** benefit-sharing, non-extractive framing, and a working
-  opt-out: a community can withdraw a text and the corpus build honours it.
+  preparation methods; the Ask surface refuses by policy, and the dual-use screen is a hard gate in front of
+  the generative surface. Mercury / arsenic / lead drugs (丹, 輕粉, 雄黃, *bhasma*) appear only as toxicology.
+- **Traditional Knowledge is living heritage, not ore.** Attribution to text, edition and author lives in the
+  data model; Nagoya-Protocol benefit-sharing and a working opt-out are operational, not aspirational.
 - **Conservation is a direct output.** 犀角 → 水牛角 and 穿山甲 → 豬蹄甲 ranked by how load-bearing the
-  ingredient is in its formula (**君 vs 佐**) — a substitution-priority list built from text that costs no
-  animals. For calcined material the classical processing column *is* the argument: ash is ash.
-- **Name collisions are a public-health output.** 木通 vs 關木通: the 1596 marginal note already warns the two
-  "resemble in form, differ in nature". Aristolochic acid is an **IARC Group 1** carcinogen. We rank colliding
-  taxa by toxicity divergence.
+  ingredient is in its formula (君 vs 佐) — a substitution list built from text that costs no animals.
+- **The ask:** a pharmacognosy lab partner for the first three assays; a practitioner and community review panel
+  with benefit-sharing agreed before any wet work; compute to train `shennong-0.5b` properly.
+- **Given back unconditionally:** the corpus audit, the method, the candidates, the negative results and the
+  Workbench — Apache-2.0, no gate, no network required.
 
-**Visual:** left, the refusal demo in the Ask panel (cinnabar block: *policy-screen · dual_use*); right, a
-CITES badge and the 異名同物 collision graph.
-
-**Speaker note:** A system that mines this canon has to be able to say which of its own sources are poison.
-
----
-
-## Slide 10 — Roadmap and the ask
-
-**Title:** From shortlist to validated lead — what we need next
-
-- **Next 3 months:** wet-lab falsification of the top candidates, starting with the cheapest test — the
-  processed-versus-raw comparison for 附子, where the mechanism is known and one LC-MS method decides it.
-- **Next 6 months:** cross-tradition prediction. Fit on 本草綱目, predict a held-out class recorded only in the
-  Ayurvedic or Unani material. If the framework generalises across traditions, it is a discovery engine;
-  if it doesn't, that is a paper too.
-- **Next 12 months:** extend to 農政全書 / 廣群芳譜 / full 救荒本草, and to Tibetan and Southeast Asian material
-  where openly licensed editions exist. Every addition goes through the same licence audit.
-- **The ask:**
-  - a **pharmacognosy / natural-products lab** partner for the first three assays;
-  - a **practitioner and community review** panel, with attribution and benefit-sharing agreed *before* any
-    wet work;
-  - compute to train `shennong-0.5b` properly instead of by recipe.
-- **What we will give back, unconditionally:** the corpus audit, the method, the candidates, the negative
-  results, and the Workbench — Apache-2.0, no gate, no network required.
-
-**Visual:** a three-horizon roadmap strip (3 / 6 / 12 months) with the three asks as labelled pins; closing
-frame is the seal mark and the repo URL.
+**Visual:** refusal demo and CITES badge on the left; a three-horizon roadmap strip (3 / 6 / 12 months) with the
+three asks as pins on the right; closing frame is the seal mark and the repo URL.
 
 **Speaker note:** Everything is already open. What we cannot do alone is the assay.
-
----
-
-## Deck constraints check
-
-| Requirement | Status |
-|---|---|
-| Exactly 10 slides | ✅ 10 |
-| Title + 3–5 bullets + visual + speaker note per slide | ✅ |
-| Leads with drug candidates (not a chatbot) | ✅ slides 1–2 frame the thesis, 7 delivers the artefact |
-| Theory-predictivity experiment gets a full slide | ✅ slide 8 |
-| Real loss curve on the model slide | ✅ slide 5 (slot for `training/runs/*/metrics.json`) |
-| Safety / TK / conservation | ✅ slide 9 |
-| Every number traceable to a repository artefact | ✅ or marked `—` |

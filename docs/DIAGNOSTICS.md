@@ -1,5 +1,10 @@
 # DIAGNOSTICS — what the system says about itself
 
+> **Machine-readable bundle:** every measurement below is collected in
+> [`artifacts/diagnostics_bundle.json`](../artifacts/diagnostics_bundle.json) — funnel, consensus-vs-arbiter,
+> law impact, expert informativeness, item- and question-level routing, novelty distribution, MoE diagnostics,
+> physics validation and the theory experiment. One file, no crawling.
+
 Two things in this project are not claims about the corpus; they are measurements of the system. They are
 the most novel artefacts here, and they are also the ones that can be wrong in a way that flatters us, so
 each is reported with the check that could embarrass it.

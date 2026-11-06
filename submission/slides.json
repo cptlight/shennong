@@ -67,7 +67,7 @@
     "**200 steps × 8,192 = 1,638,400 tokens** in **2,711 s (45 min)** at 604 tokens/s, single thread. Train loss **6.3662**, validation **6.3901** (held-out perplexity 595.9); val curve 9.735 → 7.336 → 6.717 → 6.481 → **6.390**. The chart is that log, not a render.",
     "**The weights: `shennong-mini-f16.gguf` = 18.05 MB** (18,054,560 bytes = 17.2 MiB), 56 tensors, sha256 `a67ad442…4cdb60`. That is **1.8 % of the 1 GB ceiling** — 55× less room than the constraint allowed.",
     "**Stated flatly:** 1,638,400 tokens ÷ 8,719,616 params = **0.188 tokens/param ≈ 0.9 % of a compute-optimal budget**. This is a **pipeline proof, not a useful general model** — the honest claim is reproducibility, not capability.",
-    "**Run provenance:** the checkpoint trained on the 02:47 corpus snapshot (38.24 M chars / 16.69 M tokens) because the token cache was keyed on the tokeniser; the frozen corpus post-dates it. The bug is fixed, and we say so rather than letting the reader assume otherwise. logged loss curve (train solid, held-out dashed) from `training/runs/shennong-mini-r1/metrics.json`, with 18.05 MB and the 1 GB ceiling drawn to scale as a bar. is more model than it is."
+    "**Run provenance:** the checkpoint trained on the 02:47 corpus snapshot (38.24 M chars / 16.69 M tokens) because the token cache was keyed on the tokeniser; the frozen corpus post-dates it. The bug is fixed, and we say so rather than letting the reader assume otherwise. logged loss curve (train solid, held-out dashed) from `training/runs/shennong-mini-r1/metrics.json`, with 18.05 MB and the 1 GB ceiling drawn to scale as a bar. is more model than it is. ---"
    ],
    "visual": "left, the architecture block diagram with the bilingual vocabulary highlighted; right, the real logged loss curve (train solid, held-out dashed) from `training/runs/shennong-mini-r1/metrics.json`, with 18.05 MB and the 1 GB ceiling drawn to scale as a bar.",
    "speaker_note": "1.8 % of the budget we were given, on a CPU, with public weights — and we will not pretend it is more model than it is."
@@ -100,6 +100,19 @@
   },
   {
    "n": 8,
+   "title": "A claim can win 5/5 in the panel and still be physically backwards",
+   "bullets": [
+    "**The claim:** *蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content.* Our five tradition experts scored it **5/5** — well attested, theory-consistent, and a plausible process.",
+    "**The arbiter:** Clausius–Clapeyron at 100 °C steam. A monoterpene's vapour pressure at that temperature means **98.5 % of it is stripped** in 30 minutes. The claim is not merely wrong — it is backwards.",
+    "**Scale of it:** **78 of 203** candidates are refuted by the physics alone, and **6 of those 78 had unanimous 5/5 panel agreement.** The system overruled its own consensus with arithmetic.",
+    "**Why the arbiter is credible:** it is validated before it is trusted — Joback boiling points against known constants, **mean 4.5 % error, 6/6 within 10 %**. A refutation is only as good as that number.",
+    "**What it is not:** a *validated lumped model*, not ab initio. Quantum chemistry arbitrates fragments today (Koopmans ionisation potentials within 0.82 eV); individual natural products is the next layer. is that we can kill our own. ---"
+   ],
+   "visual": "the 菖蒲 card — 5/5 support chips on the left, the retention bar collapsing to 1.5 % on the right.",
+   "speaker_note": "This is the property a chatbot cannot have. The achievement is not that we generate claims; it is that we can kill our own."
+  },
+  {
+   "n": 9,
    "title": "One of five pre-registered axes survived its own test — and it is the mechanistic one",
    "bullets": [
     "**Pre-registered.** Thresholds and the permutation construction were written into `docs/EVALUATION.md` *before* the numbers existed, so the test cannot be tuned into a positive. Each test: effect size, n, p, permutation null (theory vectors shuffled across drugs): · **四氣 (nature)** → compound polarity / thermolability · AUC **0.456** · **歸經 (channel tropism)** → target organ · **hit rate 0.075 vs 0.038 chance**, n = 2,059, **p = 0.008** · **五味 (flavours)** → receptor class · AUC **0.529** · **vīrya (Ayurvedic hot/cold)** → logP / thermolability · **n = 0**, not linkable: the 322 Sanskrit property rows have no Sanskrit→binomial lexicon, so the test cannot be run — reported as *not linkable*, not as *no effect* · **ṣaḍrasa (six tastes)** → action class · **n = 0**, not linkable (same lexicon gap)",
@@ -111,29 +124,16 @@
    "speaker_note": "This is the slide that either validates a two-thousand-year-old framework or tells the truth about it. Both outcomes are the result."
   },
   {
-   "n": 9,
-   "title": "This corpus contains poisons, living heritage, and endangered species",
-   "bullets": [
-    "**Medical safety is architecture, not a disclaimer.** No dosing, no diagnosis, no self-treatment, no preparation methods. The Ask surface **refuses by policy** — the dual-use screen is a hard gate in front of the generative surface, not a filter after it.",
-    "**Toxic materia medica, handled honestly.** Mercury, arsenic and lead drugs (丹, 輕粉, 雄黃, *bhasma*) are in the corpus as **toxicology data**. They appear in the output only as hazard analyses, with the safety annotation rendered on every view of them. We never help with them.",
-    "**Traditional Knowledge is living heritage, not ore.** Attribution to text, edition and where possible named author is in the data model. **Nagoya-Protocol** benefit-sharing, non-extractive framing, and a working opt-out: a community can withdraw a text and the corpus build honours it.",
-    "**Conservation is a direct output.** 犀角 → 水牛角 and 穿山甲 → 豬蹄甲 ranked by how load-bearing the ingredient is in its formula (**君 vs 佐**) — a substitution-priority list built from text that costs no animals. For calcined material the classical processing column *is* the argument: ash is ash.",
-    "**Name collisions are a public-health output.** 木通 vs 關木通: the 1596 marginal note already warns the two \"resemble in form, differ in nature\". Aristolochic acid is an **IARC Group 1** carcinogen. We rank colliding taxa by toxicity divergence. CITES badge and the 異名同物 collision graph. ---"
-   ],
-   "visual": "left, the refusal demo in the Ask panel (cinnabar block: *policy-screen · dual_use*); right, a CITES badge and the 異名同物 collision graph.",
-   "speaker_note": "A system that mines this canon has to be able to say which of its own sources are poison."
-  },
-  {
    "n": 10,
-   "title": "From shortlist to validated lead — what we need next",
+   "title": "A system that mines this canon must be able to say which of its sources are poison — and what it needs next",
    "bullets": [
-    "**Next 3 months:** wet-lab falsification of the top candidates, starting with the cheapest test — the processed-versus-raw comparison for 附子, where the mechanism is known and one LC-MS method decides it.",
-    "**Next 6 months:** cross-tradition prediction. Fit on 本草綱目, predict a held-out class recorded only in the Ayurvedic or Unani material. If the framework generalises across traditions, it is a discovery engine; if it doesn't, that is a paper too.",
-    "**Next 12 months:** extend to 農政全書 / 廣群芳譜 / full 救荒本草, and to Tibetan and Southeast Asian material where openly licensed editions exist. Every addition goes through the same licence audit.",
-    "**The ask:** · a **pharmacognosy / natural-products lab** partner for the first three assays; · a **practitioner and community review** panel, with attribution and benefit-sharing agreed *before* any wet work; · compute to train `shennong-0.5b` properly instead of by recipe.",
-    "**What we will give back, unconditionally:** the corpus audit, the method, the candidates, the negative results, and the Workbench — Apache-2.0, no gate, no network required. frame is the seal mark and the repo URL. ---"
+    "**Medical safety is architecture, not a disclaimer.** No dosing, no diagnosis, no self-treatment, no preparation methods; the Ask surface refuses by policy, and the dual-use screen is a hard gate in front of the generative surface. Mercury / arsenic / lead drugs (丹, 輕粉, 雄黃, *bhasma*) appear only as toxicology.",
+    "**Traditional Knowledge is living heritage, not ore.** Attribution to text, edition and author lives in the data model; Nagoya-Protocol benefit-sharing and a working opt-out are operational, not aspirational.",
+    "**Conservation is a direct output.** 犀角 → 水牛角 and 穿山甲 → 豬蹄甲 ranked by how load-bearing the ingredient is in its formula (君 vs 佐) — a substitution list built from text that costs no animals.",
+    "**The ask:** a pharmacognosy lab partner for the first three assays; a practitioner and community review panel with benefit-sharing agreed before any wet work; compute to train `shennong-0.5b` properly.",
+    "**Given back unconditionally:** the corpus audit, the method, the candidates, the negative results and the Workbench — Apache-2.0, no gate, no network required. three asks as pins on the right; closing frame is the seal mark and the repo URL."
    ],
-   "visual": "a three-horizon roadmap strip (3 / 6 / 12 months) with the three asks as labelled pins; closing frame is the seal mark and the repo URL.",
+   "visual": "refusal demo and CITES badge on the left; a three-horizon roadmap strip (3 / 6 / 12 months) with the three asks as pins on the right; closing frame is the seal mark and the repo URL.",
    "speaker_note": "Everything is already open. What we cannot do alone is the assay."
   }
  ]

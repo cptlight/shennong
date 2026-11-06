@@ -67,7 +67,6 @@ def main() -> int:
     ap.add_argument("--max-steps", type=int, default=-1, help="-1 = full epochs")
     ap.add_argument("--batch", type=int, default=4)
     ap.add_argument("--lr", type=float, default=2e-4)
-    ap.add_argument("--r", type=int, default=32)
     ap.add_argument("--out", default=str(REPO / "training/runs/gpu-sft"))
     args = ap.parse_args()
 
@@ -78,17 +77,14 @@ def main() -> int:
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     model = AutoModelForCausalLM.from_pretrained(
-        BASE_MODEL, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        BASE_MODEL, dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
         device_map="auto" if torch.cuda.is_available() else None)
 
-    from peft import LoraConfig, get_peft_model
-    lora = LoraConfig(r=args.r, lora_alpha=args.r * 2, lora_dropout=0.05,
-                      target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
-                                      "gate_proj", "up_proj", "down_proj"],
-                      task_type="CAUSAL_LM")
-    model = get_peft_model(model, lora)
+    # FULL fine-tuning, not LoRA. peft's LoRA path now requires torchao>=0.16 and Colab ships 0.10, which
+    # is exactly the ImportError that killed the first run. At 494M params full FT needs ~5-6 GB on a T4,
+    # fits comfortably, and is strictly better than LoRA at this size.
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"LoRA trainable: {trainable:,} of {sum(p.numel() for p in model.parameters()):,}")
+    print(f"trainable (full FT): {trainable:,} params")
 
     train = [t for t in (tokenize_pair(tok, r["text"]) for r in load_examples("train")) if t]
     val = [t for t in (tokenize_pair(tok, r["text"]) for r in load_examples("val")) if t]
@@ -116,13 +112,12 @@ def main() -> int:
                       data_collator=lambda b: collate(b, tok.pad_token_id))
     trainer.train()
 
-    # merge and save full fp16 weights for quantization
-    merged = trainer.model.merge_and_unload()
+    # save full fp16 weights for quantization
     out_model = pathlib.Path(args.out) / "merged"
-    merged.save_pretrained(out_model, safe_serialization=True)
+    model.save_pretrained(out_model, safe_serialization=True)
     tok.save_pretrained(out_model)
-    print(f"saved merged model -> {out_model}")
-    print(f"merged params: {sum(p.numel() for p in merged.parameters()):,}")
+    print(f"saved model -> {out_model}")
+    print(f"params: {sum(p.numel() for p in model.parameters()):,}")
     print("NEXT: quantize to GGUF Q4_K_M (~380 MB) — see scripts/export_to_gguf.py on the target machine.")
     return 0
 

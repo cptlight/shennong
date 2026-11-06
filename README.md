@@ -2,6 +2,8 @@
 
 # 神农 SHENNONG
 
+**▶ [Test it in your browser — no install, no login](https://cptlight.github.io/shennong/)**
+
 **Shennong tasted a hundred herbs. We are teaching a 400 MB model to do it again — and to tell us what he hid between the lines.**
 
 *A <1 GB, open-weights, classical-Asian-medicine language model and first-principles discovery engine for ethnopharmacology.*

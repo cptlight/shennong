@@ -328,6 +328,11 @@ Phytochemical and Ethnobotanical Databases, and POWO/WCVP.
 
 ## Links
 
+- **Live judge demo (no install):** https://cptlight.github.io/shennong/
+- **Repository:** https://github.com/cptlight/shennong
+- **Weights (Apache-2.0, no gate):** [v0.1.0 dense GGUF](https://github.com/cptlight/shennong/releases/tag/v0.1.0) · [v0.2.0 sparse MoE](https://github.com/cptlight/shennong/releases/tag/v0.2.0)
+- **How to reproduce:** `DEMO.md` · **Model card:** `model/MODEL_CARD.md` · **Data card:** `corpus/DATA_CARD.md`
+
 - **Repository:** https://github.com/cptlight/shennong
 - **Model weights:** https://github.com/cptlight/shennong/releases/tag/v0.1.0
   — `shennong-mini-f16.gguf`, **18.05 MB** (18,054,560 bytes), Apache-2.0, no gate, sha256

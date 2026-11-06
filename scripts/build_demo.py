@@ -453,6 +453,8 @@ llama-cli -m shennong-mini-f16.gguf -p "附子必須先炮製，因為" -n 80</p
 }
 
 
+function askThis(q){ const inp=document.getElementById('q'); if(inp){inp.value=q;} doAsk('query'); }
+
 function tabAsk(){
   let h = `<section><h2>Ask the model — free form, live</h2>
   <p class="note">Type anything, then choose <b>Answer</b> or <b>Propose a hypothesis</b>. One retrieval path serves both:
@@ -478,10 +480,41 @@ function tabAsk(){
   return h;
 }
 
+const DOMAIN_QUESTIONS = [
+  {track:'🌿 Traditional knowledge', qs:[
+    ['Name mapping (丹參)', 'What is the modern botanical binomial of the historical name 丹參?'],
+    ['Name mapping (甘草)', 'What is the modern botanical binomial of the historical name 甘草?'],
+    ['歸經 / property (人參)', 'What is the recorded nature, flavour and channel tropism of 人參?'],
+    ['十八反 (烏頭)', 'Which herbs are recorded as incompatible with 烏頭?'],
+    ['Therapeutic use (黃連)', 'What is 黃連 recorded to treat?'],
+    ['七情 relation (石膏·知母)', 'In the 七情 framework, how do 石膏 and 知母 interact?'],
+  ]},
+  {track:'🧪 Natural products & drug discovery', qs:[
+    ['Viability (附子 + 炮 → terpenoid)', 'For 附子 (Aconitum carmichaelii), will 炮 enrich its terpenoid content? Give a verdict and what would refute it.'],
+    ['Viability (菖蒲 + 蒸 → terpenoid)', 'For 菖蒲 (Acorus calamus), will 蒸 enrich its terpenoid content? Give a verdict.'],
+    ['Compound class (Salvia miltiorrhiza)', 'What compound class is recorded in Salvia miltiorrhiza?'],
+    ['Compound class (Artemisia annua)', 'What compound class is recorded in Artemisia annua?'],
+    ['Candidate (甘草)', 'What candidate does 甘草 suggest under Track 02, and what would kill it?'],
+    ['Property (大黃)', 'What is the recorded nature, flavour and channel tropism of 大黃?'],
+  ]},
+];
 const WB = {mode:null, wllama:null, corpus:null, busy:false};
 
 async function askInit(){
   const box = document.getElementById('askbox');
+  const qgrid = document.createElement('div');
+  qgrid.style.marginBottom = '16px';
+  qgrid.innerHTML = `<h2 style="margin:0 0 8px">Domain test — click a question to run the live comparison</h2>
+    <p class="note">Each runs the fine-tuned 1.5B and the unfine-tuned baseline on the SAME prompt with the SAME
+    decode, and shows both answers plus the exact prompts. No retrieval, no injected passages.</p>
+    ` + DOMAIN_QUESTIONS.map(g =>
+      `<div style="margin:0 0 12px"><b>${esc(g.track)}</b><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">`
+      + g.qs.map(([label,q]) => `<button data-q="${esc(q)}" style="padding:5px 10px;border:1px solid var(--line);
+          border-radius:999px;background:#fff;font:12px inherit;cursor:pointer">${esc(label)}</button>`).join('')
+      + `</div></div>`).join('');
+  qgrid.querySelectorAll('button').forEach(b => b.onclick = () => askThis(b.dataset.q));
+  const af = document.getElementById('askform');
+  af.parentNode.insertBefore(qgrid, af);
   const form = document.getElementById('askform');
   // 1) prefer a real server (full pipeline: retrieval + model + citations)
   try {

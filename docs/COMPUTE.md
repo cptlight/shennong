@@ -79,7 +79,8 @@ Three levers, in increasing order of what they buy:
 | **parameters** | fluency, generalisation, better phrasing | GPU training | the 19.3 M model is the demo, `make train-flagship` is the path |
 
 The first two are already doing the work the pitch relies on: the physics arbiter refuted **78 of 203**
-enrichment claims, and retrieval puts a checkable span behind every answer. The third is where the current
+enrichment claims — that is, **78 of 203 fail a physics check somewhere** in the funnel, and **of the 28**
+that clear both tradition gates **10** are refuted — and retrieval puts a checkable span behind every answer. The third is where the current
 model is weak, and it is a training-budget problem, not an architecture problem.
 
 **The modularity is the point.** Because experts are additive — a new expert is a module plus a routing

@@ -15,5 +15,68 @@
     "5": 6
   },
   "refuted_despite_unanimous": 6,
-  "claim_template": "preparation should measurably enrich its <chemotype> content (the tradition's intended direction)"
+  "claim_template": "preparation should measurably enrich its <chemotype> content (the tradition's intended direction)",
+  "unanimous_refutations_named": [
+    {
+      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably enrich its terpenoid content",
+      "panel": "5/5",
+      "process": "蒸",
+      "drug": "菖蒲",
+      "binomial": "Acorus calamus",
+      "chemotype": "terpenoid",
+      "violated": "process_physics",
+      "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+    },
+    {
+      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably enrich its terpenoid content",
+      "panel": "5/5",
+      "process": "蒸",
+      "drug": "升麻",
+      "binomial": "Actaea cimicifuga",
+      "chemotype": "terpenoid",
+      "violated": "process_physics",
+      "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+    },
+    {
+      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably enrich its terpenoid content",
+      "panel": "5/5",
+      "process": "炮",
+      "drug": "附子",
+      "binomial": "Aconitum carmichaelii",
+      "chemotype": "terpenoid",
+      "violated": "process_physics",
+      "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) — the class is depleted, so an *enrichment* claim is physically backwards."
+    },
+    {
+      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its terpenoid content",
+      "panel": "5/5",
+      "process": "炮",
+      "drug": "甘草",
+      "binomial": "Glycyrrhiza uralensis",
+      "chemotype": "terpenoid",
+      "violated": "process_physics",
+      "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) — the class is depleted, so an *enrichment* claim is physically backwards."
+    },
+    {
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its phenylpropanoid content",
+      "panel": "5/5",
+      "process": "炙",
+      "drug": "甘草",
+      "binomial": "Glycyrrhiza uralensis",
+      "chemotype": "phenylpropanoid",
+      "violated": "process_physics",
+      "reason": "phenylpropanoid is volatile and 炙 runs at ~120 °C (with honey/vinegar/wine) — the class is depleted, so an *enrichment* claim is physically backwards."
+    },
+    {
+      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its terpenoid content",
+      "panel": "5/5",
+      "process": "蒸",
+      "drug": "甘草",
+      "binomial": "Glycyrrhiza uralensis",
+      "chemotype": "terpenoid",
+      "violated": "process_physics",
+      "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+    }
+  ],
+  "naming_note": "the six cases where the tradition panel was unanimous (5/5) and the physics arbiter still rejected the claim — named so the number can be checked line by line"
 }

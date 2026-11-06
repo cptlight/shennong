@@ -14,7 +14,25 @@ from the repo; the provenance column names the file it comes from.
 | 5 | 2:00–2:30 | Architecture — three layers | `docs/EXPERTS.md` |
 | 6 | 2:30–3:00 | Honest gaps + the ask | `docs/DIAGNOSTICS.md` |
 
----
+> **LOCKED — verified against artefacts, do not edit.** Every number spoken below is read from a file, and
+> each one was re-checked against that file after the last pipeline change. If a number here disagrees with
+> `artifacts/`, the artefact wins and the script is wrong.
+>
+> | spoken | value | source file |
+> |---|---|---|
+> | funnel | 203 → 151 → 24 → 28 → 10 → 18 | `artifacts/tradition_first.json` |
+> | physics checks failed | 78 of 203 | `artifacts/consensus_vs_arbiter.json` |
+> | unanimous 5/5, still refuted | **6** (named: 菖蒲·蒸, 升麻·蒸, 附子·炮, 甘草·炮, 甘草·炙, 甘草·蒸) | `artifacts/consensus_vs_arbiter.json → unanimous_refutations_named` |
+> | 菖蒲 + 蒸 → terpenoid retention | **median 54.2 %**, range 10–94 % | `artifacts/deterministic_outcomes.json` |
+> | reference monoterpene (limonene) | 1.5 % — the *mechanism illustration*, not the card | `shennong/physics/simulate.py` |
+> | Joback validation | 4.5 % mean error, 6/6 within 10 % | `shennong/physics/estimators.py → validate()` |
+> | phytochemistry AUC | 0.443 → 0.607 after the fix | `artifacts/routing_steering.json` |
+> | 歸經 | 7.48 % vs 3.80 % permutation mean, n = 2,059, p = 0.008 | `eval/report.json` |
+> | quantum layer | Koopmans IP MAE 0.82 eV | `artifacts/qm_results.json` |
+>
+> **The one rule for the voice-over:** read the number on screen *before* saying the conclusion. If the card
+> says 54 %, say 54 %. A number spoken from memory is how this project got burned twice.
+
 
 ## 0:00–0:20 — Cold open · the processing instruction
 
@@ -60,9 +78,10 @@ range 10–94 %**. Then the funnel: 203 → 151 → 28 → 10 → 18.
 **On screen, then the funnel, spoken with the middle step included:**
 
 > *"One hundred and fifty-one candidates fail the attestation gate. Twenty-four more fail the tradition's own
-> theory frame. Twenty-eight pass both. Physics refutes ten of those. Eighteen survive. And across the whole
-> set, seventy-eight of two hundred and three fail a physics check somewhere in the funnel — six of them
-> despite unanimous five-out-of-five agreement from the tradition panel."*
+> theory frame — that is fifty-two, and twenty-eight pass both. Physics refutes ten of those. Eighteen survive.
+> And across the whole set, seventy-eight of two hundred and three fail a physics check somewhere in the
+> funnel — six of them despite unanimous five-out-of-five agreement: 菖蒲 and 蒸, 升麻 and 蒸, 附子 and 炮,
+> and three 甘草 preparations. You can check all six by name in the repository."*
 
 **On screen, small:** *Joback boiling points validated against known constants — mean 4.5 % error, 6/6 within
 10 %.* **Provenance:** `shennong/physics/{estimators,simulate}.py`, `artifacts/{deterministic_outcomes,

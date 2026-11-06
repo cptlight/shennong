@@ -27,6 +27,9 @@ jobs:
       - name: Verify inter-team data contracts
         run: python scripts/verify_contracts.py
 
+      - name: Pitch numbers must match the artifacts
+        run: python scripts/audit_script_numbers.py
+
       - name: Run the test suite
         run: python -m pytest -q
 

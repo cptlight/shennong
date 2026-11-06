@@ -1,0 +1,95 @@
+{
+  "run_id": "curriculum-4_patterns",
+  "created_at": "2026-11-06T00:16:58-0800",
+  "config": {
+    "vocab_size": 16384,
+    "d_model": 256,
+    "n_layer": 6,
+    "n_head": 4,
+    "n_kv_head": 1,
+    "d_ff": 768,
+    "seq_len": 512,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05,
+    "tie_word_embeddings": true,
+    "init_std": 0.02,
+    "attention_bias": false,
+    "n_experts": 4,
+    "top_k": 2,
+    "aux_loss_coef": 0.01,
+    "router_jitter": 0.01,
+    "expert_dropout": 0.0
+  },
+  "params": 19342616,
+  "model_family": "moe",
+  "active_params": 12264728,
+  "non_embedding_params": 15148312,
+  "corpus": {
+    "train_tokens": 137810,
+    "val_tokens": 2998,
+    "train_docs": 12985,
+    "val_docs": 265,
+    "corpus_chars": 169221,
+    "tokenizer": "/Users/tom/Documents/ETHno/tokenizer/shennong-bpe/tokenizer.json",
+    "corpus": "/Users/tom/Documents/ETHno/training/curriculum/4_patterns.jsonl",
+    "eos_id": 2,
+    "build_seconds": 0.1
+  },
+  "threads": 5,
+  "torch_version": "2.2.2",
+  "platform": "darwin",
+  "seed": 1337,
+  "steps_completed": 395,
+  "tokens_seen": 3235840,
+  "epochs": 23.48,
+  "wall_clock_s": 2149.9,
+  "tokens_per_s": 1505.1,
+  "final_train_loss": 6.440932750701904,
+  "final_val_loss": 6.4042534828186035,
+  "best_val_loss": 6.4042534828186035,
+  "val_ppl": 604.41,
+  "loss_curve": [
+    {
+      "step": 360,
+      "loss": 8.3461,
+      "val_loss": 8.3978,
+      "lr": 1.602e-05,
+      "tokens_seen": 2957312,
+      "tokens_per_s": 1073.9
+    },
+    {
+      "step": 370,
+      "loss": 7.7681,
+      "val_loss": null,
+      "lr": 1.484e-05,
+      "tokens_seen": 3039232,
+      "tokens_per_s": 1087.7
+    },
+    {
+      "step": 380,
+      "loss": 7.1825,
+      "val_loss": 7.1298,
+      "lr": 1.405e-05,
+      "tokens_seen": 3121152,
+      "tokens_per_s": 1100.5
+    },
+    {
+      "step": 390,
+      "loss": 6.6059,
+      "val_loss": null,
+      "lr": 1.365e-05,
+      "tokens_seen": 3203072,
+      "tokens_per_s": 4.5
+    },
+    {
+      "step": 394,
+      "loss": 6.4409,
+      "val_loss": 6.4043,
+      "lr": 1.36e-05,
+      "tokens_seen": 3235840,
+      "tokens_per_s": 739.6
+    }
+  ],
+  "completed": true,
+  "checkpoint": "/Users/tom/Documents/ETHno/training/runs/curriculum-4_patterns/ckpt.pt"
+}

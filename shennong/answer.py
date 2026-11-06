@@ -44,10 +44,13 @@ def _model():
     from shennong_mini import ModelConfig, load_checkpoint
     from shennong_moe import MoEConfig, ShennongMoE
 
-    ck_path = next((p for p in [
+    import os as _os
+    cands = [ROOT / _os.environ["SHENNONG_CKPT"]] if _os.environ.get("SHENNONG_CKPT") else []
+    cands += [
         ROOT / "training/runs/shennong-moe-r1/ckpt-best.pt",
         ROOT / "training/runs/shennong-mini-r1/ckpt-best.pt",
-    ] if p.exists()), None)
+    ]
+    ck_path = next((p for p in cands if p.exists()), None)
     if ck_path is None:
         _CACHE["loaded"] = True
         return None, None, None

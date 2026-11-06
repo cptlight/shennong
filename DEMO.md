@@ -1,5 +1,20 @@
 # Test it — query the model, then check the numbers
 
+## 0 · Live, hosted (no install)
+
+The demo runs as a Hugging Face Space: **the page below with the model actually behind it**.
+
+| | |
+|---|---|
+| **Hosted demo** | `https://huggingface.co/spaces/<your-org>/shennong` — deploy with `./scripts/deploy_space.sh <your-org>/shennong` (needs `HF_TOKEN`) |
+| **Ask it live** | free-form question → BM25 over 45.6 M characters → the 19.3 M MoE generates over the retrieved passages → citations with `source_id:char_start-char_end` |
+| **Propose a hypothesis** | the model proposes one falsifiable hypothesis over retrieved evidence, with **kill criteria** attached, labelled UNVALIDATED |
+
+The Space clones this repository at build time, so a push to `main` is what updates it — there is no second
+copy to drift.
+
+---
+
 The point of this project is not a page of claims. It is a **live pipeline** you can question. Here is how,
 in order of how little setup it costs you.
 

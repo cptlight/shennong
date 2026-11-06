@@ -1007,6 +1007,7 @@ _CKPT_CANDIDATES = [
 
 
 DEMO_DIR = os.path.join(ROOT, "docs", "demo")
+SERVE_DEMO_AT_ROOT = False
 
 
 def _serve_demo(handler, rel):
@@ -1034,7 +1035,9 @@ def _load_model():
         from shennong_mini import ModelConfig, ShennongMini, load_checkpoint
         from shennong_moe import MoEConfig, ShennongMoE
 
-        ck_path = next((c for c in _CKPT_CANDIDATES if os.path.isfile(os.path.join(ROOT, c))), None)
+        _env_ck = os.environ.get("SHENNONG_CKPT")
+        ck_path = (_env_ck if (_env_ck and os.path.isfile(os.path.join(ROOT, _env_ck))) else None) \
+            or next((c for c in _CKPT_CANDIDATES if os.path.isfile(os.path.join(ROOT, c))), None)
         if ck_path is None:
             _MODEL["error"] = "no trained checkpoint found — run `make train-mini`"
             return _MODEL
@@ -1145,6 +1148,8 @@ class Handler(BaseHTTPRequestHandler):
         q = parse_qs(u.query)
         try:
             if path in ("/", "/index.html"):
+                if SERVE_DEMO_AT_ROOT:
+                    return _serve_demo(self, "index.html")
                 return self._static("index.html")
             if path.startswith("/static/"):
                 return self._static(path[len("/static/"):])
@@ -1350,6 +1355,8 @@ def _warm():
 def main(argv=None):
     ap = argparse.ArgumentParser(description="SHENNONG Workbench")
     ap.add_argument("--port", type=int, default=8765)
+    ap.add_argument("--demo-root", action="store_true",
+                    help="serve the built judge demo at / (used when hosting the demo)")
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--open", action="store_true", help="open a browser window")
     ap.add_argument("--strict", action="store_true",
@@ -1385,6 +1392,11 @@ def main(argv=None):
     url = f"http://{args.host}:{port}/"
     import threading
     threading.Thread(target=_warm, daemon=True).start()
+
+    global SERVE_DEMO_AT_ROOT
+    SERVE_DEMO_AT_ROOT = bool(args.demo_root)
+    if SERVE_DEMO_AT_ROOT:
+        print(f"   demo root: serving {DEMO_DIR} at /")
 
     httpd = ThreadingHTTPServer((args.host, port), Handler)
     httpd.daemon_threads = True

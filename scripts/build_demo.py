@@ -212,6 +212,7 @@ HTML = """<!doctype html>
 </footer>
 <script>
 const DATA = __DATA__;
+const NL = String.fromCharCode(10,10);
 const el = (h) => { const d=document.createElement('div'); d.innerHTML=h; return d.firstElementChild; };
 const esc = (s) => String(s??'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -474,135 +475,70 @@ function tabAsk(){
   return h;
 }
 
+const WB = {mode:null, wllama:null, corpus:null, busy:false};
+
 async function askInit(){
   const box = document.getElementById('askbox');
   const form = document.getElementById('askform');
+  // 1) prefer a real server (full pipeline: retrieval + model + citations)
   try {
     const r = await fetch('/api/model');
     const m = await r.json();
     if (m && m.loaded) {
-      box.style.display='none'; form.style.display='block';
-      box.innerHTML='';
+      WB.mode = 'server';
+      box.style.display = 'none'; form.style.display = 'block';
       document.getElementById('stat').textContent =
-        `${m.family.toUpperCase()} · ${(m.params/1e6).toFixed(2)} M params` +
-        (m.active_params?` (${(m.active_params/1e6).toFixed(2)} M active)`:``) + ` · ${m.checkpoint}`;
+        `server · ${m.family.toUpperCase()} · ${(m.params/1e6).toFixed(2)} M params` +
+        (m.active_params ? ` (${(m.active_params/1e6).toFixed(2)} M active)` : '') + ` · ${m.checkpoint}`;
       document.getElementById('go').onclick = () => doAsk('query');
       document.getElementById('goh').onclick = () => doAsk('hypothesize');
-      document.getElementById('q').addEventListener('keydown', e=>{
-        if ((e.metaKey||e.ctrlKey) && e.key==='Enter') doAsk();
-      });
       document.getElementById('q').focus();
       return;
     }
-    box.innerHTML = `<b>No live endpoint on this copy.</b> You are reading the static page, which cannot run
-      inference (no server, no WASM build). Two ways to query the model for real:<br><br>
-      <b>1 · one command, locally</b><br>
-      <span class="mono">make setup &amp;&amp; make workbench</span> → then open <span class="mono">/demo/</span>
-      on the printed URL. This page detects the endpoint and enables the box.<br><br>
-      <b>2 · GitHub Codespaces</b> — open the repo in a codespace, run <span class="mono">make workbench</span>,
-      and use the forwarded URL.`;
-  } catch (e) {
-    box.innerHTML = `<b>No live endpoint on this copy.</b> The static page cannot run inference. Run
-      <span class="mono">make workbench</span> locally and open <span class="mono">/demo/</span> on the printed URL,
-      or use a Codespace.`;
-  }
+  } catch (e) { /* no server: fall through to in-browser inference */ }
+
+  // 2) no server on this copy — point at a live instance instead of pretending to run one
+  WB.mode = 'none';
+  box.innerHTML = `<b>This copy is static, so it cannot run the model.</b>
+    The page is generated from the repository's artefacts, so every figure here is real — but inference needs
+    a process. Two live options:<br><br>
+    <b>1 · Hosted demo (Hugging Face Space)</b> — the same page with the model behind it.<br>
+    <b>2 · Your own machine</b> — <span class="mono">make setup &amp;&amp; make workbench</span>, then open
+    <span class="mono">/demo/</span> on the printed URL. The ask box detects the endpoint and enables itself.<br><br>
+    <b>3 · Codespace</b> — open the repo in a codespace, run <span class="mono">make workbench</span>,
+    and use the forwarded URL.`;
+  form.style.display = 'none';
+  return;
 }
 
-async function doAsk(mode){
-  mode = mode || 'query';
-  const q = document.getElementById('q').value.trim();
-  if (!q) return;
-  const out = document.getElementById('askout');
-  const stat = document.getElementById('stat');
-  const k = document.getElementById('k').value || 5;
-  stat.textContent = 'running…';
-  out.innerHTML = '<p class="note">retrieving and generating…</p>';
-  try {
-    const r = await fetch('/api/' + (mode === 'hypothesize' ? 'hypothesize' : 'query'),
-      {method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({question:q, k:Number(k), max_new_tokens: mode==='hypothesize'?96:72})});
-    const d = await r.json();
-    stat.textContent = d.total_latency_ms != null ? `total ${d.total_latency_ms} ms` : '';
-    if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
-    let h = '';
-    if (d.retrieved && d.retrieved.length) {
-      h += `<h2 style="margin-top:18px">Passages retrieved (${d.retrieved.length}) — this is the domain knowledge</h2>`;
-      for (let i=0;i<d.retrieved.length;i++){
-        const p = d.retrieved[i];
-        h += `<div class="card" style="margin:8px 0">
-          <p style="font-size:12px;color:#6b6157">[${i+1}] ${esc(p.title)} (${esc(p.year)}) ·
-             <span class="mono">${esc(p.source_id)}:${p.char_start}-${p.char_end}</span> · BM25 ${p.score}</p>
-          <div class="quote zh">${esc(p.passage)}</div></div>`;
-      }
-    }
+function renderServerResult(out, d, mode){
+  if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
+  let h = '';
+  if (d.retrieved && d.retrieved.length) {
+    h += `<h2 style="margin-top:18px">Passages retrieved (${d.retrieved.length}) — this is the domain knowledge</h2>`;
+    d.retrieved.forEach((p, i) => {
+      h += `<div class="card" style="margin:8px 0">
+        <p style="font-size:12px;color:#6b6157">[${i+1}] ${esc(p.title)} (${esc(p.year)}) ·
+        <span class="mono">${esc(p.source_id)}:${p.char_start}-${p.char_end}</span> · BM25 ${p.score}</p>
+        <div class="quote zh">${esc(p.passage)}</div></div>`;
+    });
+  }
+  if (mode === 'hypothesize') {
+    h += `<h2 style="margin-top:18px">Proposed hypothesis</h2>
+      <div class="warn"><b>Unvalidated.</b> ${esc(d.status||'')}</div>
+      <div class="card mono" style="white-space:pre-wrap">${esc(d.hypothesis||'')}</div>
+      <h2 style="margin-top:18px">What would refute it</h2>
+      <div class="card"><ul>${(d.kill_criteria||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div>`;
+  } else {
     if (d.raw_completion !== undefined) {
       h += `<h2 style="margin-top:18px">Bare model completion — no context</h2>
-        <div class="warn"><b>Honest comparison:</b> this is the 19.3 M model answering alone. At this scale it is
-        weak, and we show it rather than hide it.</div>
-        <div class="card mono" style="white-space:pre-wrap">${esc(d.raw_completion||'')}</div>
-        <p class="note">raw latency ${esc(d.raw_latency_ms)} ms</p>`;
+        <div class="card mono" style="white-space:pre-wrap">${esc(d.raw_completion||'')}</div>`;
     }
-    if (mode === 'hypothesize') {
-      h += `<h2 style="margin-top:18px">Proposed hypothesis</h2>
-        <div class="warn"><b>Unvalidated.</b> ${esc(d.status||'')}</div>
-        <div class="card mono" style="white-space:pre-wrap">${esc(d.hypothesis||'')}</div>
-        <h2 style="margin-top:18px">What would refute it</h2>
-        <div class="card"><ul>${(d.kill_criteria||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div>
-        <p class="note">latency ${esc(d.latency_ms)} ms</p>`;
-    } else {
-      h += `<h2 style="margin-top:18px">Model completion conditioned on the retrieved passages</h2>
-        <div class="card mono" style="white-space:pre-wrap">${esc(d.answer||'')}</div>
-        <p class="note">grounded latency ${esc(d.grounded_latency_ms)} ms · ${esc(d.note)}</p>`;
-    }
-    out.innerHTML = h;
-  } catch (e) {
-    out.innerHTML = `<div class="warn">Request failed: ${esc(String(e))}</div>`;
+    h += `<h2 style="margin-top:18px">Model completion conditioned on the retrieved passages</h2>
+      <div class="card mono" style="white-space:pre-wrap">${esc(d.answer||'')}</div>
+      <p class="note">grounded latency ${esc(d.grounded_latency_ms)} ms · ${esc(d.note)}</p>`;
   }
-}
-
-
-function tabCurriculum(){
-  const cur = DATA.curriculum || {};
-  const so = DATA.self_observation || {};
-  let h = `<section><h2>Curriculum — the model is trained in a dependent order, not shuffled</h2>
-  <p class="note">A general model can see a corpus in random order. A model meant to reason from first
-  principles about traditional medicine cannot: foundations have to come before the canon, the canon before
-  regional comparison, the operations before the patterns, the method before grounding.</p>`;
-  const stages = cur.stages || [];
-  if (stages.length) {
-    h += `<table><tr><th>#</th><th>stage</th><th>why it comes here</th><th>steps</th><th>val loss</th><th>docs</th></tr>`;
-    for (const st of stages) {
-      h += `<tr><td>${esc(st.stage.split('_')[0])}</td><td><b>${esc(st.name)}</b></td>
-        <td style="font-size:12.5px">${esc(st.why)}</td><td>${esc(st.steps)}</td>
-        <td>${st.val_loss!=null?st.val_loss.toFixed(3):'—'}</td><td>${esc((st.docs||0).toLocaleString())}</td></tr>`;
-    }
-    h += `</table>`;
-  } else {
-    h += `<div class="warn">Curriculum run not finished yet — stage files are built and training is in
-      progress. Run <span class="mono">python training/curriculum.py --build-only</span> to see the stage
-      breakdown, or <span class="mono">make curriculum</span> to run it.</div>`;
-  }
-  h += `<h2 style="margin-top:24px">Stage 7 — self-observation</h2>
-  <p class="note">The last stage is not more data. It is the model reading <b>its own activations</b>: given a
-  passage that contains the answer versus a passage about a different herb, a linear probe per layer predicts
-  which is which. If AUC is above chance at some layer, the model <b>represents</b> its own grounding.</p>`;
-  const rows = so.probe_auc_by_layer || [];
-  if (rows.length) {
-    h += `<table><tr><th>layer</th><th>probe AUC</th><th></th></tr>`;
-    for (const r of rows) {
-      const w = Math.max(2, (r.auc - 0.3) / 0.4 * 100);
-      h += `<tr><td>${esc(r.layer)}</td><td><b>${r.auc.toFixed(3)}</b></td>
-        <td><div class="barc"><i style="width:${w}%;background:${r.auc>0.6?'var(--green)':r.auc>0.53?'var(--red)':'#c9bfae'}"></i></div></td></tr>`;
-    }
-    h += `</table><p class="note">chance = 0.500 · best layer ${esc((so.best_layer||{}).layer)} at
-      ${esc((so.best_layer||{}).auc)} · checkpoint ${esc(so.checkpoint||'')} step ${esc(so.step)}</p>
-      <div class="warn"><b>Honest reading:</b> ${esc(so.interpretation||'')}</div>`;
-  } else {
-    h += `<div class="warn">Self-observation probe has not run yet:
-      <span class="mono">python training/self_observe.py</span></div>`;
-  }
-  h += `</section>`;
-  return h;
+  out.innerHTML = h;
 }
 
 const TABS = {ask:tabAsk, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
@@ -633,10 +569,46 @@ show('funnel');
 """
 
 
+def build_browser_corpus(max_passages: int = 1400, chars: int = 320) -> dict:
+    """A small retrieval corpus the browser can score without a server.
+
+    1,400 passages is not the 45.6 M-character corpus — it is a demo slice, and the page says so. The point
+    is that a judge on GitHub Pages gets retrieval + generation client-side, not a model talking to itself.
+    """
+    import json as _json
+    out = []
+    try:
+        with open(ROOT / "corpus/processed/corpus.jsonl", encoding="utf-8") as fh:
+            for line in fh:
+                if len(out) >= max_passages:
+                    break
+                if not line.strip():
+                    continue
+                r = _json.loads(line)
+                text = (r.get("text") or "").strip()
+                # keep a passage-sized window with a real offset so citations are checkable
+                for start in range(0, min(len(text), chars * 6), chars):
+                    if len(out) >= max_passages:
+                        break
+                    chunk = text[start:start + chars]
+                    if len(chunk) < 80:
+                        continue
+                    out.append({"s": r.get("source_id"), "t": r.get("title"),
+                                "y": r.get("year"), "o": start,
+                                "x": chunk})
+    except FileNotFoundError:
+        return {"passages": [], "note": "corpus.jsonl not present at build time"}
+    return {"passages": out, "n": len(out),
+            "note": ("demo slice for client-side retrieval; the full pipeline uses the 45.6 M-character corpus")}
+
+
 def main() -> int:
     data = build_data()
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "data.json").write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
+    bc = build_browser_corpus()
+    (OUT / "browser_corpus.json").write_text(json.dumps(bc, ensure_ascii=False), encoding="utf-8")
+    print(f"  browser corpus: {bc['n']} passages")
     # Inline JSON inside <script> must not contain "</script>" or "<!--" — escape the angle brackets.
     # (Our corpus text is Chinese and never does this, but a future artefact could, and a broken demo page
     # is worse than a slightly larger one.)

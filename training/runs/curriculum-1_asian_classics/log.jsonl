@@ -1,0 +1,5 @@
+{"step": 240, "loss": 6.6349, "val_loss": 6.8499, "lr": 3.502e-05, "tokens_seen": 1974272, "tokens_per_s": 1172.2}
+{"step": 250, "loss": 6.6596, "val_loss": null, "lr": 3.03e-05, "tokens_seen": 2056192, "tokens_per_s": 1038.2}
+{"step": 260, "loss": 6.8846, "val_loss": 6.8155, "lr": 2.697e-05, "tokens_seen": 2138112, "tokens_per_s": 1107.4}
+{"step": 270, "loss": 6.5603, "val_loss": null, "lr": 2.507e-05, "tokens_seen": 2220032, "tokens_per_s": 1049.1}
+{"step": 277, "loss": 6.6191, "val_loss": 6.7936, "lr": 2.461e-05, "tokens_seen": 2277376, "tokens_per_s": 1062.1}

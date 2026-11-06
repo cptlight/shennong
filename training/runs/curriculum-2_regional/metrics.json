@@ -1,0 +1,95 @@
+{
+  "run_id": "curriculum-2_regional",
+  "created_at": "2026-11-06T00:05:19-0800",
+  "config": {
+    "vocab_size": 16384,
+    "d_model": 256,
+    "n_layer": 6,
+    "n_head": 4,
+    "n_kv_head": 1,
+    "d_ff": 768,
+    "seq_len": 512,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05,
+    "tie_word_embeddings": true,
+    "init_std": 0.02,
+    "attention_bias": false,
+    "n_experts": 4,
+    "top_k": 2,
+    "aux_loss_coef": 0.01,
+    "router_jitter": 0.01,
+    "expert_dropout": 0.0
+  },
+  "params": 19342616,
+  "model_family": "moe",
+  "active_params": 12264728,
+  "non_embedding_params": 15148312,
+  "corpus": {
+    "train_tokens": 12709339,
+    "val_tokens": 265245,
+    "train_docs": 7041,
+    "val_docs": 143,
+    "corpus_chars": 12562956,
+    "tokenizer": "/Users/tom/Documents/ETHno/tokenizer/shennong-bpe/tokenizer.json",
+    "corpus": "/Users/tom/Documents/ETHno/training/curriculum/2_regional.jsonl",
+    "eos_id": 2,
+    "build_seconds": 5.7
+  },
+  "threads": 5,
+  "torch_version": "2.2.2",
+  "platform": "darwin",
+  "seed": 1337,
+  "steps_completed": 317,
+  "tokens_seen": 2596864,
+  "epochs": 0.204,
+  "wall_clock_s": 353.6,
+  "tokens_per_s": 7344.5,
+  "final_train_loss": 2.9954670667648315,
+  "final_val_loss": 2.7051424384117126,
+  "best_val_loss": 2.7051424384117126,
+  "val_ppl": 14.96,
+  "loss_curve": [
+    {
+      "step": 280,
+      "loss": 2.902,
+      "val_loss": 2.7269,
+      "lr": 2.644e-05,
+      "tokens_seen": 2301952,
+      "tokens_per_s": 1088.0
+    },
+    {
+      "step": 290,
+      "loss": 2.8925,
+      "val_loss": null,
+      "lr": 2.354e-05,
+      "tokens_seen": 2383872,
+      "tokens_per_s": 1081.1
+    },
+    {
+      "step": 300,
+      "loss": 3.6701,
+      "val_loss": 2.7135,
+      "lr": 2.153e-05,
+      "tokens_seen": 2465792,
+      "tokens_per_s": 1064.5
+    },
+    {
+      "step": 310,
+      "loss": 3.0101,
+      "val_loss": null,
+      "lr": 2.043e-05,
+      "tokens_seen": 2547712,
+      "tokens_per_s": 1058.3
+    },
+    {
+      "step": 316,
+      "loss": 2.9955,
+      "val_loss": 2.7051,
+      "lr": 2.02e-05,
+      "tokens_seen": 2596864,
+      "tokens_per_s": 1012.0
+    }
+  ],
+  "completed": true,
+  "checkpoint": "/Users/tom/Documents/ETHno/training/runs/curriculum-2_regional/ckpt.pt"
+}

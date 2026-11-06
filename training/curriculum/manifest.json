@@ -1,0 +1,51 @@
+{
+  "0_foundations": {
+    "name": "FOUNDATIONS",
+    "why": "physics/chemistry/biology/botany/anatomy \u2014 the first-principles substrate every later claim is checked against",
+    "docs": 10753,
+    "chars": 16322419,
+    "path": "training/curriculum/0_foundations.jsonl"
+  },
+  "1_asian_classics": {
+    "name": "ASIAN CLASSICS",
+    "why": "the primary canon in the original scripts, before any secondary retelling",
+    "docs": 8001,
+    "chars": 13892564,
+    "path": "training/curriculum/1_asian_classics.jsonl"
+  },
+  "2_regional": {
+    "name": "REGIONAL TRADITIONS",
+    "why": "the neighbouring systems, so the model can compare rather than memorise one",
+    "docs": 7184,
+    "chars": 12562956,
+    "path": "training/curriculum/2_regional.jsonl"
+  },
+  "3_alchemy_process": {
+    "name": "ALCHEMY & PROCESS",
+    "why": "the operations that make a preparation work \u2014 \u70ae\u88fd, distillation, calcination",
+    "docs": 803,
+    "chars": 1339357,
+    "path": "training/curriculum/3_alchemy_process.jsonl"
+  },
+  "4_patterns": {
+    "name": "PATTERNS",
+    "why": "the structured record as text: compound \u2192 plant \u2192 use \u2192 property \u2192 incompatibility",
+    "docs": 13250,
+    "chars": 169221,
+    "path": "training/curriculum/4_patterns.jsonl"
+  },
+  "5_pharmacology": {
+    "name": "PHARMACOLOGY & METHOD",
+    "why": "how a discovery is actually made \u2014 the method, not more facts",
+    "docs": 7123,
+    "chars": 11490840,
+    "path": "training/curriculum/5_pharmacology.jsonl"
+  },
+  "6_grounding": {
+    "name": "GROUNDING",
+    "why": "citation discipline: answer only over retrieved spans, say so when the span is absent",
+    "docs": 725,
+    "chars": 113993,
+    "path": "training/curriculum/6_grounding.jsonl"
+  }
+}

@@ -36,6 +36,9 @@ app-data:  ## materialise the Workbench data files from the pipeline
 	$(PY) -m shennong.cli pei --corpus-dir corpus/processed --out-kg app/data/kg.json
 	$(PY) -m shennong.cli shi --n 12 --out app/data/hypotheses.json
 
+compute:  ## capacity-per-FLOP budget from the two training runs
+	$(PY) scripts/compute_budget.py
+
 demo:  ## rebuild the static judge demo -> docs/demo/
 	$(PY) scripts/build_demo.py
 
@@ -54,4 +57,4 @@ all: corpus tokenizer train-mini export eval app-data  ## full pipeline
 clean:  ## remove caches (keeps corpus and checkpoints)
 	find . -name __pycache__ -type d -prune -exec rm -rf {} + ; rm -rf .pytest_cache
 
-.PHONY: help setup corpus tokenizer train-mini train-flagship novelty demo export eval app-data workbench test all clean
+.PHONY: help setup corpus tokenizer train-mini train-flagship novelty compute demo export eval app-data workbench test all clean

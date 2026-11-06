@@ -118,6 +118,7 @@ def build_data() -> dict:
         "routing": {"item_level": load("artifacts/expert_routing.json", {}),
                     "question_level": load("artifacts/question_routing.json", {})},
         "moe": moe.get("comparison", {}),
+        "compute": load("artifacts/compute_budget.json", {}),
         "qm": load("artifacts/qm_results.json", {}),
         "discoveries": {k: {"n": v.get("n"), "top": (v.get("top") or [])[:8]}
                         for k, v in (disc.get("findings") or {}).items()} if disc else {},
@@ -377,7 +378,10 @@ function tabDiag(){
   <tr><td>physics refutations under enrichment claims</td><td><b>${esc((DATA.consensus_vs_arbiter||{}).physics_refutations??'—')}</b> / ${esc((DATA.consensus_vs_arbiter||{}).n_candidates??'—')}</td></tr>
   <tr><td>…of which unanimous 5/5 panel agreement</td><td><b>${esc((DATA.consensus_vs_arbiter||{}).refuted_despite_unanimous??'—')}</b></td></tr>
   <tr><td>structural novelty distinct values</td><td><b>42</b> across 60 candidates (range 0.000–0.750) — a degenerate score now fails the build</td></tr>
-  <tr><td>MoE vs dense, same 1.64 M tokens</td><td>val loss <b>${d.val_loss_delta!=null?d.val_loss_delta.toFixed(3):'−0.91'}</b> nats better · throughput <b>${d.tokens_per_s_ratio!=null?'+'+((d.tokens_per_s_ratio-1)*100).toFixed(0)+'%':'+27%'}</b></td></tr>
+  <tr><td>MoE vs dense, same 1.64 M tokens</td><td>val loss <b>${d.val_loss_delta!=null?d.val_loss_delta.toFixed(3):'−0.91'}</b> nats better</td></tr>
+  <tr><td><b>capacity per FLOP</b> (the architecture claim)</td><td><b>${(DATA.compute||{}).derived?(DATA.compute.derived.capacity_per_flop_gain.toFixed(2)+'× more parameters per FLOP'):'1.58× more parameters per FLOP'}</b> — ${(DATA.compute||{}).derived?(DATA.compute.derived.capacity_ratio.toFixed(2)+'× capacity for '+DATA.compute.derived.compute_ratio.toFixed(2)+'× compute'):'2.22× capacity for 1.41× compute'}</td></tr>
+  <tr><td>deployable footprint</td><td>${(DATA.compute||{}).deployability?((DATA.compute.deployability.fp16_weights_bytes/1e6).toFixed(1)+' MB fp16 · CPU-only · offline'):'38.7 MB fp16 · CPU-only · offline'}</td></tr>
+  <tr><td>⚠️ throughput comparison</td><td><b>confounded</b> — MoE run used 2 torch threads, dense run 1; the speed difference may be entirely the second thread. No claim rests on it.</td></tr>
   </table>`;
   const disc = DATA.discoveries || {};
   if (Object.keys(disc).length) {

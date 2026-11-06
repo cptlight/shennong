@@ -136,6 +136,11 @@ Published whether or not we like the answer.
 | Vocab | 16,384 (en · la · zh-Hant; Devanagari present but **not** in vocab) | 151,936 (Qwen) |
 | Trained on | **1,638,400 tokens** (0.19 tok/param · **0.9 % of compute-optimal** — deliberately undertrained) | recipe only — **not run at this scale** |
 
+> **The architecture thesis, in one line:** a sparse MoE buys total capacity without paying per-token
+> compute — **1.58× more parameters per FLOP**, 2.22× capacity for 1.41× compute — which is what lets a
+> domain model run on a CPU instead of a GPU cluster. Full measurement, including the confounds:
+> **[`docs/COMPUTE.md`](docs/COMPUTE.md)**.
+
 ### Sparse MoE vs dense — measured, not assumed
 
 We trained both at **identical token budget (1,638,400 tokens)** on the same CPU:
@@ -144,13 +149,19 @@ We trained both at **identical token budget (1,638,400 tokens)** on the same CPU
 |---|---|---|
 | Parameters | 8,719,616 | **19,342,616 total / 12,264,728 active** (4 experts, top-2) |
 | Held-out val loss | 6.3901 | **5.4828** (−0.91 nats) |
-| Throughput | 604 tok/s | **769 tok/s (+27 %)** |
-| Wall clock | 45.2 min | **35.5 min** |
+| Throughput | 604 tok/s | **769 tok/s** ⚠️ *confounded — see below* |
+| Wall clock | 45.2 min | **35.5 min** ⚠️ *same confound* |
 | Weights | 18.05 MB f16 GGUF | **47.1 MB f16 safetensors** |
 
-**Why it wins:** 2.2× the capacity for only 1.4× the active compute per token — the FFN is where the
-knowledge sits, and routing lets four specialists cover Chinese, Latin, Sanskrit and English
-pharmaceutical text without every token paying for all of them.
+**Why it wins:** **2.2× the capacity for only 1.4× the active compute per token** — the FFN is where the
+knowledge sits, and routing lets four specialists cover Chinese, Latin, Sanskrit and English pharmaceutical
+text without every token paying for all of them. That is **1.58× more parameters per FLOP** than the dense
+model, and it is the number the architecture claim rests on.
+
+> **Correction, because it matters:** the throughput and wall-clock rows are **not a clean comparison**.
+> The MoE run used **2 torch threads**, the dense run **1**. The observed speed difference could be
+> entirely the second thread. It is reported here rather than deleted, but it is *suggestive, not causal*.
+> The capacity-per-FLOP ratio (1.58×) and the val-loss delta do **not** depend on threads.
 
 **And the router independently rediscovered the script structure.** Mean gate weight per expert, then
 Jensen–Shannon distance between the routing distributions per language (0 = identical, 1 = disjoint):

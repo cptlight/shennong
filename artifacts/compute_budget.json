@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-11-05T23:32:55-0800",
+  "thesis": "A sparse MoE buys total capacity without paying per-token compute. On CPU that is the whole game: capacity per FLOP decides what a domain model can hold, and therefore whether it can run where the work actually happens.",
+  "hardware": "2015 iMac, Intel i7-4790K, 32 GB RAM, CPU only, no CUDA, no MPS",
+  "runs": {
+    "moe": {
+      "params_total": 19342616,
+      "params_active": 12264728,
+      "active_fraction": 0.6341,
+      "n_experts": 4,
+      "top_k": 2,
+      "val_loss": 5.482813835144043,
+      "tokens_per_s": 768.7,
+      "threads": 2,
+      "tokens_seen": 1638400,
+      "steps": 200
+    },
+    "dense": {
+      "params_total": 8719616,
+      "params_active": 8719616,
+      "val_loss": 6.390119135379791,
+      "tokens_per_s": 604.3,
+      "threads": 1,
+      "tokens_seen": 1638400,
+      "steps": 200
+    }
+  },
+  "derived": {
+    "capacity_ratio": 2.218,
+    "compute_ratio": 1.407,
+    "capacity_per_flop_gain": 1.577,
+    "val_loss_delta_nats": -0.9073,
+    "tokens_per_s_ratio": 1.272,
+    "dense_equivalent_params": 19342616,
+    "flops_to_match_capacity_densely": 38685232.0
+  },
+  "deployability": {
+    "fp16_weights_bytes": 38685232,
+    "fp32_checkpoint_bytes": 77370464,
+    "note": "A 19.3 M model is 38 MB in fp16 \u2014 it fits in a browser tab, a phone, or a raspberry pi. That is not a marketing point: it decides whether a field researcher, a rural clinic, or an offline laptop can run it at all."
+  },
+  "measured_on_this_machine": {
+    "median_query_latency_ms": 1636,
+    "cold_start_ms": 4073,
+    "note": "retrieval + generation over 5 passages, CPU only, measured through /api/query"
+  },
+  "confounds_stated": [
+    "the MoE run used 2 torch threads, the dense run 1 \u2014 the throughput comparison is therefore NOT clean and is reported as suggestive, not causal",
+    "both runs saw the same 1,638,400 tokens (200 steps), which is ~0.9 % of compute-optimal for either size \u2014 an undertrained comparison, valid for architecture ablation, useless for capability",
+    "single seed each; different corpus snapshots between the two runs"
+  ],
+  "what_this_does_not_claim": [
+    "that this model beats a frontier model at open-ended writing \u2014 it does not, and the demo shows it",
+    "that 0.91 nats transfers to a larger scale \u2014 one endpoint, one seed",
+    "that CPU inference replaces GPU training \u2014 training still wants a GPU; serving does not"
+  ]
+}

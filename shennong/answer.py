@@ -168,3 +168,54 @@ def answer_freeform(question: str, k: int = 5, max_new_tokens: int = 72, with_ra
 if __name__ == "__main__":
     q = sys.argv[1] if len(sys.argv) > 1 else "Why is 附子 processed before use?"
     print(json.dumps(answer_freeform(q), indent=2, ensure_ascii=False)[:2200])
+
+
+HYPOTHESIS_INSTRUCTION = (
+    "Propose ONE testable hypothesis about the question below, using only these passages. "
+    "State the claim, the mechanism, and the observation that would prove it wrong.")
+
+HYPOTHESIS_PROMPT = (
+    "You are a natural-products chemist working from classical Asian medical texts. "
+    "A hypothesis is only useful if it can be falsified."
+)
+
+
+def hypothesise(question: str, k: int = 6, max_new_tokens: int = 96) -> dict:
+    """Propose a falsifiable hypothesis over retrieved evidence. Same retrieval path; different instruction.
+
+    This is not a lookup: the model writes the hypothesis, the passages are its only evidence, and the
+    result is labelled unvalidated. Kill criteria are attached by the pipeline so a hypothesis cannot be
+    emitted without a way to refute it.
+    """
+    q = (question or "").strip()
+    if not q:
+        return {"ok": False, "error": "empty question"}
+    model, tok, ck = _model()
+    spans = retrieve(q, k=k)
+    if not spans:
+        return {"ok": False, "error": "no passage in the corpus shares vocabulary with this question",
+                "retrieved": []}
+    ctx = "\n\n".join(f"[{i+1}] {s['title']} ({s['year']}): {s['passage']}" for i, s in enumerate(spans))
+    prompt = f"{HYPOTHESIS_PROMPT}\n\nPassages:\n{ctx}\n\n{HYPOTHESIS_INSTRUCTION}\nQuestion: {q}\nHypothesis:"
+    out: dict = {"ok": True, "question": q, "retrieved": spans, "n_retrieved": len(spans),
+                 "kind": "model_hypothesis", "validated": False,
+                 "model": None if model is None else {"params": sum(p.numel() for p in model.parameters())}}
+    if model is None:
+        out["hypothesis"] = None
+        out["error"] = "no trained checkpoint on disk"
+        return out
+    text, ms = _generate(model, tok, prompt, max_new_tokens=max_new_tokens)
+    out["hypothesis"] = text
+    out["latency_ms"] = ms
+    out["citations"] = [{"n": i + 1, "source_id": sp["source_id"], "title": sp["title"],
+                         "year": sp["year"],
+                         "locator": f"{sp['source_id']}:{sp['char_start']}-{sp['char_end']}"}
+                        for i, sp in enumerate(spans)]
+    out["kill_criteria"] = [
+        "run the attested preparation and measure the named class by LC-MS/HPLC before and after",
+        "if the measured direction contradicts the proposed mechanism, the hypothesis is refuted",
+        "if the named compound is absent from the prepared material, the hypothesis is refuted",
+    ]
+    out["status"] = ("UNVALIDATED — this is a model-generated proposal over retrieved passages, not a finding. "
+                     "It carries kill criteria so it can be tested rather than believed.")
+    return out

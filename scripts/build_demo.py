@@ -119,6 +119,8 @@ def build_data() -> dict:
                     "question_level": load("artifacts/question_routing.json", {})},
         "moe": moe.get("comparison", {}),
         "compute": load("artifacts/compute_budget.json", {}),
+        "curriculum": load("artifacts/curriculum.json", {}),
+        "self_observation": load("artifacts/self_observation.json", {}),
         "qm": load("artifacts/qm_results.json", {}),
         "discoveries": {k: {"n": v.get("n"), "top": (v.get("top") or [])[:8]}
                         for k, v in (disc.get("findings") or {}).items()} if disc else {},
@@ -198,7 +200,8 @@ HTML = """<!doctype html>
   <button role="tab" aria-selected="false" data-t="experts">5 · Experts</button>
   <button role="tab" aria-selected="false" data-t="diag">6 · Diagnostics</button>
   <button role="tab" aria-selected="false" data-t="ask">7 · Ask it live</button>
-  <button role="tab" aria-selected="false" data-t="weights">8 · Weights &amp; reproduce</button>
+  <button role="tab" aria-selected="false" data-t="curriculum">8 · Curriculum &amp; self-observation</button>
+  <button role="tab" aria-selected="false" data-t="weights">9 · Weights &amp; reproduce</button>
 </nav>
 <main id="main"></main>
 <footer>
@@ -436,7 +439,8 @@ llama-cli -m shennong-mini-f16.gguf -p "附子必須先炮製，因為" -n 80</p
 
 function tabAsk(){
   let h = `<section><h2>Ask the model — free form, live</h2>
-  <p class="note">Type anything. One code path handles every question: the question goes to the model,
+  <p class="note">Type anything, then choose <b>Answer</b> or <b>Propose a hypothesis</b>. One retrieval path serves both:
+  the question goes to the model,
   BM25 retrieves passages from the 45.6 M-character corpus, the passages are put in front of the model,
   and the model continues. <b>No keyword dispatch, no table lookup, no canned answer.</b> The retrieved
   passages are shown so you can check every claim against what it was generated over.</p>
@@ -446,7 +450,9 @@ function tabAsk(){
       font:inherit;background:#fff" placeholder="e.g. Why is 附子 processed before use?  ·  Which herbs are recorded with 烏頭?  ·  What does 本草綱目 say about 甘草?"></textarea>
     <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
       <button id="go" style="padding:8px 16px;border:0;border-radius:8px;background:var(--red);color:#fff;
-        font:inherit;font-weight:600;cursor:pointer">Ask</button>
+        font:inherit;font-weight:600;cursor:pointer">Answer</button>
+      <button id="goh" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;
+        font:inherit;font-weight:600;cursor:pointer">Propose a hypothesis</button>
       <label style="font-size:13px;color:var(--muted)">passages
         <input id="k" type="number" min="1" max="10" value="5" style="width:52px;padding:4px"></label>
       <span id="stat" style="font-size:13px;color:var(--muted)"></span>
@@ -468,8 +474,8 @@ async function askInit(){
       document.getElementById('stat').textContent =
         `${m.family.toUpperCase()} · ${(m.params/1e6).toFixed(2)} M params` +
         (m.active_params?` (${(m.active_params/1e6).toFixed(2)} M active)`:``) + ` · ${m.checkpoint}`;
-      const go = document.getElementById('go');
-      go.onclick = doAsk;
+      document.getElementById('go').onclick = () => doAsk('query');
+      document.getElementById('goh').onclick = () => doAsk('hypothesize');
       document.getElementById('q').addEventListener('keydown', e=>{
         if ((e.metaKey||e.ctrlKey) && e.key==='Enter') doAsk();
       });
@@ -490,7 +496,8 @@ async function askInit(){
   }
 }
 
-async function doAsk(){
+async function doAsk(mode){
+  mode = mode || 'query';
   const q = document.getElementById('q').value.trim();
   if (!q) return;
   const out = document.getElementById('askout');
@@ -499,8 +506,9 @@ async function doAsk(){
   stat.textContent = 'running…';
   out.innerHTML = '<p class="note">retrieving and generating…</p>';
   try {
-    const r = await fetch('/api/query', {method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({question:q, k:Number(k), max_new_tokens:72})});
+    const r = await fetch('/api/' + (mode === 'hypothesize' ? 'hypothesize' : 'query'),
+      {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({question:q, k:Number(k), max_new_tokens: mode==='hypothesize'?96:72})});
     const d = await r.json();
     stat.textContent = d.total_latency_ms != null ? `total ${d.total_latency_ms} ms` : '';
     if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
@@ -522,16 +530,70 @@ async function doAsk(){
         <div class="card mono" style="white-space:pre-wrap">${esc(d.raw_completion||'')}</div>
         <p class="note">raw latency ${esc(d.raw_latency_ms)} ms</p>`;
     }
-    h += `<h2 style="margin-top:18px">Model completion conditioned on the retrieved passages</h2>
-      <div class="card mono" style="white-space:pre-wrap">${esc(d.answer||'')}</div>
-      <p class="note">grounded latency ${esc(d.grounded_latency_ms)} ms · ${esc(d.note)}</p>`;
+    if (mode === 'hypothesize') {
+      h += `<h2 style="margin-top:18px">Proposed hypothesis</h2>
+        <div class="warn"><b>Unvalidated.</b> ${esc(d.status||'')}</div>
+        <div class="card mono" style="white-space:pre-wrap">${esc(d.hypothesis||'')}</div>
+        <h2 style="margin-top:18px">What would refute it</h2>
+        <div class="card"><ul>${(d.kill_criteria||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div>
+        <p class="note">latency ${esc(d.latency_ms)} ms</p>`;
+    } else {
+      h += `<h2 style="margin-top:18px">Model completion conditioned on the retrieved passages</h2>
+        <div class="card mono" style="white-space:pre-wrap">${esc(d.answer||'')}</div>
+        <p class="note">grounded latency ${esc(d.grounded_latency_ms)} ms · ${esc(d.note)}</p>`;
+    }
     out.innerHTML = h;
   } catch (e) {
     out.innerHTML = `<div class="warn">Request failed: ${esc(String(e))}</div>`;
   }
 }
 
-const TABS = {ask:tabAsk, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
+
+function tabCurriculum(){
+  const cur = DATA.curriculum || {};
+  const so = DATA.self_observation || {};
+  let h = `<section><h2>Curriculum — the model is trained in a dependent order, not shuffled</h2>
+  <p class="note">A general model can see a corpus in random order. A model meant to reason from first
+  principles about traditional medicine cannot: foundations have to come before the canon, the canon before
+  regional comparison, the operations before the patterns, the method before grounding.</p>`;
+  const stages = cur.stages || [];
+  if (stages.length) {
+    h += `<table><tr><th>#</th><th>stage</th><th>why it comes here</th><th>steps</th><th>val loss</th><th>docs</th></tr>`;
+    for (const st of stages) {
+      h += `<tr><td>${esc(st.stage.split('_')[0])}</td><td><b>${esc(st.name)}</b></td>
+        <td style="font-size:12.5px">${esc(st.why)}</td><td>${esc(st.steps)}</td>
+        <td>${st.val_loss!=null?st.val_loss.toFixed(3):'—'}</td><td>${esc((st.docs||0).toLocaleString())}</td></tr>`;
+    }
+    h += `</table>`;
+  } else {
+    h += `<div class="warn">Curriculum run not finished yet — stage files are built and training is in
+      progress. Run <span class="mono">python training/curriculum.py --build-only</span> to see the stage
+      breakdown, or <span class="mono">make curriculum</span> to run it.</div>`;
+  }
+  h += `<h2 style="margin-top:24px">Stage 7 — self-observation</h2>
+  <p class="note">The last stage is not more data. It is the model reading <b>its own activations</b>: given a
+  passage that contains the answer versus a passage about a different herb, a linear probe per layer predicts
+  which is which. If AUC is above chance at some layer, the model <b>represents</b> its own grounding.</p>`;
+  const rows = so.probe_auc_by_layer || [];
+  if (rows.length) {
+    h += `<table><tr><th>layer</th><th>probe AUC</th><th></th></tr>`;
+    for (const r of rows) {
+      const w = Math.max(2, (r.auc - 0.3) / 0.4 * 100);
+      h += `<tr><td>${esc(r.layer)}</td><td><b>${r.auc.toFixed(3)}</b></td>
+        <td><div class="barc"><i style="width:${w}%;background:${r.auc>0.6?'var(--green)':r.auc>0.53?'var(--red)':'#c9bfae'}"></i></div></td></tr>`;
+    }
+    h += `</table><p class="note">chance = 0.500 · best layer ${esc((so.best_layer||{}).layer)} at
+      ${esc((so.best_layer||{}).auc)} · checkpoint ${esc(so.checkpoint||'')} step ${esc(so.step)}</p>
+      <div class="warn"><b>Honest reading:</b> ${esc(so.interpretation||'')}</div>`;
+  } else {
+    h += `<div class="warn">Self-observation probe has not run yet:
+      <span class="mono">python training/self_observe.py</span></div>`;
+  }
+  h += `</section>`;
+  return h;
+}
+
+const TABS = {ask:tabAsk, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
               experts:tabExperts, diag:tabDiag, weights:tabWeights};
 const main = document.getElementById('main');
 function show(name){

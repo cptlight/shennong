@@ -36,6 +36,15 @@ app-data:  ## materialise the Workbench data files from the pipeline
 	$(PY) -m shennong.cli pei --corpus-dir corpus/processed --out-kg app/data/kg.json
 	$(PY) -m shennong.cli shi --n 12 --out app/data/hypotheses.json
 
+curriculum:  ## staged training: foundations -> canon -> regional -> patterns -> method -> grounding
+	$(PY) training/curriculum.py --steps-per-stage $(or $(STEPS),40)
+
+selfobserve:  ## probe the model's own hidden states for groundedness
+	$(PY) training/self_observe.py
+
+grounding-pairs:  ## rebuild the (passages, question, answer) training pairs
+	$(PY) scripts/build_grounding_pairs.py
+
 compute:  ## capacity-per-FLOP budget from the two training runs
 	$(PY) scripts/compute_budget.py
 
@@ -57,4 +66,4 @@ all: corpus tokenizer train-mini export eval app-data  ## full pipeline
 clean:  ## remove caches (keeps corpus and checkpoints)
 	find . -name __pycache__ -type d -prune -exec rm -rf {} + ; rm -rf .pytest_cache
 
-.PHONY: help setup corpus tokenizer train-mini train-flagship novelty compute demo export eval app-data workbench test all clean
+.PHONY: help setup corpus tokenizer train-mini train-flagship novelty compute demo export curriculum selfobserve grounding-pairs eval app-data workbench test all clean

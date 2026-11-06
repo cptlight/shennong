@@ -1184,6 +1184,17 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         u = urlparse(self.path)
+        if u.path == "/api/hypothesize":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                raw = self.rfile.read(min(n, 16384)) if n else b"{}"
+                payload = json.loads(raw.decode("utf-8") or "{}")
+                from shennong.answer import hypothesise
+                return self._json(hypothesise(str(payload.get("question") or payload.get("q") or ""),
+                                              int(payload.get("k") or 6),
+                                              int(payload.get("max_new_tokens") or 96)))
+            except Exception as exc:  # noqa: BLE001
+                return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/query":
             try:
                 n = int(self.headers.get("Content-Length") or 0)

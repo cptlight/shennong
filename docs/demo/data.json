@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T23:33:20-0800",
+ "generated_at": "2026-11-05T23:56:22-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v0.1.0": {
@@ -354,6 +354,53 @@
    "that 0.91 nats transfers to a larger scale — one endpoint, one seed",
    "that CPU inference replaces GPU training — training still wants a GPU; serving does not"
   ]
+ },
+ "curriculum": {},
+ "self_observation": {
+  "generated_at": "2026-11-05T23:47:38-0800",
+  "checkpoint": "training/runs/shennong-moe-r1/ckpt-best.pt",
+  "step": 199,
+  "definition": "label 1 = the supplied passage contains the answer; label 0 = the passage is about a different herb. The probe reads the pooled hidden state at the final token and predicts the label. If the model REPRESENTS grounding, a linear probe decodes it.",
+  "n_probes": 240,
+  "n_train": 168,
+  "n_test": 72,
+  "probe_auc_by_layer": [
+   {
+    "layer": 0,
+    "auc": 0.3484
+   },
+   {
+    "layer": 1,
+    "auc": 0.5078
+   },
+   {
+    "layer": 2,
+    "auc": 0.4461
+   },
+   {
+    "layer": 3,
+    "auc": 0.5023
+   },
+   {
+    "layer": 4,
+    "auc": 0.4961
+   },
+   {
+    "layer": 5,
+    "auc": 0.5062
+   },
+   {
+    "layer": 6,
+    "auc": 0.5211
+   }
+  ],
+  "best_layer": {
+   "layer": 6,
+   "auc": 0.5211
+  },
+  "chance_auc": 0.5,
+  "behavioural_grounding": null,
+  "interpretation": "AUC above chance means the information is linearly readable inside the model. It does not mean the model uses it when answering — that gap is what the grounding stage (curriculum stage 6) is for, and it is reported here rather than assumed."
  },
  "qm": {
   "generated_at": "2026-11-05T10:44:29-0800",
@@ -2819,6 +2866,7 @@
   "refusal_corpus.json",
   "research_rounds.json",
   "routing_steering.json",
+  "self_observation.json",
   "support_verification.json",
   "tokenizer_parity.json",
   "tradition_first.json"

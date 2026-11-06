@@ -76,9 +76,11 @@ def main() -> int:
     tok = AutoTokenizer.from_pretrained(BASE_MODEL)
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
+    # Load fp32 and let the Trainer's fp16=True do mixed precision (fp32 master weights, fp16 autocast).
+    # Loading fp16 directly made the GradScaler fail with "Attempting to unscale FP16 gradients" — there
+    # were no fp32 master weights to unscale.
     model = AutoModelForCausalLM.from_pretrained(
-        BASE_MODEL, dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-        device_map="auto" if torch.cuda.is_available() else None)
+        BASE_MODEL, device_map="auto" if torch.cuda.is_available() else None)
 
     # FULL fine-tuning, not LoRA. peft's LoRA path now requires torchao>=0.16 and Colab ships 0.10, which
     # is exactly the ImportError that killed the first run. At 494M params full FT needs ~5-6 GB on a T4,

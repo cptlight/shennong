@@ -1,0 +1,14 @@
+{
+  "name": "SHENNONG — query the model",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "make setup",
+  "postStartCommand": "echo 'run:  make workbench   then open the forwarded port and append /demo/'",
+  "forwardPorts": [8765],
+  "portsAttributes": {
+    "8765": {
+      "label": "SHENNONG Workbench + live model",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "hostRequirements": { "cpus": 2, "memory": "8gb" }
+}

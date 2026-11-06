@@ -196,7 +196,8 @@ HTML = """<!doctype html>
   <button role="tab" aria-selected="false" data-t="candidates">4 · Candidates</button>
   <button role="tab" aria-selected="false" data-t="experts">5 · Experts</button>
   <button role="tab" aria-selected="false" data-t="diag">6 · Diagnostics</button>
-  <button role="tab" aria-selected="false" data-t="weights">7 · Weights &amp; reproduce</button>
+  <button role="tab" aria-selected="false" data-t="ask">7 · Ask it live</button>
+  <button role="tab" aria-selected="false" data-t="weights">8 · Weights &amp; reproduce</button>
 </nav>
 <main id="main"></main>
 <footer>
@@ -428,11 +429,110 @@ llama-cli -m shennong-mini-f16.gguf -p "附子必須先炮製，因為" -n 80</p
   return h;
 }
 
-const TABS = {funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
+
+function tabAsk(){
+  let h = `<section><h2>Ask the model — free form, live</h2>
+  <p class="note">Type anything. One code path handles every question: the question goes to the model,
+  BM25 retrieves passages from the 45.6 M-character corpus, the passages are put in front of the model,
+  and the model continues. <b>No keyword dispatch, no table lookup, no canned answer.</b> The retrieved
+  passages are shown so you can check every claim against what it was generated over.</p>
+  <div id="askbox" class="warn">checking for a live inference endpoint…</div>
+  <div id="askform" style="display:none;margin:0 0 16px">
+    <textarea id="q" rows="3" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;
+      font:inherit;background:#fff" placeholder="e.g. Why is 附子 processed before use?  ·  Which herbs are recorded with 烏頭?  ·  What does 本草綱目 say about 甘草?"></textarea>
+    <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+      <button id="go" style="padding:8px 16px;border:0;border-radius:8px;background:var(--red);color:#fff;
+        font:inherit;font-weight:600;cursor:pointer">Ask</button>
+      <label style="font-size:13px;color:var(--muted)">passages
+        <input id="k" type="number" min="1" max="10" value="5" style="width:52px;padding:4px"></label>
+      <span id="stat" style="font-size:13px;color:var(--muted)"></span>
+    </div>
+  </div>
+  <div id="askout"></div></section>`;
+  return h;
+}
+
+async function askInit(){
+  const box = document.getElementById('askbox');
+  const form = document.getElementById('askform');
+  try {
+    const r = await fetch('/api/model');
+    const m = await r.json();
+    if (m && m.loaded) {
+      box.style.display='none'; form.style.display='block';
+      box.innerHTML='';
+      document.getElementById('stat').textContent =
+        `${m.family.toUpperCase()} · ${(m.params/1e6).toFixed(2)} M params` +
+        (m.active_params?` (${(m.active_params/1e6).toFixed(2)} M active)`:``) + ` · ${m.checkpoint}`;
+      const go = document.getElementById('go');
+      go.onclick = doAsk;
+      document.getElementById('q').addEventListener('keydown', e=>{
+        if ((e.metaKey||e.ctrlKey) && e.key==='Enter') doAsk();
+      });
+      document.getElementById('q').focus();
+      return;
+    }
+    box.innerHTML = `<b>No live endpoint on this copy.</b> You are reading the static page, which cannot run
+      inference (no server, no WASM build). Two ways to query the model for real:<br><br>
+      <b>1 · one command, locally</b><br>
+      <span class="mono">make setup &amp;&amp; make workbench</span> → then open <span class="mono">/demo/</span>
+      on the printed URL. This page detects the endpoint and enables the box.<br><br>
+      <b>2 · GitHub Codespaces</b> — open the repo in a codespace, run <span class="mono">make workbench</span>,
+      and use the forwarded URL.`;
+  } catch (e) {
+    box.innerHTML = `<b>No live endpoint on this copy.</b> The static page cannot run inference. Run
+      <span class="mono">make workbench</span> locally and open <span class="mono">/demo/</span> on the printed URL,
+      or use a Codespace.`;
+  }
+}
+
+async function doAsk(){
+  const q = document.getElementById('q').value.trim();
+  if (!q) return;
+  const out = document.getElementById('askout');
+  const stat = document.getElementById('stat');
+  const k = document.getElementById('k').value || 5;
+  stat.textContent = 'running…';
+  out.innerHTML = '<p class="note">retrieving and generating…</p>';
+  try {
+    const r = await fetch('/api/query', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({question:q, k:Number(k), max_new_tokens:72})});
+    const d = await r.json();
+    stat.textContent = d.total_latency_ms != null ? `total ${d.total_latency_ms} ms` : '';
+    if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
+    let h = '';
+    if (d.retrieved && d.retrieved.length) {
+      h += `<h2 style="margin-top:18px">Passages retrieved (${d.retrieved.length}) — this is the domain knowledge</h2>`;
+      for (let i=0;i<d.retrieved.length;i++){
+        const p = d.retrieved[i];
+        h += `<div class="card" style="margin:8px 0">
+          <p style="font-size:12px;color:#6b6157">[${i+1}] ${esc(p.title)} (${esc(p.year)}) ·
+             <span class="mono">${esc(p.source_id)}:${p.char_start}-${p.char_end}</span> · BM25 ${p.score}</p>
+          <div class="quote zh">${esc(p.passage)}</div></div>`;
+      }
+    }
+    if (d.raw_completion !== undefined) {
+      h += `<h2 style="margin-top:18px">Bare model completion — no context</h2>
+        <div class="warn"><b>Honest comparison:</b> this is the 19.3 M model answering alone. At this scale it is
+        weak, and we show it rather than hide it.</div>
+        <div class="card mono" style="white-space:pre-wrap">${esc(d.raw_completion||'')}</div>
+        <p class="note">raw latency ${esc(d.raw_latency_ms)} ms</p>`;
+    }
+    h += `<h2 style="margin-top:18px">Model completion conditioned on the retrieved passages</h2>
+      <div class="card mono" style="white-space:pre-wrap">${esc(d.answer||'')}</div>
+      <p class="note">grounded latency ${esc(d.grounded_latency_ms)} ms · ${esc(d.note)}</p>`;
+    out.innerHTML = h;
+  } catch (e) {
+    out.innerHTML = `<div class="warn">Request failed: ${esc(String(e))}</div>`;
+  }
+}
+
+const TABS = {ask:tabAsk, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
               experts:tabExperts, diag:tabDiag, weights:tabWeights};
 const main = document.getElementById('main');
 function show(name){
   main.innerHTML = TABS[name]();
+  if (name === 'ask') askInit();
   document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected', String(b.dataset.t===name)));
   const ct = main.querySelector('#ct');
   if (ct) {
@@ -450,6 +550,7 @@ function show(name){
 }
 document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.t)));
 show('funnel');
+
 </script></body></html>
 """
 

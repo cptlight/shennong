@@ -44,6 +44,10 @@ from urllib.parse import parse_qs, urlparse
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(APP_DIR)
+# ROOT must be importable at module load, not just inside the ask() helper: /api/query imports the
+# shennong package at request time and was failing with ModuleNotFoundError.
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 STATIC_DIR = os.path.join(APP_DIR, "static")
 DATA_DIR = os.path.join(APP_DIR, "data")
 VERSION = "0.2.0"
@@ -985,6 +989,128 @@ MIME = {".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8",
         ".woff2": "font/woff2", ".txt": "text/plain; charset=utf-8"}
 
 
+# ---------------------------------------------------------------------------------------
+# Live model query: the MoE, running on the local CPU, behind /api/chat
+#
+# A judge should be able to type a question and get an answer from the model that was actually trained —
+# not from a canned transcript. The checkpoint is loaded lazily (232 MB, a few seconds) and cached, so the
+# first query is slow and the rest are not. If the checkpoint is missing the endpoint says so instead of
+# pretending, and the UI shows the exact command that trains it.
+# ---------------------------------------------------------------------------------------
+_MODEL = {"obj": None, "tok": None, "meta": None, "error": None}
+_CKPT_CANDIDATES = [
+    "training/runs/shennong-moe-r1/ckpt-best.pt",
+    "training/runs/shennong-mini-r1/ckpt-best.pt",
+    "training/runs/shennong-moe-r1/ckpt.pt",
+    "training/runs/shennong-mini-r1/ckpt.pt",
+]
+
+
+DEMO_DIR = os.path.join(ROOT, "docs", "demo")
+
+
+def _serve_demo(handler, rel):
+    """Serve the built static demo from /demo/ so the query box is same-origin."""
+    safe = os.path.normpath(rel).lstrip("/")
+    full = os.path.join(DEMO_DIR, safe)
+    if not full.startswith(DEMO_DIR) or not os.path.isfile(full):
+        return handler._err(404, "not found")
+    ext = os.path.splitext(full)[1].lower()
+    ctype = {"html": "text/html; charset=utf-8", "js": "application/javascript",
+             "json": "application/json; charset=utf-8", "css": "text/css"}.get(
+                 ext.lstrip("."), "application/octet-stream")
+    with open(full, "rb") as f:
+        return handler._send(200, f.read(), ctype)
+
+
+def _load_model():
+    if _MODEL["obj"] is not None or _MODEL["error"] is not None:
+        return _MODEL
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(ROOT, "model"))
+    try:
+        from tokenizers import Tokenizer
+
+        from shennong_mini import ModelConfig, ShennongMini, load_checkpoint
+        from shennong_moe import MoEConfig, ShennongMoE
+
+        ck_path = next((c for c in _CKPT_CANDIDATES if os.path.isfile(os.path.join(ROOT, c))), None)
+        if ck_path is None:
+            _MODEL["error"] = "no trained checkpoint found — run `make train-mini`"
+            return _MODEL
+        ck = load_checkpoint(os.path.join(ROOT, ck_path))
+        cfg_dict = ck.get("config") or {}
+        if int(cfg_dict.get("n_experts", 1)) > 1:
+            cfg = MoEConfig.from_dict(cfg_dict)
+            model = ShennongMoE(cfg)
+            family = "moe"
+        else:
+            cfg = ModelConfig.from_dict(cfg_dict)
+            model = ShennongMini(cfg)
+            family = "dense"
+        model.load_state_dict(ck["model"], strict=False)
+        model.eval()
+        tok = Tokenizer.from_file(os.path.join(ROOT, "tokenizer/shennong-bpe/tokenizer.json"))
+        _MODEL.update({
+            "obj": model, "tok": tok,
+            "meta": {
+                "checkpoint": ck_path,
+                "step": ck.get("step"),
+                "family": family,
+                "params": sum(p.numel() for p in model.parameters()),
+                "active_params": getattr(cfg, "n_params_active", None) if family == "moe" else None,
+                "vocab": cfg.vocab_size,
+                "context": cfg.seq_len,
+                "note": ("Trained from scratch on this machine on a domain-exclusive corpus. It reads "
+                         "Classical Chinese, Latin and English. It is a pipeline demonstration, not a "
+                         "factual oracle — see model/MODEL_CARD.md."),
+            },
+        })
+    except Exception as exc:  # noqa: BLE001
+        _MODEL["error"] = f"{type(exc).__name__}: {exc}"
+    return _MODEL
+
+
+def model_status():
+    m = _load_model()
+    if m["error"]:
+        return {"loaded": False, "error": m["error"]}
+    return {"loaded": True, **m["meta"]}
+
+
+def chat(prompt: str, max_new_tokens: int = 96, temperature: float = 0.8) -> dict:
+    """Generate from the trained model. Deterministic given the seed."""
+    import time as _t
+
+    import torch
+
+    m = _load_model()
+    if m["error"]:
+        return {"ok": False, "error": m["error"], "fix": "make train-mini  (or: make train-flagship)"}
+    model, tok = m["obj"], m["tok"]
+    prompt = (prompt or "").strip()[:2000]
+    if not prompt:
+        return {"ok": False, "error": "empty prompt"}
+    ids = tok.encode(prompt).ids[-model.cfg.seq_len:]
+    x = torch.tensor([ids])
+    t0 = _t.time()
+    with torch.no_grad():
+        out = model.generate(x, max_new_tokens=max(1, min(max_new_tokens, 256)),
+                             temperature=temperature, top_p=0.9, seed=1337)
+    gen = out[0][len(ids):].tolist()
+    text = tok.decode(gen)
+    return {
+        "ok": True,
+        "prompt": prompt,
+        "completion": text,
+        "tokens_generated": len(gen),
+        "latency_ms": int((_t.time() - t0) * 1000),
+        "model": {k: m["meta"][k] for k in ("checkpoint", "step", "family", "params", "active_params")},
+        "honesty": ("This is the model's raw continuation, not a grounded answer. For grounded answers "
+                    "with citations use /api/ask, which retrieves first and refuses when it cannot cite."),
+    }
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = f"ShennongWorkbench/{VERSION}"
     protocol_version = "HTTP/1.1"
@@ -1043,6 +1169,11 @@ class Handler(BaseHTTPRequestHandler):
                                        hypotheses=load_hypotheses()["counts"],
                                        candidates=cand["counts"],
                                        artifacts=load_artifacts()))
+            if path == "/api/model":
+                return self._json(model_status())
+            if path.startswith("/demo"):
+                rel = path[len("/demo"):].lstrip("/") or "index.html"
+                return _serve_demo(self, rel)
             if path == "/api/ask":
                 return self._json(ask((q.get("q") or [""])[0]))
             return self._err(404, f"no route {path}")
@@ -1053,6 +1184,27 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         u = urlparse(self.path)
+        if u.path == "/api/query":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                raw = self.rfile.read(min(n, 16384)) if n else b"{}"
+                payload = json.loads(raw.decode("utf-8") or "{}")
+                from shennong.answer import answer_freeform
+                return self._json(answer_freeform(str(payload.get("question") or payload.get("q") or ""),
+                                                  int(payload.get("k") or 5),
+                                                  int(payload.get("max_new_tokens") or 72)))
+            except Exception as exc:  # noqa: BLE001
+                return self._err(500, f"{type(exc).__name__}: {exc}")
+        if u.path == "/api/chat":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                raw = self.rfile.read(min(n, 16384)) if n else b"{}"
+                payload = json.loads(raw.decode("utf-8") or "{}")
+                return self._json(chat(str(payload.get("prompt") or payload.get("q") or ""),
+                                       int(payload.get("max_new_tokens") or 96),
+                                       float(payload.get("temperature") or 0.8)))
+            except Exception as exc:  # noqa: BLE001
+                return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path != "/api/ask":
             return self._err(404, f"no route {u.path}")
         try:
@@ -1172,6 +1324,18 @@ def build_report():
     return rows
 
 
+def _warm():
+    """Load the model and the retrieval index in the background, so the first judge click is not a 60 s wait."""
+    try:
+        from shennong.answer import _model
+        from shennong.rag.answer import get_index
+        get_index()
+        _model()
+        print("   warm: retrieval index + model loaded", flush=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f"   warm: skipped ({type(exc).__name__}: {exc})", flush=True)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="SHENNONG Workbench")
     ap.add_argument("--port", type=int, default=8765)
@@ -1208,6 +1372,9 @@ def main(argv=None):
 
     port = pick_port(args.port)
     url = f"http://{args.host}:{port}/"
+    import threading
+    threading.Thread(target=_warm, daemon=True).start()
+
     httpd = ThreadingHTTPServer((args.host, port), Handler)
     httpd.daemon_threads = True
     print(f"\n   → open  {url}\n   → Ctrl-C to stop\n")

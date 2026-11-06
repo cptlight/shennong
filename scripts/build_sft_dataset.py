@@ -115,6 +115,77 @@ def build() -> list[dict]:
                 f"toxicity {r['toxicity'] or '—'}, grade {r['grade'] or '—'}.",
                 "property"))
 
+
+    # ---- 5. era-to-era name mapping (Track 1: cross-era cross-referencing) ----
+    lex = load("corpus/processed/lexicon_drugs.json", {}) or {}
+    for r in lex.get("historical", []):
+        if r.get("name") and r.get("modern"):
+            rows.append(ex(
+                f"What is the modern botanical binomial of the historical name {r['name']}?",
+                f"{r['name']} -> {r['modern']} (resolved by {r.get('method','lexicon')}, "
+                f"confidence {r.get('confidence','—')}).",
+                "name_mapping"))
+
+    # ---- 6. therapeutic use (Track 1: identify therapeutic uses) --------------
+    p = ROOT / "corpus/processed/structured/uses.csv"
+    if p.exists():
+        for r in csv.DictReader(p.open(encoding="utf-8")):
+            drug, ind = (r.get("drug_name") or "").strip(), (r.get("indication") or "").strip()
+            prep = (r.get("preparation") or "").strip()
+            if len(drug) < 2 or len(ind) < 2:
+                continue
+            ans = f"Recorded use: {ind}."
+            if prep:
+                ans += f" Preparation: {prep}."
+            if r.get("indication_modern"):
+                ans += f" Modern reading: {r['indication_modern']}."
+            ans += " (pre-modern claim; not clinical advice)"
+            rows.append(ex(f"What is {drug} recorded to treat?", ans, "use"))
+
+    # ---- 7. 七情 relation extraction (Track 1: relation extraction) ----------
+    SEVEN = {"xiangxu": "相須 (mutual assistance)", "xiangshi": "相使 (mutual enhancement)",
+             "xiangwei": "相畏 (mutual restraint)", "xiangfan": "相反 (antagonistic)",
+             "xiange": "相惡 (mutual aversion)"}
+    p = ROOT / "corpus/processed/structured/relations_seven.csv"
+    if p.exists():
+        for r in csv.DictReader(p.open(encoding="utf-8")):
+            if r.get("drug_a") and r.get("drug_b") and r.get("relation"):
+                label = SEVEN.get(r["relation"], r["relation"])
+                rows.append(ex(
+                    f"In the 七情 framework, how do {r['drug_a']} and {r['drug_b']} interact?",
+                    f"{r['drug_a']} and {r['drug_b']} are recorded as {label}.",
+                    "relation"))
+
+    # ---- 8. compound-class knowledge (Track 2: chemistry) --------------------
+    p = ROOT / "corpus/processed/structured/compounds.csv"
+    if p.exists():
+        seen = set()
+        for r in csv.DictReader(p.open(encoding="utf-8")):
+            plant = (r.get("plant_binomial") or "").strip()
+            cls = (r.get("compound_class") or "").strip()
+            if not plant or not cls or (plant, cls) in seen:
+                continue
+            seen.add((plant, cls))
+            rows.append(ex(
+                f"What compound class is recorded in {plant}?",
+                f"{plant} contains {cls} compounds (per the corpus compound table).",
+                "compound"))
+
+    # ---- 9. formula composition (Track 2: knowledge graph) -------------------
+    p = ROOT / "corpus/processed/structured/formula_ingredients.csv"
+    if p.exists():
+        from collections import defaultdict
+        grp = defaultdict(list)
+        for r in csv.DictReader(p.open(encoding="utf-8")):
+            grp[r.get("formula_id")].append(r.get("drug_name"))
+        for fid, drugs in list(grp.items())[:600]:
+            if not fid or not drugs:
+                continue
+            rows.append(ex(
+                f"What ingredients are recorded in formula {fid}?",
+                f"Formula {fid}: " + ", ".join(d for d in drugs if d) + ".",
+                "formula"))
+
     return rows
 
 

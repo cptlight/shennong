@@ -24,7 +24,7 @@ import torch
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 SFT = REPO / "artifacts" / "sft"
-BASE_MODEL = "Qwen/Qwen2.5-0.5B"
+BASE_MODEL = "Qwen/Qwen2.5-1.5B"
 ASSISTANT = "<|assistant|>"
 
 
@@ -63,6 +63,8 @@ def collate(batch, pad_id: int):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--base", default=BASE_MODEL, help="HF base model id")
+    ap.add_argument("--r", type=int, default=64, help="LoRA rank (1.5B full FT will not fit a T4)")
     ap.add_argument("--epochs", type=int, default=3)
     ap.add_argument("--max-steps", type=int, default=-1, help="-1 = full epochs")
     ap.add_argument("--batch", type=int, default=4)
@@ -82,15 +84,19 @@ def main() -> int:
     # Force fp32: Qwen2.5-0.5B's config.json declares bfloat16, and from_pretrained honours it, which makes
     # the Trainer's fp16 GradScaler die with "not implemented for 'BFloat16'". fp32 master weights + fp16
     # autocast is the recipe that works on a T4.
+    # LoRA: base frozen in fp16 (no GradScaler unscale problem — the trainable adapters are fp32).
     model = AutoModelForCausalLM.from_pretrained(
-        BASE_MODEL, torch_dtype=torch.float32,
+        args.base, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
         device_map="auto" if torch.cuda.is_available() else None)
 
-    # FULL fine-tuning, not LoRA. peft's LoRA path now requires torchao>=0.16 and Colab ships 0.10, which
-    # is exactly the ImportError that killed the first run. At 494M params full FT needs ~5-6 GB on a T4,
-    # fits comfortably, and is strictly better than LoRA at this size.
+    from peft import LoraConfig, get_peft_model
+    lora = LoraConfig(r=args.r, lora_alpha=args.r * 2, lora_dropout=0.05,
+                      target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
+                                      "gate_proj", "up_proj", "down_proj"],
+                      task_type="CAUSAL_LM")
+    model = get_peft_model(model, lora)
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"trainable (full FT): {trainable:,} params")
+    print(f"LoRA trainable: {trainable:,} of {sum(p.numel() for p in model.parameters()):,}")
 
     train = [t for t in (tokenize_pair(tok, r["text"]) for r in load_examples("train")) if t]
     val = [t for t in (tokenize_pair(tok, r["text"]) for r in load_examples("val")) if t]
@@ -118,7 +124,8 @@ def main() -> int:
                       data_collator=lambda b: collate(b, tok.pad_token_id))
     trainer.train()
 
-    # save full fp16 weights for quantization
+    # merge LoRA into the base and save fp16 weights for quantization
+    model = trainer.model.merge_and_unload()
     out_model = pathlib.Path(args.out) / "merged"
     model.save_pretrained(out_model, safe_serialization=True)
     tok.save_pretrained(out_model)

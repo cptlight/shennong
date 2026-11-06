@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-11-06T09:57:13-0800",
+  "metric": "retrieval ceiling (fraction of held-out questions whose answer is present in the retrieved facts)",
+  "not": "model accuracy — see note",
+  "n_eval": 919,
+  "retrieved": 800,
+  "recall": 0.8705,
+  "per_kind": {
+    "name_mapping": {
+      "correct": 33,
+      "total": 33,
+      "recall": 1.0
+    },
+    "viability": {
+      "correct": 5,
+      "total": 5,
+      "recall": 1.0
+    },
+    "candidate": {
+      "correct": 2,
+      "total": 2,
+      "recall": 1.0
+    },
+    "use": {
+      "correct": 719,
+      "total": 730,
+      "recall": 0.985
+    },
+    "compound": {
+      "correct": 39,
+      "total": 57,
+      "recall": 0.684
+    },
+    "formula": {
+      "correct": 1,
+      "total": 4,
+      "recall": 0.25
+    },
+    "property": {
+      "correct": 1,
+      "total": 87,
+      "recall": 0.011
+    },
+    "relation": {
+      "correct": 0,
+      "total": 1,
+      "recall": 0.0
+    }
+  },
+  "note": "A 90 %+ retrieval ceiling means the knowledge IS in the index and a capable model can answer from it; it is the prerequisite for the 90 % eval target, not the target itself. Model accuracy is measured separately once the 1.5 B model is trained.",
+  "example_misses": [
+    {
+      "kind": "property",
+      "q": "What is the recorded nature, flavour and channel t",
+      "gold": "Nature 寒, flavours 辛, channels not recor",
+      "subject": [
+        "野狼牙",
+        "What is"
+      ]
+    },
+    {
+      "kind": "property",
+      "q": "What is the recorded nature, flavour and channel t",
+      "gold": "Nature 平, flavours 甘, channels not recor",
+      "subject": [
+        "烏骨雞",
+        "What is"
+      ]
+    },
+    {
+      "kind": "compound",
+      "q": "What compound class is recorded in Stemona japonic",
+      "gold": "Stemona japonica contains alkaloid compo",
+      "subject": [
+        "What compound",
+        "Stemona japonica",
+        "Stemona"
+      ]
+    },
+    {
+      "kind": "use",
+      "q": "What is 三白草 recorded to treat?",
+      "gold": "Recorded use: 根︰療腳氣風毒脛腫. (pre-modern cla",
+      "subject": [
+        "三白草",
+        "What is"
+      ]
+    },
+    {
+      "kind": "property",
+      "q": "What is the recorded nature, flavour and channel t",
+      "gold": "Nature 平, flavours 甘/酸, channels 心, toxi",
+      "subject": [
+        "赤小豆",
+        "What is"
+      ]
+    },
+    {
+      "kind": "compound",
+      "q": "What compound class is recorded in Sophora flavesc",
+      "gold": "Sophora flavescens contains terpenoid co",
+      "subject": [
+        "What compound",
+        "Sophora flavescens",
+        "Sophora"
+      ]
+    },
+    {
+      "kind": "property",
+      "q": "What is the recorded nature, flavour and channel t",
+      "gold": "Nature 平, flavours 甘, channels not recor",
+      "subject": [
+        "大豆黃卷",
+        "What is"
+      ]
+    },
+    {
+      "kind": "property",
+      "q": "What is the recorded nature, flavour and channel t",
+      "gold": "Nature 溫, flavours 鹹, channels not recor",
+      "subject": [
+        "香蟲",
+        "What is"
+      ]
+    },
+    {
+      "kind": "property",
+      "q": "What is the recorded nature, flavour and channel t",
+      "gold": "Nature 平, flavours 甘, channels not recor",
+      "subject": [
+        "田螺",
+        "What is"
+      ]
+    },
+    {
+      "kind": "property",
+      "q": "What is the recorded nature, flavour and channel t",
+      "gold": "Nature 寒, flavours 辛/甘/苦, channels not r",
+      "subject": [
+        "稗米",
+        "What is"
+      ]
+    }
+  ]
+}

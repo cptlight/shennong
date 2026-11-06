@@ -1,90 +1,919 @@
-{"id": "val-0", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 錦地羅?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-1", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 天靈蓋?<|assistant|>Nature 平, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-2", "kind": "candidate", "text": "<|user|>What candidate does Achyranthes bidentata suggest under Track 02, and what would kill it?<|assistant|>Candidate: hederagenin 28-O-beta-D-glucopyranoside (formula n/a), from Achyranthes bidentata. MW 634.85, logP 8.0, structural novelty 0.0741. Proposed target class: NF-kB — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.<|eos|>"}
-{"id": "val-3", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 糟筍節中酒?<|assistant|>Nature 平, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-4", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 雲實?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-5", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 君遷子?<|assistant|>Nature 平, flavours 甘/澀, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-6", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 德慶果?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-7", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 甘石榴?<|assistant|>Nature 溫, flavours 甘/酸, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-8", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 藎草?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade 下品.<|eos|>"}
-{"id": "val-9", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 生瓜菜?<|assistant|>Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-10", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 螢火?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade 下品.<|eos|>"}
-{"id": "val-11", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 松節?<|assistant|>Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-12", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 牡狗陰莖?<|assistant|>Nature 平, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-13", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蒲州豉?<|assistant|>Nature 寒, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-14", "kind": "candidate", "text": "<|user|>What candidate does Phytolacca acinosa suggest under Track 02, and what would kill it?<|assistant|>Candidate: (2S,4aR,6aR,6aS,6bR,8aR,10S,12aR,14bS)-10-acetyloxy-2-methoxycarbonyl-2,6a,6b,9,9,12a-hexamethyl-1,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid (formula n/a), from Phytolacca acinosa. MW 542.76, logP 10.1, structural novelty 0.2237. Proposed target class: NF-kB — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.<|eos|>"}
-{"id": "val-15", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鳳凰台?<|assistant|>Nature 平, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-16", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 朴硝?<|assistant|>Nature 寒, flavours 辛/苦, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-17", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蓽勃沒?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-18", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 角蒿?<|assistant|>Nature 平, flavours 辛/苦, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
-{"id": "val-19", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 桃膠?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-20", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 翻白草?<|assistant|>Nature 平, flavours 甘/苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-21", "kind": "viability", "text": "<|user|>For 黄精 (Polygonatum sibiricum), will 蒸 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY. The claimed enrichment of alkaloid by 蒸 is not supported: modelled median retention is 84% (range 58-95%), dominant loss mechanism hydrolysis. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
-{"id": "val-22", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 質汗?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-23", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 藤中水?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-24", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 土芋?<|assistant|>Nature 寒, flavours 甘/辛, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
-{"id": "val-25", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蠡實?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
-{"id": "val-26", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 桑上寄生?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-27", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 海蛤?<|assistant|>Nature 平, flavours 苦/鹹, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-28", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鼉甲?<|assistant|>Nature —, flavours 甘, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
-{"id": "val-29", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 惡實?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
-{"id": "val-30", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 海豚魚?<|assistant|>Nature —, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-31", "kind": "viability", "text": "<|user|>For 附子 (Aconitum carmichaelii), will 炮 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY. The claimed enrichment of alkaloid by 炮 is not supported: modelled median retention is 100% (range 84-100%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
-{"id": "val-32", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 臘雪?<|assistant|>Nature —, flavours 鹹, channels not recorded, toxicity 有毒, grade —.<|eos|>"}
-{"id": "val-33", "kind": "candidate", "text": "<|user|>What candidate does Achyranthes bidentata suggest under Track 02, and what would kill it?<|assistant|>Candidate: 2,3,14,20,22,25-Hexahydroxycholest-7-en-6-one (formula n/a), from Achyranthes bidentata. MW 480.64, logP 5.05, structural novelty 0.0. Proposed target class: NF-kB — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.<|eos|>"}
-{"id": "val-34", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 桂蠹蟲?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-35", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 伏雞子根?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-36", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 莖根?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 有毒, grade —.<|eos|>"}
-{"id": "val-37", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 知母?<|assistant|>Nature 寒, flavours 苦, channels 腎, toxicity 無毒, grade 中品.<|eos|>"}
-{"id": "val-38", "kind": "candidate", "text": "<|user|>What candidate does Sanguisorba officinalis suggest under Track 02, and what would kill it?<|assistant|>Candidate: (1R,2R,4aS,6aR,6aS,6bR,8aR,10S,12aR,14bS)-1-hydroxy-1,2,6a,6b,9,9,12a-heptamethyl-10-[(2R,3R,4S,5S)-3,4,5-trihydroxyoxan-2-yl]oxy-2,3,4,5,6,6a,7,8,8a,10,11,12,13,14b-tetradecahydropicene-4a-carboxylic acid (formula n/a), from Sanguisorba officinalis. MW 604.83, logP 8.45, structural novelty 0.2841. Proposed target class: NF-kB — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.<|eos|>"}
-{"id": "val-39", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 金星草?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-40", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 柳蠹蟲?<|assistant|>Nature 平, flavours 甘/辛, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
-{"id": "val-41", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 都念子?<|assistant|>Nature 溫, flavours 甘/酸, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-42", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 海鷂魚?<|assistant|>Nature 平, flavours 甘/鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-43", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 琥珀?<|assistant|>Nature 平, flavours 甘, channels 心/脾/小腸, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-44", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 烏骨雞?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-45", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 生薑?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
-{"id": "val-46", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 金絲草?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-47", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 龍常草?<|assistant|>Nature 溫, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-48", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蜻蛉?<|assistant|>Nature 寒, flavours —, channels not recorded, toxicity 無毒, grade 下品.<|eos|>"}
-{"id": "val-49", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 胡蘿蔔?<|assistant|>Nature 溫, flavours 甘/辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-50", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 桑花?<|assistant|>Nature —, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-51", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鷑鳩?<|assistant|>Nature 平, flavours —, channels not recorded, toxicity 有毒, grade —.<|eos|>"}
-{"id": "val-52", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 騏竭?<|assistant|>Nature 平, flavours 甘/鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-53", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 女菀?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
-{"id": "val-54", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 大腹皮?<|assistant|>Nature 溫, flavours 辛, channels 肺/脾, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-55", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 古鏡?<|assistant|>Nature 平, flavours 酸, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-56", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蔓荊?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-57", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鬼針草?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-58", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 露水?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-59", "kind": "viability", "text": "<|user|>For 乌头 (Aconitum carmichaeli), will 炮 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY. The claimed enrichment of alkaloid by 炮 is not supported: modelled median retention is 100% (range 96-100%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
-{"id": "val-60", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 青精乾石𩛓飯?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-61", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 楠材?<|assistant|>Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-62", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 銅弩牙?<|assistant|>Nature 平, flavours —, channels not recorded, toxicity —, grade 下品.<|eos|>"}
-{"id": "val-63", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 白朮?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-64", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 藕節?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-65", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 時珍曰︰梗是矣?<|assistant|>Nature 平, flavours 甘/鹹, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
-{"id": "val-66", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鯢魚?<|assistant|>Nature —, flavours 甘, channels not recorded, toxicity 有毒, grade —.<|eos|>"}
-{"id": "val-67", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 木並皮?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-68", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 辛夷?<|assistant|>Nature 溫, flavours 辛, channels 肺/胃, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-69", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 女曲?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-70", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 芰花?<|assistant|>Nature —, flavours 澀, channels not recorded, toxicity —, grade —.<|eos|>"}
-{"id": "val-71", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 海帶?<|assistant|>Nature 寒, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-72", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 松花?<|assistant|>Nature 溫, flavours 甘, channels 肝/脾, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-73", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 貂鼠?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-74", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 越王餘算?<|assistant|>Nature 溫, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-75", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 菥蓂?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-76", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 砒石?<|assistant|>Nature —, flavours 苦/酸, channels not recorded, toxicity 有毒, grade —.<|eos|>"}
-{"id": "val-77", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 豆皮?<|assistant|>Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-78", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 松葉?<|assistant|>Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-79", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 心血?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
-{"id": "val-80", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 石首魚?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-81", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 雀卵?<|assistant|>Nature 溫, flavours 酸, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-82", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 榔梅?<|assistant|>Nature 熱, flavours 辛/酸/甘, channels not recorded, toxicity —, grade 下品.<|eos|>"}
-{"id": "val-83", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 豆蔻?<|assistant|>Nature 熱, flavours 辛, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
-{"id": "val-84", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 階前草?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-85", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 花及子?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-86", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 象牙?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity —, grade 中品.<|eos|>"}
-{"id": "val-87", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 九牛草?<|assistant|>Nature —, flavours 苦, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
-{"id": "val-88", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 畢澄茄?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
-{"id": "val-89", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 木蠹蟲?<|assistant|>Nature 平, flavours 辛, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-0", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 前胡?<|assistant|>前胡 -> Kitagawia praeruptora (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-1", "kind": "compound", "text": "<|user|>What compound class is recorded in Astragalus propinquus?<|assistant|>Astragalus propinquus contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-2", "kind": "use", "text": "<|user|>What is 金牙石 recorded to treat?<|assistant|>Recorded use: 筋骨攣急. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-3", "kind": "use", "text": "<|user|>What is 麻黃 recorded to treat?<|assistant|>Recorded use: 破症堅. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-4", "kind": "use", "text": "<|user|>What is 毛皮 recorded to treat?<|assistant|>Recorded use: 射工水毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-5", "kind": "use", "text": "<|user|>What is 茵芋 recorded to treat?<|assistant|>Recorded use: 心腹寒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-6", "kind": "compound", "text": "<|user|>What compound class is recorded in Zingiber officinale?<|assistant|>Zingiber officinale contains polyketide compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-7", "kind": "use", "text": "<|user|>What is 燈盞殘油 recorded to treat?<|assistant|>Recorded use: 能吐風痰食毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-8", "kind": "use", "text": "<|user|>What is 理石 recorded to treat?<|assistant|>Recorded use: 止消渴. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-9", "kind": "compound", "text": "<|user|>What compound class is recorded in Curculigo orchioides?<|assistant|>Curculigo orchioides contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-10", "kind": "use", "text": "<|user|>What is 汗衫 recorded to treat?<|assistant|>Recorded use: 男用女. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-11", "kind": "use", "text": "<|user|>What is 篤耨香 recorded to treat?<|assistant|>Recorded use: 同白附子. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-12", "kind": "use", "text": "<|user|>What is 白冬瓜 recorded to treat?<|assistant|>Recorded use: 絞汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-13", "kind": "use", "text": "<|user|>What is 根葉 recorded to treat?<|assistant|>Recorded use: 空心井華水下. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-14", "kind": "use", "text": "<|user|>What is 松葉 recorded to treat?<|assistant|>Recorded use: 安五臟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-15", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 木瓜?<|assistant|>木瓜 -> Carica papaya (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-16", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 霍亂. Modern reading: cholera-like illness. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-17", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 野狼牙?<|assistant|>Nature 寒, flavours 辛, channels not recorded, toxicity 小毒, grade 下品.<|eos|>"}
+{"id": "val-18", "kind": "use", "text": "<|user|>What is 越王餘算 recorded to treat?<|assistant|>Recorded use: 宿滯不消. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-19", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 烏骨雞?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-20", "kind": "use", "text": "<|user|>What is 檳榔子 recorded to treat?<|assistant|>Recorded use: 敷口吻白瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-21", "kind": "use", "text": "<|user|>What is 三七 recorded to treat?<|assistant|>Recorded use: 挼碎煎湯. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-22", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 刺桐花?<|assistant|>刺桐花 -> Erythrina variegata (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-23", "kind": "use", "text": "<|user|>What is 核仁 recorded to treat?<|assistant|>Recorded use: 搗和胡粉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-24", "kind": "use", "text": "<|user|>What is 勒魚 recorded to treat?<|assistant|>Recorded use: 水各半煎. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-25", "kind": "use", "text": "<|user|>What is 辛夷 recorded to treat?<|assistant|>Recorded use: 生鬚髮. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-26", "kind": "use", "text": "<|user|>What is 穬麥 recorded to treat?<|assistant|>Recorded use: 不動風氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-27", "kind": "use", "text": "<|user|>What is 海藻 recorded to treat?<|assistant|>Recorded use: 結氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-28", "kind": "use", "text": "<|user|>What is 寄居蟲 recorded to treat?<|assistant|>Recorded use: 美心志. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-29", "kind": "compound", "text": "<|user|>What compound class is recorded in Curculigo orchioides?<|assistant|>Curculigo orchioides contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-30", "kind": "use", "text": "<|user|>What is 火鍼 recorded to treat?<|assistant|>Recorded use: 不按則疼甚. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-31", "kind": "use", "text": "<|user|>What is 沒藥 recorded to treat?<|assistant|>Recorded use: 及產後心腹血氣痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-32", "kind": "use", "text": "<|user|>What is 人家 recorded to treat?<|assistant|>Recorded use: 大效. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-33", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 辟惡氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-34", "kind": "use", "text": "<|user|>What is 鋼鐵 recorded to treat?<|assistant|>Recorded use: 令人不老. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-35", "kind": "compound", "text": "<|user|>What compound class is recorded in Astragalus membranaceus?<|assistant|>Astragalus membranaceus contains steroid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-36", "kind": "use", "text": "<|user|>What is 鯧魚 recorded to treat?<|assistant|>Recorded use: 令人肥健. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-37", "kind": "compound", "text": "<|user|>What compound class is recorded in Stemona japonica?<|assistant|>Stemona japonica contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-38", "kind": "use", "text": "<|user|>What is 慈菇 recorded to treat?<|assistant|>Recorded use: 小兒游瘤丹毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-39", "kind": "use", "text": "<|user|>What is 牛黃 recorded to treat?<|assistant|>Recorded use: 驚癇寒熱. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-40", "kind": "use", "text": "<|user|>What is 三白草 recorded to treat?<|assistant|>Recorded use: 根︰療腳氣風毒脛腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-41", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 大麥?<|assistant|>大麥 -> Hordeum vulgare (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-42", "kind": "use", "text": "<|user|>What is 根節 recorded to treat?<|assistant|>Recorded use: 止汗. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-43", "kind": "use", "text": "<|user|>What is 藕節 recorded to treat?<|assistant|>Recorded use: 立愈. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-44", "kind": "use", "text": "<|user|>What is 糞清 recorded to treat?<|assistant|>Recorded use: 消食積. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-45", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 赤小豆?<|assistant|>Nature 平, flavours 甘/酸, channels 心, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-46", "kind": "use", "text": "<|user|>What is 白油麻 recorded to treat?<|assistant|>Recorded use: 通血脈. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-47", "kind": "use", "text": "<|user|>What is 目睛 recorded to treat?<|assistant|>Recorded use: 能見霄外之物. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-48", "kind": "compound", "text": "<|user|>What compound class is recorded in Scutellaria baicalensis?<|assistant|>Scutellaria baicalensis contains flavonoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-49", "kind": "use", "text": "<|user|>What is 艾納香 recorded to treat?<|assistant|>Recorded use: 傷寒五泄. Modern reading: febrile infectious disease. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-50", "kind": "use", "text": "<|user|>What is 紫菀 recorded to treat?<|assistant|>Recorded use: 去蠱毒痿蹶. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-51", "kind": "use", "text": "<|user|>What is 陳廩米 recorded to treat?<|assistant|>Recorded use: 堅筋骨. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-52", "kind": "use", "text": "<|user|>What is 山薑 recorded to treat?<|assistant|>Recorded use: 心腹冷痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-53", "kind": "use", "text": "<|user|>What is 象牙 recorded to treat?<|assistant|>Recorded use: 解毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-54", "kind": "use", "text": "<|user|>What is 頭中石 recorded to treat?<|assistant|>Recorded use: 蠱毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-55", "kind": "use", "text": "<|user|>What is 橄欖 recorded to treat?<|assistant|>Recorded use: 治魚鯁. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-56", "kind": "use", "text": "<|user|>What is 鮑魚 recorded to treat?<|assistant|>Recorded use: 取油頻塗. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-57", "kind": "use", "text": "<|user|>What is 石合草 recorded to treat?<|assistant|>Recorded use: 諸惡瘡瘍. Modern reading: malignant sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-58", "kind": "use", "text": "<|user|>What is 紅曲 recorded to treat?<|assistant|>Recorded use: 消食活血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-59", "kind": "use", "text": "<|user|>What is 蛤蜊粉 recorded to treat?<|assistant|>Recorded use: 補虛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-60", "kind": "use", "text": "<|user|>What is 根皮 recorded to treat?<|assistant|>Recorded use: 時行腹中大熱飲水. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-61", "kind": "use", "text": "<|user|>What is 楓柳 recorded to treat?<|assistant|>Recorded use: 入腦. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-62", "kind": "use", "text": "<|user|>What is 木皮 recorded to treat?<|assistant|>Recorded use: 水痢不問冷熱. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-63", "kind": "use", "text": "<|user|>What is 百藥煎 recorded to treat?<|assistant|>Recorded use: 面鼻疳蝕. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-64", "kind": "use", "text": "<|user|>What is 蛇角 recorded to treat?<|assistant|>Recorded use: 消腫毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-65", "kind": "use", "text": "<|user|>What is 人參 recorded to treat?<|assistant|>Recorded use: 吐虛勞痰飲. Modern reading: consumption. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-66", "kind": "use", "text": "<|user|>What is 古磚 recorded to treat?<|assistant|>Recorded use: 安於燒赤黃磚上. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-67", "kind": "use", "text": "<|user|>What is 縮砂蔤 recorded to treat?<|assistant|>Recorded use: 上氣咳嗽. Modern reading: respiratory distress. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-68", "kind": "use", "text": "<|user|>What is 蟲白蠟 recorded to treat?<|assistant|>Recorded use: 補虛續筋接骨. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-69", "kind": "compound", "text": "<|user|>What compound class is recorded in Sophora flavescens?<|assistant|>Sophora flavescens contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-70", "kind": "use", "text": "<|user|>What is 長松 recorded to treat?<|assistant|>Recorded use: 入甘草少許. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-71", "kind": "use", "text": "<|user|>What is 代赭石 recorded to treat?<|assistant|>Recorded use: 除五臟血脈中熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-72", "kind": "use", "text": "<|user|>What is 菩薩石 recorded to treat?<|assistant|>Recorded use: 通月經. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-73", "kind": "use", "text": "<|user|>What is 花乳石 recorded to treat?<|assistant|>Recorded use: 金瘡出血. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-74", "kind": "use", "text": "<|user|>What is 莕菜 recorded to treat?<|assistant|>Recorded use: 和鯽魚作羹食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-75", "kind": "use", "text": "<|user|>What is 桑根白皮 recorded to treat?<|assistant|>Recorded use: 唾血熱渴. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-76", "kind": "use", "text": "<|user|>What is 龍骨 recorded to treat?<|assistant|>Recorded use: 咳逆. Modern reading: cough. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-77", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 大豆黃卷?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
+{"id": "val-78", "kind": "use", "text": "<|user|>What is 龍膽 recorded to treat?<|assistant|>Recorded use: 驚癇邪氣. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-79", "kind": "use", "text": "<|user|>What is 兜納香 recorded to treat?<|assistant|>Recorded use: 壯膽安神. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-80", "kind": "use", "text": "<|user|>What is 蜀羊泉 recorded to treat?<|assistant|>Recorded use: 皮間實積. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-81", "kind": "use", "text": "<|user|>What is 五臟及腸肚 recorded to treat?<|assistant|>Recorded use: 小兒驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-82", "kind": "use", "text": "<|user|>What is 菰米 recorded to treat?<|assistant|>Recorded use: 止渴. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-83", "kind": "use", "text": "<|user|>What is 續斷 recorded to treat?<|assistant|>Recorded use: 血內漏. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-84", "kind": "formula", "text": "<|user|>What ingredients are recorded in formula ws_zh_shanghanlun:茯苓桂枝白朮甘草湯?<|assistant|>Formula ws_zh_shanghanlun:茯苓桂枝白朮甘草湯: 茯苓, 桂枝, 甘草各, 水, 煮取.<|eos|>"}
+{"id": "val-85", "kind": "use", "text": "<|user|>What is 土蜂 recorded to treat?<|assistant|>Recorded use: 敷蜘蛛咬瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-86", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 赤障青盲翳腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-87", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 香蟲?<|assistant|>Nature 溫, flavours 鹹, channels not recorded, toxicity 有毒, grade 中品.<|eos|>"}
+{"id": "val-88", "kind": "use", "text": "<|user|>What is 甘蕉 recorded to treat?<|assistant|>Recorded use: 燒存性研. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-89", "kind": "use", "text": "<|user|>What is 赤地利 recorded to treat?<|assistant|>Recorded use: 赤白游疹. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-90", "kind": "use", "text": "<|user|>What is 伏龍肝 recorded to treat?<|assistant|>Recorded use: 尿血泄精. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-91", "kind": "use", "text": "<|user|>What is 麻仁 recorded to treat?<|assistant|>Recorded use: 令白髮不生. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-92", "kind": "use", "text": "<|user|>What is 龍涎 recorded to treat?<|assistant|>Recorded use: 即透. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-93", "kind": "use", "text": "<|user|>What is 海紅豆 recorded to treat?<|assistant|>Recorded use: 宜入面藥及澡豆. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-94", "kind": "use", "text": "<|user|>What is 丹黍米 recorded to treat?<|assistant|>Recorded use: 霍亂. Modern reading: cholera-like illness. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-95", "kind": "use", "text": "<|user|>What is 龍膽 recorded to treat?<|assistant|>Recorded use: 熱泄下痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-96", "kind": "use", "text": "<|user|>What is 刺桐花 recorded to treat?<|assistant|>Recorded use: 利小便水道. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-97", "kind": "use", "text": "<|user|>What is 蒺藜 recorded to treat?<|assistant|>Recorded use: 洗疥癬風瘡作癢. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-98", "kind": "use", "text": "<|user|>What is 王瓜 recorded to treat?<|assistant|>Recorded use: 赤白痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-99", "kind": "use", "text": "<|user|>What is 樟腦 recorded to treat?<|assistant|>Recorded use: 去腳氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-100", "kind": "use", "text": "<|user|>What is 大刀環 recorded to treat?<|assistant|>Recorded use: 產難數日不出. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-101", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 田螺?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 下品.<|eos|>"}
+{"id": "val-102", "kind": "use", "text": "<|user|>What is 銀膏 recorded to treat?<|assistant|>Recorded use: 頭面熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-103", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 稗米?<|assistant|>Nature 寒, flavours 辛/甘/苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-104", "kind": "use", "text": "<|user|>What is 鹽麩子 recorded to treat?<|assistant|>Recorded use: 去頭上白屑. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-105", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 干地黄?<|assistant|>干地黄 -> Rehmannia glutinosa (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-106", "kind": "use", "text": "<|user|>What is 脊骨 recorded to treat?<|assistant|>Recorded use: 甚效. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-107", "kind": "use", "text": "<|user|>What is 乾餳糟 recorded to treat?<|assistant|>Recorded use: 反胃吐食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-108", "kind": "compound", "text": "<|user|>What compound class is recorded in Fritillaria cirrhosa?<|assistant|>Fritillaria cirrhosa contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-109", "kind": "use", "text": "<|user|>What is 樟材 recorded to treat?<|assistant|>Recorded use: 霍亂腹脹. Modern reading: cholera-like illness. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-110", "kind": "use", "text": "<|user|>What is 地錦 recorded to treat?<|assistant|>Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-111", "kind": "use", "text": "<|user|>What is 淡竹根 recorded to treat?<|assistant|>Recorded use: 洗婦人子宮下脫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-112", "kind": "use", "text": "<|user|>What is 附子 recorded to treat?<|assistant|>Recorded use: 不能行步. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-113", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 粉鉛?<|assistant|>Nature 寒, flavours 辛, channels not recorded, toxicity 無毒, grade 下品.<|eos|>"}
+{"id": "val-114", "kind": "use", "text": "<|user|>What is 麻仁 recorded to treat?<|assistant|>Recorded use: 浸湯沐髮長潤. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-115", "kind": "use", "text": "<|user|>What is 無漏子 recorded to treat?<|assistant|>Recorded use: 補虛損. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-116", "kind": "use", "text": "<|user|>What is 梓白皮 recorded to treat?<|assistant|>Recorded use: 搗敷豬瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-117", "kind": "use", "text": "<|user|>What is 藜蘆 recorded to treat?<|assistant|>Recorded use: 泄痢腸. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-118", "kind": "use", "text": "<|user|>What is 芍藥 recorded to treat?<|assistant|>Recorded use: 除血痺. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-119", "kind": "viability", "text": "<|user|>For 黄精 (Polygonatum sibiricum), will 蒸 enrich its terpenoid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY. The claimed enrichment of terpenoid by 蒸 is not supported: modelled median retention is 84% (range 58-95%), dominant loss mechanism hydrolysis. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
+{"id": "val-120", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 穬麥櫱?<|assistant|>Nature 溫, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-121", "kind": "use", "text": "<|user|>What is 桑根下土 recorded to treat?<|assistant|>Recorded use: 中惡風. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-122", "kind": "use", "text": "<|user|>What is 綠豆 recorded to treat?<|assistant|>Recorded use: 濃腸胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-123", "kind": "use", "text": "<|user|>What is 接骨木 recorded to treat?<|assistant|>Recorded use: 痰瘧. Modern reading: malaria-like fever. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-124", "kind": "use", "text": "<|user|>What is 蓮蕊須 recorded to treat?<|assistant|>Recorded use: 吐血. Modern reading: haemoptysis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-125", "kind": "use", "text": "<|user|>What is 生地黃 recorded to treat?<|assistant|>Recorded use: 胎不落. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-126", "kind": "use", "text": "<|user|>What is 蜀葵 recorded to treat?<|assistant|>Recorded use: 利腸胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-127", "kind": "use", "text": "<|user|>What is 斑蝥 recorded to treat?<|assistant|>Recorded use: 通利水道. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-128", "kind": "use", "text": "<|user|>What is 槐花 recorded to treat?<|assistant|>Recorded use: 煮汁釀酒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-129", "kind": "use", "text": "<|user|>What is 眼睛 recorded to treat?<|assistant|>Recorded use: 取黑貓肝一具. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-130", "kind": "use", "text": "<|user|>What is 烏爹泥 recorded to treat?<|assistant|>Recorded use: 生肌定痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-131", "kind": "use", "text": "<|user|>What is 防己 recorded to treat?<|assistant|>Recorded use: 脫肛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-132", "kind": "use", "text": "<|user|>What is 蕺菜 recorded to treat?<|assistant|>Recorded use: 淡竹筒內煨熟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-133", "kind": "use", "text": "<|user|>What is 桑耳 recorded to treat?<|assistant|>Recorded use: 止久泄. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-134", "kind": "candidate", "text": "<|user|>What candidate does Trichosanthes cucumeroides suggest under Track 02, and what would kill it?<|assistant|>Candidate: (2S,7S,8S,9S,10R,13R,14S,16R,17R)-2,7,16-trihydroxy-4,4,9,13,14-pentamethyl-3,11-dioxo-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-17-carbaldehyde (formula n/a), from Trichosanthes cucumeroides. MW 404.5, logP 4.65, structural novelty 0.5357. Proposed target class: NF-kB — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.<|eos|>"}
+{"id": "val-135", "kind": "use", "text": "<|user|>What is 蘆薈 recorded to treat?<|assistant|>Recorded use: 研末. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-136", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 艾納香?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-137", "kind": "use", "text": "<|user|>What is 大戟 recorded to treat?<|assistant|>Recorded use: 吐逆. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-138", "kind": "use", "text": "<|user|>What is 金屑 recorded to treat?<|assistant|>Recorded use: 服之神仙. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-139", "kind": "use", "text": "<|user|>What is 黑大豆 recorded to treat?<|assistant|>Recorded use: 殺鬼毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-140", "kind": "use", "text": "<|user|>What is 蘇合香 recorded to treat?<|assistant|>Recorded use: 溫瘧. Modern reading: malaria-like fever. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-141", "kind": "use", "text": "<|user|>What is 山羊 recorded to treat?<|assistant|>Recorded use: 虛勞. Modern reading: consumption. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-142", "kind": "use", "text": "<|user|>What is 反毛雞 recorded to treat?<|assistant|>Recorded use: 去骨. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-143", "kind": "use", "text": "<|user|>What is 麻𥟠 recorded to treat?<|assistant|>Recorded use: 入點痣去惡肉方中用. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-144", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 白芨?<|assistant|>白芨 -> Bletilla striata (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-145", "kind": "use", "text": "<|user|>What is 食蛇鼠 recorded to treat?<|assistant|>Recorded use: 殺百蟲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-146", "kind": "compound", "text": "<|user|>What compound class is recorded in Actaea cimicifuga?<|assistant|>Actaea cimicifuga contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-147", "kind": "use", "text": "<|user|>What is 葒草 recorded to treat?<|assistant|>Recorded use: 消積. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-148", "kind": "use", "text": "<|user|>What is 風延母 recorded to treat?<|assistant|>Recorded use: 同小青煎服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-149", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 白粱米?<|assistant|>Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
+{"id": "val-150", "kind": "use", "text": "<|user|>What is 鼠壤土 recorded to treat?<|assistant|>Recorded use: 多收曝乾. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-151", "kind": "use", "text": "<|user|>What is 馬齒莧 recorded to treat?<|assistant|>Recorded use: 以一升搗末. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-152", "kind": "use", "text": "<|user|>What is 石蜜 recorded to treat?<|assistant|>Recorded use: 心腹熱脹. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-153", "kind": "use", "text": "<|user|>What is 蝸牛 recorded to treat?<|assistant|>Recorded use: 賊風 僻. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-154", "kind": "use", "text": "<|user|>What is 凝水石 recorded to treat?<|assistant|>Recorded use: 煩滿. Modern reading: agitation. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-155", "kind": "use", "text": "<|user|>What is 頭骨 recorded to treat?<|assistant|>Recorded use: 即安. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-156", "kind": "use", "text": "<|user|>What is 馬藍 recorded to treat?<|assistant|>Recorded use: 酒服一錢匕. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-157", "kind": "use", "text": "<|user|>What is 橄欖 recorded to treat?<|assistant|>Recorded use: 煮飲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-158", "kind": "use", "text": "<|user|>What is 慈菇 recorded to treat?<|assistant|>Recorded use: 即便消退. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-159", "kind": "use", "text": "<|user|>What is 桃梟 recorded to treat?<|assistant|>Recorded use: 風痺無汗. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-160", "kind": "use", "text": "<|user|>What is 菾菜 recorded to treat?<|assistant|>Recorded use: 搗汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-161", "kind": "use", "text": "<|user|>What is 冬葵子 recorded to treat?<|assistant|>Recorded use: 下丹石毒滑胎治痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-162", "kind": "use", "text": "<|user|>What is 楓柳 recorded to treat?<|assistant|>Recorded use: 不限多少. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-163", "kind": "use", "text": "<|user|>What is 枸杞地骨皮 recorded to treat?<|assistant|>Recorded use: 壯心氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-164", "kind": "use", "text": "<|user|>What is 慈菇 recorded to treat?<|assistant|>Recorded use: 諸惡瘡腫. Modern reading: malignant sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-165", "kind": "use", "text": "<|user|>What is 太一余糧 recorded to treat?<|assistant|>Recorded use: 輕身飛行千里. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-166", "kind": "use", "text": "<|user|>What is 蠶網草 recorded to treat?<|assistant|>Recorded use: 恐毒入腹. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-167", "kind": "use", "text": "<|user|>What is 蠵龜 recorded to treat?<|assistant|>Recorded use: 刺飲便安. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-168", "kind": "use", "text": "<|user|>What is 鐵精 recorded to treat?<|assistant|>Recorded use: 小兒風癇. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-169", "kind": "use", "text": "<|user|>What is 枳椇 recorded to treat?<|assistant|>Recorded use: 小腹拘急. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-170", "kind": "compound", "text": "<|user|>What compound class is recorded in Saccharina japonica?<|assistant|>Saccharina japonica contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-171", "kind": "use", "text": "<|user|>What is 馬蘄 recorded to treat?<|assistant|>Recorded use: 炒研醋服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-172", "kind": "use", "text": "<|user|>What is 秦艽 recorded to treat?<|assistant|>Recorded use: 療酒黃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-173", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 螻蛄?<|assistant|>Nature 寒, flavours 鹹, channels not recorded, toxicity 無毒, grade 下品.<|eos|>"}
+{"id": "val-174", "kind": "use", "text": "<|user|>What is 海根 recorded to treat?<|assistant|>Recorded use: 蛇咬犬毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-175", "kind": "use", "text": "<|user|>What is 烏蘞莓 recorded to treat?<|assistant|>Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-176", "kind": "use", "text": "<|user|>What is 草犀 recorded to treat?<|assistant|>Recorded use: 虎野狼蟲虺所傷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-177", "kind": "formula", "text": "<|user|>What ingredients are recorded in formula ws_zh_shanghanlun:葛根黃芩黃連湯?<|assistant|>Formula ws_zh_shanghanlun:葛根黃芩黃連湯: 葛根, 甘草, 黃芩, 黃連, 水, 減, 煮取.<|eos|>"}
+{"id": "val-178", "kind": "use", "text": "<|user|>What is 攀倒甑 recorded to treat?<|assistant|>Recorded use: 搗汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-179", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 胡瓜?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-180", "kind": "use", "text": "<|user|>What is 繭鹵汁 recorded to treat?<|assistant|>Recorded use: 及下血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-181", "kind": "compound", "text": "<|user|>What compound class is recorded in Myristica fragrans?<|assistant|>Myristica fragrans contains flavonoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-182", "kind": "use", "text": "<|user|>What is 舵菜 recorded to treat?<|assistant|>Recorded use: 痰飲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-183", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 黃明膠?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-184", "kind": "use", "text": "<|user|>What is 白瓜子 recorded to treat?<|assistant|>Recorded use: 輕身耐老. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-185", "kind": "use", "text": "<|user|>What is 蒼龍腦 recorded to treat?<|assistant|>Recorded use: 傷人. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-186", "kind": "use", "text": "<|user|>What is 人膽 recorded to treat?<|assistant|>Recorded use: 噎食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-187", "kind": "use", "text": "<|user|>What is 針砂 recorded to treat?<|assistant|>Recorded use: 散癭. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-188", "kind": "use", "text": "<|user|>What is 桑根白皮 recorded to treat?<|assistant|>Recorded use: 五勞六極. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-189", "kind": "use", "text": "<|user|>What is 白龍鬚 recorded to treat?<|assistant|>Recorded use: 婦人陰中腫痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-190", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 梁上塵?<|assistant|>Nature 寒, flavours 辛/苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-191", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 苦瓜?<|assistant|>苦瓜 -> Momordica charantia (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-192", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 刺桐花?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 小毒, grade 下品.<|eos|>"}
+{"id": "val-193", "kind": "use", "text": "<|user|>What is 自然銅 recorded to treat?<|assistant|>Recorded use: 折傷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-194", "kind": "use", "text": "<|user|>What is 白粱米 recorded to treat?<|assistant|>Recorded use: 緩筋骨. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-195", "kind": "use", "text": "<|user|>What is 千金藤 recorded to treat?<|assistant|>Recorded use: 癲癇. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-196", "kind": "use", "text": "<|user|>What is 蒲蒻 recorded to treat?<|assistant|>Recorded use: 生啖. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-197", "kind": "use", "text": "<|user|>What is 醍醐 recorded to treat?<|assistant|>Recorded use: 功優於酥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-198", "kind": "use", "text": "<|user|>What is 苦竹筍 recorded to treat?<|assistant|>Recorded use: 益氣力. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-199", "kind": "use", "text": "<|user|>What is 頭肉 recorded to treat?<|assistant|>Recorded use: 療大熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-200", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 續斷?<|assistant|>續斷 -> Dipsacus asper (resolved by manual, confidence 0.95).<|eos|>"}
+{"id": "val-201", "kind": "use", "text": "<|user|>What is 核仁 recorded to treat?<|assistant|>Recorded use: 療崩中. Modern reading: uterine bleeding. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-202", "kind": "use", "text": "<|user|>What is 鐵鏽 recorded to treat?<|assistant|>Recorded use: 醋磨. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-203", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鸚肉?<|assistant|>Nature 溫, flavours 甘/鹹, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
+{"id": "val-204", "kind": "use", "text": "<|user|>What is 茅香 recorded to treat?<|assistant|>Recorded use: 作浴湯. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-205", "kind": "use", "text": "<|user|>What is 諸鳥有毒 recorded to treat?<|assistant|>Recorded use: 傷中虛羸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-206", "kind": "use", "text": "<|user|>What is 劉寄奴草 recorded to treat?<|assistant|>Recorded use: 下氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-207", "kind": "use", "text": "<|user|>What is 胡椒 recorded to treat?<|assistant|>Recorded use: 治冷痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-208", "kind": "use", "text": "<|user|>What is 苦茄 recorded to treat?<|assistant|>Recorded use: 塗癰腫. Modern reading: abscess/swelling. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-209", "kind": "use", "text": "<|user|>What is 驢槽 recorded to treat?<|assistant|>Recorded use: 潤毛發. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-210", "kind": "compound", "text": "<|user|>What compound class is recorded in Scolopendra subspinipes?<|assistant|>Scolopendra subspinipes contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-211", "kind": "use", "text": "<|user|>What is 初生臍帶 recorded to treat?<|assistant|>Recorded use: 解胎毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-212", "kind": "use", "text": "<|user|>What is 鉤吻 recorded to treat?<|assistant|>Recorded use: 治天行病心悶. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-213", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 稗米?<|assistant|>稗米 -> Echinochloa crus-galli (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-214", "kind": "use", "text": "<|user|>What is 女萎 recorded to treat?<|assistant|>Recorded use: 消食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-215", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 豆腐?<|assistant|>豆腐 -> Glycine max (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-216", "kind": "use", "text": "<|user|>What is 方目 recorded to treat?<|assistant|>Recorded use: 以臘豬脂調敷瘡口. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-217", "kind": "use", "text": "<|user|>What is 天名精 recorded to treat?<|assistant|>Recorded use: 揩之立已. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-218", "kind": "use", "text": "<|user|>What is 根及白皮 recorded to treat?<|assistant|>Recorded use: 殺三蟲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-219", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 野馬?<|assistant|>野馬 -> Equus ferus (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-220", "kind": "use", "text": "<|user|>What is 砂鍋 recorded to treat?<|assistant|>Recorded use: 作丸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-221", "kind": "use", "text": "<|user|>What is 酸模 recorded to treat?<|assistant|>Recorded use: 治疥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-222", "kind": "compound", "text": "<|user|>What compound class is recorded in Hordeum vulgare?<|assistant|>Hordeum vulgare contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-223", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 鹿藿?<|assistant|>鹿藿 -> Rhynchosia volubilis (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-224", "kind": "use", "text": "<|user|>What is 荊瀝 recorded to treat?<|assistant|>Recorded use: 小兒心熱驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-225", "kind": "use", "text": "<|user|>What is 莖根 recorded to treat?<|assistant|>Recorded use: 益氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-226", "kind": "use", "text": "<|user|>What is 蘩縷 recorded to treat?<|assistant|>Recorded use: 醋糊和丸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-227", "kind": "use", "text": "<|user|>What is 無患子 recorded to treat?<|assistant|>Recorded use: 喉痺. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-228", "kind": "use", "text": "<|user|>What is 地錦 recorded to treat?<|assistant|>Recorded use: 地錦︰通流血脈. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-229", "kind": "use", "text": "<|user|>What is 白附子 recorded to treat?<|assistant|>Recorded use: 中風失音. Modern reading: stroke-like syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-230", "kind": "use", "text": "<|user|>What is 欒荊 recorded to treat?<|assistant|>Recorded use: 頭面手足諸風. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-231", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 豆蔻?<|assistant|>豆蔻 -> Alpinia katsumadai (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-232", "kind": "use", "text": "<|user|>What is 核仁 recorded to treat?<|assistant|>Recorded use: 縮小便. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-233", "kind": "use", "text": "<|user|>What is 干漆 recorded to treat?<|assistant|>Recorded use: 久服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-234", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 水苦蕒?<|assistant|>Nature 寒, flavours 苦/辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-235", "kind": "use", "text": "<|user|>What is 蜣螂轉丸 recorded to treat?<|assistant|>Recorded use: 塗一切 瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-236", "kind": "use", "text": "<|user|>What is 醍醐 recorded to treat?<|assistant|>Recorded use: 添精補髓. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-237", "kind": "use", "text": "<|user|>What is 鼠婦 recorded to treat?<|assistant|>Recorded use: 蜘蛛毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-238", "kind": "use", "text": "<|user|>What is 羊子 recorded to treat?<|assistant|>Recorded use: 和勻. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-239", "kind": "use", "text": "<|user|>What is 諸血 recorded to treat?<|assistant|>Recorded use: 去煩熱. Modern reading: agitation. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-240", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 蛔蟲?<|assistant|>蛔蟲 -> Ascaris lumbricoides (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-241", "kind": "use", "text": "<|user|>What is 苗花 recorded to treat?<|assistant|>Recorded use: 搗汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-242", "kind": "use", "text": "<|user|>What is 萵苣 recorded to treat?<|assistant|>Recorded use: 痔漏下血. Modern reading: haemorrhoids. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-243", "kind": "use", "text": "<|user|>What is 穭豆 recorded to treat?<|assistant|>Recorded use: 炒令焦黑. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-244", "kind": "use", "text": "<|user|>What is 作乾石斛法︰ recorded to treat?<|assistant|>Recorded use: 腳膝疼冷痺弱. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-245", "kind": "use", "text": "<|user|>What is 筆頭灰 recorded to treat?<|assistant|>Recorded use: 漿飲服二錢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-246", "kind": "use", "text": "<|user|>What is 海金沙 recorded to treat?<|assistant|>Recorded use: 馬牙硝. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-247", "kind": "use", "text": "<|user|>What is 甘藍 recorded to treat?<|assistant|>Recorded use: 面目浮腫癰瘍. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-248", "kind": "use", "text": "<|user|>What is 惡實 recorded to treat?<|assistant|>Recorded use: 主牙齒痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-249", "kind": "use", "text": "<|user|>What is 巴戟天 recorded to treat?<|assistant|>Recorded use: 小腹及陰中相引痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-250", "kind": "use", "text": "<|user|>What is 木蓮 recorded to treat?<|assistant|>Recorded use: 變白不衰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-251", "kind": "use", "text": "<|user|>What is 無名異 recorded to treat?<|assistant|>Recorded use: 生肌肉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-252", "kind": "use", "text": "<|user|>What is 簸箕舌 recorded to treat?<|assistant|>Recorded use: 燒研. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-253", "kind": "use", "text": "<|user|>What is 海松子 recorded to treat?<|assistant|>Recorded use: 去死肌. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-254", "kind": "use", "text": "<|user|>What is 雄原蠶蛾 recorded to treat?<|assistant|>Recorded use: 暖水臟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-255", "kind": "use", "text": "<|user|>What is 白馬通 recorded to treat?<|assistant|>Recorded use: 鼻衄. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-256", "kind": "use", "text": "<|user|>What is 芍藥 recorded to treat?<|assistant|>Recorded use: 去水氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-257", "kind": "use", "text": "<|user|>What is 水斳 recorded to treat?<|assistant|>Recorded use: 瘰癧生瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-258", "kind": "compound", "text": "<|user|>What compound class is recorded in Carpesium abrotanoides?<|assistant|>Carpesium abrotanoides contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-259", "kind": "use", "text": "<|user|>What is 門臼塵 recorded to treat?<|assistant|>Recorded use: 切蒜蘸擦. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-260", "kind": "use", "text": "<|user|>What is 草犀 recorded to treat?<|assistant|>Recorded use: 臨死者亦得活. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-261", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 金盞草?<|assistant|>Nature 寒, flavours 酸, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-262", "kind": "use", "text": "<|user|>What is 小麥 recorded to treat?<|assistant|>Recorded use: 養心氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-263", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 景天?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
+{"id": "val-264", "kind": "use", "text": "<|user|>What is 屋游 recorded to treat?<|assistant|>Recorded use: 小兒癇熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-265", "kind": "use", "text": "<|user|>What is 剪草 recorded to treat?<|assistant|>Recorded use: 疥癬. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-266", "kind": "use", "text": "<|user|>What is 蹄肉 recorded to treat?<|assistant|>Recorded use: 熱飲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-267", "kind": "use", "text": "<|user|>What is 地膚 recorded to treat?<|assistant|>Recorded use: 去熱風. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-268", "kind": "use", "text": "<|user|>What is 爛殼 recorded to treat?<|assistant|>Recorded use: 湯火傷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-269", "kind": "use", "text": "<|user|>What is 慈菇 recorded to treat?<|assistant|>Recorded use: 治蛇. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-270", "kind": "use", "text": "<|user|>What is 螺厴草 recorded to treat?<|assistant|>Recorded use: 吐血衄. Modern reading: haemoptysis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-271", "kind": "use", "text": "<|user|>What is 無名異 recorded to treat?<|assistant|>Recorded use: 消腫毒癰疽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-272", "kind": "use", "text": "<|user|>What is 白附子 recorded to treat?<|assistant|>Recorded use: 足弱無力. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-273", "kind": "use", "text": "<|user|>What is 蛇莓 recorded to treat?<|assistant|>Recorded use: 傷寒大熱. Modern reading: febrile infectious disease. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-274", "kind": "compound", "text": "<|user|>What compound class is recorded in Dermatophyllum gypsophilum?<|assistant|>Dermatophyllum gypsophilum contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-275", "kind": "use", "text": "<|user|>What is 五味子 recorded to treat?<|assistant|>Recorded use: 除熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-276", "kind": "use", "text": "<|user|>What is 白鴿肉 recorded to treat?<|assistant|>Recorded use: 消腫及腹中痞塊. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-277", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 蛺蝶?<|assistant|>蛺蝶 -> Nymphalidae (resolved by wikidata-genus, confidence 0.55).<|eos|>"}
+{"id": "val-278", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 粟櫱?<|assistant|>Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-279", "kind": "use", "text": "<|user|>What is 杓上砂 recorded to treat?<|assistant|>Recorded use: 此皆莫解其理. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-280", "kind": "compound", "text": "<|user|>What compound class is recorded in Damnacanthus indicus?<|assistant|>Damnacanthus indicus contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-281", "kind": "use", "text": "<|user|>What is 木皮 recorded to treat?<|assistant|>Recorded use: 利水. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-282", "kind": "compound", "text": "<|user|>What compound class is recorded in Berberis vulgaris?<|assistant|>Berberis vulgaris contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-283", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 方解石?<|assistant|>Nature 寒, flavours 苦/辛, channels not recorded, toxicity 無毒, grade 下品.<|eos|>"}
+{"id": "val-284", "kind": "use", "text": "<|user|>What is 木皮 recorded to treat?<|assistant|>Recorded use: 殺瘃蟲風瘙. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-285", "kind": "use", "text": "<|user|>What is 芍藥 recorded to treat?<|assistant|>Recorded use: 逐賊血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-286", "kind": "use", "text": "<|user|>What is 枝葉 recorded to treat?<|assistant|>Recorded use: 作粥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-287", "kind": "use", "text": "<|user|>What is 熟地黃 recorded to treat?<|assistant|>Recorded use: 酒服方寸匕. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-288", "kind": "use", "text": "<|user|>What is 山蛤 recorded to treat?<|assistant|>Recorded use: 及疳疾. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-289", "kind": "use", "text": "<|user|>What is 高良薑 recorded to treat?<|assistant|>Recorded use: 吐瀉痢疾. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-290", "kind": "use", "text": "<|user|>What is 烏頭 recorded to treat?<|assistant|>Recorded use: 陰汗. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-291", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 葛花菜?<|assistant|>Nature —, flavours 苦/甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-292", "kind": "use", "text": "<|user|>What is 腸風下血 recorded to treat?<|assistant|>Recorded use: 金瘡血痔. Modern reading: haemorrhoids. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-293", "kind": "use", "text": "<|user|>What is 蓮蕊須 recorded to treat?<|assistant|>Recorded use: 烏鬚髮. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-294", "kind": "use", "text": "<|user|>What is 楂子 recorded to treat?<|assistant|>Recorded use: 熟皆宜. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-295", "kind": "use", "text": "<|user|>What is 白雄雞肉 recorded to treat?<|assistant|>Recorded use: 下氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-296", "kind": "use", "text": "<|user|>What is 白綿及布 recorded to treat?<|assistant|>Recorded use: 燃燈. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-297", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 瓜瓤?<|assistant|>Nature 寒, flavours 甘, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-298", "kind": "use", "text": "<|user|>What is 城東腐木 recorded to treat?<|assistant|>Recorded use: 甚良. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-299", "kind": "compound", "text": "<|user|>What compound class is recorded in Biancaea sappan?<|assistant|>Biancaea sappan contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-300", "kind": "use", "text": "<|user|>What is 酸榴皮 recorded to treat?<|assistant|>Recorded use: 澀腸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-301", "kind": "use", "text": "<|user|>What is 淡竹茹 recorded to treat?<|assistant|>Recorded use: 溫氣寒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-302", "kind": "use", "text": "<|user|>What is 韶子 recorded to treat?<|assistant|>Recorded use: 心腹冷氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-303", "kind": "use", "text": "<|user|>What is 澤蘭 recorded to treat?<|assistant|>Recorded use: 產後金瘡內塞. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-304", "kind": "use", "text": "<|user|>What is 雷丸 recorded to treat?<|assistant|>Recorded use: 逐邪氣惡風汗出. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-305", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 白豆蔻?<|assistant|>白豆蔻 -> Wurfbainia vera (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-306", "kind": "use", "text": "<|user|>What is 金櫻子 recorded to treat?<|assistant|>Recorded use: 名軍中一捻金. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-307", "kind": "use", "text": "<|user|>What is 零餘子 recorded to treat?<|assistant|>Recorded use: 食之不飢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-308", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 雪蠶?<|assistant|>Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-309", "kind": "use", "text": "<|user|>What is 馬勃 recorded to treat?<|assistant|>Recorded use: 諸風頭眩. Modern reading: vertigo. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-310", "kind": "use", "text": "<|user|>What is 清風藤 recorded to treat?<|assistant|>Recorded use: 風疾. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-311", "kind": "use", "text": "<|user|>What is 越瓜 recorded to treat?<|assistant|>Recorded use: 止煩渴. Modern reading: agitation. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-312", "kind": "use", "text": "<|user|>What is 桂心 recorded to treat?<|assistant|>Recorded use: 胞衣不下. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-313", "kind": "use", "text": "<|user|>What is 苜蓿 recorded to treat?<|assistant|>Recorded use: 沙虱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-314", "kind": "use", "text": "<|user|>What is 溫湯 recorded to treat?<|assistant|>Recorded use: 當大虛憊. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-315", "kind": "formula", "text": "<|user|>What ingredients are recorded in formula ws_zh_shanghanlun:小承氣湯?<|assistant|>Formula ws_zh_shanghanlun:小承氣湯: 大黃, 厚朴, 枳實, 煮取, 因與承氣湯, 更服, 胃中必有燥屎.<|eos|>"}
+{"id": "val-316", "kind": "use", "text": "<|user|>What is 仙人杖草 recorded to treat?<|assistant|>Recorded use: 堅筋骨. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-317", "kind": "use", "text": "<|user|>What is 土墼 recorded to treat?<|assistant|>Recorded use: 其腫即消. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-318", "kind": "use", "text": "<|user|>What is 風化硝 recorded to treat?<|assistant|>Recorded use: 上焦風熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-319", "kind": "use", "text": "<|user|>What is 鐵椎柄 recorded to treat?<|assistant|>Recorded use: 鬼打. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-320", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 螺螄泥?<|assistant|>Nature 涼, flavours —, channels not recorded, toxicity —, grade —.<|eos|>"}
+{"id": "val-321", "kind": "use", "text": "<|user|>What is 風貍 recorded to treat?<|assistant|>Recorded use: 同腸作 食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-322", "kind": "use", "text": "<|user|>What is 赤翅蜂 recorded to treat?<|assistant|>Recorded use: 療蜘蛛咬. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-323", "kind": "use", "text": "<|user|>What is 羊子 recorded to treat?<|assistant|>Recorded use: 平胃散末一半. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-324", "kind": "use", "text": "<|user|>What is 秦艽 recorded to treat?<|assistant|>Recorded use: 牛乳點服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-325", "kind": "use", "text": "<|user|>What is 木蓮 recorded to treat?<|assistant|>Recorded use: 藤葉一握. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-326", "kind": "use", "text": "<|user|>What is 水甘草 recorded to treat?<|assistant|>Recorded use: 風痺消渴. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-327", "kind": "use", "text": "<|user|>What is 黃雌雞肉 recorded to treat?<|assistant|>Recorded use: 續絕傷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-328", "kind": "use", "text": "<|user|>What is 解毒子 recorded to treat?<|assistant|>Recorded use: 退目赤. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-329", "kind": "use", "text": "<|user|>What is 赤翅蜂 recorded to treat?<|assistant|>Recorded use: 當得絲出. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-330", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 胡桐淚?<|assistant|>Nature 寒, flavours 鹹/苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-331", "kind": "use", "text": "<|user|>What is 舩底苔 recorded to treat?<|assistant|>Recorded use: 和酥餅末一兩半. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-332", "kind": "use", "text": "<|user|>What is 鑿柄木 recorded to treat?<|assistant|>Recorded use: 難產. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-333", "kind": "use", "text": "<|user|>What is 五斂子 recorded to treat?<|assistant|>Recorded use: 生津止渴. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-334", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 苦竹茹?<|assistant|>苦竹茹 -> Pleioblastus amarus (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-335", "kind": "use", "text": "<|user|>What is 皋蘆 recorded to treat?<|assistant|>Recorded use: 令人不睡. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-336", "kind": "use", "text": "<|user|>What is 理石 recorded to treat?<|assistant|>Recorded use: 令人肥悅. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-337", "kind": "use", "text": "<|user|>What is 皮間白汁 recorded to treat?<|assistant|>Recorded use: 犬咬. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-338", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 桑耳?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 有毒, grade —.<|eos|>"}
+{"id": "val-339", "kind": "viability", "text": "<|user|>For 乌蛇 (Diospyros eriantha), will 焙 enrich its terpenoid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY. The claimed enrichment of terpenoid by 焙 is not supported: modelled median retention is 100% (range 99-100%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
+{"id": "val-340", "kind": "use", "text": "<|user|>What is 卷柏 recorded to treat?<|assistant|>Recorded use: 痿蹶. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-341", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 慈菇?<|assistant|>Nature 寒, flavours 苦/甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-342", "kind": "use", "text": "<|user|>What is 人胞 recorded to treat?<|assistant|>Recorded use: 安心養血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-343", "kind": "use", "text": "<|user|>What is 文蛤 recorded to treat?<|assistant|>Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-344", "kind": "formula", "text": "<|user|>What ingredients are recorded in formula ws_zh_shanghanlun:附子湯?<|assistant|>Formula ws_zh_shanghanlun:附子湯: 附子, 破, 茯苓, 人參, 白朮, 芍藥, 水, 煮取, 溫服.<|eos|>"}
+{"id": "val-345", "kind": "use", "text": "<|user|>What is 黃芝一名金芝 recorded to treat?<|assistant|>Recorded use: 強志意. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-346", "kind": "use", "text": "<|user|>What is 糞清 recorded to treat?<|assistant|>Recorded use: 飯和作丸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-347", "kind": "compound", "text": "<|user|>What compound class is recorded in Aucklandia lappa?<|assistant|>Aucklandia lappa contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-348", "kind": "use", "text": "<|user|>What is 燈盞油 recorded to treat?<|assistant|>Recorded use: 痰厥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-349", "kind": "use", "text": "<|user|>What is 蠱蟲 recorded to treat?<|assistant|>Recorded use: 立愈. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-350", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 土黃?<|assistant|>土黃 -> Nematalosa japonica (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-351", "kind": "use", "text": "<|user|>What is 時珍曰︰梗是矣 recorded to treat?<|assistant|>Recorded use: 五臟邪氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-352", "kind": "use", "text": "<|user|>What is 天靈蓋 recorded to treat?<|assistant|>Recorded use: 乏力羸瘦. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-353", "kind": "use", "text": "<|user|>What is 白皮 recorded to treat?<|assistant|>Recorded use: 有蟲者取片許內孔中. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-354", "kind": "use", "text": "<|user|>What is 知母 recorded to treat?<|assistant|>Recorded use: 下水. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-355", "kind": "use", "text": "<|user|>What is 白皮 recorded to treat?<|assistant|>Recorded use: 須臾又一丸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-356", "kind": "use", "text": "<|user|>What is 𦯶麻 recorded to treat?<|assistant|>Recorded use: 亦治痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-357", "kind": "compound", "text": "<|user|>What compound class is recorded in Selaginella tamariscina?<|assistant|>Selaginella tamariscina contains flavonoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-358", "kind": "use", "text": "<|user|>What is 珊瑚 recorded to treat?<|assistant|>Recorded use: 點眼. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-359", "kind": "use", "text": "<|user|>What is 高良薑 recorded to treat?<|assistant|>Recorded use: 溫腹腸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-360", "kind": "use", "text": "<|user|>What is 白石英 recorded to treat?<|assistant|>Recorded use: 久服輕身長年. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-361", "kind": "use", "text": "<|user|>What is 枝葉 recorded to treat?<|assistant|>Recorded use: 煮汁和米作粥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-362", "kind": "use", "text": "<|user|>What is 穬麥櫱 recorded to treat?<|assistant|>Recorded use: 開胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-363", "kind": "compound", "text": "<|user|>What compound class is recorded in Carthamus tinctorius?<|assistant|>Carthamus tinctorius contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-364", "kind": "use", "text": "<|user|>What is 決明 recorded to treat?<|assistant|>Recorded use: 目淫膚. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-365", "kind": "use", "text": "<|user|>What is 扁青 recorded to treat?<|assistant|>Recorded use: 目痛明目. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-366", "kind": "use", "text": "<|user|>What is 蛤蜊 recorded to treat?<|assistant|>Recorded use: 宜煮食之醒酒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-367", "kind": "use", "text": "<|user|>What is 杉材 recorded to treat?<|assistant|>Recorded use: 咳嗽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-368", "kind": "use", "text": "<|user|>What is 穀精草 recorded to treat?<|assistant|>Recorded use: 齒風痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-369", "kind": "use", "text": "<|user|>What is 豚卵 recorded to treat?<|assistant|>Recorded use: 除寒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-370", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 木鱉子?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-371", "kind": "use", "text": "<|user|>What is 石蜜 recorded to treat?<|assistant|>Recorded use: 助五臟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-372", "kind": "use", "text": "<|user|>What is 知母 recorded to treat?<|assistant|>Recorded use: 肢體浮腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-373", "kind": "use", "text": "<|user|>What is 懸蹄 recorded to treat?<|assistant|>Recorded use: 塗惡瘡濕癬. Modern reading: malignant sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-374", "kind": "use", "text": "<|user|>What is 刺桐花 recorded to treat?<|assistant|>Recorded use: 失心躁悶. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-375", "kind": "use", "text": "<|user|>What is 空青 recorded to treat?<|assistant|>Recorded use: 明目. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-376", "kind": "compound", "text": "<|user|>What compound class is recorded in Ziziphus jujuba?<|assistant|>Ziziphus jujuba contains steroid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-377", "kind": "use", "text": "<|user|>What is 梭頭 recorded to treat?<|assistant|>Recorded use: 失音不語. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-378", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 黃環?<|assistant|>黃環 -> Boiga dendrophila (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-379", "kind": "use", "text": "<|user|>What is 蛤蜊粉 recorded to treat?<|assistant|>Recorded use: 治婦人產後虛損. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-380", "kind": "use", "text": "<|user|>What is 皮毛 recorded to treat?<|assistant|>Recorded use: 清旦飲服一小盞. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-381", "kind": "use", "text": "<|user|>What is 鬼針草 recorded to treat?<|assistant|>Recorded use: 杵汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-382", "kind": "use", "text": "<|user|>What is 馬腦 recorded to treat?<|assistant|>Recorded use: 熨目赤爛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-383", "kind": "use", "text": "<|user|>What is 質汗 recorded to treat?<|assistant|>Recorded use: 補筋肉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-384", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 剪草?<|assistant|>剪草 -> Chloranthus fortunei (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-385", "kind": "use", "text": "<|user|>What is 人尿 recorded to treat?<|assistant|>Recorded use: 推陳致新. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-386", "kind": "use", "text": "<|user|>What is 人屎 recorded to treat?<|assistant|>Recorded use: 彌善. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-387", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 山豆根?<|assistant|>Nature 寒, flavours 甘, channels 心/肺, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-388", "kind": "use", "text": "<|user|>What is 尾血 recorded to treat?<|assistant|>Recorded use: 小兒五疳. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-389", "kind": "use", "text": "<|user|>What is 鼠婦 recorded to treat?<|assistant|>Recorded use: 婦人月閉血瘕. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-390", "kind": "use", "text": "<|user|>What is 車轍中水 recorded to treat?<|assistant|>Recorded use: 牛蹄中水亦可. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-391", "kind": "use", "text": "<|user|>What is 古文錢 recorded to treat?<|assistant|>Recorded use: 通五淋. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-392", "kind": "use", "text": "<|user|>What is 肝及子 recorded to treat?<|assistant|>Recorded use: 香油調. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-393", "kind": "use", "text": "<|user|>What is 根及花 recorded to treat?<|assistant|>Recorded use: 螫針刺. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-394", "kind": "use", "text": "<|user|>What is 釵子股 recorded to treat?<|assistant|>Recorded use: 煮汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-395", "kind": "use", "text": "<|user|>What is 粟泔汁 recorded to treat?<|assistant|>Recorded use: 心煩渴. Modern reading: agitation. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-396", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 玄明粉?<|assistant|>Nature —, flavours 辛/甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-397", "kind": "use", "text": "<|user|>What is 松脂 recorded to treat?<|assistant|>Recorded use: 惡瘡. Modern reading: malignant sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-398", "kind": "use", "text": "<|user|>What is 白蘞 recorded to treat?<|assistant|>Recorded use: 目中赤. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-399", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 久服通神明. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-400", "kind": "use", "text": "<|user|>What is 豆葉 recorded to treat?<|assistant|>Recorded use: 翳膜. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-401", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 引膿血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-402", "kind": "use", "text": "<|user|>What is 莖根 recorded to treat?<|assistant|>Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-403", "kind": "use", "text": "<|user|>What is 蜀羊泉 recorded to treat?<|assistant|>Recorded use: 女子陰中內傷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-404", "kind": "compound", "text": "<|user|>What compound class is recorded in Orobanche coerulescens?<|assistant|>Orobanche coerulescens contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-405", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 雄原蠶蛾?<|assistant|>Nature 溫, flavours 鹹, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-406", "kind": "use", "text": "<|user|>What is 穰莖並根 recorded to treat?<|assistant|>Recorded use: 浴身. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-407", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 作湯. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-408", "kind": "use", "text": "<|user|>What is 諸鳥有毒 recorded to treat?<|assistant|>Recorded use: 長肌肉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-409", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 癰腫疽 瘰癧. Modern reading: abscess/swelling. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-410", "kind": "use", "text": "<|user|>What is 天名精 recorded to treat?<|assistant|>Recorded use: 疔瘡 痔. Modern reading: haemorrhoids. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-411", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 檉柳?<|assistant|>Nature 溫, flavours 甘/鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-412", "kind": "use", "text": "<|user|>What is 天南星 recorded to treat?<|assistant|>Recorded use: 除陰下濕. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-413", "kind": "viability", "text": "<|user|>For 恶实 (Arctium lappa), will 蒸 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY NOT. The claimed enrichment of alkaloid by 蒸 is not supported: modelled median retention is 0% (range 0-17%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
+{"id": "val-414", "kind": "use", "text": "<|user|>What is 羚羊角 recorded to treat?<|assistant|>Recorded use: 治五尸遁尸邪氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-415", "kind": "compound", "text": "<|user|>What compound class is recorded in Phytolacca acinosa?<|assistant|>Phytolacca acinosa contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-416", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 松節?<|assistant|>Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-417", "kind": "use", "text": "<|user|>What is 肚及屎 recorded to treat?<|assistant|>Recorded use: 疳 心痛疰忤. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-418", "kind": "use", "text": "<|user|>What is 藤中水 recorded to treat?<|assistant|>Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-419", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 撲損瘀血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-420", "kind": "use", "text": "<|user|>What is 髓腦 recorded to treat?<|assistant|>Recorded use: 悅顏色釀酒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-421", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 胞衣水?<|assistant|>Nature 涼, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-422", "kind": "use", "text": "<|user|>What is 蒔蘿 recorded to treat?<|assistant|>Recorded use: 兩肋痞滿. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-423", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 芫青?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 有毒, grade 下品.<|eos|>"}
+{"id": "val-424", "kind": "use", "text": "<|user|>What is 山柰 recorded to treat?<|assistant|>Recorded use: 風蟲牙痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-425", "kind": "compound", "text": "<|user|>What compound class is recorded in Glycyrrhiza uralensis?<|assistant|>Glycyrrhiza uralensis contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-426", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 蕤核?<|assistant|>蕤核 -> Prinsepia uniflora (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-427", "kind": "use", "text": "<|user|>What is 桂心 recorded to treat?<|assistant|>Recorded use: 腹內冷氣痛不可忍. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-428", "kind": "use", "text": "<|user|>What is 根及枯莖葉 recorded to treat?<|assistant|>Recorded use: 治血淋下血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-429", "kind": "use", "text": "<|user|>What is 核仁 recorded to treat?<|assistant|>Recorded use: 溫肺益氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-430", "kind": "use", "text": "<|user|>What is 階前草 recorded to treat?<|assistant|>Recorded use: 羸瘦. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-431", "kind": "use", "text": "<|user|>What is 草犀 recorded to treat?<|assistant|>Recorded use: 天行瘧瘴寒熱. Modern reading: malaria-like fever. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-432", "kind": "use", "text": "<|user|>What is 碧海水 recorded to treat?<|assistant|>Recorded use: 吐下宿食臚脹. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-433", "kind": "use", "text": "<|user|>What is 鐵漿 recorded to treat?<|assistant|>Recorded use: 毒惡蟲等嚙. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-434", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 葈耳?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 小毒, grade 中品.<|eos|>"}
+{"id": "val-435", "kind": "use", "text": "<|user|>What is 黃橘皮 recorded to treat?<|assistant|>Recorded use: 久服去臭. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-436", "kind": "use", "text": "<|user|>What is 握雪礜石 recorded to treat?<|assistant|>Recorded use: 痼冷積聚. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-437", "kind": "use", "text": "<|user|>What is 洗手足水 recorded to treat?<|assistant|>Recorded use: 病後勞復. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-438", "kind": "use", "text": "<|user|>What is 根葉 recorded to treat?<|assistant|>Recorded use: 消瘰癧赤癰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-439", "kind": "compound", "text": "<|user|>What compound class is recorded in Canavalia gladiata?<|assistant|>Canavalia gladiata contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-440", "kind": "use", "text": "<|user|>What is 地耳 recorded to treat?<|assistant|>Recorded use: 令人有子. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-441", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 茅香?<|assistant|>Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-442", "kind": "use", "text": "<|user|>What is 樹根 recorded to treat?<|assistant|>Recorded use: 癰疽發背. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-443", "kind": "use", "text": "<|user|>What is 林檎 recorded to treat?<|assistant|>Recorded use: 下氣消痰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-444", "kind": "use", "text": "<|user|>What is 大戟 recorded to treat?<|assistant|>Recorded use: 腹滿急痛積聚. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-445", "kind": "use", "text": "<|user|>What is 莧實 recorded to treat?<|assistant|>Recorded use: 【附方】新一. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-446", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 蝉花?<|assistant|>蝉花 -> Cordyceps cicadae (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-447", "kind": "use", "text": "<|user|>What is 大棗 recorded to treat?<|assistant|>Recorded use: 少津液. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-448", "kind": "use", "text": "<|user|>What is 熱痢吐食︰ recorded to treat?<|assistant|>Recorded use: 以臘月蟄蠅乾研爲末. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-449", "kind": "use", "text": "<|user|>What is 補骨脂 recorded to treat?<|assistant|>Recorded use: 男子腰疼. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-450", "kind": "use", "text": "<|user|>What is 律草 recorded to treat?<|assistant|>Recorded use: 煮汁或生搗汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-451", "kind": "use", "text": "<|user|>What is 卵白 recorded to treat?<|assistant|>Recorded use: 醋浸一宿. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-452", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 芎藭?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
+{"id": "val-453", "kind": "use", "text": "<|user|>What is 青蘘 recorded to treat?<|assistant|>Recorded use: 去風潤髮. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-454", "kind": "use", "text": "<|user|>What is 白瓷器 recorded to treat?<|assistant|>Recorded use: 塗瘡滅瘢. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-455", "kind": "use", "text": "<|user|>What is 獨行根 recorded to treat?<|assistant|>Recorded use: 立瘥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-456", "kind": "use", "text": "<|user|>What is 根皮 recorded to treat?<|assistant|>Recorded use: 亦可浴瘡痍疥癬風瘙. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-457", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 胡名鎮頭?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-458", "kind": "use", "text": "<|user|>What is 紫梢花 recorded to treat?<|assistant|>Recorded use: 小便不禁. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-459", "kind": "use", "text": "<|user|>What is 王不留行 recorded to treat?<|assistant|>Recorded use: 發背. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-460", "kind": "compound", "text": "<|user|>What compound class is recorded in Curcuma phaeocaulis?<|assistant|>Curcuma phaeocaulis contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-461", "kind": "use", "text": "<|user|>What is 降真香 recorded to treat?<|assistant|>Recorded use: 止血定痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-462", "kind": "use", "text": "<|user|>What is 烏鴉 recorded to treat?<|assistant|>Recorded use: 臘月以瓦瓶泥固燒存性. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-463", "kind": "use", "text": "<|user|>What is 鱟魚 recorded to treat?<|assistant|>Recorded use: 解熱毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-464", "kind": "use", "text": "<|user|>What is 戎鹽 recorded to treat?<|assistant|>Recorded use: 除五臟症結. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-465", "kind": "use", "text": "<|user|>What is 雄黃 recorded to treat?<|assistant|>Recorded use: 寒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-466", "kind": "use", "text": "<|user|>What is 律草 recorded to treat?<|assistant|>Recorded use: 生汁一合服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-467", "kind": "use", "text": "<|user|>What is 烏頭 recorded to treat?<|assistant|>Recorded use: 半身素）. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-468", "kind": "use", "text": "<|user|>What is 茉莉 recorded to treat?<|assistant|>Recorded use: 凡跌損骨節脫臼. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-469", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 筆頭灰?<|assistant|>Nature 寒, flavours —, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-470", "kind": "use", "text": "<|user|>What is 梁上塵 recorded to treat?<|assistant|>Recorded use: 腹痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-471", "kind": "use", "text": "<|user|>What is 卵白 recorded to treat?<|assistant|>Recorded use: 胞衣不出. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-472", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 迎春花?<|assistant|>Nature 平, flavours 苦/澀, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-473", "kind": "use", "text": "<|user|>What is 門臼塵 recorded to treat?<|assistant|>Recorded use: 止金瘡出血. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-474", "kind": "use", "text": "<|user|>What is 彈丸土 recorded to treat?<|assistant|>Recorded use: 熱酒服一錢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-475", "kind": "use", "text": "<|user|>What is 藍蛇 recorded to treat?<|assistant|>Recorded use: 以尾作脯. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-476", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 喉痺. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-477", "kind": "use", "text": "<|user|>What is 五味子 recorded to treat?<|assistant|>Recorded use: 強陰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-478", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 冬葵子?<|assistant|>Nature 寒, flavours 甘, channels 小腸/膀胱, toxicity 無毒, grade 上品.<|eos|>"}
+{"id": "val-479", "kind": "use", "text": "<|user|>What is 天子藉田三推犁下土 recorded to treat?<|assistant|>Recorded use: 入官不懼. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-480", "kind": "use", "text": "<|user|>What is 飴糖 recorded to treat?<|assistant|>Recorded use: 並治蛇. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-481", "kind": "use", "text": "<|user|>What is 犀角 recorded to treat?<|assistant|>Recorded use: 令人駿健熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-482", "kind": "use", "text": "<|user|>What is 黑雌雞肉 recorded to treat?<|assistant|>Recorded use: 破心中宿血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-483", "kind": "use", "text": "<|user|>What is 白菖 recorded to treat?<|assistant|>Recorded use: 研末. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-484", "kind": "use", "text": "<|user|>What is 燈盞殘油 recorded to treat?<|assistant|>Recorded use: 以灌瘡口. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-485", "kind": "use", "text": "<|user|>What is 青玉 recorded to treat?<|assistant|>Recorded use: 婦人無子. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-486", "kind": "use", "text": "<|user|>What is 母豬乳 recorded to treat?<|assistant|>Recorded use: 治驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-487", "kind": "use", "text": "<|user|>What is 緣桑螺 recorded to treat?<|assistant|>Recorded use: 大腸脫肛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-488", "kind": "use", "text": "<|user|>What is 玄石 recorded to treat?<|assistant|>Recorded use: 大人小兒驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-489", "kind": "compound", "text": "<|user|>What compound class is recorded in Vigna umbellata?<|assistant|>Vigna umbellata contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-490", "kind": "use", "text": "<|user|>What is 白石脂 recorded to treat?<|assistant|>Recorded use: 小腸 熱溏. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-491", "kind": "use", "text": "<|user|>What is 蜈蚣 recorded to treat?<|assistant|>Recorded use: 治症癖. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-492", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 青腰蟲?<|assistant|>Nature 寒, flavours —, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-493", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 土芋?<|assistant|>Nature 寒, flavours 甘/辛, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-494", "kind": "use", "text": "<|user|>What is 王不留行 recorded to treat?<|assistant|>Recorded use: 游風風疹. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-495", "kind": "use", "text": "<|user|>What is 青腰蟲 recorded to treat?<|assistant|>Recorded use: 馬肉蛆︰治針. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-496", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 珠鱉?<|assistant|>Nature 寒, flavours 鹹, channels not recorded, toxicity 小毒, grade 中品.<|eos|>"}
+{"id": "val-497", "kind": "use", "text": "<|user|>What is 柿蒂 recorded to treat?<|assistant|>Recorded use: 咳逆噦氣. Modern reading: cough. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-498", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 治通身發黃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-499", "kind": "use", "text": "<|user|>What is 自然銅 recorded to treat?<|assistant|>Recorded use: 破積聚. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-500", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蜜香?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-501", "kind": "use", "text": "<|user|>What is 心血 recorded to treat?<|assistant|>Recorded use: 及痘瘡倒靨. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-502", "kind": "use", "text": "<|user|>What is 瑣陽 recorded to treat?<|assistant|>Recorded use: 不燥結者勿用. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-503", "kind": "use", "text": "<|user|>What is 核仁 recorded to treat?<|assistant|>Recorded use: 令人好顏色. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-504", "kind": "use", "text": "<|user|>What is 鳩肉 recorded to treat?<|assistant|>Recorded use: 及耳中生耵聹. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-505", "kind": "use", "text": "<|user|>What is 蛇婆 recorded to treat?<|assistant|>Recorded use: 米飲服二錢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-506", "kind": "use", "text": "<|user|>What is 石首魚 recorded to treat?<|assistant|>Recorded use: 能消瓜成水. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-507", "kind": "candidate", "text": "<|user|>What candidate does Syzygium aromaticum suggest under Track 02, and what would kill it?<|assistant|>Candidate: (+)-γ-cadinene (formula n/a), from Syzygium aromaticum. MW 204.36, logP 5.9, structural novelty 0.0. Proposed target class: opioid receptor — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.<|eos|>"}
+{"id": "val-508", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 上氣. Modern reading: respiratory distress. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-509", "kind": "use", "text": "<|user|>What is 頭血 recorded to treat?<|assistant|>Recorded use: 五月五日收藏衣領中. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-510", "kind": "use", "text": "<|user|>What is 竹茹 recorded to treat?<|assistant|>Recorded use: 勞熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-511", "kind": "use", "text": "<|user|>What is 作乾石斛法︰ recorded to treat?<|assistant|>Recorded use: 補五臟虛勞羸瘦. Modern reading: consumption. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-512", "kind": "use", "text": "<|user|>What is 烏蘞莓 recorded to treat?<|assistant|>Recorded use: 涼血解毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-513", "kind": "use", "text": "<|user|>What is 蘇方木 recorded to treat?<|assistant|>Recorded use: 產後惡露不安. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-514", "kind": "use", "text": "<|user|>What is 肚及屎 recorded to treat?<|assistant|>Recorded use: 暑月久痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-515", "kind": "use", "text": "<|user|>What is 茵芋 recorded to treat?<|assistant|>Recorded use: 諸關節風濕痺痛. Modern reading: rheumatic pain. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-516", "kind": "use", "text": "<|user|>What is 鯼魚 recorded to treat?<|assistant|>Recorded use: 曝乾香美. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-517", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 沒藥?<|assistant|>沒藥 -> Commiphora myrrha (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-518", "kind": "use", "text": "<|user|>What is 苗及花 recorded to treat?<|assistant|>Recorded use: 以水二石五斗. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-519", "kind": "use", "text": "<|user|>What is 山薑 recorded to treat?<|assistant|>Recorded use: 辟谷止飢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-520", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 石蟹?<|assistant|>Nature 寒, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-521", "kind": "use", "text": "<|user|>What is 女貞 recorded to treat?<|assistant|>Recorded use: 搗汁含浸吐涎. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-522", "kind": "use", "text": "<|user|>What is 豨薟 recorded to treat?<|assistant|>Recorded use: ︰治熱 煩滿不能食. Modern reading: agitation. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-523", "kind": "use", "text": "<|user|>What is 鹵鹼 recorded to treat?<|assistant|>Recorded use: 除邪. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-524", "kind": "viability", "text": "<|user|>For 昆布 (Saccharina japonica), will 焙 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY NOT. The claimed enrichment of alkaloid by 焙 is not supported: modelled median retention is 14% (range 0-56%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
+{"id": "val-525", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鋼鐵?<|assistant|>Nature 平, flavours 鹹, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
+{"id": "val-526", "kind": "use", "text": "<|user|>What is 羊子 recorded to treat?<|assistant|>Recorded use: 每服一錢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-527", "kind": "use", "text": "<|user|>What is 龍膽 recorded to treat?<|assistant|>Recorded use: 除胃中伏熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-528", "kind": "use", "text": "<|user|>What is 柳華 recorded to treat?<|assistant|>Recorded use: 天行熱病. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-529", "kind": "use", "text": "<|user|>What is 鹽膽水 recorded to treat?<|assistant|>Recorded use: 疾蟲咬. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-530", "kind": "compound", "text": "<|user|>What compound class is recorded in Trichosanthes cucumeroides?<|assistant|>Trichosanthes cucumeroides contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-531", "kind": "use", "text": "<|user|>What is 石松 recorded to treat?<|assistant|>Recorded use: 久服去風血風瘙. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-532", "kind": "use", "text": "<|user|>What is 芫花 recorded to treat?<|assistant|>Recorded use: 水腫. Modern reading: oedema. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-533", "kind": "use", "text": "<|user|>What is 鱖魚 recorded to treat?<|assistant|>Recorded use: 骨鯁. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-534", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 白馬溺?<|assistant|>Nature 寒, flavours 辛, channels not recorded, toxicity 有毒, grade —.<|eos|>"}
+{"id": "val-535", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 狗舌草?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-536", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 三白草?<|assistant|>Nature 寒, flavours 甘/辛, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-537", "kind": "use", "text": "<|user|>What is 氈屜 recorded to treat?<|assistant|>Recorded use: 酒一升和. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-538", "kind": "use", "text": "<|user|>What is 螻蛄 recorded to treat?<|assistant|>Recorded use: 解毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-539", "kind": "use", "text": "<|user|>What is 飴糖 recorded to treat?<|assistant|>Recorded use: 蕈毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-540", "kind": "use", "text": "<|user|>What is 蓬草子 recorded to treat?<|assistant|>Recorded use: 止嘔逆. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-541", "kind": "use", "text": "<|user|>What is 排草香 recorded to treat?<|assistant|>Recorded use: 去邪惡氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-542", "kind": "use", "text": "<|user|>What is 黃頷蛇 recorded to treat?<|assistant|>Recorded use: 釀酒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-543", "kind": "use", "text": "<|user|>What is 木白皮 recorded to treat?<|assistant|>Recorded use: 止吐逆不下食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-544", "kind": "use", "text": "<|user|>What is 鷑鳩 recorded to treat?<|assistant|>Recorded use: 北人未識此病. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-545", "kind": "use", "text": "<|user|>What is 長石 recorded to treat?<|assistant|>Recorded use: 除脅肋肺間邪氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-546", "kind": "use", "text": "<|user|>What is 甘蕉 recorded to treat?<|assistant|>Recorded use: 心痺痛. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-547", "kind": "use", "text": "<|user|>What is 沒藥 recorded to treat?<|assistant|>Recorded use: 並入丸散服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-548", "kind": "use", "text": "<|user|>What is 石燕 recorded to treat?<|assistant|>Recorded use: 壯陽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-549", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 綠礬?<|assistant|>Nature 涼, flavours 酸, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-550", "kind": "compound", "text": "<|user|>What compound class is recorded in Glebionis coronaria?<|assistant|>Glebionis coronaria contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-551", "kind": "use", "text": "<|user|>What is 人家 recorded to treat?<|assistant|>Recorded use: 消皮膚風毒腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-552", "kind": "use", "text": "<|user|>What is 子及根 recorded to treat?<|assistant|>Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-553", "kind": "use", "text": "<|user|>What is 誤服 recorded to treat?<|assistant|>Recorded use: 咳嗽上氣. Modern reading: respiratory distress. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-554", "kind": "use", "text": "<|user|>What is 古方治諸風 recorded to treat?<|assistant|>Recorded use: 即取雄狐膽溫水研灌. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-555", "kind": "compound", "text": "<|user|>What compound class is recorded in Prunus mume?<|assistant|>Prunus mume contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-556", "kind": "use", "text": "<|user|>What is 射罔 recorded to treat?<|assistant|>Recorded use: 瘡瘡根. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-557", "kind": "use", "text": "<|user|>What is 苗及花 recorded to treat?<|assistant|>Recorded use: 日漸瘦損. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-558", "kind": "use", "text": "<|user|>What is 藏器曰︰𧍧䗯 recorded to treat?<|assistant|>Recorded use: 治時氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-559", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 桃花石?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-560", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 鼠尾草?<|assistant|>鼠尾草 -> Salvia officinalis (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-561", "kind": "use", "text": "<|user|>What is 青紙 recorded to treat?<|assistant|>Recorded use: 殺蟲解毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-562", "kind": "use", "text": "<|user|>What is 燈花燼 recorded to treat?<|assistant|>Recorded use: 安五臟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-563", "kind": "use", "text": "<|user|>What is 蝤蛑 recorded to treat?<|assistant|>Recorded use: 煮食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-564", "kind": "use", "text": "<|user|>What is 皮腰袋 recorded to treat?<|assistant|>Recorded use: 燒灰入藥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-565", "kind": "compound", "text": "<|user|>What compound class is recorded in Scolopendra subspinipes?<|assistant|>Scolopendra subspinipes contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-566", "kind": "use", "text": "<|user|>What is 烏韭 recorded to treat?<|assistant|>Recorded use: 療黃膽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-567", "kind": "compound", "text": "<|user|>What compound class is recorded in Rheum rhaponticum?<|assistant|>Rheum rhaponticum contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-568", "kind": "use", "text": "<|user|>What is 核仁 recorded to treat?<|assistant|>Recorded use: 僵仆 折. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-569", "kind": "compound", "text": "<|user|>What compound class is recorded in Phyllanthus emblica?<|assistant|>Phyllanthus emblica contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-570", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 茯神?<|assistant|>Nature 平, flavours 甘, channels 心/肝, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-571", "kind": "use", "text": "<|user|>What is 生瓜菜 recorded to treat?<|assistant|>Recorded use: 壯熱頭痛. Modern reading: headache. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-572", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 烏雄雞肉?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-573", "kind": "use", "text": "<|user|>What is 海月 recorded to treat?<|assistant|>Recorded use: 生薑. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-574", "kind": "use", "text": "<|user|>What is 雄黃 recorded to treat?<|assistant|>Recorded use: 及絕筋破骨. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-575", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 茅根?<|assistant|>茅根 -> Perotis indica (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-576", "kind": "use", "text": "<|user|>What is 商陸 recorded to treat?<|assistant|>Recorded use: 疏五臟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-577", "kind": "use", "text": "<|user|>What is 赤石脂 recorded to treat?<|assistant|>Recorded use: 療腹痛腸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-578", "kind": "use", "text": "<|user|>What is 露水 recorded to treat?<|assistant|>Recorded use: 煎如飴. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-579", "kind": "use", "text": "<|user|>What is 窠中草 recorded to treat?<|assistant|>Recorded use: 頭瘡白禿. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-580", "kind": "use", "text": "<|user|>What is 生薑 recorded to treat?<|assistant|>Recorded use: 療咳嗽時疾. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-581", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 山蒜?<|assistant|>Nature 溫, flavours 辛, channels not recorded, toxicity 有毒, grade 下品.<|eos|>"}
+{"id": "val-582", "kind": "use", "text": "<|user|>What is 椰子漿 recorded to treat?<|assistant|>Recorded use: 塗頭. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-583", "kind": "use", "text": "<|user|>What is 地膽 recorded to treat?<|assistant|>Recorded use: 鼻中息肉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-584", "kind": "compound", "text": "<|user|>What compound class is recorded in Syzygium aromaticum?<|assistant|>Syzygium aromaticum contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-585", "kind": "use", "text": "<|user|>What is 根苗 recorded to treat?<|assistant|>Recorded use: 小兒壯熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-586", "kind": "use", "text": "<|user|>What is 原系 recorded to treat?<|assistant|>Recorded use: 殺蛔蟲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-587", "kind": "use", "text": "<|user|>What is 五色石英 recorded to treat?<|assistant|>Recorded use: 壯陽道. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-588", "kind": "use", "text": "<|user|>What is 雞腸 recorded to treat?<|assistant|>Recorded use: 主遺溺. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-589", "kind": "use", "text": "<|user|>What is 野狼尾草 recorded to treat?<|assistant|>Recorded use: 久服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-590", "kind": "use", "text": "<|user|>What is 麥麩 recorded to treat?<|assistant|>Recorded use: 實人膚體. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-591", "kind": "use", "text": "<|user|>What is 石芝 recorded to treat?<|assistant|>Recorded use: 或化水服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-592", "kind": "use", "text": "<|user|>What is 野狼牙 recorded to treat?<|assistant|>Recorded use: 去熱痺. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-593", "kind": "use", "text": "<|user|>What is 菾菜 recorded to treat?<|assistant|>Recorded use: 治小兒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-594", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 棠梨?<|assistant|>Nature 寒, flavours 酸/甘/澀, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-595", "kind": "use", "text": "<|user|>What is 鳶尾 recorded to treat?<|assistant|>Recorded use: 鬼疰諸毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-596", "kind": "use", "text": "<|user|>What is 樟材 recorded to treat?<|assistant|>Recorded use: 煎湯. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-597", "kind": "use", "text": "<|user|>What is 葛上亭長 recorded to treat?<|assistant|>Recorded use: 蠱毒鬼疰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-598", "kind": "use", "text": "<|user|>What is 樹白皮 recorded to treat?<|assistant|>Recorded use: 治下血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-599", "kind": "use", "text": "<|user|>What is 海蛤 recorded to treat?<|assistant|>Recorded use: 潤五臟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-600", "kind": "use", "text": "<|user|>What is 病患衣 recorded to treat?<|assistant|>Recorded use: 取初病患衣服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-601", "kind": "use", "text": "<|user|>What is 黃石脂 recorded to treat?<|assistant|>Recorded use: 大人小兒泄痢腸 下膿血. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-602", "kind": "use", "text": "<|user|>What is 千步峰 recorded to treat?<|assistant|>Recorded use: 用生薑蘸醋. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-603", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蘭草?<|assistant|>Nature 平, flavours 辛, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
+{"id": "val-604", "kind": "use", "text": "<|user|>What is 子仁 recorded to treat?<|assistant|>Recorded use: 取汁煎膏. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-605", "kind": "use", "text": "<|user|>What is 繭鹵汁 recorded to treat?<|assistant|>Recorded use: 次日即破. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-606", "kind": "use", "text": "<|user|>What is 白粱米 recorded to treat?<|assistant|>Recorded use: 除熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-607", "kind": "use", "text": "<|user|>What is 貫眾 recorded to treat?<|assistant|>Recorded use: 惡瘡. Modern reading: malignant sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-608", "kind": "use", "text": "<|user|>What is 海根 recorded to treat?<|assistant|>Recorded use: 癰疽惡腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-609", "kind": "use", "text": "<|user|>What is 百藥煎 recorded to treat?<|assistant|>Recorded use: 口舌糜爛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-610", "kind": "use", "text": "<|user|>What is 芫花 recorded to treat?<|assistant|>Recorded use: 殺蟲魚. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-611", "kind": "compound", "text": "<|user|>What compound class is recorded in Asarum forbesii?<|assistant|>Asarum forbesii contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-612", "kind": "compound", "text": "<|user|>What compound class is recorded in Rumex acetosa?<|assistant|>Rumex acetosa contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-613", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 莖及白皮?<|assistant|>Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-614", "kind": "use", "text": "<|user|>What is 寒食飯 recorded to treat?<|assistant|>Recorded use: 滅瘢痕及雜瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-615", "kind": "use", "text": "<|user|>What is 乳汁 recorded to treat?<|assistant|>Recorded use: 補五臟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-616", "kind": "use", "text": "<|user|>What is 乳汁 recorded to treat?<|assistant|>Recorded use: 悅皮膚. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-617", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 櫻桃?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
+{"id": "val-618", "kind": "use", "text": "<|user|>What is 雷丸 recorded to treat?<|assistant|>Recorded use: 久服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-619", "kind": "use", "text": "<|user|>What is 三七 recorded to treat?<|assistant|>Recorded use: 浴小兒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-620", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 身熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-621", "kind": "use", "text": "<|user|>What is 天雄 recorded to treat?<|assistant|>Recorded use: 不能行步. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-622", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 槲實?<|assistant|>Nature 平, flavours 苦/澀, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-623", "kind": "use", "text": "<|user|>What is 天南星 recorded to treat?<|assistant|>Recorded use: 強陰除痰下氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-624", "kind": "use", "text": "<|user|>What is 燕脂 recorded to treat?<|assistant|>Recorded use: 治熱毒風. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-625", "kind": "use", "text": "<|user|>What is 女菀 recorded to treat?<|assistant|>Recorded use: 療肺傷咳逆出汗. Modern reading: cough. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-626", "kind": "use", "text": "<|user|>What is 鉛丹 recorded to treat?<|assistant|>Recorded use: 吐逆胃反. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-627", "kind": "use", "text": "<|user|>What is 王瓜 recorded to treat?<|assistant|>Recorded use: 反胃吐食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-628", "kind": "use", "text": "<|user|>What is 胞衣水 recorded to treat?<|assistant|>Recorded use: 飲一鐘當有蟲出. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-629", "kind": "use", "text": "<|user|>What is 根苗 recorded to treat?<|assistant|>Recorded use: 止遺溺. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-630", "kind": "use", "text": "<|user|>What is 頰骨 recorded to treat?<|assistant|>Recorded use: 喉痺腫痛. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-631", "kind": "use", "text": "<|user|>What is 甘蕉 recorded to treat?<|assistant|>Recorded use: 鹽湯點服二錢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-632", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 菟葵?<|assistant|>菟葵 -> Eranthis stellata (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-633", "kind": "use", "text": "<|user|>What is 龍膽 recorded to treat?<|assistant|>Recorded use: 骨間寒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-634", "kind": "use", "text": "<|user|>What is 莢仁 recorded to treat?<|assistant|>Recorded use: 能助肺. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-635", "kind": "use", "text": "<|user|>What is 木白皮 recorded to treat?<|assistant|>Recorded use: 尤佳. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-636", "kind": "use", "text": "<|user|>What is 藁本 recorded to treat?<|assistant|>Recorded use: 風邪流入四肢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-637", "kind": "use", "text": "<|user|>What is 神水 recorded to treat?<|assistant|>Recorded use: 心腹積聚及蟲病. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-638", "kind": "use", "text": "<|user|>What is 柏葉 recorded to treat?<|assistant|>Recorded use: 歷節疼痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-639", "kind": "use", "text": "<|user|>What is 蒲公英 recorded to treat?<|assistant|>Recorded use: 散滯氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-640", "kind": "use", "text": "<|user|>What is 黃石脂 recorded to treat?<|assistant|>Recorded use: 去白蟲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-641", "kind": "use", "text": "<|user|>What is 玄參 recorded to treat?<|assistant|>Recorded use: 腹中寒熱積聚. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-642", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 地筋?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-643", "kind": "use", "text": "<|user|>What is 烏梅 recorded to treat?<|assistant|>Recorded use: 好唾口乾. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-644", "kind": "use", "text": "<|user|>What is 東行根 recorded to treat?<|assistant|>Recorded use: 止瀉血及崩中帶下. Modern reading: uterine bleeding. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-645", "kind": "use", "text": "<|user|>What is 茺蔚 recorded to treat?<|assistant|>Recorded use: 主浮腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-646", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 楮实?<|assistant|>楮实 -> Broussonetia papyrifera (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-647", "kind": "use", "text": "<|user|>What is 稻米 recorded to treat?<|assistant|>Recorded use: 解芫青. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-648", "kind": "use", "text": "<|user|>What is 附子 recorded to treat?<|assistant|>Recorded use: 金瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-649", "kind": "use", "text": "<|user|>What is 自經死繩 recorded to treat?<|assistant|>Recorded use: 卒發顛狂. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-650", "kind": "use", "text": "<|user|>What is 黃牛肉 recorded to treat?<|assistant|>Recorded use: 安中益氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-651", "kind": "use", "text": "<|user|>What is 細辛 recorded to treat?<|assistant|>Recorded use: 久服明目. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-652", "kind": "use", "text": "<|user|>What is 紫葳 recorded to treat?<|assistant|>Recorded use: 淋瀝. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-653", "kind": "use", "text": "<|user|>What is 海䖳 recorded to treat?<|assistant|>Recorded use: 搗膏. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-654", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 膽汁?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-655", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 蚯蚓?<|assistant|>蚯蚓 -> Lumbricina (resolved by wikidata-genus, confidence 0.55).<|eos|>"}
+{"id": "val-656", "kind": "use", "text": "<|user|>What is 阿膠 recorded to treat?<|assistant|>Recorded use: 腰腹痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-657", "kind": "compound", "text": "<|user|>What compound class is recorded in Pinellia ternata?<|assistant|>Pinellia ternata contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-658", "kind": "use", "text": "<|user|>What is 蜀葵 recorded to treat?<|assistant|>Recorded use: 除客熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-659", "kind": "use", "text": "<|user|>What is 磁石 recorded to treat?<|assistant|>Recorded use: 小兒驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-660", "kind": "use", "text": "<|user|>What is 忍冬 recorded to treat?<|assistant|>Recorded use: 能止氣下. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-661", "kind": "use", "text": "<|user|>What is 玄參 recorded to treat?<|assistant|>Recorded use: 女子產乳餘疾. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-662", "kind": "use", "text": "<|user|>What is 木皮 recorded to treat?<|assistant|>Recorded use: 痛不可忍. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-663", "kind": "use", "text": "<|user|>What is 蛤蚧 recorded to treat?<|assistant|>Recorded use: 久咳嗽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-664", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 根莖?<|assistant|>Nature —, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-665", "kind": "use", "text": "<|user|>What is 烏菱殼 recorded to treat?<|assistant|>Recorded use: 亦止泄痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-666", "kind": "viability", "text": "<|user|>For 知母 (Anemarrhena asphodeloides), will 焙 enrich its phenylpropanoid content? Give a verdict, the modelled retention and what would refute it.<|assistant|>MAY. The claimed enrichment of phenylpropanoid by 焙 is not supported: modelled median retention is 100% (range 100-100%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.<|eos|>"}
+{"id": "val-667", "kind": "use", "text": "<|user|>What is 根葉 recorded to treat?<|assistant|>Recorded use: 煮汁冷服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-668", "kind": "use", "text": "<|user|>What is 苗根 recorded to treat?<|assistant|>Recorded use: 搗敷或研末摻之即止. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-669", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 吳藍?<|assistant|>Nature —, flavours 苦/甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-670", "kind": "use", "text": "<|user|>What is 舵菜 recorded to treat?<|assistant|>Recorded use: 癭結氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-671", "kind": "use", "text": "<|user|>What is 硝石 recorded to treat?<|assistant|>Recorded use: 煉之如膏. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-672", "kind": "use", "text": "<|user|>What is 頭肉 recorded to treat?<|assistant|>Recorded use: 客忤天吊風疾. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-673", "kind": "use", "text": "<|user|>What is 樹白皮 recorded to treat?<|assistant|>Recorded use: 喉痺. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-674", "kind": "use", "text": "<|user|>What is 蟅蟲 recorded to treat?<|assistant|>Recorded use: 破堅. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-675", "kind": "use", "text": "<|user|>What is 蛔蟲 recorded to treat?<|assistant|>Recorded use: 目中膚赤熱痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-676", "kind": "use", "text": "<|user|>What is 木皮 recorded to treat?<|assistant|>Recorded use: 置酒中. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-677", "kind": "use", "text": "<|user|>What is 玄石 recorded to treat?<|assistant|>Recorded use: 少精身重. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-678", "kind": "use", "text": "<|user|>What is 蒲蒻 recorded to treat?<|assistant|>Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-679", "kind": "use", "text": "<|user|>What is 爪甲 recorded to treat?<|assistant|>Recorded use: 去目翳. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-680", "kind": "use", "text": "<|user|>What is 牯牛卵囊 recorded to treat?<|assistant|>Recorded use: 治客忤. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-681", "kind": "use", "text": "<|user|>What is 膠投 recorded to treat?<|assistant|>Recorded use: 止鼻衄. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-682", "kind": "use", "text": "<|user|>What is 水牛肉 recorded to treat?<|assistant|>Recorded use: 可丸藥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-683", "kind": "use", "text": "<|user|>What is 龍膽 recorded to treat?<|assistant|>Recorded use: 續絕傷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-684", "kind": "use", "text": "<|user|>What is 小麥 recorded to treat?<|assistant|>Recorded use: 治暴淋. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-685", "kind": "compound", "text": "<|user|>What compound class is recorded in Euphorbia pekinensis?<|assistant|>Euphorbia pekinensis contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-686", "kind": "use", "text": "<|user|>What is 大棗 recorded to treat?<|assistant|>Recorded use: 通九竅. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-687", "kind": "compound", "text": "<|user|>What compound class is recorded in Saururus chinensis?<|assistant|>Saururus chinensis contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-688", "kind": "use", "text": "<|user|>What is 櫰香 recorded to treat?<|assistant|>Recorded use: 七日腐落. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-689", "kind": "use", "text": "<|user|>What is 節氣水 recorded to treat?<|assistant|>Recorded use: 積聚. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-690", "kind": "compound", "text": "<|user|>What compound class is recorded in Aster tataricus?<|assistant|>Aster tataricus contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-691", "kind": "use", "text": "<|user|>What is 靈貓 recorded to treat?<|assistant|>Recorded use: 勞疰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-692", "kind": "use", "text": "<|user|>What is 鐵釘 recorded to treat?<|assistant|>Recorded use: 婦人難產. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-693", "kind": "use", "text": "<|user|>What is 阿勒勃 recorded to treat?<|assistant|>Recorded use: 骨蒸寒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-694", "kind": "use", "text": "<|user|>What is 肉豆蔻 recorded to treat?<|assistant|>Recorded use: 開胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-695", "kind": "use", "text": "<|user|>What is 風驢肚內蟲 recorded to treat?<|assistant|>Recorded use: 瓷盒收盛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-696", "kind": "use", "text": "<|user|>What is 仲思棗 recorded to treat?<|assistant|>Recorded use: 好顏色. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-697", "kind": "use", "text": "<|user|>What is 麻勃 recorded to treat?<|assistant|>Recorded use: 治健忘及金瘡內漏. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-698", "kind": "use", "text": "<|user|>What is 側子 recorded to treat?<|assistant|>Recorded use: 寒熱鼠. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-699", "kind": "use", "text": "<|user|>What is 汗衫 recorded to treat?<|assistant|>Recorded use: 或胸脅腹內絞急切痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-700", "kind": "use", "text": "<|user|>What is 鼠麴草 recorded to treat?<|assistant|>Recorded use: 大升肺氣〈李杲〉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-701", "kind": "use", "text": "<|user|>What is 山薑 recorded to treat?<|assistant|>Recorded use: 去惡氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-702", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蘇合香?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade 上品.<|eos|>"}
+{"id": "val-703", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蘆薈?<|assistant|>Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-704", "kind": "use", "text": "<|user|>What is 東行根 recorded to treat?<|assistant|>Recorded use: 白蟲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-705", "kind": "use", "text": "<|user|>What is 昆布 recorded to treat?<|assistant|>Recorded use: 去面腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-706", "kind": "use", "text": "<|user|>What is 白花菜 recorded to treat?<|assistant|>Recorded use: 去冷氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-707", "kind": "use", "text": "<|user|>What is 蔛草 recorded to treat?<|assistant|>Recorded use: 小兒丹腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-708", "kind": "use", "text": "<|user|>What is 黃蒸 recorded to treat?<|assistant|>Recorded use: 黃汗. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-709", "kind": "use", "text": "<|user|>What is 落葵 recorded to treat?<|assistant|>Recorded use: 悅澤人面. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-710", "kind": "use", "text": "<|user|>What is 馬刀 recorded to treat?<|assistant|>Recorded use: 中鼠鼷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-711", "kind": "use", "text": "<|user|>What is 啄木鳥 recorded to treat?<|assistant|>Recorded use: 久能變形. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-712", "kind": "use", "text": "<|user|>What is 菰筍 recorded to treat?<|assistant|>Recorded use: 利大小便. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-713", "kind": "use", "text": "<|user|>What is 蛔蟲 recorded to treat?<|assistant|>Recorded use: 及生膚翳赤白膜. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-714", "kind": "use", "text": "<|user|>What is 珊瑚 recorded to treat?<|assistant|>Recorded use: 止驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-715", "kind": "use", "text": "<|user|>What is 麻鞋 recorded to treat?<|assistant|>Recorded use: 舊底洗淨煮汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-716", "kind": "use", "text": "<|user|>What is 菰筍 recorded to treat?<|assistant|>Recorded use: 酒 面赤. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-717", "kind": "use", "text": "<|user|>What is 六畜心 recorded to treat?<|assistant|>Recorded use: 心昏多忘. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-718", "kind": "use", "text": "<|user|>What is 橡實 recorded to treat?<|assistant|>Recorded use: 煮食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-719", "kind": "use", "text": "<|user|>What is 鱅魚 recorded to treat?<|assistant|>Recorded use: 多食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-720", "kind": "use", "text": "<|user|>What is 菥蓂 recorded to treat?<|assistant|>Recorded use: 明目目痛淚出. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-721", "kind": "use", "text": "<|user|>What is 紫檀 recorded to treat?<|assistant|>Recorded use: 摩塗惡毒風毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-722", "kind": "use", "text": "<|user|>What is 藏器曰︰𧍧䗯 recorded to treat?<|assistant|>Recorded use: 通乳. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-723", "kind": "use", "text": "<|user|>What is 木並皮 recorded to treat?<|assistant|>Recorded use: 並煮汁服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-724", "kind": "use", "text": "<|user|>What is 艾納香 recorded to treat?<|assistant|>Recorded use: 合蜂窠浴腳氣良. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-725", "kind": "use", "text": "<|user|>What is 喙及腳脛骨 recorded to treat?<|assistant|>Recorded use: 治症瘕久痼冷病. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-726", "kind": "use", "text": "<|user|>What is 苗葉 recorded to treat?<|assistant|>Recorded use: 歸舌. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-727", "kind": "use", "text": "<|user|>What is 震肉 recorded to treat?<|assistant|>Recorded use: 大人因驚失心. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-728", "kind": "use", "text": "<|user|>What is 萎蕤 recorded to treat?<|assistant|>Recorded use: 莖中寒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-729", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 黃藥子?<|assistant|>黃藥子 -> Reynoutria japonica (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-730", "kind": "use", "text": "<|user|>What is 石鹼 recorded to treat?<|assistant|>Recorded use: 治噎膈反胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-731", "kind": "use", "text": "<|user|>What is 松脂 recorded to treat?<|assistant|>Recorded use: 咽乾消渴. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-732", "kind": "use", "text": "<|user|>What is 蒲公英 recorded to treat?<|assistant|>Recorded use: 烏鬚髮. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-733", "kind": "use", "text": "<|user|>What is 桐子油 recorded to treat?<|assistant|>Recorded use: 摩疥癬蟲瘡毒腫. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-734", "kind": "use", "text": "<|user|>What is 地膚 recorded to treat?<|assistant|>Recorded use: 輕身耐老. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-735", "kind": "use", "text": "<|user|>What is 天南星 recorded to treat?<|assistant|>Recorded use: 寒熱結氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-736", "kind": "use", "text": "<|user|>What is 葈耳 recorded to treat?<|assistant|>Recorded use: 膝痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-737", "kind": "use", "text": "<|user|>What is 石蕊 recorded to treat?<|assistant|>Recorded use: 生津潤咽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-738", "kind": "use", "text": "<|user|>What is 立春雨水 recorded to treat?<|assistant|>Recorded use: 宜煎發散及補中益氣藥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-739", "kind": "use", "text": "<|user|>What is 魚網 recorded to treat?<|assistant|>Recorded use: 或乳香. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-740", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 雄鵲肉?<|assistant|>Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-741", "kind": "use", "text": "<|user|>What is 牯牛卵囊 recorded to treat?<|assistant|>Recorded use: 頓服一盞. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-742", "kind": "use", "text": "<|user|>What is 畢澄茄 recorded to treat?<|assistant|>Recorded use: 令人能食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-743", "kind": "use", "text": "<|user|>What is 菰米 recorded to treat?<|assistant|>Recorded use: 調腸胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-744", "kind": "use", "text": "<|user|>What is 甘遂 recorded to treat?<|assistant|>Recorded use: 腹滿. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-745", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 舵菜?<|assistant|>Nature 寒, flavours 鹹/甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-746", "kind": "use", "text": "<|user|>What is 攝龜 recorded to treat?<|assistant|>Recorded use: 人咬瘡潰爛. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-747", "kind": "use", "text": "<|user|>What is 棗蠹蟲 recorded to treat?<|assistant|>Recorded use: 耳出膿水. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-748", "kind": "use", "text": "<|user|>What is 淡竹瀝 recorded to treat?<|assistant|>Recorded use: 風痰虛痰在胸膈. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-749", "kind": "use", "text": "<|user|>What is 胡燕卵黃 recorded to treat?<|assistant|>Recorded use: 每吞十枚. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-750", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 楊梅?<|assistant|>Nature 溫, flavours 酸/甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-751", "kind": "compound", "text": "<|user|>What compound class is recorded in Parthenocissus tricuspidata?<|assistant|>Parthenocissus tricuspidata contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-752", "kind": "compound", "text": "<|user|>What compound class is recorded in Clematis chinensis?<|assistant|>Clematis chinensis contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-753", "kind": "use", "text": "<|user|>What is 蒲公英 recorded to treat?<|assistant|>Recorded use: 解食毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-754", "kind": "use", "text": "<|user|>What is 蛇含 recorded to treat?<|assistant|>Recorded use: 紫背龍牙︰解一切蛇毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-755", "kind": "use", "text": "<|user|>What is 食茱萸 recorded to treat?<|assistant|>Recorded use: 甚良. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-756", "kind": "use", "text": "<|user|>What is 鷓鴣 recorded to treat?<|assistant|>Recorded use: 及溫瘴久. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-757", "kind": "use", "text": "<|user|>What is 人魄 recorded to treat?<|assistant|>Recorded use: 鎮心. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-758", "kind": "use", "text": "<|user|>What is 根莖中涕 recorded to treat?<|assistant|>Recorded use: 中風面腫. Modern reading: stroke-like syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-759", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 乾苔?<|assistant|>Nature 寒, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-760", "kind": "compound", "text": "<|user|>What compound class is recorded in Carpesium abrotanoides?<|assistant|>Carpesium abrotanoides contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-761", "kind": "use", "text": "<|user|>What is 木並皮 recorded to treat?<|assistant|>Recorded use: 除血長膚. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-762", "kind": "use", "text": "<|user|>What is 石燕 recorded to treat?<|assistant|>Recorded use: 面色虛黃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-763", "kind": "use", "text": "<|user|>What is 花及子 recorded to treat?<|assistant|>Recorded use: 消食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-764", "kind": "use", "text": "<|user|>What is 漚麻汁 recorded to treat?<|assistant|>Recorded use: 止消渴. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-765", "kind": "use", "text": "<|user|>What is 汗衫 recorded to treat?<|assistant|>Recorded use: 卒中忤惡鬼氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-766", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 無名異?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-767", "kind": "use", "text": "<|user|>What is 磁石毛 recorded to treat?<|assistant|>Recorded use: 令人有子. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-768", "kind": "use", "text": "<|user|>What is 都桷子 recorded to treat?<|assistant|>Recorded use: 解酒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-769", "kind": "use", "text": "<|user|>What is 海燕 recorded to treat?<|assistant|>Recorded use: 亦入滋陰藥. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-770", "kind": "compound", "text": "<|user|>What compound class is recorded in Morus alba?<|assistant|>Morus alba contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-771", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 玄石?<|assistant|>Nature 溫, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-772", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 酸漿?<|assistant|>酸漿 -> Alkekengi officinarum (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-773", "kind": "use", "text": "<|user|>What is 竹蓐 recorded to treat?<|assistant|>Recorded use: 破老血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-774", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 鹽麩子?<|assistant|>Nature 寒, flavours 酸/鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-775", "kind": "use", "text": "<|user|>What is 干漆 recorded to treat?<|assistant|>Recorded use: 消瘀血痞結腰痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-776", "kind": "use", "text": "<|user|>What is 根皮 recorded to treat?<|assistant|>Recorded use: 腸痔. Modern reading: haemorrhoids. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-777", "kind": "use", "text": "<|user|>What is 局箬 recorded to treat?<|assistant|>Recorded use: 以灰汁煮成餅. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-778", "kind": "use", "text": "<|user|>What is 仙人掌草 recorded to treat?<|assistant|>Recorded use: 腸痔瀉血. Modern reading: haemorrhoids. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-779", "kind": "use", "text": "<|user|>What is 石面 recorded to treat?<|assistant|>Recorded use: 食之止飢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-780", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 治杖. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-781", "kind": "use", "text": "<|user|>What is 烏爛死蠶 recorded to treat?<|assistant|>Recorded use: 治風及勞瘦. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-782", "kind": "use", "text": "<|user|>What is 梅雨水 recorded to treat?<|assistant|>Recorded use: 入醬易熟. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-783", "kind": "use", "text": "<|user|>What is 蜂子 recorded to treat?<|assistant|>Recorded use: 治心腹痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-784", "kind": "use", "text": "<|user|>What is 牛扁 recorded to treat?<|assistant|>Recorded use: 身皮瘡熱氣. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-785", "kind": "use", "text": "<|user|>What is 地膽 recorded to treat?<|assistant|>Recorded use: 鼠 惡瘡死肌. Modern reading: malignant sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-786", "kind": "use", "text": "<|user|>What is 縮砂蔤 recorded to treat?<|assistant|>Recorded use: 虛勞冷瀉. Modern reading: consumption. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-787", "kind": "use", "text": "<|user|>What is 白朮 recorded to treat?<|assistant|>Recorded use: 除熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-788", "kind": "use", "text": "<|user|>What is 烏蘞莓 recorded to treat?<|assistant|>Recorded use: 【附方】新五. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-789", "kind": "use", "text": "<|user|>What is 五色石英 recorded to treat?<|assistant|>Recorded use: 益毛發. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-790", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 蠡實?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
+{"id": "val-791", "kind": "compound", "text": "<|user|>What compound class is recorded in Kitagawia praeruptora?<|assistant|>Kitagawia praeruptora contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-792", "kind": "use", "text": "<|user|>What is 稷米 recorded to treat?<|assistant|>Recorded use: 補中. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-793", "kind": "use", "text": "<|user|>What is 白薇 recorded to treat?<|assistant|>Recorded use: 久服利人. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-794", "kind": "use", "text": "<|user|>What is 雄原蠶蛾 recorded to treat?<|assistant|>Recorded use: 強陰道. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-795", "kind": "use", "text": "<|user|>What is 青芝一名龍芝 recorded to treat?<|assistant|>Recorded use: 輕身不老. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-796", "kind": "use", "text": "<|user|>What is 紫草 recorded to treat?<|assistant|>Recorded use: 利九竅. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-797", "kind": "use", "text": "<|user|>What is 蟅蟲 recorded to treat?<|assistant|>Recorded use: 下血閉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-798", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 白朮?<|assistant|>Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-799", "kind": "use", "text": "<|user|>What is 白菊 recorded to treat?<|assistant|>Recorded use: 風眩. Modern reading: vertigo. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-800", "kind": "use", "text": "<|user|>What is 鐵華粉 recorded to treat?<|assistant|>Recorded use: 延年變白. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-801", "kind": "use", "text": "<|user|>What is 土墼 recorded to treat?<|assistant|>Recorded use: 以菜子油調搽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-802", "kind": "use", "text": "<|user|>What is 藤中水 recorded to treat?<|assistant|>Recorded use: 去濕痺. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-803", "kind": "use", "text": "<|user|>What is 常春藤 recorded to treat?<|assistant|>Recorded use: 研汁和酒溫服. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-804", "kind": "use", "text": "<|user|>What is 天仙藤 recorded to treat?<|assistant|>Recorded use: 發汗. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-805", "kind": "use", "text": "<|user|>What is 蚯蚓泥 recorded to treat?<|assistant|>Recorded use: 出犬毛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-806", "kind": "use", "text": "<|user|>What is 吳藍 recorded to treat?<|assistant|>Recorded use: 游風熱毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-807", "kind": "use", "text": "<|user|>What is 松脂 recorded to treat?<|assistant|>Recorded use: 不老延年. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-808", "kind": "compound", "text": "<|user|>What compound class is recorded in Eupatorium fortunei?<|assistant|>Eupatorium fortunei contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-809", "kind": "use", "text": "<|user|>What is 杜父魚 recorded to treat?<|assistant|>Recorded use: 小兒差頹. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-810", "kind": "use", "text": "<|user|>What is 花及皮根 recorded to treat?<|assistant|>Recorded use: 細細含咽. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-811", "kind": "use", "text": "<|user|>What is 蚤休 recorded to treat?<|assistant|>Recorded use: 搖頭弄舌. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-812", "kind": "use", "text": "<|user|>What is 竹筍 recorded to treat?<|assistant|>Recorded use: 消渴風熱. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-813", "kind": "use", "text": "<|user|>What is 蘭草 recorded to treat?<|assistant|>Recorded use: 生津止渴. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-814", "kind": "use", "text": "<|user|>What is 鐵鏽 recorded to treat?<|assistant|>Recorded use: 口舌瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-815", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 野馬?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-816", "kind": "use", "text": "<|user|>What is 荊三稜 recorded to treat?<|assistant|>Recorded use: 常日憂愁不樂. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-817", "kind": "use", "text": "<|user|>What is 安息香 recorded to treat?<|assistant|>Recorded use: 男子遺精. Modern reading: spermatorrhoea. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-818", "kind": "use", "text": "<|user|>What is 青石脂 recorded to treat?<|assistant|>Recorded use: 久服補髓益氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-819", "kind": "use", "text": "<|user|>What is 秦艽 recorded to treat?<|assistant|>Recorded use: 傳尸骨蒸. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-820", "kind": "use", "text": "<|user|>What is 五靈脂 recorded to treat?<|assistant|>Recorded use: 治血氣刺痛甚腹諸痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-821", "kind": "use", "text": "<|user|>What is 橡實 recorded to treat?<|assistant|>Recorded use: 濃腸胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-822", "kind": "use", "text": "<|user|>What is 藍實 recorded to treat?<|assistant|>Recorded use: 射罔毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-823", "kind": "use", "text": "<|user|>What is 孔公孼 recorded to treat?<|assistant|>Recorded use: 瘡疽 痔. Modern reading: haemorrhoids. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-824", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 代赭石?<|assistant|>Nature 寒, flavours 苦, channels 肝/心包, toxicity 無毒, grade 下品.<|eos|>"}
+{"id": "val-825", "kind": "use", "text": "<|user|>What is 䔋木面 recorded to treat?<|assistant|>Recorded use: 補益虛冷. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-826", "kind": "use", "text": "<|user|>What is 仙人草 recorded to treat?<|assistant|>Recorded use: 煮湯浴. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-827", "kind": "use", "text": "<|user|>What is 鍛石 recorded to treat?<|assistant|>Recorded use: 止血殺蟲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-828", "kind": "compound", "text": "<|user|>What compound class is recorded in Salvia officinalis?<|assistant|>Salvia officinalis contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-829", "kind": "use", "text": "<|user|>What is 樗雞 recorded to treat?<|assistant|>Recorded use: 心腹邪氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-830", "kind": "use", "text": "<|user|>What is 豆芽 recorded to treat?<|assistant|>Recorded use: 解酒毒熱毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-831", "kind": "use", "text": "<|user|>What is 青紙 recorded to treat?<|assistant|>Recorded use: 妒精瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-832", "kind": "use", "text": "<|user|>What is 苦竹葉 recorded to treat?<|assistant|>Recorded use: 燒末. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-833", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 豇豆?<|assistant|>豇豆 -> Vigna unguiculata (resolved by wikidata, confidence 0.9).<|eos|>"}
+{"id": "val-834", "kind": "use", "text": "<|user|>What is 印紙 recorded to treat?<|assistant|>Recorded use: 水服一錢匕效. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-835", "kind": "use", "text": "<|user|>What is 青紙 recorded to treat?<|assistant|>Recorded use: 上有青黛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-836", "kind": "use", "text": "<|user|>What is 續隨子 recorded to treat?<|assistant|>Recorded use: 不下食. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-837", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 皮毛?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
+{"id": "val-838", "kind": "use", "text": "<|user|>What is 葫蘆巴 recorded to treat?<|assistant|>Recorded use: 寒濕腳氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-839", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 玉柏?<|assistant|>Nature 溫, flavours 酸, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-840", "kind": "use", "text": "<|user|>What is 地蜈蚣草 recorded to treat?<|assistant|>Recorded use: 解諸毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-841", "kind": "compound", "text": "<|user|>What compound class is recorded in Lycopus lucidus?<|assistant|>Lycopus lucidus contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-842", "kind": "use", "text": "<|user|>What is 石龍芮 recorded to treat?<|assistant|>Recorded use: 逐諸風. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-843", "kind": "use", "text": "<|user|>What is 筆頭灰 recorded to treat?<|assistant|>Recorded use: 小便數難淋瀝. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-844", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 虎耳草?<|assistant|>Nature 寒, flavours 苦/辛, channels not recorded, toxicity 小毒, grade —.<|eos|>"}
+{"id": "val-845", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 椒目?<|assistant|>Nature 熱, flavours 辛, channels 脾/膀胱, toxicity —, grade —.<|eos|>"}
+{"id": "val-846", "kind": "use", "text": "<|user|>What is 鋼鐵 recorded to treat?<|assistant|>Recorded use: 抑肝邪. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-847", "kind": "use", "text": "<|user|>What is 誤服 recorded to treat?<|assistant|>Recorded use: 心下滿. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-848", "kind": "use", "text": "<|user|>What is 穀精草 recorded to treat?<|assistant|>Recorded use: 止血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-849", "kind": "use", "text": "<|user|>What is 木蓮 recorded to treat?<|assistant|>Recorded use: 壯陽道. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-850", "kind": "use", "text": "<|user|>What is 藜蘆 recorded to treat?<|assistant|>Recorded use: 喉痺不通. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-851", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 阿井水?<|assistant|>Nature 平, flavours 甘/鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-852", "kind": "use", "text": "<|user|>What is 薑黃 recorded to treat?<|assistant|>Recorded use: 祛邪辟惡. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-853", "kind": "use", "text": "<|user|>What is 弓弩弦 recorded to treat?<|assistant|>Recorded use: 鼻衄及口鼻大衄不止. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-854", "kind": "use", "text": "<|user|>What is 白石英 recorded to treat?<|assistant|>Recorded use: 消渴. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-855", "kind": "use", "text": "<|user|>What is 木皮 recorded to treat?<|assistant|>Recorded use: 腿膝疼洗赤目. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-856", "kind": "use", "text": "<|user|>What is 葶藶 recorded to treat?<|assistant|>Recorded use: 寒熱. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-857", "kind": "use", "text": "<|user|>What is 黃粱米 recorded to treat?<|assistant|>Recorded use: 和中. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-858", "kind": "use", "text": "<|user|>What is 車前 recorded to treat?<|assistant|>Recorded use: 強陰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-859", "kind": "compound", "text": "<|user|>What compound class is recorded in Rumex acetosa?<|assistant|>Rumex acetosa contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-860", "kind": "compound", "text": "<|user|>What compound class is recorded in Thymus quinquecostatus?<|assistant|>Thymus quinquecostatus contains flavonoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-861", "kind": "use", "text": "<|user|>What is 萊菔 recorded to treat?<|assistant|>Recorded use: 食之甚美. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-862", "kind": "use", "text": "<|user|>What is 豨薟 recorded to treat?<|assistant|>Recorded use: 斷血生肉. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-863", "kind": "use", "text": "<|user|>What is 無漏子 recorded to treat?<|assistant|>Recorded use: 消食止咳. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-864", "kind": "use", "text": "<|user|>What is 黃頷蛇 recorded to treat?<|assistant|>Recorded use: 浸臂腕作痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-865", "kind": "use", "text": "<|user|>What is 孔公孼 recorded to treat?<|assistant|>Recorded use: 常欲眠睡. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-866", "kind": "use", "text": "<|user|>What is 奴哥撒兒 recorded to treat?<|assistant|>Recorded use: 澀腸止痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-867", "kind": "use", "text": "<|user|>What is 追風 recorded to treat?<|assistant|>Recorded use: 益氣療. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-868", "kind": "use", "text": "<|user|>What is 野狼尾草 recorded to treat?<|assistant|>Recorded use: 益氣輕身. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-869", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 白棘?<|assistant|>白棘 -> Paliurus ramosissimus (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-870", "kind": "use", "text": "<|user|>What is 蜀葵 recorded to treat?<|assistant|>Recorded use: 熱結. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-871", "kind": "use", "text": "<|user|>What is 露水 recorded to treat?<|assistant|>Recorded use: 稟肅殺之氣. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-872", "kind": "use", "text": "<|user|>What is 杓上砂 recorded to treat?<|assistant|>Recorded use: 隱暗澀痛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-873", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 穬麥?<|assistant|>Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade 中品.<|eos|>"}
+{"id": "val-874", "kind": "use", "text": "<|user|>What is 小兒臍風撮口︰艾葉燒灰填臍 recorded to treat?<|assistant|>Recorded use: 及暖子宮. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-875", "kind": "use", "text": "<|user|>What is 海松子 recorded to treat?<|assistant|>Recorded use: 補不足. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-876", "kind": "use", "text": "<|user|>What is 玉泉 recorded to treat?<|assistant|>Recorded use: 五臟百病. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-877", "kind": "use", "text": "<|user|>What is 原蠶砂 recorded to treat?<|assistant|>Recorded use: 治消渴症結. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-878", "kind": "use", "text": "<|user|>What is 青琅玕 recorded to treat?<|assistant|>Recorded use: 產後惡血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-879", "kind": "use", "text": "<|user|>What is 陰莖 recorded to treat?<|assistant|>Recorded use: 燒灰. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-880", "kind": "use", "text": "<|user|>What is 陰莖 recorded to treat?<|assistant|>Recorded use: 敷小兒鬼舐頭瘡. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-881", "kind": "compound", "text": "<|user|>What compound class is recorded in Dipsacus asper?<|assistant|>Dipsacus asper contains alkaloid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-882", "kind": "use", "text": "<|user|>What is 根及白皮 recorded to treat?<|assistant|>Recorded use: 治喉痹咳逆. Modern reading: cough. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-883", "kind": "use", "text": "<|user|>What is 莖葉 recorded to treat?<|assistant|>Recorded use: 絕產無子. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-884", "kind": "use", "text": "<|user|>What is 壺瓠 recorded to treat?<|assistant|>Recorded use: 每服五錢. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-885", "kind": "use", "text": "<|user|>What is 栝蔞 recorded to treat?<|assistant|>Recorded use: 中熱傷暑. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-886", "kind": "property", "text": "<|user|>What is the recorded nature, flavour and channel tropism of 桄榔子?<|assistant|>Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"}
+{"id": "val-887", "kind": "compound", "text": "<|user|>What compound class is recorded in Ligustrum lucidum?<|assistant|>Ligustrum lucidum contains phenylpropanoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-888", "kind": "use", "text": "<|user|>What is 肚及屎 recorded to treat?<|assistant|>Recorded use: 蟯蟲. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-889", "kind": "use", "text": "<|user|>What is 續隨子 recorded to treat?<|assistant|>Recorded use: 不過三顆. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-890", "kind": "use", "text": "<|user|>What is 代赭石 recorded to treat?<|assistant|>Recorded use: 鬼疰賊風蠱毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-891", "kind": "use", "text": "<|user|>What is 卵黃 recorded to treat?<|assistant|>Recorded use: 磨障翳. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-892", "kind": "name_mapping", "text": "<|user|>What is the modern botanical binomial of the historical name 天師栗?<|assistant|>天師栗 -> Aesculus chinensis var. wilsonii (resolved by wikidata, confidence 0.7).<|eos|>"}
+{"id": "val-893", "kind": "use", "text": "<|user|>What is 漿水 recorded to treat?<|assistant|>Recorded use: 止嘔噦. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-894", "kind": "compound", "text": "<|user|>What compound class is recorded in Pyrrosia lingua?<|assistant|>Pyrrosia lingua contains terpenoid compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-895", "kind": "relation", "text": "<|user|>In the 七情 framework, how do 甘草 and 甘遂 interact?<|assistant|>甘草 and 甘遂 are recorded as 相惡 (mutual aversion).<|eos|>"}
+{"id": "val-896", "kind": "use", "text": "<|user|>What is 舩底苔 recorded to treat?<|assistant|>Recorded use: 同炙甘草. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-897", "kind": "use", "text": "<|user|>What is 蛞蝓 recorded to treat?<|assistant|>Recorded use: 軼筋及脫肛. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-898", "kind": "use", "text": "<|user|>What is 燈盞油 recorded to treat?<|assistant|>Recorded use: 取吐即效. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-899", "kind": "use", "text": "<|user|>What is 蒔蘿 recorded to treat?<|assistant|>Recorded use: 肉毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-900", "kind": "use", "text": "<|user|>What is 諸朽骨 recorded to treat?<|assistant|>Recorded use: 東牆腐骨︰磨醋. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-901", "kind": "use", "text": "<|user|>What is 龍荔 recorded to treat?<|assistant|>Recorded use: 有小毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-902", "kind": "compound", "text": "<|user|>What compound class is recorded in Thymus quinquecostatus?<|assistant|>Thymus quinquecostatus contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-903", "kind": "use", "text": "<|user|>What is 乳穴水 recorded to treat?<|assistant|>Recorded use: 體潤不老. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-904", "kind": "use", "text": "<|user|>What is 五色石脂 recorded to treat?<|assistant|>Recorded use: 陰蝕. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-905", "kind": "use", "text": "<|user|>What is 續隨子 recorded to treat?<|assistant|>Recorded use: 下惡滯物. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-906", "kind": "use", "text": "<|user|>What is 白馬通 recorded to treat?<|assistant|>Recorded use: 金瘡止血. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-907", "kind": "use", "text": "<|user|>What is 樹皮 recorded to treat?<|assistant|>Recorded use: 調中開胃. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-908", "kind": "use", "text": "<|user|>What is 扁青 recorded to treat?<|assistant|>Recorded use: 折跌癰腫. Modern reading: abscess/swelling. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-909", "kind": "use", "text": "<|user|>What is 鐵華粉 recorded to treat?<|assistant|>Recorded use: 除風邪. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-910", "kind": "use", "text": "<|user|>What is 貝子 recorded to treat?<|assistant|>Recorded use: 燒研. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-911", "kind": "use", "text": "<|user|>What is 五倍子 recorded to treat?<|assistant|>Recorded use: 作風濕癬瘡. Modern reading: rheumatic pain. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-912", "kind": "use", "text": "<|user|>What is 辟虺雷 recorded to treat?<|assistant|>Recorded use: 解百毒. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-913", "kind": "use", "text": "<|user|>What is 白龍鬚 recorded to treat?<|assistant|>Recorded use: 久下泄澼膿血. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-914", "kind": "use", "text": "<|user|>What is 磨刀水 recorded to treat?<|assistant|>Recorded use: 消熱腫. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-915", "kind": "use", "text": "<|user|>What is 石耳 recorded to treat?<|assistant|>Recorded use: 明目益精. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-916", "kind": "use", "text": "<|user|>What is 石合草 recorded to treat?<|assistant|>Recorded use: 濕痹中惡. (pre-modern claim; not clinical advice)<|eos|>"}
+{"id": "val-917", "kind": "compound", "text": "<|user|>What compound class is recorded in Welsh onion?<|assistant|>Welsh onion contains unclassified compounds (per the corpus compound table).<|eos|>"}
+{"id": "val-918", "kind": "use", "text": "<|user|>What is 藎草 recorded to treat?<|assistant|>Recorded use: 治身熱邪氣. (pre-modern claim; not clinical advice)<|eos|>"}

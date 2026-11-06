@@ -14,6 +14,46 @@
 
 ---
 
+## The result
+
+**A pre-experimental filter for natural-product discovery.** It lifts a processing instruction out of the
+classical record, compiles it into a chemical hypothesis, and uses validated physics to decide whether the
+hypothesis is physically possible — before any wet-lab work.
+
+| Stage | Candidates |
+|---|---|
+| hypotheses compiled from the corpus | 203 |
+| **excluded at the ancient-record gate** (not attested) | **151** |
+| excluded at the Asian-theory gate | 24 |
+| **pass both gates** | **28** |
+| **refuted by validated physics** | **10** |
+| **survive — worth an assay** | **18** |
+
+The funnel is **identical under a 7-expert and a 12-expert panel**, because the gates are structural and the
+arbiter is physics — adding experts cannot move it.
+
+Over the full candidate set, **78 of 203 are refuted by the physics alone, and 6 of those 78 had unanimous
+5/5 agreement from the tradition panel.** Example: *蒸 of 菖蒲 (Acorus calamus) should measurably change its
+terpenoid content* — 5/5 panel support; Clausius–Clapeyron at 100 °C steam strips **98.5 %** of a
+monoterpene. Physically backwards, decided in seconds, before anyone buys a reagent.
+
+### The finding that survived
+
+We pre-registered five classical property axes against measured chemistry and target biology, fixed the
+thresholds before seeing any result, and ran permutation tests with Holm correction:
+
+| Axis | Statistic | Result | n | p |
+|---|---|---|---|---|
+| **歸經** channel tropism → target organ | hit rate vs permutation | **7.48 % vs 3.80 % (≈2×)** | **2,059** pairs | **0.008** |
+| 四氣 four natures → polarity/volatility | AUC | 0.456 | 193 | 0.261 |
+| 五味 five flavours → compound class | AUC | 0.529 | 201 | 0.779 |
+| Ayurvedic vīrya / ṣaḍrasa | — | — | **0** | not linkable |
+
+**One of five survived, and it is the most mechanistic one.** The three nulls are published beside it,
+because a pre-registered test that only reports its successes is not a test.
+
+---
+
 ## Inspiration
 
 In 1972 a pharmacologist in Beijing read a line in a fourth-century handbook of emergency remedies —

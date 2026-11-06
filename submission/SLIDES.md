@@ -10,7 +10,10 @@ Speaker notes are one line each. Full speaking text lives in `submission/VIDEO_S
 
 ---
 
+---
+
 ## Slide 1 — A pre-experimental filter for natural-product discovery
+
 **Title:** 2,000 years of processing instructions, filtered by physics before anyone buys a reagent
 
 - **1972, one line, one Nobel.** 葛洪's 4th-century text said *soak in water and wring out the juice* — a
@@ -32,151 +35,8 @@ arithmetic so it can be checked.
 
 ---
 
-## Slide 2 — Asian theory is the hypothesis, not the decoration
-**Title:** We treat 四氣五味, 歸經 and rasa as a **predictive prior** — and we test it
+## Slide 2 — The arbiter refutes the panel's own consensus
 
-- "Cold, bitter, enters the Liver channel" is a **claim about chemistry and compartment** — polarity,
-  volatility, thermolability, target tissue. So is Ayurvedic *vīrya* (hot/cold potency) and the six *rasa*.
-- We encode the property vector per drug and treat it as a **feature matrix**, not as colour:
-  `nature · flavours · channels · direction · grade` / `rasa · guṇa · vīrya · vipāka · tridoṣa`.
-- That makes the framework **falsifiable**: shuffle the vectors, recompute, and see whether predictive power
-  survives. If it does not, we report that with numbers.
-- **What this is not** — not a TCM knowledge graph (TCMSP, SymMap, ETCM, HERB do that better than we could in a
-  week), not a TCM chatbot (ShenNong-TCM, HuatuoGPT, BianCang), not virtual screening. Everyone else has data or a
-  chatbot. Three things are ours: **process language → chemistry**, **the theory tested as a prior**, and **a
-  closed rule set bridged to mechanisms**.
-- Where the tradition **disagrees with itself** (edition-dependent channel assignments), we inherited the
-  disagreement instead of resolving it silently.
-
-**Visual:** a drug name on the left; the property vector as a row of chips; an arrow to
-`MW · logP · target family · thermolability` — labelled *prediction*. Then a permutation arrow, labelled *null*.
-
-**Speaker note:** If the theory predicts, we have a non-Western discovery engine. If it doesn't, we say so.
-
----
-
-## Slide 3 — First principles → data (the derivation)
-**Title:** We derived the corpus from axioms instead of collecting it
-
-- We wrote down the **axioms of ethnopharmacology and Asian pharmacology** first, then derived which data
-  classes those axioms logically require, and only then sourced them.
-- Consequence: the registry is a **proof obligation**. Every tier exists because an axiom demanded it — an
-  ontology (tier 0), a biology/chemistry substrate (tier 1), materia medica (tier 2), alchemy (tier 3),
-  channels (tier 4), and structured ground truth (tier 5).
-- The **first-principles substrate is not "Western medicine"** — it is the interpretive layer that lets us say
-  what a classical claim means in modern terms.
-- The Western herbal tradition is present only as a **labelled comparative control (≤ 3% of tokens)**, to test
-  whether a finding is just an artefact of any large botanical corpus.
-- Every source carries title, author, date, URL, licence **and licence evidence**, tier, tradition, language.
-
-**Visual:** `assets/corpus_tiers.svg` — the tier stack, with tier 2 highlighted and the control strip at the
-bottom.
-
-**Speaker note:** A wish list of sources is a hobby. A derivation is a method.
-
----
-
-## Slide 4 — The corpus: Asian medicine *and* Asian science
-**Title:** 106 sources · 45,604,249 characters ·
-5 languages
-
-- **Chinese:** 神農本草經 · 本草綱目 · 傷寒論 · 金匱要略 · 千金要方 · 太平惠民和劑局方 · 雷公炮炙論 · 海藥本草
-- **Ayurveda / Unani:** Caraka · Suśruta · Bhāvaprakāśa · Rasa Ratna Samuccaya · al-Qānūn · al-Ḥāwī
-- **Ancient science (new):** 天工開物 · 齊民要術 · 夢溪筆談 · 救荒本草 · 植物名實圖考 · 飲膳正要 · Vṛkṣāyurveda ·
-  Kitāb al-Nabāt
-- **Structured ground truth:** Dr Duke's · PubChem · ChEMBL · POWO/WCVP · GBIF · MeSH
-- **The licence audit is a result:** 106 accepted,
-  3 rejected and documented. One GRETIL *rasaśāstra* source carried
-  **CC BY-NC-SA** — incompatible with a public Apache-2.0 repository, so it was excluded, not quietly used.
-  Trained text is 30 + 76.
-
-**Visual:** `assets/corpus_tiers.svg` plus three licence badges: `PUBLIC DOMAIN` (verdigris),
-`CC BY-SA` (indigo), `REJECTED — NC` (cinnabar, struck through).
-
-**Speaker note:** We rejected a source we could have used, and wrote down why. That is the audit.
-
----
-
-## Slide 5 — The model: 8.72 M parameters, 45 minutes, 18 MB
-**Title:** Trained from scratch on a laptop CPU in 45 minutes — and the weights are published
-
-- **8,719,616 parameters** (4,525,312 non-embedding) · 16,384-token vocabulary built for Classical Chinese and
-  Sanskrit · `d_model` 256 · 6 layers · 4 heads · 512-token context · PyTorch 2.2.2, **no GPU**.
-- **200 steps × 8,192 = 1,638,400 tokens** in **2,711 s (45 min)** at 604 tokens/s, single thread.
-  Train loss **6.3662**, validation **6.3901** (held-out perplexity 595.9); val curve 9.735 → 7.336 → 6.717 →
-  6.481 → **6.390**. The chart is that log, not a render.
-- **The weights: `shennong-mini-f16.gguf` = 18.05 MB** (18,054,560 bytes = 17.2 MiB), 56 tensors, sha256
-  `a67ad442…4cdb60`. That is **1.8 % of the 1 GB ceiling** — 55× less room than the constraint allowed.
-- **Stated flatly:** 1,638,400 tokens ÷ 8,719,616 params = **0.188 tokens/param ≈ 0.9 % of a compute-optimal
-  budget**. This is a **pipeline proof, not a useful general model** — the honest claim is reproducibility,
-  not capability.
-- **Run provenance:** the checkpoint trained on the 02:47 corpus snapshot (38.24 M chars / 16.69 M tokens)
-  because the token cache was keyed on the tokeniser; the frozen corpus post-dates it. The bug is fixed, and we
-  say so rather than letting the reader assume otherwise.
-
-**Visual:** left, the architecture block diagram with the bilingual vocabulary highlighted; right, the real
-logged loss curve (train solid, held-out dashed) from `training/runs/shennong-mini-r1/metrics.json`, with
-18.05 MB and the 1 GB ceiling drawn to scale as a bar.
-
-**Speaker note:** 1.8 % of the budget we were given, on a CPU, with public weights — and we will not pretend it
-is more model than it is.
-
----
-
-## Slide 6 — The pipeline: 采 → 制 → 配 → 使
-**Title:** Four classical operations of Chinese pharmacy, used as the engineering vocabulary
-
-- **采 Cǎi — collect:** licence-audited acquisition, 繁/简 + IAST/Devanagari normalisation, 13-gram dedupe,
-  entity extraction. → `corpus.jsonl`, `sources.yaml`
-- **制 Zhì — prepare:** drug names resolved across eras and scripts to modern taxa with confidence; process words
-  compiled into a **chemistry operator** (炮/煅/淬/九蒸九曬 → hydrolysis, oxidation, volatilisation, complexation).
-  We print the split we are least sure of: which steps are **load-bearing** (附子 炮制: diester → monester
-  alkaloids) and which are **plausibly ritual**. → `lexicon_drugs.json`, `processing.csv`
-- **配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula roles **君臣佐使**; and the **complete,
-  faithful** interaction rule set — **16** canonical 相反 pairs + **11** 相畏 relations, which are what 十八反 and
-  十九畏 actually enumerate (the mnemonics count *drugs*, not pairs). Bridged, assay-annotated, verse-tagged. → `kg.json`
-- **使 Shǐ — deploy:** ranking, falsification plans, uncertainty, **drug candidates**, and the
-  theory-predictivity experiment. → `drug_candidates.json`, `eval/report.json`
-- **One command per stage.** `make setup · corpus · tokenizer · train-mini · eval · app-data · workbench` runs
-  from a clean clone on CPU.
-
-**Visual:** `assets/pipeline.svg`, with each stage's emitted artefact labelled on the arrow.
-
-**Speaker note:** We named the pipeline after the operations the texts themselves use, because the texts are
-the specification.
-
----
-
-## Slide 7 — 60 drug candidates across 15 taxa — one worked end-to-end
-**Title:** A prescription line from a 1406 formulary becomes a molecule with a name, a number and an assay
-
-The chain, in order. This is the demo screen:
-
-- **The line.** *普濟方* (1406), the 前胡湯 entry: 「前胡汤治肺热咳嗽」 — "Qianhu decoction treats cough from lung
-  heat." Verified verbatim, with a byte offset into the corpus (`ws_zh_pujifang:1190-1198`).
-- **The theory predicts the compartment.** 前胡 is 寒 · 苦 · 歸肺/肝/脾/膀胱 · 中品 — cold, bitter, entering **Lung**.
-  The prediction is a lung-directed action, and the recorded indication is a cough syndrome. The framework named the
-  organ; that is what makes it testable rather than decorative.
-- **The molecule.** Peucedanocoumarin I, **C₂₁H₂₄O₇**, **MW 388.42**, logP 4.6, HBD 0, HBA 7, TPSA 64.61 Å², 3 rings,
-  6 rotatable bonds. **4 of 4 Lipinski rules evaluated — passes; Veber passes.** Computed from the resolved SMILES.
-- **The assay.** Ca²⁺ flux (FLIPR) on TRPA1-expressing cells, then a recombinant cell line; go/no-go is reproducible
-  engagement in two orthogonal assays plus selectivity over the nearest paralogue.
-- **Novelty is structural now, and it discriminates.** ECFP-style Tanimoto (radius 2) against the
-  corpus's **23,172-structure table**, excluding each candidate's own compound and source plant:
-  **42 distinct values, range 0.000–0.750, mean 0.283** — replaced a curated-name prior that
-  gave every candidate 0.88 and made the rank order meaningless. It measures distance from
-  documented phytochemistry, **not** therapeutic novelty, and the card says so.
-
-**Visual:** the expanded candidate dossier from the Workbench, in the order of the chain above — classical
-line highlighted in the source text, theory chips, molecular card with the computed descriptors, then the assay.
-
-**Speaker note:** One line of a 1406 formulary turned into a molecule with a formula, a mass, a computed
-drug-likeness verdict, a named target and the experiment that would test it. Nothing on this slide was typed by
-a human — it is the pipeline's output, and the provenance locator points into the corpus.
-
----
-
-## Slide 8 — The arbiter refutes the panel's own consensus
 **Title:** A claim can win 5/5 in the panel and still be physically backwards
 
 - **The claim:** *蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content.* Our five
@@ -197,7 +57,8 @@ is that we can kill our own.
 
 ---
 
-## Slide 9 — Does the classical theory predict chemistry?
+## Slide 3 — Does the classical theory predict chemistry?
+
 **Title:** One of five pre-registered axes survived its own test — and it is the mechanistic one
 
 - **Pre-registered.** Thresholds and the permutation construction were written into `docs/EVALUATION.md` *before*
@@ -232,7 +93,159 @@ about it. Both outcomes are the result.
 
 ---
 
+## Slide 4 — We measured our own experts, and caught a bug in ourselves
+**Title:** The system scores its own experts against the arbiter — and it found one of them cheating
+
+- **The test:** each expert's confidence is scored by whether it predicts the **arbiter's** verdict — AUC
+  against *"did this claim actually survive physics?"*. Utility is defined by physics, never by agreement;
+  an expert that merely makes claims pass is worthless.
+- **The result:** our phytochemistry expert came out **below chance — AUC 0.443**.
+- **The cause was us, not the data:** a hand-written **+0.15 bonus for plants with a narrow chemotype**. Sparse
+  chemotypes are exactly the plants that fail physics, so the bonus was rewarding the plants most likely to
+  be refuted.
+- **The fix:** removed the prior → **AUC 0.607**. We **retracted the finding** and kept the tool that caught it.
+- **Why this belongs in a science submission:** one line of prior was silently costing 0.16 AUC. No amount of
+  adding experts would have surfaced it.
+
+**Visual:** the AUC bar chart with phytochemistry highlighted in cinnabar at 0.443, and an arrow to 0.607 after
+the fix; caption *"the diagnostic found the bug, not the data."*
+
+**Speaker note:** This is the slide most projects would not have. We are reporting a failure we found in
+ourselves, after fixing it.
+
+---
+
+## Slide 5 — How the record is read: theory is the hypothesis, not the decoration
+
+**Title:** We treat 四氣五味, 歸經 and rasa as a **predictive prior** — and we test it
+
+- "Cold, bitter, enters the Liver channel" is a **claim about chemistry and compartment** — polarity,
+  volatility, thermolability, target tissue. So is Ayurvedic *vīrya* (hot/cold potency) and the six *rasa*.
+- We encode the property vector per drug and treat it as a **feature matrix**, not as colour:
+  `nature · flavours · channels · direction · grade` / `rasa · guṇa · vīrya · vipāka · tridoṣa`.
+- That makes the framework **falsifiable**: shuffle the vectors, recompute, and see whether predictive power
+  survives. If it does not, we report that with numbers.
+- **What this is not** — not a TCM knowledge graph (TCMSP, SymMap, ETCM, HERB do that better than we could in a
+  week), not a TCM chatbot (ShenNong-TCM, HuatuoGPT, BianCang), not virtual screening. Everyone else has data or a
+  chatbot. Three things are ours: **process language → chemistry**, **the theory tested as a prior**, and **a
+  closed rule set bridged to mechanisms**.
+- Where the tradition **disagrees with itself** (edition-dependent channel assignments), we inherited the
+  disagreement instead of resolving it silently.
+
+**Visual:** a drug name on the left; the property vector as a row of chips; an arrow to
+`MW · logP · target family · thermolability` — labelled *prediction*. Then a permutation arrow, labelled *null*.
+
+**Speaker note:** If the theory predicts, we have a non-Western discovery engine. If it doesn't, we say so.
+
+---
+
+## Slide 6 — First principles → the data → the corpus
+**Title:** We derived what data we needed before collecting any of it
+
+- **Axioms first, then sourcing.** Every source in the registry is a **proof obligation** — a data class that
+  an axiom requires — not whatever happened to be downloadable.
+- **The corpus answers those obligations:** **106 sources · 45.6 M characters · traditional Chinese canon in
+  繁體 (35 %), Sanskrit in Devanagari, Latin (Avicenna's 1593 *Canon*), and the foundational biology /
+  chemistry substrate.**
+- **It contains ancient *science*, not only medicine:** 天工開物 (materials), 齊民要術 (fermentation), 夢溪筆談
+  (natural observation) — these carry the process chemistry the medicine actually used.
+- **Licence audit is part of the method:** 30 public-domain + 73 CC BY-SA sources reproduced; **GRETIL
+  rejected** because CC BY-**NC**-SA cannot ship in a public repo. The rejection is documented, not hidden.
+- **Honest limit, stated here rather than in an appendix:** drug-name → taxon resolution measures **14.1 %**
+  accuracy, which bounds every downstream number.
+
+**Visual:** the tier stack (T1 foundational → T5 structured open data) beside a licence-audit table with the
+GRETIL rejection row visible.
+
+**Speaker note:** The corpus is the least glamorous part and the one that decides whether anything downstream
+is true.
+
+---
+
+## Slide 7 — The model: 8.72 M parameters, 45 minutes, 18 MB
+
+**Title:** Trained from scratch on a laptop CPU in 45 minutes — and the weights are published
+
+- **8,719,616 parameters** (4,525,312 non-embedding) · 16,384-token vocabulary built for Classical Chinese and
+  Sanskrit · `d_model` 256 · 6 layers · 4 heads · 512-token context · PyTorch 2.2.2, **no GPU**.
+- **200 steps × 8,192 = 1,638,400 tokens** in **2,711 s (45 min)** at 604 tokens/s, single thread.
+  Train loss **6.3662**, validation **6.3901** (held-out perplexity 595.9); val curve 9.735 → 7.336 → 6.717 →
+  6.481 → **6.390**. The chart is that log, not a render.
+- **The weights: `shennong-mini-f16.gguf` = 18.05 MB** (18,054,560 bytes = 17.2 MiB), 56 tensors, sha256
+  `a67ad442…4cdb60`. That is **1.8 % of the 1 GB ceiling** — 55× less room than the constraint allowed.
+- **Stated flatly:** 1,638,400 tokens ÷ 8,719,616 params = **0.188 tokens/param ≈ 0.9 % of a compute-optimal
+  budget**. This is a **pipeline proof, not a useful general model** — the honest claim is reproducibility,
+  not capability.
+- **Run provenance:** the checkpoint trained on the 02:47 corpus snapshot (38.24 M chars / 16.69 M tokens)
+  because the token cache was keyed on the tokeniser; the frozen corpus post-dates it. The bug is fixed, and we
+  say so rather than letting the reader assume otherwise.
+
+**Visual:** left, the architecture block diagram with the bilingual vocabulary highlighted; right, the real
+logged loss curve (train solid, held-out dashed) from `training/runs/shennong-mini-r1/metrics.json`, with
+18.05 MB and the 1 GB ceiling drawn to scale as a bar.
+
+**Speaker note:** 1.8 % of the budget we were given, on a CPU, with public weights — and we will not pretend it
+is more model than it is.
+
+---
+
+## Slide 8 — The pipeline: 采 → 制 → 配 → 使
+
+**Title:** Four classical operations of Chinese pharmacy, used as the engineering vocabulary
+
+- **采 Cǎi — collect:** licence-audited acquisition, 繁/简 + IAST/Devanagari normalisation, 13-gram dedupe,
+  entity extraction. → `corpus.jsonl`, `sources.yaml`
+- **制 Zhì — prepare:** drug names resolved across eras and scripts to modern taxa with confidence; process words
+  compiled into a **chemistry operator** (炮/煅/淬/九蒸九曬 → hydrolysis, oxidation, volatilisation, complexation).
+  We print the split we are least sure of: which steps are **load-bearing** (附子 炮制: diester → monester
+  alkaloids) and which are **plausibly ritual**. → `lexicon_drugs.json`, `processing.csv`
+- **配 Pèi — combine:** taxon ↔ compound ↔ target ↔ indication; formula roles **君臣佐使**; and the **complete,
+  faithful** interaction rule set — **16** canonical 相反 pairs + **11** 相畏 relations, which are what 十八反 and
+  十九畏 actually enumerate (the mnemonics count *drugs*, not pairs). Bridged, assay-annotated, verse-tagged. → `kg.json`
+- **使 Shǐ — deploy:** ranking, falsification plans, uncertainty, **drug candidates**, and the
+  theory-predictivity experiment. → `drug_candidates.json`, `eval/report.json`
+- **One command per stage.** `make setup · corpus · tokenizer · train-mini · eval · app-data · workbench` runs
+  from a clean clone on CPU.
+
+**Visual:** `assets/pipeline.svg`, with each stage's emitted artefact labelled on the arrow.
+
+**Speaker note:** We named the pipeline after the operations the texts themselves use, because the texts are
+the specification.
+
+---
+
+## Slide 9 — 60 drug candidates across 15 taxa — one worked end-to-end
+
+**Title:** A prescription line from a 1406 formulary becomes a molecule with a name, a number and an assay
+
+The chain, in order. This is the demo screen:
+
+- **The line.** *普濟方* (1406), the 前胡湯 entry: 「前胡汤治肺热咳嗽」 — "Qianhu decoction treats cough from lung
+  heat." Verified verbatim, with a byte offset into the corpus (`ws_zh_pujifang:1190-1198`).
+- **The theory predicts the compartment.** 前胡 is 寒 · 苦 · 歸肺/肝/脾/膀胱 · 中品 — cold, bitter, entering **Lung**.
+  The prediction is a lung-directed action, and the recorded indication is a cough syndrome. The framework named the
+  organ; that is what makes it testable rather than decorative.
+- **The molecule.** Peucedanocoumarin I, **C₂₁H₂₄O₇**, **MW 388.42**, logP 4.6, HBD 0, HBA 7, TPSA 64.61 Å², 3 rings,
+  6 rotatable bonds. **4 of 4 Lipinski rules evaluated — passes; Veber passes.** Computed from the resolved SMILES.
+- **The assay.** Ca²⁺ flux (FLIPR) on TRPA1-expressing cells, then a recombinant cell line; go/no-go is reproducible
+  engagement in two orthogonal assays plus selectivity over the nearest paralogue.
+- **Novelty is structural now, and it discriminates.** ECFP-style Tanimoto (radius 2) against the
+  corpus's **23,172-structure table**, excluding each candidate's own compound and source plant:
+  **42 distinct values, range 0.000–0.750, mean 0.283** — replaced a curated-name prior that
+  gave every candidate 0.88 and made the rank order meaningless. It measures distance from
+  documented phytochemistry, **not** therapeutic novelty, and the card says so.
+
+**Visual:** the expanded candidate dossier from the Workbench, in the order of the chain above — classical
+line highlighted in the source text, theory chips, molecular card with the computed descriptors, then the assay.
+
+**Speaker note:** One line of a 1406 formulary turned into a molecule with a formula, a mass, a computed
+drug-likeness verdict, a named target and the experiment that would test it. Nothing on this slide was typed by
+a human — it is the pipeline's output, and the provenance locator points into the corpus.
+
+---
+
 ## Slide 10 — Safety, living heritage, and the ask
+
 **Title:** A system that mines this canon must be able to say which of its sources are poison — and what it needs next
 
 - **Medical safety is architecture, not a disclaimer.** No dosing, no diagnosis, no self-treatment, no

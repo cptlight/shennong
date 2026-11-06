@@ -1,0 +1,40 @@
+name: demo page
+
+on:
+  push:
+    branches: [main]
+    paths: ["docs/demo/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dep.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sanity-check the demo is self-contained
+        run: |
+          test -f docs/demo/index.html
+          if grep -q "__DATA__" docs/demo/index.html; then echo "placeholder left in page"; exit 1; fi
+          if grep -qE "https?://(cdn|unpkg|jsdelivr|fonts\.googleapis)" docs/demo/index.html; then
+            echo "external CDN reference in a page that must work offline"; exit 1; fi
+          echo "demo OK: $(wc -c < docs/demo/index.html) bytes"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/demo
+      - id: dep
+        uses: actions/deploy-pages@v4

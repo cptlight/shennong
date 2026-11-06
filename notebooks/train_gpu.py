@@ -79,8 +79,12 @@ def main() -> int:
     # Load fp32 and let the Trainer's fp16=True do mixed precision (fp32 master weights, fp16 autocast).
     # Loading fp16 directly made the GradScaler fail with "Attempting to unscale FP16 gradients" — there
     # were no fp32 master weights to unscale.
+    # Force fp32: Qwen2.5-0.5B's config.json declares bfloat16, and from_pretrained honours it, which makes
+    # the Trainer's fp16 GradScaler die with "not implemented for 'BFloat16'". fp32 master weights + fp16
+    # autocast is the recipe that works on a T4.
     model = AutoModelForCausalLM.from_pretrained(
-        BASE_MODEL, device_map="auto" if torch.cuda.is_available() else None)
+        BASE_MODEL, torch_dtype=torch.float32,
+        device_map="auto" if torch.cuda.is_available() else None)
 
     # FULL fine-tuning, not LoRA. peft's LoRA path now requires torchao>=0.16 and Colab ships 0.10, which
     # is exactly the ImportError that killed the first run. At 494M params full FT needs ~5-6 GB on a T4,

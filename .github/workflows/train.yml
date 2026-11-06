@@ -68,6 +68,24 @@ jobs:
             https://github.com/cptlight/shennong/releases/download/ckpt-base/ckpt-best.pt
           ls -l training/runs/seed/ckpt-best.pt
 
+      - name: Compute absolute step target
+        id: target
+        run: |
+          # --steps is a TOTAL optimizer-step target, so resuming from step 199 with steps=20 makes the
+          # trainer believe it is already past the target and exit in seconds without training at all.
+          # (That is exactly what the first smoke run did: "steps=20 tok/s=1505418".) Target is absolute.
+          ADD=${{ inputs.steps }}
+          if [ "${{ inputs.resume }}" = "true" ]; then
+            START=$(python -c "
+import torch
+ck = torch.load('training/runs/seed/ckpt-best.pt', map_location='cpu', weights_only=False)
+print(int(ck.get('step') or 0))")
+          else
+            START=0
+          fi
+          echo "start_step=$START add=$ADD target=$((START + ADD))"
+          echo "value=$((START + ADD))" >> "$GITHUB_OUTPUT"
+
       - name: Train
         env:
           OMP_NUM_THREADS: ${{ inputs.threads }}
@@ -78,7 +96,7 @@ jobs:
           python training/train_pretrain.py \
             --config model/configs/shennong-moe-cpu.json \
             --run-name "${{ inputs.run_name }}" \
-            --steps "${{ inputs.steps }}" \
+            --steps "${{ steps.target.outputs.value }}" \
             --lr "${{ inputs.lr }}" \
             --warmup 20 \
             --threads "${{ inputs.threads }}" \

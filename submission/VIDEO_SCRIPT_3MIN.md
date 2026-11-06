@@ -45,31 +45,43 @@ from the repo; the provenance column names the file it comes from.
 
 ## 0:55–1:30 — The money shot · the arbiter overrules consensus
 
-**On screen:** 菖蒲 card — five green 5/5 chips left; retention bar collapsing to 1.5 % right. Then the funnel
-203 → 151 → 28 → 10 → 18.
+**On screen:** 菖蒲 card — five green 5/5 chips on the left; retention bar on the right reading **54 % median,
+range 10–94 %**. Then the funnel: 203 → 151 → 28 → 10 → 18.
 
-> *"Then the half that is missing everywhere else: something to **kill** what we generate. 'Steaming 菖蒲
-> should enrich its terpenoids.' Our five tradition experts scored it five out of five — well attested,
-> theory-consistent, plausible process. The physics layer asked one question: how volatile is a monoterpene
-> at a hundred degrees in steam? **Ninety-eight point five per cent of it is gone.** The claim is backwards,
-> and the system said so with arithmetic before anyone bought a reagent. Seventy-eight of two hundred and
-> three candidates die this way — six of them despite unanimous panel agreement. Twenty-eight pass both
-> gates, ten are refuted by physics, **eighteen survive**."*
+> *"Then the half that is missing everywhere else: something to **kill** what we generate. The hypothesis is
+> that a preparation **enriches** the medicinally relevant class — that is why anyone prescribes the step.
+> Steaming 菖蒲 to enrich its terpenoids: our five tradition experts scored it five out of five. Then the
+> physics layer asked one question — how volatile is a monoterpene at a hundred degrees in steam? The median
+> terpenoid keeps fifty-four per cent, the range across this plant's terpenoids is ten to ninety-four, and the
+> reference monoterpene keeps **one and a half per cent**. You cannot enrich a class you are actively
+> stripping. The claim predicted the wrong direction, and the system said so with arithmetic before anyone
+> bought a reagent."*
+
+**On screen, then the funnel, spoken with the middle step included:**
+
+> *"One hundred and fifty-one candidates fail the attestation gate. Twenty-four more fail the tradition's own
+> theory frame. Twenty-eight pass both. Physics refutes ten of those. Eighteen survive. And across the whole
+> set, seventy-eight of two hundred and three fail a physics check somewhere in the funnel — six of them
+> despite unanimous five-out-of-five agreement from the tradition panel."*
 
 **On screen, small:** *Joback boiling points validated against known constants — mean 4.5 % error, 6/6 within
-10 %.* **Provenance:** `shennong/physics/{estimators,simulate}.py`.
+10 %.* **Provenance:** `shennong/physics/{estimators,simulate}.py`, `artifacts/{deterministic_outcomes,
+tradition_first,consensus_vs_arbiter}.json`.
 
 ---
 
-## 1:30–2:00 — We caught a bug in ourselves
+## 1:30–2:00 — The diagnostic caught our own bug
 
 **On screen:** AUC table; phytochemistry highlighted at 0.443; arrow to 0.607 after the fix.
 
-> *"We also measure our own experts — each one scored on whether its confidence predicts the arbiter's
-> verdict. Our phytochemistry expert came out **below chance**, point four four. The tempting story was 'it
-> senses sparse data'. The real cause was worse: a hand-written bonus that rewarded plants with sparse
-> chemistry, which are precisely the plants that fail physics. We removed it — point six one — and
-> **retracted the finding** rather than feature it. The tool that caught it is what we kept."*
+> *"We built a diagnostic that scores every expert on one question: does its confidence predict whether a claim
+> actually survives physics? Utility is defined by physics, never by agreement. That diagnostic caught one of
+> our own experts — phytochemistry was scoring **below chance**, point four four — measuring data sparsity
+> instead of validity. We found the cause in our code: a hand-written bonus that rewarded sparse-chemotype
+> plants, which are exactly the ones that fail physics. We removed it, the score moved to **point six one**,
+> and we **retracted the finding** rather than featuring it."*
+
+**On screen, one line:** *"the asset is the diagnostic; the bug is the evidence it works."*
 
 **Provenance:** `shennong/experts/steering.py`, `docs/DIAGNOSTICS.md` §2.
 

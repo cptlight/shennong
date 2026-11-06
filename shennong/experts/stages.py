@@ -114,7 +114,7 @@ WEIGHTS = {Stage.ANCIENT_RECORD: 0.28, Stage.ASIAN_THEORY: 0.20,
 
 def stage_score(item: dict, world: World) -> StagedResult:
     claim = (f"{item.get('process')} of {item.get('drug_surface')} "
-             f"({item.get('binomial')}) should measurably change its {item.get('chemotype')} content")
+             f"({item.get('binomial')}) should measurably enrich its {item.get('chemotype')} content")
     res = StagedResult(claim=claim)
 
     for domain, fn in EXPERTS.items():

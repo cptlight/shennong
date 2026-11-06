@@ -143,7 +143,7 @@ def evaluate(world: World, items: list[dict]) -> tuple[float, list[dict]]:
     out = []
     for it in items:
         claim = (f"{it.get('process')} of {it.get('drug_surface')} "
-                 f"({it.get('binomial')}) should measurably change its {it.get('chemotype')} content")
+                 f"({it.get('binomial')}) should measurably enrich its {it.get('chemotype')} content")
         proposals = [fn(world, it) for fn in EXPERTS.values()]
         c = fuse(claim, proposals)
         out.append({"item": it, "consensus": c.to_dict(),

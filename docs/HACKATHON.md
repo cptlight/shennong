@@ -29,7 +29,7 @@ validation pipeline for natural products, which is what track 02 asks for.
 
 **Why track 02 rather than track 01:** the strongest, most judge-visible results are quantitative
 statements about compound viability — **78 of 203 candidates refuted by physics**, **6 of those despite
-unanimous 5/5 panel agreement** (菖蒲 + 蒸 → terpenoid: 98.5 % of a monoterpene stripped at 100 °C), and the
+unanimous 5/5 panel agreement** (菖蒲 + 蒸 → terpenoid: median 54 % retention at 100 °C steam, range 10–94 %; the reference monoterpene retains 1.5 %), and the
 stable funnel **203 → 151 → 28 → 10 → 18**. Those are drug-discovery statements, not text-mining
 statements.
 

@@ -85,7 +85,7 @@ def main() -> int:
     by_claim = {}
     for it in (cs.get("all") or cs.get("top") or []):
         c = (f"{it.get('process')} of {it.get('drug_surface')} "
-             f"({it.get('binomial')}) should measurably change its {it.get('chemotype')} content")
+             f"({it.get('binomial')}) should measurably enrich its {it.get('chemotype')} content")
         by_claim[c] = it
 
     out = []

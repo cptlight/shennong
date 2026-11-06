@@ -40,11 +40,17 @@ on camera. No shot shows a fixture panel without its `DEMO FIXTURE` badge visibl
 > because the classical record does not attest them. Twenty-eight survive both gates. Physics refutes ten
 > of those. Eighteen are left — and those are the ones worth an assay."*
 
-> **0:55–1:22 — The refutation.** *"Here is the one that matters. On screen: 'steaming 菖蒲 should enrich
-> its terpenoids.' Our five tradition experts scored it five out of five. Then the physics layer asked a
-> simple question — how volatile is a monoterpene at a hundred degrees in steam? Answer: ninety-eight
-> point five per cent of it is gone. The claim is backwards. The system overruled its own unanimous
-> consensus with arithmetic, and it did it before anyone bought a reagent."*
+> **0:55–1:22 — The refutation.** *"Here is the one that matters. On screen: 'steaming 菖蒲 should enrich its
+> terpenoids' — our five tradition experts scored it five out of five. Then the physics layer asked: how
+> volatile is a monoterpene at a hundred degrees in steam? The median terpenoid keeps fifty-four per cent, the
+> range across this plant is ten to ninety-four, and the reference monoterpene keeps one and a half per cent.
+> You cannot enrich a class you are stripping. The claim predicted the wrong direction, and the system
+> overruled its own unanimous panel with arithmetic."*
+>
+> **0:22–0:55 — The filter.** *"Two hundred and three processing instructions become chemical predictions. One
+> hundred and fifty-one fail the attestation gate. Twenty-four more fail the tradition's own theory frame.
+> Twenty-eight pass both. Physics refutes ten of those. Eighteen survive — and those are the ones worth an
+> assay. Across the whole set, seventy-eight of two hundred and three fail a physics check somewhere."*
 
 **Visual:** the funnel 203 → 151 → 28 → 10 → 18, then the 菖蒲 card with the retention number.
 

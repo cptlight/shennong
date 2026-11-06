@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T11:39:37-0800",
+  "generated_at": "2026-11-05T23:03:37-0800",
   "ordering": [
     "ancient record (GATE)",
     "Asian theory (GATE)",
@@ -27,7 +27,7 @@
   "n_strongest_class": 18,
   "results": [
     {
-      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its flavonoid content",
       "tradition_first_score": 0.922,
       "gates_passed": true,
       "failed_gate": null,
@@ -150,11 +150,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "flavonoid is consistent with 炙 (~120 °C, with honey/vinegar/wine): glycosides hydrolyse; aglycones oxidise with heat.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -176,7 +176,7 @@
       ]
     },
     {
-      "claim": "煮 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+      "claim": "煮 of 巴豆 (Croton tiglium) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.9192,
       "gates_passed": true,
       "failed_gate": null,
@@ -300,11 +300,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "alkaloid is consistent with 煮 (~100 °C, water or excipient liquor): mostly thermostable; some esters hydrolyse.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -326,7 +326,7 @@
       ]
     },
     {
-      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its alkaloid content",
+      "claim": "研 of 巴豆 (Croton tiglium) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.9192,
       "gates_passed": true,
       "failed_gate": null,
@@ -450,11 +450,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "alkaloid is consistent with 研 (~25 °C, mechanical): mostly thermostable; some esters hydrolyse.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "process is not a bulk-loss operation; precursor conversion could in principle raise the absolute amount"
               ]
             }
           ]
@@ -476,7 +476,7 @@
       ]
     },
     {
-      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its terpenoid content",
+      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.914,
       "gates_passed": true,
       "failed_gate": null,
@@ -596,11 +596,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -622,7 +622,7 @@
       ]
     },
     {
-      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its terpenoid content",
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.914,
       "gates_passed": true,
       "failed_gate": null,
@@ -742,11 +742,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "terpenoid is consistent with 焙 (~70 °C, dry air): mono/sesquiterpenes volatile; heat degrades them.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -768,7 +768,7 @@
       ]
     },
     {
-      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its alkaloid content",
+      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -892,11 +892,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -918,7 +918,7 @@
       ]
     },
     {
-      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its alkaloid content",
+      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -1042,11 +1042,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "alkaloid is consistent with 蒸 (~100 °C, steam): mostly thermostable; some esters hydrolyse.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -1068,7 +1068,7 @@
       ]
     },
     {
-      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+      "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -1192,11 +1192,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "alkaloid is consistent with 炮 (~250 °C, hot ash/sand): mostly thermostable; some esters hydrolyse.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -1218,7 +1218,7 @@
       ]
     },
     {
-      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably change its alkaloid content",
+      "claim": "焙 of 附子 (Aconitum carmichaelii) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -1342,11 +1342,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -1368,7 +1368,7 @@
       ]
     },
     {
-      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its flavonoid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -1491,11 +1491,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.775,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "flavonoid is thermally labile at ~250 °C (炮) — degradation products are expected and should be the measured endpoint, not the parent compound.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -1517,7 +1517,7 @@
       ]
     },
     {
-      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+      "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its steroid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -1635,11 +1635,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.8,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "no stability data for chemotype 'steroid'",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -1661,7 +1661,7 @@
       ]
     },
     {
-      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+      "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its steroid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -1779,11 +1779,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.8,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "no stability data for chemotype 'steroid'",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -1805,7 +1805,7 @@
       ]
     },
     {
-      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its flavonoid content",
+      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its flavonoid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -1928,11 +1928,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "flavonoid is consistent with 蒸 (~100 °C, steam): glycosides hydrolyse; aglycones oxidise with heat.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -1954,7 +1954,7 @@
       ]
     },
     {
-      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably change its steroid content",
+      "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its steroid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -2072,11 +2072,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.8,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "no stability data for chemotype 'steroid'",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -2098,7 +2098,7 @@
       ]
     },
     {
-      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its alkaloid content",
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -2222,11 +2222,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "alkaloid is consistent with 焙 (~70 °C, dry air): mostly thermostable; some esters hydrolyse.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -2248,7 +2248,7 @@
       ]
     },
     {
-      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its steroid content",
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably enrich its steroid content",
       "tradition_first_score": 0.898,
       "gates_passed": true,
       "failed_gate": null,
@@ -2366,11 +2366,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.8,
+              "score": 0.75,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "no stability data for chemotype 'steroid'",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -2392,7 +2392,7 @@
       ]
     },
     {
-      "claim": "研 of 巴豆 (Croton tiglium) should measurably change its terpenoid content",
+      "claim": "研 of 巴豆 (Croton tiglium) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.8952,
       "gates_passed": true,
       "failed_gate": null,
@@ -2512,11 +2512,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "terpenoid is consistent with 研 (~25 °C, mechanical): mono/sesquiterpenes volatile; heat degrades them.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "process is not a bulk-loss operation; precursor conversion could in principle raise the absolute amount"
               ]
             }
           ]
@@ -2538,7 +2538,7 @@
       ]
     },
     {
-      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably change its phenylpropanoid content",
+      "claim": "焙 of 知母 (Anemarrhena asphodeloides) should measurably enrich its phenylpropanoid content",
       "tradition_first_score": 0.88,
       "gates_passed": true,
       "failed_gate": null,
@@ -2661,11 +2661,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.75,
+              "score": 0.725,
               "rationale": "CONSISTENT WITH FIRST PRINCIPLES — physically possible; the burden is now experimental",
               "evidence": [
                 "phenylpropanoid is consistent with 焙 (~70 °C, dry air): volatile; heat-sensitive.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -2687,7 +2687,7 @@
       ]
     },
     {
-      "claim": "研 of 麝香 (Moschus moschiferus) should measurably change its alkaloid content",
+      "claim": "研 of 麝香 (Moschus moschiferus) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 2,
@@ -2811,7 +2811,7 @@
       ]
     },
     {
-      "claim": "蒸 of 白薇 (Vincetoxicum atratum) should measurably change its terpenoid content",
+      "claim": "蒸 of 白薇 (Vincetoxicum atratum) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -2930,7 +2930,7 @@
       ]
     },
     {
-      "claim": "伏 of 白前 (Vincetoxicum glaucescens) should measurably change its terpenoid content",
+      "claim": "伏 of 白前 (Vincetoxicum glaucescens) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -3049,7 +3049,7 @@
       ]
     },
     {
-      "claim": "焙 of 白前 (Vincetoxicum glaucescens) should measurably change its terpenoid content",
+      "claim": "焙 of 白前 (Vincetoxicum glaucescens) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -3168,7 +3168,7 @@
       ]
     },
     {
-      "claim": "炮 of 乌头 (Aconitum carmichaeli) should measurably change its alkaloid content",
+      "claim": "炮 of 乌头 (Aconitum carmichaeli) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 2,
@@ -3292,7 +3292,7 @@
       ]
     },
     {
-      "claim": "炙 of 乌蛇 (Diospyros eriantha) should measurably change its terpenoid content",
+      "claim": "炙 of 乌蛇 (Diospyros eriantha) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -3407,7 +3407,7 @@
       ]
     },
     {
-      "claim": "煮 of 乌蛇 (Diospyros eriantha) should measurably change its terpenoid content",
+      "claim": "煮 of 乌蛇 (Diospyros eriantha) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -3522,7 +3522,7 @@
       ]
     },
     {
-      "claim": "焙 of 乌蛇 (Diospyros eriantha) should measurably change its terpenoid content",
+      "claim": "焙 of 乌蛇 (Diospyros eriantha) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -3637,7 +3637,7 @@
       ]
     },
     {
-      "claim": "蒸 of 黄精 (Polygonatum sibiricum) should measurably change its alkaloid content",
+      "claim": "蒸 of 黄精 (Polygonatum sibiricum) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -3757,7 +3757,7 @@
       ]
     },
     {
-      "claim": "蒸 of 黄精 (Polygonatum sibiricum) should measurably change its terpenoid content",
+      "claim": "蒸 of 黄精 (Polygonatum sibiricum) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -3872,11 +3872,11 @@
       ]
     },
     {
-      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content",
+      "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 4,
-      "verdict": "OUT — violates first principles: terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violat",
+      "verdict": "OUT — violates first principles: terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically back",
       "note": "",
       "stages": [
         {
@@ -3992,11 +3992,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.525,
+              "score": 0.5,
               "rationale": "VIOLATES FIRST PRINCIPLES — the claimed mechanism is physically impossible as stated",
               "evidence": [
-                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards.",
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -4004,7 +4004,7 @@
       ]
     },
     {
-      "claim": "蒸 of 天门冬 (Asparagus cochinchinensis) should measurably change its alkaloid content",
+      "claim": "蒸 of 天门冬 (Asparagus cochinchinensis) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -4124,7 +4124,7 @@
       ]
     },
     {
-      "claim": "蒸 of 天门冬 (Asparagus cochinchinensis) should measurably change its terpenoid content",
+      "claim": "蒸 of 天门冬 (Asparagus cochinchinensis) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -4239,7 +4239,7 @@
       ]
     },
     {
-      "claim": "伏 of 天门冬 (Asparagus cochinchinensis) should measurably change its alkaloid content",
+      "claim": "伏 of 天门冬 (Asparagus cochinchinensis) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -4359,7 +4359,7 @@
       ]
     },
     {
-      "claim": "伏 of 天门冬 (Asparagus cochinchinensis) should measurably change its terpenoid content",
+      "claim": "伏 of 天门冬 (Asparagus cochinchinensis) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -4474,7 +4474,7 @@
       ]
     },
     {
-      "claim": "蒸 of 干地黄 (Rehmannia glutinosa) should measurably change its alkaloid content",
+      "claim": "蒸 of 干地黄 (Rehmannia glutinosa) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -4594,7 +4594,7 @@
       ]
     },
     {
-      "claim": "蒸 of 干地黄 (Rehmannia glutinosa) should measurably change its terpenoid content",
+      "claim": "蒸 of 干地黄 (Rehmannia glutinosa) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -4709,11 +4709,11 @@
       ]
     },
     {
-      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably change its terpenoid content",
+      "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 4,
-      "verdict": "OUT — violates first principles: terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violat",
+      "verdict": "OUT — violates first principles: terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically back",
       "note": "",
       "stages": [
         {
@@ -4829,11 +4829,11 @@
             },
             {
               "domain": "first_principles",
-              "score": 0.525,
+              "score": 0.5,
               "rationale": "VIOLATES FIRST PRINCIPLES — the claimed mechanism is physically impossible as stated",
               "evidence": [
-                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is largely lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it is *reduced* is plausible and worth testing.",
-                "claim is about change, not absolute enrichment — mass balance does not bite"
+                "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards.",
+                "absolute enrichment is impossible under a process that only removes or transforms matter; only RELATIVE enrichment (a higher fraction) can occur, and the claim should say so"
               ]
             }
           ]
@@ -4841,7 +4841,7 @@
       ]
     },
     {
-      "claim": "伏 of 黄连 (Coptis chinensis) should measurably change its alkaloid content",
+      "claim": "伏 of 黄连 (Coptis chinensis) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 2,
@@ -4965,7 +4965,7 @@
       ]
     },
     {
-      "claim": "伏 of 黄连 (Coptis chinensis) should measurably change its terpenoid content",
+      "claim": "伏 of 黄连 (Coptis chinensis) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 2,
@@ -5084,7 +5084,7 @@
       ]
     },
     {
-      "claim": "焙 of 黄连 (Coptis chinensis) should measurably change its alkaloid content",
+      "claim": "焙 of 黄连 (Coptis chinensis) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 2,
@@ -5208,7 +5208,7 @@
       ]
     },
     {
-      "claim": "焙 of 黄连 (Coptis chinensis) should measurably change its terpenoid content",
+      "claim": "焙 of 黄连 (Coptis chinensis) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 2,
@@ -5327,7 +5327,7 @@
       ]
     },
     {
-      "claim": "蒸 of 漏芦 (Rhaponticum uniflorum) should measurably change its flavonoid content",
+      "claim": "蒸 of 漏芦 (Rhaponticum uniflorum) should measurably enrich its flavonoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -5445,7 +5445,7 @@
       ]
     },
     {
-      "claim": "蒸 of 漏芦 (Rhaponticum uniflorum) should measurably change its terpenoid content",
+      "claim": "蒸 of 漏芦 (Rhaponticum uniflorum) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -5560,7 +5560,7 @@
       ]
     },
     {
-      "claim": "炙 of 柏木 (Cupressus funebris) should measurably change its flavonoid content",
+      "claim": "炙 of 柏木 (Cupressus funebris) should measurably enrich its flavonoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -5678,7 +5678,7 @@
       ]
     },
     {
-      "claim": "炙 of 柏木 (Cupressus funebris) should measurably change its terpenoid content",
+      "claim": "炙 of 柏木 (Cupressus funebris) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -5793,7 +5793,7 @@
       ]
     },
     {
-      "claim": "炙 of 杜仲 (Eucommia ulmoides) should measurably change its flavonoid content",
+      "claim": "炙 of 杜仲 (Eucommia ulmoides) should measurably enrich its flavonoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -5911,7 +5911,7 @@
       ]
     },
     {
-      "claim": "炙 of 杜仲 (Eucommia ulmoides) should measurably change its terpenoid content",
+      "claim": "炙 of 杜仲 (Eucommia ulmoides) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6026,7 +6026,7 @@
       ]
     },
     {
-      "claim": "蒸 of 玄参 (Scrophularia ningpoensis) should measurably change its phenylpropanoid content",
+      "claim": "蒸 of 玄参 (Scrophularia ningpoensis) should measurably enrich its phenylpropanoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6144,7 +6144,7 @@
       ]
     },
     {
-      "claim": "蒸 of 玄参 (Scrophularia ningpoensis) should measurably change its terpenoid content",
+      "claim": "蒸 of 玄参 (Scrophularia ningpoensis) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6259,7 +6259,7 @@
       ]
     },
     {
-      "claim": "伏 of 玄参 (Scrophularia ningpoensis) should measurably change its phenylpropanoid content",
+      "claim": "伏 of 玄参 (Scrophularia ningpoensis) should measurably enrich its phenylpropanoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6377,7 +6377,7 @@
       ]
     },
     {
-      "claim": "伏 of 玄参 (Scrophularia ningpoensis) should measurably change its terpenoid content",
+      "claim": "伏 of 玄参 (Scrophularia ningpoensis) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6492,7 +6492,7 @@
       ]
     },
     {
-      "claim": "炒 of 淫羊藿 (Epimedium brevicornu) should measurably change its flavonoid content",
+      "claim": "炒 of 淫羊藿 (Epimedium brevicornu) should measurably enrich its flavonoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6610,7 +6610,7 @@
       ]
     },
     {
-      "claim": "炒 of 淫羊藿 (Epimedium brevicornu) should measurably change its terpenoid content",
+      "claim": "炒 of 淫羊藿 (Epimedium brevicornu) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6725,7 +6725,7 @@
       ]
     },
     {
-      "claim": "蒸 of 恶实 (Arctium lappa) should measurably change its alkaloid content",
+      "claim": "蒸 of 恶实 (Arctium lappa) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6845,7 +6845,7 @@
       ]
     },
     {
-      "claim": "蒸 of 恶实 (Arctium lappa) should measurably change its terpenoid content",
+      "claim": "蒸 of 恶实 (Arctium lappa) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -6960,7 +6960,7 @@
       ]
     },
     {
-      "claim": "焙 of 恶实 (Arctium lappa) should measurably change its alkaloid content",
+      "claim": "焙 of 恶实 (Arctium lappa) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -7080,7 +7080,7 @@
       ]
     },
     {
-      "claim": "焙 of 恶实 (Arctium lappa) should measurably change its terpenoid content",
+      "claim": "焙 of 恶实 (Arctium lappa) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -7195,7 +7195,7 @@
       ]
     },
     {
-      "claim": "煮 of 昆布 (Saccharina japonica) should measurably change its alkaloid content",
+      "claim": "煮 of 昆布 (Saccharina japonica) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -7318,7 +7318,7 @@
       ]
     },
     {
-      "claim": "煮 of 昆布 (Saccharina japonica) should measurably change its terpenoid content",
+      "claim": "煮 of 昆布 (Saccharina japonica) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -7434,7 +7434,7 @@
       ]
     },
     {
-      "claim": "焙 of 昆布 (Saccharina japonica) should measurably change its alkaloid content",
+      "claim": "焙 of 昆布 (Saccharina japonica) should measurably enrich its alkaloid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,
@@ -7557,7 +7557,7 @@
       ]
     },
     {
-      "claim": "焙 of 昆布 (Saccharina japonica) should measurably change its terpenoid content",
+      "claim": "焙 of 昆布 (Saccharina japonica) should measurably enrich its terpenoid content",
       "tradition_first_score": 0.0,
       "gates_passed": false,
       "failed_gate": 1,

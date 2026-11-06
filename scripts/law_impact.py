@@ -30,7 +30,7 @@ def main() -> int:
 
     for it in items:
         claim = (f"{it.get('process')} of {it.get('drug_surface')} ({it.get('binomial')}) should "
-                 f"measurably change its {it.get('chemotype')} content")
+                 f"measurably enrich its {it.get('chemotype')} content")
         r = arbitrate(it.get("process") or "", it.get("chemotype") or "", None, claim)
         for c in r["checks"]:
             name = c["check"]

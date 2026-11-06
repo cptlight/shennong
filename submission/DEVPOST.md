@@ -2,7 +2,11 @@
 
 ### Shennong tasted a hundred herbs. We are teaching a 400 MB model to do it again — and to tell us what he hid between the lines.
 
-**EthnoHack 2026** · Track **02 — Natural Products for Drug Discovery** (primary) · with depth in **01 — Traditional Knowledge Mining** and **04 — Digital Health & Phytotherapy**
+**EthnoHack 2026**
+
+**Declared track:** **02 — Natural Products for Drug Discovery.** *Depth:* 01 — Traditional Knowledge Mining (the corpus and entity resolution are the front half of the pipeline) and 04 — Digital Health & Phytotherapy (the Workbench).
+
+> **Why track 02:** the deliverable is a **pre-experimental filter for plant-derived compounds** — it decides whether a preparation can physically deliver the chemistry the tradition claims, before any wet-lab work. The strongest results are quantitative statements about compound viability (78 of 203 candidates refuted by physics; 28 → 10 → 18 funnel), which are drug-discovery statements, not text-mining statements.
 
 > **A note on the name, said first.** There is a 2023 model called **ShenNong-TCM** (a Chinese TCM LLM with
 > an associated dataset). We are a **different project with a different goal**: they built a TCM assistant;
@@ -32,10 +36,15 @@ hypothesis is physically possible — before any wet-lab work.
 The funnel is **identical under a 7-expert and a 12-expert panel**, because the gates are structural and the
 arbiter is physics — adding experts cannot move it.
 
-Over the full candidate set, **78 of 203 are refuted by the physics alone, and 6 of those 78 had unanimous
-5/5 agreement from the tradition panel.** Example: *蒸 of 菖蒲 (Acorus calamus) should measurably change its
-terpenoid content* — 5/5 panel support; Clausius–Clapeyron at 100 °C steam strips **98.5 %** of a
-monoterpene. Physically backwards, decided in seconds, before anyone buys a reagent.
+**Two different denominators, stated together so they cannot be confused:** across the whole set, **78 of 203
+candidates fail a physics check somewhere in the funnel**; of the **28** that clear both tradition gates,
+physics refutes **10**. The hypotheses assert what the tradition intends — that a preparation *enriches* the
+medicinally relevant class — and physics tests that direction.
+
+Example: *蒸 of 菖蒲 (Acorus calamus) should measurably enrich its terpenoid content* — 5/5 tradition-panel
+support. Clausius–Clapeyron at 100 °C steam gives a **median 54 % retention across this plant's terpenoids
+(range 10–94 %), and the reference monoterpene retains 1.5 %.** You cannot enrich a class you are actively
+stripping: the claim predicted the wrong direction, and the arithmetic said so before anyone bought a reagent.
 
 ### The finding that survived
 

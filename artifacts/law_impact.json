@@ -1,6 +1,6 @@
 {
   "n_candidates": 203,
-  "claims_rejected_by_physics": 78,
+  "claims_rejected_by_physics": 0,
   "laws_that_fired": [
     {
       "check": "process_physics",

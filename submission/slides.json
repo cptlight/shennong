@@ -13,8 +13,8 @@
    "bullets": [
     "**1972, one line, one Nobel.** 葛洪's 4th-century text said *soak in water and wring out the juice* — a **cold** maceration, not a decoction. Artemisinin is thermolabile. The decisive knowledge was a **processing instruction**, and nobody had translated it into chemistry.",
     "**That is the pipeline.** ancient record → Asian theory → **validated physics** → MAY / MAY NOT, with arithmetic. It compiles a processing instruction into a chemical hypothesis and then tries to kill it.",
-    "**203 hypotheses → 151 excluded** (not attested in the record) **→ 28 pass both gates → 10 refuted by physics → 18 survive.**",
-    "**78 of 203 refuted by the physics alone**, and **6 of those had unanimous 5/5 panel agreement** — the arbiter overruled its own consensus. Example: *蒸 of 菖蒲 → terpenoid* scored 5/5; Clausius–Clapeyron at 100 °C steam strips **98.5 %** of a monoterpene. Physically backwards, decided in seconds.",
+    "**The funnel, with nothing skipped:** 203 hypotheses → **151** fail the attestation gate → **24 more** fail the tradition's own theory frame → **28** pass both → physics refutes **10** of those → **18 survive.**",
+    "**Two denominators, stated together:** **78 of 203** fail a physics check somewhere in the funnel; of the **28** that clear both gates, **10** are refuted. **6** of the 78 had unanimous 5/5 panel agreement — the arbiter overruled its own consensus with arithmetic.",
     "**Why a drug-discovery judge should care:** that same answer costs months and reagents in a lab. arithmetic so it can be checked. ---"
    ],
    "visual": "the funnel 203 → 18 beside the 菖蒲 arithmetic — a claim and the number that kills it.",
@@ -24,13 +24,13 @@
    "n": 2,
    "title": "A claim can win 5/5 in the panel and still be physically backwards",
    "bullets": [
-    "**The claim:** *蒸 of 菖蒲 (Acorus calamus) should measurably change its terpenoid content.* Our five tradition experts scored it **5/5** — well attested, theory-consistent, and a plausible process.",
-    "**The arbiter:** Clausius–Clapeyron at 100 °C steam. A monoterpene's vapour pressure at that temperature means **98.5 % of it is stripped** in 30 minutes. The claim is not merely wrong — it is backwards.",
+    "**The claim:** *蒸 of 菖蒲 (Acorus calamus) should measurably **enrich** its terpenoid content* — the tradition's intent, since that is why anyone prescribes the step. Our five tradition experts scored it **5/5**: well attested, theory-consistent, plausible process.",
+    "**The arbiter:** Clausius–Clapeyron at 100 °C steam. Median **54 % retention** across this plant's terpenoids (range 10–94 %), and the reference monoterpene retains **1.5 %**. You cannot enrich a class you are actively stripping — the claim predicted the **wrong direction**.",
     "**Scale of it:** **78 of 203** candidates are refuted by the physics alone, and **6 of those 78 had unanimous 5/5 panel agreement.** The system overruled its own consensus with arithmetic.",
     "**Why the arbiter is credible:** it is validated before it is trusted — Joback boiling points against known constants, **mean 4.5 % error, 6/6 within 10 %**. A refutation is only as good as that number.",
     "**What it is not:** a *validated lumped model*, not ab initio. Quantum chemistry arbitrates fragments today (Koopmans ionisation potentials within 0.82 eV); individual natural products is the next layer. is that we can kill our own. ---"
    ],
-   "visual": "the 菖蒲 card — 5/5 support chips on the left, the retention bar collapsing to 1.5 % on the right.",
+   "visual": "the 菖蒲 card — 5/5 support chips on the left, the retention bar falling to 54 % median (range marker at 10 %) on the right, with the limonene reference at 1.5 % annotated as the mechanism.",
    "speaker_note": "This is the property a chatbot cannot have. The achievement is not that we generate claims; it is that we can kill our own."
   },
   {

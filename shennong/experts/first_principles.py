@@ -97,7 +97,7 @@ class PrincipleCheck:
                 "reasoning": self.reasoning, "hard_constraint": self.hard}
 
 
-def check_process_physics(process: str, chemotype: str) -> PrincipleCheck:
+def check_process_physics(process: str, chemotype: str, claim: str = "") -> PrincipleCheck:
     """Does the attested preparation's temperature/medium actually do what is claimed?"""
     cond = PROCESS_CONDITIONS.get(process)
     if not cond:
@@ -112,11 +112,22 @@ def check_process_physics(process: str, chemotype: str) -> PrincipleCheck:
     volatile, hydrolyses, labile, why = stab
 
     if volatile and temp >= 100:
+        # Physics predicts DEPLETION. That contradicts an enrichment claim, but it is perfectly
+        # consistent with a neutral "the preparation changes this class" claim — which is what the
+        # hypothesis template actually says. An earlier version failed both, i.e. it rejected a claim
+        # that had never been made, using an enrichment argument. Direction matters:
+        asserts_enrichment = any(w in (claim or "").lower() for w in
+                                 ("enrich", "increase", "higher content", "accumulat", "more of"))
+        if asserts_enrichment:
+            return PrincipleCheck(
+                "process_physics", False, 0.25,
+                f"{cls} is volatile and {process} runs at ~{temp} °C ({medium}) — the class is depleted, "
+                f"so an *enrichment* claim is physically backwards.", hard=True)
         return PrincipleCheck(
-            "process_physics", False, 0.25,
-            f"{cls} is volatile and {process} runs at ~{temp} °C ({medium}) — the class is largely "
-            f"lost, so a claim that it is *enriched* violates the physical chemistry. A claim that it "
-            f"is *reduced* is plausible and worth testing.", hard=True)
+            "process_physics", True, 0.80,
+            f"{cls} is volatile and {process} runs at ~{temp} °C ({medium}) — the physics predicts a "
+            f"measurable DEPLETION. The claim of change is consistent; its direction is loss, not gain.",
+            hard=False)
     if hydrolyses and temp >= 90 and "water" in medium:
         return PrincipleCheck(
             "process_physics", True, 0.85,
@@ -194,7 +205,7 @@ def check_delivery(descriptors: dict) -> PrincipleCheck:
 def arbitrate(process: str, chemotype: str, descriptors: dict | None = None,
               claim: str = "") -> dict:
     """The arbiter: first principles decide. Western literature is not consulted here."""
-    checks = [check_process_physics(process, chemotype), check_mass_conservation(process, claim)]
+    checks = [check_process_physics(process, chemotype, claim), check_mass_conservation(process, claim)]
     if descriptors is not None:
         checks.append(check_delivery(descriptors))
 

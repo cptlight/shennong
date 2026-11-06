@@ -38,7 +38,7 @@ def main() -> int:
     results = []
     for it in items:
         claim = (f"{it.get('process')} of {it.get('drug_surface')} "
-                 f"({it.get('binomial')}) should measurably change its {it.get('chemotype')} content")
+                 f"({it.get('binomial')}) should measurably enrich its {it.get('chemotype')} content")
         proposals = [fn(w, it) for fn in EXPERTS.values()]
         c = fuse(claim, proposals)
         results.append({"item": it, "consensus": c.to_dict()})

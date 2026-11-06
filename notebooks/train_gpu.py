@@ -11,7 +11,7 @@ the right size of change, and Qwen2.5-0.5B is Apache-2.0 (no licence contaminati
 
     # in Colab / Kaggle, one cell:
     !git clone https://github.com/cptlight/shennong && cd shennong
-    !pip install -q transformers peft accelerate datasets huggingface_hub
+    !pip install -q transformers "peft==0.14.0" accelerate datasets huggingface_hub
     !python notebooks/train_gpu.py --epochs 3 --max_steps -1
 """
 from __future__ import annotations

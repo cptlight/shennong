@@ -1,0 +1,200 @@
+{"id": 0, "kind": "use", "question": "What is 蕺菜 recorded to treat?", "gold": "Recorded use: 淡竹筒內煨熟. (pre-modern claim; not clinical advice)", "key": "淡竹筒內煨熟"}
+{"id": 1, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 前胡?", "gold": "前胡 -> Kitagawia praeruptora (resolved by wikidata, confidence 0.9).", "key": "前胡"}
+{"id": 2, "kind": "use", "question": "What is 穬麥 recorded to treat?", "gold": "Recorded use: 不動風氣. (pre-modern claim; not clinical advice)", "key": "不動風氣"}
+{"id": 3, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 黃藥子?", "gold": "黃藥子 -> Reynoutria japonica (resolved by wikidata, confidence 0.7).", "key": "黃藥子"}
+{"id": 4, "kind": "use", "question": "What is 莖葉 recorded to treat?", "gold": "Recorded use: 絕產無子. (pre-modern claim; not clinical advice)", "key": "絕產無子"}
+{"id": 5, "kind": "use", "question": "What is 地蜈蚣草 recorded to treat?", "gold": "Recorded use: 解諸毒. (pre-modern claim; not clinical advice)", "key": "解諸毒"}
+{"id": 6, "kind": "use", "question": "What is 天南星 recorded to treat?", "gold": "Recorded use: 除陰下濕. (pre-modern claim; not clinical advice)", "key": "除陰下濕"}
+{"id": 7, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 鹿藿?", "gold": "鹿藿 -> Rhynchosia volubilis (resolved by wikidata, confidence 0.9).", "key": "鹿藿"}
+{"id": 8, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:小承氣湯?", "gold": "Formula ws_zh_shanghanlun:小承氣湯: 大黃, 厚朴, 枳實, 煮取, 因與承氣湯, 更服, 胃中必有燥屎.", "key": "胃中必有燥屎"}
+{"id": 9, "kind": "use", "question": "What is 龍膽 recorded to treat?", "gold": "Recorded use: 續絕傷. (pre-modern claim; not clinical advice)", "key": "續絕傷"}
+{"id": 10, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 豇豆?", "gold": "豇豆 -> Vigna unguiculata (resolved by wikidata, confidence 0.9).", "key": "豇豆"}
+{"id": 11, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:茯苓桂枝白朮甘草湯?", "gold": "Formula ws_zh_shanghanlun:茯苓桂枝白朮甘草湯: 茯苓, 桂枝, 甘草各, 水, 煮取.", "key": "茯苓桂枝白朮甘草湯"}
+{"id": 12, "kind": "compound", "question": "What compound class is recorded in Lycopus lucidus?", "gold": "Lycopus lucidus contains terpenoid compounds (per the corpus compound table).", "key": "Lycopus lucidus"}
+{"id": 13, "kind": "use", "question": "What is 水甘草 recorded to treat?", "gold": "Recorded use: 風痺消渴. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)", "key": "風痺消渴"}
+{"id": 14, "kind": "use", "question": "What is 水斳 recorded to treat?", "gold": "Recorded use: 瘰癧生瘡. Modern reading: sore. (pre-modern claim; not clinical advice)", "key": "瘰癧生瘡"}
+{"id": 15, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 黃明膠?", "gold": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 16, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 胡名鎮頭?", "gold": "Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 17, "kind": "viability", "question": "For 恶实 (Arctium lappa), will 蒸 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.", "gold": "MAY NOT. The claimed enrichment of alkaloid by 蒸 is not supported: modelled median retention is 0% (range 0-17%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
+{"id": 18, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 棠梨?", "gold": "Nature 寒, flavours 酸/甘/澀, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 19, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 白豆蔻?", "gold": "白豆蔻 -> Wurfbainia vera (resolved by wikidata, confidence 0.9).", "key": "白豆蔻"}
+{"id": 20, "kind": "use", "question": "What is 自經死繩 recorded to treat?", "gold": "Recorded use: 卒發顛狂. (pre-modern claim; not clinical advice)", "key": "卒發顛狂"}
+{"id": 21, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 刺桐花?", "gold": "刺桐花 -> Erythrina variegata (resolved by wikidata, confidence 0.7).", "key": "刺桐花"}
+{"id": 22, "kind": "use", "question": "What is 龍骨 recorded to treat?", "gold": "Recorded use: 咳逆. Modern reading: cough. (pre-modern claim; not clinical advice)", "key": "咳逆"}
+{"id": 23, "kind": "compound", "question": "What compound class is recorded in Thymus quinquecostatus?", "gold": "Thymus quinquecostatus contains unclassified compounds (per the corpus compound table).", "key": "Thymus quinquecostatus"}
+{"id": 24, "kind": "compound", "question": "What compound class is recorded in Phytolacca acinosa?", "gold": "Phytolacca acinosa contains alkaloid compounds (per the corpus compound table).", "key": "Phytolacca acinosa"}
+{"id": 25, "kind": "compound", "question": "What compound class is recorded in Carpesium abrotanoides?", "gold": "Carpesium abrotanoides contains unclassified compounds (per the corpus compound table).", "key": "Carpesium abrotanoides"}
+{"id": 26, "kind": "compound", "question": "What compound class is recorded in Trichosanthes cucumeroides?", "gold": "Trichosanthes cucumeroides contains terpenoid compounds (per the corpus compound table).", "key": "Trichosanthes cucumeroides"}
+{"id": 27, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 雄原蠶蛾?", "gold": "Nature 溫, flavours 鹹, channels not recorded, toxicity 小毒, grade —.", "key": "小毒"}
+{"id": 28, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 鋼鐵?", "gold": "Nature 平, flavours 鹹, channels not recorded, toxicity 無毒, grade 中品.", "key": "無毒"}
+{"id": 29, "kind": "use", "question": "What is 刺桐花 recorded to treat?", "gold": "Recorded use: 失心躁悶. (pre-modern claim; not clinical advice)", "key": "失心躁悶"}
+{"id": 30, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 鸚肉?", "gold": "Nature 溫, flavours 甘/鹹, channels not recorded, toxicity 無毒, grade 上品.", "key": "無毒"}
+{"id": 31, "kind": "use", "question": "What is 白花菜 recorded to treat?", "gold": "Recorded use: 去冷氣. (pre-modern claim; not clinical advice)", "key": "去冷氣"}
+{"id": 32, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 胞衣水?", "gold": "Nature 涼, flavours 辛, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 33, "kind": "use", "question": "What is 甘遂 recorded to treat?", "gold": "Recorded use: 腹滿. (pre-modern claim; not clinical advice)", "key": "腹滿"}
+{"id": 34, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 苦竹茹?", "gold": "苦竹茹 -> Pleioblastus amarus (resolved by wikidata, confidence 0.7).", "key": "苦竹茹"}
+{"id": 35, "kind": "use", "question": "What is 莖葉 recorded to treat?", "gold": "Recorded use: 治杖. (pre-modern claim; not clinical advice)", "key": "治杖"}
+{"id": 36, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 艾納香?", "gold": "Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 37, "kind": "use", "question": "What is 烏頭 recorded to treat?", "gold": "Recorded use: 半身素）. (pre-modern claim; not clinical advice)", "key": "半身素"}
+{"id": 38, "kind": "use", "question": "What is 淡竹茹 recorded to treat?", "gold": "Recorded use: 溫氣寒熱. (pre-modern claim; not clinical advice)", "key": "溫氣寒熱"}
+{"id": 39, "kind": "use", "question": "What is 山羊 recorded to treat?", "gold": "Recorded use: 虛勞. Modern reading: consumption. (pre-modern claim; not clinical advice)", "key": "虛勞"}
+{"id": 40, "kind": "use", "question": "What is 地膚 recorded to treat?", "gold": "Recorded use: 去熱風. (pre-modern claim; not clinical advice)", "key": "去熱風"}
+{"id": 41, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 膽汁?", "gold": "Nature 寒, flavours 苦, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 42, "kind": "candidate", "question": "What candidate does Trichosanthes cucumeroides suggest under Track 02, and what would kill it?", "gold": "Candidate: (2S,7S,8S,9S,10R,13R,14S,16R,17R)-2,7,16-trihydroxy-4,4,9,13,14-pentamethyl-3,11-dioxo-2,7,8,10,12,15,16,17-octahydro-1H-cyclopenta[a]phenanthrene-17-carbaldehyde (formula n/a), from Trichosanthes cucumeroides. MW 404.5, logP 4.65, structural novelty 0.5357. Proposed target class: NF-kB — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.", "key": "Trichosanthes cucumeroides"}
+{"id": 43, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 天師栗?", "gold": "天師栗 -> Aesculus chinensis var. wilsonii (resolved by wikidata, confidence 0.7).", "key": "天師栗"}
+{"id": 44, "kind": "use", "question": "What is 繭鹵汁 recorded to treat?", "gold": "Recorded use: 次日即破. (pre-modern claim; not clinical advice)", "key": "次日即破"}
+{"id": 45, "kind": "use", "question": "What is 草犀 recorded to treat?", "gold": "Recorded use: 虎野狼蟲虺所傷. (pre-modern claim; not clinical advice)", "key": "虎野狼蟲虺所傷"}
+{"id": 46, "kind": "use", "question": "What is 蛔蟲 recorded to treat?", "gold": "Recorded use: 目中膚赤熱痛. (pre-modern claim; not clinical advice)", "key": "目中膚赤熱痛"}
+{"id": 47, "kind": "use", "question": "What is 苜蓿 recorded to treat?", "gold": "Recorded use: 沙虱. (pre-modern claim; not clinical advice)", "key": "沙虱"}
+{"id": 48, "kind": "use", "question": "What is 大棗 recorded to treat?", "gold": "Recorded use: 少津液. (pre-modern claim; not clinical advice)", "key": "少津液"}
+{"id": 49, "kind": "use", "question": "What is 子仁 recorded to treat?", "gold": "Recorded use: 取汁煎膏. (pre-modern claim; not clinical advice)", "key": "取汁煎膏"}
+{"id": 50, "kind": "compound", "question": "What compound class is recorded in Dipsacus asper?", "gold": "Dipsacus asper contains alkaloid compounds (per the corpus compound table).", "key": "Dipsacus asper"}
+{"id": 51, "kind": "use", "question": "What is 雷丸 recorded to treat?", "gold": "Recorded use: 久服. (pre-modern claim; not clinical advice)", "key": "久服"}
+{"id": 52, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 黃環?", "gold": "黃環 -> Boiga dendrophila (resolved by wikidata, confidence 0.7).", "key": "黃環"}
+{"id": 53, "kind": "compound", "question": "What compound class is recorded in Kitagawia praeruptora?", "gold": "Kitagawia praeruptora contains phenylpropanoid compounds (per the corpus compound table).", "key": "Kitagawia praeruptora"}
+{"id": 54, "kind": "use", "question": "What is 補骨脂 recorded to treat?", "gold": "Recorded use: 男子腰疼. (pre-modern claim; not clinical advice)", "key": "男子腰疼"}
+{"id": 55, "kind": "use", "question": "What is 馬蘄 recorded to treat?", "gold": "Recorded use: 炒研醋服. (pre-modern claim; not clinical advice)", "key": "炒研醋服"}
+{"id": 56, "kind": "use", "question": "What is 驢槽 recorded to treat?", "gold": "Recorded use: 潤毛發. (pre-modern claim; not clinical advice)", "key": "潤毛發"}
+{"id": 57, "kind": "use", "question": "What is 蜀羊泉 recorded to treat?", "gold": "Recorded use: 皮間實積. (pre-modern claim; not clinical advice)", "key": "皮間實積"}
+{"id": 58, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 山蒜?", "gold": "Nature 溫, flavours 辛, channels not recorded, toxicity 有毒, grade 下品.", "key": "有毒"}
+{"id": 59, "kind": "viability", "question": "For 昆布 (Saccharina japonica), will 焙 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.", "gold": "MAY NOT. The claimed enrichment of alkaloid by 焙 is not supported: modelled median retention is 14% (range 0-56%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
+{"id": 60, "kind": "use", "question": "What is 雄黃 recorded to treat?", "gold": "Recorded use: 及絕筋破骨. (pre-modern claim; not clinical advice)", "key": "及絕筋破骨"}
+{"id": 61, "kind": "use", "question": "What is 土墼 recorded to treat?", "gold": "Recorded use: 其腫即消. (pre-modern claim; not clinical advice)", "key": "其腫即消"}
+{"id": 62, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 蝉花?", "gold": "蝉花 -> Cordyceps cicadae (resolved by wikidata, confidence 0.9).", "key": "蝉花"}
+{"id": 63, "kind": "use", "question": "What is 白薇 recorded to treat?", "gold": "Recorded use: 久服利人. (pre-modern claim; not clinical advice)", "key": "久服利人"}
+{"id": 64, "kind": "use", "question": "What is 五味子 recorded to treat?", "gold": "Recorded use: 除熱. (pre-modern claim; not clinical advice)", "key": "除熱"}
+{"id": 65, "kind": "use", "question": "What is 艾納香 recorded to treat?", "gold": "Recorded use: 合蜂窠浴腳氣良. (pre-modern claim; not clinical advice)", "key": "合蜂窠浴腳氣良"}
+{"id": 66, "kind": "compound", "question": "What compound class is recorded in Phyllanthus emblica?", "gold": "Phyllanthus emblica contains terpenoid compounds (per the corpus compound table).", "key": "Phyllanthus emblica"}
+{"id": 67, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:葛根黃芩黃連湯?", "gold": "Formula ws_zh_shanghanlun:葛根黃芩黃連湯: 葛根, 甘草, 黃芩, 黃連, 水, 減, 煮取.", "key": "葛根黃芩黃連湯"}
+{"id": 68, "kind": "use", "question": "What is 菰筍 recorded to treat?", "gold": "Recorded use: 利大小便. (pre-modern claim; not clinical advice)", "key": "利大小便"}
+{"id": 69, "kind": "use", "question": "What is 鹽膽水 recorded to treat?", "gold": "Recorded use: 疾蟲咬. (pre-modern claim; not clinical advice)", "key": "疾蟲咬"}
+{"id": 70, "kind": "use", "question": "What is 肚及屎 recorded to treat?", "gold": "Recorded use: 蟯蟲. (pre-modern claim; not clinical advice)", "key": "蟯蟲"}
+{"id": 71, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 阿井水?", "gold": "Nature 平, flavours 甘/鹹, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 72, "kind": "use", "question": "What is 鉤吻 recorded to treat?", "gold": "Recorded use: 治天行病心悶. (pre-modern claim; not clinical advice)", "key": "治天行病心悶"}
+{"id": 73, "kind": "compound", "question": "What compound class is recorded in Stemona japonica?", "gold": "Stemona japonica contains alkaloid compounds (per the corpus compound table).", "key": "Stemona japonica"}
+{"id": 74, "kind": "use", "question": "What is 緣桑螺 recorded to treat?", "gold": "Recorded use: 大腸脫肛. (pre-modern claim; not clinical advice)", "key": "大腸脫肛"}
+{"id": 75, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 沒藥?", "gold": "沒藥 -> Commiphora myrrha (resolved by wikidata, confidence 0.7).", "key": "沒藥"}
+{"id": 76, "kind": "use", "question": "What is 白馬通 recorded to treat?", "gold": "Recorded use: 金瘡止血. Modern reading: sore. (pre-modern claim; not clinical advice)", "key": "金瘡止血"}
+{"id": 77, "kind": "use", "question": "What is 羊子 recorded to treat?", "gold": "Recorded use: 和勻. (pre-modern claim; not clinical advice)", "key": "和勻"}
+{"id": 78, "kind": "use", "question": "What is 風化硝 recorded to treat?", "gold": "Recorded use: 上焦風熱. (pre-modern claim; not clinical advice)", "key": "上焦風熱"}
+{"id": 79, "kind": "compound", "question": "What compound class is recorded in Rumex acetosa?", "gold": "Rumex acetosa contains phenylpropanoid compounds (per the corpus compound table).", "key": "Rumex acetosa"}
+{"id": 80, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 大麥?", "gold": "大麥 -> Hordeum vulgare (resolved by wikidata, confidence 0.7).", "key": "大麥"}
+{"id": 81, "kind": "use", "question": "What is 燈花燼 recorded to treat?", "gold": "Recorded use: 安五臟. (pre-modern claim; not clinical advice)", "key": "安五臟"}
+{"id": 82, "kind": "use", "question": "What is 質汗 recorded to treat?", "gold": "Recorded use: 補筋肉. (pre-modern claim; not clinical advice)", "key": "補筋肉"}
+{"id": 83, "kind": "use", "question": "What is 青芝一名龍芝 recorded to treat?", "gold": "Recorded use: 輕身不老. (pre-modern claim; not clinical advice)", "key": "輕身不老"}
+{"id": 84, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 玉柏?", "gold": "Nature 溫, flavours 酸, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 85, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 鹽麩子?", "gold": "Nature 寒, flavours 酸/鹹, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 86, "kind": "use", "question": "What is 梅雨水 recorded to treat?", "gold": "Recorded use: 入醬易熟. (pre-modern claim; not clinical advice)", "key": "入醬易熟"}
+{"id": 87, "kind": "viability", "question": "For 知母 (Anemarrhena asphodeloides), will 焙 enrich its phenylpropanoid content? Give a verdict, the modelled retention and what would refute it.", "gold": "MAY. The claimed enrichment of phenylpropanoid by 焙 is not supported: modelled median retention is 100% (range 100-100%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
+{"id": 88, "kind": "use", "question": "What is 柳華 recorded to treat?", "gold": "Recorded use: 天行熱病. (pre-modern claim; not clinical advice)", "key": "天行熱病"}
+{"id": 89, "kind": "use", "question": "What is 苗根 recorded to treat?", "gold": "Recorded use: 搗敷或研末摻之即止. (pre-modern claim; not clinical advice)", "key": "搗敷或研末摻之即止"}
+{"id": 90, "kind": "use", "question": "What is 桑耳 recorded to treat?", "gold": "Recorded use: 止久泄. (pre-modern claim; not clinical advice)", "key": "止久泄"}
+{"id": 91, "kind": "use", "question": "What is 筆頭灰 recorded to treat?", "gold": "Recorded use: 漿飲服二錢. (pre-modern claim; not clinical advice)", "key": "漿飲服二錢"}
+{"id": 92, "kind": "compound", "question": "What compound class is recorded in Saccharina japonica?", "gold": "Saccharina japonica contains terpenoid compounds (per the corpus compound table).", "key": "Saccharina japonica"}
+{"id": 93, "kind": "use", "question": "What is 杉材 recorded to treat?", "gold": "Recorded use: 咳嗽. (pre-modern claim; not clinical advice)", "key": "咳嗽"}
+{"id": 94, "kind": "use", "question": "What is 漚麻汁 recorded to treat?", "gold": "Recorded use: 止消渴. Modern reading: diabetes / polydipsia. (pre-modern claim; not clinical advice)", "key": "止消渴"}
+{"id": 95, "kind": "compound", "question": "What compound class is recorded in Morus alba?", "gold": "Morus alba contains alkaloid compounds (per the corpus compound table).", "key": "Morus alba"}
+{"id": 96, "kind": "use", "question": "What is 胡燕卵黃 recorded to treat?", "gold": "Recorded use: 每吞十枚. (pre-modern claim; not clinical advice)", "key": "每吞十枚"}
+{"id": 97, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 松節?", "gold": "Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 98, "kind": "use", "question": "What is 櫰香 recorded to treat?", "gold": "Recorded use: 七日腐落. (pre-modern claim; not clinical advice)", "key": "七日腐落"}
+{"id": 99, "kind": "use", "question": "What is 人魄 recorded to treat?", "gold": "Recorded use: 鎮心. (pre-modern claim; not clinical advice)", "key": "鎮心"}
+{"id": 100, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 田螺?", "gold": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade 下品.", "key": "無毒"}
+{"id": 101, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 苦瓜?", "gold": "苦瓜 -> Momordica charantia (resolved by wikidata, confidence 0.9).", "key": "苦瓜"}
+{"id": 102, "kind": "use", "question": "What is 地膽 recorded to treat?", "gold": "Recorded use: 鼻中息肉. (pre-modern claim; not clinical advice)", "key": "鼻中息肉"}
+{"id": 103, "kind": "use", "question": "What is 五靈脂 recorded to treat?", "gold": "Recorded use: 治血氣刺痛甚腹諸痛. (pre-modern claim; not clinical advice)", "key": "治血氣刺痛甚腹諸痛"}
+{"id": 104, "kind": "compound", "question": "What compound class is recorded in Myristica fragrans?", "gold": "Myristica fragrans contains flavonoid compounds (per the corpus compound table).", "key": "Myristica fragrans"}
+{"id": 105, "kind": "use", "question": "What is 茺蔚 recorded to treat?", "gold": "Recorded use: 主浮腫. (pre-modern claim; not clinical advice)", "key": "主浮腫"}
+{"id": 106, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 蚯蚓?", "gold": "蚯蚓 -> Lumbricina (resolved by wikidata-genus, confidence 0.55).", "key": "蚯蚓"}
+{"id": 107, "kind": "use", "question": "What is 梓白皮 recorded to treat?", "gold": "Recorded use: 搗敷豬瘡. Modern reading: sore. (pre-modern claim; not clinical advice)", "key": "搗敷豬瘡"}
+{"id": 108, "kind": "use", "question": "What is 清風藤 recorded to treat?", "gold": "Recorded use: 風疾. (pre-modern claim; not clinical advice)", "key": "風疾"}
+{"id": 109, "kind": "use", "question": "What is 舵菜 recorded to treat?", "gold": "Recorded use: 癭結氣. (pre-modern claim; not clinical advice)", "key": "癭結氣"}
+{"id": 110, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 穬麥?", "gold": "Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade 中品.", "key": "無毒"}
+{"id": 111, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 茅香?", "gold": "Nature 溫, flavours 苦, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 112, "kind": "use", "question": "What is 天子藉田三推犁下土 recorded to treat?", "gold": "Recorded use: 入官不懼. (pre-modern claim; not clinical advice)", "key": "入官不懼"}
+{"id": 113, "kind": "use", "question": "What is 天名精 recorded to treat?", "gold": "Recorded use: 疔瘡 痔. Modern reading: haemorrhoids. (pre-modern claim; not clinical advice)", "key": "疔瘡"}
+{"id": 114, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 胡瓜?", "gold": "Nature 平, flavours 苦, channels not recorded, toxicity 小毒, grade —.", "key": "小毒"}
+{"id": 115, "kind": "use", "question": "What is 白附子 recorded to treat?", "gold": "Recorded use: 中風失音. Modern reading: stroke-like syndrome. (pre-modern claim; not clinical advice)", "key": "中風失音"}
+{"id": 116, "kind": "use", "question": "What is 菾菜 recorded to treat?", "gold": "Recorded use: 治小兒熱. (pre-modern claim; not clinical advice)", "key": "治小兒熱"}
+{"id": 117, "kind": "use", "question": "What is 鯼魚 recorded to treat?", "gold": "Recorded use: 曝乾香美. (pre-modern claim; not clinical advice)", "key": "曝乾香美"}
+{"id": 118, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 葈耳?", "gold": "Nature 溫, flavours 甘, channels not recorded, toxicity 小毒, grade 中品.", "key": "小毒"}
+{"id": 119, "kind": "use", "question": "What is 豨薟 recorded to treat?", "gold": "Recorded use: 斷血生肉. (pre-modern claim; not clinical advice)", "key": "斷血生肉"}
+{"id": 120, "kind": "compound", "question": "What compound class is recorded in Dermatophyllum gypsophilum?", "gold": "Dermatophyllum gypsophilum contains terpenoid compounds (per the corpus compound table).", "key": "Dermatophyllum gypsophilum"}
+{"id": 121, "kind": "compound", "question": "What compound class is recorded in Glebionis coronaria?", "gold": "Glebionis coronaria contains unclassified compounds (per the corpus compound table).", "key": "Glebionis coronaria"}
+{"id": 122, "kind": "compound", "question": "What compound class is recorded in Actaea cimicifuga?", "gold": "Actaea cimicifuga contains terpenoid compounds (per the corpus compound table).", "key": "Actaea cimicifuga"}
+{"id": 123, "kind": "use", "question": "What is 樟腦 recorded to treat?", "gold": "Recorded use: 去腳氣. (pre-modern claim; not clinical advice)", "key": "去腳氣"}
+{"id": 124, "kind": "use", "question": "What is 蒼龍腦 recorded to treat?", "gold": "Recorded use: 傷人. (pre-modern claim; not clinical advice)", "key": "傷人"}
+{"id": 125, "kind": "use", "question": "What is 犀角 recorded to treat?", "gold": "Recorded use: 令人駿健熱. (pre-modern claim; not clinical advice)", "key": "令人駿健熱"}
+{"id": 126, "kind": "use", "question": "What is 雄原蠶蛾 recorded to treat?", "gold": "Recorded use: 強陰道. (pre-modern claim; not clinical advice)", "key": "強陰道"}
+{"id": 127, "kind": "use", "question": "What is 莖葉 recorded to treat?", "gold": "Recorded use: 引膿血. (pre-modern claim; not clinical advice)", "key": "引膿血"}
+{"id": 128, "kind": "use", "question": "What is 蛇角 recorded to treat?", "gold": "Recorded use: 消腫毒. (pre-modern claim; not clinical advice)", "key": "消腫毒"}
+{"id": 129, "kind": "use", "question": "What is 青紙 recorded to treat?", "gold": "Recorded use: 妒精瘡. Modern reading: sore. (pre-modern claim; not clinical advice)", "key": "妒精瘡"}
+{"id": 130, "kind": "use", "question": "What is 扁青 recorded to treat?", "gold": "Recorded use: 目痛明目. (pre-modern claim; not clinical advice)", "key": "目痛明目"}
+{"id": 131, "kind": "use", "question": "What is 石面 recorded to treat?", "gold": "Recorded use: 食之止飢. (pre-modern claim; not clinical advice)", "key": "食之止飢"}
+{"id": 132, "kind": "use", "question": "What is 菥蓂 recorded to treat?", "gold": "Recorded use: 明目目痛淚出. (pre-modern claim; not clinical advice)", "key": "明目目痛淚出"}
+{"id": 133, "kind": "use", "question": "What is 烏爛死蠶 recorded to treat?", "gold": "Recorded use: 治風及勞瘦. (pre-modern claim; not clinical advice)", "key": "治風及勞瘦"}
+{"id": 134, "kind": "use", "question": "What is 蝤蛑 recorded to treat?", "gold": "Recorded use: 煮食. (pre-modern claim; not clinical advice)", "key": "煮食"}
+{"id": 135, "kind": "use", "question": "What is 蛤蚧 recorded to treat?", "gold": "Recorded use: 久咳嗽. (pre-modern claim; not clinical advice)", "key": "久咳嗽"}
+{"id": 136, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 白芨?", "gold": "白芨 -> Bletilla striata (resolved by wikidata, confidence 0.9).", "key": "白芨"}
+{"id": 137, "kind": "use", "question": "What is 韶子 recorded to treat?", "gold": "Recorded use: 心腹冷氣. (pre-modern claim; not clinical advice)", "key": "心腹冷氣"}
+{"id": 138, "kind": "compound", "question": "What compound class is recorded in Curcuma phaeocaulis?", "gold": "Curcuma phaeocaulis contains unclassified compounds (per the corpus compound table).", "key": "Curcuma phaeocaulis"}
+{"id": 139, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 土黃?", "gold": "土黃 -> Nematalosa japonica (resolved by wikidata, confidence 0.7).", "key": "土黃"}
+{"id": 140, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 蛔蟲?", "gold": "蛔蟲 -> Ascaris lumbricoides (resolved by wikidata, confidence 0.7).", "key": "蛔蟲"}
+{"id": 141, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 續斷?", "gold": "續斷 -> Dipsacus asper (resolved by manual, confidence 0.95).", "key": "續斷"}
+{"id": 142, "kind": "compound", "question": "What compound class is recorded in Carpesium abrotanoides?", "gold": "Carpesium abrotanoides contains alkaloid compounds (per the corpus compound table).", "key": "Carpesium abrotanoides"}
+{"id": 143, "kind": "compound", "question": "What compound class is recorded in Ziziphus jujuba?", "gold": "Ziziphus jujuba contains steroid compounds (per the corpus compound table).", "key": "Ziziphus jujuba"}
+{"id": 144, "kind": "use", "question": "What is 石松 recorded to treat?", "gold": "Recorded use: 久服去風血風瘙. (pre-modern claim; not clinical advice)", "key": "久服去風血風瘙"}
+{"id": 145, "kind": "use", "question": "What is 鷑鳩 recorded to treat?", "gold": "Recorded use: 北人未識此病. (pre-modern claim; not clinical advice)", "key": "北人未識此病"}
+{"id": 146, "kind": "use", "question": "What is 脊骨 recorded to treat?", "gold": "Recorded use: 甚效. (pre-modern claim; not clinical advice)", "key": "甚效"}
+{"id": 147, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 豆腐?", "gold": "豆腐 -> Glycine max (resolved by wikidata, confidence 0.7).", "key": "豆腐"}
+{"id": 148, "kind": "compound", "question": "What compound class is recorded in Clematis chinensis?", "gold": "Clematis chinensis contains alkaloid compounds (per the corpus compound table).", "key": "Clematis chinensis"}
+{"id": 149, "kind": "use", "question": "What is 石燕 recorded to treat?", "gold": "Recorded use: 面色虛黃. (pre-modern claim; not clinical advice)", "key": "面色虛黃"}
+{"id": 150, "kind": "use", "question": "What is 樟材 recorded to treat?", "gold": "Recorded use: 煎湯. (pre-modern claim; not clinical advice)", "key": "煎湯"}
+{"id": 151, "kind": "use", "question": "What is 木皮 recorded to treat?", "gold": "Recorded use: 水痢不問冷熱. Modern reading: dysentery. (pre-modern claim; not clinical advice)", "key": "水痢不問冷熱"}
+{"id": 152, "kind": "use", "question": "What is 誤服 recorded to treat?", "gold": "Recorded use: 心下滿. (pre-modern claim; not clinical advice)", "key": "心下滿"}
+{"id": 153, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 剪草?", "gold": "剪草 -> Chloranthus fortunei (resolved by wikidata, confidence 0.7).", "key": "剪草"}
+{"id": 154, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 桃花石?", "gold": "Nature 溫, flavours 甘, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 155, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 蘭草?", "gold": "Nature 平, flavours 辛, channels not recorded, toxicity 無毒, grade 上品.", "key": "無毒"}
+{"id": 156, "kind": "use", "question": "What is 側子 recorded to treat?", "gold": "Recorded use: 寒熱鼠. (pre-modern claim; not clinical advice)", "key": "寒熱鼠"}
+{"id": 157, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:附子湯?", "gold": "Formula ws_zh_shanghanlun:附子湯: 附子, 破, 茯苓, 人參, 白朮, 芍藥, 水, 煮取, 溫服.", "key": "附子湯"}
+{"id": 158, "kind": "use", "question": "What is 常春藤 recorded to treat?", "gold": "Recorded use: 研汁和酒溫服. (pre-modern claim; not clinical advice)", "key": "研汁和酒溫服"}
+{"id": 159, "kind": "use", "question": "What is 懸蹄 recorded to treat?", "gold": "Recorded use: 塗惡瘡濕癬. Modern reading: malignant sore. (pre-modern claim; not clinical advice)", "key": "塗惡瘡濕癬"}
+{"id": 160, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 野狼牙?", "gold": "Nature 寒, flavours 辛, channels not recorded, toxicity 小毒, grade 下品.", "key": "小毒"}
+{"id": 161, "kind": "use", "question": "What is 金櫻子 recorded to treat?", "gold": "Recorded use: 名軍中一捻金. (pre-modern claim; not clinical advice)", "key": "名軍中一捻金"}
+{"id": 162, "kind": "use", "question": "What is 門臼塵 recorded to treat?", "gold": "Recorded use: 止金瘡出血. Modern reading: sore. (pre-modern claim; not clinical advice)", "key": "止金瘡出血"}
+{"id": 163, "kind": "use", "question": "What is 蘇方木 recorded to treat?", "gold": "Recorded use: 產後惡露不安. (pre-modern claim; not clinical advice)", "key": "產後惡露不安"}
+{"id": 164, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 莖及白皮?", "gold": "Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 165, "kind": "use", "question": "What is 碧海水 recorded to treat?", "gold": "Recorded use: 吐下宿食臚脹. (pre-modern claim; not clinical advice)", "key": "吐下宿食臚脹"}
+{"id": 166, "kind": "compound", "question": "What compound class is recorded in Fritillaria cirrhosa?", "gold": "Fritillaria cirrhosa contains alkaloid compounds (per the corpus compound table).", "key": "Fritillaria cirrhosa"}
+{"id": 167, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 木瓜?", "gold": "木瓜 -> Carica papaya (resolved by wikidata, confidence 0.7).", "key": "木瓜"}
+{"id": 168, "kind": "use", "question": "What is 枝葉 recorded to treat?", "gold": "Recorded use: 煮汁和米作粥. (pre-modern claim; not clinical advice)", "key": "煮汁和米作粥"}
+{"id": 169, "kind": "use", "question": "What is 無漏子 recorded to treat?", "gold": "Recorded use: 補虛損. (pre-modern claim; not clinical advice)", "key": "補虛損"}
+{"id": 170, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 干地黄?", "gold": "干地黄 -> Rehmannia glutinosa (resolved by wikidata, confidence 0.7).", "key": "干地黄"}
+{"id": 171, "kind": "viability", "question": "For 黄精 (Polygonatum sibiricum), will 蒸 enrich its terpenoid content? Give a verdict, the modelled retention and what would refute it.", "gold": "MAY. The claimed enrichment of terpenoid by 蒸 is not supported: modelled median retention is 84% (range 58-95%), dominant loss mechanism hydrolysis. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
+{"id": 172, "kind": "use", "question": "What is 天靈蓋 recorded to treat?", "gold": "Recorded use: 乏力羸瘦. (pre-modern claim; not clinical advice)", "key": "乏力羸瘦"}
+{"id": 173, "kind": "use", "question": "What is 地錦 recorded to treat?", "gold": "Recorded use: 利小便. Modern reading: diuresis. (pre-modern claim; not clinical advice)", "key": "利小便"}
+{"id": 174, "kind": "use", "question": "What is 空青 recorded to treat?", "gold": "Recorded use: 明目. (pre-modern claim; not clinical advice)", "key": "明目"}
+{"id": 175, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 蛺蝶?", "gold": "蛺蝶 -> Nymphalidae (resolved by wikidata-genus, confidence 0.55).", "key": "蛺蝶"}
+{"id": 176, "kind": "compound", "question": "What compound class is recorded in Scolopendra subspinipes?", "gold": "Scolopendra subspinipes contains unclassified compounds (per the corpus compound table).", "key": "Scolopendra subspinipes"}
+{"id": 177, "kind": "relation", "question": "In the 七情 framework, how do 甘草 and 甘遂 interact?", "gold": "甘草 and 甘遂 are recorded as 相惡 (mutual aversion).", "key": "甘草"}
+{"id": 178, "kind": "use", "question": "What is 莖葉 recorded to treat?", "gold": "Recorded use: 霍亂. Modern reading: cholera-like illness. (pre-modern claim; not clinical advice)", "key": "霍亂"}
+{"id": 179, "kind": "use", "question": "What is 牯牛卵囊 recorded to treat?", "gold": "Recorded use: 治客忤. (pre-modern claim; not clinical advice)", "key": "治客忤"}
+{"id": 180, "kind": "use", "question": "What is 地錦 recorded to treat?", "gold": "Recorded use: 地錦︰通流血脈. (pre-modern claim; not clinical advice)", "key": "通流血脈"}
+{"id": 181, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 稗米?", "gold": "稗米 -> Echinochloa crus-galli (resolved by wikidata, confidence 0.7).", "key": "稗米"}
+{"id": 182, "kind": "use", "question": "What is 零餘子 recorded to treat?", "gold": "Recorded use: 食之不飢. (pre-modern claim; not clinical advice)", "key": "食之不飢"}
+{"id": 183, "kind": "candidate", "question": "What candidate does Syzygium aromaticum suggest under Track 02, and what would kill it?", "gold": "Candidate: (+)-γ-cadinene (formula n/a), from Syzygium aromaticum. MW 204.36, logP 5.9, structural novelty 0.0. Proposed target class: opioid receptor — class-level prior only. Kill criteria: No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.", "key": "Syzygium aromaticum"}
+{"id": 184, "kind": "compound", "question": "What compound class is recorded in Prunus mume?", "gold": "Prunus mume contains terpenoid compounds (per the corpus compound table).", "key": "Prunus mume"}
+{"id": 185, "kind": "use", "question": "What is 黃橘皮 recorded to treat?", "gold": "Recorded use: 久服去臭. (pre-modern claim; not clinical advice)", "key": "久服去臭"}
+{"id": 186, "kind": "use", "question": "What is 鑿柄木 recorded to treat?", "gold": "Recorded use: 難產. (pre-modern claim; not clinical advice)", "key": "難產"}
+{"id": 187, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 珠鱉?", "gold": "Nature 寒, flavours 鹹, channels not recorded, toxicity 小毒, grade 中品.", "key": "小毒"}
+{"id": 188, "kind": "use", "question": "What is 百藥煎 recorded to treat?", "gold": "Recorded use: 口舌糜爛. (pre-modern claim; not clinical advice)", "key": "口舌糜爛"}
+{"id": 189, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 玄石?", "gold": "Nature 溫, flavours 鹹, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
+{"id": 190, "kind": "use", "question": "What is 自然銅 recorded to treat?", "gold": "Recorded use: 折傷. (pre-modern claim; not clinical advice)", "key": "折傷"}
+{"id": 191, "kind": "viability", "question": "For 乌蛇 (Diospyros eriantha), will 焙 enrich its terpenoid content? Give a verdict, the modelled retention and what would refute it.", "gold": "MAY. The claimed enrichment of terpenoid by 焙 is not supported: modelled median retention is 100% (range 99-100%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
+{"id": 192, "kind": "use", "question": "What is 蛇莓 recorded to treat?", "gold": "Recorded use: 傷寒大熱. Modern reading: febrile infectious disease. (pre-modern claim; not clinical advice)", "key": "傷寒大熱"}
+{"id": 193, "kind": "compound", "question": "What compound class is recorded in Orobanche coerulescens?", "gold": "Orobanche coerulescens contains terpenoid compounds (per the corpus compound table).", "key": "Orobanche coerulescens"}
+{"id": 194, "kind": "use", "question": "What is 黃芝一名金芝 recorded to treat?", "gold": "Recorded use: 強志意. (pre-modern claim; not clinical advice)", "key": "強志意"}
+{"id": 195, "kind": "name_mapping", "question": "What is the modern botanical binomial of the historical name 酸漿?", "gold": "酸漿 -> Alkekengi officinarum (resolved by wikidata, confidence 0.7).", "key": "酸漿"}
+{"id": 196, "kind": "use", "question": "What is 接骨木 recorded to treat?", "gold": "Recorded use: 痰瘧. Modern reading: malaria-like fever. (pre-modern claim; not clinical advice)", "key": "痰瘧"}
+{"id": 197, "kind": "compound", "question": "What compound class is recorded in Aucklandia lappa?", "gold": "Aucklandia lappa contains alkaloid compounds (per the corpus compound table).", "key": "Aucklandia lappa"}
+{"id": 198, "kind": "use", "question": "What is 烏菱殼 recorded to treat?", "gold": "Recorded use: 亦止泄痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)", "key": "亦止泄痢"}
+{"id": 199, "kind": "use", "question": "What is 樹白皮 recorded to treat?", "gold": "Recorded use: 喉痺. Modern reading: painful obstruction syndrome. (pre-modern claim; not clinical advice)", "key": "喉痺"}

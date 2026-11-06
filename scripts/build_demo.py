@@ -525,15 +525,40 @@ async function doAsk(mode){
   out.innerHTML = '<p class="note">retrieving and generating…</p>';
   stat.textContent = 'running…';
   try {
-    const r = await fetch('/api/' + (mode === 'hypothesize' ? 'hypothesize' : 'query'),
+    const endpoint = mode === 'hypothesize' ? '/api/hypothesize' : '/api/compare';
+    const r = await fetch(endpoint,
       {method:'POST', headers:{'Content-Type':'application/json'},
-       body: JSON.stringify({question:q, k:k, max_new_tokens: mode === 'hypothesize' ? 96 : 72})});
+       body: JSON.stringify({question:q, k:k, max_new_tokens: mode === 'hypothesize' ? 96 : 56})});
     const d = await r.json();
-    stat.textContent = d.total_latency_ms != null ? ('server · ' + d.total_latency_ms + ' ms') : 'server';
-    renderServerResult(out, d, mode);
+    stat.textContent = 'server';
+    if (mode === 'hypothesize') { renderServerResult(out, d, mode); }
+    else { renderCompare(out, d); }
   } catch (e) {
     out.innerHTML = '<div class="warn">Request failed: ' + esc(String(e)) + '</div>';
   }
+}
+
+function renderCompare(out, d){
+  if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
+  const dc = d.decode || {};
+  let h = `<h2 style="margin-top:18px">Direct generation — no retrieval, no injected passages</h2>
+    <p class="note">Both models answer the same question with the same decode
+    (temperature ${esc(dc.temperature)}, top_p ${esc(dc.top_p)}, seed ${esc(dc.seed)}, max_tokens ${esc(dc.max_tokens)}).
+    Each model is prompted in its native chat format; the exact prompt is shown so the result is reproducible.</p>
+    <div class="cards">`;
+  const rows = [['Ours — fine-tuned on the SHENNONG corpus', d.fine_tuned],
+                ['Unfine-tuned open model', d.baseline]];
+  for (const [label, m] of rows) {
+    if (!m) continue;
+    h += `<div class="card"><h3>${esc(label)}</h3>
+      <p style="font-size:12px;color:#6b6157">${esc(m.model || '')}</p>
+      <p style="font-size:12px;color:#6b6157">prompt: <span class="mono">${esc(m.prompt || '')}</span></p>
+      <div class="mono" style="white-space:pre-wrap;margin-top:8px">${esc(m.answer || (m.error || ''))}</div>
+      <p class="note">${esc(m.latency_ms || '')} ms</p></div>`;
+  }
+  h += `</div>`;
+  if (d.note) h += `<p class="note" style="margin-top:12px">${esc(d.note)}</p>`;
+  out.innerHTML = h;
 }
 
 function renderServerResult(out, d, mode){

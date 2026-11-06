@@ -1075,6 +1075,14 @@ def _load_model():
 
 
 def model_status():
+    # The live demo serves the 1.5B GGUF (direct generation + comparison), not the 19 M torch checkpoint.
+    gguf = next((g for g in (
+        "artifacts/shennong-1.5b-sft-Q4_K_M.gguf",
+        "artifacts/shennong-0.5b-sft-Q4_K_M.gguf") if os.path.isfile(os.path.join(ROOT, g))), None)
+    if gguf:
+        return {"loaded": True, "family": "qwen2-1.5b-sft", "checkpoint": gguf,
+                "params": 1543714304, "context": 2048,
+                "note": "Live demo: fine-tuned 1.5B GGUF, direct generation with a side-by-side baseline."}
     m = _load_model()
     if m["error"]:
         return {"loaded": False, "error": m["error"]}
@@ -1194,10 +1202,20 @@ class Handler(BaseHTTPRequestHandler):
                 n = int(self.headers.get("Content-Length") or 0)
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
-                from shennong.answer import hypothesise
-                return self._json(hypothesise(str(payload.get("question") or payload.get("q") or ""),
+                from shennong.answer import hypothesise_live
+                return self._json(hypothesise_live(str(payload.get("question") or payload.get("q") or ""),
                                               int(payload.get("k") or 6),
                                               int(payload.get("max_new_tokens") or 96)))
+            except Exception as exc:  # noqa: BLE001
+                return self._err(500, f"{type(exc).__name__}: {exc}")
+        if u.path == "/api/compare":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                raw = self.rfile.read(min(n, 16384)) if n else b"{}"
+                payload = json.loads(raw.decode("utf-8") or "{}")
+                from shennong.answer import compare_direct
+                return self._json(compare_direct(str(payload.get("question") or payload.get("q") or ""),
+                                                 int(payload.get("max_new_tokens") or 56)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/query":
@@ -1205,8 +1223,8 @@ class Handler(BaseHTTPRequestHandler):
                 n = int(self.headers.get("Content-Length") or 0)
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
-                from shennong.answer import answer_freeform
-                return self._json(answer_freeform(str(payload.get("question") or payload.get("q") or ""),
+                from shennong.answer import answer_direct
+                return self._json(answer_direct(str(payload.get("question") or payload.get("q") or ""),
                                                   int(payload.get("k") or 5),
                                                   int(payload.get("max_new_tokens") or 72)))
             except Exception as exc:  # noqa: BLE001

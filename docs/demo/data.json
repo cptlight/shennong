@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T07:05:44-0800",
+ "generated_at": "2026-11-06T12:04:58-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v0.1.0": {
@@ -3212,6 +3212,7 @@
   "discoveries.json",
   "discovery_ledger.json",
   "drug_candidates.json",
+  "eval_recall.json",
   "expert_consensus.json",
   "expert_routing.json",
   "extraction_report.json",

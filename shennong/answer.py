@@ -156,8 +156,8 @@ def answer_freeform(question: str, k: int = 5, max_new_tokens: int = 72, with_ra
 
     ctx = "\n\n".join(
         f"[{i+1}] {s['title']} ({s['year']}): {s['passage']}" for i, s in enumerate(spans))
-    prompt = (f"Classical Asian medical texts, passages:\n{ctx}\n\n"
-              f"Question: {q}\nAnswer from the passages:")
+    prompt = (f"<|user|>Passages from classical Asian medical texts:\n{ctx}\n\n"
+              f"Question: {q}\nAnswer only from the passages.<|assistant|>")
     grounded, gms = _generate(model, tok, prompt, max_new_tokens=max_new_tokens)
     result["answer"] = grounded
     result["grounded_latency_ms"] = gms
@@ -199,7 +199,8 @@ def hypothesise(question: str, k: int = 6, max_new_tokens: int = 96) -> dict:
         return {"ok": False, "error": "no passage in the corpus shares vocabulary with this question",
                 "retrieved": []}
     ctx = "\n\n".join(f"[{i+1}] {s['title']} ({s['year']}): {s['passage']}" for i, s in enumerate(spans))
-    prompt = f"{HYPOTHESIS_PROMPT}\n\nPassages:\n{ctx}\n\n{HYPOTHESIS_INSTRUCTION}\nQuestion: {q}\nHypothesis:"
+    prompt = (f"<|user|>{HYPOTHESIS_PROMPT}\n\nPassages:\n{ctx}\n\n{HYPOTHESIS_INSTRUCTION}\n"
+              f"Question: {q}<|assistant|>Hypothesis:")
     out: dict = {"ok": True, "question": q, "retrieved": spans, "n_retrieved": len(spans),
                  "kind": "model_hypothesis", "validated": False,
                  "model": None if model is None else {"params": sum(p.numel() for p in model.parameters())}}

@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-11-06T05:08:01-0800",
+  "track": "02 — Natural products and drug discovery",
+  "what": "Track-02 supervised fine-tuning of the 19.3M sparse MoE on task-shaped data",
+  "data": {
+    "examples": 1490,
+    "train": 1400,
+    "val": 90,
+    "tasks": {
+      "property": 1357,
+      "viability": 60,
+      "candidate": 60,
+      "incompatibility": 13
+    },
+    "format": "<|user|>…<|assistant|>…<|eos|> (the tokenizer's own chat tokens, ids 4/5/2)"
+  },
+  "objective": "next-token prediction with the prompt masked (-100), i.e. answer-only loss. The first two runs were invalid: run 1 appended <|pad|> as EOS (token_to_id('</s>') is None), and run 2 compared logits[t] to labels[t] instead of labels[t+1] — it learned to copy the input and scored 0.07 CE while generating nothing.",
+  "result": {
+    "base_val_answer_loss": 7.8974,
+    "best_val_answer_loss": 2.6136,
+    "improvement_nats": 5.2838,
+    "checkpoint": "training/runs/sft-r3/ckpt-best.pt",
+    "step": 100,
+    "note": "stopped at 100/250 steps: machine load averaged 15, throughput fell to 0.03 it/s"
+  },
+  "qualitative": {
+    "learned": "the Track-02 answer shape — e.g. 'Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade …'",
+    "not_learned": "the values. Given an unseen herb the model emits a plausible STRUCTURE with wrong entries; and on long passage-conditioned prompts (the demo's retrieval path) the SFT model is no better than the base model, so the demo keeps the base checkpoint",
+    "honest_read": "this is format learning, not domain knowledge. It makes the model usable as a task interface; it does not make it an expert."
+  },
+  "decision": {
+    "track": "02",
+    "why": "the strongest measured results are drug-discovery statements (78/203 physics refutations, 28 → 10 → 18 funnel, 60 candidates with kill criteria); track 01 becomes supporting evidence; tracks 03/04 are thin — see docs/TRACK.md",
+    "effect": "the model is fine-tuned on Track-02 tasks; the deck and video lead with the filter and the arbiter"
+  }
+}

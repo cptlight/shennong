@@ -39,9 +39,10 @@ dev = ["pytest>=7.4", "regex>=2023.0"]
 [project.scripts]
 shennong = "shennong.cli:main"
 
-[tool.setuptools]
-packages = ["shennong", "shennong.kg", "shennong.extract", "shennong.decode", "shennong.discover",
-            "shennong.rag", "shennong.safety", "shennong.learn", "shennong.eval"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shennong*"]
+exclude = ["shennong._build*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

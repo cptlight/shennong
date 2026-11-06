@@ -1,8 +1,8 @@
 name: train
 
-# Training is a model-release build, not a developer convenience: it runs the same trainer as `make
-# train-mini`, on CPU, and publishes the resulting checkpoint as a build artefact. Minutes are free for
-# public repositories, which is the only free compute this project can reach without a paid account.
+# Training is a model-release build, not a convenience shell: it runs the same trainer as `make train-mini`,
+# on CPU, and publishes the checkpoint as a build artefact. GitHub-hosted minutes are free for public
+# repositories, which is the only free compute this project can reach without a paid account.
 #
 #   gh workflow run train.yml -f steps=1500 -f resume=true
 #
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       steps:
-        description: "total optimizer steps (not increment)"
+        description: "additional optimizer steps (added to the resume step)"
         default: "800"
       lr:
         description: "learning rate"
@@ -71,17 +71,10 @@ jobs:
       - name: Compute absolute step target
         id: target
         run: |
-          # --steps is a TOTAL optimizer-step target, so resuming from step 199 with steps=20 makes the
-          # trainer believe it is already past the target and exit in seconds without training at all.
-          # (That is exactly what the first smoke run did: "steps=20 tok/s=1505418".) Target is absolute.
           ADD=${{ inputs.steps }}
+          START=0
           if [ "${{ inputs.resume }}" = "true" ]; then
-            START=$(python -c "
-import torch
-ck = torch.load('training/runs/seed/ckpt-best.pt', map_location='cpu', weights_only=False)
-print(int(ck.get('step') or 0))")
-          else
-            START=0
+            START=$(python -c "import torch; ck=torch.load('training/runs/seed/ckpt-best.pt', map_location='cpu', weights_only=False); print(int(ck.get('step') or 0))")
           fi
           echo "start_step=$START add=$ADD target=$((START + ADD))"
           echo "value=$((START + ADD))" >> "$GITHUB_OUTPUT"
@@ -104,13 +97,7 @@ print(int(ck.get('step') or 0))")
 
       - name: Report
         run: |
-          python - <<'PY'
-          import json, pathlib
-          p = pathlib.Path("training/runs/${{ inputs.run_name }}/metrics.json")
-          d = json.loads(p.read_text())
-          print(f"run {d['run_id']} steps={d['steps_completed']} tokens={d['tokens_seen']:,} "
-                f"val={d.get('final_val_loss')} tok/s={d.get('tokens_per_s')}")
-          PY
+          python -c "import json,pathlib; d=json.loads(pathlib.Path('training/runs/${{ inputs.run_name }}/metrics.json').read_text()); print('steps', d['steps_completed'], 'tokens', d['tokens_seen'], 'val', d.get('final_val_loss'), 'toks', d.get('tokens_per_s'))"
 
       - uses: actions/upload-artifact@v4
         with:

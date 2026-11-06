@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-11-06T07:05:15-0800",
+  "track": "01 — Traditional knowledge",
+  "question": "does this project actually extract medicinal knowledge and map names across eras?",
+  "answer": "yes, deterministically, with span locators — the numbers below are the extraction",
+  "entities_extracted": {
+    "compound_mentions": 23177,
+    "plant_to_indication_relations": 11819,
+    "property_vectors": 1402,
+    "qi_qing_relations": 45,
+    "incompatibility_rules": 29,
+    "plants_with_synonymy": 284,
+    "formulas": 141,
+    "formula_ingredients": 847
+  },
+  "name_mapping": {
+    "total_names": 1027,
+    "historical_resolved": 827,
+    "unresolved": 200,
+    "resolution": 0.805,
+    "mapped_to_binomial": 827,
+    "method": "data/build_lexicon.py",
+    "note": "era-to-era synonym chains: the modern binomial is the anchor, historical names are the variants; confidence and method are recorded per entry"
+  },
+  "worked_example": {
+    "source_id": "ws_zh_yaoxing_fu",
+    "classical_span": "諸藥相反例 / 十八反歌：烏頭反半夏",
+    "extracted": {
+      "entity_a": "烏頭",
+      "entity_a_binomial": "Aconitum carmichaelii",
+      "entity_b": "半夏",
+      "entity_b_binomial": "Pinellia ternata",
+      "relation": "十八反·烏頭組",
+      "relation_type": "相反 (antagonistic / incompatible)"
+    },
+    "note": "a relation-extraction triple: two mapped plant entities and the recorded relation between them"
+  },
+  "note": "This is the part of the pipeline a frontier model cannot substitute: the span locator ties every extracted relation to the exact characters in the source, so each of these numbers can be checked."
+}

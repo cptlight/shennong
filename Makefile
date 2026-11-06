@@ -45,6 +45,9 @@ selfobserve:  ## probe the model's own hidden states for groundedness
 grounding-pairs:  ## rebuild the (passages, question, answer) training pairs
 	$(PY) scripts/build_grounding_pairs.py
 
+extract:  ## consolidate Track-1 extraction into artifacts/extraction_report.json
+	$(PY) scripts/extraction_report.py
+
 numbers:  ## regenerate the raw training-numbers table from run metrics
 	$(PY) scripts/training_numbers.py
 
@@ -72,4 +75,4 @@ all: corpus tokenizer train-mini export eval app-data  ## full pipeline
 clean:  ## remove caches (keeps corpus and checkpoints)
 	find . -name __pycache__ -type d -prune -exec rm -rf {} + ; rm -rf .pytest_cache
 
-.PHONY: help setup corpus tokenizer train-mini train-flagship novelty compute demo export curriculum selfobserve grounding-pairs audit numbers eval app-data workbench test all clean
+.PHONY: help setup corpus tokenizer train-mini train-flagship novelty compute demo export curriculum selfobserve grounding-pairs audit numbers extract eval app-data workbench test all clean

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T03:11:25-0800",
+ "generated_at": "2026-11-06T07:05:44-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v0.1.0": {
@@ -47,7 +47,70 @@
    "5": 6
   },
   "refuted_despite_unanimous": 6,
-  "claim_template": "preparation should measurably enrich its <chemotype> content (the tradition's intended direction)"
+  "claim_template": "preparation should measurably enrich its <chemotype> content (the tradition's intended direction)",
+  "unanimous_refutations_named": [
+   {
+    "claim": "蒸 of 菖蒲 (Acorus calamus) should measurably enrich its terpenoid content",
+    "panel": "5/5",
+    "process": "蒸",
+    "drug": "菖蒲",
+    "binomial": "Acorus calamus",
+    "chemotype": "terpenoid",
+    "violated": "process_physics",
+    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+   },
+   {
+    "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably enrich its terpenoid content",
+    "panel": "5/5",
+    "process": "蒸",
+    "drug": "升麻",
+    "binomial": "Actaea cimicifuga",
+    "chemotype": "terpenoid",
+    "violated": "process_physics",
+    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+   },
+   {
+    "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably enrich its terpenoid content",
+    "panel": "5/5",
+    "process": "炮",
+    "drug": "附子",
+    "binomial": "Aconitum carmichaelii",
+    "chemotype": "terpenoid",
+    "violated": "process_physics",
+    "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) — the class is depleted, so an *enrichment* claim is physically backwards."
+   },
+   {
+    "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its terpenoid content",
+    "panel": "5/5",
+    "process": "炮",
+    "drug": "甘草",
+    "binomial": "Glycyrrhiza uralensis",
+    "chemotype": "terpenoid",
+    "violated": "process_physics",
+    "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) — the class is depleted, so an *enrichment* claim is physically backwards."
+   },
+   {
+    "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its phenylpropanoid content",
+    "panel": "5/5",
+    "process": "炙",
+    "drug": "甘草",
+    "binomial": "Glycyrrhiza uralensis",
+    "chemotype": "phenylpropanoid",
+    "violated": "process_physics",
+    "reason": "phenylpropanoid is volatile and 炙 runs at ~120 °C (with honey/vinegar/wine) — the class is depleted, so an *enrichment* claim is physically backwards."
+   },
+   {
+    "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its terpenoid content",
+    "panel": "5/5",
+    "process": "蒸",
+    "drug": "甘草",
+    "binomial": "Glycyrrhiza uralensis",
+    "chemotype": "terpenoid",
+    "violated": "process_physics",
+    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+   }
+  ],
+  "naming_note": "the six cases where the tradition panel was unanimous (5/5) and the physics arbiter still rejected the claim — named so the number can be checked line by line"
  },
  "law_impact": {
   "n_candidates": 203,
@@ -658,6 +721,45 @@
    "self-observation probe: does the model represent its own groundedness, measured per layer",
    "honest head-to-head showing the curriculum did not beat the base model yet"
   ]
+ },
+ "extraction": {
+  "generated_at": "2026-11-06T07:05:15-0800",
+  "track": "01 — Traditional knowledge",
+  "question": "does this project actually extract medicinal knowledge and map names across eras?",
+  "answer": "yes, deterministically, with span locators — the numbers below are the extraction",
+  "entities_extracted": {
+   "compound_mentions": 23177,
+   "plant_to_indication_relations": 11819,
+   "property_vectors": 1402,
+   "qi_qing_relations": 45,
+   "incompatibility_rules": 29,
+   "plants_with_synonymy": 284,
+   "formulas": 141,
+   "formula_ingredients": 847
+  },
+  "name_mapping": {
+   "total_names": 1027,
+   "historical_resolved": 827,
+   "unresolved": 200,
+   "resolution": 0.805,
+   "mapped_to_binomial": 827,
+   "method": "data/build_lexicon.py",
+   "note": "era-to-era synonym chains: the modern binomial is the anchor, historical names are the variants; confidence and method are recorded per entry"
+  },
+  "worked_example": {
+   "source_id": "ws_zh_yaoxing_fu",
+   "classical_span": "諸藥相反例 / 十八反歌：烏頭反半夏",
+   "extracted": {
+    "entity_a": "烏頭",
+    "entity_a_binomial": "Aconitum carmichaelii",
+    "entity_b": "半夏",
+    "entity_b_binomial": "Pinellia ternata",
+    "relation": "十八反·烏頭組",
+    "relation_type": "相反 (antagonistic / incompatible)"
+   },
+   "note": "a relation-extraction triple: two mapped plant entities and the recorded relation between them"
+  },
+  "note": "This is the part of the pipeline a frontier model cannot substitute: the span locator ties every extracted relation to the exact characters in the source, so each of these numbers can be checked."
  },
  "qm": {
   "generated_at": "2026-11-05T10:44:29-0800",
@@ -3112,6 +3214,7 @@
   "drug_candidates.json",
   "expert_consensus.json",
   "expert_routing.json",
+  "extraction_report.json",
   "falsification_cards.json",
   "law_impact.json",
   "model_comparison.json",
@@ -3125,6 +3228,7 @@
   "research_rounds.json",
   "routing_steering.json",
   "self_observation.json",
+  "sft_result.json",
   "support_verification.json",
   "tokenizer_parity.json",
   "tradition_first.json",

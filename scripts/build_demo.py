@@ -123,6 +123,7 @@ def build_data() -> dict:
         "curriculum": load("artifacts/curriculum.json", {}),
         "self_observation": load("artifacts/self_observation.json", {}),
         "training_outcome": load("artifacts/training_outcome.json", {}),
+        "extraction": load("artifacts/extraction_report.json", {}),
         "qm": load("artifacts/qm_results.json", {}),
         "discoveries": {k: {"n": v.get("n"), "top": (v.get("top") or [])[:8]}
                         for k, v in (disc.get("findings") or {}).items()} if disc else {},
@@ -201,9 +202,10 @@ HTML = """<!doctype html>
   <button role="tab" aria-selected="false" data-t="candidates">4 · Candidates</button>
   <button role="tab" aria-selected="false" data-t="experts">5 · Experts</button>
   <button role="tab" aria-selected="false" data-t="diag">6 · Diagnostics</button>
-  <button role="tab" aria-selected="false" data-t="ask">7 · Ask it live</button>
-  <button role="tab" aria-selected="false" data-t="curriculum">8 · Curriculum &amp; self-observation</button>
-  <button role="tab" aria-selected="false" data-t="weights">9 · Weights &amp; reproduce</button>
+  <button role="tab" aria-selected="false" data-t="extraction">7 · Extraction &amp; name mapping</button>
+  <button role="tab" aria-selected="false" data-t="ask">8 · Ask it live</button>
+  <button role="tab" aria-selected="false" data-t="curriculum">9 · Curriculum &amp; self-observation</button>
+  <button role="tab" aria-selected="false" data-t="weights">10 · Weights &amp; reproduce</button>
 </nav>
 <main id="main"></main>
 <footer>
@@ -620,7 +622,52 @@ function tabCurriculum(){
   return h + `</section>`;
 }
 
-const TABS = {ask:tabAsk, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
+
+function tabExtraction(){
+  const e = DATA.extraction || {};
+  let h = `<section><h2>Traditional-knowledge extraction — measured, with a worked example</h2>
+  <p class="note">Track 01 asks for NER and era-to-era name mapping. This is done deterministically by the
+  pipeline (not by the model), with span locators so every relation can be traced to the source characters.</p>`;
+  const ent = e.entities_extracted || {};
+  if (Object.keys(ent).length) {
+    h += `<h2>Entities and relations extracted</h2>
+    <table><tr><th>extraction</th><th>count</th></tr>`;
+    const labels = {compound_mentions:'compound mentions', plant_to_indication_relations:'plant → indication relations',
+      property_vectors:'property vectors (nature/flavour/channel)', qi_qing_relations:'七情 relations (相須/相使/相畏…)',
+      incompatibility_rules:'十八反 / 十九畏 incompatibility rules', plants_with_synonymy:'plants with synonymy',
+      formulas:'formulas', formula_ingredients:'formula ingredients'};
+    for (const [k,n] of Object.entries(ent)) h += `<tr><td>${esc(labels[k]||k)}</td><td><b>${esc((n||0).toLocaleString())}</b></td></tr>`;
+    h += `</table>`;
+  }
+  const nm = e.name_mapping || {};
+  if (nm.resolution != null) {
+    h += `<h2 style="margin-top:22px">Era-to-era name mapping</h2>
+    <div class="funnel">
+      <div class="step"><b>${esc(nm.total_names)}</b><span>historical names</span></div>
+      <div class="step keep"><b>${esc(nm.mapped_to_binomial)}</b><span>mapped to a binomial</span></div>
+      <div class="step drop"><b>${esc(nm.unresolved)}</b><span>unresolved</span></div>
+      <div class="step keep"><b>${(nm.resolution*100).toFixed(1)}%</b><span>resolution</span></div>
+    </div>`;
+  }
+  const we = e.worked_example || {};
+  if (we.extracted) {
+    h += `<h2 style="margin-top:22px">One relation, traced end to end</h2>
+    <div class="card"><p style="font-size:12px;color:#6b6157">source: ${esc(we.source_id)}</p>
+      <div class="quote zh">${esc(we.classical_span||'')}</div>
+      <table style="margin-top:8px"><tr><th>entity</th><th>name</th><th>mapped binomial</th></tr>
+      <tr><td>A</td><td>${esc(we.extracted.entity_a)}</td><td><i>${esc(we.extracted.entity_a_binomial||'—')}</i></td></tr>
+      <tr><td>B</td><td>${esc(we.extracted.entity_b)}</td><td><i>${esc(we.extracted.entity_b_binomial||'—')}</i></td></tr>
+      <tr><td>relation</td><td colspan="2"><b>${esc(we.extracted.relation)}</b> — ${esc(we.extracted.relation_type)}</td></tr></table>
+      <p class="note" style="margin-top:8px">${esc(we.note||'')}</p></div>`;
+  }
+  h += `<div class="warn" style="margin-top:22px"><b>Honest division of labour:</b> the extraction is the
+  deterministic pipeline, not the 19.3 M model. A model 1.4 % of the way through its training budget cannot
+  be the NER engine — but it does not need to be: the track asks for NLP and AI, and the span-located
+  extraction is the deliverable. The model is the structured-output interface on top of it.</div></section>`;
+  return h;
+}
+
+const TABS = {ask:tabAsk, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
               experts:tabExperts, diag:tabDiag, weights:tabWeights};
 const main = document.getElementById('main');
 function show(name){

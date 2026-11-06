@@ -121,6 +121,7 @@ def build_data() -> dict:
         "compute": load("artifacts/compute_budget.json", {}),
         "curriculum": load("artifacts/curriculum.json", {}),
         "self_observation": load("artifacts/self_observation.json", {}),
+        "training_outcome": load("artifacts/training_outcome.json", {}),
         "qm": load("artifacts/qm_results.json", {}),
         "discoveries": {k: {"n": v.get("n"), "top": (v.get("top") or [])[:8]}
                         for k, v in (disc.get("findings") or {}).items()} if disc else {},
@@ -247,6 +248,17 @@ function tabFunnel(){
   for (const r of (li.table||[])) h += `<tr><td class="mono">${esc(r.check)}</td><td>${esc(r.evaluated)}</td><td><b>${esc(r.violations)}</b></td></tr>`;
   h += `</table>`;
   if (li.note) h += `<p class="note" style="margin-top:10px">${esc(li.note)}</p>`;
+  const to = DATA.training_outcome || {};
+  if (to.head_to_head_same_heldout) {
+    const hh = to.head_to_head_same_heldout, so = to.self_observation || {};
+    h += `<h2 style="margin-top:24px">Did the curriculum actually help? Measured, same held-out data</h2>
+      <table><tr><th>checkpoint</th><th>held-out CE</th><th>step</th><th>tokens seen</th></tr>
+      <tr><td>base MoE (moe-r1)</td><td>${hh.base_moe_r1.ce}</td><td>${hh.base_moe_r1.step}</td><td>${hh.base_moe_r1.tokens_seen.toLocaleString()}</td></tr>
+      <tr><td>curriculum (stage 6)</td><td>${hh.curriculum_6_grounding.ce}</td><td>${hh.curriculum_6_grounding.step}</td><td>${hh.curriculum_6_grounding.tokens_seen.toLocaleString()}</td></tr></table>
+      <div class="warn"><b>Honest result: the curriculum did not win.</b> ${esc(hh.verdict)}</div>
+      <p class="note">Self-observation probe: <b>${so.before.auc}</b> → <b>${so.after.auc}</b> (n=240). ${esc((so.verdict)||'')}</p>
+      <p class="note"><b>Why:</b> ${esc((to.why||{}).tokens_vs_needed||'')}</p>`;
+  }
   h += `</section>`;
   return h;
 }

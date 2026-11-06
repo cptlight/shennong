@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-11-06T01:30:35-0800",
+  "checkpoint": "training/runs/curriculum-6_grounding/ckpt-best.pt",
+  "step": 472,
+  "definition": "label 1 = the supplied passage contains the answer; label 0 = the passage is about a different herb. The probe reads the pooled hidden state at the final token and predicts the label. If the model REPRESENTS grounding, a linear probe decodes it.",
+  "n_probes": 240,
+  "n_train": 168,
+  "n_test": 72,
+  "probe_auc_by_layer": [
+    {
+      "layer": 0,
+      "auc": 0.3477
+    },
+    {
+      "layer": 1,
+      "auc": 0.5297
+    },
+    {
+      "layer": 2,
+      "auc": 0.568
+    },
+    {
+      "layer": 3,
+      "auc": 0.3742
+    },
+    {
+      "layer": 4,
+      "auc": 0.3734
+    },
+    {
+      "layer": 5,
+      "auc": 0.3781
+    },
+    {
+      "layer": 6,
+      "auc": 0.3781
+    }
+  ],
+  "best_layer": {
+    "layer": 2,
+    "auc": 0.568
+  },
+  "chance_auc": 0.5,
+  "behavioural_grounding": {
+    "n": 6,
+    "said_not_recorded": 0,
+    "examples": [
+      {
+        "herb": "代赭石",
+        "completion": " 居焉 所,.\n\n\naiR\naeh上爲末.or be* \n, re",
+        "says_not_recorded": false
+      },
+      {
+        "herb": "人血",
+        "completion": " 居焉 所,.\n\n\nai,\naeh上爲末.or be� \n, re",
+        "says_not_recorded": false
+      },
+      {
+        "herb": "赤石脂",
+        "completion": " 居焉 所,.\n\n\naiR\naeh上爲末.or be* \n, re",
+        "says_not_recorded": false
+      },
+      {
+        "herb": "巴戟天",
+        "completion": " 居焉 所,.\n\n\nai,\naeh上爲末\nor be* \n, re",
+        "says_not_recorded": false
+      },
+      {
+        "herb": "菖蒲",
+        "completion": " 居焉 所,.\n\n\nai,\naeh上爲末.or be* \n, re",
+        "says_not_recorded": false
+      },
+      {
+        "herb": "瓜蒂",
+        "completion": " 居焉 所风.\n\n\n\nR.\nh上爲末.or be* \n, re",
+        "says_not_recorded": false
+      }
+    ]
+  },
+  "interpretation": "AUC above chance means the information is linearly readable inside the model. It does not mean the model uses it when answering — that gap is what the grounding stage (curriculum stage 6) is for, and it is reported here rather than assumed."
+}

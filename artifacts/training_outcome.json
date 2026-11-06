@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-11-06T01:31:25-0800",
+  "question": "does staged curriculum training plus grounding data improve this model at this budget?",
+  "answer": "Not yet, on general held-out data; the self-observation probe moved slightly.",
+  "curriculum": {
+    "stages_run": 7,
+    "total_steps": 473,
+    "tokens_seen_this_run": 3874816,
+    "stages": [
+      {
+        "stage": "0_foundations",
+        "val_loss": 6.832014799118042,
+        "lr": 0.0003,
+        "wall_s": 817.8,
+        "docs": 10753
+      },
+      {
+        "stage": "1_asian_classics",
+        "val_loss": 6.7935711145401,
+        "lr": 0.00024599999999999996,
+        "wall_s": 345.5,
+        "docs": 8001
+      },
+      {
+        "stage": "2_regional",
+        "val_loss": 2.7051424384117126,
+        "lr": 0.00020171999999999996,
+        "wall_s": 364.7,
+        "docs": 7184
+      },
+      {
+        "stage": "3_alchemy_process",
+        "val_loss": 6.6512144804000854,
+        "lr": 0.00016541039999999995,
+        "wall_s": 339.7,
+        "docs": 803
+      },
+      {
+        "stage": "4_patterns",
+        "val_loss": 6.4042534828186035,
+        "lr": 0.00013563652799999996,
+        "wall_s": 2155.7,
+        "docs": 13250
+      },
+      {
+        "stage": "5_pharmacology",
+        "val_loss": 6.827192604541779,
+        "lr": 0.00011122195295999996,
+        "wall_s": 1403.6,
+        "docs": 7123
+      },
+      {
+        "stage": "6_grounding",
+        "val_loss": 6.22698575258255,
+        "lr": 9.120200142719996e-05,
+        "wall_s": 327.8,
+        "docs": 725
+      }
+    ],
+    "note": "per-stage val losses are computed on each stage's OWN held-out slice and are therefore NOT comparable across stages"
+  },
+  "head_to_head_same_heldout": {
+    "data": "last 40 records of corpus.jsonl, identical for both checkpoints",
+    "base_moe_r1": {
+      "ce": 6.9776,
+      "step": 199,
+      "tokens_seen": 1638400
+    },
+    "curriculum_6_grounding": {
+      "ce": 6.9958,
+      "step": 472,
+      "tokens_seen": 3874816
+    },
+    "delta_ce": 0.0182,
+    "verdict": "the curriculum checkpoint is marginally WORSE on general held-out text (+0.018 CE). It spent its last 3.9 M tokens on stage-ordered domain data at a low learning rate, so this is not a refutation of curriculum training — it is a refutation of claiming a win at this budget."
+  },
+  "self_observation": {
+    "before": {
+      "checkpoint": "moe-r1",
+      "best_layer": 6,
+      "auc": 0.521
+    },
+    "after": {
+      "checkpoint": "curriculum-6_grounding",
+      "best_layer": 2,
+      "auc": 0.568
+    },
+    "delta": 0.047,
+    "verdict": "small movement (0.521 -> 0.568) at n=240; direction is right but the effect is too weak to call a capability. Behavioural grounding on negatives was 0/6 — the model never emitted 'not recorded', so citation discipline did NOT transfer."
+  },
+  "why": {
+    "tokens_vs_needed": "3.87 M tokens this run, 5.47 M cumulative. Compute-optimal at 19.3 M parameters is roughly 20x parameters in tokens = ~390 M. We are at ~1.4% of that.",
+    "compute": "CPU-only, ~1,100 tok/s, 2015 iMac; ~80 min for 3.9 M tokens",
+    "implication": "no curriculum, grounding corpus or probe can substitute for tokens at this scale; the infrastructure is ready and the number that must change is the token count"
+  },
+  "what_was_actually_delivered": [
+    "staged curriculum trainer built from registry metadata (tradition/lang/tier), runs end to end",
+    "725 grounding pairs, 600 of them negatives (the anti-confabulation half)",
+    "self-observation probe: does the model represent its own groundedness, measured per layer",
+    "honest head-to-head showing the curriculum did not beat the base model yet"
+  ]
+}

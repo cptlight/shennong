@@ -17,6 +17,7 @@ from __future__ import annotations
 import hashlib
 import json
 import pathlib
+import re
 import time
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -511,6 +512,28 @@ async function askInit(){
   return;
 }
 
+
+async function doAsk(mode){
+  mode = mode || 'query';
+  const q = document.getElementById('q').value.trim();
+  if (!q) return;
+  const out = document.getElementById('askout');
+  const stat = document.getElementById('stat');
+  const k = Number(document.getElementById('k').value || 5);
+  out.innerHTML = '<p class="note">retrieving and generating…</p>';
+  stat.textContent = 'running…';
+  try {
+    const r = await fetch('/api/' + (mode === 'hypothesize' ? 'hypothesize' : 'query'),
+      {method:'POST', headers:{'Content-Type':'application/json'},
+       body: JSON.stringify({question:q, k:k, max_new_tokens: mode === 'hypothesize' ? 96 : 72})});
+    const d = await r.json();
+    stat.textContent = d.total_latency_ms != null ? ('server · ' + d.total_latency_ms + ' ms') : 'server';
+    renderServerResult(out, d, mode);
+  } catch (e) {
+    out.innerHTML = '<div class="warn">Request failed: ' + esc(String(e)) + '</div>';
+  }
+}
+
 function renderServerResult(out, d, mode){
   if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
   let h = '';
@@ -541,11 +564,72 @@ function renderServerResult(out, d, mode){
   out.innerHTML = h;
 }
 
+
+function tabCurriculum(){
+  const cur = DATA.curriculum || {};
+  const so = DATA.self_observation || {};
+  const to = DATA.training_outcome || {};
+  let h = `<section><h2>Curriculum — trained in a dependent order, not shuffled</h2>
+  <p class="note">A general model can see a corpus in random order. A model meant to reason from first
+  principles about traditional medicine cannot: foundations before the canon, the canon before regional
+  comparison, the operations before the patterns, the method before grounding.</p>`;
+  const stages = cur.stages || [];
+  if (stages.length) {
+    h += `<table><tr><th>#</th><th>stage</th><th>why it comes here</th><th>steps</th><th>val loss</th><th>docs</th></tr>`;
+    for (const st of stages) {
+      h += `<tr><td>${esc(String(st.stage).split('_')[0])}</td><td><b>${esc(st.name)}</b></td>
+        <td style="font-size:12.5px">${esc(st.why)}</td><td>${esc(st.steps)}</td>
+        <td>${st.val_loss != null ? st.val_loss.toFixed(3) : '—'}</td><td>${esc((st.docs||0).toLocaleString())}</td></tr>`;
+    }
+    h += `</table>
+    <p class="note">Per-stage val losses are computed on each stage's OWN held-out slice and are therefore
+    not comparable across stages.</p>`;
+  } else {
+    h += `<div class="warn">Curriculum run not finished yet. Build the stages with
+      <span class="mono">python training/curriculum.py --build-only</span>.</div>`;
+  }
+
+  h += `<h2 style="margin-top:24px">Self-observation — can the model read its own groundedness?</h2>
+  <p class="note">A passage that contains the answer versus a passage about a different herb. A linear probe
+  per layer predicts which is which from the pooled hidden state. Above chance means the model
+  <b>represents</b> grounding — not that it uses it.</p>`;
+  const rows = so.probe_auc_by_layer || [];
+  if (rows.length) {
+    h += `<table><tr><th>layer</th><th>probe AUC</th><th></th></tr>`;
+    for (const r of rows) {
+      const w = Math.max(2, (r.auc - 0.3) / 0.4 * 100);
+      const col = r.auc > 0.6 ? 'var(--green)' : (r.auc > 0.53 ? 'var(--red)' : '#c9bfae');
+      h += `<tr><td>${esc(r.layer)}</td><td><b>${r.auc.toFixed(3)}</b></td>
+        <td><div class="barc"><i style="width:${w}%;background:${col}"></i></div></td></tr>`;
+    }
+    h += `</table><p class="note">chance = 0.500 · best layer ${esc((so.best_layer||{}).layer)} at
+      ${esc((so.best_layer||{}).auc)}</p>`;
+    if (so.interpretation) h += `<div class="warn"><b>Honest reading:</b> ${esc(so.interpretation)}</div>`;
+  } else {
+    h += `<div class="warn">Probe has not run yet: <span class="mono">make selfobserve</span></div>`;
+  }
+
+  const hh = to.head_to_head_same_heldout;
+  if (hh) {
+    h += `<h2 style="margin-top:24px">Did the curriculum actually help? Same held-out data</h2>
+      <table><tr><th>checkpoint</th><th>held-out CE</th><th>step</th><th>tokens seen</th></tr>
+      <tr><td>base MoE</td><td>${hh.base_moe_r1.ce}</td><td>${hh.base_moe_r1.step}</td><td>${hh.base_moe_r1.tokens_seen.toLocaleString()}</td></tr>
+      <tr><td>curriculum</td><td>${hh.curriculum_6_grounding.ce}</td><td>${hh.curriculum_6_grounding.step}</td><td>${hh.curriculum_6_grounding.tokens_seen.toLocaleString()}</td></tr></table>
+      <div class="warn"><b>Honest result: the curriculum did not win.</b> ${esc(hh.verdict)}</div>`;
+  }
+  return h + `</section>`;
+}
+
 const TABS = {ask:tabAsk, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
               experts:tabExperts, diag:tabDiag, weights:tabWeights};
 const main = document.getElementById('main');
 function show(name){
   main.innerHTML = TABS[name]();
+  // The stylesheet hides <section> unless it carries .on. Only the first tab used to set it, so every
+  // other tab rendered its content into a display:none element — the DOM had 1,500 characters and the
+  // page looked blank. Set it here, once, for whatever the tab returned.
+  const sec = main.querySelector('section');
+  if (sec) sec.classList.add('on');
   if (name === 'ask') askInit();
   document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected', String(b.dataset.t===name)));
   const ct = main.querySelector('#ct');
@@ -614,6 +698,22 @@ def main() -> int:
     # is worse than a slightly larger one.)
     payload = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c")
     html = HTML.replace("__DATA__", payload)
+    # Build-time guard: a tab referenced in TABS with no function definition renders an EMPTY page at
+    # runtime (tabX is not defined), which is exactly how the judge demo shipped blank once. Fail the build.
+    import re as _re
+    tabs_line = _re.search(r"const TABS = \{(.*?)\};", html, _re.S)
+    # functions invoked from HTML handlers or tab wiring — a missing one is a dead button at runtime
+    required = ["askInit", "doAsk", "renderServerResult", "show", "esc"]
+    missing = [f for f in required
+               if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (f, f), html)]
+    if missing:
+        raise SystemExit(f"demo build failed: missing required functions {missing}")
+    if tabs_line:
+        for name in _re.findall(r"(\w+):(\w+)", tabs_line.group(1)):
+            key, fn = name
+            if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (fn, fn), html):
+                raise SystemExit(f"demo build failed: TABS references {fn} for tab '{key}' but "
+                                 f"`function {fn}` is not defined — the page would render blank")
     (OUT / "index.html").write_text(html, encoding="utf-8")
     (OUT / "README.md").write_text(
         "# SHENNONG — judge demo\n\n"

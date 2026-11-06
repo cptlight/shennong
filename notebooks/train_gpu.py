@@ -103,7 +103,7 @@ def main() -> int:
     ta = TrainingArguments(
         output_dir=args.out, per_device_train_batch_size=args.batch,
         gradient_accumulation_steps=4, num_train_epochs=args.epochs, max_steps=args.max_steps,
-        learning_rate=args.lr, lr_scheduler_type="cosine", warmup_ratio=0.03,
+        learning_rate=args.lr, lr_scheduler_type="cosine", warmup_steps=10,
         logging_steps=20, save_strategy="epoch", eval_strategy="epoch",
         bf16=False, fp16=torch.cuda.is_available(), report_to=[],
         seed=1337, save_total_limit=2,

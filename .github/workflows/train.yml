@@ -1,0 +1,103 @@
+name: train
+
+# Training is a model-release build, not a developer convenience: it runs the same trainer as `make
+# train-mini`, on CPU, and publishes the resulting checkpoint as a build artefact. Minutes are free for
+# public repositories, which is the only free compute this project can reach without a paid account.
+#
+#   gh workflow run train.yml -f steps=1500 -f resume=true
+#
+on:
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: "total optimizer steps (not increment)"
+        default: "800"
+      lr:
+        description: "learning rate"
+        default: "2.5e-4"
+      resume:
+        description: "resume from the ckpt-base release asset"
+        type: boolean
+        default: true
+      run_name:
+        description: "run name"
+        default: "ci-train"
+      threads:
+        description: "torch threads"
+        default: "4"
+
+permissions:
+  contents: read
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install (CPU torch)
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu
+          pip install "numpy<2" tokenizers pyyaml tqdm safetensors
+
+      - name: Unpack corpus
+        run: |
+          if [ ! -f corpus/processed/corpus.jsonl ]; then
+            gunzip -c corpus/processed/corpus.jsonl.gz > corpus/processed/corpus.jsonl
+          fi
+          wc -c corpus/processed/corpus.jsonl
+
+      - name: Cache tokenised corpus
+        uses: actions/cache@v4
+        with:
+          path: training/cache
+          key: tokcache-${{ hashFiles('corpus/processed/corpus.jsonl.gz', 'tokenizer/shennong-bpe/tokenizer.json') }}
+
+      - name: Fetch checkpoint
+        if: ${{ inputs.resume }}
+        run: |
+          mkdir -p training/runs/seed
+          curl -sSL -o training/runs/seed/ckpt-best.pt \
+            https://github.com/cptlight/shennong/releases/download/ckpt-base/ckpt-best.pt
+          ls -l training/runs/seed/ckpt-best.pt
+
+      - name: Train
+        env:
+          OMP_NUM_THREADS: ${{ inputs.threads }}
+          MKL_NUM_THREADS: ${{ inputs.threads }}
+        run: |
+          RESUME=""
+          if [ "${{ inputs.resume }}" = "true" ]; then RESUME="--resume training/runs/seed/ckpt-best.pt"; fi
+          python training/train_pretrain.py \
+            --config model/configs/shennong-moe-cpu.json \
+            --run-name "${{ inputs.run_name }}" \
+            --steps "${{ inputs.steps }}" \
+            --lr "${{ inputs.lr }}" \
+            --warmup 20 \
+            --threads "${{ inputs.threads }}" \
+            $RESUME
+
+      - name: Report
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p = pathlib.Path("training/runs/${{ inputs.run_name }}/metrics.json")
+          d = json.loads(p.read_text())
+          print(f"run {d['run_id']} steps={d['steps_completed']} tokens={d['tokens_seen']:,} "
+                f"val={d.get('final_val_loss')} tok/s={d.get('tokens_per_s')}")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ckpt-${{ inputs.run_name }}
+          path: |
+            training/runs/${{ inputs.run_name }}/ckpt-best.pt
+            training/runs/${{ inputs.run_name }}/metrics.json
+          retention-days: 30

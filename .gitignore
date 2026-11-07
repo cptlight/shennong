@@ -45,3 +45,6 @@ models/baseline/
 # merged corpus (reproducible from committed parts)
 corpus/processed/corpus-full.jsonl
 artifacts/adapters/
+
+# 5.4GB upcycled MoE weights — regenerate with scripts/upcycle_moe.py
+artifacts/upcycled-moe/

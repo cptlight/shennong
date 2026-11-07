@@ -81,7 +81,7 @@ def main() -> int:
         # A CPU run of a 1.5B LoRA is ~100x slower — refuse instead of silently burning the session.
         raise SystemExit("PREFLIGHT FAIL: torch sees no GPU (device: CPU). "
                          "Runtime -> Change runtime type -> Hardware accelerator: T4 GPU, then re-run.")
-    tok = AutoTokenizer.from_pretrained(BASE_MODEL)
+    tok = AutoTokenizer.from_pretrained(args.base)
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     # Load fp32 and let the Trainer's fp16=True do mixed precision (fp32 master weights, fp16 autocast).

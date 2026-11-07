@@ -77,6 +77,10 @@ def main() -> int:
     from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer
 
     print(f"device: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+    if not torch.cuda.is_available():
+        # A CPU run of a 1.5B LoRA is ~100x slower — refuse instead of silently burning the session.
+        raise SystemExit("PREFLIGHT FAIL: torch sees no GPU (device: CPU). "
+                         "Runtime -> Change runtime type -> Hardware accelerator: T4 GPU, then re-run.")
     tok = AutoTokenizer.from_pretrained(BASE_MODEL)
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token

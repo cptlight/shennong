@@ -92,18 +92,20 @@ def fuse(claim: str, proposals: list[Proposal]) -> Consensus:
                     f"{p.domain} does not support (score {p.score:.2f}): {p.rationale}")
 
     n_domains = len(proposals)
-    if agreement == n_domains:
+    # Ranges, not individual values: an earlier version only handled agreement == 1/2/3 (and the two top
+    # cases), so a 5-of-8 consensus fell through to "rejected" — a real mislabel. Keep this monotone.
+    if agreement == 0:
+        verdict = "no supporting domain — rejected"
+    elif agreement == n_domains:
         verdict = f"all {n_domains} domain experts agree — strongest cross-domain interpolation"
     elif agreement >= n_domains - 1:
         verdict = f"{agreement}/{n_domains} independent domains agree — a genuine interpolation"
-    elif agreement == 3:
-        verdict = "three-domain support — a genuine interpolation, worth an assay"
+    elif agreement >= 3:
+        verdict = f"{agreement}-domain support — a genuine interpolation, worth an assay"
     elif agreement == 2:
         verdict = "two-domain support — hypothesis, not yet a finding"
-    elif agreement == 1:
-        verdict = "single-domain assertion — NOT an interpolation, shown for completeness"
     else:
-        verdict = "no supporting domain — rejected"
+        verdict = "single-domain assertion — NOT an interpolation, shown for completeness"
 
     return Consensus(claim, sorted(proposals, key=lambda p: -p.score), agreement,
                      consensus, verdict, disagreements)

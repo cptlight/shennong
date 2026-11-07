@@ -469,22 +469,22 @@ function askThis(q){ const inp=document.getElementById('q'); if(inp){inp.value=q
 
 function tabAsk(){
   let h = `<section><h2>Ask the model — free form, live</h2>
-  <p class="note">Type anything, then choose <b>Answer</b> or <b>Propose a hypothesis</b>. One retrieval path serves both:
-  the question goes to the model,
-  BM25 retrieves passages from the 45.6 M-character corpus, the passages are put in front of the model,
-  and the model continues. <b>No keyword dispatch, no table lookup, no canned answer.</b> The retrieved
-  passages are shown so you can check every claim against what it was generated over.</p>
+  <p class="note">Type any question about the two tracks. The fine-tuned 1.5 B answers <b>from its own weights</b> —
+  direct generation, no retrieval, no injected passages, no lookup. Before it answers, a semantic router
+  activates the experts that question needs (phytochemistry, toxicology, theory, ADME, operator…) and the
+  others stay off. The exact prompt and decode are shown so every answer is reproducible.</p>
+  <p class="note">On CPU: an answer takes ~40 s, the side-by-side comparison ~90 s. The experts appear instantly.</p>
   <div id="askbox" class="warn">checking for a live inference endpoint…</div>
   <div id="askform" style="display:none;margin:0 0 16px">
     <textarea id="q" rows="3" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;
-      font:inherit;background:#fff" placeholder="e.g. Why is 附子 processed before use?  ·  Which herbs are recorded with 烏頭?  ·  What does 本草綱目 say about 甘草?"></textarea>
-    <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
-      <button id="go" style="padding:8px 16px;border:0;border-radius:8px;background:var(--red);color:#fff;
+      font:inherit;background:#fff" placeholder="e.g. Why is 附子 processed before use?  ·  Which herbs are incompatible with 烏頭?  ·  What compound class is in Salvia miltiorrhiza?"></textarea>
+    <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <button id="go" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;
         font:inherit;font-weight:600;cursor:pointer">Answer</button>
-      <button id="goh" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;
-        font:inherit;font-weight:600;cursor:pointer">Propose a hypothesis</button>
-      <label style="font-size:13px;color:var(--muted)">passages
-        <input id="k" type="number" min="1" max="10" value="5" style="width:52px;padding:4px"></label>
+      <button id="goc" style="padding:8px 16px;border:0;border-radius:8px;background:#fff;color:var(--ink);
+        border:1px solid var(--line);font:inherit;cursor:pointer">Compare with unfine-tuned</button>
+      <button id="goh" style="padding:8px 16px;border:0;border-radius:8px;background:var(--red);color:#fff;
+        font:inherit;cursor:pointer">Propose a hypothesis</button>
       <span id="stat" style="font-size:13px;color:var(--muted)"></span>
     </div>
   </div>
@@ -528,7 +528,13 @@ async function askInit(){
   const af = document.getElementById('askform');
   af.parentNode.insertBefore(qgrid, af);
   const form = document.getElementById('askform');
-  // 1) prefer a real server (full pipeline: retrieval + model + citations)
+  // The box is usable immediately — never wait on a probe before letting the judge type. The probe only
+  // annotates the status line and downgrades the message if this copy has no server behind it.
+  form.style.display = 'block';
+  document.getElementById('go').onclick = () => doAsk('query');
+  document.getElementById('goc').onclick = () => doAsk('compare');
+  document.getElementById('goh').onclick = () => doAsk('hypothesize');
+  document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) doAsk('query'); });
   try {
     const r = await fetch('/api/model');
     const m = await r.json();
@@ -538,8 +544,6 @@ async function askInit(){
       document.getElementById('stat').textContent =
         `server · ${m.family.toUpperCase()} · ${(m.params/1e6).toFixed(2)} M params` +
         (m.active_params ? ` (${(m.active_params/1e6).toFixed(2)} M active)` : '') + ` · ${m.checkpoint}`;
-      document.getElementById('go').onclick = () => doAsk('query');
-      document.getElementById('goh').onclick = () => doAsk('hypothesize');
       document.getElementById('q').focus();
       return;
     }
@@ -566,21 +570,76 @@ async function doAsk(mode){
   if (!q) return;
   const out = document.getElementById('askout');
   const stat = document.getElementById('stat');
-  const k = Number(document.getElementById('k').value || 5);
-  out.innerHTML = '<p class="note">retrieving and generating…</p>';
+  const t0 = Date.now();
+  out.innerHTML = '<p class="note">asking…</p>';
   stat.textContent = 'running…';
+  // 1) semantic expert activation — instant, and shown before the answer
   try {
-    const endpoint = mode === 'hypothesize' ? '/api/hypothesize' : '/api/compare';
-    const r = await fetch(endpoint,
-      {method:'POST', headers:{'Content-Type':'application/json'},
-       body: JSON.stringify({question:q, k:k, max_new_tokens: mode === 'hypothesize' ? 96 : 56})});
+    const er = await fetch('/api/advise', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({question:q})});
+    if (er.ok) renderAdvice(out, await er.json());
+  } catch (e) { /* router is optional; the answer still runs */ }
+  // 2) the answer
+  try {
+    const endpoint = mode === 'hypothesize' ? '/api/hypothesize'
+                   : mode === 'compare' ? '/api/compare' : '/api/query';
+    const r = await fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({question:q, k:5,
+        max_new_tokens: mode === 'hypothesize' ? 96 : (mode === 'compare' ? 40 : 32)})});
     const d = await r.json();
-    stat.textContent = 'server';
-    if (mode === 'hypothesize') { renderServerResult(out, d, mode); }
-    else { renderCompare(out, d); }
+    stat.textContent = 'answered in ' + Math.round((Date.now()-t0)/1000) + ' s';
+    if (mode === 'hypothesize') renderServerResult(out, d, 'hypothesize');
+    else if (mode === 'compare') renderCompare(out, d);
+    else renderAnswer(out, d);
   } catch (e) {
-    out.innerHTML = '<div class="warn">Request failed: ' + esc(String(e)) + '</div>';
+    out.insertAdjacentHTML('beforeend', '<div class="warn">Request failed or timed out: ' + esc(String(e)) + '</div>');
   }
+}
+
+function renderAdvice(out, d){
+  if (!d || d.ok === false) { out.innerHTML=''; return; }
+  const r = d.routed || {}, p = d.parsed || {}, c = d.consensus || {}, a = d.arbiter || {};
+  const chips = (r.experts||[]).map(e => '<span style="padding:3px 10px;border-radius:999px;background:var(--green);color:#fff;font-size:12px">'+esc(e)+'</span>').join(' ');
+  let h = '<div class="card" style="margin-bottom:14px">';
+  h += '<h3>Request understood → routed to '+esc(String(r.n_active||0))+' of 12 experts</h3>';
+  h += '<p class="note">parsed: drug <b>'+esc(p.drug||'—')+'</b>'+(p.binomial?' ('+esc(p.binomial)+')':'')+
+       ' · process <b>'+esc(p.process||'—')+'</b> · compound class <b>'+esc(p.chemotype||'—')+'</b></p>';
+  h += '<div style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0">'+chips+'</div>';
+  h += '<p class="note">why: '+esc(Object.entries(r.why||{}).map(([k,v])=>k+' — '+v).join(' · '))+'</p>';
+  h += '</div>';
+
+  // each expert's actual verdict
+  h += '<h2 style="margin-top:18px">Expert feedback</h2><table><thead><tr><th>expert</th><th>score</th><th>verdict</th></tr></thead><tbody>';
+  (d.feedback||[]).forEach(f => {
+    h += '<tr><td><b>'+esc(f.expert)+'</b></td><td>'+(f.score===null?'—':esc(String(f.score)))+'</td>'+
+         '<td>'+esc(f.rationale||'')+'</td></tr>';
+  });
+  h += '</tbody></table>';
+
+  if (c.label) {
+    h += '<p class="note" style="margin-top:10px"><b>Consensus:</b> '+esc(c.label)+' · score '+esc(String(c.score))+
+         ' — <b>'+esc(c.verdict||'')+'</b></p>';
+  }
+  if (a.verdict) {
+    h += '<p class="note"><b>Physics arbiter:</b> '+esc(a.verdict)+'</p>';
+  }
+  h += '<p class="note" id="answait">generating the answer from its weights…</p>';
+  out.innerHTML = h;
+}
+
+function renderAnswer(out, d){
+  const wait = document.getElementById('answait'); if (wait) wait.remove();
+  if (!d || d.ok === false) {
+    out.insertAdjacentHTML('beforeend', '<div class="warn"><b>' + (d && d.blocked ? 'Blocked' : 'No answer') +
+      '.</b> ' + esc((d && (d.reason || d.error)) || '') + '</div>');
+    return;
+  }
+  let h = '<div class="card"><h3>Answer — fine-tuned 1.5 B, from its own weights</h3>';
+  if (d.model) h += '<p style="font-size:12px;color:#6b6157">model: <span class="mono">' + esc(d.model) + '</span></p>';
+  h += '<p style="font-size:12px;color:#6b6157">prompt: <span class="mono">' + esc(d.prompt || '') + '</span></p>';
+  h += '<pre style="white-space:pre-wrap;margin:8px 0">' + esc(d.answer || '') + '</pre>';
+  h += '<p class="note">Direct generation. No retrieval, no injected passage — the model either knows it or it does not.</p></div>';
+  out.insertAdjacentHTML('beforeend', h);
 }
 
 function renderCompare(out, d){
@@ -892,7 +951,7 @@ def main() -> int:
     import re as _re
     tabs_line = _re.search(r"const TABS = \{(.*?)\};", html, _re.S)
     # functions invoked from HTML handlers or tab wiring — a missing one is a dead button at runtime
-    required = ["askInit", "doAsk", "renderServerResult", "screenInit", "doScreen", "renderScreen", "show", "esc"]
+    required = ["askInit", "doAsk", "renderServerResult", "renderAdvice", "renderAnswer", "screenInit", "doScreen", "renderScreen", "show", "esc"]
     missing = [f for f in required
                if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (f, f), html)]
     if missing:

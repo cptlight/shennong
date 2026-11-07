@@ -85,6 +85,18 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/hypothesize":
             return self._json(hypothesise_live(q, max_new_tokens=mt))
+        if self.path == "/api/advise":
+            try:
+                from shennong.advise import advise
+                return self._json(advise(q))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
+        if self.path == "/api/experts":
+            try:
+                from shennong.experts.router import route_query
+                return self._json(route_query(q))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/screen":
             try:
                 from shennong.screen import fused_screen

@@ -96,10 +96,15 @@ def main() -> int:
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
 
-    # Granite is natively bfloat16; a T4 has no bf16, so force fp16 with fp32 master weights.
+    # fp16 weights produce fp16 gradients, and the GradScaler then dies with
+    # "Attempting to unscale FP16 gradients". Full fine-tune therefore keeps fp32 master weights and lets
+    # autocast handle fp16 compute; LoRA can stay fp16 because only the adapters get gradients.
+    load_dtype = torch.float32 if args.full_finetune else (
+        torch.float16 if torch.cuda.is_available() else torch.float32)
     model = AutoModelForCausalLM.from_pretrained(
-        args.base, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        args.base, torch_dtype=load_dtype,
         device_map="auto" if torch.cuda.is_available() else None)
+    print(f"loaded in {str(load_dtype).replace('torch.','')}")
     print(f"params: {sum(p.numel() for p in model.parameters()):,}")
 
     if args.full_finetune:
@@ -130,7 +135,7 @@ def main() -> int:
     batch = args.batch
     accum = 4
     if args.full_finetune and args.batch == 4:
-        batch, accum = 2, 8      # same effective batch, half the activation memory on a T4
+        batch, accum = 1, 16     # fp32 weights+grads need the headroom; keep the effective batch at 16
         print(f"full fine-tune: batch {batch} x accum {accum} (effective {batch*accum})")
 
     train_rows = load_examples("train")

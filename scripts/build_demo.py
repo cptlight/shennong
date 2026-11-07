@@ -780,7 +780,11 @@ async function doScreen(){
       body:JSON.stringify({question:tgt})});
     const d = await r.json();
     renderScreen(d, tgt);
-  }catch(e){ out.innerHTML='<p class="warn">screening failed: '+esc(String(e))+'</p>'; }
+  }catch(e){
+    out.innerHTML='<p class="warn">This static page has no screening endpoint. The three-layer screen runs in '+
+      'the live workbench (<span class="mono">make workbench</span> → <span class="mono">/demo/</span>) or the '+
+      'Hugging Face Space. The other tabs show the full pipeline results offline.</p>';
+  }
 }
 
 function renderScreen(d, tgt){

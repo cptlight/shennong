@@ -1,0 +1,87 @@
+[
+ {
+  "chembl_id": "CHEMBL1254699",
+  "smiles": "CC(=O)Nc1ccc(-c2cc(C(=O)O)c3cccc(C(=O)c4ccccc4)c3n2)cc1",
+  "value_nM": "80.0"
+ },
+ {
+  "chembl_id": "CHEMBL1254700",
+  "smiles": "CC(=O)Nc1ccc(-c2cc(C(=O)O)c3cc(C(=O)c4ccccc4)ccc3n2)cc1",
+  "value_nM": "85.0"
+ },
+ {
+  "chembl_id": "CHEMBL1254784",
+  "smiles": "CS(=O)(=O)c1ccc(-c2cc(C(=O)O)c3cccc(C(=O)c4ccccc4)c3n2)cc1",
+  "value_nM": "69.0"
+ },
+ {
+  "chembl_id": "CHEMBL1254785",
+  "smiles": "CS(=O)(=O)c1ccc(-c2cc(C(=O)O)c3cc(C(=O)c4ccccc4)ccc3n2)cc1",
+  "value_nM": "77.0"
+ },
+ {
+  "chembl_id": "CHEMBL1254872",
+  "smiles": "[N-]=[N+]=Nc1ccc(-c2cc(C(=O)O)c3cccc(C(=O)c4ccccc4)c3n2)cc1",
+  "value_nM": "57.0"
+ },
+ {
+  "chembl_id": "CHEMBL1254873",
+  "smiles": "[N-]=[N+]=Nc1ccc(-c2cc(C(=O)O)c3cc(C(=O)c4ccccc4)ccc3n2)cc1",
+  "value_nM": "77.0"
+ },
+ {
+  "chembl_id": "CHEMBL579203",
+  "smiles": "CS(=O)(=O)c1ccc(-c2cc(C(=O)O)c3ccccc3n2)cc1",
+  "value_nM": "91.0"
+ },
+ {
+  "chembl_id": "CHEMBL118",
+  "smiles": "Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1",
+  "value_nM": "60.0"
+ },
+ {
+  "chembl_id": "CHEMBL5193790",
+  "smiles": "COc1ccc2cc(C(C)C(=O)O/N=C(\\N)c3ccc(OC)c(OC)c3)ccc2c1",
+  "value_nM": "6.4"
+ },
+ {
+  "chembl_id": "CHEMBL5174073",
+  "smiles": "COc1ccc2cc(C(C)C(=O)O/N=C(\\N)c3ccc(Cl)cc3)ccc2c1",
+  "value_nM": "7.15"
+ },
+ {
+  "chembl_id": "CHEMBL118",
+  "smiles": "Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1",
+  "value_nM": "42.6"
+ },
+ {
+  "chembl_id": "CHEMBL5200917",
+  "smiles": "C/C(=N/Nc1ccc(C(=O)O)cc1)c1cccc(N2C(=O)c3ccccc3C2=O)c1",
+  "value_nM": "110.0"
+ },
+ {
+  "chembl_id": "CHEMBL5196989",
+  "smiles": "COc1ccc(/C=C/C(=O)c2cccc(N3C(=O)c4ccccc4C3=O)c2)cc1OC",
+  "value_nM": "170.0"
+ },
+ {
+  "chembl_id": "CHEMBL118",
+  "smiles": "Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1",
+  "value_nM": "90.0"
+ },
+ {
+  "chembl_id": "CHEMBL118",
+  "smiles": "Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1",
+  "value_nM": "160.0"
+ },
+ {
+  "chembl_id": "CHEMBL5198027",
+  "smiles": "CC1=C(CC(=O)Sc2ccccc2)c2cc(F)ccc2/C1=C\\c1ccc([S+](C)[O-])cc1",
+  "value_nM": "1200.0"
+ },
+ {
+  "chembl_id": "CHEMBL5591030",
+  "smiles": "O=C1NNC(/N=C\\Cc2ccc([N+](=O)[O-])cc2)/C1=N\\Nc1ccc(-c2nc3ccccc3o2)cc1",
+  "value_nM": "560.0"
+ }
+]

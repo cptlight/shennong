@@ -1,0 +1,121 @@
+{
+  "target_query": "COX2",
+  "target": {
+    "chembl_id": "CHEMBL4033",
+    "name": "Cyclooxygenase-2",
+    "type": "SINGLE PROTEIN"
+  },
+  "n_actives": 135,
+  "n_compounds_screened": 23177,
+  "method": "ECFP4 (Morgan r=2, 2048) Tanimoto vs known actives",
+  "top": [
+    {
+      "name": "butylphthalide",
+      "smiles": "CCCCC1C2=CC=CC=C2C(=O)O1",
+      "plant_binomial": "Angelica sinensis",
+      "compound_class": "unclassified",
+      "tanimoto": 0.425,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "butylphthalide",
+      "smiles": "CCCCC1C2=CC=CC=C2C(=O)O1",
+      "plant_binomial": "Conioselinum anthriscoides",
+      "compound_class": "unclassified",
+      "tanimoto": 0.425,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "butylphthalide",
+      "smiles": "CCCCC1C2=CC=CC=C2C(=O)O1",
+      "plant_binomial": "Ligusticum chuanxiong",
+      "compound_class": "unclassified",
+      "tanimoto": 0.425,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "butylphthalide",
+      "smiles": "CCCCC1C2=CC=CC=C2C(=O)O1",
+      "plant_binomial": "Scutellaria baicalensis",
+      "compound_class": "unclassified",
+      "tanimoto": 0.425,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "1(3H)-Isobenzofuranone, 3-butyl-4-hydroxy-, (S)-",
+      "smiles": "O=C1OC(C=2C(O)=CC=CC12)CCCC",
+      "plant_binomial": "Conioselinum anthriscoides",
+      "compound_class": "unclassified",
+      "tanimoto": 0.3556,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "1(3H)-Isobenzofuranone, 3-butyl-4-hydroxy-, (S)-",
+      "smiles": "O=C1OC(C=2C(O)=CC=CC12)CCCC",
+      "plant_binomial": "Ligusticum chuanxiong",
+      "compound_class": "unclassified",
+      "tanimoto": 0.3556,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "amylbenzene",
+      "smiles": "CCCCCC1=CC=CC=C1",
+      "plant_binomial": "Conioselinum anthriscoides",
+      "compound_class": "terpenoid",
+      "tanimoto": 0.3429,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "amylbenzene",
+      "smiles": "CCCCCC1=CC=CC=C1",
+      "plant_binomial": "Ligusticum chuanxiong",
+      "compound_class": "terpenoid",
+      "tanimoto": 0.3429,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "butyl phenyl ketone",
+      "smiles": "CCCCC(=O)C1=CC=CC=C1",
+      "plant_binomial": "Conioselinum anthriscoides",
+      "compound_class": "unclassified",
+      "tanimoto": 0.3421,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "butyl phenyl ketone",
+      "smiles": "CCCCC(=O)C1=CC=CC=C1",
+      "plant_binomial": "Ligusticum chuanxiong",
+      "compound_class": "unclassified",
+      "tanimoto": 0.3421,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "2-pentanoylbenzoic acid",
+      "smiles": "CCCCC(=O)C1=CC=CC=C1C(=O)O",
+      "plant_binomial": "Angelica sinensis",
+      "compound_class": "unclassified",
+      "tanimoto": 0.3171,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    },
+    {
+      "name": "N-butylbenzenesulfonamide",
+      "smiles": "CCCCNS(=O)(=O)C1=CC=CC=C1",
+      "plant_binomial": "Angelica sinensis",
+      "compound_class": "terpenoid",
+      "tanimoto": 0.3171,
+      "matched_active": "CHEMBL101",
+      "matched_active_nM": "3790.0"
+    }
+  ]
+}

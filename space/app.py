@@ -48,6 +48,17 @@ class Handler(BaseHTTPRequestHandler):
     def _json(self, obj, code=200):
         self._send(code, json.dumps(obj, ensure_ascii=False).encode(), "application/json; charset=utf-8")
 
+    def do_OPTIONS(self):
+        """CORS preflight. Without this, a browser that preflights a JSON POST gets BaseHTTPRequestHandler's
+        501 "unsupported method" and the request dies — which looked like the demo stalling."""
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Max-Age", "86400")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
     def do_GET(self):
         path = self.path.split("?")[0]
         if path in ("/", "/index.html"):

@@ -551,7 +551,8 @@ async function askInit(){
 
   // 2) no server on this copy — point at a live instance instead of pretending to run one
   WB.mode = 'none';
-  box.innerHTML = `<b>This copy is static, so it cannot run the model.</b>
+  box.className = '';
+  box.innerHTML = `<b>No live inference endpoint was detected on this copy.</b>
     The page is generated from the repository's artefacts, so every figure here is real — but inference needs
     a process. Two live options:<br><br>
     <b>1 · Hosted demo (Hugging Face Space)</b> — the same page with the model behind it.<br>
@@ -559,7 +560,7 @@ async function askInit(){
     <span class="mono">/demo/</span> on the printed URL. The ask box detects the endpoint and enables itself.<br><br>
     <b>3 · Codespace</b> — open the repo in a codespace, run <span class="mono">make workbench</span>,
     and use the forwarded URL.`;
-  form.style.display = 'none';
+  // keep the box usable: if the endpoint is actually there (probe raced), typing still works
   return;
 }
 
@@ -577,8 +578,13 @@ async function doAsk(mode){
   try {
     const er = await fetch('/api/advise', {method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({question:q})});
-    if (er.ok) renderAdvice(out, await er.json());
-  } catch (e) { /* router is optional; the answer still runs */ }
+    const ed = await er.json().catch(() => null);
+    if (ed && ed.ok) { renderAdvice(out, ed); }
+    else {
+      out.insertAdjacentHTML('beforeend', '<div class="warn">Expert routing unavailable (HTTP ' + esc(String(er.status)) +
+        (ed && ed.error ? ': ' + esc(ed.error) : '') + '). The model answer below is unaffected.</div>');
+    }
+  } catch (e) { console.warn('advise stage failed:', String(e)); }
   // 2) the answer
   try {
     const endpoint = mode === 'hypothesize' ? '/api/hypothesize'
@@ -597,7 +603,7 @@ async function doAsk(mode){
 }
 
 function renderAdvice(out, d){
-  if (!d || d.ok === false) { out.innerHTML=''; return; }
+  if (!d || d.ok === false || (!d.answer && (d.error || d.status))) { out.innerHTML=''; return; }
   const r = d.routed || {}, p = d.parsed || {}, c = d.consensus || {}, a = d.arbiter || {};
   const chips = (r.experts||[]).map(e => '<span style="padding:3px 10px;border-radius:999px;background:var(--green);color:#fff;font-size:12px">'+esc(e)+'</span>').join(' ');
   let h = '<div class="card" style="margin-bottom:14px">';
@@ -629,7 +635,7 @@ function renderAdvice(out, d){
 
 function renderAnswer(out, d){
   const wait = document.getElementById('answait'); if (wait) wait.remove();
-  if (!d || d.ok === false) {
+  if (!d || d.ok === false || (!d.answer && (d.error || d.status))) {
     out.insertAdjacentHTML('beforeend', '<div class="warn"><b>' + (d && d.blocked ? 'Blocked' : 'No answer') +
       '.</b> ' + esc((d && (d.reason || d.error)) || '') + '</div>');
     return;

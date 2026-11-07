@@ -1134,6 +1134,7 @@ class Handler(BaseHTTPRequestHandler):
     def _send(self, code, body: bytes, ctype="application/json; charset=utf-8", cache=False):
         self.send_response(code)
         self.send_header("Content-Type", ctype)
+        self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Cache-Control", "public, max-age=60" if cache else "no-store")
@@ -1150,6 +1151,17 @@ class Handler(BaseHTTPRequestHandler):
         self._json(dict(error=msg, status=code), code)
 
     # --- routing ---------------------------------------------------------------------------
+    def do_OPTIONS(self):
+        """CORS preflight. Without this, a browser that preflights a JSON POST gets BaseHTTPRequestHandler's
+        501 "unsupported method" and the request dies — which looked like the demo stalling."""
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Max-Age", "86400")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
     def do_GET(self):
         u = urlparse(self.path)
         path = u.path
@@ -1253,8 +1265,7 @@ class Handler(BaseHTTPRequestHandler):
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.answer import answer_direct
                 return self._json(answer_direct(str(payload.get("question") or payload.get("q") or ""),
-                                                  int(payload.get("k") or 5),
-                                                  int(payload.get("max_new_tokens") or 72)))
+                                                  max_new_tokens=int(payload.get("max_new_tokens") or 72)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/chat":
@@ -1268,6 +1279,14 @@ class Handler(BaseHTTPRequestHandler):
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path != "/api/ask":
+            # drain the body first: an unread request body desyncs the keep-alive connection and the next
+            # request line is parsed as "{}POST" -> 501 (this is exactly what broke the demo's probes)
+            try:
+                _n = int(self.headers.get("Content-Length") or 0)
+                if _n:
+                    self.rfile.read(min(_n, 65536))
+            except Exception:  # noqa: BLE001
+                pass
             return self._err(404, f"no route {u.path}")
         try:
             n = int(self.headers.get("Content-Length") or 0)

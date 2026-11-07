@@ -6,17 +6,17 @@
 {"id": 5, "kind": "target", "question": "What gene target does Crotalaria juncea affect?", "gold": "Crotalaria juncea contains phytochemicals that target STK33.", "key": "Crotalaria juncea"}
 {"id": 6, "kind": "name_mapping", "question": "What is the modern botanical name of Indian Squirrel Tail?", "gold": "Indian Squirrel Tail -> Colebrookea oppositifolia.", "key": "Colebrookea oppositifolia"}
 {"id": 7, "kind": "target", "question": "What gene target does Lonicera japonica affect?", "gold": "Lonicera japonica contains phytochemicals that target FABP4.", "key": "Lonicera japonica"}
-{"id": 8, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 腳氣皆因脾胃虧損?", "gold": "血弱筋虛 — 《普濟方》 (jicheng.tw, CC0).", "key": "血弱筋虛"}
+{"id": 8, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 肺積?", "gold": "半夏（湯泡）桂心人參（去蘆）吳茱萸（湯泡）桑白皮（炙）葶藶甘草（炙，各一錢半）上作一服，用水二盅，生薑五片，紅棗二枚，煎一盅，食前服 — 《奇效良方》 (jicheng.tw, CC0).", "key": "桂心人參"}
 {"id": 9, "kind": "use", "question": "What is Curcuma longa used for in Indian medicine?", "gold": "Recorded use: jaundice (Ayurveda,Homeopathy,Siddha,Sowa Rigpa,Unani).", "key": "jaundice (Ayurveda,Homeo"}
 {"id": 10, "kind": "name_mapping", "question": "What is the Chinese name of Isatis tinctoria?", "gold": "Isatis tinctoria is called 菘蓝 in Chinese.", "key": "菘蓝"}
 {"id": 11, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:茯苓桂枝白朮甘草湯?", "gold": "Formula ws_zh_shanghanlun:茯苓桂枝白朮甘草湯: 茯苓, 桂枝, 甘草各, 水, 煮取.", "key": "茯苓桂枝白朮甘草湯"}
 {"id": 12, "kind": "pharmacology", "question": "What disease target does Polyporus umbellatus affect, and through which compound class?", "gold": "Polyporus umbellatus contains alkaloid compounds, which act on muscarinic/nicotinic acetylcholine receptors — relevant to CNS and neuromuscular disorders.", "key": "Polyporus umbellatus"}
-{"id": 13, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 七情氣滯?", "gold": "胸脅悶痞，咽喉不利，嘔喘而浮，二便不調或氣攻肩背，脅肋作痛，或腳氣喘急，腹脹便閉 — 《金匱啟鑰（婦科）》 (jicheng.tw, CC0).", "key": "二便不調或氣攻肩背"}
+{"id": 13, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 疥蟲䘌瘡?", "gold": "腎臟即衰，煅磁石而強陽道 — 《珍珠囊補遺藥性賦》 (jicheng.tw, CC0).", "key": "珍珠囊補遺藥性賦"}
 {"id": 14, "kind": "target", "question": "What gene target does Conium maculatum affect?", "gold": "Conium maculatum contains phytochemicals that target FYN.", "key": "Conium maculatum"}
 {"id": 15, "kind": "use", "question": "What is 蛀末 recorded to treat?", "gold": "Recorded use: 湯火傷瘡. Modern reading: sore. (pre-modern claim; not clinical advice)", "key": "湯火傷瘡"}
 {"id": 16, "kind": "target", "question": "What gene target does Hypericum calycinum affect?", "gold": "Hypericum calycinum contains phytochemicals that target MAP2K2.", "key": "Hypericum calycinum"}
-{"id": 17, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 目中瘀赤澀昏?", "gold": "時珍曰：戎鹽功同食鹽，不經煎煉，而味鹹帶甘，入藥似勝 — 《本草綱目》 (jicheng.tw, CC0).", "key": "戎鹽功同食鹽"}
-{"id": 18, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 法又當量其人之虛實?", "gold": "究其病之源委 — 《瘋門全書》 (jicheng.tw, CC0).", "key": "究其病之源委"}
+{"id": 17, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 怒氣傷肝脅痛?", "gold": "廣木香橘紅青皮柴胡白芍當歸（各一錢五分）官桂（六分）沉香枳殼（各一錢）水煎熱服 — 《丹臺玉案》 (jicheng.tw, CC0).", "key": "廣木香橘紅青皮柴胡白芍當歸"}
+{"id": 18, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 驚風潮熱?", "gold": "天竺黃散方天竺黃鬱金（各二錢）甘草（炙，三錢）硃砂麝香（各少許，別研）山梔子仁（十個）乾葛全蠍（炙）馬牙硝（各一分）殭蠶（七個炒）蟬蛻（三、七個，洗，去尾、頭、足）上件為末，入硃砂、麝香和勻、再勻 — 《幼幼新書》 (jicheng.tw, CC0).", "key": "天竺黃散方天竺黃鬱金"}
 {"id": 19, "kind": "target", "question": "What gene target does Dasiphora fruticosa affect?", "gold": "Dasiphora fruticosa contains phytochemicals that target USP2.", "key": "Dasiphora fruticosa"}
 {"id": 20, "kind": "use", "question": "What is 麥麩 recorded to treat?", "gold": "Recorded use: 水調服. (pre-modern claim; not clinical advice)", "key": "水調服"}
 {"id": 21, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 廉薑?", "gold": "Nature 熱, flavours 辛, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
@@ -56,14 +56,14 @@
 {"id": 55, "kind": "compound", "question": "What compound class is recorded in Angelica dahurica?", "gold": "Angelica dahurica contains unclassified compounds (per the corpus compound table).", "key": "Angelica dahurica"}
 {"id": 56, "kind": "use", "question": "What is Vitis vinifera used for in Indian medicine?", "gold": "Recorded use: antispasmodics (Ayurveda,Siddha,Sowa Rigpa,Unani).", "key": "antispasmodics (Ayurveda"}
 {"id": 57, "kind": "target", "question": "What gene target does Ficus lacor affect?", "gold": "Ficus lacor contains phytochemicals that target GAA.", "key": "Ficus lacor"}
-{"id": 58, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 連年積冷流注?", "gold": "心胸痛，並冷氣上衝，落馬，墜車、血疾等皆主之，忌口如常法 — 《經方例釋》 (jicheng.tw, CC0).", "key": "血疾等皆主之"}
+{"id": 58, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 臨產穩婆不慎?", "gold": "蜜耆當歸炙術炒芍（各三錢）人參炙草（各一錢）生薑、紅棗引 — 《彤園醫書·婦人科》 (jicheng.tw, CC0).", "key": "蜜耆當歸炙術炒芍"}
 {"id": 59, "kind": "pharmacology", "question": "What disease target does Crocus sativus affect, and through which compound class?", "gold": "Crocus sativus contains terpenoid compounds, which act on heme / PfATP6 (artemisinin) — relevant to malaria.", "key": "Crocus sativus"}
-{"id": 60, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 一切惡瘡?", "gold": "十年不愈者，用之良，故也 — 《痘治理辨》 (jicheng.tw, CC0).", "key": "十年不愈者"}
+{"id": 60, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 凍耳成瘡?", "gold": "柏葉（三兩，微炙，為末）杏仁（四十九枚，湯浸去皮，研成膏）亂髮（兩雞子大）食鹽（細研）乳香（細研，半兩）黃蠟（一兩半）清油（一斤）上先煎油令沸，即下亂髮，以消盡為度，次下諸藥，煎令焦黃，濾去滓，更以綿重濾過，再以慢火煎之，後下乳香黃蠟等，攪令稠稀得所，於瓷器盛，每用鵝翎旋取塗之 — 《奇效良方》 (jicheng.tw, CC0).", "key": "每用鵝翎旋取塗之"}
 {"id": 61, "kind": "use", "question": "What is 芍藥 recorded to treat?", "gold": "Recorded use: 逐賊血. (pre-modern claim; not clinical advice)", "key": "逐賊血"}
 {"id": 62, "kind": "target", "question": "What gene target does Trichosanthes nervifolia affect?", "gold": "Trichosanthes nervifolia contains phytochemicals that target GABRG2.", "key": "Trichosanthes nervifolia"}
 {"id": 63, "kind": "use", "question": "What is Clerodendrum infortunatum used for in Indian medicine?", "gold": "Recorded use: malaria (Ayurveda,Homeopathy,Siddha,Unani).", "key": "malaria (Ayurveda,Homeop"}
 {"id": 64, "kind": "target", "question": "What gene target does Amaranthus spinosus affect?", "gold": "Amaranthus spinosus contains phytochemicals that target DMPK.", "key": "Amaranthus spinosus"}
-{"id": 65, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 風熱氣秘?", "gold": "郁李仁散方郁李仁（去皮尖炒）陳橘皮（去白酒一盞煮乾）京三稜（炮銼各一兩）上三味 — 《聖濟總錄》 (jicheng.tw, CC0).", "key": "郁李仁散方郁李仁"}
+{"id": 65, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 痰涎壅盛?", "gold": "牙皂（苦辛溫，二錢）半夏（苦辛溫，二錢）生甘草（甘寒，七分）加姜三片，水煎 — 《醫學原理》 (jicheng.tw, CC0).", "key": "加姜三片"}
 {"id": 66, "kind": "compound", "question": "What compound class is recorded in Inula britannica?", "gold": "Inula britannica contains flavonoid compounds (per the corpus compound table).", "key": "Inula britannica"}
 {"id": 67, "kind": "target", "question": "What gene target does Bupleurum falcatum affect?", "gold": "Bupleurum falcatum contains phytochemicals that target PSMB1.", "key": "Bupleurum falcatum"}
 {"id": 68, "kind": "use", "question": "What is 逐折 recorded to treat?", "gold": "Recorded use: 療鼠. (pre-modern claim; not clinical advice)", "key": "療鼠"}
@@ -75,30 +75,30 @@
 {"id": 74, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 銀屑?", "gold": "Nature 寒, flavours 辛, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
 {"id": 75, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:大柴胡湯?", "gold": "Formula ws_zh_shanghanlun:大柴胡湯: 柴胡, 黃芩, 芍藥, 半夏, 生薑, 枳實, 大棗, 水, 煮取, 取, 溫服, 大黃.", "key": "大柴胡湯"}
 {"id": 76, "kind": "viability", "question": "For 乌头 (Aconitum carmichaeli), will 炮 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.", "gold": "MAY. The claimed enrichment of alkaloid by 炮 is not supported: modelled median retention is 100% (range 96-100%), dominant loss mechanism volatilisation. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
-{"id": 77, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 脾胃積冷中寒?", "gold": "洞泄倦怠，不思飲食 — 《景岳全書》 (jicheng.tw, CC0).", "key": "洞泄倦怠"}
-{"id": 78, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 濕痰之主藥?", "gold": "（汪機曰：脾胃濕滯、涎化為痰、此非半夏、曷可 — 《本草從新》 (jicheng.tw, CC0).", "key": "脾胃濕滯"}
+{"id": 77, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 赤黑丹兼治惡瘡?", "gold": "搗絞取汁 — 《普濟方》 (jicheng.tw, CC0).", "key": "搗絞取汁"}
+{"id": 78, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 因患頭風?", "gold": "痰厥頭疼，以致瞳神散大，服此：陳皮（去白）半夏（薑製）天花粉梔子仁（炒黑）石膏（煅）黃芩白茯苓膽南星枳殼（炒，各一錢）青黛（六分）上銼劑 — 《審視瑤函》 (jicheng.tw, CC0).", "key": "黃芩白茯苓膽南星枳殼"}
 {"id": 79, "kind": "compound", "question": "What compound class is recorded in Alisma plantago-aquatica?", "gold": "Alisma plantago-aquatica contains terpenoid compounds (per the corpus compound table).", "key": "Alisma plantago"}
 {"id": 80, "kind": "use", "question": "What is 金橘 recorded to treat?", "gold": "Recorded use: 止渴解酲. (pre-modern claim; not clinical advice)", "key": "止渴解酲"}
 {"id": 81, "kind": "use", "question": "What is Phyla nodiflora used for in Indian medicine?", "gold": "Recorded use: colic (Ayurveda,Siddha,Unani).", "key": "colic (Ayurveda,Siddha,U"}
-{"id": 82, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 嬰孩、小兒斑瘡、水痘?", "gold": "退熱解躁 — 《幼幼新書》 (jicheng.tw, CC0).", "key": "退熱解躁"}
+{"id": 82, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 寒疝心痛悶絕?", "gold": "木香（一兩）高良薑（銼）赤芍藥赤茯苓乾薑（炮銼）陳橘皮（湯浸去白瓤焙）訶黎勒（煨用皮）枳殼（麩微炒黃去瓤各半兩）芎藭草豆蔻（去皮）牽牛子（微炒各三兩）上為散 — 《普濟方》 (jicheng.tw, CC0).", "key": "麩微炒黃去瓤各半兩"}
 {"id": 83, "kind": "compound", "question": "What compound class is recorded in Aster scaber?", "gold": "Aster scaber contains terpenoid compounds (per the corpus compound table).", "key": "Aster scaber"}
 {"id": 84, "kind": "name_mapping", "question": "What is Malus baccata also known as?", "gold": "Synonym: Pyrus baccata (botanical synonym).", "key": "Pyrus baccata"}
 {"id": 85, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 天名精?", "gold": "Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade 上品.", "key": "無毒"}
 {"id": 86, "kind": "use", "question": "What is 苜蓿 recorded to treat?", "gold": "Recorded use: 治氣痢. Modern reading: dysentery. (pre-modern claim; not clinical advice)", "key": "治氣痢"}
-{"id": 87, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 妊娠下血不止?", "gold": "名曰漏胎，血儘子死，方用生地八兩，清酒搗汁，服之無時，能多服佳 — 《女科經綸》 (jicheng.tw, CC0).", "key": "方用生地八兩"}
+{"id": 87, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 】上氣?", "gold": "食之多汁，味甘且酸，尤宜與眾果參食 — 《本草綱目》 (jicheng.tw, CC0).", "key": "尤宜與眾果參食"}
 {"id": 88, "kind": "pharmacology", "question": "What disease target does Clematis chinensis affect, and through which compound class?", "gold": "Clematis chinensis contains alkaloid compounds, which act on opioid receptors — relevant to pain.", "key": "Clematis chinensis"}
 {"id": 89, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:生薑瀉心湯?", "gold": "Formula ws_zh_shanghanlun:生薑瀉心湯: 生薑, 甘草, 人參, 乾薑, 黃芩, 半夏, 黃連, 大棗, 水, 煮取, 再煎取, 溫服.", "key": "生薑瀉心湯"}
 {"id": 90, "kind": "target", "question": "What gene target does Melissa officinalis affect?", "gold": "Melissa officinalis contains phytochemicals that target NMUR2.", "key": "Melissa officinalis"}
 {"id": 91, "kind": "use", "question": "What is Origanum vulgare used for in Indian medicine?", "gold": "Recorded use: antirheumatic agents (Ayurveda,Unani).", "key": "antirheumatic agents (Ay"}
 {"id": 92, "kind": "name_mapping", "question": "What is the modern botanical name of Indian Aspen?", "gold": "Indian Aspen -> Acronychia pedunculata.", "key": "Acronychia pedunculata"}
-{"id": 93, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 大病後?", "gold": "虛煩不得眠，兼治驚悸 — 《醫學綱目》 (jicheng.tw, CC0).", "key": "虛煩不得眠"}
-{"id": 94, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 產後虛氣?", "gold": "杏仁橘皮白前人參（各三兩）蘇葉半夏（各一升）桂心（四兩）生薑（半兩）麥門冬（二兩）上㕮咀 — 《普濟方》 (jicheng.tw, CC0).", "key": "杏仁橘皮白前人參"}
+{"id": 93, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 腫滿因積而得?", "gold": "赤小豆陳皮（去白）蘿蔔子白朮（炒）茴香（炒各五錢）木香（二錢炮）甘草（一錢炙）青皮（五錢加以巴豆二錢去殼炒去巴豆不用）上末 — 《普濟方·嬰孩門》 (jicheng.tw, CC0).", "key": "五錢加以巴豆二錢去殼炒去巴豆不用"}
+{"id": 94, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 主病者）?", "gold": "腎為胃關，故少陰厥逆則下焦不化，而為虛滿嘔變，腎病則命門陽氣亦衰，故下泄清泠 — 《類經》 (jicheng.tw, CC0).", "key": "故少陰厥逆則下焦不化"}
 {"id": 95, "kind": "use", "question": "What is 虎杖 recorded to treat?", "gold": "Recorded use: 小兒 病. (pre-modern claim; not clinical advice)", "key": "小兒"}
 {"id": 96, "kind": "use", "question": "What is 昆布 recorded to treat?", "gold": "Recorded use: 破積聚. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)", "key": "破積聚"}
 {"id": 97, "kind": "use", "question": "What is 露水 recorded to treat?", "gold": "Recorded use: 秋露繁時. (pre-modern claim; not clinical advice)", "key": "秋露繁時"}
 {"id": 98, "kind": "use", "question": "What is Morus australis used for in Indian medicine?", "gold": "Recorded use: anthelmintics (Ayurveda,Siddha,Sowa Rigpa,Unani).", "key": "anthelmintics (Ayurveda,"}
 {"id": 99, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 諸鐵器?", "gold": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
-{"id": 100, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 脅痛如有物插?", "gold": "枳殼（炒，二兩半）甘草（炙，七錢半）上為末，每服三錢，食遠蔥白湯調服 — 《古今醫統大全》 (jicheng.tw, CC0).", "key": "食遠蔥白湯調服"}
+{"id": 100, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 一切積聚?", "gold": "沉香（三錢）海金沙（一錢半）輕粉（一錢牽牛末（一兩）上研獨頭蒜丸，如梧桐子大，每服三五十丸，空心用燈心木通湯送下 — 《奇效良方》 (jicheng.tw, CC0).", "key": "空心用燈心木通湯送下"}
 {"id": 101, "kind": "use", "question": "What is Cadaba fruticosa used for in Indian medicine?", "gold": "Recorded use: cathartics (Siddha).", "key": "cathartics (Siddha)."}
 {"id": 102, "kind": "use", "question": "What is 高良薑 recorded to treat?", "gold": "Recorded use: 吐瀉痢疾. Modern reading: dysentery. (pre-modern claim; not clinical advice)", "key": "吐瀉痢疾"}
 {"id": 103, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 石帆?", "gold": "Nature 平, flavours 鹹, channels not recorded, toxicity 無毒, grade —.", "key": "無毒"}
@@ -106,7 +106,7 @@
 {"id": 105, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 屎中骨?", "gold": "Nature 平, flavours 酸, channels not recorded, toxicity 無毒, grade 中品.", "key": "無毒"}
 {"id": 106, "kind": "use", "question": "What is 雲母 recorded to treat?", "gold": "Recorded use: 除邪氣. (pre-modern claim; not clinical advice)", "key": "除邪氣"}
 {"id": 107, "kind": "use", "question": "What is Lycium barbarum used for in Indian medicine?", "gold": "Recorded use: lack of digestive power (Ayurveda,Unani).", "key": "lack of digestive power "}
-{"id": 108, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 病之酒?", "gold": "又有多種，摘錄於左 — 《調疾飲食辯》 (jicheng.tw, CC0).", "key": "調疾飲食辯"}
+{"id": 108, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 眼赤色有氣熱?", "gold": "當歸菊花大黃（炒）黃芩紅花（炒）蘇木梔子（炒）上煎服 — 《銀海精微》 (jicheng.tw, CC0).", "key": "當歸菊花大黃"}
 {"id": 109, "kind": "compound", "question": "What compound class is recorded in Astragalus membranaceus?", "gold": "Astragalus membranaceus contains flavonoid compounds (per the corpus compound table).", "key": "Astragalus membranaceus"}
 {"id": 110, "kind": "formula", "question": "What ingredients are recorded in formula ws_zh_shanghanlun:小陷胸湯?", "gold": "Formula ws_zh_shanghanlun:小陷胸湯: 黃連, 半夏, 栝蔞實大者, 水, 取, 煮取.", "key": "栝蔞實大者"}
 {"id": 111, "kind": "use", "question": "What is 半天河 recorded to treat?", "gold": "Recorded use: 惡毒. (pre-modern claim; not clinical advice)", "key": "惡毒"}
@@ -119,7 +119,7 @@
 {"id": 118, "kind": "name_mapping", "question": "What is Salsola imbricata also known as?", "gold": "Synonym: Salsola baryosma (botanical synonym).", "key": "Salsola baryosma"}
 {"id": 119, "kind": "use", "question": "What is Evolvulus alsinoides used for in Indian medicine?", "gold": "Recorded use: eye diseases (Ayurveda,Siddha,Sowa Rigpa,Unani).", "key": "eye diseases (Ayurveda,S"}
 {"id": 120, "kind": "viability", "question": "For 乌蛇 (Diospyros eriantha), will 煮 enrich its terpenoid content? Give a verdict, the modelled retention and what would refute it.", "gold": "PARTIAL. The claimed enrichment of terpenoid by 煮 is not supported: modelled median retention is 68% (range 30-90%), dominant loss mechanism hydrolysis. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
-{"id": 121, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 一切疔毒?", "gold": "番砂白丁香輕粉乳香蜈蚣（各一錢）血竭麝香（各二錢）金頂砒（六分）均研細末，以蟾酥（一錢），酒化和，打為丸，作短線形，刺疔出血，插入疔孔 — 《外科全生集》 (jicheng.tw, CC0).", "key": "番砂白丁香輕粉乳香蜈蚣"}
+{"id": 121, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 一切老痰鬱痰?", "gold": "結成黏塊，凝滯喉間，吐咯難出，亦 — 《濟陽綱目》 (jicheng.tw, CC0).", "key": "結成黏塊"}
 {"id": 122, "kind": "viability", "question": "For 黄精 (Polygonatum sibiricum), will 蒸 enrich its terpenoid content? Give a verdict, the modelled retention and what would refute it.", "gold": "MAY. The claimed enrichment of terpenoid by 蒸 is not supported: modelled median retention is 84% (range 58-95%), dominant loss mechanism hydrolysis. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
 {"id": 123, "kind": "use", "question": "What is Chlorophytum tuberosum used for in Indian medicine?", "gold": "Recorded use: antifungal agents (Ayurveda,Siddha,Unani).", "key": "antifungal agents (Ayurv"}
 {"id": 124, "kind": "use", "question": "What is Acacia concinna used for in Indian medicine?", "gold": "Recorded use: scabies (Ayurveda,Siddha,Sowa Rigpa,Unani).", "key": "scabies (Ayurveda,Siddha"}
@@ -152,7 +152,7 @@
 {"id": 151, "kind": "target", "question": "What gene target does Grewia villosa affect?", "gold": "Grewia villosa contains phytochemicals that target CIT.", "key": "Grewia villosa"}
 {"id": 152, "kind": "use", "question": "What is 狗尾草 recorded to treat?", "gold": "Recorded use: 以一二莖蘸水戛去惡血. (pre-modern claim; not clinical advice)", "key": "以一二莖蘸水戛去惡血"}
 {"id": 153, "kind": "use", "question": "What is Illicium griffithii used for in Indian medicine?", "gold": "Recorded use: flatulence (Indian medicine).", "key": "Indian medicine"}
-{"id": 154, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 咽喉中如有物?", "gold": "咽吐不利，四味湯方半夏（生薑汁浸一宿湯洗切焙）厚朴（去粗皮生薑汁炙）陳橘皮（湯浸去白焙各一兩）赤茯苓（去黑皮二兩）上四味，粗搗篩，每服三錢匕，水一盞，入生薑一棗大拍碎，煎至六分，去滓食後溫服 — 《聖濟總錄》 (jicheng.tw, CC0).", "key": "生薑汁浸一宿湯洗切焙"}
+{"id": 154, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 陽明病?", "gold": "甘草（二兩炙）大黃（以清酒洗四兩）上㕮咀 — 《普濟方》 (jicheng.tw, CC0).", "key": "以清酒洗四兩"}
 {"id": 155, "kind": "use", "question": "What is Indigofera tinctoria used for in Indian medicine?", "gold": "Recorded use: constipation (Ayurveda,Homeopathy,Siddha,Sowa Rigpa,Unani).", "key": "constipation (Ayurveda,H"}
 {"id": 156, "kind": "compound", "question": "What compound class is recorded in Elsholtzia ciliata?", "gold": "Elsholtzia ciliata contains flavonoid compounds (per the corpus compound table).", "key": "Elsholtzia ciliata"}
 {"id": 157, "kind": "use", "question": "What is Toddalia asiatica used for in Indian medicine?", "gold": "Recorded use: amenorrhea (Ayurveda,Siddha).", "key": "amenorrhea (Ayurveda,Sid"}
@@ -173,10 +173,10 @@
 {"id": 172, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 屋游?", "gold": "Nature 寒, flavours 甘, channels not recorded, toxicity 無毒, grade 下品.", "key": "無毒"}
 {"id": 173, "kind": "viability", "question": "For 巴豆 (Croton tiglium), will 煮 enrich its alkaloid content? Give a verdict, the modelled retention and what would refute it.", "gold": "PARTIAL. The claimed enrichment of alkaloid by 煮 is not supported: modelled median retention is 70% (range 34-90%), dominant loss mechanism hydrolysis. Refuted if a measured retention exceeds 75% — that would contradict the physical model.", "key": "The claimed"}
 {"id": 174, "kind": "name_mapping", "question": "What is Arnebia euchroma also known as?", "gold": "Synonym: Macrotomia perennis (botanical synonym).", "key": "Macrotomia perennis"}
-{"id": 175, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 齒齦出血?", "gold": "口瘡牙宣等症 — 《重訂囊秘喉書》 (jicheng.tw, CC0).", "key": "口瘡牙宣等症"}
+{"id": 175, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 腎中寒氣?", "gold": "溫經木香丸方木香葫蘆巴（炒）補骨脂（炒）巴戟天（去心）蘹香子（炒）桂（去粗皮）艾葉（炒）附子（炮裂去皮臍）青橘皮（去白焙各一兩）上九味，搗羅為末，煉蜜和丸，如梧桐子大，每服二十丸，空心日午臨臥，溫酒或鹽湯下，加至三十丸 — 《聖濟總錄》 (jicheng.tw, CC0).", "key": "溫經木香丸方木香葫蘆巴"}
 {"id": 176, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 蜀漆?", "gold": "Nature 平, flavours 辛, channels not recorded, toxicity 有毒, grade 下品.", "key": "有毒"}
 {"id": 177, "kind": "use", "question": "What is Gnaphalium polycaulon used for in Indian medicine?", "gold": "Recorded use: stomach diseases (Indian medicine).", "key": "Indian medicine"}
-{"id": 178, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 寒咳而用至三兩?", "gold": "微利亦不去乾薑是也 — 《本草思辨錄》 (jicheng.tw, CC0).", "key": "微利亦不去乾薑是也"}
+{"id": 178, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 寒嗽?", "gold": "麻黃、芍藥、桂枝、細辛、甘草、乾薑各三錢，五味子、半夏各半升，石膏二兩，用水一斗，先煮麻黃去上沫，內諸藥，煎服取三升 — 《重訂靈蘭要覽》 (jicheng.tw, CC0).", "key": "先煮麻黃去上沫"}
 {"id": 179, "kind": "pharmacology", "question": "What disease target does Trachelospermum jasminoides affect, and through which compound class?", "gold": "Trachelospermum jasminoides contains terpenoid compounds, which act on heme / PfATP6 (artemisinin) — relevant to malaria.", "key": "Trachelospermum jasminoides"}
 {"id": 180, "kind": "target", "question": "What gene target does Aloysia gratissima affect?", "gold": "Aloysia gratissima contains phytochemicals that target HRH3.", "key": "Aloysia gratissima"}
 {"id": 181, "kind": "property", "question": "What is the recorded nature, flavour and channel tropism of 白綿及布?", "gold": "Nature 熱, flavours 辛, channels not recorded, toxicity —, grade —.", "key": "熱, flavours 辛, channels "}
@@ -184,7 +184,7 @@
 {"id": 183, "kind": "use", "question": "What is Cordia dichotoma used for in Indian medicine?", "gold": "Recorded use: seminal abnormalities (Ayurveda,Siddha,Sowa Rigpa,Unani).", "key": "seminal abnormalities (A"}
 {"id": 184, "kind": "compound", "question": "What compound class is recorded in Aster tataricus?", "gold": "Aster tataricus contains phenylpropanoid compounds (per the corpus compound table).", "key": "Aster tataricus"}
 {"id": 185, "kind": "target", "question": "What gene target does Ancistrocladus heyneanus affect?", "gold": "Ancistrocladus heyneanus contains phytochemicals that target RET.", "key": "Ancistrocladus heyneanus"}
-{"id": 186, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 四時傷風?", "gold": "頭痛，發熱，咳嗽 — 《赤水玄珠》 (jicheng.tw, CC0).", "key": "赤水玄珠"}
+{"id": 186, "kind": "classical_use", "question": "In classical Chinese medicine, what is used to treat 一切惡瘡疥癬?", "gold": "蛇咬，莖中白汁剝人面皮，去䵟𪒟、白癜甚效 — 《醫學入門》 (jicheng.tw, CC0).", "key": "莖中白汁剝人面皮"}
 {"id": 187, "kind": "target", "question": "What gene target does Dysphania ambrosioides affect?", "gold": "Dysphania ambrosioides contains phytochemicals that target HIF1A.", "key": "Dysphania ambrosioides"}
 {"id": 188, "kind": "use", "question": "What is 莖葉 recorded to treat?", "gold": "Recorded use: 腳氣腫. (pre-modern claim; not clinical advice)", "key": "腳氣腫"}
 {"id": 189, "kind": "compound", "question": "What compound class is recorded in Bupleurum chinense?", "gold": "Bupleurum chinense contains terpenoid compounds (per the corpus compound table).", "key": "Bupleurum chinense"}

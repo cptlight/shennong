@@ -35,6 +35,20 @@ DISEASE = set("病症疾熱寒痛癢虛損風濕痰血氣瘡痢瘧咳喘腫癩�
 # grammatical fragments that are never indications
 BAD = ("之法", "法也", "之也", "之而", "而愈", "者也", "云云", "一人", "下篩", "其標", "之症", "之", "也", "者")
 MAX_RECIPE = 180
+# dosage/processing markers: the formula clause contains at least one of these
+DOSAGE = ("兩", "錢", "分", "枚", "片", "個", "粒", "斤", "升", "合", "研末", "為末", "煎服", "煎湯",
+          "炮", "炒", "炙", "煅", "浸", "焙", "丸", "散", "湯服", "酒服", "調服", "搗", "汁")
+
+
+def pick_formula(seg: str) -> str:
+    """From the text after '治<indication>', pick the clause that carries the actual recipe."""
+    clauses = [clean(c) for c in re.split(r"[。；]", seg) if clean(c)]
+    scored = [(sum(1 for d in DOSAGE if d in c), i, c) for i, c in enumerate(clauses)]
+    scored = [x for x in scored if x[0] > 0]
+    if scored:
+        scored.sort(key=lambda x: (-x[0], x[1]))
+        return scored[0][2][:MAX_RECIPE]
+    return (clauses[0][:MAX_RECIPE] if clauses else "")
 
 
 def clean(s: str) -> str:
@@ -65,11 +79,11 @@ def main() -> int:
                 continue
             # the recipe is the text after the indication, up to the next 治 or a hard stop
             start = m.end()
-            tail = text[start:start + MAX_RECIPE]
+            tail = text[start:start + 320]
             nxt = tail.find("治")
             if nxt > 12:
                 tail = tail[:nxt]
-            recipe = clean(re.split(r"[。；]", tail)[0])[:MAX_RECIPE]
+            recipe = pick_formula(tail)
             if len(recipe) < 4:
                 continue
             key = (ind, recipe[:60])

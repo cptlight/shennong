@@ -103,6 +103,7 @@ if __name__ == "__main__":
 
 # a standard herbal preparation, used as the default physics test for a screened compound
 DEFAULT_PROCESS = "煎"
+FPS_CACHE = ROOT / "artifacts" / "compound_fps.pkl"
 
 
 def admet_flags(smiles: str) -> dict:
@@ -180,24 +181,37 @@ def chembl_rank(target: str, limit: int = 120, top: int = 24) -> dict:
 
     act_fps = [(a, fp(a["smiles"])) for a in acts]
     act_fps = [(a, f) for a, f in act_fps if f]
-    rows = list(_csv.DictReader((STRUCT / "compounds.csv").open(encoding="utf-8")))
+    # compound fingerprints: precomputed cache first (the Space is 2 vCPU and a live recompute times out)
+    entries = []  # (name, smiles, plant, class, fp)
+    if FPS_CACHE.exists():
+        import pickle
+        from rdkit.DataStructs import CreateFromBinaryText
+        try:
+            with FPS_CACHE.open("rb") as fh:
+                for n, smi, plant, cls, bfp in pickle.load(fh):
+                    entries.append((n, smi, plant, cls, CreateFromBinaryText(bfp)))
+        except Exception:  # noqa: BLE001
+            entries = []
+    if not entries:
+        for r in _csv.DictReader((STRUCT / "compounds.csv").open(encoding="utf-8")):
+            smi = (r.get("smiles") or "").strip()
+            if not smi:
+                continue
+            f = fp(smi)
+            if f is not None:
+                entries.append((r.get("name") or "", smi, r.get("plant_binomial") or "",
+                                r.get("compound_class") or "", f))
+
+    act_vectors = [x[1] for x in act_fps]
     scored = []
-    for r in rows:
-        smi = (r.get("smiles") or "").strip()
-        if not smi:
-            continue
-        f = fp(smi)
-        if f is None:
-            continue
-        sims = DataStructs.BulkTanimotoSimilarity(f, [x[1] for x in act_fps])
+    for name, smi, plant, cls, f in entries:
+        sims = DataStructs.BulkTanimotoSimilarity(f, act_vectors)
         best = max(sims) if sims else 0.0
         if best <= 0:
             continue
         j = sims.index(best)
-        scored.append({"name": r.get("name") or "", "smiles": smi,
-                       "plant_binomial": r.get("plant_binomial") or "",
-                       "compound_class": r.get("compound_class") or "",
-                       "tanimoto": round(best, 4),
+        scored.append({"name": name, "smiles": smi, "plant_binomial": plant,
+                       "compound_class": cls, "tanimoto": round(best, 4),
                        "matched_active": act_fps[j][0]["id"],
                        "matched_active_nM": act_fps[j][0]["nM"]})
     scored.sort(key=lambda x: -x["tanimoto"])

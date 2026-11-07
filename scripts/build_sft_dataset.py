@@ -226,6 +226,20 @@ def build() -> list[dict]:
                     f"What is {r['plant_binomial']} also known as?",
                     f"Synonym: {r['synonym']} (botanical synonym).", "name_mapping"))
 
+    # ---- 12b. Wikidata: multilingual name mapping (Track 1: map names across traditions) ----
+    p = ROOT / "corpus/processed/structured/wikidata_names.csv"
+    if p.exists():
+        lang = {"de": "German", "fr": "French", "ko": "Korean", "zh": "Chinese", "ja": "Japanese"}
+        alln = list(csv.DictReader(p.open(encoding="utf-8")))
+        rng = random.Random(1337)
+        rng.shuffle(alln)
+        for r in alln[:4000]:
+            lname = lang.get(r["lang"], r["lang"])
+            rows.append(ex(
+                f"What is the {lname} name of {r['plant_binomial']}?",
+                f"{r['plant_binomial']} is called {r['vernacular_name']} in {lname}.",
+                "name_mapping"))
+
     # ---- 13. IMPPAT: plant -> gene target (Track 2: compounds for specific disease targets) ----
     p = ROOT / "corpus/processed/structured/imppat_targets.csv"
     if p.exists():

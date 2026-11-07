@@ -79,6 +79,11 @@ def main() -> int:
         for r in csv.DictReader((STRUCT / "imppat_names.csv").open(encoding="utf-8")):
             if r.get("common_name"):
                 add("name_mapping", f"{r['common_name']} -> {r['plant_binomial']}")
+    if (STRUCT / "wikidata_names.csv").exists():
+        lang = {"de": "German", "fr": "French", "ko": "Korean", "zh": "Chinese", "ja": "Japanese"}
+        for r in csv.DictReader((STRUCT / "wikidata_names.csv").open(encoding="utf-8")):
+            add("name_mapping", f"{r['plant_binomial']} is {r['vernacular_name']} in {lang.get(r['lang'], r['lang'])}")
+
     if (STRUCT / "imppat_targets.csv").exists():
         seen = set()
         for r in csv.DictReader((STRUCT / "imppat_targets.csv").open(encoding="utf-8")):

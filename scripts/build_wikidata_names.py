@@ -13,6 +13,7 @@ import csv
 import json
 import pathlib
 import time
+import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -33,6 +34,7 @@ SPARQL = (
 
 def collect_binomials() -> list[str]:
     seen = set()
+    non_plant = ("virus", "bacter", "fungus", "sp.", "spp.")
     for f in ("imppat_names.csv", "plants.csv"):
         p = STRUCT / f
         if not p.exists():
@@ -40,19 +42,23 @@ def collect_binomials() -> list[str]:
         col = "plant_binomial" if f == "imppat_names.csv" else "binomial"
         for r in csv.DictReader(p.open(encoding="utf-8")):
             b = (r.get(col) or "").strip()
-            if b and b[0].isupper():
+            # a binomial is exactly two Latin words (genus + species)
+            if b and b[0].isupper() and len(b.split()) == 2 and not any(n in b.lower() for n in non_plant):
                 seen.add(b)
     return sorted(seen)
 
 
 def query(chunk: list[str]) -> dict:
     vals = " ".join(f'"{b}"' for b in chunk)
-    lang_vals = " ".join(f'"{l}"' for l in LANGS)
+    lang_vals = ", ".join(f'"{l}"' for l in LANGS)
     q = SPARQL % (vals, lang_vals)
+    body = urllib.parse.urlencode({"query": q}).encode()
     req = urllib.request.Request(
         "https://query.wikidata.org/sparql",
-        data=("query=" + q).encode(),
-        headers={"Accept": "application/sparql-results+json", "User-Agent": "shennong/1.0 (ethnohack)"},
+        data=body,
+        headers={"Accept": "application/sparql-results+json",
+                 "Content-Type": "application/x-www-form-urlencoded",
+                 "User-Agent": "shennong/1.0 (ethnohack)"},
     )
     with urllib.request.urlopen(req, timeout=60) as r:
         data = json.loads(r.read())
@@ -75,8 +81,7 @@ def main() -> int:
                 result.update(query(chunk))
                 break
             except Exception as e:  # noqa: BLE001
-                if attempt == 2:
-                    print(f"  chunk {i} failed: {e}")
+                print(f"  chunk {i} retry {attempt}: {e}")
                 time.sleep(2)
         if (i // CHUNK) % 10 == 0:
             rate = i / max(time.time() - t0, 1)

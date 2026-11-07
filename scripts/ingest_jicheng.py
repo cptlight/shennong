@@ -76,25 +76,23 @@ def main() -> int:
     ge_files = sorted((src / "pages" / "ge").glob("*.html"))
 
     works: list[dict] = []
-        for f in book_files:
-            rel = f.parent.relative_to(src / "pages" / "book")
-            slug = str(rel).replace("/", "_") or f.parent.name
-            e = extract(f)
-            if not e or len(e["text"]) < 200:
-                continue
-            rec = {"id": f"jicheng-{slug}", "source_id": "jc_tw", "title": e["title"],
-                   "title_en": "", "year": e["year"], "tradition": "tcm", "lang": "zh-Hant",
-                   "tier": 2, "licence": "CC0-1.0", "source": "jicheng.tw",
-                   "author": e["author"], "dynasty": e["dynasty"], "text": e["text"]}
-            works.append(rec)
-        for g in ge_files:
-            e = extract(g)
-            if not e or len(e["text"]) < 100:
-                continue
-            rec = {"id": f"jicheng-ge-{g.stem}", "source_id": "jc_tw", "title": g.stem,
-                   "title_en": "", "year": "", "tradition": "tcm", "lang": "zh-Hant",
-                   "tier": 2, "licence": "CC0-1.0", "source": "jicheng.tw", "text": e["text"]}
-            works.append(rec)
+    for f in book_files:
+        rel = f.parent.relative_to(src / "pages" / "book")
+        slug = str(rel).replace("/", "_") or f.parent.name
+        e = extract(f)
+        if not e or len(e["text"]) < 200:
+            continue
+        works.append({"id": f"jicheng-{slug}", "source_id": "jc_tw", "title": e["title"],
+                      "title_en": "", "year": e["year"], "tradition": "tcm", "lang": "zh-Hant",
+                      "tier": 2, "licence": "CC0-1.0", "source": "jicheng.tw",
+                      "author": e["author"], "dynasty": e["dynasty"], "text": e["text"]})
+    for g in ge_files:
+        e = extract(g)
+        if not e or len(e["text"]) < 100:
+            continue
+        works.append({"id": f"jicheng-ge-{g.stem}", "source_id": "jc_tw", "title": g.stem,
+                      "title_en": "", "year": "", "tradition": "tcm", "lang": "zh-Hant",
+                      "tier": 2, "licence": "CC0-1.0", "source": "jicheng.tw", "text": e["text"]})
 
     half = len(works) // 2 or 1
     chars = sum(len(w["text"]) for w in works)

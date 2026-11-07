@@ -2,7 +2,7 @@
 
 # 神农 SHENNONG
 
-**▶ [Test it in your browser — live demo, no install, no login](https://cptlight.github.io/shennong/)**
+**▶ [Test it live — query the model and screen a target, no install](https://tomscot-shennong.hf.space)** · [static result browser](https://cptlight.github.io/shennong/)
 
 **Shennong tasted a hundred herbs. We are teaching a 1.5 B open model to do it again — and to tell us what he hid between the lines.**
 
@@ -10,8 +10,10 @@
 
 | | link |
 |---|---|
-| **▶ Live demo** | https://cptlight.github.io/shennong/ |
-| **Live model + screening (HF Space)** | *deploy with* `./scripts/deploy_space.sh tomscot/shennong` *(needs `HF_TOKEN`)* |
+| **▶ Live demo — ask the model** | https://tomscot-shennong.hf.space (CPU: first query takes ~1 min while the models load) |
+| **▶ Live demo — screen a target** | same Space, "Screen a target" tab — three-layer virtual screening |
+| **Space source** | [`tomscot/shennong`](https://huggingface.co/spaces/tomscot/shennong) · redeploy with `./scripts/deploy_space.sh tomscot/shennong` |
+| **Static result browser** | https://cptlight.github.io/shennong/ |
 | **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 | **Corpus** | 29,042 records · **177.3 M characters** — base 106 sources **+ 1,304 CC0 jicheng.tw works** (`make corpus-full`) |

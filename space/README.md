@@ -7,7 +7,7 @@ sdk: docker
 app_port: 7860
 pinned: false
 license: apache-2.0
-short_description: 1.5B fine-tuned model for traditional knowledge + natural products
+short_description: 1.5B model for TCM + natural products
 ---
 
 # SHENNONG 神农 — live demo

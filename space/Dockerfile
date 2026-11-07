@@ -21,7 +21,7 @@ RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
 
 # prebuilt CPU wheel — avoids a long source compile
 RUN pip install --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu \
-      llama-cpp-python "numpy<2" pyyaml
+      llama-cpp-python "numpy<2" pyyaml rdkit
 
 # the two models: the fine-tuned 1.5B and the unfine-tuned baseline for the side-by-side
 RUN curl -sSL -o /app/artifacts/shennong-1.5b-sft-Q4_K_M.gguf \

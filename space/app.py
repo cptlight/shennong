@@ -74,14 +74,23 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"loaded": True, "family": "qwen2.5-1.5b-sft", "params": 1543714304,
                                "note": "fine-tuned 1.5 B GGUF, direct generation + side-by-side baseline"})
         if self.path == "/api/query":
-            return self._json(answer_direct(q, max_new_tokens=mt))
+            try:
+                return self._json(answer_direct(q, max_new_tokens=mt))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/compare":
-            return self._json(compare_direct(q, max_new_tokens=mt))
+            try:
+                return self._json(compare_direct(q, max_new_tokens=mt))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/hypothesize":
             return self._json(hypothesise_live(q, max_new_tokens=mt))
         if self.path == "/api/screen":
-            from shennong.screen import fused_screen
-            return self._json(fused_screen(q or "COX2", top_k=8))
+            try:
+                from shennong.screen import fused_screen
+                return self._json(fused_screen(q or "COX2", top_k=8))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         return self._json({"error": f"no route {self.path}"}, 404)
 
     def log_message(self, *args):

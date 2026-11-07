@@ -14,7 +14,7 @@ WORKDIR /app
 # DEMO_DIR = /app/docs/demo, models at /app/artifacts and /app/models/baseline.
 RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && mkdir -p /app/space /app/docs /app/artifacts /app/models/baseline \
-               /app/corpus/processed/structured /app/corpus/processed /app/scripts \
+               /app/corpus/processed/structured /app/corpus/processed /app/scripts /app/artifacts/adapters \
     && cp -r /tmp/src/shennong /app/shennong \
     && cp -r /tmp/src/docs/demo /app/docs/demo \
     && cp /tmp/src/space/app.py /app/space/app.py \
@@ -23,8 +23,6 @@ RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && cp /tmp/src/corpus/processed/lexicon_drugs.json /app/corpus/processed/lexicon_drugs.json \
     && cp /tmp/src/artifacts/discoveries.json /tmp/src/artifacts/operator_ontology.json /app/artifacts/ \
     && cp /tmp/src/artifacts/router.pkl /app/artifacts/router.pkl \
-    && mkdir -p /app/artifacts/adapters \
-    && cp /tmp/src/artifacts/adapters/*.gguf /app/artifacts/adapters/ 2>/dev/null || true \
     && cp /tmp/src/scripts/build_fingerprints.py /app/scripts/build_fingerprints.py \
     && rm -rf /tmp/src
 
@@ -40,6 +38,16 @@ RUN curl -sSL -o /app/artifacts/shennong-1.5b-sft-Q4_K_M.gguf \
       https://github.com/cptlight/shennong/releases/download/v1.17.0/shennong-1.5b-sft-Q4_K_M.gguf \
  && curl -sSL -o /app/models/baseline/qwen2.5-1.5b-instruct-q4_k_m.gguf \
       https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf
+
+# expert LoRA adapters (MoE-of-experts) — pulled from the model repo, not git
+RUN for d in t1_classical t2_natprod safety; do \
+      if curl -sSLf -o /app/artifacts/adapters/$d.gguf \
+           https://huggingface.co/tomscot/shennong-1.5b-sft/resolve/main/adapters/$d.gguf; then \
+        echo "expert $d ok ($(du -h /app/artifacts/adapters/$d.gguf | cut -f1))"; \
+      else \
+        rm -f /app/artifacts/adapters/$d.gguf; echo "expert $d absent (skipped)"; \
+      fi; \
+    done
 
 EXPOSE 7860
 

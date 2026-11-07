@@ -44,3 +44,4 @@ models/baseline/
 
 # merged corpus (reproducible from committed parts)
 corpus/processed/corpus-full.jsonl
+artifacts/adapters/

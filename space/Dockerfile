@@ -38,3 +38,4 @@ RUN curl -sSL -o /app/artifacts/shennong-1.5b-sft-Q4_K_M.gguf \
 EXPOSE 7860
 
 CMD ["python", "space/app.py"]
+# build stamp: 20261107-005819 — forces a rebuild so the image picks up the latest repo

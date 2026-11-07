@@ -51,9 +51,16 @@ def main() -> int:
             per[model][r["kind"]][0] += ok
         rows.append({"id": r["id"], "kind": r["kind"], "question": q, "key": r["key"],
                      "ours": a_ours, "base": a_base, "ours_correct": ok_ours, "base_correct": ok_base})
-        if (i + 1) % 20 == 0:
+        if (i + 1) % 25 == 0 or (i + 1) == len(bench):
             rate = (i + 1) / (time.time() - t0)
             print(f"  {i+1}/{len(bench)} · {rate:.2f} q/s · {time.time()-t0:.0f}s elapsed", flush=True)
+            # incremental snapshot so a partial number is always on disk
+            partial = {"partial": True, "done": i + 1, "n": len(bench), "decode": DECODE, "wall_s": round(time.time() - t0, 1),
+                       "ours_correct": sum(1 for r in rows if r["ours_correct"]),
+                       "base_correct": sum(1 for r in rows if r["base_correct"]),
+                       "ours_acc": round(sum(1 for r in rows if r["ours_correct"]) / (i + 1), 4),
+                       "base_acc": round(sum(1 for r in rows if r["base_correct"]) / (i + 1), 4)}
+            (ROOT / "artifacts/benchmark_results.json").write_text(json.dumps(partial, indent=2, ensure_ascii=False), encoding="utf-8")
 
     def acc(model, kind=None):
         d = per[model]

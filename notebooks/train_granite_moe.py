@@ -65,6 +65,9 @@ def main() -> int:
     ap.add_argument("--batch", type=int, default=4)
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--sample", type=int, default=0, help="cap training rows (0 = all)")
+    ap.add_argument("--full-finetune", action="store_true",
+                    help="train ALL weights (the experts are batched Parameters, so LoRA cannot reach them). "
+                         "Uses Adafactor + gradient checkpointing to fit a T4.")
     ap.add_argument("--out", default=str(REPO / "training/runs/granite-moe"))
     args = ap.parse_args()
 
@@ -99,17 +102,36 @@ def main() -> int:
         device_map="auto" if torch.cuda.is_available() else None)
     print(f"params: {sum(p.numel() for p in model.parameters()):,}")
 
-    lora = LoraConfig(r=args.r, lora_alpha=args.r * 2, lora_dropout=0.05,
-                      target_modules=TARGET_MODULES, task_type="CAUSAL_LM")
-    model = get_peft_model(model, lora)
-    trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"LoRA trainable: {trainable:,}")
-    if trainable == 0:
-        raise SystemExit(f"PREFLIGHT FAIL: LoRA attached to 0 params. target_modules={TARGET_MODULES} matched "
-                         f"nothing in this build. Report this line and the target list will be corrected.")
-    matched = sorted({n.rsplit(".", 1)[0].split(".")[-1] for n, _ in model.named_modules()
-                      if any(n.endswith(t) for t in TARGET_MODULES)})
-    print(f"LoRA target modules matched: {matched[:8]}")
+    if args.full_finetune:
+        # GraniteMoeExperts.down_proj / gate_up_proj are batched Parameters, not nn.Linear — PEFT cannot
+        # attach LoRA to them, so attention-only LoRA leaves the experts frozen. Full FT trains the real MoE.
+        for p_ in model.parameters():
+            p_.requires_grad_(True)
+        model.gradient_checkpointing_enable()
+        if hasattr(model, "enable_input_require_grads"):
+            model.enable_input_require_grads()
+        trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        print(f"FULL FINE-TUNE — trainable: {trainable:,} (experts included)")
+        optim_name = "adafactor"      # factorised states: the only optimiser that fits a T4 at 1.33 B
+    else:
+        lora = LoraConfig(r=args.r, lora_alpha=args.r * 2, lora_dropout=0.05,
+                          target_modules=TARGET_MODULES, task_type="CAUSAL_LM")
+        model = get_peft_model(model, lora)
+        trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        print(f"LoRA trainable: {trainable:,}")
+        if trainable == 0:
+            raise SystemExit(f"PREFLIGHT FAIL: LoRA attached to 0 params. target_modules={TARGET_MODULES} "
+                             f"matched nothing in this build.")
+        matched = sorted({n.rsplit(".", 1)[0].split(".")[-1] for n, _ in model.named_modules()
+                          if any(n.endswith(t) for t in TARGET_MODULES)})
+        print(f"LoRA target modules matched: {matched[:8]}")
+        optim_name = "adamw_torch"
+
+    batch = args.batch
+    accum = 4
+    if args.full_finetune and args.batch == 4:
+        batch, accum = 2, 8      # same effective batch, half the activation memory on a T4
+        print(f"full fine-tune: batch {batch} x accum {accum} (effective {batch*accum})")
 
     train_rows = load_examples("train")
     val_rows = load_examples("val")
@@ -129,17 +151,18 @@ def main() -> int:
         def __getitem__(self, i): return self.items[i]
 
     ta = TrainingArguments(
-        output_dir=args.out, per_device_train_batch_size=args.batch,
-        gradient_accumulation_steps=4, num_train_epochs=args.epochs, max_steps=args.max_steps,
+        output_dir=args.out, per_device_train_batch_size=batch,
+        gradient_accumulation_steps=accum, num_train_epochs=args.epochs, max_steps=args.max_steps,
         learning_rate=args.lr, lr_scheduler_type="cosine", warmup_steps=10,
         logging_steps=20, save_strategy="epoch", eval_strategy="epoch",
         bf16=False, fp16=torch.cuda.is_available(), report_to=[], seed=1337, save_total_limit=1,
+        optim=optim_name,
     )
     trainer = Trainer(model=model, args=ta, train_dataset=DS(train), eval_dataset=DS(val),
                       data_collator=lambda b: collate(b, tok.pad_token_id))
     trainer.train()
 
-    merged = trainer.model.merge_and_unload()
+    merged = trainer.model.merge_and_unload() if not args.full_finetune else trainer.model
     out_model = pathlib.Path(args.out) / "merged"
     merged.save_pretrained(out_model, safe_serialization=True)
     tok.save_pretrained(out_model)

@@ -67,6 +67,10 @@ def main() -> int:
             seen.add((plant, cls))
             add("compound", f"{plant} contains {cls}")
 
+    # pharmacology (plant -> target -> disease)
+    for r in csv.DictReader((STRUCT / "pharmacology.csv").open(encoding="utf-8")):
+        add("pharmacology", f"{r['plant_binomial']} contains {r['compound_class']} → target {r['molecular_target']} ({r['disease']})")
+
     # formulas
     from collections import defaultdict
     grp = defaultdict(list)

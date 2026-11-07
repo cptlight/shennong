@@ -186,6 +186,21 @@ def build() -> list[dict]:
                 f"Formula {fid}: " + ", ".join(d for d in drugs if d) + ".",
                 "formula"))
 
+    # ---- 10. pharmacology (Track 2: plant-derived compounds for specific disease targets) ----
+    p = ROOT / "corpus/processed/structured/pharmacology.csv"
+    if p.exists():
+        seen = set()
+        for r in csv.DictReader(p.open(encoding="utf-8")):
+            plant, cls = r["plant_binomial"], r["compound_class"]
+            target, disease = r["molecular_target"], r["disease"]
+            if (plant, target) in seen:
+                continue
+            seen.add((plant, target))
+            rows.append(ex(
+                f"What disease target does {plant} affect, and through which compound class?",
+                f"{plant} contains {cls} compounds, which act on {target} — relevant to {disease}.",
+                "pharmacology"))
+
     return rows
 
 

@@ -72,7 +72,21 @@ def main() -> int:
     from peft import LoraConfig, get_peft_model
     from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
 
+    # ---- PREFLIGHT: fail in 5 seconds, not 40 minutes ----
     print(f"device: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+    if not torch.cuda.is_available():
+        raise SystemExit("PREFLIGHT FAIL: torch cannot see a GPU. Runtime -> Change runtime type -> T4 GPU. "
+                         "No pip command fixes this.")
+    print(f"torch {torch.__version__} | cuda {torch.version.cuda}")
+    try:
+        from transformers import GraniteMoeForCausalLM  # noqa: F401
+    except Exception as exc:  # noqa: BLE001
+        raise SystemExit(f"PREFLIGHT FAIL: no GraniteMoeForCausalLM "
+                         f"(transformers {__import__('transformers').__version__}). "
+                         f"pip install \"transformers==4.46.3\". {exc}")
+    train_rows_probe = SFT / "train.jsonl"
+    if not train_rows_probe.exists():
+        raise SystemExit(f"PREFLIGHT FAIL: missing {train_rows_probe} — clone the repo properly.")
     print(f"base: {args.base}")
 
     tok = AutoTokenizer.from_pretrained(args.base)
@@ -90,6 +104,12 @@ def main() -> int:
     model = get_peft_model(model, lora)
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"LoRA trainable: {trainable:,}")
+    if trainable == 0:
+        raise SystemExit(f"PREFLIGHT FAIL: LoRA attached to 0 params. target_modules={TARGET_MODULES} matched "
+                         f"nothing in this build. Report this line and the target list will be corrected.")
+    matched = sorted({n.rsplit(".", 1)[0].split(".")[-1] for n, _ in model.named_modules()
+                      if any(n.endswith(t) for t in TARGET_MODULES)})
+    print(f"LoRA target modules matched: {matched[:8]}")
 
     train_rows = load_examples("train")
     val_rows = load_examples("val")

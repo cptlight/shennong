@@ -13,6 +13,7 @@
 | **▶ Live demo (no install)** | https://cptlight.github.io/shennong/ |
 | **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
+| **Corpus** | 29,042 records · **177.3 M characters** — base 106 sources **+ 1,304 CC0 jicheng.tw works** (`make corpus-full`) |
 | **Benchmark (200 domain Q)** | ours **39.0 %** vs unfine-tuned **25.5 %** (+13.5 %) — `artifacts/benchmark_results.json` |
 
 [![Devpost](https://img.shields.io/badge/EthnoHack-2026-coral)](https://ethnohack2026.devpost.com/)

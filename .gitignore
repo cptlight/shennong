@@ -41,3 +41,6 @@ training/runs/*/ckpt*.pt
 shennong/_build/
 training/runs/*/hf/
 models/baseline/
+
+# merged corpus (reproducible from committed parts)
+corpus/processed/corpus-full.jsonl

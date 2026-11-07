@@ -45,6 +45,9 @@ selfobserve:  ## probe the model's own hidden states for groundedness
 grounding-pairs:  ## rebuild the (passages, question, answer) training pairs
 	$(PY) scripts/build_grounding_pairs.py
 
+corpus-full:  ## merge base corpus + jicheng CC0 corpus -> corpus-full.jsonl (for pretraining/attestation)
+	$(PY) scripts/build_full_corpus.py
+
 imppat:  ## integrate the IMPPAT Indian-medicine dataset (plant->use->target)
 	$(PY) scripts/build_imppat.py
 
@@ -78,4 +81,4 @@ all: corpus tokenizer train-mini export eval app-data  ## full pipeline
 clean:  ## remove caches (keeps corpus and checkpoints)
 	find . -name __pycache__ -type d -prune -exec rm -rf {} + ; rm -rf .pytest_cache
 
-.PHONY: help setup corpus tokenizer train-mini train-flagship novelty compute demo export curriculum selfobserve grounding-pairs audit numbers extract imppat eval app-data workbench test all clean
+.PHONY: help setup corpus tokenizer train-mini train-flagship novelty compute demo export curriculum selfobserve grounding-pairs audit numbers extract imppat corpus-full eval app-data workbench test all clean

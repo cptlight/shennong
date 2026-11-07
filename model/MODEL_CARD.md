@@ -329,7 +329,8 @@ category error.
 
 ## 11. The flagship: `shennong-0.5b` (recipe, **not run at this scale**)
 
-The competition constraint is a model file under 1 GB with ≤1 B parameters. The shipped
+The original constraint was a model file under 1 GB. The shipped fine-tuned model is 1.5 B parameters
+whose Q4_K_M GGUF is 940 MB — still under 1 GB on disk. The
 flagship plan is a **continued-pretraining recipe**, not a trained model:
 
 | stage | command | status |

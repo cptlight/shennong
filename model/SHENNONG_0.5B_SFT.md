@@ -1,5 +1,7 @@
 # SHENNONG-0.5B-SFT — the Track-02 fine-tune
 
+> **Superseded by the 1.5 B model** (`shennong-1.5b-sft` / `model/SHENNONG_1.5B_SFT.md`). Kept for the record.
+
 A **494 M-parameter, sub-1 GB, Apache-2.0** model: Qwen2.5-0.5B fine-tuned on the SHENNONG corpus + Track-02
 task pairs, response-masked, then quantized to Q4_K_M.
 

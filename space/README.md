@@ -22,7 +22,7 @@ This Space runs the same `app/serve.py` as the repository, with the judge demo s
 
 | | |
 |---|---|
-| **Ask it live** | type any question → BM25 retrieval over 45.6 M characters → the 19.3 M MoE generates over the retrieved passages → citations with `source_id:char_start-char_end` |
+| **Ask it live** | direct generation from the fine-tuned 1.5 B, side-by-side with the unfine-tuned baseline — same prompt, same decode, no retrieval |
 | **Propose a hypothesis** | the model proposes one falsifiable hypothesis over retrieved evidence, with kill criteria attached and labelled UNVALIDATED |
 | **Funnel / arbiter / theory / candidates / experts** | every number read from `artifacts/*.json` |
 | **Curriculum & self-observation** | the staged training order, and the per-layer probe asking whether the model represents its own groundedness |
@@ -31,7 +31,7 @@ This Space runs the same `app/serve.py` as the repository, with the judge demo s
 
 - The **pipeline** is the strong part: 78 of 203 enrichment claims refuted by validated physics, 歸經 at 2×
   chance (p = 0.008, n = 2,059, three published nulls), span-level citations over the whole corpus.
-- The **model weights** are not: 19.3 M parameters trained on ~5.5 M tokens (≈1.4 % of compute-optimal).
+- The model is a fine-tuned 1.5 B; it learned the task shape and much of the fact base, but is not an oracle — the retrieval + physics layer makes answers checkable.
   It reads the register; it does not write reliable sentences. The demo shows the bare completion next to the
   grounded one precisely so this is visible rather than hidden.
 - Not medical advice. No dosing, no preparation protocols for toxic materia medica, no synthesis routes.

@@ -4,14 +4,21 @@
 
 **▶ [Test it in your browser — no install, no login](https://cptlight.github.io/shennong/)**
 
-**Shennong tasted a hundred herbs. We are teaching a 400 MB model to do it again — and to tell us what he hid between the lines.**
+**Shennong tasted a hundred herbs. We are teaching a 1.5 B open model to do it again — and to tell us what he hid between the lines.**
 
-*A <1 GB, open-weights, classical-Asian-medicine language model and first-principles discovery engine for ethnopharmacology.*
+*A 1.5 B-parameter fine-tuned open model (Apache-2.0) for classical Asian medicine — a 940 MB Q4 GGUF that runs on CPU — plus a first-principles discovery pipeline.*
+
+| | link |
+|---|---|
+| **▶ Live demo (no install)** | https://cptlight.github.io/shennong/ |
+| **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
+| **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
+| **Benchmark (200 domain Q)** | ours **39.0 %** vs unfine-tuned **25.5 %** (+13.5 %) — `artifacts/benchmark_results.json` |
 
 [![Devpost](https://img.shields.io/badge/EthnoHack-2026-coral)](https://ethnohack2026.devpost.com/)
-[![Track](https://img.shields.io/badge/track-01%20Traditional%20Knowledge%20Mining-teal)](https://ethnohack2026.devpost.com/)
+[![Track](https://img.shields.io/badge/track-02%20Natural%20Products%20%26%20Drug%20Discovery-teal)](https://ethnohack2026.devpost.com/)
 [![Licence](https://img.shields.io/badge/code%20%26%20weights-Apache--2.0-blue)](LICENSE)
-[![Model](https://img.shields.io/badge/model-<1%20GB%20%7C%20<1B%20params-green)](#the-model)
+[![Model](https://img.shields.io/badge/model-1.5B%20%7C%20940%20MB%20Q4-green)](https://huggingface.co/tomscot/shennong-1.5b-sft)
 [![CPU](https://img.shields.io/badge/runs%20on-CPU%20only-lightgrey)](#quickstart)
 
 </div>
@@ -101,7 +108,7 @@ Four things are ours:
    enumerated with citations, each bridged to a modern mechanism (CYP450, P-gp, chelation,
    precipitation, shared toxic constituents) and given the assay that would kill it. Completeness is
    the contribution.
-4. **Auditable by construction.** < 1 GB open weights that run on a CPU; every claim resolves to a
+4. **Auditable by construction.** a 940 MB open-weight model that runs on a CPU; every claim resolves to a
    span in a real text; a hypothesis whose citation fails to resolve is **dropped, not softened**; and
    the licence audit includes the sources we *rejected* (GRETIL, because CC BY-**NC**-SA cannot ship
    in a public repo).
@@ -128,13 +135,15 @@ Published whether or not we like the answer.
 
 ## The model
 
-| | `shennong-mini` | `shennong-0.5b` |
+| | `shennong-mini` | `shennong-1.5b-sft` (the shipped model) |
 |---|---|---|
-| Parameters | **8,719,616** (4,525,312 non-embedding) | ~494 M (≤ 1 B) |
-| Weights file | `shennong-mini-f16.gguf` — **18,054,560 B (18.05 MB)** | ~350–400 MB GGUF Q4_K_M (estimate) |
-| Training | **from scratch on this machine, CPU only** | recipe: Qwen2.5-0.5B → domain CPT → LoRA SFT → merge → Q4_K_M |
-| Vocab | 16,384 (en · la · zh-Hant; Devanagari present but **not** in vocab) | 151,936 (Qwen) |
-| Trained on | **1,638,400 tokens** (0.19 tok/param · **0.9 % of compute-optimal** — deliberately undertrained) | recipe only — **not run at this scale** |
+| Parameters | **8,719,616** (4,525,312 non-embedding) | **1,543,714,304** |
+| Weights file | `shennong-mini-f16.gguf` — **18,054,560 B (18.05 MB)** | `shennong-1.5b-sft-Q4_K_M.gguf` — **940 MB** |
+| Training | **from scratch on this machine, CPU only** | Qwen2.5-1.5B → LoRA r=64 SFT on 15,308 domain examples → merge → Q4_K_M |
+| Vocab | 16,384 (en · la · zh-Hant) | 151,936 (Qwen) |
+| Trained on | **1,638,400 tokens** (deliberately undertrained, the architecture proof) | 3 epochs, 14,389 examples; eval 0.53 → 0.57 |
+| Bench | — | **39.0 %** vs unfine-tuned **25.5 %** on 200 domain questions (+13.5 %) |
+| Source | this repo | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) · [`v1.17.0`](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 
 > **The architecture thesis, in one line:** a sparse MoE buys total capacity without paying per-token
 > compute — **1.58× more parameters per FLOP**, 2.22× capacity for 1.41× compute — which is what lets a
@@ -183,10 +192,10 @@ traditions are separable in representation space, not just in the corpus manifes
 MoE on the frozen 45.6 M-char corpus, the dense run on the 38.24 M snapshot), so it is strong evidence
 but not a clean controlled ablation. A 3-seed paired run is the next experiment.
 
-**Why a tiny model is the right answer, not a compromise:** knowledge lives in the **index**, structure
-in the **graph**, reasoning in a **small model**, provenance **everywhere**. A <1 GB quantised model
-runs offline on a laptop in a clinic in Yunnan or Kerala — that is a different product from a hosted
-API. And a model we can enumerate the training corpus of is a model whose claims we can audit.
+**Why a 1.5 B open model is the right answer, not a compromise:** the shipped model is a fine-tuned
+Qwen2.5-1.5B whose Q4_K_M GGUF is 940 MB — small enough to run offline on a laptop in a clinic in Yunnan
+or Kerala, large enough to answer domain questions coherently. That is a different product from a hosted
+API, and a model we can enumerate the training corpus of is a model whose claims we can audit.
 See [`docs/FIRST_PRINCIPLES.md`](docs/FIRST_PRINCIPLES.md) §4.
 
 ## Quickstart (CPU only, no GPU, no network at inference)

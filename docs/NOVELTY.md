@@ -84,7 +84,7 @@ thing we make.
 
 ### N4 — The whole stack is auditable, and that is a design constraint, not a slogan
 
-- **< 1 GB, open weights, CPU-runnable** → the people who hold this knowledge (clinics in Yunnan,
+- **940 MB open weights, CPU-runnable** → the people who hold this knowledge (clinics in Yunnan,
   Kerala, Tehran, Lhasa) can run it offline; a 70 B hosted API cannot be audited or deployed there.
 - **Span-level provenance**: every claim resolves to `(source_id, char_start, char_end)` in a real
   text, and the renderer **refuses** when it cannot resolve. A hypothesis whose evidence will not
@@ -108,7 +108,7 @@ other way deliberately, and can defend why.
 | Rules as a bridged testable set | ❌ | ❌ | ❌ | ❌ | ✅ 十八反/十九畏/viruddha |
 | Emits **falsifiable** hypotheses w/ kill-criteria | ❌ | ❌ | ❌ | ❌ | ✅ |
 | Span-level citation, refuses when ungrounded | ❌ | ❌ | ⚠️ | ❌ | ✅ |
-| Open weights, < 1 GB, CPU | ❌ | ❌ | n/a | ❌ | ✅ |
+| Open weights, 940 MB, CPU | ❌ | ❌ | n/a | ❌ | ✅ |
 | Licence audit incl. rejections | ❌ | ❌ | ❌ | n/a | ✅ |
 
 The gap is a single missing thing: everybody has data, everybody has a chatbot — **nobody has the
@@ -126,7 +126,7 @@ translation layer, and nobody has tested whether the theory it encodes actually 
    numbered rules, formula roles, drug names that drifted. The bottleneck has never been data volume,
    it is *translation*.
 2. **The build:** 38 M characters of licensed public-domain canon in the original languages
-   (本草綱目, 神農本草經, 雷公炮炙論, 傷寒論, Avicenna's 1593 Latin *Canon*, Suśruta) → a <1 GB open model
+   (本草綱目, 神農本草經, 雷公炮炙論, 傷寒論, Avicenna's 1593 Latin *Canon*, Suśruta) → a 940 MB open model
    that reads the register → a graph with span-level provenance → candidates.
 3. **The experiment that makes it science:** does 四氣五味/歸經 predict molecular properties above
    chance? Pre-registered, permutation-tested, published either way.

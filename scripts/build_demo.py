@@ -96,10 +96,21 @@ def build_data() -> dict:
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "repo": "https://github.com/cptlight/shennong",
         "releases": {
-            "v0.1.0": {"what": "dense GGUF weights", "file": "shennong-mini-f16.gguf",
-                       "bytes": 18054560, "sha256": "a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60",
+            "v1.17.0": {"what": "SHENNONG 1.5B — fine-tuned Qwen2.5-1.5B, Q4_K_M (the shipped model)",
+                        "file": "shennong-1.5b-sft-Q4_K_M.gguf", "bytes": 986047904,
+                        "sha256": "c2757da836c73e645755579e2cfc062c45ace25e42409576e00e9ea069ee27ba",
+                        "url": "https://github.com/cptlight/shennong/releases/tag/v1.17.0",
+                        "hf": "https://huggingface.co/tomscot/shennong-1.5b-sft"},
+            "v1.16.0": {"what": "SHENNONG 0.5B — fine-tuned Qwen2.5-0.5B, Q4_K_M (intermediate)",
+                        "file": "shennong-0.5b-sft-Q4_K_M.gguf", "bytes": 397807328,
+                        "sha256": "048209ac2e1690cb448e1be82bc4a7da969da67581a461b739fa9e0479115f30",
+                        "url": "https://github.com/cptlight/shennong/releases/tag/v1.16.0",
+                        "hf": "https://huggingface.co/tomscot/shennong-0.5b-sft"},
+            "v0.1.0": {"what": "dense GGUF weights (architecture proof)",
+                       "file": "shennong-mini-f16.gguf", "bytes": 18054560,
+                       "sha256": "a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60",
                        "url": "https://github.com/cptlight/shennong/releases/tag/v0.1.0"},
-            "v0.2.0": {"what": "sparse MoE safetensors (19.3M total / 12.3M active)",
+            "v0.2.0": {"what": "sparse MoE safetensors, 19.3M total / 12.3M active (architecture proof)",
                        "file": "model.safetensors", "bytes": 47086544,
                        "sha256": "645374b4e7c04b09", "url": "https://github.com/cptlight/shennong/releases/tag/v0.2.0"},
         },
@@ -719,8 +730,8 @@ function tabExtraction(){
       <p class="note" style="margin-top:8px">${esc(we.note||'')}</p></div>`;
   }
   h += `<div class="warn" style="margin-top:22px"><b>Honest division of labour:</b> the extraction is the
-  deterministic pipeline, not the 19.3 M model. A model 1.4 % of the way through its training budget cannot
-  be the NER engine — but it does not need to be: the track asks for NLP and AI, and the span-located
+  deterministic pipeline, not the language model. A fine-tuned 1.5 B is a strong answerer but is not the
+  span-located NER engine — the pipeline is, and it is reproducible — but it does not need to be: the track asks for NLP and AI, and the span-located
   extraction is the deliverable. The model is the structured-output interface on top of it.</div></section>`;
   return h;
 }

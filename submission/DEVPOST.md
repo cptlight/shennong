@@ -1,6 +1,6 @@
 # SHENNONG 神农
 
-### Shennong tasted a hundred herbs. We are teaching a 400 MB model to do it again — and to tell us what he hid between the lines.
+### Shennong tasted a hundred herbs. We are teaching a 1.5 B open model to do it again — and to tell us what he hid between the lines.
 
 **EthnoHack 2026**
 
@@ -127,7 +127,7 @@ candidates, and it is the only reason this project should exist.
 
 ## What it does
 
-SHENNONG is an open, **< 1 GB**, **≤ 1 B-parameter** bilingual classical model plus a discovery engine. It does
+SHENNONG is an open, **1.5 B-parameter** fine-tuned bilingual classical model (a **940 MB** Q4 GGUF) plus a discovery engine. It does
 five things, in order of importance.
 
 **1. It tests the theory itself — the claim that makes this science.** This is the product, not a supporting

@@ -364,7 +364,7 @@ def hypothesise_live(question: str, k: int = 6, max_new_tokens: int = 72) -> dic
 # weights, and the exact prompt is returned so a judge can reproduce the result.
 # ---------------------------------------------------------------------------------------
 _BASELINE = {"llm": None, "loaded": False, "error": None}
-_BASELINE_GGUF = ROOT / "artifacts/qwen2.5-1.5b-instruct-q4_k_m.gguf"
+_BASELINE_GGUF = ROOT / "models/baseline/qwen2.5-1.5b-instruct-q4_k_m.gguf"
 DECODE = {"temperature": 0.2, "top_p": 0.9, "seed": 1337}
 
 

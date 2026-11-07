@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "shennong"
 version = "0.1.0"
-description = "SHENNONG — a <1 GB open-weights classical-Asian-medicine language model and first-principles discovery engine for ethnopharmacology"
+description = "SHENNONG — a 1.5 B-parameter fine-tuned open model (Apache-2.0) for classical Asian medicine and a first-principles discovery engine for ethnopharmacology"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
 authors = [{ name = "SHENNONG contributors" }]
-keywords = ["ethnopharmacology", "TCM", "ayurveda", "ethnobotany", "natural products", "tiny-llm"]
+keywords = ["ethnopharmacology", "TCM", "ayurveda", "ethnobotany", "natural products", "drug discovery", "traditional knowledge", "qwen2.5"]
 classifiers = [
   "License :: OSI Approved :: Apache Software License",
   "Programming Language :: Python :: 3",

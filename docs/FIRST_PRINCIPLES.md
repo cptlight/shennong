@@ -161,7 +161,7 @@ is almost entirely absent from modern NLP work on TCM.
 
 ---
 
-## 4. Why the model must be small (< 1 GB) — a design argument, not a compromise
+## 4. Why the model is small enough to run anywhere — a design argument, not a compromise
 
 The user's constraint is also the correct architecture. Three separate arguments converge:
 

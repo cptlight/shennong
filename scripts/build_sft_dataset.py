@@ -201,6 +201,19 @@ def build() -> list[dict]:
                 f"{plant} contains {cls} compounds, which act on {target} — relevant to {disease}.",
                 "pharmacology"))
 
+    # ---- 10b. jicheng: classical formula -> indication (Track 1, from 1,304 CC0 works) ----
+    p = ROOT / "corpus/processed/structured/jicheng_uses.csv"
+    if p.exists():
+        allc = list(csv.DictReader(p.open(encoding="utf-8")))
+        rng = random.Random(1337)
+        rng.shuffle(allc)
+        for r in allc[:25000]:
+            work = r.get("work") or "classical text"
+            rows.append(ex(
+                f"In classical Chinese medicine, what is used to treat {r['indication']}?",
+                f"{r['formula']} — 《{work}》 (jicheng.tw, CC0).",
+                "classical_use"))
+
     # ---- 11. IMPPAT: Indian-medicine therapeutic uses (Track 1: therapeutic uses) ----
     p = ROOT / "corpus/processed/structured/imppat_uses.csv"
     if p.exists():

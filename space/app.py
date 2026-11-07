@@ -80,7 +80,7 @@ class Handler(BaseHTTPRequestHandler):
         except json.JSONDecodeError:
             return self._json({"error": "body must be JSON"}, 400)
         q = str(payload.get("question") or payload.get("q") or "")
-        mt = int(payload.get("max_new_tokens") or 56)
+        mt = int(payload.get("max_new_tokens") or 40)
         if self.path == "/api/model":
             return self._json({"loaded": True, "family": "qwen2.5-1.5b-sft", "params": 1543714304,
                                "note": "fine-tuned 1.5 B GGUF, direct generation + side-by-side baseline"})
@@ -120,6 +120,23 @@ class Handler(BaseHTTPRequestHandler):
         pass  # keep the Space log clean
 
 
+def _warm_models() -> None:
+    """Load both GGUFs into RAM before the judge arrives.
+
+    Without this, the first request pays the ~1.5 min model-load cost and HF's proxy kills it as a timeout.
+    Warmed, generation is a few seconds for a short answer.
+    """
+    try:
+        from shennong.answer import _baseline_model, _live_model
+        _live_model()
+        _baseline_model()
+        print("warm: both GGUFs loaded into RAM", flush=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f"warm failed: {type(exc).__name__}: {exc}", flush=True)
+
+
 if __name__ == "__main__":
-    print(f"SHENNONG Space serving {DEMO_DIR} on 0.0.0.0:{PORT}", flush=True)
+    import threading
+    threading.Thread(target=_warm_models, daemon=True).start()
+    print(f"SHENNONG Space serving {DEMO_DIR} on 0.0.0.0:{PORT} (models warming in background)", flush=True)
     ThreadingHTTPServer(("0.0.0.0", PORT), Handler).serve_forever()

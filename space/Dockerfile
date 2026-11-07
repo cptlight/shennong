@@ -22,12 +22,14 @@ RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && cp /tmp/src/corpus/processed/structured/properties.csv /app/corpus/processed/structured/properties.csv \
     && cp /tmp/src/corpus/processed/lexicon_drugs.json /app/corpus/processed/lexicon_drugs.json \
     && cp /tmp/src/artifacts/discoveries.json /tmp/src/artifacts/operator_ontology.json /app/artifacts/ \
+    && cp /tmp/src/artifacts/router.pkl /app/artifacts/router.pkl \
+    && mkdir -p /app/artifacts/adapters \
     && cp /tmp/src/scripts/build_fingerprints.py /app/scripts/build_fingerprints.py \
     && rm -rf /tmp/src
 
 # prebuilt CPU wheel — avoids a long source compile
 RUN pip install --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu \
-      llama-cpp-python "numpy<2" pyyaml rdkit
+      llama-cpp-python "numpy<2" pyyaml rdkit scikit-learn
 
 # precompute the compound fingerprints so the live screen is ~2 s instead of ~40 s (2-vCPU timeout)
 RUN python scripts/build_fingerprints.py

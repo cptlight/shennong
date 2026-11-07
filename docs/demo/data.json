@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T01:43:35-0800",
+ "generated_at": "2026-11-07T01:59:11-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v1.17.0": {
@@ -3245,6 +3245,7 @@
   "question_routing.json",
   "refusal_corpus.json",
   "research_rounds.json",
+  "router_report.json",
   "routing_steering.json",
   "self_observation.json",
   "sft_result.json",

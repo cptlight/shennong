@@ -86,7 +86,8 @@ class Handler(BaseHTTPRequestHandler):
                                "note": "fine-tuned 1.5 B GGUF, direct generation + side-by-side baseline"})
         if self.path == "/api/query":
             try:
-                return self._json(answer_direct(q, max_new_tokens=mt))
+                from shennong.moe_serve import answer_moe
+                return self._json(answer_moe(q, max_new_tokens=mt))
             except Exception as exc:  # noqa: BLE001
                 return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/compare":
@@ -100,6 +101,12 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 from shennong.advise import advise
                 return self._json(advise(q))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
+        if self.path == "/api/route":
+            try:
+                from shennong.router import route
+                return self._json(route(q))
             except Exception as exc:  # noqa: BLE001
                 return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/experts":

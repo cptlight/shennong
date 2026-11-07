@@ -1263,9 +1263,9 @@ class Handler(BaseHTTPRequestHandler):
                 n = int(self.headers.get("Content-Length") or 0)
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
-                from shennong.answer import answer_direct
-                return self._json(answer_direct(str(payload.get("question") or payload.get("q") or ""),
-                                                  max_new_tokens=int(payload.get("max_new_tokens") or 72)))
+                from shennong.moe_serve import answer_moe
+                return self._json(answer_moe(str(payload.get("question") or payload.get("q") or ""),
+                                             max_new_tokens=int(payload.get("max_new_tokens") or 72)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/chat":

@@ -201,6 +201,43 @@ def build() -> list[dict]:
                 f"{plant} contains {cls} compounds, which act on {target} — relevant to {disease}.",
                 "pharmacology"))
 
+    # ---- 11. IMPPAT: Indian-medicine therapeutic uses (Track 1: therapeutic uses) ----
+    p = ROOT / "corpus/processed/structured/imppat_uses.csv"
+    if p.exists():
+        allu = list(csv.DictReader(p.open(encoding="utf-8")))
+        rng = random.Random(1337)
+        rng.shuffle(allu)
+        for r in allu[:20000]:
+            rows.append(ex(
+                f"What is {r['plant_binomial']} used for in Indian medicine?",
+                f"Recorded use: {r['therapeutic_use']} ({r['system_of_medicine'] or 'Indian medicine'}).",
+                "use"))
+
+    # ---- 12. IMPPAT: cross-tradition name mapping (Track 1: map names across eras) ----
+    p = ROOT / "corpus/processed/structured/imppat_names.csv"
+    if p.exists():
+        for r in csv.DictReader(p.open(encoding="utf-8")):
+            if r.get("common_name"):
+                rows.append(ex(
+                    f"What is the modern botanical name of {r['common_name']}?",
+                    f"{r['common_name']} -> {r['plant_binomial']}.", "name_mapping"))
+            if r.get("synonym"):
+                rows.append(ex(
+                    f"What is {r['plant_binomial']} also known as?",
+                    f"Synonym: {r['synonym']} (botanical synonym).", "name_mapping"))
+
+    # ---- 13. IMPPAT: plant -> gene target (Track 2: compounds for specific disease targets) ----
+    p = ROOT / "corpus/processed/structured/imppat_targets.csv"
+    if p.exists():
+        allt = list(csv.DictReader(p.open(encoding="utf-8")))
+        rng = random.Random(1337)
+        rng.shuffle(allt)
+        for r in allt[:20000]:
+            rows.append(ex(
+                f"What gene target does {r['plant_binomial']} affect?",
+                f"{r['plant_binomial']} contains phytochemicals that target {r['gene_target']}.",
+                "target"))
+
     return rows
 
 

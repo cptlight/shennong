@@ -71,6 +71,23 @@ def main() -> int:
     for r in csv.DictReader((STRUCT / "pharmacology.csv").open(encoding="utf-8")):
         add("pharmacology", f"{r['plant_binomial']} contains {r['compound_class']} → target {r['molecular_target']} ({r['disease']})")
 
+    # IMPPAT: Indian-medicine uses, names, gene targets
+    if (STRUCT / "imppat_uses.csv").exists():
+        for r in csv.DictReader((STRUCT / "imppat_uses.csv").open(encoding="utf-8")):
+            add("use", f"{r['plant_binomial']} (Indian medicine) treats {r['therapeutic_use']}")
+    if (STRUCT / "imppat_names.csv").exists():
+        for r in csv.DictReader((STRUCT / "imppat_names.csv").open(encoding="utf-8")):
+            if r.get("common_name"):
+                add("name_mapping", f"{r['common_name']} -> {r['plant_binomial']}")
+    if (STRUCT / "imppat_targets.csv").exists():
+        seen = set()
+        for r in csv.DictReader((STRUCT / "imppat_targets.csv").open(encoding="utf-8")):
+            k = (r["plant_binomial"], r["gene_target"])
+            if k in seen:
+                continue
+            seen.add(k)
+            add("target", f"{r['plant_binomial']} targets {r['gene_target']}")
+
     # formulas
     from collections import defaultdict
     grp = defaultdict(list)

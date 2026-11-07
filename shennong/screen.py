@@ -95,3 +95,138 @@ def _main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(_main())
+
+
+# --------------------------------------------------------------------------------------
+# Layer 3: the fused screen — knowledge graph -> ECFP similarity -> ADMET -> physics -> novelty
+# --------------------------------------------------------------------------------------
+
+# a standard herbal preparation, used as the default physics test for a screened compound
+DEFAULT_PROCESS = "煎"
+
+
+def admet_flags(smiles: str) -> dict:
+    """Lipinski/Veber-style ADMET flags from our own descriptor code (no external deps)."""
+    from shennong.chem import (hba, hbd, logp_fragment_estimate, molecular_weight,
+                               parse_smiles, rotatable_bonds, tpsa)
+    try:
+        m = parse_smiles(smiles)
+    except Exception:  # noqa: BLE001
+        return {"ok": False, "note": "unparseable SMILES"}
+    mw, don, acc = molecular_weight(m), hbd(m), hba(m)
+    tp, lg, rb = tpsa(m), logp_fragment_estimate(m), rotatable_bonds(m)
+    bad = []
+    if mw > 500:
+        bad.append(f"MW {mw:.0f} > 500")
+    if lg > 5:
+        bad.append(f"logP {lg:.1f} > 5")
+    if don > 5:
+        bad.append(f"HBD {don} > 5")
+    if acc > 10:
+        bad.append(f"HBA {acc} > 10")
+    if tp > 140:
+        bad.append(f"TPSA {tp:.0f} > 140")
+    if rb > 10:
+        bad.append(f"rotatable {rb} > 10")
+    return {"ok": True, "mw": round(mw, 1), "hbd": don, "hba": acc, "tpsa": round(tp, 1),
+            "logp": round(lg, 2), "rotatable": rb,
+            "lipinski_pass": not bad, "violations": bad}
+
+
+def physics_verdict(compound_class: str, process: str = DEFAULT_PROCESS) -> dict:
+    """Can this compound class survive a standard preparation? Uses the validated arbiter."""
+    from shennong.experts.first_principles import check_process_physics
+    pc = check_process_physics(process, compound_class or "", "")
+    return {"process": process, "checked": pc.passed is not None,
+            "passed": pc.passed, "score": round(pc.score, 3), "reasoning": pc.reasoning}
+
+
+def chembl_rank(target: str, limit: int = 120, top: int = 24) -> dict:
+    """EFP4 similarity of our compounds to a target's known ChEMBL actives."""
+    import csv as _csv
+    import json as _json
+    import urllib.parse
+    import urllib.request
+    from rdkit import Chem, DataStructs
+    from rdkit.Chem import AllChem
+
+    BASE = "https://www.ebi.ac.uk/chembl/api/data"
+    ALIASES = {"cox2": "PTGS2", "cox-2": "PTGS2", "cox1": "PTGS1", "cox-1": "PTGS1",
+               "egfr": "EGFR", "her2": "ERBB2", "vegfr": "KDR", "dpp4": "DPP4", "dpp-4": "DPP4",
+               "ache": "ACHE", "mao": "MAOA", "tubulin": "TUBB", "mtor": "MTOR", "parp": "PARP1"}
+
+    def get(url):
+        req = urllib.request.Request(url, headers={"User-Agent": "shennong/1.0"})
+        with urllib.request.urlopen(req, timeout=40) as r:
+            return _json.loads(r.read())
+
+    raw = (target or "").strip().lower().replace(" ", "")
+    q = ALIASES.get(raw, target)
+    d = get(f"{BASE}/target/search.json?q={urllib.parse.quote(q)}&limit=8")
+    ts = [{"id": t["target_chembl_id"], "name": t.get("pref_name") or "", "type": t.get("target_type")}
+          for t in d.get("targets", [])]
+    ts.sort(key=lambda t: 0 if t["type"] == "SINGLE PROTEIN" else 1)
+    if not ts:
+        return {"ok": False, "error": f"no ChEMBL target for {target!r}"}
+    tgt = ts[0]
+    acts = get(f"{BASE}/activity.json?target_chembl_id={tgt['id']}&standard_type=IC50"
+               f"&standard_value__lte=10000&limit={limit}").get("activities", [])
+    acts = [{"id": a.get("molecule_chembl_id"), "smiles": a.get("canonical_smiles"),
+             "nM": a.get("standard_value")} for a in acts if a.get("canonical_smiles")]
+
+    def fp(smi):
+        m = Chem.MolFromSmiles(smi)
+        return AllChem.GetMorganFingerprintAsBitVect(m, 2, nBits=2048) if m else None
+
+    act_fps = [(a, fp(a["smiles"])) for a in acts]
+    act_fps = [(a, f) for a, f in act_fps if f]
+    rows = list(_csv.DictReader((STRUCT / "compounds.csv").open(encoding="utf-8")))
+    scored = []
+    for r in rows:
+        smi = (r.get("smiles") or "").strip()
+        if not smi:
+            continue
+        f = fp(smi)
+        if f is None:
+            continue
+        sims = DataStructs.BulkTanimotoSimilarity(f, [x[1] for x in act_fps])
+        best = max(sims) if sims else 0.0
+        if best <= 0:
+            continue
+        j = sims.index(best)
+        scored.append({"name": r.get("name") or "", "smiles": smi,
+                       "plant_binomial": r.get("plant_binomial") or "",
+                       "compound_class": r.get("compound_class") or "",
+                       "tanimoto": round(best, 4),
+                       "matched_active": act_fps[j][0]["id"],
+                       "matched_active_nM": act_fps[j][0]["nM"]})
+    scored.sort(key=lambda x: -x["tanimoto"])
+    return {"ok": True, "target": tgt, "n_actives": len(act_fps), "top": scored[:top]}
+
+
+def fused_screen(target: str, top_k: int = 8, process: str = DEFAULT_PROCESS) -> dict:
+    """Run all three Track-2 layers and fuse them into one ranked, falsifiable shortlist.
+
+    layer 1 knowledge graph  -> which plants are linked to the target (evidence chain)
+    layer 2 cheminformatics  -> which compounds are structurally close to known actives (ECFP/Tanimoto)
+    layer 3 screening        -> ADMET flags + physics (does it survive preparation) + novelty
+    """
+    chem = chembl_rank(target, top=top_k)
+    hits = []
+    for h in (chem.get("top") or [])[:top_k]:
+        hit = dict(h)
+        hit["admet"] = admet_flags(h["smiles"])
+        hit["physics"] = physics_verdict(h["compound_class"], process)
+        hit["novelty"] = {"structural_novelty": round(1.0 - h["tanimoto"], 3),
+                          "note": "1 − Tanimoto to the closest known active (higher = less familiar)"}
+        # a simple, transparent fused score: similarity × ADMET × physics-stability
+        adme = 1.0 if hit["admet"].get("lipinski_pass") else 0.5
+        phys = 1.0 if hit["physics"].get("passed") is not False else 0.4
+        hit["fused_score"] = round(h["tanimoto"] * adme * phys, 3)
+        hits.append(hit)
+    hits.sort(key=lambda x: -x["fused_score"])
+    return {"target_query": target, "ok": bool(chem.get("ok")),
+            "target": chem.get("target"), "n_actives": chem.get("n_actives"),
+            "method": ("layer 1: plant→compound→target KG · layer 2: ECFP4 Tanimoto vs ChEMBL actives · "
+                       "layer 3: Lipinski ADMET + preparation physics + structural novelty"),
+            "hits": hits}

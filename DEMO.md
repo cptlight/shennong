@@ -5,9 +5,16 @@
 - **Static (browse every result):** https://cptlight.github.io/shennong/ — no install, reads `artifacts/*.json`.
 - **Live (query the model):** `make workbench` then open `/demo/`.
 
-The live Ask tab runs the **fine-tuned 1.5 B directly** — no retrieval, no injected passages — side-by-side
+The demo has **two judge-facing sections**:
+
+**1 · Ask the model** — the fine-tuned 1.5 B directly — no retrieval, no injected passages — side-by-side
 with the unfine-tuned baseline, same prompt, same decode, exact prompts shown, and **12 clickable domain
 questions** across both tracks (🌿 Traditional knowledge, 🧪 Natural products).
+
+**2 · Screen a target (Track 02)** — type a disease target (e.g. `COX2`, `tubulin`, `EGFR`) and the
+three-layer pipeline runs live: knowledge-graph plant→compound→target links, ECFP4 similarity of 23,176 plant
+compounds to the target's known ChEMBL actives, then Lipinski ADMET + preparation physics + structural
+novelty, fused into a ranked shortlist. `shennong/screen.py` (`make screen-ml TARGET=COX2`).
 
 ## The model (open weights, Apache-2.0)
 

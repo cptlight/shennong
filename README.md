@@ -2,7 +2,7 @@
 
 # 神农 SHENNONG
 
-**▶ [Test it in your browser — no install, no login](https://cptlight.github.io/shennong/)**
+**▶ [Test it live on Hugging Face — query the model, no install](https://huggingface.co/spaces/tomscot/shennong)** · [static result browser](https://cptlight.github.io/shennong/)
 
 **Shennong tasted a hundred herbs. We are teaching a 1.5 B open model to do it again — and to tell us what he hid between the lines.**
 
@@ -10,7 +10,8 @@
 
 | | link |
 |---|---|
-| **▶ Live demo (no install)** | https://cptlight.github.io/shennong/ |
+| **▶ Live demo (query the model)** | https://huggingface.co/spaces/tomscot/shennong |
+| **Result browser (static)** | https://cptlight.github.io/shennong/ |
 | **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 | **Corpus** | 29,042 records · **177.3 M characters** — base 106 sources **+ 1,304 CC0 jicheng.tw works** (`make corpus-full`) |

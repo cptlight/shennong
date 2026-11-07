@@ -1208,6 +1208,16 @@ class Handler(BaseHTTPRequestHandler):
                                               int(payload.get("max_new_tokens") or 96)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
+        if u.path == "/api/screen":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                raw = self.rfile.read(min(n, 16384)) if n else b"{}"
+                payload = json.loads(raw.decode("utf-8") or "{}")
+                from shennong.screen import fused_screen
+                return self._json(fused_screen(str(payload.get("question") or payload.get("q") or "COX2"),
+                                               top_k=int(payload.get("top_k") or 8)))
+            except Exception as exc:  # noqa: BLE001
+                return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/compare":
             try:
                 n = int(self.headers.get("Content-Length") or 0)

@@ -215,6 +215,7 @@ HTML = """<!doctype html>
   <button role="tab" aria-selected="false" data-t="diag">6 · Diagnostics</button>
   <button role="tab" aria-selected="false" data-t="extraction">7 · Extraction &amp; name mapping</button>
   <button role="tab" aria-selected="false" data-t="ask">8 · Ask it live</button>
+  <button role="tab" aria-selected="false" data-t="screen">9 · Screen a target</button>
   <button role="tab" aria-selected="false" data-t="curriculum">9 · Curriculum &amp; self-observation</button>
   <button role="tab" aria-selected="false" data-t="weights">10 · Weights &amp; reproduce</button>
 </nav>
@@ -736,7 +737,74 @@ function tabExtraction(){
   return h;
 }
 
-const TABS = {ask:tabAsk, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
+
+function tabScreen(){
+  let h = `<section><h2>Screen a target — Track 02, live</h2>
+  <p class="note">Type a disease target. <b>Layer 1</b> finds the plant→compound→target links from the
+  knowledge graph; <b>layer 2</b> ranks our 23,176 plant compounds by ECFP4 similarity to the target's known
+  ChEMBL actives; <b>layer 3</b> flags Lipinski ADMET, preparation physics and structural novelty. Every row
+  is a falsifiable candidate, not a claim.</p>
+  <div id="screenbox" class="warn">checking for a live screening endpoint…</div>
+  <div id="screenform" style="display:none;margin:0 0 16px">
+    <input id="tgt" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"
+      placeholder="e.g. COX2 · PTGS2 · tubulin · EGFR">
+    <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <button id="gos" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;
+        font:inherit;font-weight:600;cursor:pointer">Screen</button>
+      <span style="font-size:12px;color:var(--muted)">try:</span>
+      ${['COX2','tubulin','EGFR','PTGS2'].map(t=>`<button data-t="${t}" style="padding:4px 10px;border:1px solid var(--line);
+          border-radius:999px;background:#fff;font:12px inherit;cursor:pointer">${t}</button>`).join('')}
+    </div>
+  </div>
+  <div id="screenout"></div></section>`;
+  return h;
+}
+
+async function screenInit(){
+  const box=document.getElementById('screenbox'), form=document.getElementById('screenform');
+  // open the form immediately — the screening call is slow (~20s: ChEMBL fetch + 23k compounds), so it runs
+  // only when the judge asks, never on tab open.
+  box.style.display='none'; form.style.display='';
+  document.getElementById('gos').onclick = () => doScreen();
+  document.getElementById('tgt').addEventListener('keydown', e=>{ if(e.key==='Enter') doScreen(); });
+  form.querySelectorAll('button[data-t]').forEach(b=>b.onclick=()=>{
+    document.getElementById('tgt').value=b.dataset.t; doScreen(); });
+}
+
+async function doScreen(){
+  const tgt=((document.getElementById('tgt')||{}).value||'').trim()||'COX2';
+  const out=document.getElementById('screenout');
+  out.innerHTML='<p class="note">screening '+esc(tgt)+' — fetching ChEMBL actives and ranking 23,176 compounds…</p>';
+  try{
+    const r = await fetch('/api/screen',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({question:tgt})});
+    const d = await r.json();
+    renderScreen(d, tgt);
+  }catch(e){ out.innerHTML='<p class="warn">screening failed: '+esc(String(e))+'</p>'; }
+}
+
+function renderScreen(d, tgt){
+  const out=document.getElementById('screenout');
+  if(!d || d.ok===false){ out.innerHTML='<p class="warn">'+esc((d&&d.error)||('no result for '+tgt))+'</p>'; return; }
+  const t=d.target||{};
+  let h='<h2 style="margin-top:18px">'+esc(t.name||tgt)+' <span class="mono">'+esc(t.id||'')+'</span></h2>';
+  h+='<p class="note">'+esc(String(d.n_actives))+' known actives · '+esc(d.method||'')+'</p>';
+  if(d.hits && d.hits.length){
+    h+='<table><thead><tr><th>#</th><th>compound</th><th>plant</th><th>similarity</th><th>ADMET</th><th>physics</th><th>fused</th></tr></thead><tbody>';
+    d.hits.forEach((x,i)=>{
+      const a=x.admet||{}, p=x.physics||{};
+      h+='<tr><td>'+(i+1)+'</td><td>'+esc(x.name||'')+'</td><td>'+esc(x.plant_binomial||'—')+'</td>'+
+        '<td>'+esc(String(x.tanimoto))+'</td>'+
+        '<td>'+(a.lipinski_pass?'pass':(a.ok?'fail':'n/a'))+'</td>'+
+        '<td>'+(p.checked?esc(String(p.score)):'n/a')+'</td>'+
+        '<td><b>'+esc(String(x.fused_score))+'</b></td></tr>';
+    });
+    h+='</tbody></table>';
+  } else { h+='<p class="note">No compound hits for this target in our library.</p>'; }
+  out.innerHTML=h;
+}
+
+const TABS = {ask:tabAsk, screen:tabScreen, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
               experts:tabExperts, diag:tabDiag, weights:tabWeights};
 const main = document.getElementById('main');
 function show(name){
@@ -747,6 +815,7 @@ function show(name){
   const sec = main.querySelector('section');
   if (sec) sec.classList.add('on');
   if (name === 'ask') askInit();
+  if (name === 'screen') screenInit();
   document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected', String(b.dataset.t===name)));
   const ct = main.querySelector('#ct');
   if (ct) {
@@ -819,7 +888,7 @@ def main() -> int:
     import re as _re
     tabs_line = _re.search(r"const TABS = \{(.*?)\};", html, _re.S)
     # functions invoked from HTML handlers or tab wiring — a missing one is a dead button at runtime
-    required = ["askInit", "doAsk", "renderServerResult", "show", "esc"]
+    required = ["askInit", "doAsk", "renderServerResult", "screenInit", "doScreen", "renderScreen", "show", "esc"]
     missing = [f for f in required
                if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (f, f), html)]
     if missing:

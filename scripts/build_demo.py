@@ -566,40 +566,50 @@ async function askInit(){
 }
 
 
+let ASK_BUSY = false;
 async function doAsk(mode){
+  if (ASK_BUSY) return;              // one request at a time — overlapping clicks used to clobber each other
   mode = mode || 'query';
   const q = document.getElementById('q').value.trim();
   if (!q) return;
+  ASK_BUSY = true;
   const out = document.getElementById('askout');
   const stat = document.getElementById('stat');
   const t0 = Date.now();
   out.innerHTML = '<p class="note">asking…</p>';
-  stat.textContent = 'running…';
-  // 1) semantic expert activation — instant, and shown before the answer
+  stat.textContent = 'starting…';
+  // a visible clock, so a 40 s CPU answer does not look like a stall
+  const tick = setInterval(() => {
+    const sNow = Math.round((Date.now() - t0) / 1000);
+    stat.textContent = 'generating… ' + sNow + ' s' + (sNow > 25 ? ' (CPU — the 1.5 B runs on 2 cores)' : '');
+  }, 400);
   try {
-    const er = await fetch('/api/advise', {method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({question:q})});
-    const ed = await er.json().catch(() => null);
-    if (ed && ed.ok) { renderAdvice(out, ed); }
-    else {
-      out.insertAdjacentHTML('beforeend', '<div class="warn">Expert routing unavailable (HTTP ' + esc(String(er.status)) +
-        (ed && ed.error ? ': ' + esc(ed.error) : '') + '). The model answer below is unaffected.</div>');
-    }
-  } catch (e) { console.warn('advise stage failed:', String(e)); }
-  // 2) the answer
-  try {
+    // 1) learned router + rule analysis — fast
+    try {
+      const er = await fetch('/api/advise', {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({question:q})});
+      const ed = await er.json().catch(() => null);
+      if (ed && ed.ok) renderAdvice(out, ed);
+    } catch (e) { console.warn('advise stage failed:', String(e)); }
+    // 2) the model answer
     const endpoint = mode === 'hypothesize' ? '/api/hypothesize'
                    : mode === 'compare' ? '/api/compare' : '/api/query';
     const r = await fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({question:q, k:5,
-        max_new_tokens: mode === 'hypothesize' ? 96 : (mode === 'compare' ? 40 : 32)})});
+        max_new_tokens: mode === 'hypothesize' ? 96 : (mode === 'compare' ? 40 : 28)})});
     const d = await r.json();
-    stat.textContent = 'answered in ' + Math.round((Date.now()-t0)/1000) + ' s';
     if (mode === 'hypothesize') renderServerResult(out, d, 'hypothesize');
     else if (mode === 'compare') renderCompare(out, d);
     else renderAnswer(out, d);
+    stat.textContent = 'answered in ' + Math.round((Date.now() - t0) / 1000) + ' s';
   } catch (e) {
-    out.insertAdjacentHTML('beforeend', '<div class="warn">Request failed or timed out: ' + esc(String(e)) + '</div>');
+    out.insertAdjacentHTML('beforeend', '<div class="warn">The request failed or timed out after ' +
+      Math.round((Date.now() - t0) / 1000) + ' s. On CPU a long answer can exceed the host timeout — ' +
+      'try a shorter question.</div>');
+    stat.textContent = 'failed';
+  } finally {
+    clearInterval(tick);
+    ASK_BUSY = false;
   }
 }
 

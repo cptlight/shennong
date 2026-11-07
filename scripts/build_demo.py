@@ -641,7 +641,9 @@ function renderAnswer(out, d){
     return;
   }
   let h = '<div class="card"><h3>Answer — fine-tuned 1.5 B, from its own weights</h3>';
-  if (d.model) h += '<p style="font-size:12px;color:#6b6157">model: <span class="mono">' + esc(d.model) + '</span></p>';
+  const mdl = typeof d.model === 'string' ? d.model
+            : (d.model && (d.model.checkpoint || d.model.family || d.model.name)) || '';
+  if (mdl) h += '<p style="font-size:12px;color:#6b6157">model: <span class="mono">' + esc(mdl) + '</span></p>';
   h += '<p style="font-size:12px;color:#6b6157">prompt: <span class="mono">' + esc(d.prompt || '') + '</span></p>';
   h += '<pre style="white-space:pre-wrap;margin:8px 0">' + esc(d.answer || '') + '</pre>';
   h += '<p class="note">Direct generation. No retrieval, no injected passage — the model either knows it or it does not.</p></div>';

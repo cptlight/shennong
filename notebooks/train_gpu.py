@@ -70,6 +70,8 @@ def main() -> int:
     ap.add_argument("--batch", type=int, default=4)
     ap.add_argument("--lr", type=float, default=2e-4)
     ap.add_argument("--out", default=str(REPO / "training/runs/gpu-sft"))
+    ap.add_argument("--resume", action="store_true", help="continue from the last checkpoint in --out")
+    ap.add_argument("--sample", type=int, default=0, help="cap training rows (0 = all)")
     args = ap.parse_args()
 
     from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer
@@ -98,7 +100,13 @@ def main() -> int:
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"LoRA trainable: {trainable:,} of {sum(p.numel() for p in model.parameters()):,}")
 
-    train = [t for t in (tokenize_pair(tok, r["text"]) for r in load_examples("train")) if t]
+    train_rows = load_examples("train")
+    if args.sample and len(train_rows) > args.sample:
+        import random
+        random.Random(1337).shuffle(train_rows)
+        train_rows = train_rows[: args.sample]
+        print(f"sampled {len(train_rows):,} training rows")
+    train = [t for t in (tokenize_pair(tok, r["text"]) for r in train_rows) if t]
     val = [t for t in (tokenize_pair(tok, r["text"]) for r in load_examples("val")) if t]
     print(f"examples: {len(train)} train / {len(val)} val")
 
@@ -116,13 +124,13 @@ def main() -> int:
         output_dir=args.out, per_device_train_batch_size=args.batch,
         gradient_accumulation_steps=4, num_train_epochs=args.epochs, max_steps=args.max_steps,
         learning_rate=args.lr, lr_scheduler_type="cosine", warmup_steps=10,
-        logging_steps=20, save_strategy="epoch", eval_strategy="epoch",
+        logging_steps=20, save_strategy="steps", save_steps=500, eval_strategy="epoch",
         bf16=False, fp16=torch.cuda.is_available(), report_to=[],
         seed=1337, save_total_limit=2,
     )
     trainer = Trainer(model=model, args=ta, train_dataset=DS(train), eval_dataset=DS(val),
                       data_collator=lambda b: collate(b, tok.pad_token_id))
-    trainer.train()
+    trainer.train(resume_from_checkpoint=True if args.resume else None)
 
     # merge LoRA into the base and save fp16 weights for quantization
     model = trainer.model.merge_and_unload()

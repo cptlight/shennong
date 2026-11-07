@@ -245,6 +245,16 @@ def _parse_claim(claim: str) -> dict:
     return {"claim": claim, "drug": drug, "process": process, "chemotype": chemotype}
 
 
+def cmd_screen_target(args: argparse.Namespace) -> int:
+    try:
+        from shennong.screen import screen_target
+        _emit(screen_target(args.target), as_json=args.json)
+        return 0
+    except Exception as exc:
+        _emit(_fail("screen-target", exc), as_json=args.json)
+        return 1
+
+
 def cmd_screen(args: argparse.Namespace) -> int:
     """Solve Track 02 in one shot: parse a preparation claim, score it with the tradition panel, and
     let the physics arbiter decide whether it can survive. Runs on CPU, no torch, no network."""
@@ -378,6 +388,10 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out", default=None, help="write Workbench hypotheses JSON")
     p.set_defaults(func=cmd_shi)
 
+    p = sub.add_parser("screen-target", help="Track-02: query a disease target, get ranked plant compounds")
+    p.add_argument("target", help='e.g. "COX2", "inflammation", "tubulin"')
+    p.set_defaults(func=cmd_screen_target)
+
     p = sub.add_parser("screen", help="Track-02 screening: score a preparation claim and let physics decide")
     p.add_argument("claim", help='free-form claim, e.g. "蒸 of 菖蒲 should enrich terpenoids"')
     p.set_defaults(func=cmd_screen)
@@ -396,7 +410,7 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     # allow the global flags to appear after the subcommand, as the Workbench scripts do
     argv = list(sys.argv[1:] if argv is None else argv)
-    if argv and argv[0] in {"cai", "zhi", "pei", "shi", "screen", "ask", "report"}:
+    if argv and argv[0] in {"cai", "zhi", "pei", "shi", "screen", "screen-target", "ask", "report"}:
         command = argv[0]
         rest = argv[1:]
         hoisted: list[str] = []

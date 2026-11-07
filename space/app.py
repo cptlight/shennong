@@ -79,6 +79,9 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(compare_direct(q, max_new_tokens=mt))
         if self.path == "/api/hypothesize":
             return self._json(hypothesise_live(q, max_new_tokens=mt))
+        if self.path == "/api/screen":
+            from shennong.screen import screen_target
+            return self._json(screen_target(q))
         return self._json({"error": f"no route {self.path}"}, 404)
 
     def log_message(self, *args):

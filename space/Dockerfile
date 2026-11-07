@@ -14,11 +14,14 @@ WORKDIR /app
 # DEMO_DIR = /app/docs/demo, models at /app/artifacts and /app/models/baseline.
 RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && mkdir -p /app/space /app/docs /app/artifacts /app/models/baseline \
-               /app/corpus/processed/structured /app/scripts \
+               /app/corpus/processed/structured /app/corpus/processed /app/scripts \
     && cp -r /tmp/src/shennong /app/shennong \
     && cp -r /tmp/src/docs/demo /app/docs/demo \
     && cp /tmp/src/space/app.py /app/space/app.py \
     && cp /tmp/src/corpus/processed/structured/compounds.csv /app/corpus/processed/structured/compounds.csv \
+    && cp /tmp/src/corpus/processed/structured/properties.csv /app/corpus/processed/structured/properties.csv \
+    && cp /tmp/src/corpus/processed/lexicon_drugs.json /app/corpus/processed/lexicon_drugs.json \
+    && cp /tmp/src/artifacts/discoveries.json /tmp/src/artifacts/operator_ontology.json /app/artifacts/ \
     && cp /tmp/src/scripts/build_fingerprints.py /app/scripts/build_fingerprints.py \
     && rm -rf /tmp/src
 

@@ -17,16 +17,22 @@ Then Runtime → **Disconnect and delete runtime** (guarantees a clean, matched 
 
 ```python
 import subprocess, os
+
+os.chdir("/content")   # step OUT first: rm-rf on the shell's own CWD gives
+                       # "fatal: Unable to read current working directory"
+
 def sh(cmd):
     print(f"\n$ {cmd}", flush=True)
-    r = subprocess.run(cmd, shell=True, executable="/bin/bash", capture_output=True, text=True)
+    r = subprocess.run(cmd, shell=True, cwd="/content", executable="/bin/bash",
+                       capture_output=True, text=True)
     print((r.stdout or "")[-900:], flush=True)
     if r.returncode:
         print((r.stderr or "")[-2000:], flush=True); raise SystemExit("FAILED: " + cmd)
     return r
 
-sh("rm -rf /content/shennong && git clone -q https://github.com/cptlight/shennong.git /content/shennong")
+sh("rm -rf shennong && git clone -q https://github.com/cptlight/shennong.git shennong")
 os.chdir("/content/shennong")
+sh("pwd && ls")
 
 # NOTE: never --upgrade torch-adjacent packages in Colab. No torch, no torchvision.
 sh('pip install -q "transformers==4.46.3" "peft==0.14.0" "protobuf>=5.28.0" accelerate')

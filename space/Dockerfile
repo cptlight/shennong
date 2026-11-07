@@ -24,6 +24,7 @@ RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && cp /tmp/src/artifacts/discoveries.json /tmp/src/artifacts/operator_ontology.json /app/artifacts/ \
     && cp /tmp/src/artifacts/router.pkl /app/artifacts/router.pkl \
     && mkdir -p /app/artifacts/adapters \
+    && cp /tmp/src/artifacts/adapters/*.gguf /app/artifacts/adapters/ 2>/dev/null || true \
     && cp /tmp/src/scripts/build_fingerprints.py /app/scripts/build_fingerprints.py \
     && rm -rf /tmp/src
 

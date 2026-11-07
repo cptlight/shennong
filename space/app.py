@@ -138,6 +138,17 @@ def _warm_models() -> None:
         _live_model()
         _baseline_model()
         print("warm: both GGUFs loaded into RAM", flush=True)
+        # warm whichever expert adapters are baked into the image
+        try:
+            from shennong import moe_serve
+            present = moe_serve.adapters_present()
+            for dom, ok in present.items():
+                if ok:
+                    moe_serve._load(dom)      # noqa: SLF001
+                    print(f"warm: expert adapter {dom} loaded", flush=True)
+            print(f"warm: adapters present = {present}", flush=True)
+        except Exception as exc:  # noqa: BLE001
+            print(f"warm experts failed: {exc}", flush=True)
     except Exception as exc:  # noqa: BLE001
         print(f"warm failed: {type(exc).__name__}: {exc}", flush=True)
 

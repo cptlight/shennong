@@ -715,13 +715,6 @@ Code and weights: **Apache-2.0**. Data: per-source licences preserved in
 restricted material **referenced only, never redistributed**. See
 [`corpus/LICENSE_AUDIT.md`](corpus/LICENSE_AUDIT.md).
 
-## Built for
-
-**EthnoHack 2026** — *Data Hackathon on Ethnopharmacology & Health*, ETHCSTWIN (Horizon Europe),
-National and Kapodistrian University of Athens, 2–8 November 2026.
-Track **02 — Natural Products for Drug Discovery**, with depth in track 01 (knowledge mining for
-product discovery) and a local-first phytotherapy decision-support Workbench.
-
 <div align="center">
 
 *「青蒿一握，以水二升漬，絞取汁，盡服之。」*

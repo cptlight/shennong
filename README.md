@@ -6,6 +6,29 @@
 
 **Shennong tasted a hundred herbs. We are teaching a 1.5 B open model to do it again — and to tell us what he hid between the lines.**
 
+## The two problems this solves
+
+**1 · Track 1 — plant names do not survive the centuries.** The same plant is `甘草`, `Glycyrrhiza uralensis`,
+`Liquorice`, `Mulethi`, `감초`. Nothing links a 16th-century drug name to a modern gene target, so thousands of
+years of clinical observation stay unqueryable. **Live:** open the demo and click `丹參` — you get the modern
+binomial, its name in five languages, 8 recorded uses, 4 compound classes and 10 modern gene targets, in about a
+second, on a CPU. Coverage: 4,716 binomials · 827 historical Chinese names · 4,154 Indian plants · 10,393
+vernacular names. Unknown names return near matches, never a guess.
+
+**2 · Track 2 — which plant compounds are worth testing.** Screening a plant library against a disease target
+normally needs a wet lab or a GPU cluster. **Live:** type `EGFR` in the demo — 23,176 plant compounds ranked by
+ECFP4 similarity to the known ChEMBL actives, with Lipinski ADMET, preparation physics and novelty, in seconds on
+a CPU. `HMGCR` returns a top Tanimoto of 1.000: the pipeline rediscovers a known active, which is our control.
+
+**And the part that makes it trustworthy: 78 of 203 recorded preparation claims are physically impossible** —
+the compound decomposes at the temperature the text prescribes. We publish the refutations.
+
+**Honest limits:** Greek and Latin classical texts are not yet ingested (19 records' worth), and the sparse MoE we
+trained scores **31.7 % vs 43.3 %** for the dense model — released anyway, with the benchmark that shows it losing.
+See [docs/PITCH.md](docs/PITCH.md) for the 3-minute script and Q&A.
+
+
+
 *A 1.5 B-parameter fine-tuned open model (Apache-2.0) for classical Asian medicine — a 940 MB Q4 GGUF that runs on CPU — plus a first-principles discovery pipeline.*
 
 | | link |

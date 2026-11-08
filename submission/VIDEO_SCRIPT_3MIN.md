@@ -125,7 +125,7 @@ the chemistry here is Western. The point is the order of evidence.*
 ## 2:30–3:00 — Honest gaps · and the ask
 
 **On screen, plainly:**
-`drug→taxon resolution 14.1 %` · `quantum: fragments only` · `2 of 5 pre-registered axes untestable`
+`plant-materia resolution 48.7 %` · `quantum: fragments only` · `2 of 5 pre-registered axes untestable`
 
 > *"What we cannot yet do: drug-name resolution is fourteen per cent accurate and bounds every downstream
 > number; the quantum layer arbitrates fragments, not natural products; and two of our five axes could not be

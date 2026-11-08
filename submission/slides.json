@@ -79,7 +79,7 @@
     "**The corpus answers those obligations:** **106 sources · 45.6 M characters · traditional Chinese canon in 繁體 (35 %), Sanskrit in Devanagari, Latin (Avicenna's 1593 *Canon*), and the foundational biology / chemistry substrate.**",
     "**It contains ancient *science*, not only medicine:** 天工開物 (materials), 齊民要術 (fermentation), 夢溪筆談 (natural observation) — these carry the process chemistry the medicine actually used.",
     "**Licence audit is part of the method:** 30 public-domain + 73 CC BY-SA sources reproduced; **GRETIL rejected** because CC BY-**NC**-SA cannot ship in a public repo. The rejection is documented, not hidden.",
-    "**Honest limit, stated here rather than in an appendix:** drug-name → taxon resolution measures **14.1 %** accuracy, which bounds every downstream number. GRETIL rejection row visible. is true. ---"
+    "**Honest limit, stated here rather than in an appendix:** in-lexicon resolution is exact, but only **48.7 % of plant-derived mentions** resolve, and 37.9 % of the corpus is not botanical at all. GRETIL rejection row visible. is true. ---"
    ],
    "visual": "the tier stack (T1 foundational → T5 structured open data) beside a licence-audit table with the GRETIL rejection row visible.",
    "speaker_note": "The corpus is the least glamorous part and the one that decides whether anything downstream is true."

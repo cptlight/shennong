@@ -153,8 +153,10 @@ ourselves, after fixing it.
   (natural observation) — these carry the process chemistry the medicine actually used.
 - **Licence audit is part of the method:** 30 public-domain + 73 CC BY-SA sources reproduced; **GRETIL
   rejected** because CC BY-**NC**-SA cannot ship in a public repo. The rejection is documented, not hidden.
-- **Honest limit, stated here rather than in an appendix:** drug-name → taxon resolution measures **14.1 %**
-  accuracy, which bounds every downstream number.
+- **Honest limit, stated here rather than in an appendix:** in-lexicon resolution is exact (1.000), but only
+  **48.7 % of plant-derived corpus mentions resolve** (4,357 of 8,944) — the rest are archaic names absent from
+  every open lexicon. **37.9 % of the pharmacopoeia isn't botanical at all** (23.5 % animal, 8.3 % mineral, 4.1 %
+  manufactured objects, 2.0 % human-derived), so a rate over everything is the wrong denominator.
 
 **Visual:** the tier stack (T1 foundational → T5 structured open data) beside a licence-audit table with the
 GRETIL rejection row visible.

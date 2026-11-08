@@ -24,7 +24,12 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--width", type=int, default=4)
+    ap.add_argument("--width", type=int, default=4,
+                    help="shared-expert width. 4 dodges llama-quantize's zero-tensor crash; 4864 produces the "
+                         "full-width tensors llama.cpp's qwen2moe loader expects. Use 4864 for new exports.")
+    ap.add_argument("--untie", action="store_true",
+                    help="give the LM head its own weight (untie from the embedding) so the GGUF carries "
+                         "output.weight, which llama.cpp's qwen2moe loader requires")
     ap.add_argument("--tolerance", type=float, default=0.10,
                     help="max |logit diff| accepted. The swap is provably zero-contribution (down_proj zeroed, bias=False), so only fp16 rounding differs; 0.1 is generous.")
     args = ap.parse_args()
@@ -71,6 +76,16 @@ def main() -> int:
               f"a zeroed down_proj with bias=False outputs 0, exactly like the 0-width module)")
     else:
         print("verify: OK — numerically identical")
+
+    if args.untie:
+        emb = model.model.embed_tokens.weight.data
+        head = torch.nn.Linear(model.config.hidden_size, model.config.vocab_size, bias=False,
+                               dtype=model.dtype, device=emb.device)
+        with torch.no_grad():
+            head.weight.copy_(emb)
+        model.lm_head = head
+        model.config.tie_word_embeddings = False
+        print("untied lm_head (copied from the embedding) -> the GGUF will carry output.weight")
 
     out = pathlib.Path(args.out)
     model.save_pretrained(out, safe_serialization=True)

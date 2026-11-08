@@ -12,7 +12,7 @@ WORKDIR /app
 # Code + demo page are cloned at build time so the Space can never drift from the repo.
 # Layout must match space/app.py: ROOT = /app (app.py lives at /app/space/app.py, so parent.parent = /app),
 # DEMO_DIR = /app/docs/demo, models at /app/artifacts and /app/models/baseline.
-RUN echo "source rev 2026-11-08T02:18"   # cache-bust: the git clone layer is cached unless this changes
+RUN echo "source rev 2026-11-08T02:52"   # cache-bust: the git clone layer is cached unless this changes
 RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && mkdir -p /app/space /app/docs /app/artifacts /app/models/baseline \
                /app/corpus/processed/structured /app/corpus/processed /app/scripts /app/artifacts/adapters \
@@ -27,17 +27,26 @@ RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && rm -rf /tmp/src
 
 # prebuilt CPU wheel — avoids a long source compile
-RUN pip install --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu \
-      llama-cpp-python "numpy<2" pyyaml rdkit scikit-learn
+# llama-cpp-python wheel is vendored into this Space repo: the abetlen index redirects to a GitHub release
+# download, and HF's builder intermittently times out fetching it (HTTP 504 / ReadTimeout), which failed the
+# build twice on 2026-11-08. Installing from the committed wheel removes that external dependency entirely.
+COPY llama_cpp_python.whl /tmp/wheel/llama_cpp_python.whl
+RUN pip install --no-deps /tmp/wheel/llama_cpp_python.whl \
+ || pip install --retries 10 --timeout 120 --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu llama-cpp-python
+RUN pip install "numpy<2" pyyaml rdkit scikit-learn
 
 # precompute the compound fingerprints so the live screen is ~2 s instead of ~40 s (2-vCPU timeout)
 RUN python scripts/build_fingerprints.py
 
 # the two models: the fine-tuned 1.5B and the unfine-tuned baseline for the side-by-side
-RUN curl -sSL -o /app/artifacts/shennong-1.5b-sft-Q4_K_M.gguf \
-      https://github.com/cptlight/shennong/releases/download/v1.17.0/shennong-1.5b-sft-Q4_K_M.gguf \
- && curl -sSL -o /app/models/baseline/qwen2.5-1.5b-instruct-q4_k_m.gguf \
-      https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf
+# model weights come from the Hugging Face CDN, not GitHub releases: HF's builder intermittently times out on
+# github.com/.../releases (HTTP 504), and plain `curl` without -f then writes an error page over the model file,
+# which surfaces at run time as "Failed to load model from file". -f makes any such failure fail the build loudly.
+RUN curl -fsSL --retry 5 --retry-delay 2 -o /app/artifacts/shennong-1.5b-sft-Q4_K_M.gguf \
+      https://huggingface.co/tomscot/shennong-1.5b-sft/resolve/main/shennong-1.5b-sft-Q4_K_M.gguf \
+ && curl -fsSL -o /app/models/baseline/qwen2.5-1.5b-instruct-q4_k_m.gguf \
+      https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf \
+ && test "$(stat -c%s /app/artifacts/shennong-1.5b-sft-Q4_K_M.gguf)" -gt 800000000
 
 # expert LoRA adapters (MoE-of-experts) — pulled from the model repo, not git
 RUN for d in t1_classical t2_natprod safety; do \

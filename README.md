@@ -2,7 +2,7 @@
 
 # 神农 SHENNONG
 
-**▶ [Test it live - query the model and screen a target, no install](https://tomscot-shennong.hf.space)** · [static result browser](https://cptlight.github.io/shennong/)
+**▶ [Test it live - query the model and screen a target, no install](https://tomscot-shennong.hf.space)**
 
 **Shennong tasted a hundred herbs. We are teaching a 1.5 B open model to do it again - and to tell us what he hid between the lines.**
 
@@ -43,7 +43,6 @@ See [docs/PITCH.md](docs/PITCH.md) for the 3-minute script and Q&A.
 | **▶ Live demo - read a passage (Track 1)** | same Space, "1b · Track 1 - read a passage" tab - paste any classical text, get drugs with spans, claims mapped, processes detected |
 | **▶ Live demo - screen a target (Track 2)** | same Space, "2 · Track 2 - screen a target" tab - three-layer virtual screening |
 | **Space source** | [`tomscot/shennong`](https://huggingface.co/spaces/tomscot/shennong) · redeploy with `./scripts/deploy_space.sh tomscot/shennong` |
-| **Static result browser** | https://cptlight.github.io/shennong/ |
 | **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 | **Corpus** | **29,042 records · 177.3 M characters**, after `make corpus-full` (base 106 sources + 1,304 CC0 jicheng.tw works). The checked-in base corpus alone is 27,738 records / 45.6 M characters - the 177.3 M figure requires the jicheng fetch |
@@ -271,7 +270,6 @@ browser.
 |---|---|
 | **Live demo (inference)** | **https://tomscot-shennong.hf.space** - **14 tabs, 4 of them running live inference on CPU** (resolve a name · read a passage · screen a target · ask the model) |
 | **Space source** | https://huggingface.co/spaces/tomscot/shennong (Docker SDK, 2 vCPU) |
-| **Static result browser** | https://cptlight.github.io/shennong/ - pre-computed results, no model, no inference |
 | **Model weights** | https://huggingface.co/tomscot/shennong-1.5b-sft (Q4_K_M 940 MiB + MoE variants) |
 
 **What the Space actually does at build time.** `space/Dockerfile` clones this repository, installs

@@ -18,7 +18,7 @@ import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 STRUCT = ROOT / "corpus" / "processed" / "structured"
-LANGS = ("de", "fr", "ko", "zh", "ja")
+LANGS = ("en", "hi", "de", "fr", "ko", "zh", "ja")
 CHUNK = 60
 
 SPARQL = (

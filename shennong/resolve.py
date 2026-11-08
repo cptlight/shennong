@@ -61,7 +61,33 @@ def _index():
         b = (r.get("binomial") or "").strip()
         if b:
             idx.setdefault(b.lower(), (b, "modern botanical binomial"))
+    # every binomial that appears in ANY structured table — plants.csv only covers 284 of the 4,716 we hold
+    import csv as _csv
+    for f in sorted(STRUCT.glob("*.csv")):
+        with f.open(encoding="utf-8") as fh:
+            rd = _csv.DictReader(fh)
+            col = next((c for c in (rd.fieldnames or []) if "binomial" in (c or "")), None)
+            if not col:
+                continue
+            for r in rd:
+                b = (r.get(col) or "").strip()
+                if b:
+                    idx.setdefault(b.lower(), (b, f"modern botanical binomial ({f.stem})"))
+    # alias traditional forms onto the same entries (人參 -> 人参)
+    for k in [k for k in idx if _is_cjk(k)]:
+        simple = _t2s(k)
+        if simple != k:
+            idx.setdefault(simple, idx[k])
     return idx
+
+
+def _t2s(text: str) -> str:
+    """Traditional -> simplified Chinese, so 人參 and 人参 hit the same lexicon entry."""
+    try:
+        import opencc
+        return opencc.OpenCC("t2s").convert(text)
+    except Exception:  # noqa: BLE001
+        return text
 
 
 def _is_cjk(s: str) -> bool:
@@ -123,8 +149,17 @@ def resolve_plant(name: str) -> dict:
                 matched_via += " (embedded in the query)"
                 break
     if not binomial:
+        import difflib
+        close = difflib.get_close_matches(q.lower(), list(idx), n=5, cutoff=0.72)
+        if not close and _is_cjk(q):
+            # CJK: rank entries by character overlap so a variant spelling still gets near matches
+            qs = set(q)
+            scored = sorted(((len(qs & set(k)), k) for k in idx if _is_cjk(k)), reverse=True)
+            close = [k for sc, k in scored[:5] if sc >= 1]
         return {"ok": False, "query": q, "error": "name not resolved in the corpus lexicon",
-                "note": "index covers historical Chinese, Indian synonyms/common names and 5 vernacular languages"}
+                "suggestions": [{"name": c, "binomial": idx[c][0], "via": idx[c][1]} for c in close],
+                "note": "index covers historical Chinese, Indian synonyms/common names and 5 vernacular "
+                        "languages; see suggestions for near matches"}
     detail = _per_binomial(binomial)
     return {"ok": True, "query": q, "binomial": binomial, "matched_via": matched_via,
             "names": detail["names"], "uses": detail["uses"],

@@ -928,7 +928,7 @@ function tabProblems(){
   the weights.</p></section>`;
 }
 
-const RESOLVE_EXAMPLES = ['丹參','甘草','人參','단삼','Salvia miltiorrhiza','Atractylodes macrocephala'];
+const RESOLVE_EXAMPLES = ['丹參','甘草','黄芪','當歸','단삼','Artemisia annua','Salvia miltiorrhiza','Atractylodes macrocephala'];
 
 function tabResolve(){
   return `<section><h2>Track 1 — resolve a plant name, then follow it to modern pharmacology</h2>
@@ -936,6 +936,10 @@ function tabResolve(){
   looked up across the historical Chinese lexicon, Indian synonyms and common names, and five vernacular
   languages — then the resolved binomial is expanded into its recorded uses, compound classes and gene
   targets. Nothing is retrieved at inference; this is the curated corpus.</p>
+  <p class="note"><b>Coverage, stated honestly:</b> 4,716 plant binomials, 827 historical Chinese drug names,
+  10,393 vernacular names (zh/ja/ko/en/hi/de/fr), 4,109 Indian plants with synonyms. Traditional Chinese is
+  normalised to simplified before lookup. A name outside this lexicon returns <b>near matches, never a guess</b> —
+  the resolver is designed to fail visibly rather than fabricate a binomial.</p>
   <div id="resbox" class="warn">type a name below, or click an example</div>
   <div id="resform">
     <input id="resq" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"

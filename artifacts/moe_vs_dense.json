@@ -1,0 +1,988 @@
+{
+  "n": 60,
+  "dense": {
+    "correct": 26,
+    "by_kind": {
+      "use": [
+        2,
+        20
+      ],
+      "name_mapping": [
+        1,
+        9
+      ],
+      "pharmacology": [
+        3,
+        4
+      ],
+      "classical_use": [
+        0,
+        6
+      ],
+      "property": [
+        5,
+        6
+      ],
+      "compound": [
+        6,
+        6
+      ],
+      "formula": [
+        3,
+        3
+      ],
+      "target": [
+        3,
+        3
+      ],
+      "viability": [
+        3,
+        3
+      ]
+    }
+  },
+  "moe": {
+    "correct": 19,
+    "by_kind": {
+      "use": [
+        0,
+        20
+      ],
+      "name_mapping": [
+        1,
+        9
+      ],
+      "pharmacology": [
+        4,
+        4
+      ],
+      "classical_use": [
+        0,
+        6
+      ],
+      "property": [
+        0,
+        6
+      ],
+      "compound": [
+        6,
+        6
+      ],
+      "formula": [
+        3,
+        3
+      ],
+      "target": [
+        3,
+        3
+      ],
+      "viability": [
+        2,
+        3
+      ]
+    }
+  },
+  "rows": [
+    {
+      "id": 0,
+      "kind": "use",
+      "key": "Indian medicine",
+      "dense": {
+        "answer": "Use: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 7.9
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Homeopathy,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 11.9
+      }
+    },
+    {
+      "id": 3,
+      "kind": "use",
+      "key": "淋酒入內",
+      "dense": {
+        "answer": "Recorded use: 燒赤. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 10.0
+      },
+      "moe": {
+        "answer": "Recorded use: 治癰疽. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 9.9
+      }
+    },
+    {
+      "id": 6,
+      "kind": "name_mapping",
+      "key": "Colebrookea oppositifolia",
+      "dense": {
+        "answer": "Indian Squirrel Tail -> Lophura nycthemera (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": false,
+        "s": 9.6
+      },
+      "moe": {
+        "answer": "Indian Squirrel Tail -> Squirrel tail (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": false,
+        "s": 10.6
+      }
+    },
+    {
+      "id": 9,
+      "kind": "use",
+      "key": "jaundice (Ayurveda,Homeo",
+      "dense": {
+        "answer": "Indian medicine uses Curcuma longa for its anti-inflammatory properties. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 5.0
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Homeopathy,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 13.4
+      }
+    },
+    {
+      "id": 12,
+      "kind": "pharmacology",
+      "key": "Polyporus umbellatus",
+      "dense": {
+        "answer": "Disease target: 消腫毒. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 7.8
+      },
+      "moe": {
+        "answer": "Polyporus umbellatus contains terpenoid compounds, which act on GABAA receptors (monoterpenes) — relevant to sedation / anxiety.<|eos|>",
+        "hit": true,
+        "s": 8.2
+      }
+    },
+    {
+      "id": 15,
+      "kind": "use",
+      "key": "湯火傷瘡",
+      "dense": {
+        "answer": "Recorded use: 瘰癧. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 6.3
+      },
+      "moe": {
+        "answer": "Recorded use: 治癰疽. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 12.3
+      }
+    },
+    {
+      "id": 18,
+      "kind": "classical_use",
+      "key": "天竺黃散方天竺黃鬱金",
+      "dense": {
+        "answer": "驚風潮熱 -> 大黃 (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 9.1
+      },
+      "moe": {
+        "answer": "）白朮（一兩）白茯苓（一兩）白茯苓（一兩）白茯苓（一兩）白茯苓（一兩）白茯苓（",
+        "hit": false,
+        "s": 10.3
+      }
+    },
+    {
+      "id": 21,
+      "kind": "property",
+      "key": "無毒",
+      "dense": {
+        "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>",
+        "hit": true,
+        "s": 8.4
+      },
+      "moe": {
+        "answer": "Nature 溫, flavours 甘, channels not recorded, toxicity 無, grade —.<|eos|>",
+        "hit": false,
+        "s": 12.2
+      }
+    },
+    {
+      "id": 24,
+      "kind": "property",
+      "key": "無毒",
+      "dense": {
+        "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>",
+        "hit": true,
+        "s": 1.9
+      },
+      "moe": {
+        "answer": "Nature 溫, flavours 甘, channels not recorded, toxicity 無, grade —.<|eos|>",
+        "hit": false,
+        "s": 6.1
+      }
+    },
+    {
+      "id": 27,
+      "kind": "compound",
+      "key": "Rumex acetosa",
+      "dense": {
+        "answer": "Rumex acetosa contains unclassified compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 6.2
+      },
+      "moe": {
+        "answer": "Rumex acetosa contains unclassified compounds (per the corpus).<|eos|>",
+        "hit": true,
+        "s": 11.0
+      }
+    },
+    {
+      "id": 30,
+      "kind": "use",
+      "key": "tonics (Homeopathy,Unani",
+      "dense": {
+        "answer": "Indian medicine uses Humulus lupulus for its unclassified compounds. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 10.9
+      },
+      "moe": {
+        "answer": "Recorded use: antifungal agents (Ayurveda,Homeopathy,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 11.6
+      }
+    },
+    {
+      "id": 33,
+      "kind": "formula",
+      "key": "大承氣湯",
+      "dense": {
+        "answer": "Formula ws_zh_jingui_yaolue:大承氣湯: 大黃, 厚朴, 枳實, 芒硝, 水, 取",
+        "hit": true,
+        "s": 12.0
+      },
+      "moe": {
+        "answer": "Formula ws_zh_jingui_yaolue:大承氣湯: 甘草, 乾薑, 人參, 芍藥, 白朮,",
+        "hit": true,
+        "s": 12.4
+      }
+    },
+    {
+      "id": 36,
+      "kind": "pharmacology",
+      "key": "Chaenomeles sinensis",
+      "dense": {
+        "answer": "Chaenomeles sinensis affects the immune system, specifically the cellular immunity by targeting alkaloid compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 6.9
+      },
+      "moe": {
+        "answer": "Chaenomeles sinensis contains terpenoid compounds, which act on GABAA receptors (monoterpenes) — relevant to sedation / anxiety.<|eos|>",
+        "hit": true,
+        "s": 13.6
+      }
+    },
+    {
+      "id": 39,
+      "kind": "name_mapping",
+      "key": "Mentha piperata",
+      "dense": {
+        "answer": "Mentha piperita also known as: Piper mint (resolved by wikidata-genus, confidence 0.55).<|eos|>",
+        "hit": false,
+        "s": 7.0
+      },
+      "moe": {
+        "answer": "Synonym: Mentha piperita (botanical synonym).<|eos|>",
+        "hit": false,
+        "s": 7.7
+      }
+    },
+    {
+      "id": 42,
+      "kind": "use",
+      "key": "斷卒下痢",
+      "dense": {
+        "answer": "Recorded use: 治小兒疳氣. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 4.4
+      },
+      "moe": {
+        "answer": "Recorded use: 治小兒頭瘡. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 8.2
+      }
+    },
+    {
+      "id": 45,
+      "kind": "use",
+      "key": "心痛血痺",
+      "dense": {
+        "answer": "Recorded use: 通神明. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 5.1
+      },
+      "moe": {
+        "answer": "Recorded use: 治癰疽. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 9.0
+      }
+    },
+    {
+      "id": 48,
+      "kind": "name_mapping",
+      "key": "Tetradium glabrifolium",
+      "dense": {
+        "answer": "Tetradium glabrifolium -> Tetradium glabrifolium (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": true,
+        "s": 7.3
+      },
+      "moe": {
+        "answer": "Tetradium glabrifolium is called Tetradium glabrifolium in German.<|eos|>",
+        "hit": true,
+        "s": 10.9
+      }
+    },
+    {
+      "id": 51,
+      "kind": "name_mapping",
+      "key": "Gmelina arborea",
+      "dense": {
+        "answer": "Gamhar -> Gammarus sanguinolentus (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": false,
+        "s": 9.7
+      },
+      "moe": {
+        "answer": "Gamhar -> Gammaria.<|eos|>",
+        "hit": false,
+        "s": 2.2
+      }
+    },
+    {
+      "id": 54,
+      "kind": "property",
+      "key": "無毒",
+      "dense": {
+        "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>",
+        "hit": true,
+        "s": 7.9
+      },
+      "moe": {
+        "answer": "Nature 溫, flavours 甘, channels not recorded, toxicity 無, grade —.<|eos|>",
+        "hit": false,
+        "s": 8.3
+      }
+    },
+    {
+      "id": 57,
+      "kind": "target",
+      "key": "Ficus lacor",
+      "dense": {
+        "answer": "Ficus lacor affects the gene target FLC (resolved by wikidata-genomes, confidence 0.55).<|eos|>",
+        "hit": true,
+        "s": 7.6
+      },
+      "moe": {
+        "answer": "Ficus lacor contains phytochemicals that target CYP2A6.<|eos|>",
+        "hit": true,
+        "s": 13.9
+      }
+    },
+    {
+      "id": 60,
+      "kind": "classical_use",
+      "key": "每用鵝翎旋取塗之",
+      "dense": {
+        "answer": "Frozen ear, sore: sore. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 4.4
+      },
+      "moe": {
+        "answer": "白礬（一兩）上為末，以水一升，煮取一升，分服 — 《本草彙言》 (jicheng.tw, CC0",
+        "hit": false,
+        "s": 7.9
+      }
+    },
+    {
+      "id": 63,
+      "kind": "use",
+      "key": "malaria (Ayurveda,Homeop",
+      "dense": {
+        "answer": "Indian medicine: 治小兒疳氣. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 2.5
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Siddha).<|eos|>",
+        "hit": false,
+        "s": 7.5
+      }
+    },
+    {
+      "id": 66,
+      "kind": "compound",
+      "key": "Inula britannica",
+      "dense": {
+        "answer": "Inula britannica contains terpenoid compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 3.4
+      },
+      "moe": {
+        "answer": "Inula britannica contains unclassified compounds (per the corpus).<|eos|>",
+        "hit": true,
+        "s": 5.4
+      }
+    },
+    {
+      "id": 69,
+      "kind": "use",
+      "key": "Indian medicine",
+      "dense": {
+        "answer": "Indian medicine uses Cajanus trinervius as a tonic. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": true,
+        "s": 5.3
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Homeopathy,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 5.7
+      }
+    },
+    {
+      "id": 72,
+      "kind": "target",
+      "key": "Cryptomeria japonica",
+      "dense": {
+        "answer": "Cryptomeria japonica affects the expression of 10 genes (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 1.6
+      },
+      "moe": {
+        "answer": "Cryptomeria japonica contains phytochemicals that target HTR2A.<|eos|>",
+        "hit": true,
+        "s": 5.1
+      }
+    },
+    {
+      "id": 75,
+      "kind": "formula",
+      "key": "大柴胡湯",
+      "dense": {
+        "answer": "Formula ws_zh_shanghanlun:大柴胡湯: 柴胡, 黃芩, 芍藥, 半夏, 大棗, 水",
+        "hit": true,
+        "s": 9.8
+      },
+      "moe": {
+        "answer": "Formula ws_zh_shanghanlun:大柴胡湯: 甘草, 水, 服, 令.<|eos|>",
+        "hit": true,
+        "s": 6.9
+      }
+    },
+    {
+      "id": 78,
+      "kind": "classical_use",
+      "key": "黃芩白茯苓膽南星枳殼",
+      "dense": {
+        "answer": "因患頭風 -> 天麻 (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 4.1
+      },
+      "moe": {
+        "answer": "）白朮（一兩）白芍（一兩）白茯苓（一兩）白茯苓（一兩）白茯苓（一兩）白茯苓（一",
+        "hit": false,
+        "s": 6.9
+      }
+    },
+    {
+      "id": 81,
+      "kind": "use",
+      "key": "colic (Ayurveda,Siddha,U",
+      "dense": {
+        "answer": "Indian medicine: 通血脈. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 2.7
+      },
+      "moe": {
+        "answer": "Recorded use: antifungal agents (Indian medicine).<|eos|>",
+        "hit": false,
+        "s": 5.3
+      }
+    },
+    {
+      "id": 84,
+      "kind": "name_mapping",
+      "key": "Pyrus baccata",
+      "dense": {
+        "answer": "Malus baccata also known as: Malus baccata (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": false,
+        "s": 5.1
+      },
+      "moe": {
+        "answer": "Synonym: Malus baccat (botanical synonym).<|eos|>",
+        "hit": false,
+        "s": 6.4
+      }
+    },
+    {
+      "id": 87,
+      "kind": "classical_use",
+      "key": "尤宜與眾果參食",
+      "dense": {
+        "answer": "上氣 -> 氣滯血閉 (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 6.7
+      },
+      "moe": {
+        "answer": "）上氣，肺氣喘急，咳嗽，痰喘，喘滿，喘急，喘急，喘急，喘急，喘急，喘急，喘急，喘急",
+        "hit": false,
+        "s": 7.5
+      }
+    },
+    {
+      "id": 90,
+      "kind": "target",
+      "key": "Melissa officinalis",
+      "dense": {
+        "answer": "Melissa officinalis affects the NF-kB pathway (targeted by the formula).<|eos|>",
+        "hit": true,
+        "s": 5.8
+      },
+      "moe": {
+        "answer": "Melissa officinalis contains phytochemicals that target PDE5A.<|eos|>",
+        "hit": true,
+        "s": 9.3
+      }
+    },
+    {
+      "id": 93,
+      "kind": "classical_use",
+      "key": "五錢加以巴豆二錢去殼炒去巴豆不用",
+      "dense": {
+        "answer": "Treated with 水. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 7.1
+      },
+      "moe": {
+        "answer": "大黃（一兩）黃連（一兩）黃芩（一兩）黃柏（一兩）黃耆（一兩）黃耆（一兩）黃耆（一",
+        "hit": false,
+        "s": 13.9
+      }
+    },
+    {
+      "id": 96,
+      "kind": "use",
+      "key": "破積聚",
+      "dense": {
+        "answer": "Recorded use: 治反胃. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 1.6
+      },
+      "moe": {
+        "answer": "Recorded use: 治小兒驚癇. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 2.5
+      }
+    },
+    {
+      "id": 99,
+      "kind": "property",
+      "key": "無毒",
+      "dense": {
+        "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>",
+        "hit": true,
+        "s": 3.5
+      },
+      "moe": {
+        "answer": "Nature 溫, flavours 甘, channels not recorded, toxicity 無, grade —.<|eos|>",
+        "hit": false,
+        "s": 8.6
+      }
+    },
+    {
+      "id": 102,
+      "kind": "use",
+      "key": "吐瀉痢疾",
+      "dense": {
+        "answer": "Recorded use: 治霍亂. Modern reading: cholera-like illness. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 2.6
+      },
+      "moe": {
+        "answer": "Recorded use: 久服. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 7.5
+      }
+    },
+    {
+      "id": 105,
+      "kind": "property",
+      "key": "無毒",
+      "dense": {
+        "answer": "Nature 寒, flavours 鹹, channels not recorded, toxicity 無毒, grade —.<|eos|>",
+        "hit": true,
+        "s": 2.4
+      },
+      "moe": {
+        "answer": "Nature 溫, flavours 甘, channels not recorded, toxicity 無, grade —.<|eos|>",
+        "hit": false,
+        "s": 6.6
+      }
+    },
+    {
+      "id": 108,
+      "kind": "classical_use",
+      "key": "當歸菊花大黃",
+      "dense": {
+        "answer": "眼赤色有氣熱 -> 蛇咬 (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 5.6
+      },
+      "moe": {
+        "answer": "黃連（一兩）黃芩（一兩）黃柏（一兩）黃耆（一兩）黃耆（一兩）黃耆（一兩）黃耆（一",
+        "hit": false,
+        "s": 10.5
+      }
+    },
+    {
+      "id": 111,
+      "kind": "use",
+      "key": "惡毒",
+      "dense": {
+        "answer": "Recorded use: 治小兒驚風. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 1.7
+      },
+      "moe": {
+        "answer": "Recorded use: 久服. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 8.9
+      }
+    },
+    {
+      "id": 114,
+      "kind": "use",
+      "key": "Indian medicine",
+      "dense": {
+        "answer": "Rhus mysorensis is used for its unclassified products (per the corpus compound table).<|eos|>",
+        "hit": false,
+        "s": 10.9
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 15.9
+      }
+    },
+    {
+      "id": 117,
+      "kind": "pharmacology",
+      "key": "Persicaria chinensis",
+      "dense": {
+        "answer": "Persicaria chinensis affects the immune system by containing unclassified compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 16.8
+      },
+      "moe": {
+        "answer": "Persicaria chinensis contains terpenoid compounds, which act on GABAA receptors (monoterpenoids) — relevant to sedation / anxiety.<|eos|>",
+        "hit": true,
+        "s": 15.6
+      }
+    },
+    {
+      "id": 120,
+      "kind": "viability",
+      "key": "The claimed",
+      "dense": {
+        "answer": "PARTIAL. The claimed enrichment of terpenoid by 煮 is not supported: modelled median retention is 54% (range 10-90%), dominant loss mechanism hydro",
+        "hit": true,
+        "s": 8.1
+      },
+      "moe": {
+        "answer": "MAY. The modelled retention is 100% (range 100-1000000000000)). Refuted if the modelled",
+        "hit": false,
+        "s": 7.3
+      }
+    },
+    {
+      "id": 123,
+      "kind": "use",
+      "key": "antifungal agents (Ayurv",
+      "dense": {
+        "answer": "Indian medicine: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 17.0
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 16.0
+      }
+    },
+    {
+      "id": 126,
+      "kind": "viability",
+      "key": "The claimed",
+      "dense": {
+        "answer": "MAY. The claimed enrichment of alkaloid by 蒸 is not supported: modelled median retention is 100% (range 100-100%), dominant loss",
+        "hit": true,
+        "s": 4.6
+      },
+      "moe": {
+        "answer": "MAY. The modelled retention is 100% (range 100-100%). The claimed enrichment of alkaloid by 蒸 is not supported: the model",
+        "hit": true,
+        "s": 7.3
+      }
+    },
+    {
+      "id": 129,
+      "kind": "name_mapping",
+      "key": "Citrus grandis",
+      "dense": {
+        "answer": "Citrus maxima also known as: Citrus maxima (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": false,
+        "s": 19.8
+      },
+      "moe": {
+        "answer": "Synonym: Citrus maxima (botanical synonym).<|eos|>",
+        "hit": false,
+        "s": 19.6
+      }
+    },
+    {
+      "id": 132,
+      "kind": "name_mapping",
+      "key": "Shorea robusta",
+      "dense": {
+        "answer": "Sal is a common name used to refer to various plants in the genus Salix, which contains over 100 species. The most commonly recognized species are Salix fragilis (resolved by",
+        "hit": false,
+        "s": 19.4
+      },
+      "moe": {
+        "answer": "Sal is modernly called Sal in the sense that it is a plant that is not a word. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 26.0
+      }
+    },
+    {
+      "id": 135,
+      "kind": "name_mapping",
+      "key": "Andropogon olivieri",
+      "dense": {
+        "answer": "Cymbopogon jwarancusa also known as: Cymbopogon flexuosus (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": false,
+        "s": 21.2
+      },
+      "moe": {
+        "answer": "Synonym: Cymbopogon jwarancusa (botanical synonym).<|eos|>",
+        "hit": false,
+        "s": 20.5
+      }
+    },
+    {
+      "id": 138,
+      "kind": "viability",
+      "key": "The claimed",
+      "dense": {
+        "answer": "MAY. The claimed enrichment of terpenoid by 蒸 is not supported: modelled median retention is 100% (range 100-100%), dominant",
+        "hit": true,
+        "s": 6.2
+      },
+      "moe": {
+        "answer": "MAY. The modelled retention is 100% (range 100-1000%). The claimed enrichment of terpenoid by 蒸 is not supported:",
+        "hit": true,
+        "s": 6.4
+      }
+    },
+    {
+      "id": 141,
+      "kind": "formula",
+      "key": "抵當丸",
+      "dense": {
+        "answer": "Formula ws_zh_shanghanlun:抵當丸: 大黃, 水, 煮取, 溫服.<|eos|>",
+        "hit": true,
+        "s": 19.2
+      },
+      "moe": {
+        "answer": "Formula ws_zh_shanghanlun:抵當丸: 水銀, 甘草, 木香, 乾薑, 木香, 丁香,",
+        "hit": true,
+        "s": 18.4
+      }
+    },
+    {
+      "id": 144,
+      "kind": "use",
+      "key": "whooping cough (Homeopat",
+      "dense": {
+        "answer": "Used for the treatment of sore. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 9.1
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 12.3
+      }
+    },
+    {
+      "id": 147,
+      "kind": "use",
+      "key": "連連不絕",
+      "dense": {
+        "answer": "Recorded use: 咳逆上氣. Modern reading: cough. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 8.2
+      },
+      "moe": {
+        "answer": "Recorded use: 治小兒風熱. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 10.8
+      }
+    },
+    {
+      "id": 150,
+      "kind": "property",
+      "key": "小毒",
+      "dense": {
+        "answer": "Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>",
+        "hit": false,
+        "s": 10.8
+      },
+      "moe": {
+        "answer": "Nature 溫, flavours 甘, channels not recorded, toxicity 無, grade —.<|eos|>",
+        "hit": false,
+        "s": 15.4
+      }
+    },
+    {
+      "id": 153,
+      "kind": "use",
+      "key": "Indian medicine",
+      "dense": {
+        "answer": "Indian medicine: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": true,
+        "s": 7.1
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Homeopathy,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 10.8
+      }
+    },
+    {
+      "id": 156,
+      "kind": "compound",
+      "key": "Elsholtzia ciliata",
+      "dense": {
+        "answer": "Elsholtzia ciliata contains unclassified compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 10.8
+      },
+      "moe": {
+        "answer": "Elsholtzia ciliata contains unclassified compounds (per the corpus).<|eos|>",
+        "hit": true,
+        "s": 13.6
+      }
+    },
+    {
+      "id": 159,
+      "kind": "compound",
+      "key": "Morus alba",
+      "dense": {
+        "answer": "Morus alba contains unclassified compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 1.8
+      },
+      "moe": {
+        "answer": "Morus alba contains unclassified compounds (per the corpus).<|eos|>",
+        "hit": true,
+        "s": 11.5
+      }
+    },
+    {
+      "id": 162,
+      "kind": "pharmacology",
+      "key": "Clerodendrum cyrtophyllum",
+      "dense": {
+        "answer": "Clerodendrum cyrtophyllum affects the immune system, specifically the NF-kB pathway, through terpenoid compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 10.2
+      },
+      "moe": {
+        "answer": "Clerodendrum cyrtophyllum contains terpenoid compounds, which act on GABAA receptors (monoterpenoids) — relevant to sedation / anxiety.<|eos|",
+        "hit": true,
+        "s": 13.5
+      }
+    },
+    {
+      "id": 165,
+      "kind": "compound",
+      "key": "Kaempferia galanga",
+      "dense": {
+        "answer": "Kaempferia galanga contains alkaloid compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 9.4
+      },
+      "moe": {
+        "answer": "Kaempferia galanga contains unclassified compounds (per the corpus).<|eos|>",
+        "hit": true,
+        "s": 8.7
+      }
+    },
+    {
+      "id": 168,
+      "kind": "use",
+      "key": "主大腸泄瀉",
+      "dense": {
+        "answer": "Recorded use: 治傷寒. Modern reading: febrile infectious disease. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 6.8
+      },
+      "moe": {
+        "answer": "Recorded use: 治小兒風熱. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 10.9
+      }
+    },
+    {
+      "id": 171,
+      "kind": "compound",
+      "key": "Chrysanthemum indicum",
+      "dense": {
+        "answer": "Chrysanthemum indicum contains flavonoid compounds (per the corpus compound table).<|eos|>",
+        "hit": true,
+        "s": 7.4
+      },
+      "moe": {
+        "answer": "Chrysanthemum indicum contains unclassified compounds (per the corpus).<|eos|>",
+        "hit": true,
+        "s": 12.0
+      }
+    },
+    {
+      "id": 174,
+      "kind": "name_mapping",
+      "key": "Macrotomia perennis",
+      "dense": {
+        "answer": "Arnebia euchroma also known as: Arnebia uniflora (resolved by wikidata, confidence 0.7).<|eos|>",
+        "hit": false,
+        "s": 9.9
+      },
+      "moe": {
+        "answer": "Synonym: Arnebia echomora (botanical synonym).<|eos|>",
+        "hit": false,
+        "s": 11.1
+      }
+    },
+    {
+      "id": 177,
+      "kind": "use",
+      "key": "Indian medicine",
+      "dense": {
+        "answer": "Gnaphalium polycaulon is used as a tonic. (pre-modern claim; not clinical advice)<|eos|>",
+        "hit": false,
+        "s": 7.9
+      },
+      "moe": {
+        "answer": "Recorded use: antirheumatic agents (Ayurveda,Siddha,Sowa Rigpa,Unani).<|eos|>",
+        "hit": false,
+        "s": 9.3
+      }
+    }
+  ],
+  "delta": -0.11666666666666667
+}

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T17:21:54-0800",
+ "generated_at": "2026-11-07T17:54:53-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v1.17.0": {
@@ -3238,6 +3238,7 @@
   "law_impact.json",
   "model_comparison.json",
   "moe_diagnostics.json",
+  "moe_vs_dense.json",
   "operator_ontology.json",
   "process_rules.json",
   "qm_cache.json",

@@ -141,8 +141,11 @@ def extract_passage(text: str, source_id: str = "pasted", enrich: bool = True) -
         # Fold the raw text the same way the extractor does and sweep the controlled vocabulary directly.
         from shennong.normalize import normalise_offsets
         folded = normalise_offsets(text)
+        _fold = normalise_offsets
         for term, canon in _term_vocab()[0].items():
-            if len(term) < 2 or canon == term:
+            # require a REAL mapping: a term whose canonical folds back to itself is not an indication
+            # (溫服 -> 溫服, 人參 -> 人參 are lexicon noise, not diseases)
+            if len(term) < 2 or canon == term or _fold(canon) == _fold(term):
                 continue
             pos = folded.find(term)
             if pos < 0:

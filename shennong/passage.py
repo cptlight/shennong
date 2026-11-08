@@ -19,6 +19,7 @@ exactly what the system read.
 """
 from __future__ import annotations
 
+import pathlib
 from functools import lru_cache
 
 
@@ -26,6 +27,27 @@ from functools import lru_cache
 def _lex():
     from shennong.extract.lexicons import build_lexicons
     return build_lexicons()
+
+
+@lru_cache(maxsize=1)
+def _term_vocab() -> tuple[set, dict]:
+    """Indication surfaces and process terms.
+
+    On the Space the lexicon is built without corpus.jsonl (177 MB, not shipped), so its indication vocabulary
+    collapses and real claims such as 脾胃虛弱 stop mapping. artifacts/lexicon_terms.json carries the term table.
+    """
+    import json
+    lex = _lex()
+    inds, procs = set(lex.indications), dict(lex.processes)
+    if len(inds) < 1000:
+        try:
+            raw = json.loads((pathlib.Path(__file__).resolve().parent.parent
+                              / "artifacts" / "lexicon_terms.json").read_text(encoding="utf-8"))
+            inds |= set(raw.get("indications", {}))
+            procs = {**raw.get("processes", {}), **procs}
+        except Exception:  # noqa: BLE001
+            pass
+    return inds, procs
 
 
 @lru_cache(maxsize=1)
@@ -85,7 +107,7 @@ def extract_passage(text: str, source_id: str = "pasted", enrich: bool = True) -
         if e.kind != "indication":
             continue
         surf = _t2s(e.surface).lower()
-        if surf not in lex.indications:
+        if surf not in _term_vocab()[0]:
             continue                                   # drops 溫服 / 日三服 / dose fragments
         if e.canonical == e.surface or e.canonical == _t2s(e.surface):
             continue                                   # unmapped: the "canonical" is just the surface

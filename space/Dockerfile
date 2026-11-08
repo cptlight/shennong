@@ -12,7 +12,7 @@ WORKDIR /app
 # Code + demo page are cloned at build time so the Space can never drift from the repo.
 # Layout must match space/app.py: ROOT = /app (app.py lives at /app/space/app.py, so parent.parent = /app),
 # DEMO_DIR = /app/docs/demo, models at /app/artifacts and /app/models/baseline.
-RUN echo "source rev 2026-11-07T18:10"   # cache-bust: the git clone layer is cached unless this changes
+RUN echo "source rev 2026-11-07T18:13"   # cache-bust: the git clone layer is cached unless this changes
 RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && mkdir -p /app/space /app/docs /app/artifacts /app/models/baseline \
                /app/corpus/processed/structured /app/corpus/processed /app/scripts /app/artifacts/adapters \
@@ -21,7 +21,7 @@ RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && cp /tmp/src/space/app.py /app/space/app.py \
     && cp /tmp/src/corpus/processed/structured/* /app/corpus/processed/structured/ \
     && cp /tmp/src/corpus/processed/lexicon_drugs.json /app/corpus/processed/lexicon_drugs.json \
-    && cp /tmp/src/artifacts/discoveries.json /tmp/src/artifacts/operator_ontology.json /tmp/src/artifacts/chembl_targets.json /app/artifacts/ \
+    && cp /tmp/src/artifacts/discoveries.json /tmp/src/artifacts/operator_ontology.json /tmp/src/artifacts/chembl_targets.json /tmp/src/artifacts/lexicon_terms.json /app/artifacts/ \
     && cp /tmp/src/artifacts/router.pkl /app/artifacts/router.pkl \
     && cp /tmp/src/scripts/build_fingerprints.py /app/scripts/build_fingerprints.py \
     && rm -rf /tmp/src

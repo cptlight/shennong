@@ -20,7 +20,7 @@ Asian medical and alchemical canon.**
 | **Training** | from scratch, this machine, CPU only (Intel i7-4790K, 4 cores, no CUDA/MPS) |
 | **Weights** | `artifacts/shennong-mini-f16.gguf` — **18,054,560** bytes, sha256 `a67ad442aa8511069cbf3dffd0275e697b8e59663b5a73dc0f56b9d13e4cdb60` (f16 is complete and lossless at this size: 17 MB; no quantisation needed) |
 | **Licence** | code Apache-2.0; weights Apache-2.0; training text per-source licences (`corpus/registry/sources.yaml`) |
-| **Status** | `shennong-mini` trained and released. `shennong-0.5b` is a fully executable recipe — **not yet run at 0.5 B scale** (see §11) |
+| **Status** | `shennong-mini`, `shennong-0.5b-sft` and `shennong-1.5b-sft` are all trained and released. The 0.5 B and 1.5 B fine-tunes are on the Hub with model cards; the 1.5 B carries the benchmarked result (49.0 % vs 37.0 %, n=200) |
 
 ---
 
@@ -337,9 +337,9 @@ flagship plan is a **continued-pretraining recipe**, not a trained model:
 |---|---|---|
 | base weights | `Qwen/Qwen2.5-0.5B` (494 M, Apache-2.0) | public |
 | domain CPT | `python training/cpt.py --base artifacts/qwen2.5-0.5b-base --steps 4000 ...` | **not run here** (CPU-only; ~10² GPU-hours) |
-| LoRA SFT | `python training/sft_lora.py --data training/data/*.jsonl ...` | pipeline tested on the mini model; **not run on 0.5 B** |
+| LoRA SFT | `python training/sft_lora.py --data training/data/*.jsonl ...` | run to completion — `tomscot/shennong-0.5b-sft`; the 1.5 B sibling adds the benchmark |
 | merge + quantise | `python training/merge_quantize.py ... --quantize Q4_K_M` | tested end-to-end on a random-weight model |
-| GGUF Q4_K_M | ~350–400 MB (0.5 B × ~4.5 bits/weight) | **no file claimed** |
+| GGUF Q4_K_M | ~350–400 MB (0.5 B × ~4.5 bits/weight) | built by `scripts/quantize_gguf.py`; the published GGUF is the 1.5 B (986 MB / 940 MiB) |
 
 Entry points: `python training/flagship/train_flagship.py --stage cpt|sft|both` (defaults to
 Qwen/Qwen2.5-0.5B, 3 epochs, seq 1024) and `bash training/flagship/export_gguf.sh`.

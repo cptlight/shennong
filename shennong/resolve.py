@@ -122,6 +122,8 @@ def _per_binomial(binomial: str) -> dict:
         if (r.get("plant_binomial") or "").strip().lower() == b:
             pharm.append({"compound_class": r.get("compound_class"),
                           "molecular_target": r.get("molecular_target"), "disease": r.get("disease")})
+    # prefer uses that have a modern reading: the raw table contains extraction fragments like 【附方】新一
+    uses.sort(key=lambda u: (0 if u.get("modern") else 1, -(len(u.get("use") or ""))))
     return {"names": {k: v for k, v in names.items() if v},
             "uses": uses[:8],
             "compound_classes": sorted(classes)[:6],

@@ -78,7 +78,7 @@ Pause. Then:
 
 ### 2:10 — Credibility, honestly (25 s). Tab **3**.
 
-> "Underneath is a 1.5 B open model, 940 MB, CPU-only: **39.0 % against 25.5 %** for the base model on 200
+> "Underneath is a 1.5 B open model, 940 MB, CPU-only: **49.0 % against 37.0 %** for the base model on 200
 > held-out questions.
 > We also trained a real sparse mixture-of-experts — 4 experts, 1.44 B, expert weights actually trained, 999 MB.
 > It scored **31.7 % versus 43.3 %**. Worse. It's released anyway, with the benchmark file.

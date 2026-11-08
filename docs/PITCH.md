@@ -98,7 +98,7 @@ reasoning. **This is the trust mechanism** — the system is built to say "no" t
 | | |
 |---|---|
 | base | Qwen2.5-1.5B, fine-tuned on 88,082 domain examples |
-| result | **39.0 % vs 25.5 %** base on 200 held-out domain questions (**+13.5 pts**) |
+| result | **49.0 % vs 37.0 %** base on 200 held-out domain questions (**+12.0 pts**) |
 | artifact | 940 MB Q4_K_M GGUF, **runs on CPU**, no GPU needed |
 | also released | a 4-expert sparse MoE (1.44 B, 999 MB) — **31.7 % vs 43.3 %, worse. Published anyway.** |
 
@@ -124,7 +124,7 @@ cluster. No wet lab."*
 mass-balance and heat-stability check — the compound decomposes at the temperature the text prescribes. We
 publish those refutations. The system's job is to be wrong out loud."*
 
-**[2:05] The model.** *"Underneath is a 1.5 B model, 940 MB, CPU-only: 39 % versus 25.5 % for the base model on
+**[2:05] The model.** *"Underneath is a 1.5 B model, 940 MB, CPU-only: 49.0 % versus 37.0 % for the base model on
 200 held-out questions. We also trained a sparse mixture-of-experts. It scored 31.7 % — worse. That's published
 too, with the benchmark file."*
 
@@ -139,7 +139,7 @@ then checks itself."*
 **"Is this just RAG over a scraped corpus?"**
 No. Retrieval is one layer; the other four are: a curated name lexicon, a fingerprint/ChEMBL screen, a physics
 verifier, and a fine-tuned model that answers without retrieval. The demo's tab 3 queries the model **directly**
-— no retrieval at inference — and it is scored at 39.0 % on 200 held-out questions.
+— no retrieval at inference — and it is scored at 49.0 % on 200 held-out questions.
 
 **"How do I know your names are right?"**
 Each resolution reports *how* it matched (historical lexicon / Indian synonym / Wikidata language), and the
@@ -173,7 +173,7 @@ and flags toxicity. It is a research tool.
 | criterion | weight | evidence |
 |---|---|---|
 | **Impact** | 40 | Solves a real accessibility problem: any era/language → modern pharmacology, in one CPU query; 78/203 pseudo-scientific claims refuted |
-| **Technical** | 20 | 5-layer system, 888,303 span-located facts, ECFP4+ChEMBL screening, physics verifier, 1.5 B fine-tune at +13.5 pts |
+| **Technical** | 20 | 5-layer system, 888,303 span-located facts, ECFP4+ChEMBL screening, physics verifier, 1.5 B fine-tune at +12.0 pts |
 | **Creativity** | 20 | Name-drift resolution across eras; first-principles refutation of its own corpus; publishes its own MoE loss |
 | **Pitch** | 20 | Two live demos, no dead ends, every number reproducible from the repo |
 

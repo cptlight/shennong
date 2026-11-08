@@ -106,7 +106,7 @@ Three systems, same 200-question set (`artifacts/benchmark.jsonl`, already split
 |---|---|
 | base granite MoE | floor, no fine-tune |
 | **fine-tuned granite MoE** | **the candidate product** |
-| dense 1.5 B fine-tune | current champion, 39.0 % vs 25.5 % baseline |
+| dense 1.5 B fine-tune | current champion, 49.0 % vs 37.0 % baseline |
 
 Winner by track becomes the shipped model. If the MoE loses, it's reported as a negative result and the dense
 model stays — but the project will at least have a *genuine* MoE, not a dispatch layer.

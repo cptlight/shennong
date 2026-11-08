@@ -46,7 +46,7 @@ See [docs/PITCH.md](docs/PITCH.md) for the 3-minute script and Q&A.
 | **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 | **Corpus** | **29,042 records · 177.3 M characters**, after `make corpus-full` (base 106 sources + 1,304 CC0 jicheng.tw works). The checked-in base corpus alone is 27,738 records / 45.6 M characters — the 177.3 M figure requires the jicheng fetch |
-| **Benchmark (200 domain Q)** | ours **39.0 %** vs unfine-tuned **25.5 %** (+13.5 %) — `artifacts/benchmark_results.json` |
+| **Benchmark (200 domain Q)** | ours **49.0 %** vs unfine-tuned **37.0 %** (+12.0 pts) — `artifacts/benchmark_results.json` |
 
 [![Devpost](https://img.shields.io/badge/EthnoHack-2026-coral)](https://ethnohack2026.devpost.com/)
 [![Track](https://img.shields.io/badge/tracks-01%20Traditional%20Knowledge%20Mining%20%2B%2002%20Natural%20Products-teal)](https://ethnohack2026.devpost.com/)
@@ -179,7 +179,7 @@ Published whether or not we like the answer.
 | Training | **from scratch on this machine, CPU only** | Qwen2.5-1.5B → LoRA r=64 SFT on 15,308 domain examples → merge → Q4_K_M |
 | Vocab | 16,384 (en · la · zh-Hant) | 151,936 (Qwen) |
 | Trained on | **1,638,400 tokens** (deliberately undertrained, the architecture proof) | 3 epochs, 14,389 examples; eval 0.53 → 0.57 |
-| Bench | — | **39.0 %** vs unfine-tuned **25.5 %** on 200 domain questions (+13.5 %) |
+| Bench | — | **49.0 %** vs unfine-tuned **37.0 %** on 200 domain questions (+12.0 pts) |
 | Source | this repo | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) · [`v1.17.0`](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 
 > **The architecture thesis, in one line:** a sparse MoE buys total capacity without paying per-token
@@ -330,7 +330,7 @@ This is what ships. LoRA r=64 on 88,082 domain examples, merged, quantised to Q4
 | | |
 |---|---|
 | **Parameters** | 1,543,714,304 |
-| **Benchmark** | **44.0 % vs 34.5 %** for the un-finetuned base on 200 held-out questions (**+9.5 pts**) — `artifacts/benchmark_v3.json` |
+| **Benchmark** | **49.0 % vs 37.0 %** for the un-finetuned base on 200 held-out questions (**+12.0 pts**) — `artifacts/benchmark_v3.json` |
 | **Per-task** | property 15/20 vs 0/20 · viability 6/6 vs 0/6 · formula 7/9 vs 5/9 · compound 20/20 · target 20/20 |
 | **Known-failing tasks** | `use` and `name_mapping` families are near-zero for **both** models — disclosed in [`docs/BENCHMARK.md`](docs/BENCHMARK.md), not hidden |
 | **Artifact** | `shennong-1.5b-sft-Q4_K_M.gguf` **986 MB** (940 MiB), 338 tensors, `arch=qwen2` |

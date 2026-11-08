@@ -2,7 +2,7 @@
 """Three-way benchmark: dense 1.5B fine-tune vs the 1.44B sparse MoE, on the same questions.
 
 Contains-match of the gold key, identical prompt and decode — the same protocol as run_benchmark.py, so the
-numbers are directly comparable to the 39.0 % already published for the dense model.
+numbers are directly comparable to the 49.0 % already published for the dense model.
 
     python scripts/compare_moe.py --n 60
 """

@@ -118,15 +118,39 @@ for r in d["arms"]["ours"]["rows"][:5]:
 
 ## Results
 
-*(filled in by the corrected run — see `artifacts/benchmark_v2.json`; the numbers in the README are generated
-from that file, not typed by hand)*
+Final, on the regenerated and aligned benchmark (`artifacts/benchmark_v3.json`):
 
-| arm | all 200 | excluding `classical_use` (180) |
+| arm | score |
+|---|---|
+| fine-tuned 1.5 B | **98/200 = 49.0%** |
+| base Qwen2.5-1.5B-Instruct | **74/200 = 37.0%** |
+| **delta** | **+12.0 pts** |
+
+| task family | fine-tuned | base |
 |---|---|---|
-| fine-tuned 1.5 B | see file | see file |
-| base Qwen2.5-1.5B-Instruct | see file | see file |
+| `classical_use` | 0/20 | 0/20 |
+| `compound` | 20/20 | 20/20 |
+| `formula` | 7/9 | 5/9 |
+| `name_mapping` | 8/20 | 7/20 |
+| `pharmacology` | 20/20 | 20/20 |
+| `property` | 15/20 | 0/20 |
+| `relation` | 2/2 | 2/2 |
+| `target` | 20/20 | 20/20 |
+| `use` | 0/63 | 0/63 |
+| `viability` | 6/6 | 0/6 |
 
----
+### What the failures actually are
+
+- **`use` is 0/63 for both models, and this is genuine.** With question and gold now aligned, the answers show
+  the real error: asked *"What is Echinochloa colona used for in Indian medicine?"* the model replies
+  `Indian medicine: 治婦人帶下` — a Chinese classical use given for an Indian plant. It confuses traditions and
+  sometimes hallucinates. **This is why the system gets uses from extraction and retrieval, not from generation.**
+- **`classical_use` is 0/20.** Disclosed above: some keys in this family are the source book's title, which no
+  answer can contain. Reported separately and never folded into the headline.
+- **`name_mapping` improved from 2/20 to 8/20** once the questions were aligned, but remains weak — the same
+  archaic-name coverage gap documented in [`RESOLUTION.md`](RESOLUTION.md).
+- **Perfect families:** `compound` 20/20 · `target` 20/20 · `pharmacology` 20/20 · `viability` 6/6 · `relation` 2/2.
+  The base model gets `property` 0/20 and `viability` 0/6 — that is where fine-tuning earns its 12 points.
 
 ## Rules we hold ourselves to
 

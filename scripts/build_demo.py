@@ -153,30 +153,39 @@ HTML = """<!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SHENNONG — judge demo</title>
 <style>
-  :root{--ink:#12100e;--paper:#faf6ef;--red:#b4462c;--green:#2f6f5e;--line:#e2d9cc;--muted:#6b6157}
+  :root{
+    --ink:#1d1d1f; --paper:#f5f5f7; --card:#ffffff;
+    --red:#bf4800; --green:#0071e3; --line:#d2d2d7; --muted:#6e6e73;
+    --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.05), 0 6px 20px rgba(0,0,0,.05);
+  }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);
-       font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif}
-  header{padding:28px 24px 18px;border-bottom:1px solid var(--line);background:#fff}
-  h1{margin:0 0 6px;font-size:24px;letter-spacing:-.02em}
+  body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;
+       font:15px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Inter,system-ui,sans-serif}
+  header{padding:34px 28px 22px;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+  h1{margin:0 0 8px;font-size:30px;font-weight:650;letter-spacing:-.025em}
   .sub{color:var(--muted);max-width:820px}
   .badges{margin:12px 0 0;display:flex;gap:8px;flex-wrap:wrap}
-  .badge{font-size:12px;padding:3px 9px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+  .badge{font-size:12px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--muted)}
   .badge a{color:inherit;text-decoration:none}
-  nav{display:flex;gap:2px;flex-wrap:wrap;padding:0 24px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-  nav button{background:none;border:0;padding:12px 14px;font:inherit;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}
-  nav button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--red);font-weight:600}
-  main{padding:24px;max-width:1100px}
+  nav{display:flex;gap:4px;flex-wrap:wrap;padding:8px 22px;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+  nav button{background:none;border:0;padding:9px 14px;font:inherit;font-size:13.5px;color:var(--muted);cursor:pointer;border-radius:999px;transition:background .16s,color .16s}
+  nav button[aria-selected=true]{color:#fff;background:var(--ink);font-weight:600}
+  nav button:hover{color:var(--ink);background:rgba(0,0,0,.05)}
+  main{padding:28px;max-width:1080px}
   section{display:none} section.on{display:block}
-  h2{font-size:18px;margin:0 0 4px}
+  h2{font-size:22px;font-weight:640;margin:0 0 6px;letter-spacing:-.02em}
   .note{color:var(--muted);margin:0 0 16px;max-width:820px}
-  table{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;border:1px solid var(--line)}
-  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{background:#f3ece1;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  table{border-collapse:separate;border-spacing:0;width:100%;font-size:13.5px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  th,td{text-align:left;padding:10px 13px;border-bottom:1px solid #ececf0;vertical-align:top}
+  th{background:#fbfbfd;font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  tr:last-child td{border-bottom:0}
   tr:last-child td{border-bottom:0}
   code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
+  .en{color:var(--muted);font-size:.88em;font-weight:400}
+  .en::before{content:"· "}
+  .cjk{font-weight:600}
   .funnel{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}
-  .step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:132px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;min-width:132px;box-shadow:var(--shadow)}
   .step b{display:block;font-size:26px;line-height:1.1}
   .step span{font-size:12px;color:var(--muted)}
   .step.drop b{color:var(--red)} .step.keep b{color:var(--green)}
@@ -669,7 +678,7 @@ function renderAnswer(out, d){
             : (d.model && (d.model.checkpoint || d.model.family || d.model.name)) || '';
   if (mdl) h += '<p style="font-size:12px;color:#6b6157">model: <span class="mono">' + esc(mdl) + '</span></p>';
   h += '<p style="font-size:12px;color:#6b6157">prompt: <span class="mono">' + esc(d.prompt || '') + '</span></p>';
-  h += '<pre style="white-space:pre-wrap;margin:8px 0">' + esc(d.answer || '') + '</pre>';
+  h += '<pre style="white-space:pre-wrap;margin:8px 0">' + annotate(d.answer || '') + '</pre>';
   h += '<p class="note">Direct generation. No retrieval, no injected passage — the model either knows it or it does not.</p></div>';
   out.insertAdjacentHTML('beforeend', h);
 }
@@ -721,7 +730,7 @@ function renderServerResult(out, d, mode){
         <div class="card mono" style="white-space:pre-wrap">${esc(d.raw_completion||'')}</div>`;
     }
     h += `<h2 style="margin-top:18px">Model completion conditioned on the retrieved passages</h2>
-      <div class="card mono" style="white-space:pre-wrap">${esc(d.answer||'')}</div>
+      <div class="card mono" style="white-space:pre-wrap">${annotate(d.answer||'')}</div>
       <p class="note">grounded latency ${esc(d.grounded_latency_ms)} ms · ${esc(d.note)}</p>`;
   }
   out.innerHTML = h;
@@ -984,13 +993,13 @@ async function doResolve(){
 function renderResolve(out,d,q){
   if(!d||d.ok===false){ out.innerHTML='<div class="warn"><b>Not resolvable.</b> '+esc((d&&d.error)||q)+'<br>'+
     '<span style="font-size:12px">'+esc((d&&d.note)||'')+'</span></div>'; return; }
-  let h='<div class="card"><h3>'+esc(d.query)+' &rarr; <span class="mono">'+esc(d.binomial)+'</span></h3>';
+  let h='<div class="card"><h3>'+tr(d.query, d.binomial)+' &rarr; <span class="mono">'+esc(d.binomial)+'</span></h3>';
   h+='<p class="note">matched via <b>'+esc(d.matched_via)+'</b></p>';
   const names=Object.entries(d.names||{});
   if(names.length) h+='<p class="note">names across eras/languages: '+names.map(([k,v])=>'<b>'+esc(k)+'</b> '+esc(v)).join(' · ')+'</p>';
   if((d.uses||[]).length){
     h+='<h3 style="margin-top:12px">Recorded therapeutic uses</h3><table><thead><tr><th>use</th><th>tradition</th></tr></thead><tbody>';
-    d.uses.forEach(u=>{ h+='<tr><td>'+esc(u.use)+'</td><td>'+esc(u.tradition||'—')+'</td></tr>'; });
+    d.uses.forEach(u=>{ h+='<tr><td>'+tr(u.use, u.modern || undefined)+(u.modern ? ' <span class="en">'+esc(u.modern)+'</span>' : '')+'</td><td>'+esc(u.tradition||'—')+'</td></tr>'; });
     h+='</tbody></table>';
   }
   if((d.compound_classes||[]).length) h+='<p class="note"><b>Compound classes:</b> '+esc(d.compound_classes.join(', '))+'</p>';
@@ -1055,7 +1064,7 @@ function renderExtract(out,d){
   let h='<div class="card"><h3>'+d.n_drugs+' drug'+(d.n_drugs===1?'':'s')+' recognized</h3>';
   if((d.drugs||[]).length){
     h+='<table><thead><tr><th>as written</th><th>modern binomial</th><th>compound classes</th><th>gene targets</th></tr></thead><tbody>';
-    d.drugs.forEach(x=>{ h+='<tr><td><b>'+esc(x.surface)+'</b><br><span style="font-size:11px;color:var(--muted)">span '
+    d.drugs.forEach(x=>{ h+='<tr><td><b>'+tr(x.surface, x.binomial)+'</b><br><span style="font-size:11px;color:var(--muted)">span '
       +x.start+'-'+x.end+' · conf '+x.confidence+'</span></td><td class="mono">'+esc(x.binomial)+'</td><td>'
       +esc((x.compound_classes||[]).join(', ')||'—')+'</td><td class="mono">'+esc((x.gene_targets||[]).slice(0,4).join(', ')||'—')+'</td></tr>'; });
     h+='</tbody></table>';
@@ -1063,7 +1072,7 @@ function renderExtract(out,d){
 
   if((d.indications||[]).length){
     h+='<h3 style="margin-top:14px">Therapeutic claims &rarr; controlled vocabulary</h3><table><thead><tr><th>as written</th><th>mapped to</th></tr></thead><tbody>';
-    d.indications.forEach(i=>{ h+='<tr><td>'+esc(i.surface)+'</td><td><b>'+esc(i.canonical)+'</b></td></tr>'; });
+    d.indications.forEach(i=>{ h+='<tr><td>'+tr(i.surface)+'</td><td><b>'+esc(i.canonical)+'</b></td></tr>'; });
     h+='</tbody></table>';
   }
   if((d.processes||[]).length){
@@ -1076,6 +1085,24 @@ function renderExtract(out,d){
   }
   h+='<p class="note" style="margin-top:10px">'+esc(d.coverage_note||'')+'<br>'+esc(d.honesty||'')+'</p></div>';
   out.innerHTML=h;
+}
+
+const TR = (DATA && DATA.tr) ? DATA.tr : {};
+
+// show the English beside any Chinese we have a translation for; never invent one
+function tr(str, skip){
+  if(str==null) return '';
+  const k=String(str).trim(), hit=TR[k];
+  if(!hit || hit===k || (skip && String(skip).toLowerCase()===String(hit).toLowerCase()))
+    return '<span class="cjk">'+esc(k)+'</span>';
+  return '<span class="cjk">'+esc(k)+'</span> <span class="en">'+esc(hit)+'</span>';
+}
+// annotate free text (model answers): wrap every CJK run of 2+ characters that we can translate
+function annotate(text){
+  return String(text==null?'':text).replace(/[\u4e00-\u9fff]{2,}/g, m => {
+    const hit=TR[m];
+    return hit ? '<span class="cjk">'+esc(m)+'</span> <span class="en">'+esc(hit)+'</span>' : esc(m);
+  });
 }
 
 const TABS = {problems:tabProblems, resolve:tabResolve, extract:tabExtract, ask:tabAsk, screen:tabScreen, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
@@ -1157,6 +1184,9 @@ def main() -> int:
     # Inline JSON inside <script> must not contain "</script>" or "<!--" — escape the angle brackets.
     # (Our corpus text is Chinese and never does this, but a future artefact could, and a broken demo page
     # is worse than a slightly larger one.)
+    tr_path = pathlib.Path("artifacts/demo_translations.json")
+    data["tr"] = json.loads(tr_path.read_text(encoding="utf-8")) if tr_path.exists() else {}
+    print(f"  translations: {len(data['tr'])} entries")
     payload = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c")
     html = HTML.replace("__DATA__", payload)
     # Build-time guard: a tab referenced in TABS with no function definition renders an EMPTY page at

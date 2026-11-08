@@ -23,7 +23,7 @@ baseline with the same prompt and decode, so you can see exactly what fine-tunin
 | 🌿 Traditional knowledge | name mapping across eras, 性味歸經, therapeutic uses, 十八反, 七情 relations |
 | 🧪 Natural products | preparation viability (physics verdicts), compound classes, candidate leads |
 
-**Benchmark:** 39.0 % vs 25.5 % (+13.5 %) over an unfine-tuned baseline on 200 held-out domain questions.
+**Benchmark:** 49.0 % vs 37.0 % (+12.0 pts) over an unfine-tuned baseline on 200 held-out, question-aligned domain questions.
 
 Model: [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) · repo:
 https://github.com/cptlight/shennong

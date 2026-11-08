@@ -25,7 +25,7 @@ novelty, fused into a ranked shortlist. `shennong/screen.py` (`make screen-ml TA
 
 ## The benchmark (200 held-out domain questions, direct generation)
 
-**ours 39.0 % vs unfine-tuned 25.5 % = +13.5 %.** Contains-match of the gold key fact, no retrieval,
+**ours 49.0 % vs unfine-tuned 37.0 % = +12.0 pts.** Contains-match of the gold key fact, no retrieval,
 identical decode. Full raw answers in `artifacts/benchmark_results.json`; reproduce with
 `python scripts/run_benchmark.py`.
 

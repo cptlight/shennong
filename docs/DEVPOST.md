@@ -112,59 +112,98 @@ kept to the job it does well — phrasing and reasoning over evidence that the o
 
 ## Challenges we ran into
 
-- **The benchmark was broken, and we found out late.** The published score was computed against a benchmark file
-  that no longer existed in the repository - only 13 of 200 questions matched by text. Worse, the keys for the
-  113 "use" questions were the *tradition label* rather than the recorded use, so a correct answer like
-  "emetics" scored zero. We rebuilt the scorer from scratch (`scripts/benchmark_v2.py`), documented the defect
-  (`docs/BENCHMARK.md`) and re-ran both arms. Publishing the audit is more valuable than the number it produced.
-- **A sparse MoE that lost.** We upcycled Qwen2.5-0.5B into a genuine 4-expert top-2 MoE (1.44 B, expert weights
-  actually trained, 999 MiB), then found it scored **below** the dense model. We released it anyway, with the
-  benchmark that shows it losing.
-- **Three separate GGUF format bugs** to make the MoE loadable at all: zero-size shared-expert tensors crashed
-  the quantiser, the tied LM head left `output.weight` missing, and the loader then demanded full-width
-  shared-expert tensors. All three were format problems; the trained weights never changed.
-- **A demo bug that would have been fatal.** The screening endpoint ignored its target parameter and silently
-  returned COX2 results for every query. A judge typing EGFR would have seen Cyclooxygenase-2.
+**The benchmark was broken in three ways, and we only found out late.** Each fix uncovered a worse problem
+underneath it. First, the results were scored against a benchmark file that no longer existed in the repository —
+only **13 of 200** questions matched by text. Second, the keys for the "use" family were the *tradition label*
+rather than the recorded use, so a model answering "emetics" — correct — scored zero; that is why both arms
+reported `use: 0/113`. Third, and worst: after fixing the keys, `use` was *still* 0/63 for **both** models. The
+questions didn't match their own gold — *"What is 蕺菜 recorded to treat?"* carried the answer *"Recorded use:
+emetics (Indian medicine)."* The file had been generated from an older training set and never rebuilt. We
+regenerated it from current data (`scripts/build_benchmark.py`), re-ran both arms from scratch, and wrote the whole
+diagnosis up in `docs/BENCHMARK.md`. **The corrected number is lower than the one we had published — +12.0 points
+instead of +13.5 — and that is the one we ship.**
 
-## Accomplishments we're proud of
+**A number we had published was measuring an impossible task.** We reported "drug-name → taxon resolution: 14.1 %"
+as our weakest link. Reading the evaluator showed it held out every test surface and then asked the resolver to
+guess it from character similarity — but `甘草` and `Licorice` share no characters, so no lexicon can pass. The real
+measurements are in-lexicon accuracy **1.000** and **48.7 %** coverage of plant-derived mentions. Investigating the
+rest revealed that **37.9 % of the classical pharmacopoeia is not botanical at all** — 23.5 % animal, 8.3 % mineral,
+4.1 % manufactured objects, 2.0 % human-derived. `縛豬繩` is a rope used to tie pigs. `溺白垽` is urine sediment.
+Counting those as resolution failures was the wrong denominator.
 
-- Two track demos that **actually run live**, on CPU, with no dead ends and no rehearsed answers.
-- **78 of 203** recorded preparation claims refuted by first principles - and **6 refuted despite unanimous
-  textual agreement**.
-- Span-level provenance throughout: every claim is checkable character by character.
-- A negative result we published rather than buried.
+**A sparse MoE that lost.** We upcycled Qwen2.5-0.5B into a genuine 4-expert top-2 MoE (1,435,499,392 parameters,
+expert weights actually trained, 999 MiB) and found it scored **31.7 % against 43.3 %** for the dense model. We
+released it anyway, with the benchmark that shows it losing.
+
+**Three GGUF format bugs to make that MoE loadable at all.** Zero-size shared-expert tensors crashed the quantiser
+(it died at tensor 12 of 410, leaving a 159 MB partial file); the tied LM head left `output.weight` missing, which
+llama.cpp's qwen2moe loader requires; and the loader then demanded *full-width* shared-expert tensors where we had
+written narrow ones. All three were format problems — the trained weights never changed.
+
+**A demo bug that would have been fatal.** The screening endpoint ignored its target parameter and silently returned
+COX2 results for every query. A judge typing EGFR would have seen Cyclooxygenase-2. Found by testing the demo the
+way a judge would, not by running the tests.
+
+**And a deployment failure that taught us the most.** Twelve minutes before recording the demo, the Space went to
+`BUILD_ERROR`. The cause was not our code: Hugging Face's builder was timing out fetching the `llama-cpp-python`
+wheel from a GitHub release. More instructive was the second bug it exposed — the Dockerfile downloaded the model
+with `curl` *without* `-f`, so a failed download silently wrote a GitHub error page over the GGUF. The build
+"succeeded", the container started, and the failure only appeared when someone asked the model a question. We now
+vendor the wheel into the Space and pull weights from the Hugging Face CDN with `-f` and a size assertion, so a
+truncated download fails the build instead of producing a model-shaped error page.
+
+## Accomplishments that we're proud of
+
+- **Two track demos that actually run live**, on CPU, with no dead ends and no rehearsed answers — resolve a name,
+  read a passage, screen a target, ask the model.
+- **714,079 drug–indication pairs** extracted from 273,334 formulas across 1,082 CC0 classical works, in **52 seconds
+  on a CPU**, with span-level provenance on every one.
+- **78 of 203 recorded preparation claims refuted by first principles** — and **6 refuted despite unanimous textual
+  agreement**. That is the claim a retrieval pipeline structurally cannot make: *ancient consensus is not evidence.*
+- **Span-level provenance throughout**: every claim carries `source_id` plus character offsets, so it is checkable
+  character by character rather than trusted.
+- **We audited our own submission and published the corrections** — a benchmark defect, an unresolvable metric, and
+  a lower score than the one we had already published. The numbers in the README now trace to artifacts, and the
+  two we could not reproduce were corrected rather than kept.
+- **A negative result we published rather than buried**: a genuine sparse MoE that lost to the dense baseline, with
+  the benchmark that shows it losing.
 
 ## What we learned
 
-- Ancient consensus is not evidence. Six hypotheses that every text-based check endorsed were refuted by physics.
-  Building that check mattered more than building a bigger model.
-- Most "AI for traditional medicine" projects stop at retrieval. The hard part is the **names**, and then the
-  **verification**.
-- A benchmark you cannot reproduce from your own repository is worth nothing, however good the number looks.
+**Ancient consensus is not evidence.** Six hypotheses that every text-based check endorsed — the ancient record,
+the tradition, and the five-expert panel — were refuted by mass balance and heat stability. Building that check
+mattered more than building a bigger model.
 
-## What's next
+**Most "AI for traditional medicine" projects stop at retrieval.** The hard part is the names, and then the
+verification. The model is the easy layer.
 
-- **Greek and Latin classical texts.** We hold 19 records' worth, so we do not claim to decode them. This is an
-  acquisition task, not a modelling task, and it is the single highest-value addition for Track 1.
-- **Grow the historical Chinese drug lexicon** beyond 827 entries - famous drugs such as 人參 are missing.
-- **Physical validation** of the top screening candidates.
+**The model is not the knowledge layer.** Asked *"what is Echinochloa colona used for in Indian medicine?"* our
+fine-tune answers with a *Chinese* classical use — it confuses traditions, and it scores 0/63 on that family. That
+single measurement shaped the architecture: uses come from extraction and retrieval, and the model is kept to
+language and reasoning. Knowing where a 1.5 B model must not be trusted was most of the engineering.
 
-## Built with
+**A benchmark you cannot reproduce from your own repository is worth nothing**, however good the number looks. Ours
+looked 13.5 points better than it was. Now every headline figure traces to a file.
 
-`python` · `pytorch` · `transformers` · `peft` · `llama.cpp` · `gguf` · `rdkit` · `numpy` · `scikit-learn` ·
-`opencc` · `huggingface-spaces` · `docker` · `chembl` · `imppat` · `wikidata` · `jicheng.tw (CC0)` ·
-`qwen2.5-1.5b` · `qlora`
+## What's next for SHENNONG 神农
 
-## Links
+**Close the Greek and Latin gap.** We hold 19 records' worth, so we do not claim to decode them. This is an
+acquisition task — Perseus, PHI, Galen translations — not a modelling task, and it is the single highest-value
+addition for Track 1.
 
-- **Live demo**: https://tomscot-shennong.hf.space
-- **Code**: https://github.com/cptlight/shennong
-- **Weights**: https://huggingface.co/tomscot/shennong-1.5b-sft
-- **Judge run sheet**: `docs/JUDGE_SCRIPT.md`
-- **Benchmark integrity note**: `docs/BENCHMARK.md`
+**Grow the historical lexicon.** 48.7 % of plant materia medica resolves; the missing half are archaic names absent
+from every open source we tried. We tested character-similarity fallback as a coverage fix: it recovered 2.9 % of
+mentions and was wrong about half the time, so we did not ship it. This needs data, not cleverness.
 
-## One honest sentence for the judges
+**Physical validation.** Track 2 currently ends at a ranked, falsifiable shortlist. The next step is testing the top
+candidates — especially the ones whose mechanism the classical text predicted and the physics did not refute.
 
-> We are not claiming a bigger model. We are claiming a system that links eras, checks itself against physics, and
-> publishes where it was wrong - including a benchmark defect we found in our own submission two days before the
-> deadline.
+**Then the loop closes:** mine the corpus → link eras → check the physics → rank the candidates → test in a lab →
+feed the result back into the corpus.
+
+---
+
+*Everything above is open: the corpus with span-level provenance, the weights, the screening pipeline, the negative
+results, and the audits of our own errors. Permissive licences only.*
+
+**Live:** https://tomscot-shennong.hf.space · **Code:** https://github.com/cptlight/shennong · **Weights:** https://huggingface.co/tomscot/shennong-1.5b-sft

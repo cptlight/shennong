@@ -79,7 +79,7 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(raw.decode("utf-8") or "{}")
         except json.JSONDecodeError:
             return self._json({"error": "body must be JSON"}, 400)
-        q = str(payload.get("question") or payload.get("q") or "")
+        q = str(payload.get("question") or payload.get("q") or payload.get("target") or "")
         mt = int(payload.get("max_new_tokens") or 40)
         if self.path == "/api/model":
             return self._json({"loaded": True, "family": "qwen2.5-1.5b-sft", "params": 1543714304,

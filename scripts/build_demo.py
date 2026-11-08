@@ -939,9 +939,10 @@ function tabProblems(){
     <p><button onclick="show('screen')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 2 — screen a target</button></p>
   </div>
 
-  <p class="note"><b>The model underneath:</b> a 1.5 B fine-tuned open model (39.0 % vs 25.5 % on 200 held-out
-  domain questions), released as a 940 MB Q4 GGUF that runs on a CPU — see tab 3 to query it live, tab 12 for
-  the weights.</p></section>`;
+  <p class="note"><b>The model underneath:</b> a 1.5 B fine-tuned open model — <b>49.0 % vs 37.0 %</b> for its
+  un-finetuned base on 200 held-out, question-aligned domain questions — released as a <b>940 MiB</b> Q4_K_M GGUF
+  that runs on a CPU. See <a href="#" onclick="show('ask');return false">tab 3</a> to query it live and
+  <a href="#" onclick="show('weights');return false">tab 12</a> for the weights.</p></section>`;
 }
 
 const RESOLVE_EXAMPLES = ['丹參','甘草','黄芪','當歸','단삼','Artemisia annua','Salvia miltiorrhiza','Atractylodes macrocephala'];

@@ -179,6 +179,8 @@ def extract_passage(text: str, source_id: str = "pasted", enrich: bool = True) -
                          "as unknown rather than guessed. Indications are only reported when they exist in the "
                          "controlled vocabulary; preparation processes only when they are known terms.",
         "honesty": "spans and quotes are verbatim from the pasted text and can be checked character by character.",
+        "debug": {"lex_indications": len(_term_vocab()[0]), "lex_processes": len(_term_vocab()[1]),
+                  "complex_lexicon": len(_lex().indications)},
     }
 
 

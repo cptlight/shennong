@@ -19,7 +19,8 @@ Shennong is the mythical Chinese figure who tasted a hundred herbs to learn thei
 empirical, patient, self-experimental — produced centuries of recorded observation. But the record is unusable to
 modern science for two reasons that have nothing to do with data volume:
 
-1. **The names do not survive.** The same plant is `甘草`, `Glycyrrhiza uralensis`, `Liquorice`, `Mulethi`, `감초`.
+1. **The names do not survive.** One plant is `甘草`, `감초`, `Glycyrrhiza uralensis` — and is also called
+   Liquorice and Mulethi, names our lexicon does not yet hold.
    A 16th-century drug name and a modern gene target never meet.
 2. **Nobody ever checked.** A preparation instruction is a chemistry protocol written in a language no one
    validated against thermodynamics.

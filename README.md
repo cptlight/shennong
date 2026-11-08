@@ -8,11 +8,11 @@
 
 ## The two problems this solves
 
-**1 · Track 1 — plant names do not survive the centuries.** The same plant is `甘草`, `Glycyrrhiza uralensis`,
-`Liquorice`, `Mulethi`, `감초`. Nothing links a 16th-century drug name to a modern gene target, so thousands of
-years of clinical observation stay unqueryable. **Live:** open the demo and click `丹參` — you get the modern
-binomial, its name in five languages, 8 recorded uses, 4 compound classes and 10 modern gene targets, in about a
-second, on a CPU. Coverage: 4,716 binomials · 827 historical Chinese names · 2,175 Indian plants with synonyms · 4,109 with recorded uses · 10,393 vernacular names. Unknown names return near matches, never a guess.
+**1 · Track 1 — plant names do not survive the centuries.** One plant is `甘草`, `감초`, `Glycyrrhiza uralensis`
+— and is also called Liquorice and Mulethi, names our lexicon does not yet hold. Nothing links a 16th-century drug
+name to a modern gene target, so thousands of years of clinical observation stay unqueryable. **Live:** open the
+demo and click `丹參` — you get the modern binomial, its names in **six languages**, 8 recorded uses, 4 compound
+classes and 10 modern gene targets, in about a second, on a CPU. Coverage: 4,716 binomials · 827 historical Chinese names · 2,175 Indian plants with synonyms · 4,109 with recorded uses · 10,393 vernacular names. Unknown names return near matches, never a guess.
 
 **2 · Track 2 — which plant compounds are worth testing.** Screening a plant library against a disease target
 normally needs a wet lab or a GPU cluster. **Live:** type `EGFR` in the demo — 23,176 plant compounds ranked by

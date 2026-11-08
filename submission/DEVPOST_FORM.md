@@ -8,7 +8,7 @@ Copy each section below into the corresponding Devpost field.
 
 Shennong, the mythical Chinese figure who tasted a hundred herbs to learn their effects, produced centuries of recorded observation. That record is unusable today for two reasons that have nothing to do with data volume.
 
-**The names don't survive.** The same plant is `甘草`, `Glycyrrhiza uralensis`, `Liquorice`, `Mulethi`, `감초`. A 16th-century drug name and a modern gene target never meet, so a classical therapeutic use can't be connected to anything modern.
+**The names don't survive.** One plant is `甘草`, `감초`, `Glycyrrhiza uralensis` — and is also called Liquorice and Mulethi, names our lexicon does not yet hold. A 16th-century drug name and a modern gene target never meet, so a classical therapeutic use can't be connected to anything modern.
 
 **Nobody ever checked the chemistry.** A preparation instruction — *"boil for three hours, wring out the juice"* — is a chemical protocol written in a language no one validated against thermodynamics.
 

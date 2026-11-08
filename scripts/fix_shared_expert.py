@@ -48,6 +48,7 @@ def main() -> int:
         if old.gate_proj.weight.shape[0] == args.width:
             continue                        # already fixed
         new = Qwen2MoeMLP(model.config, intermediate_size=args.width)
+        new = new.to(dtype=model.dtype)   # match the host model (fp16) or F.linear raises a dtype error
         # zero the output projection so this expert contributes exactly nothing
         with torch.no_grad():
             new.down_proj.weight.zero_()

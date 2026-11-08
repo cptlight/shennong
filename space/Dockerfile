@@ -18,7 +18,7 @@ RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && cp -r /tmp/src/shennong /app/shennong \
     && cp -r /tmp/src/docs/demo /app/docs/demo \
     && cp /tmp/src/space/app.py /app/space/app.py \
-    && cp -r /tmp/src/corpus/processed/structured /app/corpus/processed/structured \
+    && cp /tmp/src/corpus/processed/structured/* /app/corpus/processed/structured/ \
     && cp /tmp/src/corpus/processed/lexicon_drugs.json /app/corpus/processed/lexicon_drugs.json \
     && cp /tmp/src/artifacts/discoveries.json /tmp/src/artifacts/operator_ontology.json /app/artifacts/ \
     && cp /tmp/src/artifacts/router.pkl /app/artifacts/router.pkl \

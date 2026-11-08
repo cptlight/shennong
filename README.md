@@ -67,8 +67,12 @@ survived — the most mechanistic one.**
 
 And three numbers that limit what it means — published here rather than below the fold:
 
-- **Drug-name → taxon resolution is 14.1 % accurate (n = 368).** Every downstream layer inherits that
-  error. It is the weakest link in the chain and the first thing we would fix.
+- **About half the botanical materia medica resolves (48.7 %, 4,357 of 8,944 mentions).** The other half are
+  archaic names no open lexicon holds. The metric previously published here — "14.1 % accurate (n = 368)" — was a
+  benchmark bug, not a measurement: it held out every test surface and asked the resolver to guess it from
+  character similarity, a task no lexicon can pass (`甘草` and `Licorice` share no characters). See
+  [`docs/RESOLUTION.md`](docs/RESOLUTION.md). A third of the corpus is not botanical at all — 23.5 % animal,
+  8.3 % mineral, 4.1 % manufactured objects — and is reported separately rather than diluting the denominator.
 - **Our own composite failed its topology check.** Shuffling plant↔use edges changes the mean score by
   **−0.026** [−0.042, −0.014]: the ranking is driven by evidence and plausibility priors, not by graph
   structure. Reported as a limitation of the scorer.
@@ -285,7 +289,7 @@ python -m shennong.cli report --out eval/report.json          # evaluate
 | **Held-out quality** | val loss **6.390** · ppl **605.3** · **2.526 bits/byte** vs unigram baseline **3.076 bpb** (1.22× better) |
 | **Weights** | `shennong-mini-f16.gguf` **18,054,560 B**, sha256 `a67ad442…4cdb60`, 56 tensors, 8,719,616 elements — GGUF↔HF bit-exact, tokenizer parity 100 % |
 | **Candidates** | **60** drug candidates across 15 taxa, all classical lines verified against corpus spans |
-| **Honest gaps** | Per-language bpb: en 2.56 · zh-Hant 3.34 · la 4.58 · **sa 13.46** (Devanagari never trained) · drug-name→taxon **accuracy 14.1 % (n=368)** — the weakest link in the whole chain |
+| **Honest gaps** | Per-language bpb: en 2.56 · zh-Hant 3.34 · la 4.58 · **sa 13.46** (Devanagari never trained) · plant-materia resolution **48.7 %** (4,357/8,944) — archaic names outside every open lexicon are the gap |
 
 ### The pre-registered theory experiment — the result
 
@@ -571,7 +575,7 @@ templated: they are counts over 106 sources, each checkable in one lookup, each 
 **One honest gap:** cross-tradition convergence (F1) was originally computed from `uses.csv` and returned
 zero — because all 5,084 joined use-records come from a *single* source and some joined binomials were
 not plants (*Phycodurus eques*, a seahorse). F1 is now computed from the text itself; the structured
-join still needs fixing, and that is the same 14.1 % resolution problem.
+join still needs fixing, and that is the same missing-lexicon resolution gap (see docs/RESOLUTION.md).
 
 ## Evidence, refusal and the operator ontology
 

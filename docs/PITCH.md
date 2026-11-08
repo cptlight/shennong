@@ -138,9 +138,12 @@ verifier, and a fine-tuned model that answers without retrieval. The demo's tab 
 — no retrieval at inference — and it is scored at 39.0 % on 200 held-out questions.
 
 **"How do I know your names are right?"**
-Each resolution reports *how* it matched (historical lexicon / Indian synonym / Wikidata language). Coverage is
-4,716 binomials, 827 historical Chinese names, 10,393 vernacular names. It returns near matches, never a guess,
-and the coverage boundary is stated on the page.
+Each resolution reports *how* it matched (historical lexicon / Indian synonym / Wikidata language), and the
+coverage boundary is stated on the page. Measured: in-lexicon accuracy **1.000**, and **48.7 %** of plant-derived
+corpus mentions resolve (4,357 of 8,944). The rest are archaic names no open lexicon holds — we report them
+rather than guess. Note that **37.9 % of the classical pharmacopoeia is not botanical at all** (23.5 % animal,
+8.3 % mineral, 4.1 % manufactured objects, 2.0 % human-derived), so a single "resolution rate" over everything is
+the wrong denominator.
 
 **"Is the MoE better? You said it's a MoE."**
 No — it is worse: 31.7 % against 43.3 % for the dense model on the same 60 questions. It is released as a

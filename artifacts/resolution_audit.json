@@ -1,0 +1,117 @@
+{
+  "in_lexicon": {
+    "surfaces": 1863,
+    "with_binomial": 1863,
+    "accuracy": 1.0,
+    "note": "exact lookup by construction; a value < 1.0 means a bug, not a limit"
+  },
+  "corpus_coverage": {
+    "by_table": {
+      "uses.csv": {
+        "mentions": 11819,
+        "resolved": 5084,
+        "overall_rate": 0.4302,
+        "plant_derived": 6984,
+        "plant_resolved": 3486,
+        "plant_rate": 0.4991,
+        "composition": {
+          "plant": 5146,
+          "animal": 2967,
+          "plant_part": 1838,
+          "mineral": 1067,
+          "object": 542,
+          "human_derived": 259
+        },
+        "resolved_by_class": {
+          "plant": 2792,
+          "animal": 1174,
+          "plant_part": 694,
+          "mineral": 263,
+          "object": 125,
+          "human_derived": 36
+        }
+      },
+      "properties.csv": {
+        "mentions": 1402,
+        "resolved": 658,
+        "overall_rate": 0.4693,
+        "plant_derived": 830,
+        "plant_resolved": 448,
+        "plant_rate": 0.5398,
+        "composition": {
+          "plant": 643,
+          "animal": 386,
+          "plant_part": 187,
+          "mineral": 115,
+          "object": 43,
+          "human_derived": 28
+        },
+        "resolved_by_class": {
+          "plant": 365,
+          "animal": 159,
+          "plant_part": 83,
+          "mineral": 33,
+          "object": 15,
+          "human_derived": 3
+        }
+      },
+      "formula_ingredients.csv": {
+        "mentions": 847,
+        "resolved": 451,
+        "overall_rate": 0.5325,
+        "plant_derived": 808,
+        "plant_resolved": 423,
+        "plant_rate": 0.5235,
+        "composition": {
+          "plant": 694,
+          "plant_part": 114,
+          "animal": 28,
+          "mineral": 7,
+          "object": 3,
+          "human_derived": 1
+        },
+        "resolved_by_class": {
+          "plant": 334,
+          "plant_part": 89,
+          "animal": 18,
+          "mineral": 7,
+          "object": 3
+        }
+      },
+      "ayurveda_properties.csv": {
+        "mentions": 322,
+        "resolved": 0,
+        "overall_rate": 0.0,
+        "plant_derived": 322,
+        "plant_resolved": 0,
+        "plant_rate": 0.0,
+        "composition": {
+          "plant": 322
+        },
+        "resolved_by_class": {}
+      }
+    },
+    "composition_total": {
+      "plant": 6805,
+      "animal": 3381,
+      "plant_part": 2139,
+      "mineral": 1189,
+      "object": 588,
+      "human_derived": 288
+    }
+  },
+  "summary": {
+    "total_mentions": 14390,
+    "non_plant_mentions": 5446,
+    "non_plant_share": 0.3785,
+    "plant_mentions": 8944,
+    "resolved_all": 6193,
+    "resolved_plant": 4357,
+    "rate_overall": 0.4304,
+    "rate_on_plant_materia": 0.4871
+  },
+  "unseen_names": {
+    "accuracy": 0.0,
+    "note": "A lexicon-based resolver cannot map a surface it has never seen: 甘草 and Licorice share no characters. Reported as ~0 by design, not as a defect. Closing this requires a larger historical lexicon (data acquisition), not a better string score."
+  }
+}

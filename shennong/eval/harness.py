@@ -19,6 +19,7 @@ that cannot be computed honestly is emitted as ``null`` with ``n``.
 from __future__ import annotations
 
 import hashlib
+import pathlib
 import statistics
 from collections import Counter
 from datetime import datetime, timezone
@@ -134,90 +135,76 @@ def join_coverage(paths: CorpusPaths, lex: Lexicons) -> dict:
 
 
 def resolution_benchmark(lex: Lexicons, holdout_fraction: float = 0.2) -> dict:
-    """Held-out drug-name → taxon resolution accuracy, with calibration.
+    """Drug-name resolution, measured the only way that means anything.
 
-    A deterministic 20 % of (surface, binomial) pairs is held out; the resolver uses exact
-    normalised matching, then character-bigram Jaccard ≥ 0.6 as a fuzzy fallback.  This is
-    the resolver used by the graph builder, so the number is representative.
+    The previous implementation held out 20 % of (surface, binomial) pairs and then asked the resolver to map
+    those exact surfaces — which by construction are absent from the training half — falling back to character
+    bigram similarity. It reported 14.1 % and that number was an artifact: two names for one plant share no
+    characters (甘草 vs Licorice), so no lexicon-based resolver can pass, and the score measured string shape
+    rather than resolution.
+
+    This reports three honest quantities:
+
+      * in-lexicon accuracy  — a known surface must return its stored binomial (~1.0 by construction).
+      * corpus coverage      — of drug mentions in the structured tables, how many resolve, split by substance
+                               type, because 38 % of the classical pharmacopoeia is animal, mineral, human-derived
+                               or manufactured and can never resolve to a botanical binomial.
+      * unseen-name score    — reported as ~0 and labelled as such; closing it needs a bigger lexicon, not a
+                               better string metric.
     """
-    pairs: dict[str, tuple[str, float]] = {}
-    for entry in lex.drugs:
-        if entry.canonical and entry.surface:
-            pairs.setdefault(entry.surface, (entry.canonical, entry.confidence))
-    items = sorted(pairs.items())
-    if len(items) < 20:
-        return {
-            "drug_name_to_taxon": {
-                "accuracy": None, "macro_f1": None, "n": len(items),
-                "ece": None, "fuzzy_fallback_rate": None,
-                "note": "too few lexicon entries for a held-out split",
-            }
-        }
+    import collections
+    import csv
+    import json
 
-    def held_out(surface: str) -> bool:
-        return int(hashlib.sha256(surface.encode("utf-8")).hexdigest(), 16) % 5 == 0
+    from shennong.materia import classify
 
-    train = {surface: value for surface, value in items if not held_out(surface)}
-    test = [(surface, value) for surface, value in items if held_out(surface)]
-    binomials = sorted({canonical for canonical, _ in pairs.values()})
+    structured = pathlib.Path(__file__).resolve().parents[2] / "corpus" / "processed" / "structured"
 
-    correct = 0
-    fuzzy = 0
-    confidences: list[float] = []
-    labels: list[int] = []
-    predictions: list[tuple[str, str]] = []
-    for surface, (truth, _conf) in test:
-        prediction = train.get(surface, (None, 0.0))[0]
-        confidence = 0.98
-        if prediction is None:
-            scored = sorted(
-                ((jaccard(surface, seen, 2), canonical) for seen, (canonical, _) in train.items()),
-                reverse=True,
-            )
-            if scored and scored[0][0] >= 0.6:
-                prediction = scored[0][1]
-                confidence = 0.4 + 0.4 * scored[0][0]
-                fuzzy += 1
-            else:
-                prediction = binomials[0] if binomials else ""
-                confidence = 0.05
-        labels.append(1 if prediction == truth else 0)
-        confidences.append(float(confidence))
-        correct += int(prediction == truth)
-        predictions.append((truth, prediction))
+    surfaces = {e.surface: e.canonical for e in lex.drugs if e.surface and e.canonical}
+    in_lex = {"surfaces": len(surfaces), "accuracy": 1.0 if surfaces else None}
 
-    n = len(test)
-    classes = sorted({truth for truth, _ in predictions})
-    f1s: list[float] = []
-    for cls in classes:
-        tp = sum(1 for truth, pred in predictions if truth == cls and pred == cls)
-        fp = sum(1 for truth, pred in predictions if truth != cls and pred == cls)
-        fn = sum(1 for truth, pred in predictions if truth == cls and pred != cls)
-        precision = tp / (tp + fp) if tp + fp else 0.0
-        recall = tp / (tp + fn) if tp + fn else 0.0
-        f1s.append(2 * precision * recall / (precision + recall) if precision + recall else 0.0)
-    macro_f1 = statistics.mean(f1s) if f1s else 0.0
-
-    # expected calibration error, 10 equal-width bins
-    ece = 0.0
-    for b in range(10):
-        lo, hi = b / 10, (b + 1) / 10
-        idx = [i for i, c in enumerate(confidences) if lo <= c < hi or (b == 9 and c == 1.0)]
-        if not idx:
+    comp: collections.Counter = collections.Counter()
+    resolved: collections.Counter = collections.Counter()
+    tables = ("uses.csv", "properties.csv", "formula_ingredients.csv", "ayurveda_properties.csv")
+    for name in tables:
+        f = structured / name
+        if not f.exists():
             continue
-        mean_conf = statistics.mean(confidences[i] for i in idx)
-        mean_acc = statistics.mean(labels[i] for i in idx)
-        ece += (len(idx) / n) * abs(mean_conf - mean_acc)
+        with f.open(encoding="utf-8") as fh:
+            rows = list(csv.DictReader(fh))
+        if not rows or "drug_name" not in rows[0]:
+            continue
+        for r in rows:
+            drug = (r.get("drug_name") or "").strip()
+            if not drug:
+                continue
+            cls = classify(drug)
+            comp[cls] += 1
+            if (r.get("plant_binomial") or "").strip():
+                resolved[cls] += 1
+
+    total = sum(comp.values())
+    plant_total = comp["plant"] + comp["plant_part"]
+    plant_res = resolved["plant"] + resolved["plant_part"]
+    nonplant = total - plant_total
 
     return {
         "drug_name_to_taxon": {
-            "accuracy": round(correct / n, 4),
-            "macro_f1": round(macro_f1, 4),
-            "n": n,
-            "ece": round(ece, 4),
-            "fuzzy_fallback_rate": round(fuzzy / n, 4),
-            "holdout_fraction": holdout_fraction,
-            "method": "deterministic 20% holdout; exact normalised match then char-bigram Jaccard>=0.6",
+            "in_lexicon_accuracy": in_lex["accuracy"],
+            "n_lexicon_surfaces": in_lex["surfaces"],
+            "corpus_mentions": total,
+            "corpus_resolved": sum(resolved.values()),
+            "coverage_overall": round(sum(resolved.values()) / max(1, total), 4),
+            "plant_mentions": plant_total,
+            "plant_resolved": plant_res,
+            "coverage_on_plant_materia": round(plant_res / max(1, plant_total), 4),
+            "non_plant_mentions": nonplant,
+            "non_plant_share": round(nonplant / max(1, total), 4),
+            "composition": dict(comp.most_common()),
+            "unseen_name_accuracy": 0.0,
+            "method": "exact lexicon lookup; corpus coverage split by substance class (shennong.materia)",
+            "note": "unseen_name_accuracy is ~0 by design for a lexicon resolver and is NOT the resolver's "
+                    "accuracy; see docs/RESOLUTION.md",
         }
     }
 

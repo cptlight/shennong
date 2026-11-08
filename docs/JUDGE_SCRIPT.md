@@ -113,9 +113,11 @@ Then **open tab 1b and let it sit on screen**. Silence beats a rushed sentence.
 > 39 % on 200 held-out questions."
 
 **"How do I know the names are right?"**
-> "Each resolution reports *how* it matched — historical lexicon, Indian synonym, or Wikidata language. Coverage is
-> 4,716 binomials, 827 historical Chinese names, 10,393 vernacular names. It returns near matches, never a guess,
-> and the coverage boundary is printed on the page."
+> "Each resolution reports *how* it matched — historical lexicon, Indian synonym, or Wikidata language — and the
+> coverage boundary is printed on the page. Measured: in-lexicon accuracy 1.000, and **48.7 % of plant materia
+> medica resolves**. The rest are archaic names no open lexicon holds; we report them rather than guess. And note
+> **37.9 % of the pharmacopoeia isn't botanical at all** — 23.5 % animal, 8.3 % mineral, 4.1 % manufactured
+> objects — so a resolution rate over *everything* is the wrong denominator. That breakdown is itself a finding."
 
 **"Is your MoE better?"**
 > "No. 31.7 against 43.3. It's released with the benchmark that shows it losing. The dense model ships."

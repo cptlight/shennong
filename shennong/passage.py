@@ -47,7 +47,7 @@ def _lex():
 
 
 @lru_cache(maxsize=1)
-def _term_vocab() -> tuple[set, dict]:
+def _term_vocab() -> tuple[dict, dict]:
     """Indication surfaces and process terms.
 
     On the Space the lexicon is built without corpus.jsonl (177 MB, not shipped), so its indication vocabulary
@@ -55,15 +55,16 @@ def _term_vocab() -> tuple[set, dict]:
     """
     import json
     lex = _lex()
-    inds, procs = set(lex.indications), dict(lex.processes)
-    if len(inds) < 1000:
-        try:
-            raw = json.loads((pathlib.Path(__file__).resolve().parent.parent
-                              / "artifacts" / "lexicon_terms.json").read_text(encoding="utf-8"))
-            inds |= set(raw.get("indications", {}))
-            procs = {**raw.get("processes", {}), **procs}
-        except Exception:  # noqa: BLE001
-            pass
+    inds, procs = dict(lex.indications), dict(lex.processes)
+    try:
+        raw = json.loads((pathlib.Path(__file__).resolve().parent.parent
+                          / "artifacts" / "lexicon_terms.json").read_text(encoding="utf-8"))
+        for k, v in raw.get("indications", {}).items():
+            inds.setdefault(k, v)
+        for k, v in raw.get("processes", {}).items():
+            procs.setdefault(k, v)
+    except Exception:  # noqa: BLE001
+        pass
     return inds, procs
 
 
@@ -134,6 +135,23 @@ def extract_passage(text: str, source_id: str = "pasted", enrich: bool = True) -
         d = _span_dict(e)
         d["canonical"] = e.canonical
         indications.append(d)
+
+    if not indications:
+        # Fallback: the trie depends on the lexicon's build state, which differs on the Space (no corpus.jsonl).
+        # Fold the raw text the same way the extractor does and sweep the controlled vocabulary directly.
+        from shennong.normalize import normalise_offsets
+        folded = normalise_offsets(text)
+        for term, canon in _term_vocab()[0].items():
+            if len(term) < 2 or canon == term:
+                continue
+            pos = folded.find(term)
+            if pos < 0:
+                continue
+            if any(i["canonical"] == canon for i in indications):
+                continue
+            indications.append({"surface": text[pos:pos + len(term)], "start": pos, "end": pos + len(term),
+                                "quote": text[pos:pos + len(term)], "confidence": 0.9, "canonical": canon,
+                                "via": "vocabulary sweep"})
 
     # --- processes: only the 81 known preparation terms
     p_seen, processes = set(), []

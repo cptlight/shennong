@@ -18,7 +18,28 @@ We built the link, and then we checked the claims.
 
 ## The two problems, and what we built for each
 
-### Problem 1 · Track 1 — names do not survive the centuries
+### Problem 1 · Track 1 — read a passage, then follow it to modern pharmacology
+
+> **What runs live:** open tab **1b · Track 1 — read a passage**. Paste any classical or ethnobotanical text
+> (three examples are preloaded). The system returns every drug it recognises with a **character span and
+> confidence**, its modern binomial, compound classes and gene targets; the therapeutic claims mapped onto a
+> controlled vocabulary; and the preparation processes it detected.
+
+Verified on a four-drug formula from a Taiwan-edition text:
+
+```
+in  甘草（炙）二两、人參一兩、白朮二兩、茯苓二兩，以水六升，煮取三升。治脾胃虛弱，氣短乏力。
+out drugs      甘草 → Glycyrrhiza uralensis     flavonoid, phenylpropanoid   ABCB1, ABCB11
+               白朮 → Atractylodes macrocephala alkaloid, flavonoid          ACHE, ADORA1
+               茯苓 → Wolfiporia cocos          terpenoid                    (none recorded)
+    claim      脾胃虛弱 → dyspepsia          (traditional form folded to simplified)
+    process    煮 (decoction)
+```
+
+Extraction is **rule- and lexicon-based** — it cannot hallucinate a span. Every item points at a character range
+in the text the judge pasted, so the claim can be checked by eye.
+
+### Problem 1b · Track 1 — names do not survive the centuries
 
 > **What runs live:** open tab **1 · Track 1 — resolve a plant name**.
 > Click `丹參`. In ~1 second you get `Salvia miltiorrhiza`, its names in Chinese/Japanese/German/French/Korean,

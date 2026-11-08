@@ -25,8 +25,25 @@ from functools import lru_cache
 
 @lru_cache(maxsize=1)
 def _lex():
+    """Lexicon, augmented with the shipped term table.
+
+    The Space has no corpus.jsonl (177 MB), so its indication trie is missing entries a Taiwan-edition text uses
+    (脾胃虛弱). Merging artifacts/lexicon_terms.json INTO the lexicon matters: the trie is built from it, so
+    without this the claim is never even extracted — filtering it later is too late.
+    """
+    import json
     from shennong.extract.lexicons import build_lexicons
-    return build_lexicons()
+    lex = build_lexicons()
+    try:
+        raw = json.loads((pathlib.Path(__file__).resolve().parent.parent
+                          / "artifacts" / "lexicon_terms.json").read_text(encoding="utf-8"))
+        for k, v in raw.get("indications", {}).items():
+            lex.indications.setdefault(k, v)
+        for k, v in raw.get("processes", {}).items():
+            lex.processes.setdefault(k, v)
+    except Exception:  # noqa: BLE001
+        pass
+    return lex
 
 
 @lru_cache(maxsize=1)

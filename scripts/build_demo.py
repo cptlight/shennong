@@ -913,8 +913,8 @@ function tabProblems(){
     chain continues into recorded uses, compound classes and gene targets.</p>
     <p class="note"><b>And it runs at corpus scale:</b> the same extractor was applied to
     <b>273,334 formulas from 1,082 classical works</b>, producing
-    <b>412,655 drug&ndash;indication pairs</b> across 68,195 indications
-    from 429,499 drug mentions — in 16 seconds on a CPU.</p>
+    <b>714,079 drug&ndash;indication pairs</b> across 77,441 indications
+    from 744,997 drug mentions — in 52 seconds on a CPU.</p>
     <p><button onclick="show('resolve')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 1 — resolve a name</button></p>
   </div>
 

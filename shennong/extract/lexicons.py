@@ -79,6 +79,19 @@ class Lexicons:
                 for reading in entry.get("readings", []):
                     lex._add_drug(reading, modern, "en", conf * 0.95, "lexicon_drugs")
 
+        # 2b. hand-curated supplements for undisputed drugs absent from every structured source
+        #     (人參 appears ~28,000 times in the jicheng corpus and was in no table)
+        supplement = paths.root / "lexicon_supplement.json"
+        if supplement.exists():
+            try:
+                sup = json.loads(supplement.read_text(encoding="utf-8"))
+                for e in sup.get("entries", []):
+                    if e.get("name") and e.get("modern"):
+                        lex._add_drug(e["name"], e["modern"], _lang_of(e["name"]),
+                                      float(e.get("confidence", 0.8)), "curated-supplement")
+            except Exception as exc:  # noqa: BLE001
+                lex.warnings.append(f"lexicon_supplement.json invalid: {exc}")
+
         # 3. indications from the ontology (zh/sa/ar/en surfaces)
         for spec in ontology.INDICATIONS.values():
             for term in (spec.indication, spec.symptom, *spec.zh, *spec.sa, *spec.ar, *spec.en):

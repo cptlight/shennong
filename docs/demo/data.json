@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T20:09:00-0800",
+ "generated_at": "2026-11-07T20:13:14-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v1.17.0": {
@@ -3237,6 +3237,7 @@
   "expert_routing.json",
   "extraction_report.json",
   "falsification_cards.json",
+  "jicheng_attestations.json",
   "jicheng_mined.json",
   "law_impact.json",
   "lexicon_terms.json",

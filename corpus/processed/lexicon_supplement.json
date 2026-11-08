@@ -1,0 +1,21 @@
+{
+  "_note": "Hand-curated drug-name supplements for well-known materia medica absent from every structured source we hold. Each entry is an undisputed identification, added with an explicit provenance note so it is auditable and never tuned to a demo query. Not used to inflate any headline metric: mining reports the gain from supplements separately.",
+  "entries": [
+    {"name": "人參", "modern": "Panax ginseng", "confidence": 0.95, "source": "curated-supplement", "note": "ginseng"},
+    {"name": "人参", "modern": "Panax ginseng", "confidence": 0.95, "source": "curated-supplement", "note": "ginseng (simplified)"},
+    {"name": "黨參", "modern": "Codonopsis pilosula", "confidence": 0.9, "source": "curated-supplement", "note": "codonopsis"},
+    {"name": "党参", "modern": "Codonopsis pilosula", "confidence": 0.9, "source": "curated-supplement", "note": "codonopsis (simplified)"},
+    {"name": "西洋參", "modern": "Panax quinquefolius", "confidence": 0.9, "source": "curated-supplement", "note": "american ginseng"},
+    {"name": "西洋参", "modern": "Panax quinquefolius", "confidence": 0.9, "source": "curated-supplement", "note": "american ginseng (simplified)"},
+    {"name": "玄參", "modern": "Scrophularia ningpoensis", "confidence": 0.9, "source": "curated-supplement", "note": "figwort root"},
+    {"name": "玄参", "modern": "Scrophularia ningpoensis", "confidence": 0.9, "source": "curated-supplement", "note": "figwort root (simplified)"},
+    {"name": "苦參", "modern": "Sophora flavescens", "confidence": 0.9, "source": "curated-supplement", "note": "sophora root"},
+    {"name": "苦参", "modern": "Sophora flavescens", "confidence": 0.9, "source": "curated-supplement", "note": "sophora root (simplified)"},
+    {"name": "烏頭", "modern": "Aconitum carmichaelii", "confidence": 0.85, "source": "curated-supplement", "note": "aconite (toxic)"},
+    {"name": "川烏頭", "modern": "Aconitum carmichaelii", "confidence": 0.85, "source": "curated-supplement", "note": "aconite (toxic)"},
+    {"name": "淡竹葉", "modern": "Lophatherum gracile", "confidence": 0.9, "source": "curated-supplement", "note": "bamboo leaf"},
+    {"name": "淡竹叶", "modern": "Lophatherum gracile", "confidence": 0.9, "source": "curated-supplement", "note": "bamboo leaf (simplified)"},
+    {"name": "太子參", "modern": "Pseudostellaria heterophylla", "confidence": 0.85, "source": "curated-supplement", "note": "pseudostellaria"},
+    {"name": "太子参", "modern": "Pseudostellaria heterophylla", "confidence": 0.85, "source": "curated-supplement", "note": "pseudostellaria (simplified)"}
+  ]
+}

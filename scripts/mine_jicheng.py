@@ -33,6 +33,7 @@ def main() -> int:
 
     from shennong.extract.lexicons import build_lexicons
     from shennong.extract.match import build_drug_trie, scan_drugs
+    from shennong.normalize import normalise_offsets
 
     lex = build_lexicons()
     trie = build_drug_trie(lex.drugs)
@@ -58,7 +59,8 @@ def main() -> int:
             works.add(work)
         if not formula:
             continue
-        hits = scan_drugs(trie, formula)
+        # length-preserving fold (traditional -> simplified) or 丹參 never matches 丹参 in the trie
+        hits = scan_drugs(trie, normalise_offsets(formula))
         if hits:
             formulas_with_drug += 1
         seen = set()
@@ -76,6 +78,21 @@ def main() -> int:
                               "work": work, "dynasty": r.get("dynasty") or ""})
         if (i + 1) % 25000 == 0:
             print(f"  {i+1}/{len(rows)} · {n_mentions} mentions · {time.time()-t0:.0f}s", flush=True)
+
+    # per-drug attestation: how many classical formula mentions, and in how many works
+    per_work: dict[str, set] = {}
+    for r in rows:
+        formula = (r.get("formula") or "").strip()
+        work = (r.get("work") or "").strip()
+        if not formula:
+            continue
+        for m in scan_drugs(trie, normalise_offsets(formula)):
+            if m.canonical:
+                per_work.setdefault(m.canonical, set()).add(work)
+    attest = {b: {"mentions": binom_freq[b], "works": len(per_work.get(b, ()))}
+              for b in binom_freq}
+    (ROOT / "artifacts/jicheng_attestations.json").write_text(
+        json.dumps(attest, indent=2, ensure_ascii=False), encoding="utf-8")
 
     stats = {
         "formulas": len(rows),

@@ -56,9 +56,9 @@ historical name (any era, any language)
    -> pharmacology               class -> molecular target -> disease
 ```
 
-**And it runs at corpus scale, not just on one paragraph.** Mining 273,334 formulas from
-1,082 classical works took **16 seconds** and produced **412,655 drug–indication
-pairs** over 68,195 indications, covering 506 distinct drugs.
+**And it runs at corpus scale, not just on one paragraph.** Mining 273,334 formulas from 1,082
+classical works took **52 seconds** and produced **714,079 drug–indication pairs** over 77,441 indications, covering
+662 distinct drugs. 167,679 formulas (61.3%) contain at least one recognised drug — 人參 alone appears 28,831 times.
 
 Nothing is retrieved at inference. This is a curated corpus with **888,303 facts** and span locators
 (`source_id:char_start-char_end`) back to **CC0/public-domain sources only**. Traditional Chinese is normalised to

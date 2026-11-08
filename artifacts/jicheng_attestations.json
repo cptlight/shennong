@@ -1,0 +1,2502 @@
+{
+  "Wolfiporia cocos": {
+    "mentions": 25182,
+    "works": 651
+  },
+  "Angelica sinensis": {
+    "mentions": 28266,
+    "works": 631
+  },
+  "Equus asinus": {
+    "mentions": 4343,
+    "works": 387
+  },
+  "Typha latifolia": {
+    "mentions": 2066,
+    "works": 279
+  },
+  "Aconitum carmichaelii": {
+    "mentions": 16813,
+    "works": 553
+  },
+  "Alisma plantago-aquatica": {
+    "mentions": 4493,
+    "works": 433
+  },
+  "Rheum rhaponticum": {
+    "mentions": 14634,
+    "works": 592
+  },
+  "Oryza sativa": {
+    "mentions": 1384,
+    "works": 268
+  },
+  "Vigna radiata": {
+    "mentions": 2635,
+    "works": 307
+  },
+  "Glycyrrhiza uralensis": {
+    "mentions": 51789,
+    "works": 745
+  },
+  "Isatis tinctoria": {
+    "mentions": 2242,
+    "works": 313
+  },
+  "Kummerowia striata": {
+    "mentions": 3291,
+    "works": 293
+  },
+  "Croton tiglium": {
+    "mentions": 4972,
+    "works": 335
+  },
+  "Artemisia carvifolia": {
+    "mentions": 602,
+    "works": 180
+  },
+  "Pueraria montana var. lobata": {
+    "mentions": 3540,
+    "works": 376
+  },
+  "Platycodon grandiflorus": {
+    "mentions": 8119,
+    "works": 516
+  },
+  "Dendrobium nobile": {
+    "mentions": 2006,
+    "works": 255
+  },
+  "Fritillaria": {
+    "mentions": 3041,
+    "works": 383
+  },
+  "Aster tataricus": {
+    "mentions": 2136,
+    "works": 228
+  },
+  "Tussilago farfara": {
+    "mentions": 1125,
+    "works": 181
+  },
+  "Tanna sayurie": {
+    "mentions": 3089,
+    "works": 271
+  },
+  "Schisandra chinensis": {
+    "mentions": 5441,
+    "works": 387
+  },
+  "Tribulus terrestris": {
+    "mentions": 2060,
+    "works": 265
+  },
+  "Olea europaea": {
+    "mentions": 78,
+    "works": 51
+  },
+  "Laccocephalum mylittae": {
+    "mentions": 600,
+    "works": 149
+  },
+  "Zingiber officinale": {
+    "mentions": 30156,
+    "works": 656
+  },
+  "Aucklandia lappa": {
+    "mentions": 14678,
+    "works": 517
+  },
+  "Citrus reticulata": {
+    "mentions": 189,
+    "works": 91
+  },
+  "Plantago asiatica": {
+    "mentions": 2493,
+    "works": 333
+  },
+  "Foeniculum vulgare": {
+    "mentions": 2317,
+    "works": 277
+  },
+  "Kitagawia praeruptora": {
+    "mentions": 3499,
+    "works": 313
+  },
+  "Paeonia lactiflora": {
+    "mentions": 16393,
+    "works": 491
+  },
+  "Anemarrhena asphodeloides": {
+    "mentions": 4836,
+    "works": 450
+  },
+  "Vitex rotundifolia": {
+    "mentions": 1671,
+    "works": 229
+  },
+  "Bupleurum chinense": {
+    "mentions": 10017,
+    "works": 551
+  },
+  "Scutellaria baicalensis": {
+    "mentions": 14250,
+    "works": 575
+  },
+  "Ephedra sinica": {
+    "mentions": 8975,
+    "works": 488
+  },
+  "Senna obtusifolia": {
+    "mentions": 1250,
+    "works": 179
+  },
+  "Dryobalanops aromatica": {
+    "mentions": 2242,
+    "works": 188
+  },
+  "Armeniaca vulgaris": {
+    "mentions": 8743,
+    "works": 495
+  },
+  "Syzygium aromaticum": {
+    "mentions": 5024,
+    "works": 362
+  },
+  "Atractylodes macrocephala": {
+    "mentions": 19312,
+    "works": 611
+  },
+  "Paeonia suffruticosa": {
+    "mentions": 2291,
+    "works": 243
+  },
+  "Coptis chinensis": {
+    "mentions": 13283,
+    "works": 577
+  },
+  "Tetradium ruticarpum": {
+    "mentions": 4049,
+    "works": 307
+  },
+  "Panax ginseng": {
+    "mentions": 28831,
+    "works": 643
+  },
+  "Polygala tenuifolia": {
+    "mentions": 3424,
+    "works": 337
+  },
+  "Astragalus membranaceus": {
+    "mentions": 11834,
+    "works": 525
+  },
+  "Dimocarpus longan": {
+    "mentions": 438,
+    "works": 177
+  },
+  "Salvia miltiorrhiza": {
+    "mentions": 1395,
+    "works": 217
+  },
+  "Platycladus orientalis": {
+    "mentions": 1237,
+    "works": 188
+  },
+  "Ziziphus jujuba var. spinosa": {
+    "mentions": 1696,
+    "works": 198
+  },
+  "Asparagus cochinchinensis": {
+    "mentions": 1467,
+    "works": 192
+  },
+  "Liriope spicata": {
+    "mentions": 7045,
+    "works": 280
+  },
+  "Lycium barbarum": {
+    "mentions": 4010,
+    "works": 342
+  },
+  "Achyranthes bidentata": {
+    "mentions": 6092,
+    "works": 401
+  },
+  "Rehmannia glutinosa": {
+    "mentions": 7460,
+    "works": 292
+  },
+  "Leucomeris decora": {
+    "mentions": 129,
+    "works": 64
+  },
+  "Cistanche deserticola": {
+    "mentions": 1987,
+    "works": 199
+  },
+  "Citrus aurantium": {
+    "mentions": 9057,
+    "works": 480
+  },
+  "Buddleja officinalis": {
+    "mentions": 186,
+    "works": 59
+  },
+  "Gentiana scabra": {
+    "mentions": 1523,
+    "works": 227
+  },
+  "Equisetum hyemale": {
+    "mentions": 625,
+    "works": 133
+  },
+  "Inula britannica": {
+    "mentions": 1225,
+    "works": 188
+  },
+  "Dianthus superbus": {
+    "mentions": 1047,
+    "works": 200
+  },
+  "Prinsepia uniflora": {
+    "mentions": 552,
+    "works": 65
+  },
+  "Actaea cimicifuga": {
+    "mentions": 9607,
+    "works": 516
+  },
+  "Cryptotympana atrata": {
+    "mentions": 1114,
+    "works": 211
+  },
+  "Forsythia suspensa": {
+    "mentions": 3439,
+    "works": 405
+  },
+  "Rubus idaeus": {
+    "mentions": 421,
+    "works": 89
+  },
+  "Chelidonium majus": {
+    "mentions": 5172,
+    "works": 377
+  },
+  "Gastrodia elata": {
+    "mentions": 4120,
+    "works": 323
+  },
+  "Aloe": {
+    "mentions": 985,
+    "works": 186
+  },
+  "Moschus moschiferus": {
+    "mentions": 9415,
+    "works": 429
+  },
+  "Aralia chinensis": {
+    "mentions": 5171,
+    "works": 317
+  },
+  "Draba nemorosa": {
+    "mentions": 1990,
+    "works": 261
+  },
+  "Gentiana macrophylla": {
+    "mentions": 2674,
+    "works": 263
+  },
+  "Sodium sulfate": {
+    "mentions": 2297,
+    "works": 310
+  },
+  "Houpoea officinalis": {
+    "mentions": 8032,
+    "works": 485
+  },
+  "Pinellia ternata": {
+    "mentions": 15362,
+    "works": 631
+  },
+  "Atractylodes lancea": {
+    "mentions": 5615,
+    "works": 417
+  },
+  "Sanguisorba officinalis": {
+    "mentions": 1714,
+    "works": 233
+  },
+  "Sophora japonica": {
+    "mentions": 761,
+    "works": 175
+  },
+  "Asarum sieboldii": {
+    "mentions": 8274,
+    "works": 439
+  },
+  "Amygdalus davidiana var. davidiana": {
+    "mentions": 4698,
+    "works": 402
+  },
+  "Liquidambar orientalis": {
+    "mentions": 316,
+    "works": 126
+  },
+  "Dipsacus asper": {
+    "mentions": 1876,
+    "works": 209
+  },
+  "Rhizomarasmius": {
+    "mentions": 493,
+    "works": 117
+  },
+  "Eucommia ulmoides": {
+    "mentions": 2721,
+    "works": 315
+  },
+  "Tephroseris kirilowii": {
+    "mentions": 683,
+    "works": 112
+  },
+  "Cyatheales": {
+    "mentions": 3279,
+    "works": 313
+  },
+  "Cornus mas": {
+    "mentions": 520,
+    "works": 129
+  },
+  "Gardenia jasminoides": {
+    "mentions": 5424,
+    "works": 380
+  },
+  "Talc": {
+    "mentions": 3515,
+    "works": 384
+  },
+  "Gypsum": {
+    "mentions": 6817,
+    "works": 489
+  },
+  "Elsholtzia ciliata": {
+    "mentions": 506,
+    "works": 174
+  },
+  "Perotis indica": {
+    "mentions": 684,
+    "works": 170
+  },
+  "Commiphora myrrha": {
+    "mentions": 4036,
+    "works": 346
+  },
+  "Cornus officinalis": {
+    "mentions": 1682,
+    "works": 192
+  },
+  "Scleromitrion diffusum": {
+    "mentions": 631,
+    "works": 94
+  },
+  "Corydalis yanhusuo": {
+    "mentions": 877,
+    "works": 126
+  },
+  "Euphorbia kansui": {
+    "mentions": 1260,
+    "works": 224
+  },
+  "Daphne genkwa": {
+    "mentions": 1114,
+    "works": 161
+  },
+  "Euphorbia pekinensis": {
+    "mentions": 847,
+    "works": 196
+  },
+  "Cinnamomum cassia": {
+    "mentions": 3939,
+    "works": 458
+  },
+  "Ziziphus jujuba": {
+    "mentions": 3059,
+    "works": 357
+  },
+  "Polyporus umbellatus": {
+    "mentions": 1923,
+    "works": 285
+  },
+  "Phyllostachys nigra": {
+    "mentions": 1365,
+    "works": 247
+  },
+  "Angelica dahurica": {
+    "mentions": 7030,
+    "works": 437
+  },
+  "Areca catechu": {
+    "mentions": 1651,
+    "works": 228
+  },
+  "Carica papaya": {
+    "mentions": 1998,
+    "works": 281
+  },
+  "Allium fistulosum": {
+    "mentions": 2185,
+    "works": 315
+  },
+  "Stephania tetrandra": {
+    "mentions": 2704,
+    "works": 305
+  },
+  "Myristica fragrans": {
+    "mentions": 2453,
+    "works": 195
+  },
+  "Crataegus pinnatifida": {
+    "mentions": 967,
+    "works": 243
+  },
+  "Aristolochia debilis": {
+    "mentions": 424,
+    "works": 117
+  },
+  "Callicarpa kochiana": {
+    "mentions": 857,
+    "works": 195
+  },
+  "Wurfbainia vera": {
+    "mentions": 949,
+    "works": 167
+  },
+  "Lindera aggregata": {
+    "mentions": 1573,
+    "works": 271
+  },
+  "Stemona japonica": {
+    "mentions": 455,
+    "works": 127
+  },
+  "Vincetoxicum glaucescens": {
+    "mentions": 229,
+    "works": 47
+  },
+  "Lilium longiflorum": {
+    "mentions": 1285,
+    "works": 275
+  },
+  "Panthera tigris": {
+    "mentions": 547,
+    "works": 132
+  },
+  "Scarabaeus sacer": {
+    "mentions": 330,
+    "works": 87
+  },
+  "Batillaria zonalis": {
+    "mentions": 300,
+    "works": 110
+  },
+  "Neopicrorhiza": {
+    "mentions": 1037,
+    "works": 164
+  },
+  "Puccinia adenophorae": {
+    "mentions": 899,
+    "works": 192
+  },
+  "Hordeum vulgare": {
+    "mentions": 548,
+    "works": 149
+  },
+  "Ligustrum lucidum": {
+    "mentions": 93,
+    "works": 49
+  },
+  "Scolopendra subspinipes": {
+    "mentions": 908,
+    "works": 180
+  },
+  "Rhinoceros unicornis": {
+    "mentions": 5113,
+    "works": 346
+  },
+  "Scrophularia ningpoensis": {
+    "mentions": 2772,
+    "works": 228
+  },
+  "Aquilaria agallocha": {
+    "mentions": 3538,
+    "works": 342
+  },
+  "Coridius chinensis": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Curcuma longa": {
+    "mentions": 2237,
+    "works": 331
+  },
+  "Codonopsis pilosula": {
+    "mentions": 465,
+    "works": 87
+  },
+  "Anoecia corni": {
+    "mentions": 130,
+    "works": 72
+  },
+  "Pinus densiflora": {
+    "mentions": 68,
+    "works": 38
+  },
+  "Garcinia hanburyi": {
+    "mentions": 87,
+    "works": 36
+  },
+  "Arisaema heterophyllum": {
+    "mentions": 2371,
+    "works": 158
+  },
+  "Mylabris phalerata": {
+    "mentions": 702,
+    "works": 126
+  },
+  "Yulania denudata": {
+    "mentions": 276,
+    "works": 89
+  },
+  "Araneae": {
+    "mentions": 167,
+    "works": 71
+  },
+  "Vigna umbellata": {
+    "mentions": 1418,
+    "works": 230
+  },
+  "Aconitum coreanum": {
+    "mentions": 2564,
+    "works": 202
+  },
+  "Taraxacum officinale": {
+    "mentions": 187,
+    "works": 74
+  },
+  "Ampelopsis japonica": {
+    "mentions": 1173,
+    "works": 164
+  },
+  "Acorus calamus": {
+    "mentions": 2709,
+    "works": 333
+  },
+  "Sophora flavescens": {
+    "mentions": 2121,
+    "works": 260
+  },
+  "Alpinia officinarum": {
+    "mentions": 887,
+    "works": 87
+  },
+  "Samia cynthia": {
+    "mentions": 481,
+    "works": 138
+  },
+  "Buglossoides purpurocaerulea": {
+    "mentions": 620,
+    "works": 144
+  },
+  "Cosmos sulphureus": {
+    "mentions": 2563,
+    "works": 254
+  },
+  "Morus alba": {
+    "mentions": 39,
+    "works": 18
+  },
+  "Momordica cochinchinensis": {
+    "mentions": 682,
+    "works": 130
+  },
+  "Puccinia flaccida": {
+    "mentions": 1619,
+    "works": 279
+  },
+  "Rhus chinensis": {
+    "mentions": 1201,
+    "works": 220
+  },
+  "Davallia mariesii": {
+    "mentions": 496,
+    "works": 108
+  },
+  "Pisum sativum": {
+    "mentions": 187,
+    "works": 85
+  },
+  "Myrica rubra": {
+    "mentions": 110,
+    "works": 62
+  },
+  "Fagopyrum esculentum": {
+    "mentions": 106,
+    "works": 67
+  },
+  "Shiraia bambusicola": {
+    "mentions": 147,
+    "works": 30
+  },
+  "Chrysanthemum indicum": {
+    "mentions": 57,
+    "works": 38
+  },
+  "Akebia quinata": {
+    "mentions": 730,
+    "works": 196
+  },
+  "Neofelis nebulosa": {
+    "mentions": 1507,
+    "works": 289
+  },
+  "Hovenia acerba": {
+    "mentions": 12,
+    "works": 10
+  },
+  "Trachelospermum jasminoides": {
+    "mentions": 113,
+    "works": 29
+  },
+  "Saccharina japonica": {
+    "mentions": 492,
+    "works": 107
+  },
+  "Luffa aegyptiaca": {
+    "mentions": 185,
+    "works": 97
+  },
+  "Dioscorea collettii": {
+    "mentions": 1633,
+    "works": 194
+  },
+  "Cnidium officinale": {
+    "mentions": 5662,
+    "works": 163
+  },
+  "Diospyros eriantha": {
+    "mentions": 957,
+    "works": 79
+  },
+  "Aconitum carmichaeli": {
+    "mentions": 2177,
+    "works": 187
+  },
+  "Lactobacillus sakei": {
+    "mentions": 440,
+    "works": 95
+  },
+  "Cibotium barometz": {
+    "mentions": 532,
+    "works": 98
+  },
+  "Clematis recta": {
+    "mentions": 1072,
+    "works": 167
+  },
+  "Ipomoea nil": {
+    "mentions": 681,
+    "works": 43
+  },
+  "Triticum aestivum": {
+    "mentions": 820,
+    "works": 190
+  },
+  "Vincetoxicum atratum": {
+    "mentions": 614,
+    "works": 144
+  },
+  "Rhodomelaceae": {
+    "mentions": 217,
+    "works": 78
+  },
+  "Cervus nippon": {
+    "mentions": 1445,
+    "works": 197
+  },
+  "Alpinia katsumadai": {
+    "mentions": 1661,
+    "works": 168
+  },
+  "Ligusticum tachiroei": {
+    "mentions": 1602,
+    "works": 211
+  },
+  "Dichroa febrifuga": {
+    "mentions": 1024,
+    "works": 171
+  },
+  "Crassostrea gigas": {
+    "mentions": 2454,
+    "works": 323
+  },
+  "Ferula assa-foetida": {
+    "mentions": 976,
+    "works": 149
+  },
+  "Piper nigrum": {
+    "mentions": 1197,
+    "works": 177
+  },
+  "Lygodium japonicum": {
+    "mentions": 188,
+    "works": 53
+  },
+  "Trigonella foenum-graecum": {
+    "mentions": 301,
+    "works": 57
+  },
+  "Dioscorea oppositifolia": {
+    "mentions": 533,
+    "works": 66
+  },
+  "Iris domestica": {
+    "mentions": 1305,
+    "works": 190
+  },
+  "Coix lacryma-jobi": {
+    "mentions": 1339,
+    "works": 185
+  },
+  "Punica granatum": {
+    "mentions": 308,
+    "works": 49
+  },
+  "Magnetite": {
+    "mentions": 971,
+    "works": 142
+  },
+  "Lophatherum gracile": {
+    "mentions": 796,
+    "works": 176
+  },
+  "Morinda officinalis": {
+    "mentions": 548,
+    "works": 58
+  },
+  "Cnidium monnieri": {
+    "mentions": 1091,
+    "works": 151
+  },
+  "Hematite": {
+    "mentions": 353,
+    "works": 131
+  },
+  "Limonite": {
+    "mentions": 561,
+    "works": 120
+  },
+  "Potentilla kleiniana": {
+    "mentions": 78,
+    "works": 42
+  },
+  "Allium tuberosum": {
+    "mentions": 278,
+    "works": 80
+  },
+  "Piper longum": {
+    "mentions": 599,
+    "works": 113
+  },
+  "Acropora palmata": {
+    "mentions": 48,
+    "works": 19
+  },
+  "Bletilla striata": {
+    "mentions": 746,
+    "works": 174
+  },
+  "Panax pseudoginseng var. notoginseng": {
+    "mentions": 562,
+    "works": 136
+  },
+  "Scirpus yagara": {
+    "mentions": 206,
+    "works": 29
+  },
+  "Ferocactus latispinus": {
+    "mentions": 619,
+    "works": 84
+  },
+  "Gekko gecko": {
+    "mentions": 213,
+    "works": 57
+  },
+  "Commiphora wightii": {
+    "mentions": 554,
+    "works": 100
+  },
+  "Euphorbia lathyris": {
+    "mentions": 181,
+    "works": 55
+  },
+  "Cyrtomium fortunei": {
+    "mentions": 425,
+    "works": 115
+  },
+  "Hirudo nipponia": {
+    "mentions": 496,
+    "works": 121
+  },
+  "Saiga tatarica": {
+    "mentions": 3157,
+    "works": 234
+  },
+  "Toxicodendron vernicifluum": {
+    "mentions": 1151,
+    "works": 168
+  },
+  "Pycnonotus sinensis formosae": {
+    "mentions": 288,
+    "works": 101
+  },
+  "Fraxinus stylosa": {
+    "mentions": 368,
+    "works": 85
+  },
+  "Setaria italica": {
+    "mentions": 954,
+    "works": 151
+  },
+  "Bassia scoparia": {
+    "mentions": 311,
+    "works": 72
+  },
+  "Serinus mozambicus": {
+    "mentions": 155,
+    "works": 51
+  },
+  "Pyrrosia lingua": {
+    "mentions": 103,
+    "works": 43
+  },
+  "Gypsophila vaccaria": {
+    "mentions": 237,
+    "works": 87
+  },
+  "Ascaris lumbricoides": {
+    "mentions": 73,
+    "works": 42
+  },
+  "Lablab purpureus": {
+    "mentions": 428,
+    "works": 142
+  },
+  "Cullen corylifolium": {
+    "mentions": 745,
+    "works": 139
+  },
+  "Ranunculus sceleratus": {
+    "mentions": 136,
+    "works": 23
+  },
+  "Tetrapanax papyrifer": {
+    "mentions": 8,
+    "works": 7
+  },
+  "Cerasus maximowiczii": {
+    "mentions": 1358,
+    "works": 139
+  },
+  "Skimmia reevesiana": {
+    "mentions": 439,
+    "works": 43
+  },
+  "Rhaponticum uniflorum": {
+    "mentions": 618,
+    "works": 111
+  },
+  "Lonicera japonica": {
+    "mentions": 197,
+    "works": 91
+  },
+  "Decapodiformes": {
+    "mentions": 400,
+    "works": 57
+  },
+  "Polygonum multiflorum": {
+    "mentions": 912,
+    "works": 182
+  },
+  "Carassius auratus": {
+    "mentions": 285,
+    "works": 88
+  },
+  "Rhizocaulus": {
+    "mentions": 52,
+    "works": 30
+  },
+  "Alcea rosea": {
+    "mentions": 73,
+    "works": 42
+  },
+  "Phytolacca acinosa": {
+    "mentions": 400,
+    "works": 104
+  },
+  "Euchresta japonica": {
+    "mentions": 224,
+    "works": 102
+  },
+  "Fistularia petimba": {
+    "mentions": 115,
+    "works": 48
+  },
+  "Zanthoxylum piperitum": {
+    "mentions": 1308,
+    "works": 127
+  },
+  "Euonymus alatus": {
+    "mentions": 279,
+    "works": 55
+  },
+  "Crocus sativus": {
+    "mentions": 217,
+    "works": 42
+  },
+  "Sciaenidae": {
+    "mentions": 36,
+    "works": 29
+  },
+  "Eupatorium japonicum": {
+    "mentions": 589,
+    "works": 147
+  },
+  "Picea jezoensis": {
+    "mentions": 96,
+    "works": 30
+  },
+  "Zanthoxylum ailanthoides": {
+    "mentions": 101,
+    "works": 26
+  },
+  "Veratrum nigrum": {
+    "mentions": 697,
+    "works": 132
+  },
+  "Quisqualis indica": {
+    "mentions": 580,
+    "works": 124
+  },
+  "Gryllotalpidae": {
+    "mentions": 58,
+    "works": 30
+  },
+  "Rumex japonicus": {
+    "mentions": 118,
+    "works": 43
+  },
+  "Pleione bulbocodioides": {
+    "mentions": 52,
+    "works": 35
+  },
+  "Viola philippica": {
+    "mentions": 135,
+    "works": 56
+  },
+  "Auricularia auricularis": {
+    "mentions": 110,
+    "works": 54
+  },
+  "Strychnos nux-vomica": {
+    "mentions": 80,
+    "works": 43
+  },
+  "Gleditsia sinensis": {
+    "mentions": 1527,
+    "works": 144
+  },
+  "Lumbricina": {
+    "mentions": 225,
+    "works": 81
+  },
+  "Rubia cordifolia": {
+    "mentions": 118,
+    "works": 69
+  },
+  "Camellia japonica": {
+    "mentions": 22,
+    "works": 17
+  },
+  "Reynoutria japonica": {
+    "mentions": 234,
+    "works": 58
+  },
+  "Meretrix meretrix": {
+    "mentions": 150,
+    "works": 94
+  },
+  "Rosa laevigata": {
+    "mentions": 78,
+    "works": 49
+  },
+  "Pseudotaxus chienii": {
+    "mentions": 37,
+    "works": 22
+  },
+  "Allium macrostemon": {
+    "mentions": 531,
+    "works": 113
+  },
+  "Fibraurea recisa": {
+    "mentions": 120,
+    "works": 57
+  },
+  "Curculigo orchioides": {
+    "mentions": 62,
+    "works": 37
+  },
+  "Serissa": {
+    "mentions": 5,
+    "works": 3
+  },
+  "Phaeophyscia hirtella": {
+    "mentions": 305,
+    "works": 149
+  },
+  "Albizia julibrissin": {
+    "mentions": 72,
+    "works": 41
+  },
+  "Notosinister pusillus": {
+    "mentions": 161,
+    "works": 53
+  },
+  "Sonerila maculata": {
+    "mentions": 98,
+    "works": 19
+  },
+  "Ischnoderma resinosum": {
+    "mentions": 558,
+    "works": 76
+  },
+  "Synchiropus splendidus": {
+    "mentions": 9,
+    "works": 5
+  },
+  "Calanthe": {
+    "mentions": 2859,
+    "works": 81
+  },
+  "Chinemys reevesii": {
+    "mentions": 147,
+    "works": 44
+  },
+  "Leonurus japonicus": {
+    "mentions": 294,
+    "works": 53
+  },
+  "Hierochloë odorata": {
+    "mentions": 52,
+    "works": 24
+  },
+  "Impatiens balsamina": {
+    "mentions": 66,
+    "works": 32
+  },
+  "Lysimachia fenghwaiana": {
+    "mentions": 10420,
+    "works": 47
+  },
+  "Larus dominicanus": {
+    "mentions": 94,
+    "works": 46
+  },
+  "Artemisia capillaris": {
+    "mentions": 218,
+    "works": 68
+  },
+  "Viburnum odoratissimum": {
+    "mentions": 183,
+    "works": 69
+  },
+  "Botryobasidium pruinatum": {
+    "mentions": 428,
+    "works": 77
+  },
+  "Theopompa ophthalmica": {
+    "mentions": 128,
+    "works": 61
+  },
+  "Vicia faba": {
+    "mentions": 18,
+    "works": 16
+  },
+  "Selaginella tamariscina": {
+    "mentions": 216,
+    "works": 56
+  },
+  "Melocactus glaucescens": {
+    "mentions": 146,
+    "works": 64
+  },
+  "Nelumbo nucifera": {
+    "mentions": 76,
+    "works": 48
+  },
+  "Solanum melongena": {
+    "mentions": 86,
+    "works": 34
+  },
+  "Phycodurus eques": {
+    "mentions": 71,
+    "works": 41
+  },
+  "Meloidae": {
+    "mentions": 82,
+    "works": 20
+  },
+  "Nardostachys jatamansi": {
+    "mentions": 47,
+    "works": 12
+  },
+  "Hydnocarpus wightiana": {
+    "mentions": 62,
+    "works": 32
+  },
+  "Fritillaria meleagris": {
+    "mentions": 45,
+    "works": 26
+  },
+  "Photinia serratifolia": {
+    "mentions": 224,
+    "works": 38
+  },
+  "Alkekengi officinarum": {
+    "mentions": 90,
+    "works": 32
+  },
+  "Sanguinolaria diphos": {
+    "mentions": 30,
+    "works": 23
+  },
+  "Salacca zalacca": {
+    "mentions": 89,
+    "works": 35
+  },
+  "Thysanolaena latifolia": {
+    "mentions": 552,
+    "works": 39
+  },
+  "Boehmeria nivea": {
+    "mentions": 73,
+    "works": 35
+  },
+  "Tripterygium hypoglaucum": {
+    "mentions": 19,
+    "works": 12
+  },
+  "Acronychia pedunculata": {
+    "mentions": 86,
+    "works": 37
+  },
+  "Chloridolum promissum": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Artocarpus styracifolius": {
+    "mentions": 56,
+    "works": 24
+  },
+  "Orbea variegata": {
+    "mentions": 246,
+    "works": 54
+  },
+  "Patrinia scabiosifolia": {
+    "mentions": 200,
+    "works": 54
+  },
+  "Myzus stellariae": {
+    "mentions": 60,
+    "works": 25
+  },
+  "Usnea florida": {
+    "mentions": 125,
+    "works": 48
+  },
+  "Indigofera tinctoria": {
+    "mentions": 181,
+    "works": 92
+  },
+  "Sambucus chinensis": {
+    "mentions": 262,
+    "works": 35
+  },
+  "Sambucus williamsii": {
+    "mentions": 17,
+    "works": 15
+  },
+  "Agkistrodon": {
+    "mentions": 22,
+    "works": 13
+  },
+  "Fagopyrum cymosum": {
+    "mentions": 20,
+    "works": 8
+  },
+  "Vitis vinifera": {
+    "mentions": 70,
+    "works": 34
+  },
+  "Polygonatum odoratum": {
+    "mentions": 108,
+    "works": 42
+  },
+  "Graptomyza dentata": {
+    "mentions": 131,
+    "works": 24
+  },
+  "Phellodendron amurense": {
+    "mentions": 37,
+    "works": 15
+  },
+  "Glycine max": {
+    "mentions": 193,
+    "works": 90
+  },
+  "Xanthium strumarium": {
+    "mentions": 7,
+    "works": 6
+  },
+  "Mantodea": {
+    "mentions": 28,
+    "works": 17
+  },
+  "Rhododendron molle": {
+    "mentions": 63,
+    "works": 31
+  },
+  "Jasminum sambac": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Chloranthus fortunei": {
+    "mentions": 28,
+    "works": 15
+  },
+  "Pogonatherum crinitum": {
+    "mentions": 3,
+    "works": 2
+  },
+  "Nematalosa japonica": {
+    "mentions": 16,
+    "works": 8
+  },
+  "Smilax glabra": {
+    "mentions": 261,
+    "works": 89
+  },
+  "Piper magen": {
+    "mentions": 32,
+    "works": 15
+  },
+  "Campsis grandiflora": {
+    "mentions": 62,
+    "works": 33
+  },
+  "Vaccinium chengiae": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Daphne odora": {
+    "mentions": 5,
+    "works": 5
+  },
+  "Viviparidae": {
+    "mentions": 143,
+    "works": 69
+  },
+  "Capparis masaikai": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Malva verticillata": {
+    "mentions": 321,
+    "works": 68
+  },
+  "Daucus carota subsp. sativus": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Smithsonite": {
+    "mentions": 186,
+    "works": 63
+  },
+  "Asterophora lycoperdoides": {
+    "mentions": 147,
+    "works": 83
+  },
+  "Parthenocissus tricuspidata": {
+    "mentions": 27,
+    "works": 11
+  },
+  "Platycerus tabanai tabanai": {
+    "mentions": 53,
+    "works": 32
+  },
+  "Leptodius sanguineus": {
+    "mentions": 24,
+    "works": 19
+  },
+  "Mylopharyngodon piceus": {
+    "mentions": 46,
+    "works": 33
+  },
+  "Tetrapoda": {
+    "mentions": 33,
+    "works": 20
+  },
+  "Saururus chinensis": {
+    "mentions": 3,
+    "works": 2
+  },
+  "Erigeron breviscapus": {
+    "mentions": 29,
+    "works": 16
+  },
+  "Entada phaseoloides": {
+    "mentions": 67,
+    "works": 14
+  },
+  "citrus fruit": {
+    "mentions": 12,
+    "works": 11
+  },
+  "Attagenus": {
+    "mentions": 25,
+    "works": 15
+  },
+  "Eriobotrya japonica": {
+    "mentions": 25,
+    "works": 22
+  },
+  "Saissetia bobuae": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Pholidota": {
+    "mentions": 98,
+    "works": 19
+  },
+  "Selliguea griffithiana": {
+    "mentions": 12,
+    "works": 12
+  },
+  "Calamus rotang": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Ramularia viticis": {
+    "mentions": 80,
+    "works": 24
+  },
+  "Madhuca pasquieri": {
+    "mentions": 40,
+    "works": 25
+  },
+  "Uncaria rhynchophylla": {
+    "mentions": 38,
+    "works": 17
+  },
+  "Coilia grayii": {
+    "mentions": 37,
+    "works": 25
+  },
+  "Drosera burmanni": {
+    "mentions": 12,
+    "works": 5
+  },
+  "Capra hircus": {
+    "mentions": 56,
+    "works": 32
+  },
+  "Matricaria matricarioides": {
+    "mentions": 14,
+    "works": 5
+  },
+  "Thlaspi arvense": {
+    "mentions": 32,
+    "works": 14
+  },
+  "Deutzia scabra": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Armadillidium vulgare": {
+    "mentions": 37,
+    "works": 25
+  },
+  "Zygocactus truncatus": {
+    "mentions": 54,
+    "works": 26
+  },
+  "Panax japonicus": {
+    "mentions": 26,
+    "works": 12
+  },
+  "Clematis apiifolia": {
+    "mentions": 69,
+    "works": 17
+  },
+  "Cerinthe": {
+    "mentions": 22,
+    "works": 13
+  },
+  "Sinopodophyllum hexandrum": {
+    "mentions": 212,
+    "works": 54
+  },
+  "Peucedanum japonicum": {
+    "mentions": 268,
+    "works": 17
+  },
+  "Artemisia scoparia": {
+    "mentions": 8,
+    "works": 7
+  },
+  "Saccharomyces cerevisiae": {
+    "mentions": 93,
+    "works": 33
+  },
+  "Blattodea": {
+    "mentions": 10,
+    "works": 6
+  },
+  "Chanodichthys erythropterus": {
+    "mentions": 58,
+    "works": 22
+  },
+  "Lampyridae": {
+    "mentions": 21,
+    "works": 11
+  },
+  "Ocimum basilicum": {
+    "mentions": 29,
+    "works": 15
+  },
+  "Rhamnus davurica": {
+    "mentions": 19,
+    "works": 9
+  },
+  "Aeoliscus strigatus": {
+    "mentions": 13,
+    "works": 7
+  },
+  "Bromus japonicus": {
+    "mentions": 3,
+    "works": 2
+  },
+  "Hyoscyamus niger": {
+    "mentions": 222,
+    "works": 22
+  },
+  "Diprionidae": {
+    "mentions": 85,
+    "works": 28
+  },
+  "Sarcostemma acidum": {
+    "mentions": 43,
+    "works": 20
+  },
+  "Catalpa ovata": {
+    "mentions": 26,
+    "works": 22
+  },
+  "Laplacea canescens": {
+    "mentions": 37,
+    "works": 13
+  },
+  "Chloranthus japonicus": {
+    "mentions": 30,
+    "works": 8
+  },
+  "Zingiber mioga": {
+    "mentions": 113,
+    "works": 23
+  },
+  "Adiantum monochlamys": {
+    "mentions": 38,
+    "works": 6
+  },
+  "Boidae": {
+    "mentions": 105,
+    "works": 27
+  },
+  "Vincetoxicum mukdenense": {
+    "mentions": 20,
+    "works": 8
+  },
+  "Iris tectorum": {
+    "mentions": 8,
+    "works": 5
+  },
+  "Anthreptes": {
+    "mentions": 5,
+    "works": 4
+  },
+  "Boiga dendrophila": {
+    "mentions": 11,
+    "works": 3
+  },
+  "Salvia officinalis": {
+    "mentions": 24,
+    "works": 9
+  },
+  "Spiraea chamaedryfolia": {
+    "mentions": 14,
+    "works": 9
+  },
+  "Paederia foetida": {
+    "mentions": 12,
+    "works": 9
+  },
+  "Meliosma rhoifolia": {
+    "mentions": 49,
+    "works": 21
+  },
+  "Lactuca sativa": {
+    "mentions": 92,
+    "works": 41
+  },
+  "Pterocarpus santalinus": {
+    "mentions": 42,
+    "works": 13
+  },
+  "Trametes robiniophila": {
+    "mentions": 20,
+    "works": 11
+  },
+  "Perca fluviatilis": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Gelsemium elegans": {
+    "mentions": 6,
+    "works": 4
+  },
+  "Adenophora trachelioides": {
+    "mentions": 167,
+    "works": 26
+  },
+  "Cinnabar": {
+    "mentions": 140,
+    "works": 17
+  },
+  "Medicago sativa var. sativa": {
+    "mentions": 12,
+    "works": 8
+  },
+  "Taxillus chinensis": {
+    "mentions": 36,
+    "works": 8
+  },
+  "Incarvillea sinensis": {
+    "mentions": 50,
+    "works": 13
+  },
+  "Alpinia oxyphylla": {
+    "mentions": 78,
+    "works": 19
+  },
+  "Scomberomorus": {
+    "mentions": 10,
+    "works": 6
+  },
+  "Lepisma saccharina": {
+    "mentions": 7,
+    "works": 7
+  },
+  "Lemna minor": {
+    "mentions": 18,
+    "works": 9
+  },
+  "Lycopodium japonicum": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Utricularia biceps": {
+    "mentions": 10,
+    "works": 9
+  },
+  "Portulaca oleracea": {
+    "mentions": 219,
+    "works": 66
+  },
+  "Cyanotis cristata": {
+    "mentions": 19,
+    "works": 17
+  },
+  "Laurus nobilis": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Aglais urticae": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Amanita muscaria": {
+    "mentions": 80,
+    "works": 28
+  },
+  "Bolbitius vitellinus": {
+    "mentions": 6,
+    "works": 5
+  },
+  "Lindera erythrocarpa": {
+    "mentions": 12,
+    "works": 7
+  },
+  "Xylomyidae": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Epimedium brevicornu": {
+    "mentions": 38,
+    "works": 25
+  },
+  "Panax quinquefolius": {
+    "mentions": 68,
+    "works": 31
+  },
+  "Corchorus capsularis": {
+    "mentions": 20,
+    "works": 14
+  },
+  "Anethum graveolens": {
+    "mentions": 40,
+    "works": 12
+  },
+  "Canavalia gladiata": {
+    "mentions": 17,
+    "works": 12
+  },
+  "Talpidae": {
+    "mentions": 8,
+    "works": 7
+  },
+  "Bryanthus": {
+    "mentions": 10,
+    "works": 9
+  },
+  "Stephania japonica var. discolor": {
+    "mentions": 15,
+    "works": 9
+  },
+  "Cordyceps chanhua": {
+    "mentions": 25,
+    "works": 17
+  },
+  "Paris polyphylla": {
+    "mentions": 24,
+    "works": 19
+  },
+  "Lithops bromfieldii": {
+    "mentions": 56,
+    "works": 36
+  },
+  "Megalurothrips usitatus": {
+    "mentions": 13,
+    "works": 9
+  },
+  "Glycine soja": {
+    "mentions": 19,
+    "works": 13
+  },
+  "Saccharum officinarum": {
+    "mentions": 61,
+    "works": 44
+  },
+  "Camellia sinensis": {
+    "mentions": 10,
+    "works": 7
+  },
+  "Polygonatum sibiricum": {
+    "mentions": 74,
+    "works": 31
+  },
+  "Tenualosa reevesii": {
+    "mentions": 6,
+    "works": 5
+  },
+  "Rhaphidophora decursiva": {
+    "mentions": 6,
+    "works": 6
+  },
+  "Smilax china": {
+    "mentions": 35,
+    "works": 9
+  },
+  "Pleurotus cystidiosus": {
+    "mentions": 36,
+    "works": 24
+  },
+  "Rhaphidophoridae": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Tachysurus fulvidraco": {
+    "mentions": 10,
+    "works": 6
+  },
+  "Senna siamea": {
+    "mentions": 13,
+    "works": 8
+  },
+  "Hylotelephium erythrostictum": {
+    "mentions": 44,
+    "works": 13
+  },
+  "Momordica charantia": {
+    "mentions": 8,
+    "works": 7
+  },
+  "Sigesbeckia orientalis": {
+    "mentions": 116,
+    "works": 57
+  },
+  "Neoblechnum brasiliense": {
+    "mentions": 24,
+    "works": 15
+  },
+  "Japanagromyza tristella": {
+    "mentions": 27,
+    "works": 21
+  },
+  "Periglypta clathrata": {
+    "mentions": 8,
+    "works": 6
+  },
+  "Kaempferia galanga": {
+    "mentions": 25,
+    "works": 15
+  },
+  "Abelmoschus manihot": {
+    "mentions": 72,
+    "works": 25
+  },
+  "Aix galericulata": {
+    "mentions": 6,
+    "works": 5
+  },
+  "Cucumis sativus": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Aquilaria sinensis": {
+    "mentions": 6,
+    "works": 5
+  },
+  "Chlorophytum comosum": {
+    "mentions": 21,
+    "works": 12
+  },
+  "Oxytate striatipes": {
+    "mentions": 21,
+    "works": 13
+  },
+  "Cleome gynandra": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Apis cerana cerana": {
+    "mentions": 49,
+    "works": 21
+  },
+  "Vigna unguiculata": {
+    "mentions": 11,
+    "works": 9
+  },
+  "Solanum lyratum": {
+    "mentions": 11,
+    "works": 5
+  },
+  "Lentinula edodes": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Solanum nigrum": {
+    "mentions": 27,
+    "works": 12
+  },
+  "Hottonia palustris": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Lepironia articulata": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Turczaninowia fastigiata": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Abrus precatorius": {
+    "mentions": 15,
+    "works": 11
+  },
+  "Beta vulgaris": {
+    "mentions": 6,
+    "works": 5
+  },
+  "Phoebe zhennan": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Potentilla indica": {
+    "mentions": 7,
+    "works": 5
+  },
+  "Carpesium abrotanoides": {
+    "mentions": 8,
+    "works": 7
+  },
+  "Usnea longissima": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Chimonanthus praecox": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Larrea tridentata": {
+    "mentions": 9,
+    "works": 8
+  },
+  "Ficus pumila": {
+    "mentions": 16,
+    "works": 5
+  },
+  "Doxander vittatus": {
+    "mentions": 5,
+    "works": 4
+  },
+  "Corvus": {
+    "mentions": 59,
+    "works": 20
+  },
+  "Pterometra": {
+    "mentions": 14,
+    "works": 11
+  },
+  "Sagittaria sagittifolia": {
+    "mentions": 7,
+    "works": 5
+  },
+  "Pseudostellaria heterophylla": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Machilus viridis": {
+    "mentions": 12,
+    "works": 8
+  },
+  "Ctenopharyngodon idella": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Glebionis coronaria": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Cucurbita moschata": {
+    "mentions": 6,
+    "works": 6
+  },
+  "Sus scrofa": {
+    "mentions": 26,
+    "works": 12
+  },
+  "Cupressus funebris": {
+    "mentions": 19,
+    "works": 12
+  },
+  "Centipeda minima": {
+    "mentions": 8,
+    "works": 4
+  },
+  "Citrus trifoliata": {
+    "mentions": 6,
+    "works": 5
+  },
+  "Cinnamomum verum": {
+    "mentions": 14,
+    "works": 8
+  },
+  "Berchemia floribunda": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Nostoc commune": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Agastache rugosa": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Lilium pumilum": {
+    "mentions": 5,
+    "works": 5
+  },
+  "Lycianthes lysimachioides var. caulorhiza": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Curcuma phaeocaulis": {
+    "mentions": 12,
+    "works": 3
+  },
+  "Pollia japonica": {
+    "mentions": 32,
+    "works": 5
+  },
+  "Pteria marmorata": {
+    "mentions": 15,
+    "works": 8
+  },
+  "Anadara broughtonii": {
+    "mentions": 11,
+    "works": 8
+  },
+  "Cotinus coggygria": {
+    "mentions": 14,
+    "works": 5
+  },
+  "Pyrus pashia": {
+    "mentions": 7,
+    "works": 6
+  },
+  "Pleioblastus amarus": {
+    "mentions": 11,
+    "works": 7
+  },
+  "Rubus hirsutus": {
+    "mentions": 5,
+    "works": 3
+  },
+  "Alpinia japonica": {
+    "mentions": 5,
+    "works": 4
+  },
+  "Pipistrellus bat coronavirus HKU5": {
+    "mentions": 10,
+    "works": 5
+  },
+  "Hippocampus": {
+    "mentions": 37,
+    "works": 19
+  },
+  "Zizania latifolia": {
+    "mentions": 10,
+    "works": 7
+  },
+  "Artemisia japonica": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Apamea kumaso": {
+    "mentions": 5,
+    "works": 3
+  },
+  "Equus ferus": {
+    "mentions": 7,
+    "works": 4
+  },
+  "Ardisia japonica": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Picidae": {
+    "mentions": 7,
+    "works": 5
+  },
+  "Lappula": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Tarenna mollissima": {
+    "mentions": 12,
+    "works": 7
+  },
+  "Asarum forbesii": {
+    "mentions": 3,
+    "works": 2
+  },
+  "Ambergrisichnus": {
+    "mentions": 5,
+    "works": 4
+  },
+  "Annona squamosa": {
+    "mentions": 12,
+    "works": 6
+  },
+  "Calystegia sepium": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Sedum griseum": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Platostoma palustre": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Saxifraga stolonifera": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Trichosanthes cucumeroides": {
+    "mentions": 52,
+    "works": 22
+  },
+  "Papaver somniferum": {
+    "mentions": 12,
+    "works": 10
+  },
+  "Cydalima perspectalis": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Tamarix chinensis": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Rastrelliger kanagurta": {
+    "mentions": 4,
+    "works": 2
+  },
+  "Rosa sinica": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Strobilanthes cusia": {
+    "mentions": 5,
+    "works": 5
+  },
+  "Siniperca chuatsi": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Diospyros melanoxylon": {
+    "mentions": 10,
+    "works": 7
+  },
+  "Nyctocereus serpentinus": {
+    "mentions": 7,
+    "works": 4
+  },
+  "Sorghum bicolor": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Ixeris japonica": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Narcissus tazetta subsp. chinensis": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Scincidae": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Paraboea rufescens": {
+    "mentions": 11,
+    "works": 2
+  },
+  "Aulacaspis actinidiae": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Umbilicaria esculenta": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Thymus quinquecostatus": {
+    "mentions": 7,
+    "works": 2
+  },
+  "Bidens tripartita": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Euchiloglanis longus": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Eretmocerus eremicus": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Piper wallichii": {
+    "mentions": 3,
+    "works": 2
+  },
+  "Patrinia villosa": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Pedicularis verticillata": {
+    "mentions": 6,
+    "works": 5
+  },
+  "Stachys affinis": {
+    "mentions": 4,
+    "works": 4
+  },
+  "Homalopsidae": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Glyptostrobus pensilis": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Mustela sibirica": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Luzula campestris": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Waltheria indica": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Loxocera": {
+    "mentions": 6,
+    "works": 6
+  },
+  "Biancaea sappan": {
+    "mentions": 14,
+    "works": 5
+  },
+  "Calamus jenkinsianus": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Crassula humbertii": {
+    "mentions": 11,
+    "works": 10
+  },
+  "Wisteria sinensis": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Pyrus calleryana": {
+    "mentions": 4,
+    "works": 2
+  },
+  "Turdus merula": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Causonis japonica": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Eranthis stellata": {
+    "mentions": 5,
+    "works": 2
+  },
+  "Schnabelia terniflora": {
+    "mentions": 12,
+    "works": 5
+  },
+  "Stephania japonica": {
+    "mentions": 5,
+    "works": 5
+  },
+  "Casuarina equisetifolia": {
+    "mentions": 4,
+    "works": 2
+  },
+  "Lutra lutra": {
+    "mentions": 3,
+    "works": 2
+  },
+  "Geum urbanum": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Parapales sturmioides": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Sambucus javanica": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Musa basjoo": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Eclipta prostrata": {
+    "mentions": 4,
+    "works": 3
+  },
+  "Lobelia chinensis": {
+    "mentions": 6,
+    "works": 4
+  },
+  "Ipomoea aquatica": {
+    "mentions": 16,
+    "works": 1
+  },
+  "Lotus corniculatus": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Vallisneria spiralis": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Basella alba": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Prunus dulcis": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Scylla serrata": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Wedelia": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Acampe papillosa": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Alpinia galanga": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Corydalis edulis": {
+    "mentions": 4,
+    "works": 2
+  },
+  "Sabia japonica": {
+    "mentions": 6,
+    "works": 4
+  },
+  "Lindera angustifolia": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Cladonia rangiferina": {
+    "mentions": 5,
+    "works": 1
+  },
+  "Sapindus saponaria": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Commelina communis": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Rhododendron": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Pinus koraiensis": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Hedera helix": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Paliurus ramosissimus": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Lindsaea orbiculata": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Bambusicola thoracicus": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Kinyongia vanheygeni": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Uromyces bidenticola": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Convolvulus arvensis": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Premna microphylla": {
+    "mentions": 3,
+    "works": 3
+  },
+  "Pyrrhidivalva sordida": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Diospyros lotus": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Damnacanthus indicus": {
+    "mentions": 4,
+    "works": 2
+  },
+  "Diplopoda": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Limacidae": {
+    "mentions": 6,
+    "works": 3
+  },
+  "Psychrolutes phrictus": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Exocoetidae": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Setaria viridis": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Lampides boeticus": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Nostoc flagelliforme": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Brachyteles arachnoides": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Oxyscelio nasolabii": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Juglans regia": {
+    "mentions": 9,
+    "works": 8
+  },
+  "Placuna placenta": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Salix fragilis": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Diplazium donianum": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Gnaphalium affine": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Panicum miliaceum": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Rhynchosia volubilis": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Arthraxon hispidus": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Cunninghamia lanceolata": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Solanum anomalum": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Bambusa tuldoides": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Amsonia elliptica": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Sphaerocionium pilosissimum": {
+    "mentions": 3,
+    "works": 2
+  },
+  "Jasminum nudiflorum": {
+    "mentions": 2,
+    "works": 1
+  },
+  "Paralichthys olivaceus": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Echinopsis pentlandii": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Adenanthera pavonina": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Luisia morsei": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Pavo": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Orobanche coerulescens": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Polygonatum macropodum": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Potentilla discolor": {
+    "mentions": 2,
+    "works": 2
+  },
+  "Selachimorpha": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Taxillus delavayi": {
+    "mentions": 1,
+    "works": 1
+  },
+  "Rumex acetosa": {
+    "mentions": 1,
+    "works": 1
+  }
+}

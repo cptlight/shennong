@@ -1,22 +1,42 @@
 {
   "formulas": 273334,
-  "formulas_with_recognised_drug": 145925,
+  "formulas_with_recognised_drug": 167679,
   "works": 1082,
-  "drug_mentions": 429499,
-  "resolved_mentions": 429499,
+  "drug_mentions": 744997,
+  "resolved_mentions": 744997,
   "resolution_rate": 1.0,
-  "distinct_drug_surfaces": 506,
-  "distinct_binomials": 477,
-  "distinct_indications": 68195,
-  "drug_indication_pairs": 412655,
+  "distinct_drug_surfaces": 662,
+  "distinct_binomials": 625,
+  "distinct_indications": 77441,
+  "drug_indication_pairs": 714079,
   "top_drugs": [
     [
       "甘草",
       51789
     ],
     [
+      "人参",
+      28831
+    ],
+    [
+      "当归",
+      28266
+    ],
+    [
       "茯苓",
       25182
+    ],
+    [
+      "白术",
+      19312
+    ],
+    [
+      "生姜",
+      17253
+    ],
+    [
+      "芍药",
+      16393
     ],
     [
       "半夏",
@@ -28,7 +48,31 @@
     ],
     [
       "木香",
-      14686
+      14678
+    ],
+    [
+      "大黄",
+      14634
+    ],
+    [
+      "黄芩",
+      14250
+    ],
+    [
+      "黄连",
+      13283
+    ],
+    [
+      "干姜",
+      12681
+    ],
+    [
+      "黄耆",
+      11834
+    ],
+    [
+      "芦头",
+      10420
     ],
     [
       "柴胡",
@@ -47,8 +91,16 @@
       9057
     ],
     [
+      "麻黄",
+      8975
+    ],
+    [
       "杏仁",
       8743
+    ],
+    [
+      "细辛",
+      8274
     ],
     [
       "桔梗",
@@ -57,58 +109,6 @@
     [
       "厚朴",
       8032
-    ],
-    [
-      "白芷",
-      7030
-    ],
-    [
-      "石膏",
-      6817
-    ],
-    [
-      "牛膝",
-      6092
-    ],
-    [
-      "芎藭",
-      5662
-    ],
-    [
-      "五味子",
-      5441
-    ],
-    [
-      "白皮",
-      5171
-    ],
-    [
-      "犀角",
-      5113
-    ],
-    [
-      "丁香",
-      5024
-    ],
-    [
-      "巴豆",
-      4972
-    ],
-    [
-      "知母",
-      4836
-    ],
-    [
-      "桃仁",
-      4698
-    ],
-    [
-      "阿膠",
-      4343
-    ],
-    [
-      "吳茱萸",
-      4049
     ]
   ],
   "top_binomials": [
@@ -117,12 +117,32 @@
       51789
     ],
     [
+      "Zingiber officinale",
+      30156
+    ],
+    [
+      "Panax ginseng",
+      28831
+    ],
+    [
+      "Angelica sinensis",
+      28266
+    ],
+    [
       "Wolfiporia cocos",
       25182
     ],
     [
+      "Atractylodes macrocephala",
+      19312
+    ],
+    [
       "Aconitum carmichaelii",
-      15918
+      16813
+    ],
+    [
+      "Paeonia lactiflora",
+      16393
     ],
     [
       "Pinellia ternata",
@@ -130,111 +150,91 @@
     ],
     [
       "Aucklandia lappa",
-      14686
+      14678
     ],
     [
-      "Bupleurum chinense",
-      10017
+      "Rheum rhaponticum",
+      14634
     ],
     [
-      "Actaea cimicifuga",
-      9607
+      "Scutellaria baicalensis",
+      14250
     ],
     [
-      "Moschus moschiferus",
-      9415
+      "Coptis chinensis",
+      13283
     ],
     [
-      "Citrus aurantium",
-      9057
+      "Astragalus membranaceus",
+      11834
     ],
     [
-      "Armeniaca vulgaris",
-      8743
-    ],
-    [
-      "Platycodon grandiflorus",
-      8119
-    ],
-    [
-      "Houpoea officinalis",
-      8032
-    ],
-    [
-      "Angelica dahurica",
-      7030
-    ],
-    [
-      "Gypsum",
-      6817
-    ],
-    [
-      "Achyranthes bidentata",
-      6092
+      "Lysimachia fenghwaiana",
+      10420
     ]
   ],
   "top_indications": [
     [
       "脾胃虛弱",
-      1381
-    ],
-    [
-      "腳氣",
-      1205
-    ],
-    [
-      "中風",
-      1144
+      2411
     ],
     [
       "虛勞",
-      1099
+      2059
+    ],
+    [
+      "中風",
+      1909
+    ],
+    [
+      "腳氣",
+      1854
     ],
     [
       "傷寒",
-      1032
-    ],
-    [
-      "產後中風",
-      833
+      1814
     ],
     [
       "乳石發動",
-      828
+      1568
     ],
     [
-      "五勞七傷",
-      813
+      "產後中風",
+      1526
     ],
     [
       "熱病",
-      809
-    ],
-    [
-      "咳嗽",
-      727
+      1526
     ],
     [
       "心氣不足",
-      694
+      1253
     ],
     [
-      "一切風",
-      680
+      "五勞七傷",
+      1228
+    ],
+    [
+      "傷寒後",
+      1166
     ],
     [
       "婦人中風",
-      629
+      1104
+    ],
+    [
+      "一切風",
+      1061
     ],
     [
       "脾胃虛寒",
-      626
+      1060
     ],
     [
-      "膈氣",
-      603
+      "咳嗽",
+      1027
     ]
   ],
-  "seconds": 15.8,
+  "seconds": 51.7,
   "source": "jicheng.tw, CC0 1.0"
 }

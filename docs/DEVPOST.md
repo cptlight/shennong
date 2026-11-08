@@ -35,10 +35,9 @@ modern gene targets; the therapeutic claims mapped onto a controlled vocabulary;
 detected. Extraction is rule- and lexicon based, so it **cannot hallucinate a span** — every item points at a
 character range in the text you pasted.
 
-**Track 1 · At corpus scale.** The same extractor was run over **273,334 formulas from
-1,082 classical works** — **429,499 drug mentions**, **412,655
-drug–indication pairs** over 68,195 indications — in **16 seconds on a CPU**. That is the
-difference between a demo and a corpus.
+**Track 1 · At corpus scale.** The same extractor was run over **273,334 formulas from 1,082 classical
+works** — **744,997 drug mentions**, **714,079 drug–indication pairs** over 77,441 indications, in **52 seconds on a CPU**.
+167,679 formulas (61.3%) contain a recognised drug. That is the difference between a demo and a corpus.
 
 **Track 1 · Resolve a name.** Type any name from any era or language — `丹參`, `단삼`, `Salvia miltiorrhiza`,
 `Artemisia annua` — and follow it through the binomial to eight recorded uses, four compound classes and ten gene

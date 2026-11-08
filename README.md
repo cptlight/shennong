@@ -19,13 +19,11 @@ normally needs a wet lab or a GPU cluster. **Live:** type `EGFR` in the demo —
 ECFP4 similarity to the known ChEMBL actives, with Lipinski ADMET, preparation physics and novelty, in seconds on
 a CPU. `HMGCR` returns a top Tanimoto of 1.000: the pipeline rediscovers a known active, which is our control.
 
-**Extraction at corpus scale, not just on a pasted paragraph.** We mined **273,334 formulas from
-1,082 classical works** (jicheng.tw, CC0) and extracted **429,499 drug mentions** of
-**506 distinct drugs** (477 binomials), yielding
-**412,655 drug–indication pairs** across 68,195 distinct indications —
-in **16 seconds on a CPU**. 145,925 formulas
-(53.4%) contain at least one recognised drug; the top drug, 甘草,
-appears 51,789 times. Extraction is lexicon- and rule-based, so no span can be invented.
+**Extraction at corpus scale, not just on a pasted paragraph.** We mined **273,334 formulas from 1,082
+classical works** (jicheng.tw, CC0) and extracted **744,997 drug mentions** of **662 distinct drugs** (625 binomials),
+yielding **714,079 drug–indication pairs** across 77,441 distinct indications — in **52 seconds on a CPU**. 167,679
+formulas (61.3%) contain at least one recognised drug; the top drug, 甘草, appears 51,789 times. Extraction is
+lexicon- and rule-based, so no span can be invented.
 
 **And the part that makes it trustworthy: 78 of 203 recorded preparation claims are physically impossible** —
 the compound decomposes at the temperature the text prescribes. We publish the refutations.

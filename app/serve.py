@@ -1215,9 +1215,18 @@ class Handler(BaseHTTPRequestHandler):
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.answer import hypothesise_live
-                return self._json(hypothesise_live(str(payload.get("question") or payload.get("q") or payload.get("target") or ""),
+                return self._json(hypothesise_live(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or ""),
                                               int(payload.get("k") or 6),
                                               int(payload.get("max_new_tokens") or 96)))
+            except Exception as exc:  # noqa: BLE001
+                return self._err(500, f"{type(exc).__name__}: {exc}")
+        if u.path == "/api/extract":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                raw = self.rfile.read(min(n, 65536)) if n else b"{}"
+                payload = json.loads(raw.decode("utf-8") or "{}")
+                from shennong.passage import extract_passage
+                return self._json(extract_passage(str(payload.get("text") or payload.get("question") or "")))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/resolve":
@@ -1226,7 +1235,7 @@ class Handler(BaseHTTPRequestHandler):
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.resolve import resolve_plant
-                return self._json(resolve_plant(str(payload.get("question") or payload.get("q") or payload.get("target") or "")))
+                return self._json(resolve_plant(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or "")))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/advise":
@@ -1235,7 +1244,7 @@ class Handler(BaseHTTPRequestHandler):
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.advise import advise
-                return self._json(advise(str(payload.get("question") or payload.get("q") or payload.get("target") or "")))
+                return self._json(advise(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or "")))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/experts":
@@ -1244,7 +1253,7 @@ class Handler(BaseHTTPRequestHandler):
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.experts.router import route_query
-                return self._json(route_query(str(payload.get("question") or payload.get("q") or payload.get("target") or "")))
+                return self._json(route_query(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or "")))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/screen":
@@ -1253,7 +1262,7 @@ class Handler(BaseHTTPRequestHandler):
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.screen import fused_screen
-                return self._json(fused_screen(str(payload.get("question") or payload.get("q") or payload.get("target") or "COX2"),
+                return self._json(fused_screen(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or "COX2"),
                                                top_k=int(payload.get("top_k") or 8)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
@@ -1263,7 +1272,7 @@ class Handler(BaseHTTPRequestHandler):
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.answer import compare_direct
-                return self._json(compare_direct(str(payload.get("question") or payload.get("q") or payload.get("target") or ""),
+                return self._json(compare_direct(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or ""),
                                                  int(payload.get("max_new_tokens") or 56)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
@@ -1273,7 +1282,7 @@ class Handler(BaseHTTPRequestHandler):
                 raw = self.rfile.read(min(n, 16384)) if n else b"{}"
                 payload = json.loads(raw.decode("utf-8") or "{}")
                 from shennong.moe_serve import answer_moe
-                return self._json(answer_moe(str(payload.get("question") or payload.get("q") or payload.get("target") or ""),
+                return self._json(answer_moe(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or ""),
                                              max_new_tokens=int(payload.get("max_new_tokens") or 72)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
@@ -1304,7 +1313,7 @@ class Handler(BaseHTTPRequestHandler):
                 payload = json.loads(raw.decode("utf-8") or "{}")
             except json.JSONDecodeError:
                 return self._err(400, "body must be JSON")
-            return self._json(ask(str(payload.get("question") or payload.get("q") or payload.get("target") or "")))
+            return self._json(ask(str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or "")))
         except Exception as exc:  # noqa: BLE001
             return self._err(500, f"{type(exc).__name__}: {exc}")
 

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T17:54:53-0800",
+ "generated_at": "2026-11-07T18:10:42-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v1.17.0": {
@@ -3221,6 +3221,7 @@
  "artifacts_present": [
   "benchmark_results.json",
   "chembl_screen_COX2.json",
+  "chembl_targets.json",
   "compute_budget.json",
   "consensus_vs_arbiter.json",
   "cross_sections.json",

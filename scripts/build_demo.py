@@ -209,6 +209,7 @@ HTML = """<!doctype html>
 <nav role="tablist" aria-label="Demo sections">
   <button role="tab" aria-selected="true" data-t="problems">0 · The two problems</button>
   <button role="tab" aria-selected="false" data-t="resolve">1 · Track 1 — resolve a plant name (live)</button>
+  <button role="tab" aria-selected="false" data-t="extract">1b · Track 1 — read a passage (live)</button>
   <button role="tab" aria-selected="false" data-t="screen">2 · Track 2 — screen a target (live)</button>
   <button role="tab" aria-selected="false" data-t="ask">3 · Ask the model (live)</button>
   <button role="tab" aria-selected="false" data-t="funnel">4 · The funnel</button>
@@ -997,7 +998,81 @@ function renderResolve(out,d,q){
   out.innerHTML=h;
 }
 
-const TABS = {problems:tabProblems, resolve:tabResolve, ask:tabAsk, screen:tabScreen, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
+
+const EXTRACT_EXAMPLES = {
+  'formula (Taiwan, trad.)': '甘草（炙）二两、人參一兩、白朮二兩、茯苓二兩，右四味，以水六升，煮取三升，溫服一升，日三服。治脾胃虛弱，氣短乏力。',
+  'formula (simplified)': '甘草（炙）二两、人参一两、白术二两、茯苓二两，右四味，以水六升，煮取三升，温服一升，日三服。治脾胃虚弱，气短乏力。',
+  'materia medica note': '甘草，味甘平。主五臟六腑寒熱邪氣，堅筋骨，長肌肉，倍力，金瘡尰，解毒。久服輕身延年。'
+};
+
+function tabExtract(){
+  const ex = Object.keys(EXTRACT_EXAMPLES);
+  return `<section><h2>Track 1 — paste a historical passage, get structured knowledge</h2>
+  <p class="note"><b>The problem:</b> the track asks for extraction from historical and folklore texts, not a
+  lookup. <b>What runs here:</b> the passage is scanned by a rule- and lexicon-based span extractor (it cannot
+  hallucinate a span), every drug is resolved to its modern binomial and pharmacology, therapeutic claims are
+  mapped onto a controlled indication vocabulary, and preparation processes are detected. Every item carries
+  character offsets into <i>your</i> text.</p>
+  <textarea id="exq" rows="6" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"
+    placeholder="paste any classical Chinese or ethnobotanical passage here">${EXTRACT_EXAMPLES[ex[0]]}</textarea>
+  <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+    <button id="exgo" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Extract</button>
+    <span style="font-size:12px;color:var(--muted)">try:</span>
+    ${ex.map((k,i)=>`<button data-ex="${i}" style="padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font:12px inherit;cursor:pointer">${esc(k)}</button>`).join('')}
+  </div>
+  <div id="exout"></div></section>`;
+}
+
+async function extractInit(){
+  document.getElementById('exgo').onclick=()=>doExtract();
+  document.querySelectorAll('button[data-ex]').forEach(b=>b.onclick=()=>{
+    const keys=Object.keys(EXTRACT_EXAMPLES);
+    document.getElementById('exq').value=EXTRACT_EXAMPLES[keys[+b.dataset.ex]];
+    doExtract();
+  });
+  doExtract();
+}
+
+async function doExtract(){
+  const q=(document.getElementById('exq')||{}).value||'';
+  const out=document.getElementById('exout');
+  if(!q.trim()){ out.innerHTML='<p class="warn">paste a passage first</p>'; return; }
+  out.innerHTML='<p class="note">reading the passage…</p>';
+  try{
+    const r=await fetch('/api/extract',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:q})});
+    renderExtract(out, await r.json());
+  }catch(e){ out.innerHTML='<p class="warn">extract failed: '+esc(String(e))+'</p>'; }
+}
+
+function renderExtract(out,d){
+  if(!d||d.ok===false){ out.innerHTML='<div class="warn">'+esc((d&&d.error)||'extraction failed')+'</div>'; return; }
+  let h='<div class="card"><h3>'+d.n_drugs+' drug'+(d.n_drugs===1?'':'s')+' recognized</h3>';
+  if((d.drugs||[]).length){
+    h+='<table><thead><tr><th>as written</th><th>modern binomial</th><th>compound classes</th><th>gene targets</th></tr></thead><tbody>';
+    d.drugs.forEach(x=>{ h+='<tr><td><b>'+esc(x.surface)+'</b><br><span style="font-size:11px;color:var(--muted)">span '
+      +x.start+'-'+x.end+' · conf '+x.confidence+'</span></td><td class="mono">'+esc(x.binomial)+'</td><td>'
+      +esc((x.compound_classes||[]).join(', ')||'—')+'</td><td class="mono">'+esc((x.gene_targets||[]).slice(0,4).join(', ')||'—')+'</td></tr>'; });
+    h+='</tbody></table>';
+  } else h+='<p class="note">no drug from the lexicon appears in this passage.</p>';
+
+  if((d.indications||[]).length){
+    h+='<h3 style="margin-top:14px">Therapeutic claims &rarr; controlled vocabulary</h3><table><thead><tr><th>as written</th><th>mapped to</th></tr></thead><tbody>';
+    d.indications.forEach(i=>{ h+='<tr><td>'+esc(i.surface)+'</td><td><b>'+esc(i.canonical)+'</b></td></tr>'; });
+    h+='</tbody></table>';
+  }
+  if((d.processes||[]).length){
+    h+='<p class="note"><b>Preparation processes detected:</b> '+d.processes.map(p=>esc(p.surface)+' ('+esc(p.meaning)+')').join(' · ')+'</p>';
+  }
+  if((d.relations||[]).length){
+    h+='<h3 style="margin-top:14px">Citable relations</h3><table><thead><tr><th>drug</th><th>relation</th><th>quote</th></tr></thead><tbody>';
+    d.relations.forEach(r=>{ h+='<tr><td>'+esc(r.drug_surface)+'</td><td>treats <b>'+esc(r.indication)+'</b></td><td style="font-size:11px">'+esc((r.quote||'').slice(0,60))+'</td></tr>'; });
+    h+='</tbody></table>';
+  }
+  h+='<p class="note" style="margin-top:10px">'+esc(d.coverage_note||'')+'<br>'+esc(d.honesty||'')+'</p></div>';
+  out.innerHTML=h;
+}
+
+const TABS = {problems:tabProblems, resolve:tabResolve, extract:tabExtract, ask:tabAsk, screen:tabScreen, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
               experts:tabExperts, diag:tabDiag, weights:tabWeights};
 const main = document.getElementById('main');
 function show(name){
@@ -1009,6 +1084,7 @@ function show(name){
   if (sec) sec.classList.add('on');
   if (name === 'ask') askInit();
   if (name === 'resolve') resolveInit();
+  if (name === 'extract') extractInit();
   if (name === 'screen') screenInit();
   document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected', String(b.dataset.t===name)));
   const ct = main.querySelector('#ct');
@@ -1082,7 +1158,7 @@ def main() -> int:
     import re as _re
     tabs_line = _re.search(r"const TABS = \{(.*?)\};", html, _re.S)
     # functions invoked from HTML handlers or tab wiring — a missing one is a dead button at runtime
-    required = ["askInit", "doAsk", "renderServerResult", "renderAdvice", "renderAnswer", "screenInit", "doScreen", "renderScreen", "resolveInit", "doResolve", "renderResolve", "tabProblems", "tabResolve", "show", "esc"]
+    required = ["askInit", "doAsk", "renderServerResult", "renderAdvice", "renderAnswer", "screenInit", "doScreen", "renderScreen", "resolveInit", "doResolve", "renderResolve", "extractInit", "doExtract", "renderExtract", "tabExtract", "tabProblems", "tabResolve", "show", "esc"]
     missing = [f for f in required
                if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (f, f), html)]
     if missing:

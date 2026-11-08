@@ -79,7 +79,7 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(raw.decode("utf-8") or "{}")
         except json.JSONDecodeError:
             return self._json({"error": "body must be JSON"}, 400)
-        q = str(payload.get("question") or payload.get("q") or payload.get("target") or "")
+        q = str(payload.get("question") or payload.get("q") or payload.get("target") or payload.get("text") or "")
         mt = int(payload.get("max_new_tokens") or 40)
         if self.path == "/api/model":
             return self._json({"loaded": True, "family": "qwen2.5-1.5b-sft", "params": 1543714304,
@@ -97,6 +97,12 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/hypothesize":
             return self._json(hypothesise_live(q, max_new_tokens=mt))
+        if self.path == "/api/extract":
+            try:
+                from shennong.passage import extract_passage
+                return self._json(extract_passage(q))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/resolve":
             try:
                 from shennong.resolve import resolve_plant

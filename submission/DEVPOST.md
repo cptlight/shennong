@@ -59,18 +59,56 @@ A system that only reads texts cannot know that. Ours is built to argue with its
 
 ## How we built it
 
-- **Corpus**: 29,042 records / 177.3 M characters — 106 sources plus 1,304 CC0 jicheng.tw classical works.
-  Permissive licences only (CC0 / public domain / CC BY). We **excluded** ctext.org and GRETIL, the easiest
-  sources to get, because their licences are non-commercial. Provenance is file-by-file in
-  `docs/CORPUS_PROVENANCE.md`.
-- **Extraction**: a character-trie longest-match scan over the lexicon, producing span-faithful observations with
-  verbatim quotes and confidences. Rule-based by choice: it is auditable and cannot invent a span.
-- **Knowledge layer**: 888,303 facts, each carrying `source_id` + `char_start`/`char_end`.
-- **Model**: Qwen2.5-1.5B fine-tuned with LoRA (r=64) on 88,082 domain examples; merged, quantised to Q4_K_M,
-  **940 MiB, runs on CPU**. On 200 held-out questions it beats the un-finetuned base model by 13.5 points.
-- **Screening**: RDKit ECFP4 (Morgan r=2, 2048-bit) Tanimoto against precomputed ChEMBL actives, plus Lipinski,
-  preparation physics and novelty — fused into one falsifiable score.
-- **Demo**: a Hugging Face Space with six live tabs, plus a static result browser.
+**The design thesis: do not ask a 1.5 B model to do chemistry.** We split the system into five layers, each doing the
+thing it is measurably good at, and each output checkable by the layer above it.
+
+**1 · Corpus — the licence gate comes first, in code.**
+106 sources plus 1,304 CC0 works from jicheng.tw: **29,042 records, 177.3 M characters**. `scripts/ingest.py`
+refuses any document without a licence and a URL proving it, so an unusable source cannot enter the pipeline by
+accident. Permissive only — CC0, public domain, CC BY. We **excluded ctext.org and GRETIL**, the two easiest corpora
+to obtain, because both are non-commercial: shipping them would have made the "open weights" claim false. Every
+source, including the rejected ones and why, is recorded in `docs/CORPUS_PROVENANCE.md`.
+
+**2 · Extraction — rule-based on purpose, not for lack of a model.**
+A character trie does longest-match scanning over the drug lexicon and emits observations carrying `char_start`,
+`char_end`, the verbatim quote and a confidence. We could have asked the LLM to extract. We didn't, because a span
+you cannot point at is not evidence: an LLM extractor can produce a fluent sentence citing a passage that does not
+say it. The trie **cannot invent a span**, and every claim downstream inherits that guarantee. It ran over
+**273,334 formulas in 52 seconds**, producing 744,997 drug mentions and 714,079 drug–indication pairs.
+
+**3 · Knowledge layer — provenance as a schema, not a promise.**
+**888,303 facts**, each carrying `source_id` plus `char_start`/`char_end`. Not "the corpus says X" — *this*
+character range of *this* edition says X. That is what makes the graph auditable instead of merely authoritative.
+
+**4 · The arbiter — the one layer that is not text.**
+This is the part that could not live inside the model. `shennong/physics/` models what a preparation actually does to
+a molecule: Clausius–Clapeyron volatilisation, Arrhenius hydrolysis with bond-class activation energies, thermal
+degradation above the boiling point. It was **validated before it was trusted** — Joback group-contribution boiling
+points against known constants, mean error **4.5 %**, 6/6 within 10 %. It returns a retention fraction with a
+sensitivity range and overrules the text panel when they disagree: **78 of 203** recorded preparation claims fail it,
+including 6 the panel had scored unanimously.
+
+**5 · The model — language and reasoning, deliberately not knowledge.**
+Qwen2.5-1.5B, LoRA r=64 on 88,082 domain examples, merged and quantised to Q4_K_M: **940 MiB, runs on CPU**.
+On 200 held-out questions it scores **49.0 % against 37.0 %** for its un-finetuned base (**+12.0 pts**). We also
+measured what it is *bad* at: asked "what is this Indian plant used for?" it answers with a Chinese classical use
+(0/63 on the use family). So uses are served by extraction and retrieval; the model handles language and reasoning.
+Knowing where the model must not be trusted was most of the engineering.
+
+**6 · Screening — cheminformatics where it can be exact.**
+**23,176 plant compounds** with real SMILES, fingerprinted with ECFP4 (Morgan r=2, 2048-bit) and ranked by Tanimoto
+similarity against precomputed ChEMBL actives, then filtered by Lipinski ADMET, preparation physics and structural
+novelty, fused into one falsifiable score. On HMGCR the top hit scores **Tanimoto 1.000** — the pipeline rediscovers
+a known active, which is our control that the method works.
+
+**7 · Deployment — CPU-only end to end.**
+A Hugging Face Space (Docker, 2 vCPU) runs llama.cpp over the Q4 GGUF with no GPU and no torch. **14 tabs, 4 running
+live inference.** The build pulls weights from the Hugging Face CDN with `-f` and a size assertion, after an earlier
+build silently wrote a GitHub error page over the model file — a failure that only surfaced at query time.
+
+**Why this shape.** Every component was chosen because it is *verifiable* at what it does: spans you can point at,
+chemistry you can recompute, a benchmark you can re-run. The model is the one part we cannot fully audit, so it is
+kept to the job it does well — phrasing and reasoning over evidence that the other layers supply.
 
 ## Challenges we ran into
 

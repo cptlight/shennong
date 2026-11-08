@@ -256,6 +256,43 @@ python -m shennong.cli ask "Why is 附子 processed before use?"
 python -m shennong.cli shi --n 10 --class incompatibility
 ```
 
+## Deployment
+
+The public demo is a **Hugging Face Space**, not a GitHub Pages copy — GitHub Pages only serves the static result
+browser.
+
+| what | where |
+|---|---|
+| **Live demo (inference)** | **https://tomscot-shennong.hf.space** — **14 tabs, 4 of them running live inference on CPU** (resolve a name · read a passage · screen a target · ask the model) |
+| **Space source** | https://huggingface.co/spaces/tomscot/shennong (Docker SDK, 2 vCPU) |
+| **Static result browser** | https://cptlight.github.io/shennong/ — pre-computed results, no model, no inference |
+| **Model weights** | https://huggingface.co/tomscot/shennong-1.5b-sft (Q4_K_M 940 MiB + MoE variants) |
+
+**What the Space actually does at build time.** `space/Dockerfile` clones this repository, installs
+`llama-cpp-python` (CPU wheel) and `rdkit`, copies the structured corpus tables and the pre-computed ChEMBL
+actives cache, then downloads the GGUF from the model repo at container start. Nothing is trained at deploy time.
+
+**Redeploying after a code change:**
+```bash
+./scripts/deploy_space.sh tomscot/shennong
+```
+then restart with `factory_reboot=True`. **A Dockerfile change is required for code changes to take effect** — the
+Dockerfile clones the repo in a `RUN` layer, and Docker reuses that cached clone otherwise. The `RUN echo "source
+rev …"` line exists only to bust that cache.
+
+**Before a demo, warm the Space** — the first request after idle pays ~60 s for two GGUFs to load and HF's proxy
+may kill it:
+```bash
+curl -s -X POST https://tomscot-shennong.hf.space/api/query -H 'Content-Type: application/json' \
+  -d '{"question":"What is 甘草 used for?"}' > /dev/null
+```
+
+**Local instead of hosted:**
+```bash
+make setup && make corpus && make app-data
+python app/serve.py --demo-root          # http://127.0.0.1:8766 — same Workbench, local GGUFs
+```
+
 ## Repository map
 
 ```
@@ -284,18 +321,43 @@ python -m shennong.cli report --out eval/report.json          # evaluate
 
 ## Results
 
-## Results
+Two models live in this repository. Do not confuse them.
+
+### 1 · `Qwen2.5-1.5B` fine-tune — **the released model**
+
+This is what ships. LoRA r=64 on 88,082 domain examples, merged, quantised to Q4_K_M: **940 MiB, runs on CPU**.
 
 | | |
 |---|---|
-| **Corpus** | **106 sources · 45,604,249 chars · 27,738 records** — zh-Hant 16.03 M (35.1 %), en 23.35 M, sa 3.44 M, la 2.79 M |
+| **Parameters** | 1,543,714,304 |
+| **Benchmark** | **44.0 % vs 34.5 %** for the un-finetuned base on 200 held-out questions (**+9.5 pts**) — `artifacts/benchmark_v3.json` |
+| **Per-task** | property 15/20 vs 0/20 · viability 6/6 vs 0/6 · formula 7/9 vs 5/9 · compound 20/20 · target 20/20 |
+| **Known-failing tasks** | `use` and `name_mapping` families are near-zero for **both** models — disclosed in [`docs/BENCHMARK.md`](docs/BENCHMARK.md), not hidden |
+| **Artifact** | `shennong-1.5b-sft-Q4_K_M.gguf` **986 MB** (940 MiB), 338 tensors, `arch=qwen2` |
+| **Sparse MoE variant** | 1,435,499,392 params, 999 MiB — scored **31.7 % vs 43.3 %**, worse than dense. Released with the losing benchmark |
+
+### 2 · `shennong-mini` — a from-scratch control, not the product
+
+An 8.7 M-parameter Llama-style model trained on one laptop CPU, kept as the "can we build a language model from
+nothing" control. It learns domain register and beats a unigram baseline; it is **not** the model in the demo.
+
+| | |
+|---|---|
+| **Parameters** | 8,719,616, trained from scratch |
+| **Cost** | 45 min on one laptop CPU, no GPU, 604 tok/s |
+| **Held-out quality** | val loss 6.390 · ppl 605.3 · **2.526 bits/byte** vs unigram baseline 3.076 bpb (1.22× better) |
+| **Weights** | `shennong-mini-f16.gguf` 18,054,560 B, sha256 `a67ad442…4cdb60`, GGUF↔HF bit-exact |
+| **Honest gap** | 106× undertrained (0.19 tokens/parameter); per-language bpb sa 13.46 — Sanskrit unmodelled |
+
+### Corpus and data
+
+| | |
+|---|---|
+| **Base corpus** | 106 sources · 45,604,249 chars · 27,738 records — zh-Hant 16.03 M (35.1 %), en 23.35 M, sa 3.44 M, la 2.79 M |
+| **Full corpus** | **29,042 records · 177.3 M chars** after `make corpus-full` (+ 1,304 CC0 jicheng.tw works, 131.7 M) |
 | **Licence audit** | 103 trained-on sources (30 public domain + 73 CC BY-SA-4.0); GRETIL **rejected** (CC BY-**NC**-SA) |
 | **Structured data** | 23,177 compounds (**23,176 with real SMILES**), 11,819 uses, 1,402 property vectors, 822 lexicon entries |
-| **Model** | 8,719,616 params, from scratch, **45 min on one laptop CPU** (no GPU), 604 tok/s |
-| **Held-out quality** | val loss **6.390** · ppl **605.3** · **2.526 bits/byte** vs unigram baseline **3.076 bpb** (1.22× better) |
-| **Weights** | `shennong-mini-f16.gguf` **18,054,560 B**, sha256 `a67ad442…4cdb60`, 56 tensors, 8,719,616 elements — GGUF↔HF bit-exact, tokenizer parity 100 % |
-| **Candidates** | **60** drug candidates across 15 taxa, all classical lines verified against corpus spans |
-| **Honest gaps** | Per-language bpb: en 2.56 · zh-Hant 3.34 · la 4.58 · **sa 13.46** (Devanagari never trained) · plant-materia resolution **48.7 %** (4,357/8,944) — archaic names outside every open lexicon are the gap |
+| **Candidates** | 60 drug candidates across 15 taxa, every classical line verified against a corpus span |
 
 ### The pre-registered theory experiment — the result
 
@@ -551,7 +613,7 @@ The corpus is not a fixed dump. It grows, and every growth re-derives the graph 
 ```bash
 python scripts/ingest.py --input new_texts.jsonl --source-id my_source \
     --title "…" --year 1700 --tradition tcm --lang zh-Hant \
-    --licence "Public Domain" --licence-evidence "https://…"   # refuses anything not open
+    --licence "Public Domain" --licence-evidence "<url of the licence statement>"   # refuses anything not open
 python -m shennong.cli cai && zhi && pei && shi                # re-derive graph + hypotheses
 python scripts/extract_discoveries.py && python scripts/extrapolate.py   # re-derive findings
 ```
@@ -605,38 +667,26 @@ why the same check is what caught **8 of 10 mislocated citations** in an earlier
 
 ## Honest limitations
 
-## Honest limitations
-
-- **`shennong-mini` is 106× undertrained** (0.19 tokens/parameter vs ~20 compute-optimal). It learns
-  the register and beats a unigram baseline; it is **not** a factual oracle. Every factual claim is
-  meant to be grounded in a retrieved span, and the system refuses when it cannot cite.
-- **Sanskrit is effectively unmodelled.** The tokenizer was trained before the Devanagari corpus
-  arrived, so `sa` scores 13.46 bpb — worse than a unigram baseline. The 3.44 M Sanskrit characters
-  are in the corpus but not in the model's competence. This is a real gap, not a footnote.
-- **Drug-name → taxon resolution is the weakest link**: 43 % of use rows and 47 % of property rows
-  resolve to a binomial. We chose precision over coverage after finding real false joins, and the
-  graph is only as good as that join.
-- **Candidate scores are currently degenerate** — novelty is 0.88 for all 60 candidates, so the rank
-  order carries no information today. The shortlist is real, the *ranking* is not yet.
-- **Span support is checked, cross-lingual entailment is not.** The verifier confirms the evidence is
-  about the right drug and is a use statement; it cannot yet confirm that the Chinese passage entails
-  the English mechanistic claim. That is the next encoder-shaped job, not a solved problem.
-- **Hypotheses are hypotheses.** Nothing here is medical advice, and nothing has been tested in vitro
-  or in vivo. The output is a ranked list of experiments, not a list of cures.
-- The corpus skews Chinese because that is where the largest public-domain original-language canon is;
-  the DATA_CARD quantifies the imbalance rather than hiding it.
-
-
-- `shennong-mini` is a **small** model trained on a **modest** corpus on a **CPU**. It writes domain-
-  register text; it is not a reliable factual oracle. Every factual claim in the system is meant to be
-  grounded in a retrieved span, and the system is designed to **refuse** when it cannot cite.
-- Drug-name → taxon resolution is the weakest link in the chain. Its measured F1 is reported *before*
-  any discovery claim, because a graph built on bad resolution is a graph built on sand.
-- Hypotheses are **hypotheses**. Nothing here is medical advice, and nothing here has been tested
-  in vitro or in vivo. The output is a ranked list of experiments, not a list of cures.
-- The corpus skews toward the Chinese tradition, because that is where the largest public-domain
-  original-language canon exists. Sanskrit, Arabic, Persian and Tibetan coverage is real but thinner;
-  the DATA_CARD quantifies the imbalance per tradition rather than hiding it.
+- **`shennong-mini` is 106× undertrained** (0.19 tokens/parameter vs ~20 compute-optimal). It learns the register
+  and beats a unigram baseline; it is **not** a factual oracle. Every factual claim is meant to be grounded in a
+  retrieved span, and the system refuses when it cannot cite.
+- **Sanskrit is effectively unmodelled.** The tokenizer was trained before the Devanagari corpus arrived, so `sa`
+  scores 13.46 bpb — worse than a unigram baseline. The 3.44 M Sanskrit characters are in the corpus but not in
+  the model's competence. A real gap, not a footnote.
+- **Name resolution is the weakest link.** In-lexicon accuracy is 1.000, but only **48.7 % of plant-derived corpus
+  mentions resolve** (4,357 of 8,944); the rest are archaic names absent from every open lexicon we tried. A
+  further **37.9 % of the corpus is not botanical at all** — 23.5 % animal, 8.3 % mineral, 4.1 % manufactured
+  objects, 2.0 % human-derived — and is reported separately rather than diluting the denominator. See
+  [`docs/RESOLUTION.md`](docs/RESOLUTION.md).
+- **Candidate scores were degenerate in the 60-candidate artefact** — novelty is 0.88 for all of them, so that
+  rank order carries no information. The shortlist is real; that ranking is not.
+- **Span support is checked, cross-lingual entailment is not.** The verifier confirms the evidence is about the
+  right drug and is a use statement; it cannot yet confirm that a Chinese passage entails an English mechanistic
+  claim. That is the next encoder-shaped job, not a solved problem.
+- **Hypotheses are hypotheses.** Nothing here is medical advice, and nothing has been tested in vitro or in vivo.
+  The output is a ranked list of experiments, not a list of cures.
+- The corpus skews Chinese because that is where the largest public-domain original-language canon is; the
+  DATA_CARD quantifies the imbalance per tradition rather than hiding it.
 
 ## Safety, ethics and Traditional Knowledge
 

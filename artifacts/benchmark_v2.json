@@ -1,0 +1,3327 @@
+{
+  "n": 200,
+  "decode": {
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "seed": 1337
+  },
+  "arms": {
+    "ours": {
+      "correct": 88,
+      "acc": 0.44,
+      "by_kind": {
+        "classical_use": {
+          "correct": 0,
+          "total": 20,
+          "acc": 0.0
+        },
+        "compound": {
+          "correct": 20,
+          "total": 20,
+          "acc": 1.0
+        },
+        "formula": {
+          "correct": 7,
+          "total": 9,
+          "acc": 0.778
+        },
+        "name_mapping": {
+          "correct": 2,
+          "total": 20,
+          "acc": 0.1
+        },
+        "pharmacology": {
+          "correct": 16,
+          "total": 20,
+          "acc": 0.8
+        },
+        "property": {
+          "correct": 15,
+          "total": 20,
+          "acc": 0.75
+        },
+        "relation": {
+          "correct": 2,
+          "total": 2,
+          "acc": 1.0
+        },
+        "target": {
+          "correct": 20,
+          "total": 20,
+          "acc": 1.0
+        },
+        "use": {
+          "correct": 0,
+          "total": 63,
+          "acc": 0.0
+        },
+        "viability": {
+          "correct": 6,
+          "total": 6,
+          "acc": 1.0
+        }
+      },
+      "rows": [
+        {
+          "id": 0,
+          "kind": "use",
+          "key": "emetics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Use: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 1,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 2,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 3,
+          "kind": "use",
+          "key": "淋酒入內.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 燒赤. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 4,
+          "kind": "use",
+          "key": "anti-bacterial agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Used for cough. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 5,
+          "kind": "target",
+          "key": "Crotalaria juncea",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Crotalaria juncea affects the gene target CROTALARINAINE (resolved by manual, confidence 0.95).<|eos|>"
+        },
+        {
+          "id": 6,
+          "kind": "name_mapping",
+          "key": "Colebrookea oppositifolia",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian Squirrel Tail -> Lophura nycthemera (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 7,
+          "kind": "target",
+          "key": "Lonicera japonica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Lonicera japonica affects the NF-kB pathway (as demonstrated by the Lonicera japonica NF-kB target list).<|eos|>"
+        },
+        {
+          "id": 8,
+          "kind": "classical_use",
+          "key": "桂心人參",
+          "mode": "contains",
+          "hit": false,
+          "answer": "肺積 -> 瘰癧 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 9,
+          "kind": "use",
+          "key": "jaundice",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine uses Curcuma longa for its anti-inflammatory properties. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 10,
+          "kind": "name_mapping",
+          "key": "菘蓝",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Isatis tinctoria -> Isatis officinalis (resolved by manual, confidence 0.95).<|eos|>"
+        },
+        {
+          "id": 11,
+          "kind": "formula",
+          "key": "茯苓桂枝白朮甘草湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Formula ws_zh_shanghanlun:茯苓桂枝白朮甘草湯: 茯苓, 桂枝, 白朮, 甘草,"
+        },
+        {
+          "id": 12,
+          "kind": "pharmacology",
+          "key": "Polyporus umbellatus",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Disease target: 消腫毒. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 13,
+          "kind": "classical_use",
+          "key": "珍珠囊補遺藥性賦",
+          "mode": "contains",
+          "hit": false,
+          "answer": "瘡: 鬼疰蠱毒. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 14,
+          "kind": "target",
+          "key": "Conium maculatum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Conium maculatum affects the gene target Conium maculatum (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 15,
+          "kind": "use",
+          "key": "湯火傷瘡. Modern reading: sore.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 瘰癧. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 16,
+          "kind": "target",
+          "key": "Hypericum calycinum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Hypericum calycinum affects the NF-kB pathway (as demonstrated by the NF-kB target class).<|eos|>"
+        },
+        {
+          "id": 17,
+          "kind": "classical_use",
+          "key": "廣木香橘紅青皮柴胡白芍當歸",
+          "mode": "contains",
+          "hit": false,
+          "answer": "怒氣傷肝脅痛 -> 蠱毒 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 18,
+          "kind": "classical_use",
+          "key": "天竺黃散方天竺黃鬱金",
+          "mode": "contains",
+          "hit": false,
+          "answer": "驚風潮熱 -> 大黃 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 19,
+          "kind": "target",
+          "key": "Dasiphora fruticosa",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Dasiphora fruticosa affects the gene target Dasiphora fruticosa (resolved by wikidata-genus, confidence 0.55).<|eos|>"
+        },
+        {
+          "id": 20,
+          "kind": "use",
+          "key": "水調服.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治小兒疳. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 21,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 22,
+          "kind": "name_mapping",
+          "key": "Pygeum gardneri",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Prunus ceylanica also known as: Ceylonese plum (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 23,
+          "kind": "compound",
+          "key": "Incarvillea sinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Incarvillea sinensis contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 24,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 25,
+          "kind": "use",
+          "key": "入揩牙.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 搗汁和酒服. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 26,
+          "kind": "compound",
+          "key": "Pleione bulbocodioides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Pleione bulbocodioides contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 27,
+          "kind": "compound",
+          "key": "Rumex acetosa",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Rumex acetosa contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 28,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 29,
+          "kind": "use",
+          "key": "tonics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 30,
+          "kind": "use",
+          "key": "tonics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine uses Humulus lupulus for its unclassified compounds. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 31,
+          "kind": "use",
+          "key": "common cold",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Used for consumption. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 32,
+          "kind": "pharmacology",
+          "key": "Glycine max",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Glycine max affects the nervous system, specifically the brain, and through alkaloid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 33,
+          "kind": "formula",
+          "key": "大承氣湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Formula ws_zh_jingui_yaolue:大承氣湯: 大黃, 厚朴, 枳實, 芒硝, 水, 取"
+        },
+        {
+          "id": 34,
+          "kind": "formula",
+          "key": "葛根黃芩黃連湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Formula ws_zh_shanghanlun:葛根黃芩黃連湯: 葛根, 黃芩, 黃連, 桂枝, 甘草,"
+        },
+        {
+          "id": 35,
+          "kind": "compound",
+          "key": "Asiatic toad",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Asiatic toad contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 36,
+          "kind": "pharmacology",
+          "key": "Chaenomeles sinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Chaenomeles sinensis affects the immune system, specifically the cellular immunity by targeting alkaloid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 37,
+          "kind": "property",
+          "key": "平, flavours 苦, channels ",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 38,
+          "kind": "name_mapping",
+          "key": "Dysphania ambrosioides",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Mexican Tea -> Camellia sasanqua (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 39,
+          "kind": "name_mapping",
+          "key": "Mentha piperata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Mentha piperita also known as: Piper mint (resolved by wikidata-genus, confidence 0.55).<|eos|>"
+        },
+        {
+          "id": 40,
+          "kind": "name_mapping",
+          "key": "Ochna squarrosa",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Discladium squarrosum also known as: Discladium squarrosum (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 41,
+          "kind": "pharmacology",
+          "key": "Brassica oleracea",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Brassica oleracea affects the immune system by targeting polyketide compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 42,
+          "kind": "use",
+          "key": "斷卒下痢. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治風. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 43,
+          "kind": "use",
+          "key": "splenomegaly",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 44,
+          "kind": "use",
+          "key": "燒故鋸令赤.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 燒赤淬酒服. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 45,
+          "kind": "use",
+          "key": "心痛血痺. Modern reading: painful obstruction syndrome.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 通神明. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 46,
+          "kind": "use",
+          "key": "conjunctivitis, allergic",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 47,
+          "kind": "target",
+          "key": "Zygophyllum propinquum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Zygophyllum propinquum affects the gene target Zygococcus propinquus (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 48,
+          "kind": "name_mapping",
+          "key": "Tetradium glabrifolium",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Tetradium glabrifolium -> Tetradium glabrifolium (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 49,
+          "kind": "pharmacology",
+          "key": "Lindera aggregata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Lindera aggregata affects the immune system by targeting NF-kB — a cellular regulator involved in inflammation. The compound class involved is phenylpropanoid compounds (per the corpus compound table)"
+        },
+        {
+          "id": 50,
+          "kind": "compound",
+          "key": "Aster tataricus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Aster tataricus contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 51,
+          "kind": "name_mapping",
+          "key": "Gmelina arborea",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Gamhar -> Gammarus sanguinolentus (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 52,
+          "kind": "use",
+          "key": "leukorrhea",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 53,
+          "kind": "property",
+          "key": "溫, flavours 辛, channels ",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 54,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 55,
+          "kind": "compound",
+          "key": "Angelica dahurica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Angelica dahurica contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 56,
+          "kind": "use",
+          "key": "antispasmodics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Vitis vinifera is used for its fruit (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 57,
+          "kind": "target",
+          "key": "Ficus lacor",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Ficus lacor affects the gene target FLC (resolved by wikidata-genomes, confidence 0.55).<|eos|>"
+        },
+        {
+          "id": 58,
+          "kind": "classical_use",
+          "key": "蜜耆當歸炙術炒芍",
+          "mode": "contains",
+          "hit": false,
+          "answer": "臨產穩婆不慎 -> 蜘蛛尿 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 59,
+          "kind": "pharmacology",
+          "key": "Crocus sativus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Crocus sativus affects the nervous system and the immune system. It contains alkaloid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 60,
+          "kind": "classical_use",
+          "key": "每用鵝翎旋取塗之",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Frozen ear, sore: sore. Modern reading: sore. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 61,
+          "kind": "use",
+          "key": "逐賊血.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 除寒熱. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 62,
+          "kind": "target",
+          "key": "Trichosanthes nervifolia",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Trichosanthes nervifolia affects the gene target TNC (pre-modern name, not clinical advice)<|eos|>"
+        },
+        {
+          "id": 63,
+          "kind": "use",
+          "key": "malaria",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: 通小腸. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 64,
+          "kind": "target",
+          "key": "Amaranthus spinosus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Amaranthus spinosus affects the following gene targets (based on the corpus compound table): 2,3,19,20,24,25,30,"
+        },
+        {
+          "id": 65,
+          "kind": "classical_use",
+          "key": "加姜三片",
+          "mode": "contains",
+          "hit": false,
+          "answer": "痰涎壅盛 -> 蜜調半錢塗手心.<|eos|>"
+        },
+        {
+          "id": 66,
+          "kind": "compound",
+          "key": "Inula britannica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Inula britannica contains terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 67,
+          "kind": "target",
+          "key": "Bupleurum falcatum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Bupleurum falcatum affects the NF-kB pathway (as predicted by manual).<|eos|>"
+        },
+        {
+          "id": 68,
+          "kind": "use",
+          "key": "療鼠.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 療小兒驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 69,
+          "kind": "use",
+          "key": "central nervous system depressants",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine uses Cajanus trinervius for its unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 70,
+          "kind": "name_mapping",
+          "key": "短序脆兰",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Acampe papillosa -> Acampe papillosa (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 71,
+          "kind": "use",
+          "key": "wounds and injuries/trauma",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: 殺蟲. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 72,
+          "kind": "target",
+          "key": "Cryptomeria japonica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Cryptomeria japonica affects the expression of 10 genes (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 73,
+          "kind": "pharmacology",
+          "key": "Pinus densiflora",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Pinus densiflora affects the immune system, specifically the innate immune response, through terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 74,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 寒, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 75,
+          "kind": "formula",
+          "key": "大柴胡湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Formula ws_zh_shanghanlun:大柴胡湯: 柴胡, 黃芩, 芍藥, 半夏, 大棗, 水"
+        },
+        {
+          "id": 76,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": true,
+          "answer": "MAY. The claimed enrichment of alkaloid by 炮 is not supported: modelled median retention is 100% (range 100-100%), dominant loss"
+        },
+        {
+          "id": 77,
+          "kind": "classical_use",
+          "key": "搗絞取汁",
+          "mode": "contains",
+          "hit": false,
+          "answer": "赤黑丹: 紫雪丹. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 78,
+          "kind": "classical_use",
+          "key": "黃芩白茯苓膽南星枳殼",
+          "mode": "contains",
+          "hit": false,
+          "answer": "因患頭風 -> 天麻 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 79,
+          "kind": "compound",
+          "key": "Alisma plantago",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Alisma plantago-aquatica contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 80,
+          "kind": "use",
+          "key": "止渴解酲.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治風. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 81,
+          "kind": "use",
+          "key": "colic",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine uses Phyla nodiflora for its unguentum (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 82,
+          "kind": "classical_use",
+          "key": "麩微炒黃去瓤各半兩",
+          "mode": "contains",
+          "hit": false,
+          "answer": "寒疝心痛悶絕 -> 膠飴 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 83,
+          "kind": "compound",
+          "key": "Aster scaber",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Aster scaber contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 84,
+          "kind": "name_mapping",
+          "key": "Pyrus baccata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Malus baccata also known as: Malus baccata (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 85,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 86,
+          "kind": "use",
+          "key": "治氣痢. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 除熱. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 87,
+          "kind": "classical_use",
+          "key": "尤宜與眾果參食",
+          "mode": "contains",
+          "hit": false,
+          "answer": "上氣 -> 氣滯血閉 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 88,
+          "kind": "pharmacology",
+          "key": "Clematis chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Clematis chinensis affects the immune system through terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 89,
+          "kind": "formula",
+          "key": "生薑瀉心湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Formula ws_zh_shanghanlun:生薑瀉心湯: 生薑, 黃連, 乾薑, 人參, 附子,"
+        },
+        {
+          "id": 90,
+          "kind": "target",
+          "key": "Melissa officinalis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Melissa officinalis affects the NF-kB pathway (assessed by the number of interacting genes).<|eos|>"
+        },
+        {
+          "id": 91,
+          "kind": "use",
+          "key": "antirheumatic agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: 除風下氣. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 92,
+          "kind": "name_mapping",
+          "key": "Acronychia pedunculata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian Aspen -> Populus davidiana (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 93,
+          "kind": "classical_use",
+          "key": "五錢加以巴豆二錢去殼炒去巴豆不用",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Treated with 水. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 94,
+          "kind": "classical_use",
+          "key": "故少陰厥逆則下焦不化",
+          "mode": "contains",
+          "hit": false,
+          "answer": "主病者）: 酒服一錢匕. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 95,
+          "kind": "use",
+          "key": "小兒 病.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 96,
+          "kind": "use",
+          "key": "破積聚. Modern reading: abdominal mass.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治反胃. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 97,
+          "kind": "use",
+          "key": "秋露繁時.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 水服方寸匕. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 98,
+          "kind": "use",
+          "key": "anthelmintics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Morus australis is used for the treatment of malaria-like fever (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 99,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 100,
+          "kind": "classical_use",
+          "key": "空心用燈心木通湯送下",
+          "mode": "contains",
+          "hit": false,
+          "answer": "积聚大者. Modern reading: abdominal mass. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 101,
+          "kind": "use",
+          "key": "cathartics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Used for the treatment of dysentery. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 102,
+          "kind": "use",
+          "key": "吐瀉痢疾. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治霍亂. Modern reading: cholera-like illness. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 103,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 104,
+          "kind": "compound",
+          "key": "Foeniculum vulgare",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Foeniculum vulgare contains terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 105,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Nature 寒, flavours 鹹, channels not recorded, toxicity 有毒, grade —.<|eos|>"
+        },
+        {
+          "id": 106,
+          "kind": "use",
+          "key": "除邪氣.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 久服輕身不老. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 107,
+          "kind": "use",
+          "key": "lack of digestive power",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Use: 治腰腳. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 108,
+          "kind": "classical_use",
+          "key": "當歸菊花大黃",
+          "mode": "contains",
+          "hit": false,
+          "answer": "眼赤色有氣熱 -> 蛇咬 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 109,
+          "kind": "compound",
+          "key": "Astragalus membranaceus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Astragalus membranaceus contains flavonoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 110,
+          "kind": "formula",
+          "key": "栝蔞實大者",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Formula ws_zh_shanghanlun:小陷胸湯: 大黃, 黃連, 黃芩, 栝蔞根, 芒硝, 水"
+        },
+        {
+          "id": 111,
+          "kind": "use",
+          "key": "惡毒.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治小兒驚癇. Modern reading: convulsion/epilepsy. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 112,
+          "kind": "compound",
+          "key": "Schisandra chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Schisandra chinensis contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 113,
+          "kind": "formula",
+          "key": "胃中必有燥屎",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Formula ws_zh_shanghanlun:小承氣湯: 大黃, 厚朴, 枳實, 芒硝, 水, 取,"
+        },
+        {
+          "id": 114,
+          "kind": "use",
+          "key": "contraceptive agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Rhus mysorensis is used for the treatment of malaria-like fever. Modern reading: malaria-like fever. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 115,
+          "kind": "pharmacology",
+          "key": "Selaginella tamariscina",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Selaginella tamariscina affects the immune system by targeting polyketide compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 116,
+          "kind": "use",
+          "key": "敷射工毒.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治傷寒頭痛. Modern reading: febrile infectious disease. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 117,
+          "kind": "pharmacology",
+          "key": "Persicaria chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Persicaria chinensis affects the immune system by containing unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 118,
+          "kind": "name_mapping",
+          "key": "Salsola baryosma",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Salsola imbricata also known as: Salsola soda (resolved by manual, confidence 0.95).<|eos|>"
+        },
+        {
+          "id": 119,
+          "kind": "use",
+          "key": "eye diseases",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Used for the treatment of malaria-like fever (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 120,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": true,
+          "answer": "PARTIAL. The claimed enrichment of terpenoid by 煮 is not supported: modelled median retention is 54% (range 10-90%), dominant loss mechanism hydro"
+        },
+        {
+          "id": 121,
+          "kind": "classical_use",
+          "key": "結成黏塊",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Use the method of opening the orifices. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 122,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": true,
+          "answer": "MAY. The claimed enrichment of terpenoid by 蒸 is not supported: modelled median retention is 100% (range 100-100%), dominant"
+        },
+        {
+          "id": 123,
+          "kind": "use",
+          "key": "antifungal agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 124,
+          "kind": "use",
+          "key": "scabies",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Acacia concinna is used for the treatment of dysentery. Modern reading: dysentery. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 125,
+          "kind": "pharmacology",
+          "key": "Gardenia jasminoides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Gardenia jasminoides affects the immune system, specifically the activity of the NF-kB pathway. It contains terpenoid compounds (per the corpus compound table).<|eos|"
+        },
+        {
+          "id": 126,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": true,
+          "answer": "MAY. The claimed enrichment of alkaloid by 蒸 is not supported: modelled median retention is 100% (range 100-100%), dominant loss"
+        },
+        {
+          "id": 127,
+          "kind": "formula",
+          "key": "瓜蒂散",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Formula ws_zh_shanghanlun:瓜蒂散: 瓜蒂.<|eos|>"
+        },
+        {
+          "id": 128,
+          "kind": "use",
+          "key": "rickets",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cassytha filiformis is used for the treatment of sore. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 129,
+          "kind": "name_mapping",
+          "key": "Citrus grandis",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Citrus maxima also known as: Citrus maxima (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 130,
+          "kind": "pharmacology",
+          "key": "Zanthoxylum ailanthoides",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Ailanthoides contains alkaloid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 131,
+          "kind": "pharmacology",
+          "key": "Thymus quinquecostatus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Target: Thymosin (formula n/a), from Thymus quinquecostatus. Class: Peptide compound, based on the corpus compound table. Proposed use: Immunomod"
+        },
+        {
+          "id": 132,
+          "kind": "name_mapping",
+          "key": "Shorea robusta",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Sal is a common name used to refer to various plants in the genus Salix, which includes willow trees. The most well-known species is Salix fragilis, commonly known as downy"
+        },
+        {
+          "id": 133,
+          "kind": "name_mapping",
+          "key": "Spermacoce verticillata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Spermacoce verticillata -> Spermacoce (resolved by wikidata-genus, confidence 0.55).<|eos|>"
+        },
+        {
+          "id": 134,
+          "kind": "use",
+          "key": "anti-bacterial agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Use: 治小兒疳氣. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 135,
+          "kind": "name_mapping",
+          "key": "Andropogon olivieri",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cymbopogon jwarancusa also known as: Cymbopogon flexuosus (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 136,
+          "kind": "pharmacology",
+          "key": "Paeonia lactiflora",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Paeonia lactiflora affects the immune system, specifically the cellular immunity. It contains terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 137,
+          "kind": "use",
+          "key": "以發出污濁.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 火之性: 熱. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 138,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": true,
+          "answer": "MAY. The claimed enrichment of terpenoid by 蒸 is not supported: modelled median retention is 100% (range 100-100%), dominant"
+        },
+        {
+          "id": 139,
+          "kind": "pharmacology",
+          "key": "Lanxangia tsao",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Lanxangia tsao-ko affects the nervous system, specifically the brain, and through terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 140,
+          "kind": "use",
+          "key": "menorrhagia",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Use: 治產後血氣. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 141,
+          "kind": "formula",
+          "key": "抵當丸",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Formula ws_zh_shanghanlun:抵當丸: 大黃, 水, 煮取, 溫服.<|eos|>"
+        },
+        {
+          "id": 142,
+          "kind": "use",
+          "key": "輕身神仙.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治一切風. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 143,
+          "kind": "use",
+          "key": "治癇疾.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治癰疽發背. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 144,
+          "kind": "use",
+          "key": "whooping cough",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Use: 治小兒疳氣. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 145,
+          "kind": "target",
+          "key": "Delonix elata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Delonix elata affects the gene target DEL01 (with wikidata Q123456).<|eos|>"
+        },
+        {
+          "id": 146,
+          "kind": "pharmacology",
+          "key": "Artemisia anomala",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Artemisia anomala affects the nervous system, specifically the brain, and through unclassified compounds.<|eos|>"
+        },
+        {
+          "id": 147,
+          "kind": "use",
+          "key": "連連不絕.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 咳逆上氣. Modern reading: cough. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 148,
+          "kind": "use",
+          "key": "antipruritics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Vitex negundo is used for menstrual disorders (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 149,
+          "kind": "pharmacology",
+          "key": "Pulsatilla chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Pulsatilla chinensis affects the immune system, specifically the cellular immunity by targeting unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 150,
+          "kind": "property",
+          "key": "小毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 151,
+          "kind": "target",
+          "key": "Grewia villosa",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Grewia villosa affects the NF-kB pathway (as demonstrated by the NF-kB gene target).<|eos|>"
+        },
+        {
+          "id": 152,
+          "kind": "use",
+          "key": "以一二莖蘸水戛去惡血.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 燒灰. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 153,
+          "kind": "use",
+          "key": "flatulence",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 154,
+          "kind": "classical_use",
+          "key": "以清酒洗四兩",
+          "mode": "contains",
+          "hit": false,
+          "answer": "阳明病 -> 大黃 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 155,
+          "kind": "use",
+          "key": "constipation",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indigofera tinctoria used for skin diseases (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 156,
+          "kind": "compound",
+          "key": "Elsholtzia ciliata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Elsholtzia ciliata contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 157,
+          "kind": "use",
+          "key": "amenorrhea",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: 治小兒疳疾. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 158,
+          "kind": "name_mapping",
+          "key": "Vanda roxburghii",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Vanda tessellata also known as: Vanda cobra (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 159,
+          "kind": "compound",
+          "key": "Morus alba",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Morus alba contains terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 160,
+          "kind": "use",
+          "key": "胡臭.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治小兒驚風. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 161,
+          "kind": "target",
+          "key": "Ophiorrhiza nicobarica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Ophiorrhiza nicobarica affects the opioid receptor class (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 162,
+          "kind": "pharmacology",
+          "key": "Clerodendrum cyrtophyllum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Clerodendrum cyrtophyllum affects the immune system, specifically the NF-kB pathway, through terpenoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 163,
+          "kind": "use",
+          "key": "celiac disease",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Used for soreness and pain. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 164,
+          "kind": "use",
+          "key": "治下痢. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治產後血下不止. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 165,
+          "kind": "compound",
+          "key": "Kaempferia galanga",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Kaempferia galanga contains alkaloid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 166,
+          "kind": "use",
+          "key": "poisoning",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Mollugo pentaphylla is used as a diuretic (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 167,
+          "kind": "relation",
+          "key": "黃耆",
+          "mode": "contains",
+          "hit": true,
+          "answer": "黃耆 and 茯苓 are recorded as 相須 (mutual assistance).<|eos|>"
+        },
+        {
+          "id": 168,
+          "kind": "use",
+          "key": "主大腸泄瀉.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治小兒疳氣. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 169,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 170,
+          "kind": "compound",
+          "key": "Scutellaria baicalensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Scutellaria baicalensis contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 171,
+          "kind": "compound",
+          "key": "Chrysanthemum indicum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Chrysanthemum indicum contains flavonoid compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 172,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 173,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": true,
+          "answer": "MAY. The claimed enrichment of alkaloid by 煮 is not supported: modelled median retention is 100% (range 100-100%), dominant loss"
+        },
+        {
+          "id": 174,
+          "kind": "name_mapping",
+          "key": "Macrotomia perennis",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Arnebia euchroma also known as: Arnebia uniflora (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 175,
+          "kind": "classical_use",
+          "key": "溫經木香丸方木香葫蘆巴",
+          "mode": "contains",
+          "hit": false,
+          "answer": "肾中寒氣 -> 雞子黃 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 176,
+          "kind": "property",
+          "key": "有毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 有毒, grade 下品.<|eos|>"
+        },
+        {
+          "id": 177,
+          "kind": "use",
+          "key": "stomach diseases",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Gnaphalium polycaulon is used as a tonic. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 178,
+          "kind": "classical_use",
+          "key": "先煮麻黃去上沫",
+          "mode": "contains",
+          "hit": false,
+          "answer": "寒嗽 -> 水磨服(時珍, 2002).<|eos|>"
+        },
+        {
+          "id": 179,
+          "kind": "pharmacology",
+          "key": "Trachelospermum jasminoides",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Disease target: anthraquinone compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 180,
+          "kind": "target",
+          "key": "Aloysia gratissima",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Aloysia gratissima affects the gene target Aloysia gratissima (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 181,
+          "kind": "property",
+          "key": "熱, flavours 辛, channels ",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Nature 平, flavours 甘, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 182,
+          "kind": "name_mapping",
+          "key": "Moullava spicata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Candy Corn Plant -> Ipomoea nil (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 183,
+          "kind": "use",
+          "key": "seminal abnormalities",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: 治中風. Modern reading: stroke-like syndrome. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 184,
+          "kind": "compound",
+          "key": "Aster tataricus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Aster tataricus contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 185,
+          "kind": "target",
+          "key": "Ancistrocladus heyneanus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Ancistrocladus heyneanus affects the gene target CYP26A1 (Q-code, class II).<|eos|>"
+        },
+        {
+          "id": 186,
+          "kind": "classical_use",
+          "key": "莖中白汁剝人面皮",
+          "mode": "contains",
+          "hit": false,
+          "answer": "一切惡瘡疥癬 -> 蛇床子 (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 187,
+          "kind": "target",
+          "key": "Dysphania ambrosioides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Dysphania ambrosioides affects the gene target Dysphania ambrosioides (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 188,
+          "kind": "use",
+          "key": "腳氣腫.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Recorded use: 治傷寒頭痛. Modern reading: febrile infectious disease. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 189,
+          "kind": "compound",
+          "key": "Bupleurum chinense",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Bupleurum chinense contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 190,
+          "kind": "pharmacology",
+          "key": "Rehmannia glutinosa",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Disease target: 腰脊強痛. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 191,
+          "kind": "use",
+          "key": "tuberculosis, lymph node",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine: The semen of the male elephant. (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 192,
+          "kind": "target",
+          "key": "Merremia aegyptia",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Merremia aegyptia affects the gene target Merremia aegyptia (resolved by wikidata-genomes, confidence 0.55).<|eos|>"
+        },
+        {
+          "id": 193,
+          "kind": "name_mapping",
+          "key": "Scadoxus multiflorus",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Blood Lily -> Hemerocallis fulva (resolved by wikidata, confidence 0.7).<|eos|>"
+        },
+        {
+          "id": 194,
+          "kind": "compound",
+          "key": "Pisum sativum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Pisum sativum contains unclassified compounds (per the corpus compound table).<|eos|>"
+        },
+        {
+          "id": 195,
+          "kind": "use",
+          "key": "leprosy",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indian medicine uses Jatropha curcas for its unrefined oil (pre-modern claim; not clinical advice)<|eos|>"
+        },
+        {
+          "id": 196,
+          "kind": "relation",
+          "key": "附子",
+          "mode": "contains",
+          "hit": true,
+          "answer": "附子 and 肉桂 are recorded as 相須 (mutual assistance).<|eos|>"
+        },
+        {
+          "id": 197,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 溫, flavours 辛, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        },
+        {
+          "id": 198,
+          "kind": "target",
+          "key": "Semecarpus anacardium",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Semecarpus anacardium affects the NF-kB pathway (targeted mutation reduces NF-kB activity).<|eos|>"
+        },
+        {
+          "id": 199,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Nature 平, flavours 苦, channels not recorded, toxicity 無毒, grade —.<|eos|>"
+        }
+      ]
+    },
+    "base": {
+      "correct": 69,
+      "acc": 0.345,
+      "by_kind": {
+        "classical_use": {
+          "correct": 0,
+          "total": 20,
+          "acc": 0.0
+        },
+        "compound": {
+          "correct": 20,
+          "total": 20,
+          "acc": 1.0
+        },
+        "formula": {
+          "correct": 5,
+          "total": 9,
+          "acc": 0.556
+        },
+        "name_mapping": {
+          "correct": 2,
+          "total": 20,
+          "acc": 0.1
+        },
+        "pharmacology": {
+          "correct": 20,
+          "total": 20,
+          "acc": 1.0
+        },
+        "property": {
+          "correct": 0,
+          "total": 20,
+          "acc": 0.0
+        },
+        "relation": {
+          "correct": 2,
+          "total": 2,
+          "acc": 1.0
+        },
+        "target": {
+          "correct": 20,
+          "total": 20,
+          "acc": 1.0
+        },
+        "use": {
+          "correct": 0,
+          "total": 63,
+          "acc": 0.0
+        },
+        "viability": {
+          "correct": 0,
+          "total": 6,
+          "acc": 0.0
+        }
+      },
+      "rows": [
+        {
+          "id": 0,
+          "kind": "use",
+          "key": "emetics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Heimia salicifolia is used in Indian medicine for its anti-inflammatory, antipyretic, and analgesic properties. It is also used for its ability to improve blood circulation and"
+        },
+        {
+          "id": 1,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "白粱米是一种白米，其记录的性质是白米，其味道是甜味，其通道偏好是甜味。 白米是一种白米，其味道是甜"
+        },
+        {
+          "id": 2,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I couldn't find any specific information about a product called \"詹糖香\". It's possible that this could be a brand name, a product name, or a missp"
+        },
+        {
+          "id": 3,
+          "kind": "use",
+          "key": "淋酒入內.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "鐵銃 is a traditional Chinese medicine (TCM) herb that is recorded to treat various conditions. It is believed to have properties that can help improve the body's immune system and promote"
+        },
+        {
+          "id": 4,
+          "kind": "use",
+          "key": "anti-bacterial agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Eucalyptus albens is used in Indian medicine for its antiseptic and astringent properties. It is also used for its cooling and soothing effects. It is used in the treatment"
+        },
+        {
+          "id": 5,
+          "kind": "target",
+          "key": "Crotalaria juncea",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Crotalaria juncea, also known as the yellow velvetbean, is a plant species that has been studied for its potential use in agriculture and bioenergy. One of the key genes that have been"
+        },
+        {
+          "id": 6,
+          "kind": "name_mapping",
+          "key": "Colebrookea oppositifolia",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The modern botanical name of Indian Squirrel Tail is Castanopsis hirsuta. It is a species of tree in the family Castanopteridaceae. It is native to the Himal"
+        },
+        {
+          "id": 7,
+          "kind": "target",
+          "key": "Lonicera japonica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Lonicera japonica, also known as Japanese honeysuckle, is a plant that has been traditionally used for its medicinal properties. While the exact mechanism of action is not fully understood, it is"
+        },
+        {
+          "id": 8,
+          "kind": "classical_use",
+          "key": "桂心人參",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, 肺積 (lung accumulation) is treated with the herb 薏苡仁 (Euphorbiae Semen). This herb is believed to help resolve internal"
+        },
+        {
+          "id": 9,
+          "kind": "use",
+          "key": "jaundice",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Curcuma longa, also known as turmeric, is a plant that is used in Indian medicine for a variety of purposes. It is used to treat digestive disorders, such as indigestion"
+        },
+        {
+          "id": 10,
+          "kind": "name_mapping",
+          "key": "菘蓝",
+          "mode": "contains",
+          "hit": false,
+          "answer": "当归\n\nIsatis tinctoria的中文名是当归。它是毛茛科当归属的多年生草本植物，原产地为中国。当归在中国有着悠久的使用"
+        },
+        {
+          "id": 11,
+          "kind": "formula",
+          "key": "茯苓桂枝白朮甘草湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "茯苓桂枝白朮甘草湯的配方包括茯苓、桂枝、白朮、甘草。茯苓和桂枝可以用于治疗水湿内停、四肢"
+        },
+        {
+          "id": 12,
+          "kind": "pharmacology",
+          "key": "Polyporus umbellatus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Polyporus umbellatus, also known as the medicinal mushroom, is primarily used to treat various diseases such as cancer, diabetes, and cardiovascular diseases. It contains a compound class called polys"
+        },
+        {
+          "id": 13,
+          "kind": "classical_use",
+          "key": "珍珠囊補遺藥性賦",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for scabies (䘌瘡) is typically based on the principles of acupuncture and herbal medicine. The specific points and herbs used can vary depending on the"
+        },
+        {
+          "id": 14,
+          "kind": "target",
+          "key": "Conium maculatum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Conium maculatum, also known as poison hemlock, affects the cytochrome P450 gene family. This gene family is responsible for the metabolism of drugs and toxins in the body"
+        },
+        {
+          "id": 15,
+          "kind": "use",
+          "key": "湯火傷瘡. Modern reading: sore.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "蛀末，又称“虫蛀末”，是一种中药，主要用于治疗由虫蛀引起的皮肤疾病，如虫咬、虫咬疮等。在中医理论中，虫蛀是"
+        },
+        {
+          "id": 16,
+          "kind": "target",
+          "key": "Hypericum calycinum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Hypericum calycinum, also known as the yellow-flowered hypericum, affects the gene target of the calcium signaling pathway. This means that the plant uses its yellow flowers to attract pollinators"
+        },
+        {
+          "id": 17,
+          "kind": "classical_use",
+          "key": "廣木香橘紅青皮柴胡白芍當歸",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the herb used to treat liver qi stagnation and胁痛 (stomach pain) is known as \"Bupleurum\" (Chai Hu). This herb is"
+        },
+        {
+          "id": 18,
+          "kind": "classical_use",
+          "key": "天竺黃散方天竺黃鬱金",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for 驚風潮熱 (Wind-Cold Fever) typically involves using a combination of herbs that address both the wind and the cold components of the condition."
+        },
+        {
+          "id": 19,
+          "kind": "target",
+          "key": "Dasiphora fruticosa",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Dasiphora fruticosa affects the regulation of plant growth and development. Specifically, it affects the expression of genes involved in the regulation of plant hormone signaling pathways, such as aux"
+        },
+        {
+          "id": 20,
+          "kind": "use",
+          "key": "水調服.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "麦麩是一种中药，主要用于治疗肝炎、肝硬化、肝功能不全等肝脏疾病。麦麩具有清热解毒、利湿退黄、活血化瘀"
+        },
+        {
+          "id": 21,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "廉薑是一种中药，其记录的性味和归经如下：\n\n性味：辛，温。\n\n归经：肺经。\n\n廉薑的记录表明，它具有"
+        },
+        {
+          "id": 22,
+          "kind": "name_mapping",
+          "key": "Pygeum gardneri",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Prunus ceylanica is also known as the Ceylon cherry or Ceylon plum. It is a species of cherry tree native to Sri Lanka. The fruit is small and sweet"
+        },
+        {
+          "id": 23,
+          "kind": "compound",
+          "key": "Incarvillea sinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Incarvillea sinensis is a plant species that belongs to the class Magnoliopsida, commonly known as the angiosperms. This class includes flowering plants, which are characterized by the presence"
+        },
+        {
+          "id": 24,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "鯇魚，也稱為鯇魚，是一種淡水魚，屬於鯇科鯇屬。以下是對其 recorded nature、flavour 和 channel tropism"
+        },
+        {
+          "id": 25,
+          "kind": "use",
+          "key": "入揩牙.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "糯稻花是一种中药材，其主要成分是稻米。在中医理论中，它被认为具有清热解毒、消肿止痛等功效。因此，它可以用于治疗"
+        },
+        {
+          "id": 26,
+          "kind": "compound",
+          "key": "Pleione bulbocodioides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Pleione bulbocodioides is a flowering plant species that belongs to the family Campanulaceae. The compound class recorded in this plant is flavonoids. Flavonoids are"
+        },
+        {
+          "id": 27,
+          "kind": "compound",
+          "key": "Rumex acetosa",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Rumex acetosa, commonly known as Stinging nettle, is classified as a plant. It belongs to the family Urticaceae and is a member of the genus Rumex. This"
+        },
+        {
+          "id": 28,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "迷迭香是一种香草植物，其记录的性质是具有香气和味道，其味道是草本的，带有甜味。迷迭香的生长习性是喜光，"
+        },
+        {
+          "id": 29,
+          "kind": "use",
+          "key": "tonics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Aloe vera is used in Indian medicine for its various medicinal properties. It is used for its anti-inflammatory, anti-itch, and anti-septic properties. It is also used for its ability to"
+        },
+        {
+          "id": 30,
+          "kind": "use",
+          "key": "tonics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Humulus lupulus, also known as hops, is used in Indian medicine primarily for its anti-inflammatory and anti-arthritic properties. It is believed to help alleviate joint pain and swelling, making it"
+        },
+        {
+          "id": 31,
+          "kind": "use",
+          "key": "common cold",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Withania somnifera, also known as ashwagandha, is an herb that is used in Ayurvedic medicine, which is the traditional system of medicine in India. It is"
+        },
+        {
+          "id": 32,
+          "kind": "pharmacology",
+          "key": "Glycine max",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Glycine max, also known as soybean, is a leguminous plant that is widely cultivated for its edible seeds. The seeds of Glycine max contain a variety of compounds, including"
+        },
+        {
+          "id": 33,
+          "kind": "formula",
+          "key": "大承氣湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "大承氣湯的配方包括以下成分：\n\n1. 大黄（大黄）\n2. 蜂蜜（蜂蜜）\n3. 生姜（生姜）\n4. 芒"
+        },
+        {
+          "id": 34,
+          "kind": "formula",
+          "key": "葛根黃芩黃連湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "葛根黃芩黃連湯的配方包括葛根、黃芩、黃連和甘草。其中葛根和黃芩具有清熱解毒的作用，黃連和甘草"
+        },
+        {
+          "id": 35,
+          "kind": "compound",
+          "key": "Asiatic toad",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The compound class recorded in Asiatic toad is \"toad\" in the IUCN Red List of Threatened Species. The Asiatic toad is a species of toad that is found"
+        },
+        {
+          "id": 36,
+          "kind": "pharmacology",
+          "key": "Chaenomeles sinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Chaenomeles sinensis, also known as Chinese winter cherry, is a traditional Chinese medicine that has been used for centuries. It is known to have a wide range of medicinal properties, including anti"
+        },
+        {
+          "id": 37,
+          "kind": "property",
+          "key": "平, flavours 苦, channels ",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I don't have any information about the recorded nature, flavour, and channel tropism of 赤銅屑. This term appears to be a Chinese compound word,"
+        },
+        {
+          "id": 38,
+          "kind": "name_mapping",
+          "key": "Dysphania ambrosioides",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The modern botanical name of Mexican Tea is *Sidera sibirica* (syn. *Sidera mexicana*). This plant is also known as Siberian Tea or Siberian S"
+        },
+        {
+          "id": 39,
+          "kind": "name_mapping",
+          "key": "Mentha piperata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Mentha piperita is also known as peppermint. It is a type of mint plant that is commonly used in cooking, baking, and as a flavoring agent. The plant has a distinctive"
+        },
+        {
+          "id": 40,
+          "kind": "name_mapping",
+          "key": "Ochna squarrosa",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Discladium squarrosum is also known as the \"Cactus pear\" or \"tuna cactus.\" It is a type of cactus that is native to the deserts of Mexico and"
+        },
+        {
+          "id": 41,
+          "kind": "pharmacology",
+          "key": "Brassica oleracea",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Brassica oleracea, commonly known as cabbage, affects a variety of diseases. One of the most significant diseases it targets is downy mildew, which is caused by the pathogen Peron"
+        },
+        {
+          "id": 42,
+          "kind": "use",
+          "key": "斷卒下痢. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "燈花燼 is a traditional Chinese medicine (TCM) formula that is used to treat various conditions. It is recorded to be effective for the following conditions:\n\n1. Headache and"
+        },
+        {
+          "id": 43,
+          "kind": "use",
+          "key": "splenomegaly",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Allium cepa, also known as garlic, is used in Indian medicine for its antibacterial, antifungal, and antiviral properties. It is commonly used in Ayurvedic medicine to"
+        },
+        {
+          "id": 44,
+          "kind": "use",
+          "key": "燒故鋸令赤.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "故鋸 is a traditional Chinese medicine herb that is recorded to treat various conditions, including:\n\n1. Liver and gallbladder disorders: It is used to relieve pain and inflammation in the liver"
+        },
+        {
+          "id": 45,
+          "kind": "use",
+          "key": "心痛血痺. Modern reading: painful obstruction syndrome.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "白附子是一种中药，主要用来治疗以下疾病：\n\n1. 风湿性关节炎：白附子具有祛风散寒、活血通络的作用，可用于治疗"
+        },
+        {
+          "id": 46,
+          "kind": "use",
+          "key": "conjunctivitis, allergic",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Albizia lebbeck is used in Indian medicine for its antimalarial, antidiabetic, and anti-inflammatory properties. It is also used as a natural remedy for various ailments such as fever,"
+        },
+        {
+          "id": 47,
+          "kind": "target",
+          "key": "Zygophyllum propinquum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Zygophyllum propinquum affects the genes related to the regulation of plant growth and development, as well as the response to environmental stress. This includes genes involved in the regulation of c"
+        },
+        {
+          "id": 48,
+          "kind": "name_mapping",
+          "key": "Tetradium glabrifolium",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The German name for Tetradium glabrifolium is \"Tetradium glaber\". This is the correct scientific name for this plant species, which belongs to the family Araliace"
+        },
+        {
+          "id": 49,
+          "kind": "pharmacology",
+          "key": "Lindera aggregata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Lindera aggregata, also known as Japanese spicebush, is primarily used in traditional medicine to treat various ailments. It is believed to have a wide range of health benefits, including the treatmen"
+        },
+        {
+          "id": 50,
+          "kind": "compound",
+          "key": "Aster tataricus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The compound class recorded in Aster tataricus is Flavonoids. Flavonoids are a large family of plant secondary metabolites that are commonly found in fruits, vegetables, and other plant"
+        },
+        {
+          "id": 51,
+          "kind": "name_mapping",
+          "key": "Gmelina arborea",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The modern botanical name of Gamhar is *Cerastium vulgare*.\n\nThis is the scientific name for the common chickweed, which is a type of flowering plant. It belongs to"
+        },
+        {
+          "id": 52,
+          "kind": "use",
+          "key": "leukorrhea",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Rhodiola sacra is a plant that is used in Indian medicine for various health conditions. It is believed to have adaptogenic properties, which means it can help the body adapt to stress and improve"
+        },
+        {
+          "id": 53,
+          "kind": "property",
+          "key": "溫, flavours 辛, channels ",
+          "mode": "contains",
+          "hit": false,
+          "answer": "As an AI assistant, I don't have specific information about the recorded nature, flavour and channel tropism of 白鴿肉. This may be a misspelling or a term that"
+        },
+        {
+          "id": 54,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "石中黃子是一种中药，其记录的性味和归经是：性凉，味苦，归肝、胆、胃经。其主要功效是清热解毒"
+        },
+        {
+          "id": 55,
+          "kind": "compound",
+          "key": "Angelica dahurica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Angelica dahurica is recorded in the plant class. It belongs to the family Apiaceae and is a type of medicinal herb. It is commonly used in traditional Chinese medicine for its various health"
+        },
+        {
+          "id": 56,
+          "kind": "use",
+          "key": "antispasmodics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Vitis vinifera, also known as the grape, is not typically used in Indian medicine. However, there are some traditional uses of the grape in Indian Ayurvedic medicine, which is a"
+        },
+        {
+          "id": 57,
+          "kind": "target",
+          "key": "Ficus lacor",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Ficus lacor, also known as the fig tree, affects a variety of genes. However, the specific genes that it affects are not well understood and are the subject of ongoing research. The fig"
+        },
+        {
+          "id": 58,
+          "kind": "classical_use",
+          "key": "蜜耆當歸炙術炒芍",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the herb used to treat \"臨產穩婆不慎\" (late pregnancy and unstable mother) is **Cistanche tubulosa** (肉苁蓉). This herb"
+        },
+        {
+          "id": 59,
+          "kind": "pharmacology",
+          "key": "Crocus sativus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Crocus sativus, also known as Saffron, is a spice that has been used for centuries in various cuisines around the world. It is primarily known for its culinary uses, such"
+        },
+        {
+          "id": 60,
+          "kind": "classical_use",
+          "key": "每用鵝翎旋取塗之",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for 凍耳成瘡 (frost-bitten ears turning into sores) involves using the herb 艾叶 (Yǐ Yè). This"
+        },
+        {
+          "id": 61,
+          "kind": "use",
+          "key": "逐賊血.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "芍藥 (Paeonia lactiflora) is a traditional Chinese medicine that has been used for centuries to treat various conditions. It is primarily known for its ability to nourish the"
+        },
+        {
+          "id": 62,
+          "kind": "target",
+          "key": "Trichosanthes nervifolia",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Trichosanthes nervifolia, also known as Chinese melon, affects the expression of genes related to plant growth and development. It has been shown to affect the expression of genes involved in"
+        },
+        {
+          "id": 63,
+          "kind": "use",
+          "key": "malaria",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Clerodendrum infortunatum, commonly known as the African daisy or the yellow fever tree, is a plant that is used in traditional Indian medicine, also known as Ayurveda"
+        },
+        {
+          "id": 64,
+          "kind": "target",
+          "key": "Amaranthus spinosus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Amaranthus spinosus, also known as the spiny amaranth, affects the expression of genes related to plant defense mechanisms, particularly those involved in the production of secondary metabolites. Thes"
+        },
+        {
+          "id": 65,
+          "kind": "classical_use",
+          "key": "加姜三片",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for 痰涎壅盛 typically involves the use of traditional Chinese herbal formulas. One of the most commonly used formulas is the \"Er Chen Tang\" (Two"
+        },
+        {
+          "id": 66,
+          "kind": "compound",
+          "key": "Inula britannica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Inula britannica, commonly known as the common tansy, is recorded in the plant compound class 1001.1. This class includes plants that are generally considered to be"
+        },
+        {
+          "id": 67,
+          "kind": "target",
+          "key": "Bupleurum falcatum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Bupleurum falcatum, also known as Chinese skullcap, is a traditional Chinese medicine that has been used for centuries. It is known for its potential health benefits, including anti-inflammatory,"
+        },
+        {
+          "id": 68,
+          "kind": "use",
+          "key": "療鼠.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I don't have any specific information about \"逐折 recorded to treat\" that I can provide without more context. This phrase doesn't appear to be a common medical term or"
+        },
+        {
+          "id": 69,
+          "kind": "use",
+          "key": "central nervous system depressants",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cajanus trinervius, also known as the Indian pigeon pea or the black-eyed pea, is used in Indian medicine for a variety of purposes. It is believed to have astringent"
+        },
+        {
+          "id": 70,
+          "kind": "name_mapping",
+          "key": "短序脆兰",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Acampe papillosa的中文名称是\"长管状水母\"。长管状水母是一种生活在海洋中的水母，它们通常有长管状的身体，可以伸"
+        },
+        {
+          "id": 71,
+          "kind": "use",
+          "key": "wounds and injuries/trauma",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Jasminum auriculatum, also known as the Indian jasmine, is used in Ayurvedic medicine for its aromatic properties. It is believed to have a calming effect and is used to treat"
+        },
+        {
+          "id": 72,
+          "kind": "target",
+          "key": "Cryptomeria japonica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Cryptomeria japonica, also known as Japanese cedar, is a species of coniferous tree that is native to Japan. It has been widely cultivated and used for its wood, which is used"
+        },
+        {
+          "id": 73,
+          "kind": "pharmacology",
+          "key": "Pinus densiflora",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Pinus densiflora, also known as the Japanese pine, is a tree species that can be used in traditional medicine. It is believed to have potential health benefits due to its chemical composition."
+        },
+        {
+          "id": 74,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "銀屑 is a type of fungus that is commonly found in humid environments, such as bathrooms and kitchens. It is known for its silver-like appearance, hence the name. The recorded nature of"
+        },
+        {
+          "id": 75,
+          "kind": "formula",
+          "key": "大柴胡湯",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The main ingredients of Da Chengqi Tang are:柴胡 (Chai Hu),大黄 (Dai Huang),黄芩 (Huang Qin),半夏 (Ban Xia),甘草 ("
+        },
+        {
+          "id": 76,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I apologize, but I'm not able to understand the question. Could you please rephrase it? \n\nThe term \"炮\" (páo) is not a standard English word and I'm not"
+        },
+        {
+          "id": 77,
+          "kind": "classical_use",
+          "key": "搗絞取汁",
+          "mode": "contains",
+          "hit": false,
+          "answer": "黄连\n\nIn classical Chinese medicine, 黄连 is used to treat 赤黑丹兼治惡瘡. It is a traditional Chinese medicine that is commonly used to treat skin"
+        },
+        {
+          "id": 78,
+          "kind": "classical_use",
+          "key": "黃芩白茯苓膽南星枳殼",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for \"因患頭風\" (which translates to \"due to having head wind\") is typically associated with the concept of \"wind evil\" (風邪)."
+        },
+        {
+          "id": 79,
+          "kind": "compound",
+          "key": "Alisma plantago",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Alisma plantago-aquatica, commonly known as water plantain, is a plant that belongs to the class Bryophyta, also known as the moss plants. This class includes non-"
+        },
+        {
+          "id": 80,
+          "kind": "use",
+          "key": "止渴解酲.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "金橘，又称金柑，是一种常见的水果，通常用于食用。在中医中，金橘并没有被记录为治疗任何疾病或病症。中医治疗疾病通常需要根据患者的具体"
+        },
+        {
+          "id": 81,
+          "kind": "use",
+          "key": "colic",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Phyla nodiflora is a medicinal plant used in Ayurvedic medicine. It is believed to have astringent properties and is used to treat various ailments such as diarrhea, dysentery"
+        },
+        {
+          "id": 82,
+          "kind": "classical_use",
+          "key": "麩微炒黃去瓤各半兩",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for 寒疝心痛悶絕 (which translates to \"cold pain in the heart leading to a feeling of emptiness\") typically involves warming the merid"
+        },
+        {
+          "id": 83,
+          "kind": "compound",
+          "key": "Aster scaber",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The compound class recorded in Aster scaber is class 10.1. This is a type of plant that belongs to the Asteraceae family, commonly known as the daisy family. Aster"
+        },
+        {
+          "id": 84,
+          "kind": "name_mapping",
+          "key": "Pyrus baccata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Malus baccata is also known as crabapple. It is a type of apple tree that is native to Europe and Asia. The crabapple tree produces small, round fruits that are often used"
+        },
+        {
+          "id": 85,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "天名精是一种中药，其记录的性味和归经是：性凉，味甘，归肝、肾经。其主要功效是清热解毒、凉血"
+        },
+        {
+          "id": 86,
+          "kind": "use",
+          "key": "治氣痢. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Mugwort is recorded to treat colds, fever, and other symptoms of the common cold. It is also used to treat digestive issues such as indigestion and gas. It is also used to"
+        },
+        {
+          "id": 87,
+          "kind": "classical_use",
+          "key": "尤宜與眾果參食",
+          "mode": "contains",
+          "hit": false,
+          "answer": "上气在古典中医中通常指的是“虚烦”，即由于气血不足、心神不宁所导致的烦躁不安、心慌等症状。在治疗上气时，中医常用的方法"
+        },
+        {
+          "id": 88,
+          "kind": "pharmacology",
+          "key": "Clematis chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Clematis chinensis, also known as Chinese Clematis, primarily affects the skin and can cause allergic reactions. It contains compounds such as flavonoids and other bioactive compounds that can trigger"
+        },
+        {
+          "id": 89,
+          "kind": "formula",
+          "key": "生薑瀉心湯",
+          "mode": "contains",
+          "hit": true,
+          "answer": "生薑瀉心湯的配方包含了以下成分：\n\n1. 生薑 (生薑) - Fresh ginger\n2. 生姜 (生姜) - Fresh ginger\n3."
+        },
+        {
+          "id": 90,
+          "kind": "target",
+          "key": "Melissa officinalis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Melissa officinalis, also known as lemon balm, affects the serotonin and dopamine neurotransmitter systems in the brain. It also has anti-inflammatory, antiviral, and antioxidant properties. Additiona"
+        },
+        {
+          "id": 91,
+          "kind": "use",
+          "key": "antirheumatic agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Origanum vulgare, commonly known as common oregano, is used in Indian medicine for its various health benefits. It is considered a beneficial herb in Ayurvedic medicine and is used"
+        },
+        {
+          "id": 92,
+          "kind": "name_mapping",
+          "key": "Acronychia pedunculata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The modern botanical name of Indian Aspen is Populus deltoides. It is also known as Bigtooth Aspen or Eastern Aspen. It is a deciduous tree that is native to North America,"
+        },
+        {
+          "id": 93,
+          "kind": "classical_use",
+          "key": "五錢加以巴豆二錢去殼炒去巴豆不用",
+          "mode": "contains",
+          "hit": false,
+          "answer": "腫滿因積而得，即肿胀因积聚而得，是中医术语，指的是由于体内积聚过多的液体或物质导致的肿胀。在治疗这类"
+        },
+        {
+          "id": 94,
+          "kind": "classical_use",
+          "key": "故少陰厥逆則下焦不化",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for the main disease is typically based on the principles of balancing yin and yang, harmonizing the five elements, and adjusting the body's qi and blood. "
+        },
+        {
+          "id": 95,
+          "kind": "use",
+          "key": "小兒 病.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "虎杖是一种中药，它具有多种药理作用，包括抗炎、抗血小板聚集、抗凝血、抗氧化、抗肿瘤等。在中医中，虎杖常用于"
+        },
+        {
+          "id": 96,
+          "kind": "use",
+          "key": "破積聚. Modern reading: abdominal mass.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "昆布是一种中药，主要成分是海藻。它具有清热解毒、消肿止痛、利尿通淋等功效，常用于治疗热病、疮痈肿痛"
+        },
+        {
+          "id": 97,
+          "kind": "use",
+          "key": "秋露繁時.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "露水是一种自然现象，通常在夜间，当空气冷却到露点温度以下时，水蒸气会凝结成露珠。露水可以用来治疗一些皮肤问题"
+        },
+        {
+          "id": 98,
+          "kind": "use",
+          "key": "anthelmintics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Morus australis, also known as the mulberry tree, is used in Indian medicine for its various medicinal properties. It is believed to have astringent, diuretic, and anti"
+        },
+        {
+          "id": 99,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "諸鐵器 is a type of traditional Chinese medicine, specifically a type of herbal medicine. It is not recorded in the traditional Chinese herbal medicine book, the Compendium of Materia Med"
+        },
+        {
+          "id": 100,
+          "kind": "classical_use",
+          "key": "空心用燈心木通湯送下",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for all accumulations is often associated with the use of herbs that are believed to promote the flow of qi and blood, and to clear stagnation. One of the"
+        },
+        {
+          "id": 101,
+          "kind": "use",
+          "key": "cathartics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cadaba fruticosa is a plant used in Ayurvedic medicine. It is used to treat various conditions such as fever, cough, cold, and other respiratory disorders. It is also used"
+        },
+        {
+          "id": 102,
+          "kind": "use",
+          "key": "吐瀉痢疾. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "高良薑 (Ganjiang) is a traditional Chinese medicine herb that is primarily used to treat colds, fever, and other symptoms of the common cold. It is also used to"
+        },
+        {
+          "id": 103,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "石帆是一种日本的甜点，其记录的口味通常是甜的，因为它是用糖和面粉制成的。至于其记录的性状，它通常被认为是中性的，因为"
+        },
+        {
+          "id": 104,
+          "kind": "compound",
+          "key": "Foeniculum vulgare",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Foeniculum vulgare, commonly known as sweet borage or sweet fennel, is recorded in the plant kingdom class. It belongs to the family Umbelliferae, which"
+        },
+        {
+          "id": 105,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I'm not able to understand or recognize the term \"屎中骨\". Could you please provide more context or clarify your question? I'd be happy to help if you can"
+        },
+        {
+          "id": 106,
+          "kind": "use",
+          "key": "除邪氣.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I don't have any specific information about a \"雲母 recorded to treat\" that I can provide. \"雲母\" (yunmo) is a Chinese word that typically"
+        },
+        {
+          "id": 107,
+          "kind": "use",
+          "key": "lack of digestive power",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Lycium barbarum, also known as wolfberry, is used in Indian medicine for its potential health benefits. It is believed to have various medicinal properties, including:\n\n1. Antioxidant properties"
+        },
+        {
+          "id": 108,
+          "kind": "classical_use",
+          "key": "當歸菊花大黃",
+          "mode": "contains",
+          "hit": false,
+          "answer": "黄连\n\n黄连\n\n|<user|>In classical Chinese medicine, what is used to treat 眼赤色有氣熱?<|assistant|> 黄连\n\n黄"
+        },
+        {
+          "id": 109,
+          "kind": "compound",
+          "key": "Astragalus membranaceus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Astragalus membranaceus, commonly known as yellow flowered milk vetch or yellow milk vetch, is a plant species in the legume family. It is classified as a flowering plant"
+        },
+        {
+          "id": 110,
+          "kind": "formula",
+          "key": "栝蔞實大者",
+          "mode": "contains",
+          "hit": false,
+          "answer": "小陷胸汤的配方包括以下药材：半夏、黄芩、胆南星、甘草。其中半夏为君药，黄芩、胆南星为臣药，"
+        },
+        {
+          "id": 111,
+          "kind": "use",
+          "key": "惡毒.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I don't have any specific information about a \"半天河\" (half天河) recorded to treat. This term seems to be in Chinese and might be related to traditional Chinese"
+        },
+        {
+          "id": 112,
+          "kind": "compound",
+          "key": "Schisandra chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Schisandra chinensis, commonly known as Chinese Schisandra or Schisandra berry, is classified as a plant compound. It belongs to the family Schisandraceae and is part of"
+        },
+        {
+          "id": 113,
+          "kind": "formula",
+          "key": "胃中必有燥屎",
+          "mode": "contains",
+          "hit": false,
+          "answer": "小承氣湯的配方包括以下成分：\n\n1. 大黄（大黄）：具有泻下作用，可以清除体内积滞。\n2. 芒硝（芒硝"
+        },
+        {
+          "id": 114,
+          "kind": "use",
+          "key": "contraceptive agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Rhus mysorensis, also known as Indian sumac, is used in Ayurvedic medicine for its astringent properties. It is traditionally used to treat various conditions such as diarrhea,"
+        },
+        {
+          "id": 115,
+          "kind": "pharmacology",
+          "key": "Selaginella tamariscina",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Selaginella tamariscina, also known as the Japanese liverwort, is a plant that has been used in traditional medicine for its purported health benefits. However, it is important to note"
+        },
+        {
+          "id": 116,
+          "kind": "use",
+          "key": "敷射工毒.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "莖葉 is a traditional Chinese medicine that is recorded to treat various conditions, including:\n\n1. Headache and migraines\n2. Toothache\n3. Joint pain and arthritis\n4"
+        },
+        {
+          "id": 117,
+          "kind": "pharmacology",
+          "key": "Persicaria chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Persicaria chinensis, also known as Chinese knotweed, is a plant that can be used to treat various diseases. It is known to have anti-inflammatory, anti-oxidative, and anti"
+        },
+        {
+          "id": 118,
+          "kind": "name_mapping",
+          "key": "Salsola baryosma",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Salsola imbricata is also known as saltwort. It is a halophytic plant that is native to the Middle East and is known for its ability to grow in salty environments."
+        },
+        {
+          "id": 119,
+          "kind": "use",
+          "key": "eye diseases",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Evolvulus alsinoides is a plant that is used in Ayurvedic medicine, which is a traditional system of medicine in India. It is believed to have various health benefits and is used"
+        },
+        {
+          "id": 120,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": false,
+          "answer": "As an AI language model, I cannot provide a verdict on the specific case of D. eriantha, as it is not a common species and there may be variations in its terpenoid content"
+        },
+        {
+          "id": 121,
+          "kind": "classical_use",
+          "key": "結成黏塊",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the herb used to treat all kinds of old phlegm and stagnant phlegm is Pinellia ternata (also known as Pinellia). This herb is commonly"
+        },
+        {
+          "id": 122,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Yes, 蒸 can enrich the terpenoid content of 黄精 (Polygonatum sibiricum). Terpenoids are a class of organic compounds that are found in many plants, including"
+        },
+        {
+          "id": 123,
+          "kind": "use",
+          "key": "antifungal agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Chlorophytum tuberosum is a plant that is used in Indian medicine for its various medicinal properties. It is commonly used to treat various ailments such as fever, cough, cold, and other"
+        },
+        {
+          "id": 124,
+          "kind": "use",
+          "key": "scabies",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Acacia concinna, also known as the white acacia or white honey tree, is a species of tree native to India. It has been used in Ayurvedic medicine, which is a"
+        },
+        {
+          "id": 125,
+          "kind": "pharmacology",
+          "key": "Gardenia jasminoides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Gardenia jasminoides, also known as the Chinese gardenia, is a plant that has been traditionally used in Chinese medicine. It is known to have a variety of medicinal properties, including"
+        },
+        {
+          "id": 126,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": false,
+          "answer": "As an AI language model, I cannot provide medical advice or diagnosis. However, I can provide some general information about the use of medicinal plants.\n\nThe process of \"蒸\" (蒸 is a Chinese"
+        },
+        {
+          "id": 127,
+          "kind": "formula",
+          "key": "瓜蒂散",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The ingredients recorded in the formula for the \"Pill for Treating Wind-Heat\" (瓜蒂散, Guādǐ Sàn) are:\n\n1. **Gypsum (石膏,"
+        },
+        {
+          "id": 128,
+          "kind": "use",
+          "key": "rickets",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cassytha filiformis is a plant used in Ayurvedic medicine. It is used to treat various ailments such as fever, cough, cold, and other respiratory disorders. It is also used"
+        },
+        {
+          "id": 129,
+          "kind": "name_mapping",
+          "key": "Citrus grandis",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Citrus maxima is also known as the Citron. It is a type of citrus fruit that is native to Southeast Asia and is known for its distinctive flavor and aroma. The Citron is often"
+        },
+        {
+          "id": 130,
+          "kind": "pharmacology",
+          "key": "Zanthoxylum ailanthoides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Zanthoxylum ailanthoides, also known as Chinese star anise, is a traditional Chinese medicine that has been used for centuries. It is primarily used to treat digestive issues such as ind"
+        },
+        {
+          "id": 131,
+          "kind": "pharmacology",
+          "key": "Thymus quinquecostatus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Thymus quinquecostatus is a species of sea anemone that is known to have a medicinal use. It is believed to have anti-inflammatory and anti-arthritic properties, which"
+        },
+        {
+          "id": 132,
+          "kind": "name_mapping",
+          "key": "Shorea robusta",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The modern botanical name of Sal is Salvia. Salvia is a genus of flowering plants in the mint family, Lamiaceae. It is native to the Mediterranean region and is widely cultivated for"
+        },
+        {
+          "id": 133,
+          "kind": "name_mapping",
+          "key": "Spermacoce verticillata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The German name for Spermacoce verticillata is \"Spermacoce verticillata\". This is a type of sea anemone, also known as a sea daisy"
+        },
+        {
+          "id": 134,
+          "kind": "use",
+          "key": "anti-bacterial agents",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Neolamarckia cadamba is a species of fungus that is used in Ayurvedic medicine, which is a traditional system of medicine practiced in India and other parts of Asia. It is used"
+        },
+        {
+          "id": 135,
+          "kind": "name_mapping",
+          "key": "Andropogon olivieri",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cymbopogon jwarancusa, also known as Jwarancusa, is a species of grass that belongs to the genus Cymbopogon, which is part of the grass"
+        },
+        {
+          "id": 136,
+          "kind": "pharmacology",
+          "key": "Paeonia lactiflora",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Paeonia lactiflora, also known as the peony, is a plant that has been used for centuries in traditional medicine. It is known to have a wide range of health benefits,"
+        },
+        {
+          "id": 137,
+          "kind": "use",
+          "key": "以發出污濁.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "火鍼是一种传统中医治疗方法，主要用于治疗各种疼痛症状。它通过使用热源（如火针）来刺激特定的穴位，以达到缓解疼痛的目的。火鍼"
+        },
+        {
+          "id": 138,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Asparagus cochinchinensis, commonly known as Chinese asparagus or Chinese broccoli, is a plant species that belongs to the genus Asparagus and the family Asparagaceae. It is native"
+        },
+        {
+          "id": 139,
+          "kind": "pharmacology",
+          "key": "Lanxangia tsao",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Lanxangia tsao-ko is a traditional Chinese medicine that is used to treat various diseases, including the treatment of viral infections, such as influenza. The active compound in Lanxangia"
+        },
+        {
+          "id": 140,
+          "kind": "use",
+          "key": "menorrhagia",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Magnolia champaca is a fragrant tree that is used in Ayurvedic medicine, which is an ancient system of medicine from India. It is known for its aromatic properties and is used in the"
+        },
+        {
+          "id": 141,
+          "kind": "formula",
+          "key": "抵當丸",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The formula for the \"抵当丸\" (Decoction of Great Efficacy) is as follows:\n\n- **Water**: 1000 milliliters (ml)\n- **"
+        },
+        {
+          "id": 142,
+          "kind": "use",
+          "key": "輕身神仙.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "靈砂 is a traditional Chinese medicine that is recorded to treat various ailments, including:\n\n1. Headaches and migraines\n2. Insomnia and sleep disorders\n3. Anxiety and stress"
+        },
+        {
+          "id": 143,
+          "kind": "use",
+          "key": "治癇疾.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "諸銅器 is a traditional Chinese medicine (TCM) formula that is recorded to treat various symptoms and conditions. It is a combination of herbs that are believed to have a wide range"
+        },
+        {
+          "id": 144,
+          "kind": "use",
+          "key": "whooping cough",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Trifolium pratense, also known as Red clover, is used in Ayurvedic medicine for its purported health benefits. It is believed to have astringent properties and is used to"
+        },
+        {
+          "id": 145,
+          "kind": "target",
+          "key": "Delonix elata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Delonix elata, also known as the Indian coffee tree, is a species of flowering plant in the genus Delonix. It is native to the Indian subcontinent and is known for its"
+        },
+        {
+          "id": 146,
+          "kind": "pharmacology",
+          "key": "Artemisia anomala",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Artemisia anomala is a plant species that belongs to the genus Artemisia. It is known for its medicinal properties and has been used in traditional Chinese medicine for centuries. The plant contains s"
+        },
+        {
+          "id": 147,
+          "kind": "use",
+          "key": "連連不絕.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "款冬花，又称冬冬花、冬冬草等，是一种中药材，主要来源于冬青科植物冬青的干燥花蕾。它具有清热解毒、润"
+        },
+        {
+          "id": 148,
+          "kind": "use",
+          "key": "antipruritics",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Vitex negundo, also known as chaste tree, is an important medicinal plant in Ayurveda, the traditional system of medicine in India. It is used in Ayurvedic medicine for"
+        },
+        {
+          "id": 149,
+          "kind": "pharmacology",
+          "key": "Pulsatilla chinensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Pulsatilla chinensis, also known as white flowered fly agaric or white fly agaric, is a traditional Chinese medicine that has been used for centuries. It is primarily used to treat"
+        },
+        {
+          "id": 150,
+          "kind": "property",
+          "key": "小毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I couldn't find any information about this term. Could you please provide more context or clarify your question? Are you referring to a specific language, culture, or genre? The"
+        },
+        {
+          "id": 151,
+          "kind": "target",
+          "key": "Grewia villosa",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Grewia villosa, also known as the wild cherry tree, is a plant species that has been studied for its potential health benefits. However, there is limited scientific evidence to support the use"
+        },
+        {
+          "id": 152,
+          "kind": "use",
+          "key": "以一二莖蘸水戛去惡血.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I don't have any specific information about \"狗尾草\" (gōu wěi cǎo) recorded to treat any particular condition. This term is not"
+        },
+        {
+          "id": 153,
+          "kind": "use",
+          "key": "flatulence",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Illicium griffithii is a medicinal plant used in Ayurvedic medicine. It is used to treat various ailments such as cough, cold, fever, and other respiratory problems. It is"
+        },
+        {
+          "id": 154,
+          "kind": "classical_use",
+          "key": "以清酒洗四兩",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for Yangming disease is often based on the principles of clearing heat and purging fire. The primary herbs used for this purpose include:\n\n1. **Coptis"
+        },
+        {
+          "id": 155,
+          "kind": "use",
+          "key": "constipation",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Indigofera tinctoria, also known as Indigo, is a plant used in Ayurvedic medicine. It is used in the treatment of skin diseases, including leprosy, and"
+        },
+        {
+          "id": 156,
+          "kind": "compound",
+          "key": "Elsholtzia ciliata",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Elsholtzia ciliata, commonly known as the narrow-leaved wintercress, is a plant species that belongs to the family Brassicaceae, which is a class of the order"
+        },
+        {
+          "id": 157,
+          "kind": "use",
+          "key": "amenorrhea",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Toddalia asiatica, also known as the Indian rubber tree, is used in Indian medicine for its medicinal properties. It is believed to have several uses, including:\n\n1. Diuretic: It"
+        },
+        {
+          "id": 158,
+          "kind": "name_mapping",
+          "key": "Vanda roxburghii",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Vanda tessellata is also known as the \"Fairy Moon Orchid\" or \"Fairy Orchid.\" It is a species of orchid native to Southeast Asia, particularly Malaysia and Indonesia"
+        },
+        {
+          "id": 159,
+          "kind": "compound",
+          "key": "Morus alba",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Morus alba, commonly known as white mulberry, is recorded in the plant class. It belongs to the family Moraceae, which includes mulberry trees and other related plants. The plant"
+        },
+        {
+          "id": 160,
+          "kind": "use",
+          "key": "胡臭.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "每服 recorded to treat refers to the dosage of a medicine that is recorded in a medical record or prescription. It is used to indicate the amount of medicine that should be taken at each dose"
+        },
+        {
+          "id": 161,
+          "kind": "target",
+          "key": "Ophiorrhiza nicobarica",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Ophiorrhiza nicobarica affects the genes related to the regulation of cell division, cell growth, and cell death. It also affects the genes related to the regulation of the immune system and"
+        },
+        {
+          "id": 162,
+          "kind": "pharmacology",
+          "key": "Clerodendrum cyrtophyllum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Clerodendrum cyrtophyllum is a plant species that has been traditionally used in traditional medicine to treat various ailments. The plant is known to have a wide range of medicinal properties, and"
+        },
+        {
+          "id": 163,
+          "kind": "use",
+          "key": "celiac disease",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cheilocostus speciosus, also known as the Indian star flower, is a medicinal plant used in Ayurvedic medicine. It is believed to have a variety of health benefits, including:"
+        },
+        {
+          "id": 164,
+          "kind": "use",
+          "key": "治下痢. Modern reading: dysentery.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "桃膠，也被称为桃胶或桃胶膏，是一种从桃树中提取的天然胶质物质。它具有多种药用价值，常用于中医和传统草药疗法中"
+        },
+        {
+          "id": 165,
+          "kind": "compound",
+          "key": "Kaempferia galanga",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Kaempferia galanga is recorded in the compound class \"Lamiaceae\", which is a family of flowering plants commonly known as mint family. This family includes many aromatic plants, and Ka"
+        },
+        {
+          "id": 166,
+          "kind": "use",
+          "key": "poisoning",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Mollugo pentaphylla, also known as Indian Mallow or Mallow Plant, is a medicinal plant used in Ayurvedic medicine. It is used for its laxative properties and is"
+        },
+        {
+          "id": 167,
+          "kind": "relation",
+          "key": "黃耆",
+          "mode": "contains",
+          "hit": true,
+          "answer": "In the Seven Emotions framework, 黃耆 (Atractylodes macrocephala) and 茯苓 (Poria cocos) are considered to have a neutral interaction. This means that"
+        },
+        {
+          "id": 168,
+          "kind": "use",
+          "key": "主大腸泄瀉.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "苗葉是中醫藥中的藥材名稱，主要用於治療風熱感冒、咽喉腫痛、牙齦腫痛、頭痛、癥瘕等"
+        },
+        {
+          "id": 169,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "降真香是一种香料，其记录的性质、味道和通道偏好如下：\n\n1. **性质**：\n   - 降真香是一种香料，通常用于烹饪和香"
+        },
+        {
+          "id": 170,
+          "kind": "compound",
+          "key": "Scutellaria baicalensis",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Scutellaria baicalensis, commonly known as Baikal skullcap, is classified as a plant. Specifically, it belongs to the family Scutellariaceae, which is part of"
+        },
+        {
+          "id": 171,
+          "kind": "compound",
+          "key": "Chrysanthemum indicum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The compound class recorded in Chrysanthemum indicum is flavonoids. Flavonoids are a group of plant pigments that are found in many different types of plants, including Ch"
+        },
+        {
+          "id": 172,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "I'm sorry, but I don't have any information about the specific term \"屋游\" that you're referring to. It doesn't appear to be a commonly known term in Chinese or any other"
+        },
+        {
+          "id": 173,
+          "kind": "viability",
+          "key": "The claimed",
+          "mode": "contains",
+          "hit": false,
+          "answer": "As an AI language model, I cannot provide a verdict without more information about the specific model being referred to. However, in general, the process of boiling can potentially enrich the alkaloid"
+        },
+        {
+          "id": 174,
+          "kind": "name_mapping",
+          "key": "Macrotomia perennis",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Arnebia euchroma is also known as the \"Cape arnebia\" or \"Cape arnebium\". It is a species of flowering plant in the Arnebia genus,"
+        },
+        {
+          "id": 175,
+          "kind": "classical_use",
+          "key": "溫經木香丸方木香葫蘆巴",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for 腎中寒气 often involves the use of herbs that are believed to warm the kidneys and dispel cold. One of the most commonly used herbs for"
+        },
+        {
+          "id": 176,
+          "kind": "property",
+          "key": "有毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "蜀漆，也称作蜀漆、蜀漆木、蜀漆木、蜀漆木、蜀漆木、蜀漆木、蜀漆木、蜀漆木、蜀"
+        },
+        {
+          "id": 177,
+          "kind": "use",
+          "key": "stomach diseases",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Gnaphalium polycaulon is a plant used in Ayurvedic medicine, which is a traditional system of medicine used in India. It is used to treat various ailments such as fever"
+        },
+        {
+          "id": 178,
+          "kind": "classical_use",
+          "key": "先煮麻黃去上沫",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for 寒嗽 (a type of cough) often involves the use of warming herbs. One of the main herbs used for this purpose is **干姜** ("
+        },
+        {
+          "id": 179,
+          "kind": "pharmacology",
+          "key": "Trachelospermum jasminoides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Trachelospermum jasminoides, also known as the jasmine tree, is a plant that has been traditionally used in Ayurvedic medicine. It is known to have a variety of"
+        },
+        {
+          "id": 180,
+          "kind": "target",
+          "key": "Aloysia gratissima",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Aloysia gratissima, also known as the giant bird of paradise flower, affects the gene target of the flower's color and shape. The flower has a unique ability to change its color and"
+        },
+        {
+          "id": 181,
+          "kind": "property",
+          "key": "熱, flavours 辛, channels ",
+          "mode": "contains",
+          "hit": false,
+          "answer": "白綿及布是一种传统手工艺品，其记录的性质、口味和传播方式（即通道性）是：\n\n1. **记录性质**：白綿及布是一种"
+        },
+        {
+          "id": 182,
+          "kind": "name_mapping",
+          "key": "Moullava spicata",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The modern botanical name of Candy Corn Plant is Zamioculcas zamiifolia. It is also known as the Zamioculcas or the Zamioculcas Plant. This"
+        },
+        {
+          "id": 183,
+          "kind": "use",
+          "key": "seminal abnormalities",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Cordia dichotoma, also known as the Indian soapberry, is used in Indian medicine for its purported medicinal properties. It is believed to have astringent properties and is used in traditional Ay"
+        },
+        {
+          "id": 184,
+          "kind": "compound",
+          "key": "Aster tataricus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The compound class recorded in Aster tataricus is Flavonoids. Flavonoids are a large family of plant secondary metabolites that are commonly found in fruits, vegetables, and other plant"
+        },
+        {
+          "id": 185,
+          "kind": "target",
+          "key": "Ancistrocladus heyneanus",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Ancistrocladus heyneanus is a species of amoeba that has been studied for its potential use in biotechnology. The gene targets that this amoeba affects are not yet fully understood,"
+        },
+        {
+          "id": 186,
+          "kind": "classical_use",
+          "key": "莖中白汁剝人面皮",
+          "mode": "contains",
+          "hit": false,
+          "answer": "In classical Chinese medicine, the treatment for all kinds of evil sores, scabies, and itchiness is often referred to as \"Yi Zhi.\" This term is derived from the ancient Chinese"
+        },
+        {
+          "id": 187,
+          "kind": "target",
+          "key": "Dysphania ambrosioides",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Dysphania ambrosioides, also known as the African nightshade, affects the expression of genes involved in plant defense against herbivores and pathogens. It produces a compound called anthra"
+        },
+        {
+          "id": 188,
+          "kind": "use",
+          "key": "腳氣腫.",
+          "mode": "contains",
+          "hit": false,
+          "answer": "莖葉 is a traditional Chinese medicine that is recorded to treat various conditions, including:\n\n1. Headache and migraines\n2. Toothache\n3. Joint pain and arthritis\n4"
+        },
+        {
+          "id": 189,
+          "kind": "compound",
+          "key": "Bupleurum chinense",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Bupleurum chinense is recorded in the plant compound class of Umbelliferae. This class includes plants such as fennel, angelica, and dill, which are known"
+        },
+        {
+          "id": 190,
+          "kind": "pharmacology",
+          "key": "Rehmannia glutinosa",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Rehmannia glutinosa, also known as Chinese foxglove or Chinese rehmannia, is a traditional Chinese medicine that has been used for centuries. It is primarily used to treat"
+        },
+        {
+          "id": 191,
+          "kind": "use",
+          "key": "tuberculosis, lymph node",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Abrus precatorius is a plant that is used in Indian medicine for its purported medicinal properties. It is believed to have astringent properties and is used to treat various ailments such as diarrhea"
+        },
+        {
+          "id": 192,
+          "kind": "target",
+          "key": "Merremia aegyptia",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Merremia aegyptia affects the gene target of the plant hormone auxin. Auxin is a plant hormone that plays a crucial role in various plant growth and development processes, including cell"
+        },
+        {
+          "id": 193,
+          "kind": "name_mapping",
+          "key": "Scadoxus multiflorus",
+          "mode": "contains",
+          "hit": false,
+          "answer": "The modern botanical name of Blood Lily is Helonias douglasii. It is a flowering plant in the family Caprifoliaceae. It is native to the eastern United States and is commonly"
+        },
+        {
+          "id": 194,
+          "kind": "compound",
+          "key": "Pisum sativum",
+          "mode": "contains",
+          "hit": true,
+          "answer": "The compound class recorded in Pisum sativum, also known as broad beans, is flavonoids. These are a group of plant pigments and secondary metabolites that play important roles in plant"
+        },
+        {
+          "id": 195,
+          "kind": "use",
+          "key": "leprosy",
+          "mode": "contains",
+          "hit": false,
+          "answer": "Jatropha curcas is used in Indian medicine for the treatment of various ailments such as fever, cough, asthma, bronchitis, and skin diseases. It is also used as a natural insect"
+        },
+        {
+          "id": 196,
+          "kind": "relation",
+          "key": "附子",
+          "mode": "contains",
+          "hit": true,
+          "answer": "In the 七情 (Seven Emotions) framework, 附子 (Aconite) and 肉桂 (Cinnamomum) are considered to be cold and warm,"
+        },
+        {
+          "id": 197,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "五辛菜，又称五香菜，是一种在中国传统饮食中常用的调味品。它的记录和记载的性质、口味和渠道偏好都与中国的烹饪文化密切相关。\n\n1. **"
+        },
+        {
+          "id": 198,
+          "kind": "target",
+          "key": "Semecarpus anacardium",
+          "mode": "contains",
+          "hit": true,
+          "answer": "Semecarpus anacardium, also known as the African shea nut, affects the production of essential fatty acids, specifically oleic acid and palmitic acid, which are crucial for"
+        },
+        {
+          "id": 199,
+          "kind": "property",
+          "key": "無毒",
+          "mode": "contains",
+          "hit": false,
+          "answer": "As an AI assistant, I don't have specific information about the recorded nature, flavour, and channel tropism of \"劉寄奴草\". This term seems to be a Chinese herbal medicine name,"
+        }
+      ]
+    }
+  },
+  "delta": 0.095
+}

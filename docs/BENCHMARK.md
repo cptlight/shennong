@@ -18,7 +18,39 @@ retrieval.
 
 ---
 
-## The bug: the shipped results were scored against a different benchmark
+## The bug, in full — the benchmark file was stale
+
+The audit found three layers of the same fault, each hiding the one below it.
+
+**Layer 1 — results not reproducible.** `benchmark_results.json` was scored against a benchmark file that no
+longer existed: only 13 of 200 questions matched `benchmark.jsonl` by text, and the composition differed
+(113 `use` questions vs 63).
+
+**Layer 2 — keys that could not be matched.** For the `use` family the stored key was the *tradition label*:
+
+```
+Q:    What is Heimia salicifolia used for in Indian medicine?
+gold: Recorded use: emetics (Indian medicine).   key: "Indian medicine"
+```
+
+A model answering "emetics" — correct — scored zero. Both arms therefore reported `use: 0/113`.
+
+**Layer 3 — the questions did not correspond to their own gold.** After fixing the keys, `use` was *still* 0/63
+for both models. Inspecting rows showed the real cause:
+
+```
+Q:    What is 蕺菜 recorded to treat?          (a Chinese plant)
+gold: Recorded use: emetics (Indian medicine)  (an Indian use)
+```
+
+`benchmark.jsonl` had been generated from an older SFT set and never rebuilt: the current `val.jsonl` does not
+contain 蕺菜 at all. The question, gold and key belonged to different records.
+
+**Fix:** `scripts/build_benchmark.py` regenerates the set from the current `val.jsonl`, so question and gold come
+from the same record by construction. Verified by inspection — a question about *Pterospermum canescens* now has
+a gold about *Pterospermum canescens*.
+
+## The first two layers
 
 `artifacts/benchmark_results.json` and `artifacts/benchmark.jsonl` did not describe the same 200 questions:
 

@@ -49,7 +49,7 @@ This is the whole chain the track asks for, in one query:
 
 ```
 historical name (any era, any language)
-   -> modern binomial           827 historical Chinese · 4,154 Indian plants · 10,393 vernacular names
+   -> modern binomial           827 historical Chinese · 2,175 Indian plants (4,109 with uses) · 10,393 vernacular names
    -> recorded therapeutic uses  8 per plant, attributed to a tradition
    -> compound classes           terpenoid / flavonoid / alkaloid / phenylpropanoid
    -> modern gene targets        ABCB1, AKR1C3, ALDH1A1, ALOX15, ...

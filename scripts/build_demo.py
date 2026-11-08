@@ -908,8 +908,8 @@ function tabProblems(){
     <p>A 16th-century Chinese drug name, an Ayurvedic synonym, a Korean name and a Latin binomial can all mean
     the same plant — and no single lexicon links them. Without that link, a classical therapeutic use cannot be
     connected to anything modern.</p>
-    <p class="note"><b>What we built:</b> a resolver over 827 historical Chinese names, 4,154 Indian plants with
-    synonyms and common names, and 7,764 vernacular names in German/French/Korean/Chinese/Japanese — then the
+    <p class="note"><b>What we built:</b> a resolver over 827 historical Chinese names, 2,175 Indian plants with
+    synonyms and common names (4,109 with recorded uses), and 10,393 vernacular names across seven languages — then the
     chain continues into recorded uses, compound classes and gene targets.</p>
     <p><button onclick="show('resolve')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 1 — resolve a name</button></p>
   </div>

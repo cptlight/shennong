@@ -1,0 +1,108 @@
+{
+  "n": 200,
+  "old": {
+    "ours": {
+      "correct": 78,
+      "acc": 0.39
+    },
+    "base": {
+      "correct": 51,
+      "acc": 0.255
+    }
+  },
+  "corrected": {
+    "ours": {
+      "correct": 78,
+      "acc": 0.39,
+      "by_kind": {
+        "candidate": {
+          "correct": 1,
+          "total": 2,
+          "acc": 0.5
+        },
+        "compound": {
+          "correct": 25,
+          "total": 25,
+          "acc": 1.0
+        },
+        "formula": {
+          "correct": 3,
+          "total": 4,
+          "acc": 0.75
+        },
+        "name_mapping": {
+          "correct": 24,
+          "total": 25,
+          "acc": 0.96
+        },
+        "property": {
+          "correct": 19,
+          "total": 25,
+          "acc": 0.76
+        },
+        "relation": {
+          "correct": 1,
+          "total": 1,
+          "acc": 1.0
+        },
+        "use": {
+          "correct": 0,
+          "total": 113,
+          "acc": 0.0
+        },
+        "viability": {
+          "correct": 5,
+          "total": 5,
+          "acc": 1.0
+        }
+      }
+    },
+    "base": {
+      "correct": 51,
+      "acc": 0.255,
+      "by_kind": {
+        "candidate": {
+          "correct": 2,
+          "total": 2,
+          "acc": 1.0
+        },
+        "compound": {
+          "correct": 24,
+          "total": 25,
+          "acc": 0.96
+        },
+        "formula": {
+          "correct": 2,
+          "total": 4,
+          "acc": 0.5
+        },
+        "name_mapping": {
+          "correct": 22,
+          "total": 25,
+          "acc": 0.88
+        },
+        "property": {
+          "correct": 0,
+          "total": 25,
+          "acc": 0.0
+        },
+        "relation": {
+          "correct": 1,
+          "total": 1,
+          "acc": 1.0
+        },
+        "use": {
+          "correct": 0,
+          "total": 113,
+          "acc": 0.0
+        },
+        "viability": {
+          "correct": 0,
+          "total": 5,
+          "acc": 0.0
+        }
+      }
+    }
+  },
+  "changes": []
+}

@@ -12,8 +12,7 @@
 `Liquorice`, `Mulethi`, `감초`. Nothing links a 16th-century drug name to a modern gene target, so thousands of
 years of clinical observation stay unqueryable. **Live:** open the demo and click `丹參` — you get the modern
 binomial, its name in five languages, 8 recorded uses, 4 compound classes and 10 modern gene targets, in about a
-second, on a CPU. Coverage: 4,716 binomials · 827 historical Chinese names · 4,154 Indian plants · 10,393
-vernacular names. Unknown names return near matches, never a guess.
+second, on a CPU. Coverage: 4,716 binomials · 827 historical Chinese names · 2,175 Indian plants with synonyms · 4,109 with recorded uses · 10,393 vernacular names. Unknown names return near matches, never a guess.
 
 **2 · Track 2 — which plant compounds are worth testing.** Screening a plant library against a disease target
 normally needs a wet lab or a GPU cluster. **Live:** type `EGFR` in the demo — 23,176 plant compounds ranked by
@@ -34,16 +33,17 @@ See [docs/PITCH.md](docs/PITCH.md) for the 3-minute script and Q&A.
 | | link |
 |---|---|
 | **▶ Live demo — ask the model** | https://tomscot-shennong.hf.space (CPU: first query takes ~1 min while the models load) |
-| **▶ Live demo — screen a target** | same Space, "Screen a target" tab — three-layer virtual screening |
+| **▶ Live demo — read a passage (Track 1)** | same Space, "1b · Track 1 — read a passage" tab — paste any classical text, get drugs with spans, claims mapped, processes detected |
+| **▶ Live demo — screen a target (Track 2)** | same Space, "2 · Track 2 — screen a target" tab — three-layer virtual screening |
 | **Space source** | [`tomscot/shennong`](https://huggingface.co/spaces/tomscot/shennong) · redeploy with `./scripts/deploy_space.sh tomscot/shennong` |
 | **Static result browser** | https://cptlight.github.io/shennong/ |
 | **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
-| **Corpus** | 29,042 records · **177.3 M characters** — base 106 sources **+ 1,304 CC0 jicheng.tw works** (`make corpus-full`) |
+| **Corpus** | **29,042 records · 177.3 M characters**, after `make corpus-full` (base 106 sources + 1,304 CC0 jicheng.tw works). The checked-in base corpus alone is 27,738 records / 45.6 M characters — the 177.3 M figure requires the jicheng fetch |
 | **Benchmark (200 domain Q)** | ours **39.0 %** vs unfine-tuned **25.5 %** (+13.5 %) — `artifacts/benchmark_results.json` |
 
 [![Devpost](https://img.shields.io/badge/EthnoHack-2026-coral)](https://ethnohack2026.devpost.com/)
-[![Track](https://img.shields.io/badge/track-02%20Natural%20Products%20%26%20Drug%20Discovery-teal)](https://ethnohack2026.devpost.com/)
+[![Track](https://img.shields.io/badge/tracks-01%20Traditional%20Knowledge%20Mining%20%2B%2002%20Natural%20Products-teal)](https://ethnohack2026.devpost.com/)
 [![Licence](https://img.shields.io/badge/code%20%26%20weights-Apache--2.0-blue)](LICENSE)
 [![Model](https://img.shields.io/badge/model-1.5B%20%7C%20940%20MB%20Q4-green)](https://huggingface.co/tomscot/shennong-1.5b-sft)
 [![CPU](https://img.shields.io/badge/runs%20on-CPU%20only-lightgrey)](#quickstart)

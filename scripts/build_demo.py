@@ -328,9 +328,11 @@ function tabTheory(){
       <td>${esc(n)}</td><td>${esc(p)}</td><td>${esc(v)}</td></tr>`;
   }
   h += `</table><p class="note" style="margin-top:12px"><b>Honest limit, and the confound answered:</b>
-  drug-name→taxon resolution measures <b>14.1 %</b>. The 歸經 test runs only on pairs where both names
-  resolved, so unresolved names are dropped, not guessed — that is a <i>selection</i> bound on coverage, not
-  measurement error in the hit rate.</p></section>`;
+  in-lexicon name resolution is exact (<b>1.000</b>), but only <b>48.7 %</b> of plant-derived mentions resolve
+  (4,357 of 8,944) — the rest are archaic names absent from every open lexicon. <b>37.9 %</b> of the
+  pharmacopoeia is not botanical at all (23.5 % animal, 8.3 % mineral, 4.1 % manufactured, 2.0 % human-derived),
+  so a rate over everything is the wrong denominator. The 歸經 test runs only on rows where both names resolved,
+  so unresolved names are dropped, not guessed — a <i>selection</i> bound on coverage, not measurement error.</p></section>`;
   return h;
 }
 
@@ -424,7 +426,7 @@ function tabDiag(){
     for (const [k,v] of Object.entries(disc)) h += `<tr><td class="mono">${esc(k)}</td><td><b>${esc(v.n)}</b></td></tr>`;
     h += `</table>`;
   }
-  h += `<p class="note" style="margin-top:14px"><b>Known-weak, stated here:</b> drug→taxon resolution 14.1 %;
+  h += `<p class="note" style="margin-top:14px"><b>Known-weak, stated here:</b> plant-materia name resolution 48.7 %;
   quantum layer arbitrates fragments, not natural products; two of five theory axes could not be tested at all;
   the mass-conservation law fired zero times (the claim template says "enrich", so it should — this is being
   reconciled, not hidden).</p></section>`;

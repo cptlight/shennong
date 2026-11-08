@@ -10,7 +10,7 @@ Shennong, the mythical Chinese figure who tasted a hundred herbs to learn their 
 
 **The names don't survive.** One plant is `甘草`, `감초`, `Glycyrrhiza uralensis` — and is also called Liquorice and Mulethi, names our lexicon does not yet hold. A 16th-century drug name and a modern gene target never meet, so a classical therapeutic use can't be connected to anything modern.
 
-**Nobody ever checked the chemistry.** A preparation instruction — *"boil for three hours, wring out the juice"* — is a chemical protocol written in a language no one validated against thermodynamics.
+**Nobody ever checked the chemistry.** A preparation instruction is a chemical protocol written in a language no one validated against thermodynamics.
 
 The binding constraint on discovering drugs from this corpus was never data. It was **translation**, and then **verification**. We built both.
 
@@ -26,7 +26,7 @@ The binding constraint on discovering drugs from this corpus was never data. It 
 
 **Track 2 · Screen a target.** Type a disease target — `EGFR`, `COX2`, `HMGCR`. A tiered CPU-only screen over **23,176 plant compounds** ranks candidates by ECFP4 similarity to known ChEMBL actives, then filters on Lipinski ADMET, preparation physics and structural novelty. On HMGCR the top hit scores a Tanimoto of 1.000: the pipeline rediscovers a known active, which is our control that the method works.
 
-**And the part we're proudest of.** We ran 203 recorded preparation claims through a mass-balance and heat-stability check. **78 are physically impossible** — the compound decomposes at the temperature the text prescribes. And **six of those passed every textual gate**: the ancient record, the tradition, and the theory all agreed. Physics still said no.
+**And the part we're proudest of.** We ran 203 recorded preparation claims through a mass-balance and heat-stability check. **78 are physically impossible** — the compound decomposes at the temperature the text prescribes. And **six of those had unanimous support from every text-based check** — the ancient record, the tradition and the theory all agreed. Physics still said no.
 
 A system that only reads texts cannot know that. Ours is built to argue with its own sources.
 
@@ -73,7 +73,7 @@ A system that only reads texts cannot know that. Ours is built to argue with its
 
 **Most "AI for traditional medicine" projects stop at retrieval.** The hard part is the names, and then the verification.
 
-**A benchmark you cannot reproduce from your own repository is worth nothing**, however good the number looks. Every headline figure in our README is now generated from an artifact, not typed by hand.
+**A benchmark you cannot reproduce from your own repository is worth nothing**, however good the number looks. Every headline figure in our README now traces to an artifact in the repository, and the two we could not reproduce were corrected rather than kept.
 
 **The model is not the knowledge layer.** Asked *"what is Echinochloa colona used for in Indian medicine?"* our fine-tune answers with a *Chinese* classical use — it confuses traditions. That's why uses come from extraction and retrieval, and the model handles language and reasoning. Knowing where a 1.5 B model should and shouldn't be trusted is most of the engineering.
 

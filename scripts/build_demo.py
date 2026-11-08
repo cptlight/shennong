@@ -911,6 +911,10 @@ function tabProblems(){
     <p class="note"><b>What we built:</b> a resolver over 827 historical Chinese names, 2,175 Indian plants with
     synonyms and common names (4,109 with recorded uses), and 10,393 vernacular names across seven languages — then the
     chain continues into recorded uses, compound classes and gene targets.</p>
+    <p class="note"><b>And it runs at corpus scale:</b> the same extractor was applied to
+    <b>273,334 formulas from 1,082 classical works</b>, producing
+    <b>412,655 drug&ndash;indication pairs</b> across 68,195 indications
+    from 429,499 drug mentions — in 16 seconds on a CPU.</p>
     <p><button onclick="show('resolve')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 1 — resolve a name</button></p>
   </div>
 

@@ -56,6 +56,10 @@ historical name (any era, any language)
    -> pharmacology               class -> molecular target -> disease
 ```
 
+**And it runs at corpus scale, not just on one paragraph.** Mining 273,334 formulas from
+1,082 classical works took **16 seconds** and produced **412,655 drug–indication
+pairs** over 68,195 indications, covering 506 distinct drugs.
+
 Nothing is retrieved at inference. This is a curated corpus with **888,303 facts** and span locators
 (`source_id:char_start-char_end`) back to **CC0/public-domain sources only**. Traditional Chinese is normalised to
 simplified; an unknown name returns **near matches, never a guess**.

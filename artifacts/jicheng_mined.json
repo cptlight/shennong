@@ -1,0 +1,240 @@
+{
+  "formulas": 273334,
+  "formulas_with_recognised_drug": 145925,
+  "works": 1082,
+  "drug_mentions": 429499,
+  "resolved_mentions": 429499,
+  "resolution_rate": 1.0,
+  "distinct_drug_surfaces": 506,
+  "distinct_binomials": 477,
+  "distinct_indications": 68195,
+  "drug_indication_pairs": 412655,
+  "top_drugs": [
+    [
+      "甘草",
+      51789
+    ],
+    [
+      "茯苓",
+      25182
+    ],
+    [
+      "半夏",
+      15362
+    ],
+    [
+      "附子",
+      14689
+    ],
+    [
+      "木香",
+      14686
+    ],
+    [
+      "柴胡",
+      10017
+    ],
+    [
+      "升麻",
+      9607
+    ],
+    [
+      "麝香",
+      9415
+    ],
+    [
+      "枳殼",
+      9057
+    ],
+    [
+      "杏仁",
+      8743
+    ],
+    [
+      "桔梗",
+      8119
+    ],
+    [
+      "厚朴",
+      8032
+    ],
+    [
+      "白芷",
+      7030
+    ],
+    [
+      "石膏",
+      6817
+    ],
+    [
+      "牛膝",
+      6092
+    ],
+    [
+      "芎藭",
+      5662
+    ],
+    [
+      "五味子",
+      5441
+    ],
+    [
+      "白皮",
+      5171
+    ],
+    [
+      "犀角",
+      5113
+    ],
+    [
+      "丁香",
+      5024
+    ],
+    [
+      "巴豆",
+      4972
+    ],
+    [
+      "知母",
+      4836
+    ],
+    [
+      "桃仁",
+      4698
+    ],
+    [
+      "阿膠",
+      4343
+    ],
+    [
+      "吳茱萸",
+      4049
+    ]
+  ],
+  "top_binomials": [
+    [
+      "Glycyrrhiza uralensis",
+      51789
+    ],
+    [
+      "Wolfiporia cocos",
+      25182
+    ],
+    [
+      "Aconitum carmichaelii",
+      15918
+    ],
+    [
+      "Pinellia ternata",
+      15362
+    ],
+    [
+      "Aucklandia lappa",
+      14686
+    ],
+    [
+      "Bupleurum chinense",
+      10017
+    ],
+    [
+      "Actaea cimicifuga",
+      9607
+    ],
+    [
+      "Moschus moschiferus",
+      9415
+    ],
+    [
+      "Citrus aurantium",
+      9057
+    ],
+    [
+      "Armeniaca vulgaris",
+      8743
+    ],
+    [
+      "Platycodon grandiflorus",
+      8119
+    ],
+    [
+      "Houpoea officinalis",
+      8032
+    ],
+    [
+      "Angelica dahurica",
+      7030
+    ],
+    [
+      "Gypsum",
+      6817
+    ],
+    [
+      "Achyranthes bidentata",
+      6092
+    ]
+  ],
+  "top_indications": [
+    [
+      "脾胃虛弱",
+      1381
+    ],
+    [
+      "腳氣",
+      1205
+    ],
+    [
+      "中風",
+      1144
+    ],
+    [
+      "虛勞",
+      1099
+    ],
+    [
+      "傷寒",
+      1032
+    ],
+    [
+      "產後中風",
+      833
+    ],
+    [
+      "乳石發動",
+      828
+    ],
+    [
+      "五勞七傷",
+      813
+    ],
+    [
+      "熱病",
+      809
+    ],
+    [
+      "咳嗽",
+      727
+    ],
+    [
+      "心氣不足",
+      694
+    ],
+    [
+      "一切風",
+      680
+    ],
+    [
+      "婦人中風",
+      629
+    ],
+    [
+      "脾胃虛寒",
+      626
+    ],
+    [
+      "膈氣",
+      603
+    ]
+  ],
+  "seconds": 15.8,
+  "source": "jicheng.tw, CC0 1.0"
+}

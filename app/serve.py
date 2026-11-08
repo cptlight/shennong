@@ -1220,6 +1220,15 @@ class Handler(BaseHTTPRequestHandler):
                                               int(payload.get("max_new_tokens") or 96)))
             except Exception as exc:  # noqa: BLE001
                 return self._err(500, f"{type(exc).__name__}: {exc}")
+        if u.path == "/api/resolve":
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                raw = self.rfile.read(min(n, 16384)) if n else b"{}"
+                payload = json.loads(raw.decode("utf-8") or "{}")
+                from shennong.resolve import resolve_plant
+                return self._json(resolve_plant(str(payload.get("question") or payload.get("q") or "")))
+            except Exception as exc:  # noqa: BLE001
+                return self._err(500, f"{type(exc).__name__}: {exc}")
         if u.path == "/api/advise":
             try:
                 n = int(self.headers.get("Content-Length") or 0)

@@ -97,6 +97,12 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/hypothesize":
             return self._json(hypothesise_live(q, max_new_tokens=mt))
+        if self.path == "/api/resolve":
+            try:
+                from shennong.resolve import resolve_plant
+                return self._json(resolve_plant(q))
+            except Exception as exc:  # noqa: BLE001
+                return self._json({"ok": False, "error": f"{type(exc).__name__}: {exc}"}, 500)
         if self.path == "/api/advise":
             try:
                 from shennong.advise import advise

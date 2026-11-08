@@ -207,17 +207,19 @@ HTML = """<!doctype html>
   </div>
 </header>
 <nav role="tablist" aria-label="Demo sections">
-  <button role="tab" aria-selected="true" data-t="funnel">1 · The funnel</button>
-  <button role="tab" aria-selected="false" data-t="arbiter">2 · The arbiter</button>
-  <button role="tab" aria-selected="false" data-t="theory">3 · Does theory predict?</button>
-  <button role="tab" aria-selected="false" data-t="candidates">4 · Candidates</button>
-  <button role="tab" aria-selected="false" data-t="experts">5 · Experts</button>
-  <button role="tab" aria-selected="false" data-t="diag">6 · Diagnostics</button>
-  <button role="tab" aria-selected="false" data-t="extraction">7 · Extraction &amp; name mapping</button>
-  <button role="tab" aria-selected="false" data-t="ask">8 · Ask it live</button>
-  <button role="tab" aria-selected="false" data-t="screen">9 · Screen a target</button>
-  <button role="tab" aria-selected="false" data-t="curriculum">9 · Curriculum &amp; self-observation</button>
-  <button role="tab" aria-selected="false" data-t="weights">10 · Weights &amp; reproduce</button>
+  <button role="tab" aria-selected="true" data-t="problems">0 · The two problems</button>
+  <button role="tab" aria-selected="false" data-t="resolve">1 · Track 1 — resolve a plant name (live)</button>
+  <button role="tab" aria-selected="false" data-t="screen">2 · Track 2 — screen a target (live)</button>
+  <button role="tab" aria-selected="false" data-t="ask">3 · Ask the model (live)</button>
+  <button role="tab" aria-selected="false" data-t="funnel">4 · The funnel</button>
+  <button role="tab" aria-selected="false" data-t="arbiter">5 · The arbiter</button>
+  <button role="tab" aria-selected="false" data-t="theory">6 · Does theory predict?</button>
+  <button role="tab" aria-selected="false" data-t="candidates">7 · Candidates</button>
+  <button role="tab" aria-selected="false" data-t="experts">8 · Experts</button>
+  <button role="tab" aria-selected="false" data-t="diag">9 · Diagnostics</button>
+  <button role="tab" aria-selected="false" data-t="extraction">10 · Extraction</button>
+  <button role="tab" aria-selected="false" data-t="curriculum">11 · Curriculum</button>
+  <button role="tab" aria-selected="false" data-t="weights">12 · Weights</button>
 </nav>
 <main id="main"></main>
 <footer>
@@ -894,7 +896,104 @@ function renderScreen(d, tgt){
   out.innerHTML=h;
 }
 
-const TABS = {ask:tabAsk, screen:tabScreen, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
+
+function tabProblems(){
+  return `<section><h2>The two problems this system solves</h2>
+  <p class="note">Both are demonstrated <b>live</b> on this page — type anything, get a computed answer, not a
+  rehearsed one. Every number below is reproducible from the repository.</p>
+
+  <div class="card" style="margin:16px 0">
+    <h3>Problem 1 — plant names do not survive the centuries</h3>
+    <p>A 16th-century Chinese drug name, an Ayurvedic synonym, a Korean name and a Latin binomial can all mean
+    the same plant — and no single lexicon links them. Without that link, a classical therapeutic use cannot be
+    connected to anything modern.</p>
+    <p class="note"><b>What we built:</b> a resolver over 827 historical Chinese names, 4,154 Indian plants with
+    synonyms and common names, and 7,764 vernacular names in German/French/Korean/Chinese/Japanese — then the
+    chain continues into recorded uses, compound classes and gene targets.</p>
+    <p><button onclick="show('resolve')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 1 — resolve a name</button></p>
+  </div>
+
+  <div class="card" style="margin:16px 0">
+    <h3>Problem 2 — which plant compounds are worth testing, on a CPU</h3>
+    <p>Screening a plant library against a disease target normally needs a wet lab or a GPU docking cluster.
+    A ranked shortlist that cites its evidence does not.</p>
+    <p class="note"><b>What we built:</b> a tiered CPU-only screen — knowledge-graph links, ECFP4 similarity to
+    known ChEMBL actives, Lipinski ADMET, preparation physics and structural novelty — fused into one
+    falsifiable score for 23,176 plant compounds.</p>
+    <p><button onclick="show('screen')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 2 — screen a target</button></p>
+  </div>
+
+  <p class="note"><b>The model underneath:</b> a 1.5 B fine-tuned open model (39.0 % vs 25.5 % on 200 held-out
+  domain questions), released as a 940 MB Q4 GGUF that runs on a CPU — see tab 3 to query it live, tab 12 for
+  the weights.</p></section>`;
+}
+
+const RESOLVE_EXAMPLES = ['丹參','甘草','人參','단삼','Salvia miltiorrhiza','Atractylodes macrocephala'];
+
+function tabResolve(){
+  return `<section><h2>Track 1 — resolve a plant name, then follow it to modern pharmacology</h2>
+  <p class="note"><b>The problem:</b> names drift across eras and languages. <b>What runs here:</b> the name is
+  looked up across the historical Chinese lexicon, Indian synonyms and common names, and five vernacular
+  languages — then the resolved binomial is expanded into its recorded uses, compound classes and gene
+  targets. Nothing is retrieved at inference; this is the curated corpus.</p>
+  <div id="resbox" class="warn">type a name below, or click an example</div>
+  <div id="resform">
+    <input id="resq" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"
+      placeholder="e.g. 丹參 · 甘草 · 단삼 · Salvia miltiorrhiza · Atractylodes macrocephala">
+    <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <button id="resgo" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Resolve</button>
+      <span style="font-size:12px;color:var(--muted)">try:</span>
+      ${RESOLVE_EXAMPLES.map(x=>`<button data-r="${esc(x)}" style="padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font:12px inherit;cursor:pointer">${esc(x)}</button>`).join('')}
+    </div>
+  </div>
+  <div id="resout"></div></section>`;
+}
+
+async function resolveInit(){
+  const box=document.getElementById('resbox');
+  box.style.display='none';
+  const go=()=>doResolve();
+  document.getElementById('resgo').onclick=go;
+  document.getElementById('resq').addEventListener('keydown',e=>{ if(e.key==='Enter') doResolve(); });
+  document.querySelectorAll('button[data-r]').forEach(b=>b.onclick=()=>{ document.getElementById('resq').value=b.dataset.r; doResolve(); });
+  doResolve();
+}
+
+async function doResolve(){
+  const q=((document.getElementById('resq')||{}).value||'丹參').trim()||'丹參';
+  const out=document.getElementById('resout');
+  out.innerHTML='<p class="note">resolving '+esc(q)+'…</p>';
+  try{
+    const r=await fetch('/api/resolve',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});
+    const d=await r.json();
+    renderResolve(out,d,q);
+  }catch(e){ out.innerHTML='<p class="warn">resolve failed: '+esc(String(e))+'</p>'; }
+}
+
+function renderResolve(out,d,q){
+  if(!d||d.ok===false){ out.innerHTML='<div class="warn"><b>Not resolvable.</b> '+esc((d&&d.error)||q)+'<br>'+
+    '<span style="font-size:12px">'+esc((d&&d.note)||'')+'</span></div>'; return; }
+  let h='<div class="card"><h3>'+esc(d.query)+' &rarr; <span class="mono">'+esc(d.binomial)+'</span></h3>';
+  h+='<p class="note">matched via <b>'+esc(d.matched_via)+'</b></p>';
+  const names=Object.entries(d.names||{});
+  if(names.length) h+='<p class="note">names across eras/languages: '+names.map(([k,v])=>'<b>'+esc(k)+'</b> '+esc(v)).join(' · ')+'</p>';
+  if((d.uses||[]).length){
+    h+='<h3 style="margin-top:12px">Recorded therapeutic uses</h3><table><thead><tr><th>use</th><th>tradition</th></tr></thead><tbody>';
+    d.uses.forEach(u=>{ h+='<tr><td>'+esc(u.use)+'</td><td>'+esc(u.tradition||'—')+'</td></tr>'; });
+    h+='</tbody></table>';
+  }
+  if((d.compound_classes||[]).length) h+='<p class="note"><b>Compound classes:</b> '+esc(d.compound_classes.join(', '))+'</p>';
+  if((d.gene_targets||[]).length) h+='<p class="note"><b>Modern gene targets:</b> <span class="mono">'+esc(d.gene_targets.join(', '))+'</span></p>';
+  if((d.pharmacology||[]).length){
+    h+='<h3 style="margin-top:12px">Ancient &rarr; modern pharmacology</h3><table><thead><tr><th>class</th><th>molecular target</th><th>disease</th></tr></thead><tbody>';
+    d.pharmacology.forEach(p=>{ h+='<tr><td>'+esc(p.compound_class)+'</td><td>'+esc(p.molecular_target)+'</td><td>'+esc(p.disease)+'</td></tr>'; });
+    h+='</tbody></table>';
+  }
+  h+='<p class="note" style="margin-top:10px">'+esc(d.chain||'')+'</p></div>';
+  out.innerHTML=h;
+}
+
+const TABS = {problems:tabProblems, resolve:tabResolve, ask:tabAsk, screen:tabScreen, extraction:tabExtraction, curriculum:tabCurriculum, funnel:tabFunnel, arbiter:tabArbiter, theory:tabTheory, candidates:tabCandidates,
               experts:tabExperts, diag:tabDiag, weights:tabWeights};
 const main = document.getElementById('main');
 function show(name){
@@ -905,6 +1004,7 @@ function show(name){
   const sec = main.querySelector('section');
   if (sec) sec.classList.add('on');
   if (name === 'ask') askInit();
+  if (name === 'resolve') resolveInit();
   if (name === 'screen') screenInit();
   document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected', String(b.dataset.t===name)));
   const ct = main.querySelector('#ct');
@@ -922,7 +1022,7 @@ function show(name){
   }
 }
 document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.t)));
-show('funnel');
+show('problems');
 
 </script></body></html>
 """
@@ -978,7 +1078,7 @@ def main() -> int:
     import re as _re
     tabs_line = _re.search(r"const TABS = \{(.*?)\};", html, _re.S)
     # functions invoked from HTML handlers or tab wiring — a missing one is a dead button at runtime
-    required = ["askInit", "doAsk", "renderServerResult", "renderAdvice", "renderAnswer", "screenInit", "doScreen", "renderScreen", "show", "esc"]
+    required = ["askInit", "doAsk", "renderServerResult", "renderAdvice", "renderAnswer", "screenInit", "doScreen", "renderScreen", "resolveInit", "doResolve", "renderResolve", "tabProblems", "tabResolve", "show", "esc"]
     missing = [f for f in required
                if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (f, f), html)]
     if missing:

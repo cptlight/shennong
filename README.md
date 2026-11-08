@@ -47,7 +47,7 @@ See [docs/PITCH.md](docs/PITCH.md) for the 3-minute script and Q&A.
 | **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 | **Corpus** | **29,042 records · 177.3 M characters**, after `make corpus-full` (base 106 sources + 1,304 CC0 jicheng.tw works). The checked-in base corpus alone is 27,738 records / 45.6 M characters — the 177.3 M figure requires the jicheng fetch |
-| **Benchmark (200 domain Q)** | ours **49.0 %** vs unfine-tuned **37.0 %** (+12.0 pts) — `artifacts/benchmark_results.json` |
+| **Benchmark (200 domain Q)** | ours **49.0 %** vs unfine-tuned **37.0 %** (+12.0 pts) — `artifacts/benchmark_v3.json` |
 
 [![Devpost](https://img.shields.io/badge/EthnoHack-2026-coral)](https://ethnohack2026.devpost.com/)
 [![Track](https://img.shields.io/badge/tracks-01%20Traditional%20Knowledge%20Mining%20%2B%2002%20Natural%20Products-teal)](https://ethnohack2026.devpost.com/)
@@ -177,9 +177,9 @@ Published whether or not we like the answer.
 |---|---|---|
 | Parameters | **8,719,616** (4,525,312 non-embedding) | **1,543,714,304** |
 | Weights file | `shennong-mini-f16.gguf` — **18,054,560 B (18.05 MB)** | `shennong-1.5b-sft-Q4_K_M.gguf` — **940 MB** |
-| Training | **from scratch on this machine, CPU only** | Qwen2.5-1.5B → LoRA r=64 SFT on 15,308 domain examples → merge → Q4_K_M |
+| Training | **from scratch on this machine, CPU only** | Qwen2.5-1.5B → LoRA r=64 SFT, 88,082 examples, 1,800 steps (batch 16 → ≈0.33 epoch) → merge → Q4_K_M |
 | Vocab | 16,384 (en · la · zh-Hant) | 151,936 (Qwen) |
-| Trained on | **1,638,400 tokens** (deliberately undertrained, the architecture proof) | 3 epochs, 14,389 examples; eval 0.53 → 0.57 |
+| Trained on | **1,638,400 tokens** (deliberately undertrained, the architecture proof) | **28,800 example-passes** (16 × 1,800 steps) → eval_loss **1.031**, train_loss 1.187 |
 | Bench | — | **49.0 %** vs unfine-tuned **37.0 %** on 200 domain questions (+12.0 pts) |
 | Source | this repo | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) · [`v1.17.0`](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 
@@ -189,6 +189,11 @@ Published whether or not we like the answer.
 > **[`docs/COMPUTE.md`](docs/COMPUTE.md)**.
 
 ### Sparse MoE vs dense — measured, not assumed
+
+> **Read this first:** the table below is a **small-scale controlled ablation** (8.7 M dense vs 19.3 M MoE) used to
+> test the architecture claim at an affordable budget. The **shipped** MoE is a different, much larger model —
+> 1,435,499,392 params, 999 MiB — and it **lost** to the dense 1.5 B fine-tune (31.7 % vs 43.3 %); it is released
+> with that benchmark in the Results section below. Do not read the two as the same experiment.
 
 We trained both at **identical token budget (1,638,400 tokens)** on the same CPU:
 
@@ -408,7 +413,7 @@ known physical constants — **mean relative error 4.5 %, 6/6 compounds within 1
 | LARGELY LOST (10–50 %) | 7 |
 | EFFECTIVELY DESTROYED (<10 %) | **2** |
 
-**9 hypotheses are refuted by physics** — they passed the ancient-record gate, the Asian-theory gate and
+**9 of the 60 simulated candidates are hard-refuted** (verdict `MAY NOT`) — they passed the ancient-record gate, the Asian-theory gate and
 the five-expert panel, and the arithmetic shows the preparation cannot do what the hypothesis claims.
 Example: *蒸 of 菖蒲 → alkaloid* models at **28 % retention**; the claim of enrichment is physically
 backwards.
@@ -463,7 +468,7 @@ structural and the arbiter is physics ([`docs/DIAGNOSTICS.md`](docs/DIAGNOSTICS.
 | excluded at the ancient-record gate | **151** | never attested — a Western screen with a footnote |
 | excluded at the Asian-theory gate | 24 | attested, but the tradition's framework does not frame it |
 | **pass both gates** | **28** | the stable headline number |
-| **refuted by validated physics** | **10** | physically impossible *as stated* |
+| **refuted by validated physics** | **10** | of the 28 that pass both textual gates, physically impossible *as stated* |
 | **survive everything** | **18** | tradition-grounded **and** physically consistent |
 
 The 10 physics exclusions are the most interesting number in the repo: they include claims that scored
@@ -715,7 +720,7 @@ restricted material **referenced only, never redistributed**. See
 **EthnoHack 2026** — *Data Hackathon on Ethnopharmacology & Health*, ETHCSTWIN (Horizon Europe),
 National and Kapodistrian University of Athens, 2–8 November 2026.
 Track **02 — Natural Products for Drug Discovery**, with depth in track 01 (knowledge mining for
-product discovery) and track 04 (a phytotherapy decision-support Workbench).
+product discovery) and a local-first phytotherapy decision-support Workbench.
 
 <div align="center">
 

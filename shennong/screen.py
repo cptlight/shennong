@@ -142,6 +142,27 @@ def physics_verdict(compound_class: str, process: str = DEFAULT_PROCESS) -> dict
             "passed": pc.passed, "score": round(pc.score, 3), "reasoning": pc.reasoning}
 
 
+TARGET_CACHE = ROOT / "artifacts" / "chembl_targets.json"
+
+
+def _target_cache() -> dict:
+    """Precomputed target -> actives. HF Spaces cannot reach the EBI API (500), so the demo must not query live."""
+    import json as _json
+    try:
+        return _json.loads(TARGET_CACHE.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def _save_target_cache(cache: dict) -> None:
+    import json as _json
+    try:
+        TARGET_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        TARGET_CACHE.write_text(_json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    except Exception:  # noqa: BLE001
+        pass
+
+
 def chembl_rank(target: str, limit: int = 120, top: int = 24) -> dict:
     """EFP4 similarity of our compounds to a target's known ChEMBL actives."""
     import csv as _csv
@@ -162,6 +183,11 @@ def chembl_rank(target: str, limit: int = 120, top: int = 24) -> dict:
             return _json.loads(r.read())
 
     raw = (target or "").strip().lower().replace(" ", "")
+    _cache = _target_cache()
+    if raw in _cache:
+        tgt, acts = _cache[raw]["target"], _cache[raw]["actives"]
+        return _rank_against(tgt, acts, top)
+
     q = ALIASES.get(raw, target)
     d = get(f"{BASE}/target/search.json?q={urllib.parse.quote(q)}&limit=8")
     ts = [{"id": t["target_chembl_id"], "name": t.get("pref_name") or "", "type": t.get("target_type")}
@@ -174,6 +200,18 @@ def chembl_rank(target: str, limit: int = 120, top: int = 24) -> dict:
                f"&standard_value__lte=10000&limit={limit}").get("activities", [])
     acts = [{"id": a.get("molecule_chembl_id"), "smiles": a.get("canonical_smiles"),
              "nM": a.get("standard_value")} for a in acts if a.get("canonical_smiles")]
+
+    _cache[raw] = {"target": tgt, "actives": acts}
+    _save_target_cache(_cache)
+
+    return _rank_against(tgt, acts, top)
+
+
+def _rank_against(tgt: dict, acts: list, top: int) -> dict:
+    """EFP4 similarity of our compounds to a target's known actives (no network)."""
+    import csv as _csv
+    from rdkit import Chem, DataStructs
+    from rdkit.Chem import AllChem
 
     def fp(smi):
         m = Chem.MolFromSmiles(smi)

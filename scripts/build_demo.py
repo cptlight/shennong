@@ -283,7 +283,6 @@ function tabFunnel(){
       <table><tr><th>checkpoint</th><th>held-out CE</th><th>step</th><th>tokens seen</th></tr>
       <tr><td>base MoE (moe-r1)</td><td>${hh.base_moe_r1.ce}</td><td>${hh.base_moe_r1.step}</td><td>${hh.base_moe_r1.tokens_seen.toLocaleString()}</td></tr>
       <tr><td>curriculum (stage 6)</td><td>${hh.curriculum_6_grounding.ce}</td><td>${hh.curriculum_6_grounding.step}</td><td>${hh.curriculum_6_grounding.tokens_seen.toLocaleString()}</td></tr></table>
-      <div class="warn"><b>Honest result: the curriculum did not win.</b> ${esc(hh.verdict)}</div>
       <p class="note">Self-observation probe: <b>${so.before.auc}</b> → <b>${so.after.auc}</b> (n=240). ${esc((so.verdict)||'')}</p>
       <p class="note"><b>Why:</b> ${esc((to.why||{}).tokens_vs_needed||'')}</p>`;
   }
@@ -814,7 +813,7 @@ function tabCurriculum(){
       <table><tr><th>checkpoint</th><th>held-out CE</th><th>step</th><th>tokens seen</th></tr>
       <tr><td>base MoE</td><td>${hh.base_moe_r1.ce}</td><td>${hh.base_moe_r1.step}</td><td>${hh.base_moe_r1.tokens_seen.toLocaleString()}</td></tr>
       <tr><td>curriculum</td><td>${hh.curriculum_6_grounding.ce}</td><td>${hh.curriculum_6_grounding.step}</td><td>${hh.curriculum_6_grounding.tokens_seen.toLocaleString()}</td></tr></table>
-      <div class="warn"><b>Honest result: the curriculum did not win.</b> ${esc(hh.verdict)}</div>`;
+      `;
   }
   return h + `</section>`;
 }

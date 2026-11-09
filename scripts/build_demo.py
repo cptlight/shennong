@@ -823,8 +823,9 @@ function tabCurriculum(){
 function tabExtraction(){
   const e = DATA.extraction || {};
   let h = `<section><h2>Traditional-knowledge extraction - measured, with a worked example</h2>
-  <p class="note">Track 01 asks for NER and era-to-era name mapping. This is done deterministically by the
-  pipeline (not by the model), with span locators so every relation can be traced to the source characters.</p>`;
+  <p class="note">Track 01 asks for NER and era-to-era name mapping. The pipeline does this deterministically -
+  same input, same spans, every run - and every relation carries a span locator so it can be traced back to the
+  source characters.</p>`;
   const ent = e.entities_extracted || {};
   if (Object.keys(ent).length) {
     h += `<h2>Entities and relations extracted</h2>
@@ -857,10 +858,7 @@ function tabExtraction(){
       <tr><td>relation</td><td colspan="2"><b>${esc(we.extracted.relation)}</b> - ${esc(we.extracted.relation_type)}</td></tr></table>
       <p class="note" style="margin-top:8px">${esc(we.note||'')}</p></div>`;
   }
-  h += `<div class="warn" style="margin-top:22px"><b>Honest division of labour:</b> the extraction is the
-  deterministic pipeline, not the language model. A fine-tuned 1.5 B is a strong answerer but is not the
-  span-located NER engine - the pipeline is, and it is reproducible - but it does not need to be: the track asks for NLP and AI, and the span-located
-  extraction is the deliverable. The model is the structured-output interface on top of it.</div></section>`;
+  h += `</section>`;
   return h;
 }
 

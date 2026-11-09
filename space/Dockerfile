@@ -12,7 +12,7 @@ WORKDIR /app
 # Code + demo page are cloned at build time so the Space can never drift from the repo.
 # Layout must match space/app.py: ROOT = /app (app.py lives at /app/space/app.py, so parent.parent = /app),
 # DEMO_DIR = /app/docs/demo, models at /app/artifacts and /app/models/baseline.
-RUN echo "source rev 2026-11-09T02:23"   # cache-bust: the git clone layer is cached unless this changes
+RUN echo "source rev 2026-11-09T02:43"   # cache-bust: the git clone layer is cached unless this changes
 RUN git clone --depth 1 https://github.com/cptlight/shennong.git /tmp/src \
     && mkdir -p /app/space /app/docs /app/artifacts /app/models/baseline \
                /app/corpus/processed/structured /app/corpus/processed /app/scripts /app/artifacts/adapters \

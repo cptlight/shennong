@@ -347,25 +347,52 @@ function tabTheory(){
 
 function tabCandidates(){
   const rows = DATA.candidates || [];
-  let h = `<section><h2>${rows.length} candidates, each with a verified span and a kill criterion</h2>
+  // Tier by structural novelty, stated up front rather than discovered by a sceptical judge.
+  const tierOf = v => (v == null ? 'C' : (v >= 0.5 ? 'A' : (v >= 0.2 ? 'B' : 'C')));
+  const tA = rows.filter(c => tierOf(c.novelty) === 'A').length;
+  const tB = rows.filter(c => tierOf(c.novelty) === 'B').length;
+  const tC = rows.filter(c => tierOf(c.novelty) === 'C').length;
+  const tZero = rows.filter(c => (c.novelty || 0) === 0).length;
+  const tgt = {}; rows.forEach(c => { const t = c.target || 'unassigned'; tgt[t] = (tgt[t] || 0) + 1; });
+  const tgtLine = Object.entries(tgt).sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `${esc(k)} <b>${v}</b>`).join(' · ');
+
+  let h = `<section><h2>${rows.length} span-verified candidates, tiered by structural novelty</h2>
+  <p class="note"><b>Read the tiers before the rows.</b> These are candidate <i>associations</i>, not new molecules.
+  Every row carries a classical span you can re-check. What the system contributes is the provenance chain and a
+  pre-registered way to kill it - not the chemistry, which is standard phytochemistry.</p>
+  <div class="card" style="margin:0 0 16px">
+    <p style="margin:0 0 8px"><b>Tier A</b> ${tA} · novelty ≥ 0.5 - chemotype not closely documented
+    &nbsp;·&nbsp; <b>Tier B</b> ${tB} · 0.2-0.5 - partially documented
+    &nbsp;·&nbsp; <b>Tier C</b> ${tC} · &lt; 0.2 - already in the reference set</p>
+    <p class="note" style="margin:0">Of the ${tC} Tier-C rows, <b>${tZero}</b> are the <i>same molecule</i> as a
+    compound already in the database under a different plant (Tanimoto 1.0). Those are <b>known compounds with a new
+    attribution</b>, not discoveries - they are kept visible rather than filtered out, so the filtering can be
+    checked. Excluding a candidate's own compound and its own source plant does not exclude the same molecule
+    arriving from another plant; that is a real limitation of the novelty metric, not a defect of the ranking.</p>
+  </div>
   <p class="note"><b>Structural novelty</b> = 1 − max Tanimoto (ECFP-style fingerprints, radius 2) against
-  23,172 structures, excluding the candidate's own compound and source plant. It measures distance from
-  documented phytochemistry - <b>not</b> therapeutic novelty. Rows are sortable by clicking a header.</p>`;
+  23,172 structures. It measures distance from documented phytochemistry, <b>not</b> therapeutic novelty.
+  <b>Proposed target</b> is <b>class-level</b>: it is inherited from the plant's documented pharmacology, not
+  predicted per molecule - the mix here is ${tgtLine}. Treat it as a framing for the assay, not a prediction.</p>`;
   h += `<table id="ct"><thead><tr>
-    <th data-s="rank">#</th><th data-s="lead">lead</th><th data-s="molecule">candidate</th>
-    <th data-s="mw">MW</th><th data-s="logp">logP</th><th data-s="novelty">structural novelty</th>
-    <th data-s="target">proposed target</th><th>span</th></tr></thead><tbody>`;
+    <th data-s="rank">#</th><th>tier</th><th data-s="lead">lead</th><th data-s="molecule">candidate</th>
+    <th data-s="mw">MW</th><th data-s="logp">logP</th><th data-s="novelty">struct. novelty</th>
+    <th data-s="target">class-level target</th><th>span</th></tr></thead><tbody>`;
+  const badge = t => `<span class="tier t${t}" title="${t === 'A' ? 'novelty >= 0.5, chemotype not closely documented' : t === 'B' ? 'novelty 0.2-0.5, partially documented' : 'novelty < 0.2, already in the reference set'}">${t}</span>`;
   for (const c of rows) {
-    h += `<tr><td>${esc(c.rank)}</td>
+    const t = tierOf(c.novelty);
+    h += `<tr class="${t === 'C' ? 'tierc' : ''}"><td>${esc(c.rank)}</td>
+      <td>${badge(t)}</td>
       <td><i>${esc(c.lead)}</i><br><span class="zh">${esc(c.drug_cn||'')}</span></td>
-      <td>${esc(c.molecule)}<br><span class="mono" style="color:#6b6157">${esc((c.smiles||'').slice(0,42))}</span></td>
+      <td>${esc(c.molecule)}<br><span class="mono" style="color:#6e6e73">${esc((c.smiles||'').slice(0,42))}</span></td>
       <td>${esc(c.mw)}</td><td>${esc(c.logp)}</td>
       <td><b>${c.novelty!=null?c.novelty.toFixed(3):'-'}</b>
           <div class="barc"><i style="width:${Math.max(2,(c.novelty||0)*100)}%"></i></div>
-          <span style="font-size:11.5px;color:#6b6157">nearest ${esc((c.nearest_known||'').slice(0,28))} (Tan ${esc(c.max_tanimoto)})</span></td>
+          <span style="font-size:11.5px;color:#6e6e73">nearest ${esc((c.nearest_known||'').slice(0,26))} (Tan ${esc(c.max_tanimoto)})</span></td>
       <td>${esc(c.target)}</td>
       <td>${c.span_verified?'<span class="ok">verified</span>':'<span class="bad">unresolved</span>'}
-          <div class="mono" style="font-size:11.5px;color:#6b6157">${esc(c.locator||'')}</div></td></tr>`;
+          <div class="mono" style="font-size:11.5px;color:#6e6e73">${esc(c.locator||'')}</div></td></tr>`;
   }
   h += `</tbody></table>`;
   const cs = DATA.cards || [];

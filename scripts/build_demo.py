@@ -526,8 +526,6 @@ function tabAsk(){
         font:inherit;font-weight:600;cursor:pointer">Answer</button>
       <button id="goc" style="padding:8px 16px;border:0;border-radius:8px;background:#fff;color:var(--ink);
         border:1px solid var(--line);font:inherit;cursor:pointer">Compare with unfine-tuned</button>
-      <button id="goh" style="padding:8px 16px;border:0;border-radius:8px;background:var(--red);color:#fff;
-        font:inherit;cursor:pointer">Propose a hypothesis</button>
       <span id="stat" style="font-size:13px;color:var(--muted)"></span>
     </div>
   </div>
@@ -576,7 +574,6 @@ async function askInit(){
   form.style.display = 'block';
   document.getElementById('go').onclick = () => doAsk('query');
   document.getElementById('goc').onclick = () => doAsk('compare');
-  document.getElementById('goh').onclick = () => doAsk('hypothesize');
   document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) doAsk('query'); });
   try {
     const r = await fetch('/api/model');
@@ -634,14 +631,12 @@ async function doAsk(mode){
       if (ed && ed.ok) renderAdvice(out, ed);
     } catch (e) { console.warn('advise stage failed:', String(e)); }
     // 2) the model answer
-    const endpoint = mode === 'hypothesize' ? '/api/hypothesize'
-                   : mode === 'compare' ? '/api/compare' : '/api/query';
+    const endpoint = mode === 'compare' ? '/api/compare' : '/api/query';
     const r = await fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({question:q, k:5,
-        max_new_tokens: mode === 'hypothesize' ? 96 : (mode === 'compare' ? 40 : 28)})});
+        max_new_tokens: mode === 'compare' ? 40 : 28})});
     const d = await r.json();
-    if (mode === 'hypothesize') renderServerResult(out, d, 'hypothesize');
-    else if (mode === 'compare') renderCompare(out, d);
+    if (mode === 'compare') renderCompare(out, d);
     else renderAnswer(out, d);
     stat.textContent = 'answered in ' + Math.round((Date.now() - t0) / 1000) + ' s';
   } catch (e) {
@@ -746,13 +741,7 @@ function renderServerResult(out, d, mode){
         <div class="quote zh">${esc(p.passage)}</div></div>`;
     });
   }
-  if (mode === 'hypothesize') {
-    h += `<h2 style="margin-top:18px">Proposed hypothesis</h2>
-      <div class="warn"><b>Unvalidated.</b> ${esc(d.status||'')}</div>
-      <div class="card mono" style="white-space:pre-wrap">${esc(d.hypothesis||'')}</div>
-      <h2 style="margin-top:18px">What would refute it</h2>
-      <div class="card"><ul>${(d.kill_criteria||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div>`;
-  } else {
+  {
     if (d.raw_completion !== undefined) {
       h += `<h2 style="margin-top:18px">Bare model completion - no context</h2>
         <div class="card mono" style="white-space:pre-wrap">${esc(d.raw_completion||'')}</div>`;

@@ -250,7 +250,21 @@ def _live_model():
             return _LIVE
         _LIVE["llm"] = Llama(model_path=str(gguf), n_ctx=2048, n_threads=4, verbose=False)
         facts_path = ROOT / "artifacts/facts.jsonl"
-        _LIVE["facts"] = [json.loads(l) for l in facts_path.open(encoding="utf-8")] if facts_path.exists() else []
+        if facts_path.exists():
+            _LIVE["facts"] = [json.loads(l) for l in facts_path.open(encoding="utf-8")]
+        else:
+            # The 85 MB fact store is not in the demo image (it is gitignored). Fall back to the 1,400 passages the
+            # page itself ships — docs/demo/browser_corpus.json is tracked and copied into the Space, so retrieval
+            # works there instead of returning "no fact in the store matches this question".
+            _LIVE["facts"] = []
+            bc = ROOT / "docs/demo/browser_corpus.json"
+            if bc.exists():
+                try:
+                    passages = json.loads(bc.read_text(encoding="utf-8")).get("passages", [])
+                    _LIVE["facts"] = [{"kind": "passage", "text": q.get("x", ""),
+                                       "source_id": q.get("s", "")} for q in passages if q.get("x")]
+                except Exception:  # noqa: BLE001
+                    _LIVE["facts"] = []
         _LIVE.update({"loaded": True, "gguf": gguf.name, "n_facts": len(_LIVE["facts"])})
     except Exception as exc:  # noqa: BLE001
         _LIVE.update({"loaded": True, "error": f"{type(exc).__name__}: {exc}"})

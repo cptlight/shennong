@@ -3,7 +3,7 @@
 
 Why static: a judge should be able to click one URL and test the system without cloning a repo, installing
 Python, or waiting on a server. Everything the page shows is precomputed from the real artefacts, so the
-numbers on the page are the numbers in the repo — there is no second copy to drift.
+numbers on the page are the numbers in the repo - there is no second copy to drift.
 
 It is deliberately honest about what it is: a *viewer* over the pipeline's outputs, not a re-run. Anything
 that requires compute points at the exact command that produces it.
@@ -96,12 +96,12 @@ def build_data() -> dict:
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "repo": "https://github.com/cptlight/shennong",
         "releases": {
-            "v1.17.0": {"what": "SHENNONG 1.5B — fine-tuned Qwen2.5-1.5B, Q4_K_M (the shipped model)",
+            "v1.17.0": {"what": "SHENNONG 1.5B - fine-tuned Qwen2.5-1.5B, Q4_K_M (the shipped model)",
                         "file": "shennong-1.5b-sft-Q4_K_M.gguf", "bytes": 986047904,
                         "sha256": "c2757da836c73e645755579e2cfc062c45ace25e42409576e00e9ea069ee27ba",
                         "url": "https://github.com/cptlight/shennong/releases/tag/v1.17.0",
                         "hf": "https://huggingface.co/tomscot/shennong-1.5b-sft"},
-            "v1.16.0": {"what": "SHENNONG 0.5B — fine-tuned Qwen2.5-0.5B, Q4_K_M (intermediate)",
+            "v1.16.0": {"what": "SHENNONG 0.5B - fine-tuned Qwen2.5-0.5B, Q4_K_M (intermediate)",
                         "file": "shennong-0.5b-sft-Q4_K_M.gguf", "bytes": 397807328,
                         "sha256": "048209ac2e1690cb448e1be82bc4a7da969da67581a461b739fa9e0479115f30",
                         "url": "https://github.com/cptlight/shennong/releases/tag/v1.16.0",
@@ -121,10 +121,10 @@ def build_data() -> dict:
         "law_impact": load("artifacts/law_impact.json", {}),
         "theory": {
             "tcm_channel": {"hit_rate": 0.0748, "permutation_mean": 0.038, "n": 2059, "p": 0.008,
-                            "verdict": "predicts — weakly but significantly"},
+                            "verdict": "predicts - weakly but significantly"},
             "tcm_nature": {"auc": 0.4562, "n": 193, "p": 0.2607, "verdict": "null"},
             "tcm_flavor": {"auc": 0.5294, "n": 201, "p": 0.779, "verdict": "null"},
-            "ayurveda": {"n": 0, "verdict": "not linkable — no Sanskrit→binomial lexicon"},
+            "ayurveda": {"n": 0, "verdict": "not linkable - no Sanskrit→binomial lexicon"},
         },
         "experts": (load("artifacts/routing_steering.json", {}) or {}).get("expert_informativeness", {}),
         "routing": {"item_level": load("artifacts/expert_routing.json", {}),
@@ -151,7 +151,7 @@ def build_data() -> dict:
 HTML = """<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SHENNONG — judge demo</title>
+<title>SHENNONG - judge demo</title>
 <style>
   :root{
     --ink:#1d1d1f; --paper:#f5f5f7; --card:#ffffff;
@@ -204,12 +204,12 @@ HTML = """<!doctype html>
   .warn{background:#fdf3e7;border:1px solid #e8c9a3;border-radius:8px;padding:10px 12px;margin:0 0 16px;font-size:13.5px}
 </style></head><body>
 <header>
-  <h1>SHENNONG 神农 — judge demo</h1>
+  <h1>SHENNONG 神农 - judge demo</h1>
   <p class="sub">A <b>pre-experimental filter</b> for natural-product discovery: it lifts a processing
   instruction out of the classical Asian medical record, compiles it into a chemical hypothesis, and uses
-  <b>validated physics</b> to decide whether the hypothesis is physically possible — before any wet-lab work.</p>
+  <b>validated physics</b> to decide whether the hypothesis is physically possible - before any wet-lab work.</p>
   <div class="badges">
-    <span class="badge">Track 02 — Natural Products for Drug Discovery</span>
+    <span class="badge">Track 02 - Natural Products for Drug Discovery</span>
     <span class="badge">Code + weights: Apache-2.0</span>
     <span class="badge">Open weights, no gate</span>
     <span class="badge"><a id="repo" href="#">GitHub ↗</a></span>
@@ -217,9 +217,9 @@ HTML = """<!doctype html>
 </header>
 <nav role="tablist" aria-label="Demo sections">
   <button role="tab" aria-selected="true" data-t="problems">0 · The two problems</button>
-  <button role="tab" aria-selected="false" data-t="resolve">1 · Track 1 — resolve a plant name (live)</button>
-  <button role="tab" aria-selected="false" data-t="extract">1b · Track 1 — read a passage (live)</button>
-  <button role="tab" aria-selected="false" data-t="screen">2 · Track 2 — screen a target (live)</button>
+  <button role="tab" aria-selected="false" data-t="resolve">1 · Track 1 - resolve a plant name (live)</button>
+  <button role="tab" aria-selected="false" data-t="extract">1b · Track 1 - read a passage (live)</button>
+  <button role="tab" aria-selected="false" data-t="screen">2 · Track 2 - screen a target (live)</button>
   <button role="tab" aria-selected="false" data-t="ask">3 · Ask the model (live)</button>
   <button role="tab" aria-selected="false" data-t="funnel">4 · The funnel</button>
   <button role="tab" aria-selected="false" data-t="arbiter">5 · The arbiter</button>
@@ -233,7 +233,7 @@ HTML = """<!doctype html>
 </nav>
 <main id="main"></main>
 <footer>
-  Every number on this page is read from <code>artifacts/*.json</code> in the repository — this page cannot
+  Every number on this page is read from <code>artifacts/*.json</code> in the repository - this page cannot
   show a figure the repo does not contain. Generated <span id="gen"></span>.
   <br>Research use only. Not medical advice. No dosing, no preparation protocols, no synthesis routes.
 </footer>
@@ -250,25 +250,25 @@ function tabFunnel(){
   const f = DATA.funnel || {};
   const steps = [
     ['candidates', f.candidates, 'hypotheses compiled from the corpus', ''],
-    ['excluded_attestation', f.excluded_attestation, 'excluded — not attested in the record', 'drop'],
-    ['excluded_theory', f.excluded_theory, 'excluded — tradition theory does not frame it', 'drop'],
+    ['excluded_attestation', f.excluded_attestation, 'excluded - not attested in the record', 'drop'],
+    ['excluded_theory', f.excluded_theory, 'excluded - tradition theory does not frame it', 'drop'],
     ['passed_gates', f.passed_gates, 'pass both tradition gates', ''],
     ['refuted_physics', f.refuted_physics, 'refuted by validated physics', 'drop'],
-    ['survive', f.survive, 'survive — worth an assay', 'keep'],
+    ['survive', f.survive, 'survive - worth an assay', 'keep'],
   ];
   let h = `<section class="on"><h2>The funnel</h2>
-  <p class="note">The hypotheses assert what the tradition intends — that a preparation <b>enriches</b> the
+  <p class="note">The hypotheses assert what the tradition intends - that a preparation <b>enriches</b> the
   medicinally relevant class, which is why anyone prescribes the step. Physics tests that direction.
   The funnel is <b>identical</b> under a 7-expert and a 12-expert panel: the gates are structural, the arbiter
   is physics, and adding experts cannot move a count.</p><div class="funnel">`;
-  for (const [k,v,lbl,cls] of steps) h += `<div class="step ${cls}"><b>${esc(v??'—')}</b><span>${esc(lbl)}</span></div>`;
+  for (const [k,v,lbl,cls] of steps) h += `<div class="step ${cls}"><b>${esc(v??'-')}</b><span>${esc(lbl)}</span></div>`;
   h += `</div>`;
   const c = DATA.consensus_vs_arbiter || {};
   h += `<table><tr><th>Measure</th><th>Value</th></tr>
-    <tr><td>candidates refuted by a physics check somewhere in the funnel</td><td><b>${esc(c.physics_refutations??'—')}</b> of ${esc(c.n_candidates??'—')}</td></tr>
-    <tr><td>of those, with <b>unanimous 5/5</b> tradition-panel agreement</td><td><b>${esc(c.refuted_despite_unanimous??'—')}</b></td></tr>
+    <tr><td>candidates refuted by a physics check somewhere in the funnel</td><td><b>${esc(c.physics_refutations??'-')}</b> of ${esc(c.n_candidates??'-')}</td></tr>
+    <tr><td>of those, with <b>unanimous 5/5</b> tradition-panel agreement</td><td><b>${esc(c.refuted_despite_unanimous??'-')}</b></td></tr>
     <tr><td>tradition panel used for the consensus comparison</td><td class="mono">${esc((c.tradition_panel||[]).join(' · '))}</td></tr>
-    <tr><td>claim template tested</td><td>${esc(c.claim_template||'—')}</td></tr></table>`;
+    <tr><td>claim template tested</td><td>${esc(c.claim_template||'-')}</td></tr></table>`;
   const li = DATA.law_impact || {};
   h += `<h2 style="margin-top:22px">Which laws actually fired</h2>
     <p class="note">A registry of 15 laws is only impressive if they do work. This is the honest count.</p>
@@ -294,21 +294,21 @@ function tabFunnel(){
 function tabArbiter(){
   let h = `<section><h2>The arbiter overrules its own consensus</h2>
   <p class="note">The claim: <i>蒸 of 菖蒲 (Acorus calamus) should measurably <b>enrich</b> its terpenoid
-  content.</i> Five tradition experts scored it 5/5. Clausius–Clapeyron at 100 °C steam says otherwise.</p>`;
+  content.</i> Five tradition experts scored it 5/5. Clausius-Clapeyron at 100 °C steam says otherwise.</p>`;
   const rows = DATA.deterministic || [];
   h += `<table><tr><th>preparation</th><th>chemotype</th><th>modelled retention</th><th>range</th><th>dominant sink</th><th>verdict</th></tr>`;
   for (const r of rows) {
     h += `<tr><td class="zh">${esc(r.drug)} + ${esc(r.process)}</td><td>${esc(r.chemotype)}</td>
       <td><b>${(r.retained*100).toFixed(1)}%</b><div class="barc"><i style="width:${Math.max(2,r.retained*100)}%"></i></div></td>
-      <td>${r.range?((r.range[0]*100).toFixed(0)+'–'+(r.range[1]*100).toFixed(0)+'%'):'—'}</td>
+      <td>${r.range?((r.range[0]*100).toFixed(0)+'-'+(r.range[1]*100).toFixed(0)+'%'):'-'}</td>
       <td>${esc(r.sink)}</td><td>${esc((r.verdict||'').slice(0,72))}</td></tr>`;
   }
   h += `</table><p class="note" style="margin-top:12px">You cannot enrich a class you are actively stripping.
-  Validation before trust: Joback boiling points against known constants —
+  Validation before trust: Joback boiling points against known constants -
   <b>mean 4.5 % error, 6/6 within 10 %</b>. Reference monoterpene (limonene) retains 1.5 % under the same
   steam; that is the mechanism illustration, not this plant's number.</p>`;
   const q = DATA.qm || {};
-  if (q.validation) h += `<details><summary>Quantum-chemistry layer — validation before trust</summary>
+  if (q.validation) h += `<details><summary>Quantum-chemistry layer - validation before trust</summary>
     <p>RHF Koopmans ionisation potentials vs experiment: <b>MAE ${esc(q.validation.mae_ev)} eV</b> over ${esc(q.validation.n)} molecules.</p>
     <table><tr><th>molecule</th><th>computed (eV)</th><th>experimental (eV)</th><th>error</th></tr>
     ${(q.validation.rows||[]).map(r=>`<tr><td>${esc(r.molecule)}</td><td>${esc(r.ip_computed_ev)}</td><td>${esc(r.ip_experimental_ev)}</td><td>${esc(r.error_ev)}</td></tr>`).join('')}
@@ -321,7 +321,7 @@ function tabTheory(){
   const t = DATA.theory || {};
   let h = `<section><h2>Does the classical theory predict chemistry?</h2>
   <p class="note">Five axes pre-registered against measured chemistry and target biology. Thresholds fixed
-  before any result was seen; permutation nulls; Holm correction. <b>One survived — the most mechanistic one.</b>
+  before any result was seen; permutation nulls; Holm correction. <b>One survived - the most mechanistic one.</b>
   The nulls are published beside it, because a pre-registered test that reports only its successes is not a test.</p>
   <table><tr><th>axis</th><th>statistic</th><th>result</th><th>n</th><th>p</th><th>verdict</th></tr>`;
   const rows = [
@@ -330,7 +330,7 @@ function tabTheory(){
      t.tcm_channel?.n, t.tcm_channel?.p, t.tcm_channel?.verdict, true],
     ['四氣 four natures → polarity','AUC', t.tcm_nature?.auc, t.tcm_nature?.n, t.tcm_nature?.p, t.tcm_nature?.verdict, false],
     ['五味 five flavours → compound class','AUC', t.tcm_flavor?.auc, t.tcm_flavor?.n, t.tcm_flavor?.p, t.tcm_flavor?.verdict, false],
-    ['Ayurvedic vīrya / ṣaḍrasa','—','—', t.ayurveda?.n, '—', t.ayurveda?.verdict, false],
+    ['Ayurvedic vīrya / ṣaḍrasa','-','-', t.ayurveda?.n, '-', t.ayurveda?.verdict, false],
   ];
   for (const [a,st,r,n,p,v,surv] of rows) {
     h += `<tr><td>${esc(a)}</td><td>${esc(st)}</td><td class="${surv?'ok':'bad'}"><b>${esc(r)}</b></td>
@@ -338,10 +338,10 @@ function tabTheory(){
   }
   h += `</table><p class="note" style="margin-top:12px"><b>Honest limit, and the confound answered:</b>
   in-lexicon name resolution is exact (<b>1.000</b>), but only <b>48.7 %</b> of plant-derived mentions resolve
-  (4,357 of 8,944) — the rest are archaic names absent from every open lexicon. <b>37.9 %</b> of the
+  (4,357 of 8,944) - the rest are archaic names absent from every open lexicon. <b>37.9 %</b> of the
   pharmacopoeia is not botanical at all (23.5 % animal, 8.3 % mineral, 4.1 % manufactured, 2.0 % human-derived),
   so a rate over everything is the wrong denominator. The 歸經 test runs only on rows where both names resolved,
-  so unresolved names are dropped, not guessed — a <i>selection</i> bound on coverage, not measurement error.</p></section>`;
+  so unresolved names are dropped, not guessed - a <i>selection</i> bound on coverage, not measurement error.</p></section>`;
   return h;
 }
 
@@ -350,7 +350,7 @@ function tabCandidates(){
   let h = `<section><h2>${rows.length} candidates, each with a verified span and a kill criterion</h2>
   <p class="note"><b>Structural novelty</b> = 1 − max Tanimoto (ECFP-style fingerprints, radius 2) against
   23,172 structures, excluding the candidate's own compound and source plant. It measures distance from
-  documented phytochemistry — <b>not</b> therapeutic novelty. Rows are sortable by clicking a header.</p>`;
+  documented phytochemistry - <b>not</b> therapeutic novelty. Rows are sortable by clicking a header.</p>`;
   h += `<table id="ct"><thead><tr>
     <th data-s="rank">#</th><th data-s="lead">lead</th><th data-s="molecule">candidate</th>
     <th data-s="mw">MW</th><th data-s="logp">logP</th><th data-s="novelty">structural novelty</th>
@@ -360,7 +360,7 @@ function tabCandidates(){
       <td><i>${esc(c.lead)}</i><br><span class="zh">${esc(c.drug_cn||'')}</span></td>
       <td>${esc(c.molecule)}<br><span class="mono" style="color:#6b6157">${esc((c.smiles||'').slice(0,42))}</span></td>
       <td>${esc(c.mw)}</td><td>${esc(c.logp)}</td>
-      <td><b>${c.novelty!=null?c.novelty.toFixed(3):'—'}</b>
+      <td><b>${c.novelty!=null?c.novelty.toFixed(3):'-'}</b>
           <div class="barc"><i style="width:${Math.max(2,(c.novelty||0)*100)}%"></i></div>
           <span style="font-size:11.5px;color:#6b6157">nearest ${esc((c.nearest_known||'').slice(0,28))} (Tan ${esc(c.max_tanimoto)})</span></td>
       <td>${esc(c.target)}</td>
@@ -376,7 +376,7 @@ function tabCandidates(){
     for (const c of cs) h += `<div class="card"><h3>${esc(c.id)}</h3>
       <p>${esc(c.claim)}</p><div class="quote zh">${esc(c.span||'')}</div>
       <p style="font-size:12px;color:#6b6157">source: ${esc(c.source||'')}</p>
-      <p style="font-size:13px"><b>Kill criteria:</b> ${esc(c.kill||'—')}</p></div>`;
+      <p style="font-size:13px"><b>Kill criteria:</b> ${esc(c.kill||'-')}</p></div>`;
     h += `</div>`;
   }
   h += `</section>`;
@@ -388,28 +388,28 @@ function tabExperts(){
   const rows = Object.entries(e).sort((a,b)=>(b[1].auc||0)-(a[1].auc||0));
   let h = `<section><h2>The expert panel, measured against the arbiter</h2>
   <p class="note">Each expert's confidence is tested on one question: does it predict whether a claim
-  <b>survives physics</b>? Utility is defined by the arbiter, never by agreement — an expert that merely makes
+  <b>survives physics</b>? Utility is defined by the arbiter, never by agreement - an expert that merely makes
   claims pass is worthless. This is the measurement that caught a bug in our own phytochemistry expert.</p>
   <table><tr><th>expert</th><th>AUC vs surviving the arbiter</th><th>reading</th></tr>`;
   for (const [k,v] of rows) {
     const a = v.auc;
-    h += `<tr><td class="mono">${esc(k)}</td><td><b>${a!=null?a.toFixed(3):'—'}</b></td>
-      <td>${a==null?'not evaluable (structural / observation-only)':(a>=0.6?'informative':a>0.5?'weak':'<b class="bad">anti-predictive — suspect</b>')}</td></tr>`;
+    h += `<tr><td class="mono">${esc(k)}</td><td><b>${a!=null?a.toFixed(3):'-'}</b></td>
+      <td>${a==null?'not evaluable (structural / observation-only)':(a>=0.6?'informative':a>0.5?'weak':'<b class="bad">anti-predictive - suspect</b>')}</td></tr>`;
   }
   h += `</table>`;
   const r = DATA.routing || {};
   const il = r.item_level||{}, ql = r.question_level||{};
-  h += `<h2 style="margin-top:22px">Sparse activation — cost tracks the question</h2>
+  h += `<h2 style="margin-top:22px">Sparse activation - cost tracks the question</h2>
   <div class="funnel">
-    <div class="step"><b>${esc(il.mixed_stream?.mean_active_per_item??il.mean_active_per_item??'—')}</b><span>experts / item (mixed stream)</span></div>
-    <div class="step"><b>${il.mixed_stream?.fraction!=null?(il.mixed_stream.fraction*100).toFixed(1)+'%':(il.activation_fraction!=null?(il.activation_fraction*100).toFixed(1)+'%':'—')}</b><span>of the 12-expert panel</span></div>
-    <div class="step"><b>${esc(ql.mean_active??'—')}</b><span>experts / natural-language question</span></div>
-    <div class="step"><b>${ql.fraction!=null?(ql.fraction*100).toFixed(1)+'%':'—'}</b><span>of the panel, per question</span></div>
+    <div class="step"><b>${esc(il.mixed_stream?.mean_active_per_item??il.mean_active_per_item??'-')}</b><span>experts / item (mixed stream)</span></div>
+    <div class="step"><b>${il.mixed_stream?.fraction!=null?(il.mixed_stream.fraction*100).toFixed(1)+'%':(il.activation_fraction!=null?(il.activation_fraction*100).toFixed(1)+'%':'-')}</b><span>of the 12-expert panel</span></div>
+    <div class="step"><b>${esc(ql.mean_active??'-')}</b><span>experts / natural-language question</span></div>
+    <div class="step"><b>${ql.fraction!=null?(ql.fraction*100).toFixed(1)+'%':'-'}</b><span>of the panel, per question</span></div>
   </div>
   <details><summary>Why a question needs more experts than a chunk does</summary>
   <p>A raw corpus chunk usually carries no binomial, no process and no structure, so it activates one expert
   (the record check). A question that names a plant legitimately needs taxonomy, chemotaxonomy and
-  phytochemistry as well — different questions, different panels. Measured, not asserted.</p></details></section>`;
+  phytochemistry as well - different questions, different panels. Measured, not asserted.</p></details></section>`;
   return h;
 }
 
@@ -419,14 +419,14 @@ function tabDiag(){
   let h = `<section><h2>What the system says about itself</h2>
   <p class="note">These are not claims about the corpus; they are measurements of the machine.</p>
   <table><tr><th>measure</th><th>value</th></tr>
-  <tr><td>funnel invariant across panel size</td><td><b>identical</b> with 7 experts and with 12 — no count moves</td></tr>
-  <tr><td>physics refutations under enrichment claims</td><td><b>${esc((DATA.consensus_vs_arbiter||{}).physics_refutations??'—')}</b> / ${esc((DATA.consensus_vs_arbiter||{}).n_candidates??'—')}</td></tr>
-  <tr><td>…of which unanimous 5/5 panel agreement</td><td><b>${esc((DATA.consensus_vs_arbiter||{}).refuted_despite_unanimous??'—')}</b></td></tr>
-  <tr><td>structural novelty distinct values</td><td><b>42</b> across 60 candidates (range 0.000–0.750) — a degenerate score now fails the build</td></tr>
+  <tr><td>funnel invariant across panel size</td><td><b>identical</b> with 7 experts and with 12 - no count moves</td></tr>
+  <tr><td>physics refutations under enrichment claims</td><td><b>${esc((DATA.consensus_vs_arbiter||{}).physics_refutations??'-')}</b> / ${esc((DATA.consensus_vs_arbiter||{}).n_candidates??'-')}</td></tr>
+  <tr><td>…of which unanimous 5/5 panel agreement</td><td><b>${esc((DATA.consensus_vs_arbiter||{}).refuted_despite_unanimous??'-')}</b></td></tr>
+  <tr><td>structural novelty distinct values</td><td><b>42</b> across 60 candidates (range 0.000-0.750) - a degenerate score now fails the build</td></tr>
   <tr><td>MoE vs dense, same 1.64 M tokens</td><td>val loss <b>${d.val_loss_delta!=null?d.val_loss_delta.toFixed(3):'−0.91'}</b> nats better</td></tr>
-  <tr><td><b>capacity per FLOP</b> (the architecture claim)</td><td><b>${(DATA.compute||{}).derived?(DATA.compute.derived.capacity_per_flop_gain.toFixed(2)+'× more parameters per FLOP'):'1.58× more parameters per FLOP'}</b> — ${(DATA.compute||{}).derived?(DATA.compute.derived.capacity_ratio.toFixed(2)+'× capacity for '+DATA.compute.derived.compute_ratio.toFixed(2)+'× compute'):'2.22× capacity for 1.41× compute'}</td></tr>
+  <tr><td><b>capacity per FLOP</b> (the architecture claim)</td><td><b>${(DATA.compute||{}).derived?(DATA.compute.derived.capacity_per_flop_gain.toFixed(2)+'× more parameters per FLOP'):'1.58× more parameters per FLOP'}</b> - ${(DATA.compute||{}).derived?(DATA.compute.derived.capacity_ratio.toFixed(2)+'× capacity for '+DATA.compute.derived.compute_ratio.toFixed(2)+'× compute'):'2.22× capacity for 1.41× compute'}</td></tr>
   <tr><td>deployable footprint</td><td>${(DATA.compute||{}).deployability?((DATA.compute.deployability.fp16_weights_bytes/1e6).toFixed(1)+' MB fp16 · CPU-only · offline'):'38.7 MB fp16 · CPU-only · offline'}</td></tr>
-  <tr><td>⚠️ throughput comparison</td><td><b>confounded</b> — MoE run used 2 torch threads, dense run 1; the speed difference may be entirely the second thread. No claim rests on it.</td></tr>
+  <tr><td>⚠️ throughput comparison</td><td><b>confounded</b> - MoE run used 2 torch threads, dense run 1; the speed difference may be entirely the second thread. No claim rests on it.</td></tr>
   </table>`;
   const disc = DATA.discoveries || {};
   if (Object.keys(disc).length) {
@@ -437,7 +437,7 @@ function tabDiag(){
   }
   h += `<p class="note" style="margin-top:14px"><b>Known-weak, stated here:</b> plant-materia name resolution 48.7 %;
   quantum layer arbitrates fragments, not natural products; two of five theory axes could not be tested at all;
-  the mass-conservation law fired zero times (the claim template says "enrich", so it should — this is being
+  the mass-conservation law fired zero times (the claim template says "enrich", so it should - this is being
   reconciled, not hidden).</p></section>`;
   return h;
 }
@@ -458,7 +458,7 @@ function tabWeights(){
   <tr><td>code</td><td><b>Apache-2.0</b></td></tr>
   <tr><td>model weights</td><td><b>Apache-2.0</b></td></tr>
   <tr><td>corpus data</td><td>per-source: public domain + CC BY-SA-4.0; <b>GRETIL rejected</b> (CC BY-NC-SA cannot ship in a public repo)</td></tr></table>
-  <h2 style="margin-top:22px">Reproduce it yourself — three ways</h2>
+  <h2 style="margin-top:22px">Reproduce it yourself - three ways</h2>
   <details open><summary>1 · In a browser (no install)</summary>
   <p>This page. Everything above is read from the repository's artefacts.</p></details>
   <details><summary>2 · Locally, offline, CPU-only</summary>
@@ -468,9 +468,9 @@ make workbench        # Workbench on http://127.0.0.1:8000
 make test
 python scripts/verify_contracts.py   # enforces &lt;1 GB weights, no placeholders, novelty non-degenerate</p></details>
   <details><summary>3 · The weights, directly</summary>
-  <p class="mono" style="white-space:pre-wrap"># llama.cpp — no GPU needed
+  <p class="mono" style="white-space:pre-wrap"># llama.cpp - no GPU needed
 llama-cli -m shennong-mini-f16.gguf -p "附子必須先炮製，因為" -n 80</p>
-  <p style="font-size:13.5px">Model card: <code>model/MODEL_CARD.md</code> — states plainly that the mini model is
+  <p style="font-size:13.5px">Model card: <code>model/MODEL_CARD.md</code> - states plainly that the mini model is
   8.72 M parameters trained on 1.64 M tokens (≈0.9 % of compute-optimal), a pipeline demonstration and not a
   factual oracle. Bits-per-byte <b>2.526</b> against a unigram baseline of <b>3.076</b>.</p></details>
   <p class="note" style="margin-top:14px"><b>Artefacts on disk:</b> <span class="mono">${esc((DATA.artifacts_present||[]).join(' · '))}</span></p>
@@ -482,12 +482,12 @@ llama-cli -m shennong-mini-f16.gguf -p "附子必須先炮製，因為" -n 80</p
 function askThis(q){ const inp=document.getElementById('q'); if(inp){inp.value=q;} doAsk('query'); }
 
 function tabAsk(){
-  let h = `<section><h2>Ask the model — free form, live</h2>
+  let h = `<section><h2>Ask the model - free form, live</h2>
   <p class="note">Type any question about the two tracks. It goes to the <b>fine-tuned 1.5 B</b>, which answers
-  <b>from its own weights</b> — direct generation, no retrieval, no injected passages, no lookup.
+  <b>from its own weights</b> - direct generation, no retrieval, no injected passages, no lookup.
   A <b>learned router</b> (trained classifier) picks the domain expert for the question; the answer is
   generated by that expert. Below the answer, a separate rule-based analysis panel is shown and clearly
-  labelled — it is deterministic reasoning, not the model.</p>
+  labelled - it is deterministic reasoning, not the model.</p>
   <p class="note">On CPU: an answer takes ~40 s, the side-by-side comparison ~90 s. The experts appear instantly.</p>
   <div id="askbox" class="warn">checking for a live inference endpoint…</div>
   <div id="askform" style="display:none;margin:0 0 16px">
@@ -531,7 +531,7 @@ async function askInit(){
   const box = document.getElementById('askbox');
   const qgrid = document.createElement('div');
   qgrid.style.marginBottom = '16px';
-  qgrid.innerHTML = `<h2 style="margin:0 0 8px">Domain test — click a question to run the live comparison</h2>
+  qgrid.innerHTML = `<h2 style="margin:0 0 8px">Domain test - click a question to run the live comparison</h2>
     <p class="note">Each runs the fine-tuned 1.5B and the unfine-tuned baseline on the SAME prompt with the SAME
     decode, and shows both answers plus the exact prompts. No retrieval, no injected passages.</p>
     ` + DOMAIN_QUESTIONS.map(g =>
@@ -543,7 +543,7 @@ async function askInit(){
   const af = document.getElementById('askform');
   af.parentNode.insertBefore(qgrid, af);
   const form = document.getElementById('askform');
-  // The box is usable immediately — never wait on a probe before letting the judge type. The probe only
+  // The box is usable immediately - never wait on a probe before letting the judge type. The probe only
   // annotates the status line and downgrades the message if this copy has no server behind it.
   form.style.display = 'block';
   document.getElementById('go').onclick = () => doAsk('query');
@@ -564,16 +564,16 @@ async function askInit(){
     }
   } catch (e) { /* no server: fall through to in-browser inference */ }
 
-  // 2) no server on this copy — point at a live instance instead of pretending to run one
+  // 2) no server on this copy - point at a live instance instead of pretending to run one
   WB.mode = 'none';
   box.className = '';
   box.innerHTML = `<b>No live inference endpoint was detected on this copy.</b>
-    The page is generated from the repository's artefacts, so every figure here is real — but inference needs
+    The page is generated from the repository's artefacts, so every figure here is real - but inference needs
     a process. Two live options:<br><br>
-    <b>1 · Hosted demo (Hugging Face Space)</b> — the same page with the model behind it.<br>
-    <b>2 · Your own machine</b> — <span class="mono">make setup &amp;&amp; make workbench</span>, then open
+    <b>1 · Hosted demo (Hugging Face Space)</b> - the same page with the model behind it.<br>
+    <b>2 · Your own machine</b> - <span class="mono">make setup &amp;&amp; make workbench</span>, then open
     <span class="mono">/demo/</span> on the printed URL. The ask box detects the endpoint and enables itself.<br><br>
-    <b>3 · Codespace</b> — open the repo in a codespace, run <span class="mono">make workbench</span>,
+    <b>3 · Codespace</b> - open the repo in a codespace, run <span class="mono">make workbench</span>,
     and use the forwarded URL.`;
   // keep the box usable: if the endpoint is actually there (probe raced), typing still works
   return;
@@ -582,7 +582,7 @@ async function askInit(){
 
 let ASK_BUSY = false;
 async function doAsk(mode){
-  if (ASK_BUSY) return;              // one request at a time — overlapping clicks used to clobber each other
+  if (ASK_BUSY) return;              // one request at a time - overlapping clicks used to clobber each other
   mode = mode || 'query';
   const q = document.getElementById('q').value.trim();
   if (!q) return;
@@ -595,10 +595,10 @@ async function doAsk(mode){
   // a visible clock, so a 40 s CPU answer does not look like a stall
   const tick = setInterval(() => {
     const sNow = Math.round((Date.now() - t0) / 1000);
-    stat.textContent = 'generating… ' + sNow + ' s' + (sNow > 25 ? ' (CPU — the 1.5 B runs on 2 cores)' : '');
+    stat.textContent = 'generating… ' + sNow + ' s' + (sNow > 25 ? ' (CPU - the 1.5 B runs on 2 cores)' : '');
   }, 400);
   try {
-    // 1) learned router + rule analysis — fast
+    // 1) learned router + rule analysis - fast
     try {
       const er = await fetch('/api/advise', {method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({question:q})});
@@ -618,7 +618,7 @@ async function doAsk(mode){
     stat.textContent = 'answered in ' + Math.round((Date.now() - t0) / 1000) + ' s';
   } catch (e) {
     out.insertAdjacentHTML('beforeend', '<div class="warn">The request failed or timed out after ' +
-      Math.round((Date.now() - t0) / 1000) + ' s. On CPU a long answer can exceed the host timeout — ' +
+      Math.round((Date.now() - t0) / 1000) + ' s. On CPU a long answer can exceed the host timeout - ' +
       'try a shorter question.</div>');
     stat.textContent = 'failed';
   } finally {
@@ -632,24 +632,24 @@ function renderAdvice(out, d){
   const r = d.routed || {}, p = d.parsed || {}, c = d.consensus || {}, a = d.arbiter || {};
   const chips = (r.experts||[]).map(e => '<span style="padding:3px 10px;border-radius:999px;background:var(--green);color:#fff;font-size:12px">'+esc(e)+'</span>').join(' ');
   let h = '<div class="card" style="margin-bottom:14px">';
-  h += '<h3>Rule-based analysis — '+esc(String(r.n_active||0))+' of 12 domain checks fire (not the model)</h3>';
-  h += '<p class="note">parsed: drug <b>'+esc(p.drug||'—')+'</b>'+(p.binomial?' ('+esc(p.binomial)+')':'')+
-       ' · process <b>'+esc(p.process||'—')+'</b> · compound class <b>'+esc(p.chemotype||'—')+'</b></p>';
+  h += '<h3>Rule-based analysis - '+esc(String(r.n_active||0))+' of 12 domain checks fire (not the model)</h3>';
+  h += '<p class="note">parsed: drug <b>'+esc(p.drug||'-')+'</b>'+(p.binomial?' ('+esc(p.binomial)+')':'')+
+       ' · process <b>'+esc(p.process||'-')+'</b> · compound class <b>'+esc(p.chemotype||'-')+'</b></p>';
   h += '<div style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0">'+chips+'</div>';
-  h += '<p class="note">why: '+esc(Object.entries(r.why||{}).map(([k,v])=>k+' — '+v).join(' · '))+'</p>';
+  h += '<p class="note">why: '+esc(Object.entries(r.why||{}).map(([k,v])=>k+' - '+v).join(' · '))+'</p>';
   h += '</div>';
 
   // each expert's actual verdict
   h += '<h2 style="margin-top:18px">Expert feedback</h2><table><thead><tr><th>expert</th><th>score</th><th>verdict</th></tr></thead><tbody>';
   (d.feedback||[]).forEach(f => {
-    h += '<tr><td><b>'+esc(f.expert)+'</b></td><td>'+(f.score===null?'—':esc(String(f.score)))+'</td>'+
+    h += '<tr><td><b>'+esc(f.expert)+'</b></td><td>'+(f.score===null?'-':esc(String(f.score)))+'</td>'+
          '<td>'+esc(f.rationale||'')+'</td></tr>';
   });
   h += '</tbody></table>';
 
   if (c.label) {
     h += '<p class="note" style="margin-top:10px"><b>Consensus:</b> '+esc(c.label)+' · score '+esc(String(c.score))+
-         ' — <b>'+esc(c.verdict||'')+'</b></p>';
+         ' - <b>'+esc(c.verdict||'')+'</b></p>';
   }
   if (a.verdict) {
     h += '<p class="note"><b>Physics arbiter:</b> '+esc(a.verdict)+'</p>';
@@ -665,11 +665,11 @@ function renderAnswer(out, d){
       '.</b> ' + esc((d && (d.reason || d.error)) || '') + '</div>');
     return;
   }
-  let h = '<div class="card"><h3>Answer — generated by the model' +
+  let h = '<div class="card"><h3>Answer - generated by the model' +
     (d.answered_by ? ' (' + esc(d.answered_by) + ')' : '') + '</h3>';
   if (d.router && d.router.ok) {
     h += '<p class="note"><b>Learned router:</b> ' + esc(d.router.expert) +
-         ' (p=' + esc(String(d.router.confidence)) + ') — ' + esc(d.router.label || '') +
+         ' (p=' + esc(String(d.router.confidence)) + ') - ' + esc(d.router.label || '') +
          '<br><span style="font-size:12px">a trained TF-IDF + logistic-regression classifier chooses the expert; ' +
          'the answer below is generated by the weights of that expert</span></p>';
   }
@@ -679,19 +679,19 @@ function renderAnswer(out, d){
   if (mdl) h += '<p style="font-size:12px;color:#6b6157">model: <span class="mono">' + esc(mdl) + '</span></p>';
   h += '<p style="font-size:12px;color:#6b6157">prompt: <span class="mono">' + esc(d.prompt || '') + '</span></p>';
   h += '<pre style="white-space:pre-wrap;margin:8px 0">' + annotate(d.answer || '') + '</pre>';
-  h += '<p class="note">Direct generation. No retrieval, no injected passage — the model either knows it or it does not.</p></div>';
+  h += '<p class="note">Direct generation. No retrieval, no injected passage - the model either knows it or it does not.</p></div>';
   out.insertAdjacentHTML('beforeend', h);
 }
 
 function renderCompare(out, d){
   if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
   const dc = d.decode || {};
-  let h = `<h2 style="margin-top:18px">Direct generation — no retrieval, no injected passages</h2>
+  let h = `<h2 style="margin-top:18px">Direct generation - no retrieval, no injected passages</h2>
     <p class="note">Both models answer the same question with the same decode
     (temperature ${esc(dc.temperature)}, top_p ${esc(dc.top_p)}, seed ${esc(dc.seed)}, max_tokens ${esc(dc.max_tokens)}).
     Each model is prompted in its native chat format; the exact prompt is shown so the result is reproducible.</p>
     <div class="cards">`;
-  const rows = [['Ours — fine-tuned on the SHENNONG corpus', d.fine_tuned],
+  const rows = [['Ours - fine-tuned on the SHENNONG corpus', d.fine_tuned],
                 ['Unfine-tuned open model', d.baseline]];
   for (const [label, m] of rows) {
     if (!m) continue;
@@ -710,7 +710,7 @@ function renderServerResult(out, d, mode){
   if (!d.ok) { out.innerHTML = `<div class="warn"><b>${d.blocked?'Blocked':'No answer'}.</b> ${esc(d.reason||d.error||'')}</div>`; return; }
   let h = '';
   if (d.retrieved && d.retrieved.length) {
-    h += `<h2 style="margin-top:18px">Passages retrieved (${d.retrieved.length}) — this is the domain knowledge</h2>`;
+    h += `<h2 style="margin-top:18px">Passages retrieved (${d.retrieved.length}) - this is the domain knowledge</h2>`;
     d.retrieved.forEach((p, i) => {
       h += `<div class="card" style="margin:8px 0">
         <p style="font-size:12px;color:#6b6157">[${i+1}] ${esc(p.title)} (${esc(p.year)}) ·
@@ -726,7 +726,7 @@ function renderServerResult(out, d, mode){
       <div class="card"><ul>${(d.kill_criteria||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div>`;
   } else {
     if (d.raw_completion !== undefined) {
-      h += `<h2 style="margin-top:18px">Bare model completion — no context</h2>
+      h += `<h2 style="margin-top:18px">Bare model completion - no context</h2>
         <div class="card mono" style="white-space:pre-wrap">${esc(d.raw_completion||'')}</div>`;
     }
     h += `<h2 style="margin-top:18px">Model completion conditioned on the retrieved passages</h2>
@@ -741,7 +741,7 @@ function tabCurriculum(){
   const cur = DATA.curriculum || {};
   const so = DATA.self_observation || {};
   const to = DATA.training_outcome || {};
-  let h = `<section><h2>Curriculum — trained in a dependent order, not shuffled</h2>
+  let h = `<section><h2>Curriculum - trained in a dependent order, not shuffled</h2>
   <p class="note">A general model can see a corpus in random order. A model meant to reason from first
   principles about traditional medicine cannot: foundations before the canon, the canon before regional
   comparison, the operations before the patterns, the method before grounding.</p>`;
@@ -751,7 +751,7 @@ function tabCurriculum(){
     for (const st of stages) {
       h += `<tr><td>${esc(String(st.stage).split('_')[0])}</td><td><b>${esc(st.name)}</b></td>
         <td style="font-size:12.5px">${esc(st.why)}</td><td>${esc(st.steps)}</td>
-        <td>${st.val_loss != null ? st.val_loss.toFixed(3) : '—'}</td><td>${esc((st.docs||0).toLocaleString())}</td></tr>`;
+        <td>${st.val_loss != null ? st.val_loss.toFixed(3) : '-'}</td><td>${esc((st.docs||0).toLocaleString())}</td></tr>`;
     }
     h += `</table>
     <p class="note">Per-stage val losses are computed on each stage's OWN held-out slice and are therefore
@@ -761,10 +761,10 @@ function tabCurriculum(){
       <span class="mono">python training/curriculum.py --build-only</span>.</div>`;
   }
 
-  h += `<h2 style="margin-top:24px">Self-observation — can the model read its own groundedness?</h2>
+  h += `<h2 style="margin-top:24px">Self-observation - can the model read its own groundedness?</h2>
   <p class="note">A passage that contains the answer versus a passage about a different herb. A linear probe
   per layer predicts which is which from the pooled hidden state. Above chance means the model
-  <b>represents</b> grounding — not that it uses it.</p>`;
+  <b>represents</b> grounding - not that it uses it.</p>`;
   const rows = so.probe_auc_by_layer || [];
   if (rows.length) {
     h += `<table><tr><th>layer</th><th>probe AUC</th><th></th></tr>`;
@@ -795,7 +795,7 @@ function tabCurriculum(){
 
 function tabExtraction(){
   const e = DATA.extraction || {};
-  let h = `<section><h2>Traditional-knowledge extraction — measured, with a worked example</h2>
+  let h = `<section><h2>Traditional-knowledge extraction - measured, with a worked example</h2>
   <p class="note">Track 01 asks for NER and era-to-era name mapping. This is done deterministically by the
   pipeline (not by the model), with span locators so every relation can be traced to the source characters.</p>`;
   const ent = e.entities_extracted || {};
@@ -825,21 +825,21 @@ function tabExtraction(){
     <div class="card"><p style="font-size:12px;color:#6b6157">source: ${esc(we.source_id)}</p>
       <div class="quote zh">${esc(we.classical_span||'')}</div>
       <table style="margin-top:8px"><tr><th>entity</th><th>name</th><th>mapped binomial</th></tr>
-      <tr><td>A</td><td>${esc(we.extracted.entity_a)}</td><td><i>${esc(we.extracted.entity_a_binomial||'—')}</i></td></tr>
-      <tr><td>B</td><td>${esc(we.extracted.entity_b)}</td><td><i>${esc(we.extracted.entity_b_binomial||'—')}</i></td></tr>
-      <tr><td>relation</td><td colspan="2"><b>${esc(we.extracted.relation)}</b> — ${esc(we.extracted.relation_type)}</td></tr></table>
+      <tr><td>A</td><td>${esc(we.extracted.entity_a)}</td><td><i>${esc(we.extracted.entity_a_binomial||'-')}</i></td></tr>
+      <tr><td>B</td><td>${esc(we.extracted.entity_b)}</td><td><i>${esc(we.extracted.entity_b_binomial||'-')}</i></td></tr>
+      <tr><td>relation</td><td colspan="2"><b>${esc(we.extracted.relation)}</b> - ${esc(we.extracted.relation_type)}</td></tr></table>
       <p class="note" style="margin-top:8px">${esc(we.note||'')}</p></div>`;
   }
   h += `<div class="warn" style="margin-top:22px"><b>Honest division of labour:</b> the extraction is the
   deterministic pipeline, not the language model. A fine-tuned 1.5 B is a strong answerer but is not the
-  span-located NER engine — the pipeline is, and it is reproducible — but it does not need to be: the track asks for NLP and AI, and the span-located
+  span-located NER engine - the pipeline is, and it is reproducible - but it does not need to be: the track asks for NLP and AI, and the span-located
   extraction is the deliverable. The model is the structured-output interface on top of it.</div></section>`;
   return h;
 }
 
 
 function tabScreen(){
-  let h = `<section><h2>Screen a target — Track 02, live</h2>
+  let h = `<section><h2>Screen a target - Track 02, live</h2>
   <p class="note">Type a disease target. <b>Layer 1</b> finds the plant→compound→target links from the
   knowledge graph; <b>layer 2</b> ranks our 23,176 plant compounds by ECFP4 similarity to the target's known
   ChEMBL actives; <b>layer 3</b> flags Lipinski ADMET, preparation physics and structural novelty. Every row
@@ -862,7 +862,7 @@ function tabScreen(){
 
 async function screenInit(){
   const box=document.getElementById('screenbox'), form=document.getElementById('screenform');
-  // open the form immediately — the screening call is slow (~20s: ChEMBL fetch + 23k compounds), so it runs
+  // open the form immediately - the screening call is slow (~20s: ChEMBL fetch + 23k compounds), so it runs
   // only when the judge asks, never on tab open.
   box.style.display='none'; form.style.display='';
   document.getElementById('gos').onclick = () => doScreen();
@@ -874,7 +874,7 @@ async function screenInit(){
 async function doScreen(){
   const tgt=((document.getElementById('tgt')||{}).value||'').trim()||'COX2';
   const out=document.getElementById('screenout');
-  out.innerHTML='<p class="note">screening '+esc(tgt)+' — fetching ChEMBL actives and ranking 23,176 compounds…</p>';
+  out.innerHTML='<p class="note">screening '+esc(tgt)+' - fetching ChEMBL actives and ranking 23,176 compounds…</p>';
   try{
     const r = await fetch('/api/screen',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({question:tgt})});
@@ -897,7 +897,7 @@ function renderScreen(d, tgt){
     h+='<table><thead><tr><th>#</th><th>compound</th><th>plant</th><th>similarity</th><th>ADMET</th><th>physics</th><th>fused</th></tr></thead><tbody>';
     d.hits.forEach((x,i)=>{
       const a=x.admet||{}, p=x.physics||{};
-      h+='<tr><td>'+(i+1)+'</td><td>'+esc(x.name||'')+'</td><td>'+esc(x.plant_binomial||'—')+'</td>'+
+      h+='<tr><td>'+(i+1)+'</td><td>'+esc(x.name||'')+'</td><td>'+esc(x.plant_binomial||'-')+'</td>'+
         '<td>'+esc(String(x.tanimoto))+'</td>'+
         '<td>'+(a.lipinski_pass?'pass':(a.ok?'fail':'n/a'))+'</td>'+
         '<td>'+(p.checked?esc(String(p.score)):'n/a')+'</td>'+
@@ -911,36 +911,36 @@ function renderScreen(d, tgt){
 
 function tabProblems(){
   return `<section><h2>The two problems this system solves</h2>
-  <p class="note">Both are demonstrated <b>live</b> on this page — type anything, get a computed answer, not a
+  <p class="note">Both are demonstrated <b>live</b> on this page - type anything, get a computed answer, not a
   rehearsed one. Every number below is reproducible from the repository.</p>
 
   <div class="card" style="margin:16px 0">
-    <h3>Problem 1 — plant names do not survive the centuries</h3>
+    <h3>Problem 1 - plant names do not survive the centuries</h3>
     <p>A 16th-century Chinese drug name, an Ayurvedic synonym, a Korean name and a Latin binomial can all mean
-    the same plant — and no single lexicon links them. Without that link, a classical therapeutic use cannot be
+    the same plant - and no single lexicon links them. Without that link, a classical therapeutic use cannot be
     connected to anything modern.</p>
     <p class="note"><b>What we built:</b> a resolver over 827 historical Chinese names, 2,175 Indian plants with
-    synonyms and common names (4,109 with recorded uses), and 10,393 vernacular names across seven languages — then the
+    synonyms and common names (4,109 with recorded uses), and 10,393 vernacular names across seven languages - then the
     chain continues into recorded uses, compound classes and gene targets.</p>
     <p class="note"><b>And it runs at corpus scale:</b> the same extractor was applied to
     <b>273,334 formulas from 1,082 classical works</b>, producing
     <b>714,079 drug&ndash;indication pairs</b> across 77,441 indications
-    from 744,997 drug mentions — in 52 seconds on a CPU.</p>
-    <p><button onclick="show('resolve')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 1 — resolve a name</button></p>
+    from 744,997 drug mentions - in 52 seconds on a CPU.</p>
+    <p><button onclick="show('resolve')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 1 - resolve a name</button></p>
   </div>
 
   <div class="card" style="margin:16px 0">
-    <h3>Problem 2 — which plant compounds are worth testing, on a CPU</h3>
+    <h3>Problem 2 - which plant compounds are worth testing, on a CPU</h3>
     <p>Screening a plant library against a disease target normally needs a wet lab or a GPU docking cluster.
     A ranked shortlist that cites its evidence does not.</p>
-    <p class="note"><b>What we built:</b> a tiered CPU-only screen — knowledge-graph links, ECFP4 similarity to
-    known ChEMBL actives, Lipinski ADMET, preparation physics and structural novelty — fused into one
+    <p class="note"><b>What we built:</b> a tiered CPU-only screen - knowledge-graph links, ECFP4 similarity to
+    known ChEMBL actives, Lipinski ADMET, preparation physics and structural novelty - fused into one
     falsifiable score for 23,176 plant compounds.</p>
-    <p><button onclick="show('screen')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 2 — screen a target</button></p>
+    <p><button onclick="show('screen')" style="padding:8px 16px;border:0;border-radius:8px;background:var(--green);color:#fff;font:inherit;font-weight:600;cursor:pointer">Open Track 2 - screen a target</button></p>
   </div>
 
-  <p class="note"><b>The model underneath:</b> a 1.5 B fine-tuned open model — <b>49.0 % vs 37.0 %</b> for its
-  un-finetuned base on 200 held-out, question-aligned domain questions — released as a <b>940 MiB</b> Q4_K_M GGUF
+  <p class="note"><b>The model underneath:</b> a 1.5 B fine-tuned open model - <b>49.0 % vs 37.0 %</b> for its
+  un-finetuned base on 200 held-out, question-aligned domain questions - released as a <b>940 MiB</b> Q4_K_M GGUF
   that runs on a CPU. See <a href="#" onclick="show('ask');return false">tab 3</a> to query it live and
   <a href="#" onclick="show('weights');return false">tab 12</a> for the weights.</p></section>`;
 }
@@ -948,14 +948,14 @@ function tabProblems(){
 const RESOLVE_EXAMPLES = ['丹參','甘草','黄芪','當歸','단삼','Artemisia annua','Salvia miltiorrhiza','Atractylodes macrocephala'];
 
 function tabResolve(){
-  return `<section><h2>Track 1 — resolve a plant name, then follow it to modern pharmacology</h2>
+  return `<section><h2>Track 1 - resolve a plant name, then follow it to modern pharmacology</h2>
   <p class="note"><b>The problem:</b> names drift across eras and languages. <b>What runs here:</b> the name is
   looked up across the historical Chinese lexicon, Indian synonyms and common names, and five vernacular
-  languages — then the resolved binomial is expanded into its recorded uses, compound classes and gene
+  languages - then the resolved binomial is expanded into its recorded uses, compound classes and gene
   targets. Nothing is retrieved at inference; this is the curated corpus.</p>
   <p class="note"><b>Coverage, stated honestly:</b> 4,716 plant binomials, 827 historical Chinese drug names,
   10,393 vernacular names (zh/ja/ko/en/hi/de/fr), 4,109 Indian plants with synonyms. Traditional Chinese is
-  normalised to simplified before lookup. A name outside this lexicon returns <b>near matches, never a guess</b> —
+  normalised to simplified before lookup. A name outside this lexicon returns <b>near matches, never a guess</b> -
   the resolver is designed to fail visibly rather than fabricate a binomial.</p>
   <div id="resbox" class="warn">type a name below, or click an example</div>
   <div id="resform">
@@ -1000,7 +1000,7 @@ function renderResolve(out,d,q){
   if(names.length) h+='<p class="note">names across eras/languages: '+names.map(([k,v])=>'<b>'+esc(k)+'</b> '+esc(v)).join(' · ')+'</p>';
   if((d.uses||[]).length){
     h+='<h3 style="margin-top:12px">Recorded therapeutic uses</h3><table><thead><tr><th>use</th><th>tradition</th></tr></thead><tbody>';
-    d.uses.forEach(u=>{ h+='<tr><td>'+tr(u.use, u.modern || undefined)+(u.modern ? ' <span class="en">'+esc(u.modern)+'</span>' : '')+'</td><td>'+esc(u.tradition||'—')+'</td></tr>'; });
+    d.uses.forEach(u=>{ h+='<tr><td>'+tr(u.use, u.modern || undefined)+(u.modern ? ' <span class="en">'+esc(u.modern)+'</span>' : '')+'</td><td>'+esc(u.tradition||'-')+'</td></tr>'; });
     h+='</tbody></table>';
   }
   if((d.compound_classes||[]).length) h+='<p class="note"><b>Compound classes:</b> '+esc(d.compound_classes.join(', '))+'</p>';
@@ -1023,7 +1023,7 @@ const EXTRACT_EXAMPLES = {
 
 function tabExtract(){
   const ex = Object.keys(EXTRACT_EXAMPLES);
-  return `<section><h2>Track 1 — paste a historical passage, get structured knowledge</h2>
+  return `<section><h2>Track 1 - paste a historical passage, get structured knowledge</h2>
   <p class="note"><b>The problem:</b> the track asks for extraction from historical and folklore texts, not a
   lookup. <b>What runs here:</b> the passage is scanned by a rule- and lexicon-based span extractor (it cannot
   hallucinate a span), every drug is resolved to its modern binomial and pharmacology, therapeutic claims are
@@ -1067,7 +1067,7 @@ function renderExtract(out,d){
     h+='<table><thead><tr><th>as written</th><th>modern binomial</th><th>compound classes</th><th>gene targets</th></tr></thead><tbody>';
     d.drugs.forEach(x=>{ h+='<tr><td><b>'+tr(x.surface, x.binomial)+'</b><br><span style="font-size:11px;color:var(--muted)">span '
       +x.start+'-'+x.end+' · conf '+x.confidence+'</span></td><td class="mono">'+esc(x.binomial)+'</td><td>'
-      +esc((x.compound_classes||[]).join(', ')||'—')+'</td><td class="mono">'+esc((x.gene_targets||[]).slice(0,4).join(', ')||'—')+'</td></tr>'; });
+      +esc((x.compound_classes||[]).join(', ')||'-')+'</td><td class="mono">'+esc((x.gene_targets||[]).slice(0,4).join(', ')||'-')+'</td></tr>'; });
     h+='</tbody></table>';
   } else h+='<p class="note">no drug from the lexicon appears in this passage.</p>';
 
@@ -1112,7 +1112,7 @@ const main = document.getElementById('main');
 function show(name){
   main.innerHTML = TABS[name]();
   // The stylesheet hides <section> unless it carries .on. Only the first tab used to set it, so every
-  // other tab rendered its content into a display:none element — the DOM had 1,500 characters and the
+  // other tab rendered its content into a display:none element - the DOM had 1,500 characters and the
   // page looked blank. Set it here, once, for whatever the tab returned.
   const sec = main.querySelector('section');
   if (sec) sec.classList.add('on');
@@ -1145,7 +1145,7 @@ show('problems');
 def build_browser_corpus(max_passages: int = 1400, chars: int = 320) -> dict:
     """A small retrieval corpus the browser can score without a server.
 
-    1,400 passages is not the 45.6 M-character corpus — it is a demo slice, and the page says so. The point
+    1,400 passages is not the 45.6 M-character corpus - it is a demo slice, and the page says so. The point
     is that a judge on GitHub Pages gets retrieval + generation client-side, not a model talking to itself.
     """
     import json as _json
@@ -1175,14 +1175,31 @@ def build_browser_corpus(max_passages: int = 1400, chars: int = 320) -> dict:
             "note": ("demo slice for client-side retrieval; the full pipeline uses the 45.6 M-character corpus")}
 
 
+def _de_dash(obj):
+    """Recursively replace em/en dashes with a hyphen in every string that reaches the page.
+
+    Applied at build time only: the artefacts on disk keep their original text (verdict strings, quoted passages), so
+    provenance is unchanged. The published site simply uses no em dashes.
+    """
+    if isinstance(obj, str):
+        return obj.replace("\u2014", "-").replace("\u2013", "-")
+    if isinstance(obj, list):
+        return [_de_dash(x) for x in obj]
+    if isinstance(obj, tuple):
+        return tuple(_de_dash(x) for x in obj)
+    if isinstance(obj, dict):
+        return {k: _de_dash(v) for k, v in obj.items()}
+    return obj
+
+
 def main() -> int:
-    data = build_data()
+    data = _de_dash(build_data())
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "data.json").write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
-    bc = build_browser_corpus()
+    bc = _de_dash(build_browser_corpus())
     (OUT / "browser_corpus.json").write_text(json.dumps(bc, ensure_ascii=False), encoding="utf-8")
     print(f"  browser corpus: {bc['n']} passages")
-    # Inline JSON inside <script> must not contain "</script>" or "<!--" — escape the angle brackets.
+    # Inline JSON inside <script> must not contain "</script>" or "<!--" - escape the angle brackets.
     # (Our corpus text is Chinese and never does this, but a future artefact could, and a broken demo page
     # is worse than a slightly larger one.)
     tr_path = pathlib.Path("artifacts/demo_translations.json")
@@ -1194,7 +1211,7 @@ def main() -> int:
     # runtime (tabX is not defined), which is exactly how the judge demo shipped blank once. Fail the build.
     import re as _re
     tabs_line = _re.search(r"const TABS = \{(.*?)\};", html, _re.S)
-    # functions invoked from HTML handlers or tab wiring — a missing one is a dead button at runtime
+    # functions invoked from HTML handlers or tab wiring - a missing one is a dead button at runtime
     required = ["askInit", "doAsk", "renderServerResult", "renderAdvice", "renderAnswer", "screenInit", "doScreen", "renderScreen", "resolveInit", "doResolve", "renderResolve", "extractInit", "doExtract", "renderExtract", "tabExtract", "tabProblems", "tabResolve", "show", "esc"]
     missing = [f for f in required
                if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (f, f), html)]
@@ -1205,13 +1222,13 @@ def main() -> int:
             key, fn = name
             if not re.search(r"(function\s+%s\s*\(|(?:const|let)\s+%s\s*=)" % (fn, fn), html):
                 raise SystemExit(f"demo build failed: TABS references {fn} for tab '{key}' but "
-                                 f"`function {fn}` is not defined — the page would render blank")
+                                 f"`function {fn}` is not defined - the page would render blank")
     (OUT / "index.html").write_text(html, encoding="utf-8")
     (OUT / "README.md").write_text(
-        "# SHENNONG — judge demo\n\n"
+        "# SHENNONG - judge demo\n\n"
         "Generated by `python scripts/build_demo.py`. Do not edit by hand.\n\n"
         "Self-contained: no CDN, no network, no build step, no Python required to view.\n"
-        "Every figure is read from `artifacts/*.json` — the page cannot show a number the repo lacks.\n\n"
+        "Every figure is read from `artifacts/*.json` - the page cannot show a number the repo lacks.\n\n"
         "Published to https://cptlight.github.io/shennong/demo/ by `.github/workflows/pages.yml`.\n",
         encoding="utf-8")
     kb = (OUT / "index.html").stat().st_size / 1024

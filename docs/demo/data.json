@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-08T03:57:04-0800",
+ "generated_at": "2026-11-09T02:23:28-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v1.17.0": {
-   "what": "SHENNONG 1.5B — fine-tuned Qwen2.5-1.5B, Q4_K_M (the shipped model)",
+   "what": "SHENNONG 1.5B - fine-tuned Qwen2.5-1.5B, Q4_K_M (the shipped model)",
    "file": "shennong-1.5b-sft-Q4_K_M.gguf",
    "bytes": 986047904,
    "sha256": "c2757da836c73e645755579e2cfc062c45ace25e42409576e00e9ea069ee27ba",
@@ -11,7 +11,7 @@
    "hf": "https://huggingface.co/tomscot/shennong-1.5b-sft"
   },
   "v1.16.0": {
-   "what": "SHENNONG 0.5B — fine-tuned Qwen2.5-0.5B, Q4_K_M (intermediate)",
+   "what": "SHENNONG 0.5B - fine-tuned Qwen2.5-0.5B, Q4_K_M (intermediate)",
    "file": "shennong-0.5b-sft-Q4_K_M.gguf",
    "bytes": 397807328,
    "sha256": "048209ac2e1690cb448e1be82bc4a7da969da67581a461b739fa9e0479115f30",
@@ -73,7 +73,7 @@
     "binomial": "Acorus calamus",
     "chemotype": "terpenoid",
     "violated": "process_physics",
-    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) - the class is depleted, so an *enrichment* claim is physically backwards."
    },
    {
     "claim": "蒸 of 升麻 (Actaea cimicifuga) should measurably enrich its terpenoid content",
@@ -83,7 +83,7 @@
     "binomial": "Actaea cimicifuga",
     "chemotype": "terpenoid",
     "violated": "process_physics",
-    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) - the class is depleted, so an *enrichment* claim is physically backwards."
    },
    {
     "claim": "炮 of 附子 (Aconitum carmichaelii) should measurably enrich its terpenoid content",
@@ -93,7 +93,7 @@
     "binomial": "Aconitum carmichaelii",
     "chemotype": "terpenoid",
     "violated": "process_physics",
-    "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) — the class is depleted, so an *enrichment* claim is physically backwards."
+    "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) - the class is depleted, so an *enrichment* claim is physically backwards."
    },
    {
     "claim": "炮 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its terpenoid content",
@@ -103,7 +103,7 @@
     "binomial": "Glycyrrhiza uralensis",
     "chemotype": "terpenoid",
     "violated": "process_physics",
-    "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) — the class is depleted, so an *enrichment* claim is physically backwards."
+    "reason": "terpenoid is volatile and 炮 runs at ~250 °C (hot ash/sand) - the class is depleted, so an *enrichment* claim is physically backwards."
    },
    {
     "claim": "炙 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its phenylpropanoid content",
@@ -113,7 +113,7 @@
     "binomial": "Glycyrrhiza uralensis",
     "chemotype": "phenylpropanoid",
     "violated": "process_physics",
-    "reason": "phenylpropanoid is volatile and 炙 runs at ~120 °C (with honey/vinegar/wine) — the class is depleted, so an *enrichment* claim is physically backwards."
+    "reason": "phenylpropanoid is volatile and 炙 runs at ~120 °C (with honey/vinegar/wine) - the class is depleted, so an *enrichment* claim is physically backwards."
    },
    {
     "claim": "蒸 of 甘草 (Glycyrrhiza uralensis) should measurably enrich its terpenoid content",
@@ -123,10 +123,10 @@
     "binomial": "Glycyrrhiza uralensis",
     "chemotype": "terpenoid",
     "violated": "process_physics",
-    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) — the class is depleted, so an *enrichment* claim is physically backwards."
+    "reason": "terpenoid is volatile and 蒸 runs at ~100 °C (steam) - the class is depleted, so an *enrichment* claim is physically backwards."
    }
   ],
-  "naming_note": "the six cases where the tradition panel was unanimous (5/5) and the physics arbiter still rejected the claim — named so the number can be checked line by line"
+  "naming_note": "the six cases where the tradition panel was unanimous (5/5) and the physics arbiter still rejected the claim - named so the number can be checked line by line"
  },
  "law_impact": {
   "n_candidates": 203,
@@ -166,7 +166,7 @@
     ]
    }
   ],
-  "note": "'violations' is the number of claims this check turned into a rejection. A check with zero violations is either correctly scoped and rarely triggered, or not yet operationalised — both are worth stating rather than hiding."
+  "note": "'violations' is the number of claims this check turned into a rejection. A check with zero violations is either correctly scoped and rarely triggered, or not yet operationalised - both are worth stating rather than hiding."
  },
  "theory": {
   "tcm_channel": {
@@ -174,7 +174,7 @@
    "permutation_mean": 0.038,
    "n": 2059,
    "p": 0.008,
-   "verdict": "predicts — weakly but significantly"
+   "verdict": "predicts - weakly but significantly"
   },
   "tcm_nature": {
    "auc": 0.4562,
@@ -190,7 +190,7 @@
   },
   "ayurveda": {
    "n": 0,
-   "verdict": "not linkable — no Sanskrit→binomial lexicon"
+   "verdict": "not linkable - no Sanskrit→binomial lexicon"
   }
  },
  "experts": {
@@ -416,7 +416,7 @@
   "deployability": {
    "fp16_weights_bytes": 38685232,
    "fp32_checkpoint_bytes": 77370464,
-   "note": "A 19.3 M model is 38 MB in fp16 — it fits in a browser tab, a phone, or a raspberry pi. That is not a marketing point: it decides whether a field researcher, a rural clinic, or an offline laptop can run it at all."
+   "note": "A 19.3 M model is 38 MB in fp16 - it fits in a browser tab, a phone, or a raspberry pi. That is not a marketing point: it decides whether a field researcher, a rural clinic, or an offline laptop can run it at all."
   },
   "measured_on_this_machine": {
    "median_query_latency_ms": 1636,
@@ -424,14 +424,14 @@
    "note": "retrieval + generation over 5 passages, CPU only, measured through /api/query"
   },
   "confounds_stated": [
-   "the MoE run used 2 torch threads, the dense run 1 — the throughput comparison is therefore NOT clean and is reported as suggestive, not causal",
-   "both runs saw the same 1,638,400 tokens (200 steps), which is ~0.9 % of compute-optimal for either size — an undertrained comparison, valid for architecture ablation, useless for capability",
+   "the MoE run used 2 torch threads, the dense run 1 - the throughput comparison is therefore NOT clean and is reported as suggestive, not causal",
+   "both runs saw the same 1,638,400 tokens (200 steps), which is ~0.9 % of compute-optimal for either size - an undertrained comparison, valid for architecture ablation, useless for capability",
    "single seed each; different corpus snapshots between the two runs"
   ],
   "what_this_does_not_claim": [
-   "that this model beats a frontier model at open-ended writing — it does not, and the demo shows it",
-   "that 0.91 nats transfers to a larger scale — one endpoint, one seed",
-   "that CPU inference replaces GPU training — training still wants a GPU; serving does not"
+   "that this model beats a frontier model at open-ended writing - it does not, and the demo shows it",
+   "that 0.91 nats transfers to a larger scale - one endpoint, one seed",
+   "that CPU inference replaces GPU training - training still wants a GPU; serving does not"
   ]
  },
  "curriculum": {
@@ -450,7 +450,7 @@
    {
     "stage": "0_foundations",
     "name": "FOUNDATIONS",
-    "why": "physics/chemistry/biology/botany/anatomy — the first-principles substrate every later claim is checked against",
+    "why": "physics/chemistry/biology/botany/anatomy - the first-principles substrate every later claim is checked against",
     "steps": 40,
     "total_steps": 239,
     "resumed_from_step": 199,
@@ -495,7 +495,7 @@
    {
     "stage": "3_alchemy_process",
     "name": "ALCHEMY & PROCESS",
-    "why": "the operations that make a preparation work — 炮製, distillation, calcination",
+    "why": "the operations that make a preparation work - 炮製, distillation, calcination",
     "steps": 40,
     "total_steps": 356,
     "resumed_from_step": 316,
@@ -525,7 +525,7 @@
    {
     "stage": "5_pharmacology",
     "name": "PHARMACOLOGY & METHOD",
-    "why": "how a discovery is actually made — the method, not more facts",
+    "why": "how a discovery is actually made - the method, not more facts",
     "steps": 40,
     "total_steps": 434,
     "resumed_from_step": 394,
@@ -634,7 +634,7 @@
     }
    ]
   },
-  "interpretation": "AUC above chance means the information is linearly readable inside the model. It does not mean the model uses it when answering — that gap is what the grounding stage (curriculum stage 6) is for, and it is reported here rather than assumed."
+  "interpretation": "AUC above chance means the information is linearly readable inside the model. It does not mean the model uses it when answering - that gap is what the grounding stage (curriculum stage 6) is for, and it is reported here rather than assumed."
  },
  "training_outcome": {
   "generated_at": "2026-11-06T01:31:25-0800",
@@ -710,7 +710,7 @@
     "tokens_seen": 3874816
    },
    "delta_ce": 0.0182,
-   "verdict": "the curriculum checkpoint is marginally WORSE on general held-out text (+0.018 CE). It spent its last 3.9 M tokens on stage-ordered domain data at a low learning rate, so this is not a refutation of curriculum training — it is a refutation of claiming a win at this budget."
+   "verdict": "the curriculum checkpoint is marginally WORSE on general held-out text (+0.018 CE). It spent its last 3.9 M tokens on stage-ordered domain data at a low learning rate, so this is not a refutation of curriculum training - it is a refutation of claiming a win at this budget."
   },
   "self_observation": {
    "before": {
@@ -724,7 +724,7 @@
     "auc": 0.568
    },
    "delta": 0.047,
-   "verdict": "small movement (0.521 -> 0.568) at n=240; direction is right but the effect is too weak to call a capability. Behavioural grounding on negatives was 0/6 — the model never emitted 'not recorded', so citation discipline did NOT transfer."
+   "verdict": "small movement (0.521 -> 0.568) at n=240; direction is right but the effect is too weak to call a capability. Behavioural grounding on negatives was 0/6 - the model never emitted 'not recorded', so citation discipline did NOT transfer."
   },
   "why": {
    "tokens_vs_needed": "3.87 M tokens this run, 5.47 M cumulative. Compute-optimal at 19.3 M parameters is roughly 20x parameters in tokens = ~390 M. We are at ~1.4% of that.",
@@ -740,9 +740,9 @@
  },
  "extraction": {
   "generated_at": "2026-11-06T07:05:15-0800",
-  "track": "01 — Traditional knowledge",
+  "track": "01 - Traditional knowledge",
   "question": "does this project actually extract medicinal knowledge and map names across eras?",
-  "answer": "yes, deterministically, with span locators — the numbers below are the extraction",
+  "answer": "yes, deterministically, with span locators - the numbers below are the extraction",
   "entities_extracted": {
    "compound_mentions": 23177,
    "plant_to_indication_relations": 11819,
@@ -1242,7 +1242,7 @@
     {
      "drug": "牡蛎",
      "process": "炮",
-     "modern": "high-temperature dry roasting (often in ash/sand), 160–250 °C",
+     "modern": "high-temperature dry roasting (often in ash/sand), 160-250 °C",
      "effect": "detoxification, reduction of irritant volatiles",
      "source": "ws_zh_leigong_paozhi",
      "drug_total_process_sources": 4
@@ -2844,7 +2844,7 @@
    ],
    "sink": "volatilisation",
    "class": "EFFECTIVELY DESTROYED",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "恶实",
@@ -2857,7 +2857,7 @@
    ],
    "sink": "volatilisation",
    "class": "EFFECTIVELY DESTROYED",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "昆布",
@@ -2870,7 +2870,7 @@
    ],
    "sink": "volatilisation",
    "class": "LARGELY LOST",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "柏木",
@@ -2883,7 +2883,7 @@
    ],
    "sink": "volatilisation",
    "class": "LARGELY LOST",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "恶实",
@@ -2896,7 +2896,7 @@
    ],
    "sink": "volatilisation",
    "class": "LARGELY LOST",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "菖蒲",
@@ -2909,7 +2909,7 @@
    ],
    "sink": "volatilisation",
    "class": "LARGELY LOST",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "乌蛇",
@@ -2922,7 +2922,7 @@
    ],
    "sink": "hydrolysis",
    "class": "LARGELY LOST",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "柏木",
@@ -2935,7 +2935,7 @@
    ],
    "sink": "hydrolysis",
    "class": "LARGELY LOST",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "杜仲",
@@ -2948,7 +2948,7 @@
    ],
    "sink": "hydrolysis",
    "class": "LARGELY LOST",
-   "verdict": "MAY NOT — the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
+   "verdict": "MAY NOT - the class is largely destroyed; a claim of enrichment is physically backwards under these conditions"
   },
   {
    "drug": "甘草",
@@ -2961,7 +2961,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "杜仲",
@@ -2974,7 +2974,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "玄参",
@@ -2987,7 +2987,7 @@
    ],
    "sink": "volatilisation",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "菖蒲",
@@ -3000,7 +3000,7 @@
    ],
    "sink": "volatilisation",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "乌蛇",
@@ -3013,7 +3013,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "昆布",
@@ -3026,7 +3026,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "巴豆",
@@ -3039,7 +3039,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "甘草",
@@ -3052,7 +3052,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "干地黄",
@@ -3065,7 +3065,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "天门冬",
@@ -3078,7 +3078,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "干地黄",
@@ -3091,7 +3091,7 @@
    ],
    "sink": "volatilisation",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "天门冬",
@@ -3104,7 +3104,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "升麻",
@@ -3117,7 +3117,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "甘草",
@@ -3130,7 +3130,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   },
   {
    "drug": "甘草",
@@ -3143,7 +3143,7 @@
    ],
    "sink": "hydrolysis",
    "class": "PARTIALLY RETAINED",
-   "verdict": "MAY NOT as stated — partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
+   "verdict": "MAY NOT as stated - partial loss; enrichment of the parent class is physically implausible, though a derivative may be enriched"
   }
  ],
  "cards": [
@@ -3184,35 +3184,35 @@
   },
   {
    "id": "FC-06",
-   "claim": "jineol from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+   "claim": "jineol from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim - not that the molecule itself is unknown.",
    "kill": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.",
    "span": "治血氣刺痛甚腹諸痛，疝痛，血痢腸風腹痛，身體血痺刺痛，肝瘧發寒熱，反胃消渴，及痰涎挾血成窠，血貫瞳子，血凝齒痛，重舌，小兒驚風，五癇癲疾，殺蟲，解藥毒，及蛇、蠍、蜈蚣傷（時珍）",
    "source": "本草綱目"
   },
   {
    "id": "FC-07",
-   "claim": "Scolopendrine from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is un",
+   "claim": "Scolopendrine from Scolopendra subspinipes (蜈蚣) is proposed to act on opioid receptor for fever; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim - not that the molecule itself is un",
    "kill": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.",
    "span": "治血氣刺痛甚腹諸痛，疝痛，血痢腸風腹痛，身體血痺刺痛，肝瘧發寒熱，反胃消渴，及痰涎挾血成窠，血貫瞳子，血凝齒痛，重舌，小兒驚風，五癇癲疾，殺蟲，解藥毒，及蛇、蠍、蜈蚣傷（時珍）",
    "source": "本草綱目"
   },
   {
    "id": "FC-08",
-   "claim": "Peucedanocoumarin I from Kitagawia praeruptora (前胡) is proposed to act on TRPA1 for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+   "claim": "Peucedanocoumarin I from Kitagawia praeruptora (前胡) is proposed to act on TRPA1 for cough; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim - not that the molecule itself is unknown.",
    "kill": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.",
    "span": "前胡汤治肺热咳嗽",
    "source": "普濟方"
   },
   {
    "id": "FC-09",
-   "claim": "Rumejaposide A from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+   "claim": "Rumejaposide A from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim - not that the molecule itself is unknown.",
    "kill": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.",
    "span": "羊蹄以根名，牛舌以叶名，秃菜以治秃疮名也",
    "source": "本草崇原"
   },
   {
    "id": "FC-10",
-   "claim": "Rumejaposide C from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim — not that the molecule itself is unknown.",
+   "claim": "Rumejaposide C from Rumex japonicus (羊蹄) is proposed to act on NF-kB for skin_disease; this molecule→target→indication association is not annotated in our modern-evidence layer (curated exclusion list + graph modern evidence), which is the novelty claim - not that the molecule itself is unknown.",
    "kill": "No engagement below the compound's solubility limit, or activity only in one assay (assay artefact) → the candidate is dead.",
    "span": "羊蹄以根名，牛舌以叶名，秃菜以治秃疮名也",
    "source": "本草崇原"

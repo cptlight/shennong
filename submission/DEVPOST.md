@@ -188,17 +188,38 @@ looked 13.5 points better than it was. Now every headline figure traces to a fil
 ## What's next for SHENNONG 神农
 
 **Close the Greek and Latin gap.** We hold 19 records' worth, so we do not claim to decode them. This is an
-acquisition task — Perseus, PHI, Galen translations — not a modelling task, and it is the single highest-value
+acquisition task - Perseus, PHI, Galen translations - not a modelling task, and it is the single highest-value
 addition for Track 1.
+
+**Read the scanned record: OCR and vision.** Most of the classical canon survives as page images, not text - woodblock
+editions, manuscript scans, vertical Chinese with interlinear glosses. We currently consume transcribed editions, so
+the pipeline stops exactly where most of the material lives. The next step is a vision path: page segmentation plus
+OCR tuned for vertical CJK and dense commentary, then feeding the recognised text through the same extractor. The hard
+part is not character accuracy but **span provenance** - an OCR'd passage must still resolve to a page region and a
+character range, or the auditability guarantee that everything else rests on disappears. Digitisation is also the only
+way to reach the folklore and ethnobotanical archives that were never typeset at all.
+
+**Add non-English sources.** The corpus skews heavily Chinese (35 % of characters are zh-Hant); Sanskrit is present but
+effectively unmodelled (13.46 bits/byte, worse than a unigram baseline), and Arabic, Persian and Tibetan coverage is
+thin. This is acquisition plus tokenizer work - the tokenizer was trained before the Devanagari corpus arrived, which
+is why Sanskrit scores so poorly. The join side is already ahead of the text side: the resolver holds 10,393
+vernacular names across seven languages, so the cross-era links exist before the editions do.
 
 **Grow the historical lexicon.** 48.7 % of plant materia medica resolves; the missing half are archaic names absent
 from every open source we tried. We tested character-similarity fallback as a coverage fix: it recovered 2.9 % of
 mentions and was wrong about half the time, so we did not ship it. This needs data, not cleverness.
 
-**Physical validation.** Track 2 currently ends at a ranked, falsifiable shortlist. The next step is testing the top
-candidates — especially the ones whose mechanism the classical text predicted and the physics did not refute.
+**Scale the model: more experts, more capable releases.** The 4-expert sparse MoE was an 1,800-step specialisation
+experiment, not a capacity result - and it lost to the dense model. The architecture supports more: 8 experts at the
+same top-2 routing roughly doubles FFN capacity at the same per-token compute, for about 2.1 GB at Q4. The missing
+piece is not parameters but **router supervision** - teaching the router which expert owns which discipline - and
+enough data per discipline for specialisation to be measurable. We would rather publish the next expert count with
+the benchmark attached than ship a bigger file and call it wiser.
 
-**Then the loop closes:** mine the corpus → link eras → check the physics → rank the candidates → test in a lab →
+**Physical validation.** Track 2 currently ends at a ranked, falsifiable shortlist. The next step is testing the top
+candidates, especially the ones whose mechanism the classical text predicted and the physics did not refute.
+
+**Then the loop closes:** mine the corpus -> link eras -> check the physics -> rank the candidates -> test in a lab ->
 feed the result back into the corpus.
 
 ---

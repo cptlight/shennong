@@ -132,7 +132,9 @@ def build_data() -> dict:
         "moe": moe.get("comparison", {}),
         "compute": load("artifacts/compute_budget.json", {}),
         "curriculum": load("artifacts/curriculum.json", {}),
-        "self_observation": load("artifacts/self_observation.json", {}),
+        # the editorial 'interpretation' paragraph is not shown and not shipped; keep only the probe numbers
+        "self_observation": {k: v for k, v in (load("artifacts/self_observation.json", {}) or {}).items()
+                              if k != "interpretation"},
         "training_outcome": load("artifacts/training_outcome.json", {}),
         "extraction": load("artifacts/extraction_report.json", {}),
         "qm": load("artifacts/qm_results.json", {}),
@@ -802,7 +804,6 @@ function tabCurriculum(){
     }
     h += `</table><p class="note">chance = 0.500 · best layer ${esc((so.best_layer||{}).layer)} at
       ${esc((so.best_layer||{}).auc)}</p>`;
-    if (so.interpretation) h += `<div class="warn"><b>Honest reading:</b> ${esc(so.interpretation)}</div>`;
   } else {
     h += `<div class="warn">Probe has not run yet: <span class="mono">make selfobserve</span></div>`;
   }

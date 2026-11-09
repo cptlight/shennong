@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T02:56:15-0800",
+ "generated_at": "2026-11-09T02:59:12-0800",
  "repo": "https://github.com/cptlight/shennong",
  "releases": {
   "v1.17.0": {
@@ -633,8 +633,7 @@
      "says_not_recorded": false
     }
    ]
-  },
-  "interpretation": "AUC above chance means the information is linearly readable inside the model. It does not mean the model uses it when answering - that gap is what the grounding stage (curriculum stage 6) is for, and it is reported here rather than assumed."
+  }
  },
  "training_outcome": {
   "generated_at": "2026-11-06T01:31:25-0800",

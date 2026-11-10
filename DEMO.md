@@ -20,8 +20,8 @@ novelty, fused into a ranked shortlist. `shennong/screen.py` (`make screen-ml TA
 
 | model | params | HF | GGUF |
 |---|---|---|---|
-| **SHENNONG 1.5 B** (shipped) | 1,543,714,304 | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) | [v1.17.0](https://github.com/cptlight/shennong/releases/tag/v1.17.0) · 940 MB Q4_K_M |
-| SHENNONG 0.5 B (intermediate) | 494 M | [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) | [v1.16.0](https://github.com/cptlight/shennong/releases/tag/v1.16.0) · 379 MB Q4_K_M |
+| **SHENNONG 1.5 B** (shipped) | 1,543,714,304 | [`cptlight/shennong-1.5b-sft`](https://huggingface.co/cptlight/shennong-1.5b-sft) | [v1.17.0](https://github.com/cptlight/shennong/releases/tag/v1.17.0) · 940 MB Q4_K_M |
+| SHENNONG 0.5 B (intermediate) | 494 M | [`cptlight/shennong-0.5b-sft`](https://huggingface.co/cptlight/shennong-0.5b-sft) | [v1.16.0](https://github.com/cptlight/shennong/releases/tag/v1.16.0) · 379 MB Q4_K_M |
 
 ## The benchmark (200 held-out domain questions, direct generation)
 

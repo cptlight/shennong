@@ -1,6 +1,6 @@
 # Shennong — the 3-minute pitch
 
-**Live:** https://tomscot-shennong.hf.space · **Code:** https://github.com/cptlight/shennong · **Weights:** https://huggingface.co/tomscot/shennong-1.5b-sft
+**Live:** https://cptlight-shennong.hf.space · **Code:** https://github.com/cptlight/shennong · **Weights:** https://huggingface.co/cptlight/shennong-1.5b-sft
 
 ---
 

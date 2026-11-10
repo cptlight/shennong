@@ -25,5 +25,5 @@ baseline with the same prompt and decode, so you can see exactly what fine-tunin
 
 **Benchmark:** 49.0 % vs 37.0 % (+12.0 pts) over an unfine-tuned baseline on 200 held-out, question-aligned domain questions.
 
-Model: [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) · repo:
+Model: [`cptlight/shennong-1.5b-sft`](https://huggingface.co/cptlight/shennong-1.5b-sft) · repo:
 https://github.com/cptlight/shennong

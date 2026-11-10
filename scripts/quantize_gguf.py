@@ -3,7 +3,7 @@
 
 The path that produced the released `shennong-0.5b-sft-Q4_K_M.gguf`:
 
-    1. HF model dir  (tomscot/shennong-0.5b-sft, or training/runs/gpu-sft/merged)
+    1. HF model dir  (cptlight/shennong-0.5b-sft, or training/runs/gpu-sft/merged)
     2. llama.cpp convert_hf_to_gguf.py --outtype f16
     3. llama-cpp-python llama_model_quantize, ftype Q4_K_M
 

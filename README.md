@@ -2,7 +2,7 @@
 
 # 神农 SHENNONG
 
-**▶ [Test it live - query the model and screen a target, no install](https://tomscot-shennong.hf.space)**
+**▶ [Test it live - query the model and screen a target, no install](https://cptlight-shennong.hf.space)**
 
 **Shennong tasted a hundred herbs. We are teaching a 1.5 B open model to do it again - and to tell us what he hid between the lines.**
 
@@ -39,11 +39,11 @@ See [docs/PITCH.md](docs/PITCH.md) for the 3-minute script and Q&A.
 
 | | link |
 |---|---|
-| **▶ Live demo - ask the model** | https://tomscot-shennong.hf.space (CPU: first query takes ~1 min while the models load) |
+| **▶ Live demo - ask the model** | https://cptlight-shennong.hf.space (CPU: first query takes ~1 min while the models load) |
 | **▶ Live demo - read a passage (Track 1)** | same Space, "1b · Track 1 - read a passage" tab - paste any classical text, get drugs with spans, claims mapped, processes detected |
 | **▶ Live demo - screen a target (Track 2)** | same Space, "2 · Track 2 - screen a target" tab - three-layer virtual screening |
-| **Space source** | [`tomscot/shennong`](https://huggingface.co/spaces/tomscot/shennong) · redeploy with `./scripts/deploy_space.sh tomscot/shennong` |
-| **Model weights (HF)** | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) (1.5 B) · [`tomscot/shennong-0.5b-sft`](https://huggingface.co/tomscot/shennong-0.5b-sft) |
+| **Space source** | [`cptlight/shennong`](https://huggingface.co/spaces/cptlight/shennong) · redeploy with `./scripts/deploy_space.sh cptlight/shennong` |
+| **Model weights (HF)** | [`cptlight/shennong-1.5b-sft`](https://huggingface.co/cptlight/shennong-1.5b-sft) (1.5 B) · [`cptlight/shennong-0.5b-sft`](https://huggingface.co/cptlight/shennong-0.5b-sft) |
 | **GGUF (Q4_K_M, 940 MB)** | [v1.17.0 release](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 | **Corpus** | **29,042 records · 177.3 M characters**, after `make corpus-full` (base 106 sources + 1,304 CC0 jicheng.tw works). The checked-in base corpus alone is 27,738 records / 45.6 M characters - the 177.3 M figure requires the jicheng fetch |
 | **Benchmark (200 domain Q)** | ours **49.0 %** vs unfine-tuned **37.0 %** (+12.0 pts) - `artifacts/benchmark_v3.json` |
@@ -51,7 +51,7 @@ See [docs/PITCH.md](docs/PITCH.md) for the 3-minute script and Q&A.
 [![Devpost](https://img.shields.io/badge/EthnoHack-2026-coral)](https://ethnohack2026.devpost.com/)
 [![Track](https://img.shields.io/badge/tracks-01%20Traditional%20Knowledge%20Mining%20%2B%2002%20Natural%20Products-teal)](https://ethnohack2026.devpost.com/)
 [![Licence](https://img.shields.io/badge/code%20%26%20weights-Apache--2.0-blue)](LICENSE)
-[![Model](https://img.shields.io/badge/model-1.5B%20%7C%20940%20MB%20Q4-green)](https://huggingface.co/tomscot/shennong-1.5b-sft)
+[![Model](https://img.shields.io/badge/model-1.5B%20%7C%20940%20MB%20Q4-green)](https://huggingface.co/cptlight/shennong-1.5b-sft)
 [![CPU](https://img.shields.io/badge/runs%20on-CPU%20only-lightgrey)](#quickstart)
 
 </div>
@@ -180,7 +180,7 @@ Published whether or not we like the answer.
 | Vocab | 16,384 (en · la · zh-Hant) | 151,936 (Qwen) |
 | Trained on | **1,638,400 tokens** (deliberately undertrained, the architecture proof) | **28,800 example-passes** (16 × 1,800 steps) → eval_loss **1.031**, train_loss 1.187 |
 | Bench | - | **49.0 %** vs unfine-tuned **37.0 %** on 200 domain questions (+12.0 pts) |
-| Source | this repo | [`tomscot/shennong-1.5b-sft`](https://huggingface.co/tomscot/shennong-1.5b-sft) · [`v1.17.0`](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
+| Source | this repo | [`cptlight/shennong-1.5b-sft`](https://huggingface.co/cptlight/shennong-1.5b-sft) · [`v1.17.0`](https://github.com/cptlight/shennong/releases/tag/v1.17.0) |
 
 > **The architecture thesis, in one line:** a sparse MoE buys total capacity without paying per-token
 > compute - **1.58× more parameters per FLOP**, 2.22× capacity for 1.41× compute - which is what lets a
@@ -268,9 +268,9 @@ browser.
 
 | what | where |
 |---|---|
-| **Live demo (inference)** | **https://tomscot-shennong.hf.space** - **14 tabs, 4 of them running live inference on CPU** (resolve a name · read a passage · screen a target · ask the model) |
-| **Space source** | https://huggingface.co/spaces/tomscot/shennong (Docker SDK, 2 vCPU) |
-| **Model weights** | https://huggingface.co/tomscot/shennong-1.5b-sft (Q4_K_M 940 MiB + MoE variants) |
+| **Live demo (inference)** | **https://cptlight-shennong.hf.space** - **14 tabs, 4 of them running live inference on CPU** (resolve a name · read a passage · screen a target · ask the model) |
+| **Space source** | https://huggingface.co/spaces/cptlight/shennong (Docker SDK, 2 vCPU) |
+| **Model weights** | https://huggingface.co/cptlight/shennong-1.5b-sft (Q4_K_M 940 MiB + MoE variants) |
 
 **What the Space actually does at build time.** `space/Dockerfile` clones this repository, installs
 `llama-cpp-python` (CPU wheel) and `rdkit`, copies the structured corpus tables and the pre-computed ChEMBL
@@ -278,7 +278,7 @@ actives cache, then downloads the GGUF from the model repo at container start. N
 
 **Redeploying after a code change:**
 ```bash
-./scripts/deploy_space.sh tomscot/shennong
+./scripts/deploy_space.sh cptlight/shennong
 ```
 then restart with `factory_reboot=True`. **A Dockerfile change is required for code changes to take effect** - the
 Dockerfile clones the repo in a `RUN` layer, and Docker reuses that cached clone otherwise. The `RUN echo "source
@@ -287,7 +287,7 @@ rev …"` line exists only to bust that cache.
 **Before a demo, warm the Space** - the first request after idle pays ~60 s for two GGUFs to load and HF's proxy
 may kill it:
 ```bash
-curl -s -X POST https://tomscot-shennong.hf.space/api/query -H 'Content-Type: application/json' \
+curl -s -X POST https://cptlight-shennong.hf.space/api/query -H 'Content-Type: application/json' \
   -d '{"question":"What is 甘草 used for?"}' > /dev/null
 ```
 

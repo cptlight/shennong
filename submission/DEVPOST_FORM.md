@@ -202,4 +202,4 @@ feed the result back into the corpus.
 *Everything above is open: the corpus with span-level provenance, the weights, the screening pipeline, the negative
 results, and the audits of our own errors. Permissive licences only.*
 
-**Live:** https://tomscot-shennong.hf.space · **Code:** https://github.com/cptlight/shennong · **Weights:** https://huggingface.co/tomscot/shennong-1.5b-sft
+**Live:** https://cptlight-shennong.hf.space · **Code:** https://github.com/cptlight/shennong · **Weights:** https://huggingface.co/cptlight/shennong-1.5b-sft

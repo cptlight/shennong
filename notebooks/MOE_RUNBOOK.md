@@ -92,7 +92,7 @@ from huggingface_hub import HfApi
 api = HfApi(token="YOUR_HF_TOKEN")
 api.upload_file(path_or_fileobj="/content/shennong/granite-moe-Q4_K_M.gguf",
                 path_in_repo="granite-moe-Q4_K_M.gguf",
-                repo_id="tomscot/shennong-1.5b-sft", repo_type="model")
+                repo_id="cptlight/shennong-1.5b-sft", repo_type="model")
 print("uploaded")
 ```
 

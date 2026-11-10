@@ -337,7 +337,7 @@ flagship plan is a **continued-pretraining recipe**, not a trained model:
 |---|---|---|
 | base weights | `Qwen/Qwen2.5-0.5B` (494 M, Apache-2.0) | public |
 | domain CPT | `python training/cpt.py --base artifacts/qwen2.5-0.5b-base --steps 4000 ...` | **not run here** (CPU-only; ~10² GPU-hours) |
-| LoRA SFT | `python training/sft_lora.py --data training/data/*.jsonl ...` | run to completion — `tomscot/shennong-0.5b-sft`; the 1.5 B sibling adds the benchmark |
+| LoRA SFT | `python training/sft_lora.py --data training/data/*.jsonl ...` | run to completion — `cptlight/shennong-0.5b-sft`; the 1.5 B sibling adds the benchmark |
 | merge + quantise | `python training/merge_quantize.py ... --quantize Q4_K_M` | tested end-to-end on a random-weight model |
 | GGUF Q4_K_M | ~350–400 MB (0.5 B × ~4.5 bits/weight) | built by `scripts/quantize_gguf.py`; the published GGUF is the 1.5 B (986 MB / 940 MiB) |
 

@@ -1,6 +1,6 @@
 # Judge run sheet — Shennong
 
-**Live:** https://tomscot-shennong.hf.space · **Repo:** https://github.com/cptlight/shennong
+**Live:** https://cptlight-shennong.hf.space · **Repo:** https://github.com/cptlight/shennong
 
 Read this once before you present. It is ordered by what to do, not by what the system is.
 
@@ -13,10 +13,10 @@ Never let a judge's first click be the first request.
 
 ```bash
 # warm all four endpoints, in this order, from your terminal
-curl -s -X POST https://tomscot-shennong.hf.space/api/query   -H 'Content-Type: application/json' -d '{"question":"What is 甘草 used for?"}' > /dev/null
-curl -s -X POST https://tomscot-shennong.hf.space/api/extract -H 'Content-Type: application/json' -d '{"text":"甘草（炙）二两。治脾胃虛弱。"}' > /dev/null
-curl -s -X POST https://tomscot-shennong.hf.space/api/screen  -H 'Content-Type: application/json' -d '{"target":"EGFR"}' > /dev/null
-curl -s -X POST https://tomscot-shennong.hf.space/api/resolve -H 'Content-Type: application/json' -d '{"question":"丹參"}' > /dev/null
+curl -s -X POST https://cptlight-shennong.hf.space/api/query   -H 'Content-Type: application/json' -d '{"question":"What is 甘草 used for?"}' > /dev/null
+curl -s -X POST https://cptlight-shennong.hf.space/api/extract -H 'Content-Type: application/json' -d '{"text":"甘草（炙）二两。治脾胃虛弱。"}' > /dev/null
+curl -s -X POST https://cptlight-shennong.hf.space/api/screen  -H 'Content-Type: application/json' -d '{"target":"EGFR"}' > /dev/null
+curl -s -X POST https://cptlight-shennong.hf.space/api/resolve -H 'Content-Type: application/json' -d '{"question":"丹參"}' > /dev/null
 echo warm
 ```
 
